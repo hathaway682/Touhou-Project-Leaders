@@ -189,3 +189,55 @@ special_project = {
 	on_start = {
 	}
 }
+
+#阿空
+special_project = {
+	key = "UTSUHO_SPECIAL_PROJECT_COLLAPSE"
+	cost = {
+		base = 5000
+	}
+	tech_department = physics_technology
+	picture = GFX_evt_circuitry_modification
+	location = no
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	timelimit = 180
+	event_scope = country_event
+	requirements = {
+	}
+
+	on_success = {
+		country_event = { id = touhou_paragon_effect.42684 }
+	}
+
+	on_fail = {
+	}
+
+	on_start = {
+	}
+}
+
+#基因复活咲夜
+special_project = {
+	key = "SAKUYA_GENETIC_REVIVE"
+	cost = {
+		base = 10000
+	}
+	tech_department = society_technology
+	picture = GFX_evt_circuitry_modification
+	location = no
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	timelimit = 30
+	event_scope = country_event
+	requirements = {
+	}
+
+	on_success = {
+		country_event = { id = touhou_paragon_effect.41007 }
+	}
+
+	on_fail = {
+	}
+
+	on_start = {
+	}
+}

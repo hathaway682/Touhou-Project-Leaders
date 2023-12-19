@@ -9398,7 +9398,7 @@ fleet_event = {
     }
 }
 
-leader_event = {
+country_event = {
     id = touhou_paragon_effect.42613
     title = touhou_paragon_effect.42613.name
     desc = touhou_paragon_effect.42613.desc
@@ -9406,12 +9406,306 @@ leader_event = {
     is_triggered_only = yes
     fire_only_once = yes
     trigger = {
-        owner = {
-            has_tradition = tr_psionics_finish
+        has_tradition = tr_psionics_finish
+        any_owned_leader = {
+            has_trait = leader_trait_nuclear
         }
-        has_trait = leader_trait_nuclear
     }
     immediate = {
-        add_trait = leader_trait_eater_chosen
+        every_owned_leader = {
+            if = {
+                limit = {
+                    has_trait = leader_trait_nuclear
+                }
+                add_trait = leader_trait_eater_chosen
+            }
+        }
+
+    }
+}
+
+
+#咲夜的出生入死
+country_event = {
+    id = touhou_paragon_effect.41000
+    is_triggered_only = yes
+    hide_window = yes
+    trigger = {
+        any_owned_leader = {
+            has_leader_flag = sakuya_leader
+        }
+    }
+    immediate = {
+        every_owned_leader = {
+            if = {
+                limit = {
+                    has_trait = leader_trait_time
+                }
+                kill_leader = {
+                    show_notification = yes
+                }
+            }
+        }
+    }
+}
+
+#咲夜的死亡事件弹出 由on_leader_death弹出
+country_event = {
+    id = touhou_paragon_effect.41001
+    is_triggered_only = yes
+    title = touhou_paragon_effect.41001.name
+    trigger = {
+        from = {
+            has_trait = leader_trait_time
+        }
+    }
+    desc = {
+        text = touhou_paragon_effect.41001.desc
+    }
+    picture = GFX_evt_remilia
+    show_sound = event_planetary_riot
+    immediate = {
+        clone_leader = {
+            target = From
+        }
+        last_created_leader = {
+            exile_leader_as = touhou_died_sakuya
+            save_global_event_target_as = touhou_dead_sakuya_clone
+        }
+        #from = {
+        #    save_global_event_target_as = touhou_died_sakuya
+        #}
+        #every_owned_leader = {
+        #    if = {
+        #        limit = {
+        #            has_trait = leader_trait_time
+        #        }
+        #        kill_leader = {
+        #            show_notification = no
+        #        }
+        #        save_global_event_target_as = touhou_died_sakuya
+        #    }
+        #}
+    }
+    option = {
+        name = touhou_paragon_effect.41001.a
+        hidden_effect = {
+            country_event = { id = touhou_paragon_effect.41002 days = 5 random = 5}
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.41001.b
+        trigger = {
+            has_tradition = tr_psionics_finish
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_effect.41003 days = 5 random = 5}
+        }
+        custom_tooltip = revive_sakuya_by_psionic
+    }
+    option = {
+        name = touhou_paragon_effect.41001.c
+        trigger = {
+            has_tradition = tr_genetics_finish
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_effect.41006 days = 5 random = 5}
+        }
+        custom_tooltip = revive_sakuya_by_genetic
+    }
+    option = {
+        name = touhou_paragon_effect.41001.d
+        trigger = {
+            or = {
+                has_tradition = tr_cybernetics_assimilator_finish
+                has_tradition = tr_cybernetics_finish
+                has_tradition = tr_synthetics_finish
+            }
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_effect.41004 days = 5 random = 5}
+        }
+        custom_tooltip = revive_sakuya_by_cyber
+    }
+}
+
+country_event = {
+    id = touhou_paragon_effect.41002
+    is_triggered_only = yes
+    title = touhou_paragon_effect.41002.name
+    desc = {
+        text = touhou_paragon_effect.41002.desc
+    }
+    picture = GFX_evt_remilia_sakura
+    show_sound = event_planetary_riot
+    immediate = {
+        every_owned_leader = {
+            if = {
+                limit = {
+                    has_trait = leader_trait_destiny_manipulation
+                }
+                add_trait = leader_trait_deeper_scarlet_dream
+            }
+        }
+    }
+}
+country_event = {
+    id = touhou_paragon_effect.41003
+    is_triggered_only = yes
+    title = touhou_paragon_effect.41003.name
+    desc = {
+        text = touhou_paragon_effect.41003.desc
+    }
+    picture = GFX_evt_sakuya
+    show_sound = event_planetary_riot
+    option = {
+        name = touhou_paragon_effect.41003.a
+        allow = {
+            has_resource = {
+                type = sr_zro
+                amount >= 1000
+            }
+        }
+        add_resource = {
+            sr_zro = -1000
+        }
+        hidden_effect = {
+            clone_leader = {
+                target = event_target:touhou_dead_sakuya_clone
+            }
+            last_created_leader = {
+                add_trait = leader_trait_regeneration
+                add_trait = leader_trait_body_and_spirit
+            }
+        }
+        custom_tooltip = revive_sakuya_chosen
+    }
+    option = {
+        name = touhou_paragon_effect.41003.b
+    }
+}
+country_event = {
+    id = touhou_paragon_effect.41004
+    is_triggered_only = yes
+    title = touhou_paragon_effect.41004.name
+    desc = {
+        text = touhou_paragon_effect.41004.desc
+    }
+    picture = GFX_evt_remilia_bloodmoon
+    show_sound = event_planetary_riot
+    immediate = {
+        random_list = {
+            2 = { set_country_flag = touhou_remilia_disagree}
+            1 = { set_country_flag = touhou_remilia_agree}
+        }
+        country_event = { id = touhou_paragon_effect.41005 days = 5 random = 5 }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_effect.41005
+    is_triggered_only = yes
+    title = touhou_paragon_effect.41005.name
+    desc = {
+        text = touhou_paragon_effect.41005.desc.a
+        trigger ={ has_country_flag = touhou_remilia_disagree }
+    }
+    desc = {
+        text = touhou_paragon_effect.41005.desc.b
+        trigger ={ has_country_flag = touhou_remilia_agree }
+    }
+    picture = GFX_evt_remilia_coffin
+    show_sound = event_planetary_riot
+    option = {
+        name = touhou_paragon_effect.41005.a
+        trigger = {
+            has_country_flag = touhou_remilia_disagree
+        }
+        every_owned_leader = {
+            if = {
+                limit = {
+                    has_trait = leader_trait_destiny_manipulation
+                }
+                add_trait = leader_trait_deeper_scarlet_dream
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.41005.b
+        trigger = {
+            has_country_flag = touhou_remilia_agree
+        }
+        clone_leader = {
+            target = event_target:touhou_dead_sakuya_clone
+        }
+        if = {
+            limit = {
+                or = {
+                    has_tradition = tr_cybernetics_assimilator_finish
+                    has_tradition = tr_cybernetics_finish
+                }
+            }
+            last_created_leader = {
+                add_trait = leader_trait_regeneration
+                add_trait = leader_trait_cyborg
+            }
+        }
+        if = {
+            limit = {
+                has_tradition = tr_synthetics_finish
+            }
+            last_created_leader = {
+                add_trait = leader_trait_regeneration
+                add_trait = leader_trait_synthetic
+            }
+        }
+        every_owned_leader = {
+            if = {
+                limit = {
+                    has_trait = leader_trait_destiny_manipulation
+                }
+                add_trait = leader_trait_nihility_scarlet_dream
+            }
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_effect.41006
+    is_triggered_only = yes
+    title = touhou_paragon_effect.41006.name
+    desc = {
+        text = touhou_paragon_effect.41006.desc
+    }
+    picture = GFX_evt_sakuya_blood
+    show_sound = event_planetary_riot
+    option = {
+        name = touhou_paragon_effect.41006.a
+        enable_special_project = {
+            name = SAKUYA_GENETIC_REVIVE
+            location = this
+            owner = root
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_effect.41007
+    is_triggered_only = yes
+    title = touhou_paragon_effect.41007.name
+    desc = {
+        text = touhou_paragon_effect.41007.desc
+    }
+    picture = GFX_evt_sakuya_blood
+    show_sound = event_planetary_riot
+    option = {
+        name = touhou_paragon_effect.41007.a
+        clone_leader = {
+            target = event_target:touhou_dead_sakuya_clone
+        }
+        last_created_leader = {
+            add_trait = leader_trait_regeneration_2
+            add_trait = leader_trait_the_incorruptible
+        }
     }
 }

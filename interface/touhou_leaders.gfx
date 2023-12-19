@@ -133,7 +133,42 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
-
+	spriteType = {
+		name = "GFX_evt_remilia"
+		texturefile = "gfx/event_pictures/remilia.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_remilia_bloodmoon"
+		texturefile = "gfx/event_pictures/remilia_bloodmoon.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_remilia_coffin"
+		texturefile = "gfx/event_pictures/remilia_coffin.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_remilia_sakura"
+		texturefile = "gfx/event_pictures/remilia_sakura.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_sakuya"
+		texturefile = "gfx/event_pictures/sakuya.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_sakuya_blood"
+		texturefile = "gfx/event_pictures/sakuya_blood.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 	# spriteType = {
 	# 	name = "GFX_text_touhou_leader"
 	# 	texturefile = "gfx/interface/icons/text_icons/text_icon_touhou_leader.dds"

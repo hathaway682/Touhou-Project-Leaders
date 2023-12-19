@@ -423,3 +423,60 @@ aya_morale_3 = {
 	army_morale = -0.66
 	ship_fire_rate_mult = -0.33
 }
+
+modifier_utsuho_detonation_a = {
+	ship_weapon_damage = 0.25
+}
+
+modifier_utsuho_detonation_b = {
+	army_damage_mult = 1.0
+	army_collateral_damage_mult = 0.5
+}
+
+modifier_utsuho_detonation_c = {
+	country_energy_produces_mult = 0.10
+}
+
+modifier_utsuho_overheat_c = {
+	ship_weapon_damage = 0.75
+	ship_speed_mult = 0.1
+	ship_armor_mult = -0.25
+	ship_shield_mult = -0.25
+}
+
+modifier_utsuho_overheat_d = {
+	country_energy_produces_mult = 0.5
+	ship_armor_mult = -0.25
+	ship_shield_mult = -0.25
+}
+
+modifier_utsuho_fusion_c = {
+	shroud_delve_cooldown = -0.25
+}
+
+modifier_utsuho_meltdown_succeed = {
+	country_physics_tech_research_speed = 0.25
+	ship_weapon_damage = 0.20
+}
+
+modifier_utsuho_meltdown_failed = {
+	pop_happiness = -0.2
+}
+
+modifier_utsuho_reform_finish = {
+	species_leader_exp_gain = 0.1
+	ship_weapon_range_mult = 0.1
+	ship_fire_rate_mult = 0.1
+	ship_weapon_damage = 0.1
+	ship_shield_mult = 0.1
+	ship_armor_mult = 0.1
+}
+
+modifier_utsuho_solette_notech = {
+	ship_weapon_damage = 0.1
+	ship_hull_regen_add_perc = -0.005
+}
+
+modifier_utsuho_solette_tech = {
+	ship_weapon_damage = 0.1
+}

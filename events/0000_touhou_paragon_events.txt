@@ -1792,6 +1792,7 @@ country_event = { # 咲夜
 				set_leader_flag = touhou_leader
 				set_leader_flag = sakuya_leader
 			}
+			country_event = { id = touhou_paragon_effect.41000 days = 14400 random = 3600 }
 		}
 	}
 }
@@ -3741,6 +3742,7 @@ country_event = { # 阿空
 			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_utsuho
 			}
+			country_event = { id = touhou_paragon_situation.42670 days=3600}
 		}
 	}
 }
