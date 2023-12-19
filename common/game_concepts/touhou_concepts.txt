@@ -1,0 +1,14 @@
+
+# If no icon/texture is specified it will use NDefines::NInterface::GAME_CONCEPT_ICON_DEFAULT
+
+concept_magic_dolls = {
+}
+
+concept_automatic_dolls = {
+}
+
+concept_sapient_dolls = {
+}
+
+concept_doll_leaders = {
+}

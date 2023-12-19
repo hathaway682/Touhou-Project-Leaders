@@ -1,0 +1,165 @@
+spriteTypes = {	
+
+	### RECRUITMENT MESSAGE ICONS ###
+
+	spriteType = {
+		name = "GFX_message_touhou_leaders"
+		texturefile = "gfx/interface/icons/message/touhou_leaders.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_recruit_talent"
+		texturefile = "gfx/interface/icons/agenda_icons/origin_legendary_leader.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_dyson_sphere"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_dyson_sphere.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_touhou_regeneration"
+		texturefile = "gfx/interface/icons/traits/trait_limited_regeneration.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_perfected_genes"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/ltrait_perfected_genes.dds"
+	}
+
+	spriteType = {
+		name = "GFX_evt_plan_of_hakurei_shrine"
+		texturefile = "gfx/event_pictures/plan_of_hakurei_shrine.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_mk2_titan_robot"
+		texturefile = "gfx/event_pictures/mk2_titan_robot.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_reimu_spell_card"
+		texturefile = "gfx/event_pictures/reimu_spell_card.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_marisa_spell_card"
+		texturefile = "gfx/event_pictures/marisa_spell_card.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_destiny_manipulation"
+		texturefile = "gfx/event_pictures/destiny_manipulation.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_koakuma_comes"
+		texturefile = "gfx/event_pictures/koakuma_comes.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_daiyousei_comes"
+		texturefile = "gfx/event_pictures/daiyousei_comes.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_sakura_tree"
+		texturefile = "gfx/event_pictures/sakura_tree.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_akyuu_longevity"
+		texturefile = "gfx/event_pictures/akyuu_longevity.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_aya_action"
+		texturefile = "gfx/event_pictures/aya_action.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_master_spark"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_master_spark.dds"
+	}
+
+	spriteType = {
+		name = "GFX_planet_type_nether"
+		texturefile = "gfx/interface/icons/planet_nether_icons.dds"
+		noOfFrames = 33
+	}
+
+	spriteType = {
+		name = "GFX_evt_utsuho"
+		texturefile = "gfx/event_pictures/utsuho.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_utsuho_reform"
+		texturefile = "gfx/event_pictures/utsuho_reform.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_solette"
+		texturefile = "gfx/event_pictures/solette.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_utsuho_lying"
+		texturefile = "gfx/event_pictures/utsuho_lying.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_utsuho_eater"
+		texturefile = "gfx/event_pictures/utsuho_eater.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	# spriteType = {
+	# 	name = "GFX_text_touhou_leader"
+	# 	texturefile = "gfx/interface/icons/text_icons/text_icon_touhou_leader.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_leader_icons"
+	# 	texturefile = "gfx/interface/icons/leaders/leaders_small.dds"
+	# 	noOfFrames = 6
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_leader_icons_small"
+	# 	texturefile = "gfx/interface/icons/leaders/leaders_small.dds"
+	# 	noOfFrames = 6
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_leader_icons_medium"
+	# 	texturefile = "gfx/interface/icons/leaders/leaders_medium.dds"
+	# 	noOfFrames = 6
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_leader_icons_large"
+	# 	texturefile = "gfx/interface/icons/leaders/leaders_large.dds"
+	# 	noOfFrames = 6
+	# }
+}

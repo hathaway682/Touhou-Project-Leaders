@@ -1,0 +1,331 @@
+
+illusion = {
+	damage = 0.05
+	health = 1.25
+	has_morale = no
+	morale_damage = 40.00
+	collateral_damage = 0
+	war_exhaustion = 0
+	time = 0
+	defensive = yes
+	icon = GFX_army_type_clone
+	use_armynames_from = psionic_army
+	resources = {
+		category = armies
+	}
+	potential = {
+		always = no
+	}
+
+	ai_weight = {
+		base = 0
+	}
+}
+
+ghost = {
+	damage = 0.5
+	health = 0.5
+	has_morale = no
+	morale_damage = 2.00
+	collateral_damage = 0
+	war_exhaustion = 0
+	time = 0
+	defensive = yes
+	icon = GFX_army_type_undead
+	use_armynames_from = undead_army
+	resources = {
+		category = armies
+	}
+	potential = {
+		always = no
+	}
+
+	ai_weight = {
+		base = 0
+	}
+}
+
+# Undead Armies
+hell_undead = {
+	damage = 2.00
+	health = 2.00
+	has_morale = no
+	collateral_damage = 1.25
+	morale_damage = 3.5
+	war_exhaustion = 0.50
+	time = 60
+	icon = GFX_army_type_undead
+	use_armynames_from = undead_army
+	pop_limited = no
+	disband_if_species_lacks_rights = no #i.e. if you resurrect your enemies, you get to keep these armies, even if you are a purifier
+	prerequisites = { "tech_assault_armies" }
+
+	resources = {
+		category = armies
+		cost = {
+			energy = 100
+		}
+
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	show_tech_unlock_if = {
+		any_owned_leader = {
+			has_trait = leader_trait_corpse_manipulation
+		}
+	}
+
+	potential_country = {
+		any_owned_leader = {
+			has_trait = leader_trait_corpse_manipulation
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		planet = {
+			OR = {
+				has_active_building = building_corpses_disposal_center
+				AND = {
+					exists = leader
+					leader = {
+						has_trait = leader_trait_corpse_manipulation
+					}
+				}
+				sector = {
+					sector_capital = {
+						exists = leader
+						leader = {
+							has_trait = leader_trait_corpse_manipulation
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 1000
+	}
+}
+
+
+hell_undead_defense = {
+	defensive = yes
+	is_pop_spawned = yes
+	health = 3.5
+	damage = 3
+	collateral_damage = 0.0
+	has_morale = no
+	morale_damage = 3.5
+	war_exhaustion = 0.0
+	icon = GFX_army_type_undead
+	use_armynames_from = undead_army
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		planet = {
+			has_active_building = building_corpses_disposal_center
+		}
+	}
+
+	resources = {
+		category = armies
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_unyielding_resistance_is_frugal }
+			}
+			unity = 0.5
+		}
+	}
+
+	spawn_chance = {
+		factor = 1000
+	}
+}
+
+sanae_warform = {
+	damage = 6.0
+	health = 8.0
+	has_morale = no
+	morale_damage = 2
+	collateral_damage = 6.0
+	war_exhaustion = 4.0
+	time = 500
+	has_species = no
+
+	icon = GFX_army_type_machine_assault
+
+	resources = {
+		category = armies
+		cost = {
+			alloys = 250
+		}
+
+		upkeep = {
+			energy = 8
+			unity = 8
+		}
+	}
+
+	prerequisites = { tech_sanae_robot_army }
+
+	ai_weight = {
+		base = 50
+	}
+}
+
+army_suika_splitter = {
+	damage = 2.5
+	morale_damage = 2.0
+	collateral_damage = 1.5
+	war_exhaustion = 0.25
+	health = 3.0
+	has_morale = no
+	time = 100
+	icon = GFX_army_type_xenomorph
+	has_species = no
+
+	resources = {
+		category = armies
+	}
+
+	potential_country = {
+		always = no
+	}
+
+	ai_weight = {
+		base = 10
+		modifier = {
+			factor = 10
+			is_fallen_empire = yes
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			set = 0
+			OR = {
+				is_pacifist = yes
+				is_xenophile = yes
+			}
+		}
+	}
+}
+
+army_suika_giant = {
+	damage = 10.0
+	health = 20.0
+	morale = 100.0
+	collateral_damage = 6.0
+	morale_damage = 10.0
+	war_exhaustion = 10.0
+	time = 5
+	resources = {
+		category = armies
+		upkeep = {
+			energy = 10
+			food = 10
+			consumer_goods = 10
+		}
+	}
+	has_species = no
+	icon = GFX_army_type_imperial
+
+	potential_country = {
+		always = no
+	}
+}
+
+army_oni_mercenary = {
+	damage = 2.5
+	health = 3.0
+	morale = 6.0
+	morale_damage = 1.0
+	collateral_damage = 0.75
+	war_exhaustion = 3.0
+	time = 150
+	icon = GFX_army_type_imperial
+	has_species = no
+
+	resources = {
+		category = armies
+		cost = {
+			energy = 1000
+		}
+
+		upkeep = {
+			energy = 2
+			food = 2
+			consumer_goods = 2
+		}
+	}
+
+	potential_country = {
+		any_owned_leader = {
+			has_trait = leader_trait_oni_power
+		}
+	}
+
+	potential = {
+		OR = {
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = leader_trait_oni_power
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = leader_trait_oni_power
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 500
+	}
+}
+
+moriya_army = {
+	time = 0
+	health = 0.80
+	damage = 0.80
+	morale = 1.80
+	war_exhaustion = 0
+	icon = GFX_army_type_rebel
+
+	potential_country = {
+		always = no
+	}
+}
+
+moriya_chosen_army = {
+	time = 0
+	health = 1.40
+	damage = 1.60
+	morale = 4.50
+	morale_damage = 1.5
+	collateral_damage = 0.5
+	war_exhaustion = 0
+	icon = GFX_army_type_rebel
+
+	potential_country = {
+		always = no
+	}
+}

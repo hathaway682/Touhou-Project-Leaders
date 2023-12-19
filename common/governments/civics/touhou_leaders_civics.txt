@@ -1,0 +1,829 @@
+#civic_example = {
+#	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
+#	potential = {}								# requirements list, see ../readme_requirements.txt
+#	possible = {}								# requirements list, see ../readme_requirements.txt
+#	pickable_at_start = yes / no				# default: yes
+#	modification = yes / no						# default: yes, set to no to prevent adding or removing this after creation of the empire
+#
+#	random_weight = { base = 5 }				# scriptable weight for randomizing a civic
+#												# Note: If omitted, a default weight of 1 is used
+#												# Also note: after game start, AI selection of new civics uses the below weight instead
+#
+#	ai_weight = { base = 5 }					# scriptable weight for AI picking civics in-game (when unlocking a new slot).
+#												# Note: If omitted, a default weight of 1 is used. Not needed when "modification = no"
+#
+#	modifier = {}								# modifier added to the country if the civic is selected and valid
+#	can_build_ruler_ship = yes / no				# default: no
+#	traits = { trait = ... }					# default: empty; trait set to enforce on the primary species. They cannot be removed, but more can be added if points/picks permit
+#	has_secondary_species = {					# default: none; if present, will enable secondary species customization in empire designer and will create secondary species & pops at galaxy generation time (see empire_init_create_capital_secondary_pops)
+#		traits = { trait = ... }					# default: empty; trait set to enforce on the secondary species. They cannot be removed, but more can be added if points/picks permit
+#	}
+#	is_origin = yes / no						# default: no, set to yes if civic should be treated as an Origin
+#
+#	swap_type = {								# triggered name, desc, custom desc and modifiers
+#		name = ...
+#		description = ...
+#		trigger = {								# In empire creation / galaxy setup, this has no scope. During the game, when there are actual countries existing, it is set to country scope.
+#			local_human_species_class = ..		# If you want to use country scope here, you must always check is_scope_valid first (see civic_devouring_swarm), or you will get errors or it won't work as intended.
+#		}
+#		modifier = {							# modifier that is applied to the country when triggers are evaluated as true
+#			...
+#		}
+#	}
+#	ai_playable = {}							# Similar to "playable", for AI
+#}
+
+civic_hakurei_shinto = {
+	description = "civic_hakurei_shinto_effects"
+	modification = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_imperial_cult
+				value = civic_gospel_of_the_masses
+			}
+		}
+		civics = {
+			NOR = {
+				text = can_only_choose_one
+				value = civic_moriya_shinto
+				value = civic_moriya_shinto_corp
+				value = civic_kirisame_magic
+				value = civic_kirisame_magic_corp
+				value = civic_scarlet_allience
+				value = civic_scarlet_allience_corp
+				value = civic_penglai_medcine
+				value = civic_penglai_medcine_corp
+				value = civic_hifuu
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	ai_weight = {
+		base = 0
+	}
+	modifier = {
+		planet_priests_upkeep_mult = -0.15
+		ship_fire_rate_mult = 0.15
+		army_damage_mult = 0.15
+	}
+	swap_type = {
+		description = "civic_hakurei_shinto_effects"
+		trigger = {
+			is_spiritualist = yes
+		}
+		modifier = {
+			planet_priests_unity_produces_add = 1
+		}
+	}
+}
+
+civic_hakurei_shinto_corp = {
+	description = "civic_hakurei_shinto_corp_effects"
+	modification = no
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_imperial_cult
+				value = civic_gospel_of_the_masses
+			}
+		}
+		civics = {
+			NOR = {
+				text = can_only_choose_one
+				value = civic_moriya_shinto
+				value = civic_moriya_shinto_corp
+				value = civic_kirisame_magic
+				value = civic_kirisame_magic_corp
+				value = civic_scarlet_allience
+				value = civic_scarlet_allience_corp
+				value = civic_penglai_medcine
+				value = civic_penglai_medcine_corp
+				value = civic_hifuu
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	ai_weight = {
+		base = 0
+	}
+	modifier = {
+		planet_priests_upkeep_mult = -0.15
+		ship_fire_rate_mult = 0.15
+		army_damage_mult = 0.15
+	}
+	swap_type = {
+		description = "civic_hakurei_shinto_effects"
+		trigger = {
+			is_spiritualist = yes
+		}
+		modifier = {
+			planet_priests_unity_produces_add = 1
+		}
+	}
+}
+
+civic_moriya_shinto = {
+	description = "civic_moriya_shinto_effects"
+	modification = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_imperial_cult
+				value = civic_gospel_of_the_masses
+			}
+		}
+		civics = {
+			NOR = {
+				text = can_only_choose_one
+				value = civic_hakurei_shinto
+				value = civic_hakurei_shinto_corp
+				value = civic_kirisame_magic
+				value = civic_kirisame_magic_corp
+				value = civic_scarlet_allience
+				value = civic_scarlet_allience_corp
+				value = civic_penglai_medcine
+				value = civic_penglai_medcine_corp
+				value = civic_hifuu
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	ai_weight = {
+		base = 0
+	}
+	modifier = {
+		planet_priests_produces_mult = 0.15
+		all_technology_research_speed = 0.1
+		planet_building_build_speed_mult = 0.25
+	}
+	swap_type = {
+		description = "civic_moriya_shinto_effects"
+		trigger = {
+			is_spiritualist = yes
+		}
+		modifier = {
+			planet_priests_unity_produces_add = 1
+		}
+	}
+}
+
+civic_moriya_shinto_corp = {
+	description = "civic_moriya_shinto_corp_effects"
+	modification = no
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_imperial_cult
+				value = civic_gospel_of_the_masses
+			}
+		}
+		civics = {
+			NOR = {
+				text = can_only_choose_one
+				value = civic_hakurei_shinto
+				value = civic_hakurei_shinto_corp
+				value = civic_kirisame_magic
+				value = civic_kirisame_magic_corp
+				value = civic_scarlet_allience
+				value = civic_scarlet_allience_corp
+				value = civic_penglai_medcine
+				value = civic_penglai_medcine_corp
+				value = civic_hifuu
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	ai_weight = {
+		base = 0
+	}
+	modifier = {
+		planet_priests_produces_mult = 0.15
+		all_technology_research_speed = 0.1
+		planet_building_build_speed_mult = 0.25
+	}
+	swap_type = {
+		description = "civic_moriya_shinto_effects"
+		trigger = {
+			is_spiritualist = yes
+		}
+		modifier = {
+			planet_priests_unity_produces_add = 1
+		}
+	}
+}
+
+civic_kirisame_magic = {
+	description = "civic_kirisame_magic_effects"
+	modification = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+		civics = {
+			NOR = {
+				text = can_only_choose_one
+				value = civic_hakurei_shinto
+				value = civic_hakurei_shinto_corp
+				value = civic_moriya_shinto
+				value = civic_moriya_shinto_corp
+				value = civic_scarlet_allience
+				value = civic_scarlet_allience_corp
+				value = civic_penglai_medcine
+				value = civic_penglai_medcine_corp
+				value = civic_hifuu
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	ai_weight = {
+		base = 0
+	}
+	modifier = {
+		ship_speed_mult = 0.15
+		science_ship_survey_speed = 0.33
+		ship_weapon_damage = 0.15
+		op_cat_technology_skill_add = 4
+	}
+}
+
+civic_kirisame_magic_corp = {
+	description = "civic_kirisame_magic_corp_effects"
+	modification = no
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+		civics = {
+			NOR = {
+				text = can_only_choose_one
+				value = civic_hakurei_shinto
+				value = civic_hakurei_shinto_corp
+				value = civic_moriya_shinto
+				value = civic_moriya_shinto_corp
+				value = civic_scarlet_allience
+				value = civic_scarlet_allience_corp
+				value = civic_penglai_medcine
+				value = civic_penglai_medcine_corp
+				value = civic_hifuu
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	ai_weight = {
+		base = 0
+	}
+	modifier = {
+		ship_speed_mult = 0.15
+		science_ship_survey_speed = 0.33
+		ship_weapon_damage = 0.15
+		op_cat_technology_skill_add = 4
+	}
+}
+
+civic_scarlet_allience = {
+	description = "civic_scarlet_allience_effects"
+	modification = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+		origin = {
+			NOR = {
+				value = origin_imperial_vassal
+				value = origin_scion
+				value = origin_common_ground
+			}
+		}
+		species_archetype = {
+			NOT = {
+				value = LITHOID
+			}
+		}
+		civics = {
+			NOR = {
+				text = can_only_choose_one
+				value = civic_hakurei_shinto
+				value = civic_hakurei_shinto_corp
+				value = civic_moriya_shinto
+				value = civic_moriya_shinto_corp
+				value = civic_kirisame_magic
+				value = civic_kirisame_magic_corp
+				value = civic_penglai_medcine
+				value = civic_penglai_medcine_corp
+				value = civic_hifuu
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	ai_weight = {
+		base = 0
+	}
+	traits = { trait = trait_scarlet_blood }
+	modifier = {
+		country_power_projection_influence_produces_add = 1
+		country_naval_cap_mult = 0.2
+		country_claim_influence_cost_mult = -0.2
+	}
+}
+
+civic_scarlet_allience_corp = {
+	description = "civic_scarlet_allience_corp_effects"
+	modification = no
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+		origin = {
+			NOR = {
+				value = origin_imperial_vassal
+				value = origin_scion
+				value = origin_common_ground
+				value = origin_legendary_leader
+			}
+		}
+		species_archetype = {
+			NOT = {
+				value = LITHOID
+			}
+		}
+		civics = {
+			NOR = {
+				text = can_only_choose_one
+				value = civic_hakurei_shinto
+				value = civic_hakurei_shinto_corp
+				value = civic_moriya_shinto
+				value = civic_moriya_shinto_corp
+				value = civic_kirisame_magic
+				value = civic_kirisame_magic_corp
+				value = civic_penglai_medcine
+				value = civic_penglai_medcine_corp
+				value = civic_hifuu
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	ai_weight = {
+		base = 0
+	}
+	traits = { trait = trait_scarlet_blood }
+	modifier = {
+		country_power_projection_influence_produces_add = 1
+		country_naval_cap_mult = 0.2
+		country_claim_influence_cost_mult = -0.2
+	}
+}
+
+civic_scarlet_allience = {
+	description = "civic_scarlet_allience_effects"
+	modification = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+		origin = {
+			NOR = {
+				value = origin_imperial_vassal
+				value = origin_scion
+				value = origin_common_ground
+			}
+		}
+		species_archetype = {
+			NOT = {
+				value = LITHOID
+			}
+		}
+		civics = {
+			NOR = {
+				text = can_only_choose_one
+				value = civic_hakurei_shinto
+				value = civic_hakurei_shinto_corp
+				value = civic_moriya_shinto
+				value = civic_moriya_shinto_corp
+				value = civic_kirisame_magic
+				value = civic_kirisame_magic_corp
+				value = civic_nether_world
+				value = civic_nether_world_corp
+				value = civic_penglai_medcine
+				value = civic_penglai_medcine_corp
+				value = civic_hifuu
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	ai_weight = {
+		base = 0
+	}
+	traits = { trait = trait_scarlet_blood }
+	modifier = {
+		country_power_projection_influence_produces_add = 1
+		country_naval_cap_mult = 0.2
+		country_claim_influence_cost_mult = -0.2
+	}
+}
+
+civic_nether_world = {
+	description = "civic_nether_world_effects"
+	modification = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_memorialist
+				value = civic_reanimated_armies
+			}
+		}
+		civics = {
+			NOR = {
+				text = can_only_choose_one
+				value = civic_hakurei_shinto
+				value = civic_hakurei_shinto_corp
+				value = civic_moriya_shinto
+				value = civic_moriya_shinto_corp
+				value = civic_kirisame_magic
+				value = civic_kirisame_magic_corp
+				value = civic_scarlet_allience
+				value = civic_scarlet_allience_corp
+				value = civic_penglai_medcine
+				value = civic_penglai_medcine_corp
+				value = civic_hifuu
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	ai_weight = {
+		base = 0
+	}
+	modifier = {
+		leaders_upkeep_mult = -0.5
+		pop_amenities_usage_organic_mult = -0.15
+		planet_jobs_unity_produces_mult = 0.05
+	}
+}
+
+civic_nether_world_corp = {
+	description = "civic_nether_world_corp_effects"
+	modification = no
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_permanent_employment
+			}
+		}
+		civics = {
+			NOR = {
+				text = can_only_choose_one
+				value = civic_hakurei_shinto
+				value = civic_hakurei_shinto_corp
+				value = civic_moriya_shinto
+				value = civic_moriya_shinto_corp
+				value = civic_kirisame_magic
+				value = civic_kirisame_magic_corp
+				value = civic_scarlet_allience
+				value = civic_scarlet_allience_corp
+				value = civic_penglai_medcine
+				value = civic_penglai_medcine_corp
+				value = civic_hifuu
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	ai_weight = {
+		base = 0
+	}
+	modifier = {
+		leaders_upkeep_mult = -0.5
+		pop_amenities_usage_organic_mult = -0.25
+		biological_pop_growth_speed_reduction = 0.05
+	}
+}
+
+civic_penglai_medcine = {
+	description = "civic_penglai_medcine_effects"
+	modification = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_private_healthcare_corporate
+			}
+		}
+		civics = {
+			NOR = {
+				text = can_only_choose_one
+				value = civic_hakurei_shinto
+				value = civic_hakurei_shinto_corp
+				value = civic_moriya_shinto
+				value = civic_moriya_shinto_corp
+				value = civic_kirisame_magic
+				value = civic_kirisame_magic_corp
+				value = civic_scarlet_allience
+				value = civic_scarlet_allience_corp
+				value = civic_nether_world
+				value = civic_nether_world_corp
+				value = civic_hifuu
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	ai_weight = {
+		base = 0
+	}
+	modifier = {
+		category_biology_research_speed_mult = 0.3
+		modify_species_cost_mult = -0.15
+		leader_lifespan_add = 10
+	}
+}
+
+civic_penglai_medcine_corp = {
+	description = "civic_penglai_medcine_corp_effects"
+	modification = no
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_private_healthcare_corporate
+			}
+		}
+		civics = {
+			NOR = {
+				text = can_only_choose_one
+				value = civic_hakurei_shinto
+				value = civic_hakurei_shinto_corp
+				value = civic_moriya_shinto
+				value = civic_moriya_shinto_corp
+				value = civic_kirisame_magic
+				value = civic_kirisame_magic_corp
+				value = civic_scarlet_allience
+				value = civic_scarlet_allience_corp
+				value = civic_nether_world
+				value = civic_nether_world_corp
+				value = civic_hifuu
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	ai_weight = {
+		base = 0
+	}
+	modifier = {
+		category_biology_research_speed_mult = 0.3
+		modify_species_cost_mult = -0.15
+		leader_lifespan_add = 10
+	}
+}
+
+civic_hifuu = {
+	playable = {
+		has_first_contact_dlc = yes
+	}
+
+	description = "civic_hifuu_effects"
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+
+	possible = {
+		origin = {
+			NOR = {
+				# No FC origins.
+				value = origin_payback
+				value = origin_broken_shackles
+				value = origin_fear_of_the_dark
+			}
+		}
+		ethics = {
+			NOR = {
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_inwards_perfection
+			}
+		}
+		civics = {
+			NOR = {
+				text = can_only_choose_one
+				value = civic_hakurei_shinto
+				value = civic_hakurei_shinto_corp
+				value = civic_moriya_shinto
+				value = civic_moriya_shinto_corp
+				value = civic_kirisame_magic
+				value = civic_kirisame_magic_corp
+				value = civic_scarlet_allience
+				value = civic_scarlet_allience_corp
+				value = civic_nether_world
+				value = civic_nether_world_corp
+				value = civic_penglai_medcine
+				value = civic_penglai_medcine_corp
+			}
+		}
+	}
+
+	modifier = {
+		ship_speed_mult = 0.15
+		first_contact_speed_mult = 0.25
+		ship_anomaly_generation_chance_mult = 0.1
+		ship_archaeological_site_excavation_speed_mult = 0.1
+		category_psionics_draw_chance_mult = 0.5
+	}
+
+	random_weight = {
+		base = 0
+	}
+}

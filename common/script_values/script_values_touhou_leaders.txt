@@ -1,0 +1,179 @@
+aya_attack_bonus_value = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = intel
+		trigger_scope = event_target:attacker_country
+		parameters = {
+			who = event_target:defender_country
+		}
+		mode = add
+	}
+}
+
+touhou_leader_randomizer = {
+	base = 1
+	modifier = {
+		factor = 5
+		has_ethic = ethic_$ETHIC$
+	}
+	modifier = {
+		factor = 10
+		has_ethic = ethic_fanatic_$ETHIC$
+	}
+	modifier = {
+		factor = 0
+		is_$ETHIC_NEG$ = yes
+	}
+	modifier = {
+		factor = 0
+		has_global_flag = $LEADER_ID$
+	}
+	modifier = {
+		factor = 0
+		has_country_flag = dismissed_$LEADER_ID$
+	}
+}
+
+enforcer_job_number = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_pop
+		trigger_scope = root
+		parameters = {
+			limit = {
+				has_job = enforcer
+			}
+		}
+		mode = add
+	}
+}
+
+price_of_life = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = check_modifier_value
+		potential = {
+			is_pop_category = ruler
+		}
+		trigger_scope = root
+		parameters = {
+			modifier = pop_cat_ruler_political_power
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = check_modifier_value
+		potential = {
+			is_pop_category = specialist
+		}
+		trigger_scope = root
+		parameters = {
+			modifier = pop_cat_specialist_political_power
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = check_modifier_value
+		potential = {
+			is_pop_category = worker
+		}
+		trigger_scope = root
+		parameters = {
+			modifier = pop_cat_worker_political_power
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		potential = {
+			is_pop_category = slave
+		}
+		trigger = check_modifier_value
+		trigger_scope = root
+		parameters = {
+			modifier = pop_cat_slave_political_power
+		}
+		mode = add
+	}
+	mult = value:scripted_modifier_mult|MODIFIER|pop_political_power|
+}
+
+doll_missing_per_maker = {
+	base = 0
+	add = modifier:doll_control_limit
+	complex_trigger_modifier = {
+		trigger = count_owned_pop
+		parameters = {
+			limit = { has_trait = trait_thl_doll }
+		}
+		mode = subtract
+	}
+	complex_trigger_modifier = {
+		trigger = count_owned_pop
+		parameters = {
+			limit = { has_job = dollmaker }
+		}
+		mode = divide
+	}
+}
+
+tree_army_value = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_uncleared_blockers
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = free_district_slots
+		mode = add
+	}
+	multiply = 2
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_farming
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_farming_uncapped
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_garden
+		}
+		mode = add
+	}
+}
+
+death_age = {
+	base = 80
+	add = modifier:leader_lifespan_add
+	mult = value:scripted_modifier_mult|MODIFIER|leader_lifespan_mult|
+}
+
+scripted_ethics_weight_mult = {
+	base = 0
+	modifier = {
+		add = 1
+		owner = {
+			has_ethic = ethic_$ETHIC$
+		}
+	}
+	modifier = {
+		add = 2
+		owner = {
+			has_ethic = ethic_fanatic_$ETHIC$
+		}
+	}
+	mult = value:scripted_modifier_mult|MODIFIER|culture_workers_modifier_mult|
+}
+
+touhou_leader_lower_chance = {
+	add = 1
+	mult = paragon_chance_negative
+}

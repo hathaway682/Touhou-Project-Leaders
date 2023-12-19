@@ -1,0 +1,158 @@
+@minor_artifact_decision_cost = 100
+@minor_artifact_decision_duration = 3600
+@minor_artifact_ai_threshold = 200
+
+artifact_random_secrct_research = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 1500
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	potential = {
+		 any_owned_leader = {
+			 has_trait = leader_trait_words
+		 }
+	}
+
+	allow = {
+		any_owned_leader = {
+			has_trait = leader_trait_words
+			is_councilor = yes
+		}
+		custom_tooltip = {
+			text = all_secret_unlocked
+			NAND = {
+				has_country_flag = irassian_research_started
+				has_country_flag = yuht_research_started
+				has_country_flag = vultaum_research_started
+				has_country_flag = cybrex_research_started
+				has_country_flag = league_research_started
+				has_country_flag = baol_research_started
+				has_country_flag = zroni_research_started
+			}
+		}
+	}
+
+	effect = {
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = irassian_research_started
+				}
+				enable_special_project = {
+					name = "IRASSIAN_SECRETS"
+					location = capital_scope
+					owner = ROOT
+				}
+
+				hidden_effect = {
+					set_country_flag = irassian_research_started
+					country_event = { id = ancrel.10040 }
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = yuht_research_started
+				}
+				enable_special_project = {
+					name = "YUHT_SECRETS"
+					location = capital_scope
+					owner = ROOT
+				}
+
+				hidden_effect = {
+					set_country_flag = yuht_research_started
+					country_event = { id = ancrel.10040 }
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = vultaum_research_started
+				}
+				enable_special_project = {
+					name = "VULTAUM_SECRETS"
+					location = capital_scope
+					owner = ROOT
+				}
+
+				hidden_effect = {
+					set_country_flag = vultaum_research_started
+					country_event = { id = ancrel.10040 }
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = cybrex_research_started
+				}
+				enable_special_project = {
+					name = "CYBREX_SECRETS"
+					location = capital_scope
+					owner = ROOT
+				}
+
+				hidden_effect = {
+					set_country_flag = cybrex_research_started
+					country_event = { id = ancrel.10040 }
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = league_research_started
+				}
+				enable_special_project = {
+					name = "LEAGUE_SECRETS"
+					location = capital_scope
+					owner = ROOT
+				}
+
+				hidden_effect = {
+					set_country_flag = league_research_started
+					country_event = { id = ancrel.10040 }
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = baol_research_started
+				}
+				enable_special_project = {
+					name = "BAOL_SECRETS"
+					location = capital_scope
+					owner = ROOT
+				}
+
+				hidden_effect = {
+					set_country_flag = baol_research_started
+					country_event = { id = ancrel.10040 }
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = zroni_research_started
+				}
+				enable_special_project = {
+					name = "ZRONI_SECRETS"
+					location = capital_scope
+					owner = ROOT
+				}
+
+				hidden_effect = {
+					set_country_flag = zroni_research_started
+					country_event = { id = ancrel.10040 }
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,977 @@
+###########################
+# TOUHOU BACKGROUND JOBS #
+###########################
+
+kazehouri = { icon = colonist possible = { always = no } }
+oni_king = { icon = colonist possible = { always = no } }
+doorman = { icon = colonist possible = { always = no } }
+miko = { icon = colonist possible = { always = no } }
+magician = { icon = colonist possible = { always = no } }
+gardener = { icon = colonist possible = { always = no } }
+head_maid = { icon = colonist possible = { always = no } }
+college_student = { icon = colonist possible = { always = no } }
+subterranean_manager = { icon = colonist possible = { always = no } }
+media_worker_thl = { icon = colonist possible = { always = no } }
+yama = { icon = colonist possible = { always = no } }
+boatman = { icon = colonist possible = { always = no } }
+ghost_lead = { icon = colonist possible = { always = no } }
+fire_trolley = { icon = colonist possible = { always = no } }
+sun_bird = { icon = colonist possible = { always = no } }
+
+###替换原版
+
+healthcare = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_clinic
+    clothes_texture_index = 3
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_specialist_job
+
+    planet_modifier = {
+        pop_growth_speed = 0.05
+        planet_pop_assembly_organic_mult = 0.05
+        pop_environment_tolerance = 0.025
+    }
+
+    resources = {
+        category = planet_doctors
+        upkeep = {
+            consumer_goods = 1
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = { has_valid_civic = civic_dystopian_society }
+            }
+        }
+        planet_amenities_add = 5
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_valid_civic = civic_private_healthcare_corporate }
+        }
+        planet_amenities_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_valid_civic = civic_private_healthcare_corporate }
+        }
+        trade_value_add = 4
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_valid_civic = civic_penglai_medcine_corp }
+        }
+        planet_amenities_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_valid_civic = civic_penglai_medcine_corp }
+        }
+        trade_value_add = 4
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_valid_civic = civic_penglai_medcine }
+        }
+        planet_amenities_add = 5
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = { has_planet_flag = has_private_clinics }
+        }
+        planet_amenities_add = 1
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = { has_planet_flag = has_private_clinics }
+        }
+        trade_value_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    }
+
+
+    weight = {
+        weight = @high_prio_specialist_job_weight
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = { has_trait = trait_mechanical }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = healthcare
+        }
+        modifier = {
+            factor = 2
+            owner = { has_valid_civic = civic_private_healthcare_corporate }
+        }
+        modifier = {
+            factor = 1.5
+            planet = {
+                has_branch_office = yes
+                branch_office_owner = {
+                    has_valid_civic = civic_private_healthcare_corporate
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            owner = { has_valid_civic = civic_penglai_medcine_corp }
+        }
+        modifier = {
+            factor = 1.5
+            planet = {
+                has_branch_office = yes
+                branch_office_owner = {
+                    has_valid_civic = civic_penglai_medcine_corp
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_enslaved = yes
+            has_slavery_type = { type = slavery_indentured }
+        }
+        modifier = {
+            factor = 10
+            NOT = { has_job = healthcare }
+            planet = {
+                free_amenities < 0
+                has_available_jobs = healthcare
+            }
+        }
+    }
+}
+
+death_chronicler = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_galactic_memorial_1
+    clothes_texture_index = 3
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_specialist_job
+    possible = { complex_specialist_job_check_trigger = yes }
+
+    resources = {
+        category = planet_culture_workers
+        produces = {
+            unity = 4
+        }
+        upkeep = {
+            consumer_goods = 3
+        }
+    }
+
+    inline_script = "jobs/culture_worker_outputs"
+
+    planet_modifier = {
+        planet_stability_add = 2.5
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_civic = civic_nether_world }
+        }
+        modifier = {
+            planet_pop_assembly_organic_add = 1
+        }
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+        mult = 2
+        mult = value:job_weights_modifier|JOB|death_chronicler|RESOURCE|unity|
+        # We deliberately don't weight the ethics-based modifiers
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = death_chronicler
+        }
+    }
+}
+
+###档案管理员
+
+touhou_archivist = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_master_archive
+    clothes_texture_index = 2
+    icon = fe_archivist
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+
+    resources = {
+        category = planet_researchers
+        produces = {
+            physics_research = 6
+            engineering_research = 6
+            society_research = 6
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            consumer_goods = 1
+        }
+    }
+
+    overlord_resources = {
+        category = planet_requisitioned_research
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            physics_research = 3
+            engineering_research = 3
+            society_research = 3
+        }
+    }
+
+    triggered_pop_modifier = {
+        potential = {
+            planet = {
+                exists = army_leader
+                army_leader = {
+                    has_trait = leader_trait_academia_recruiter
+                }
+            }
+        }
+        modifier = {
+            pop_defense_armies_add = 1
+        }
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+        mult = value:job_weights_research_modifier|JOB|archivist|
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = { has_trait = trait_mechanical }
+        }
+        modifier = {
+            factor = 2
+            has_living_standard = { type = living_standard_academic_privilege }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = touhou_archivist
+        }
+        modifier = {
+            factor = 0.8
+            is_enslaved = yes
+            has_slavery_type = { type = slavery_indentured }
+        }
+    }
+}
+
+#人偶师
+
+dollmaker = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_doll_assembly_plant
+    clothes_texture_index = 3
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_specialist_job
+
+    possible = {
+        OR = {
+            is_robot_pop = no
+            AND = {
+                has_trait = trait_thl_doll
+                owner = { has_technology = tech_doll_assembly_complex }
+            }
+            AND = {
+                has_trait = trait_mechanical
+                owner = { has_technology = tech_synthetic_workers }
+            }
+        }
+    }
+
+    planet_modifier = {
+        doll_control_limit = 15
+        planet_pop_assembly_add = 2
+    }
+
+    triggered_planet_modifier = {
+        potential = { owner = { has_technology = tech_automatic_dolls } }
+        doll_control_limit = 15
+        planet_doll_jobs_worker_produces_mult = 0.05
+    }
+
+    triggered_planet_modifier = {
+        potential = { owner = { has_technology = tech_sapient_dolls } }
+        doll_control_limit = -30
+        planet_doll_jobs_specialist_produces_mult = 0.05
+    }
+
+    resources = {
+        category = planet_pop_assemblers
+        upkeep = {
+            trigger = {
+                OR = {
+                    planet = {
+                        check_variable_arithmetic = { which = value:doll_missing_per_maker value > 0 }
+                    }
+                }
+            }
+            consumer_goods = 4
+        }
+    }
+
+    weight = {
+        weight = 500
+        modifier = {
+            factor = 10
+            owner = { is_synthetic_empire = yes }
+        }
+    }
+}
+
+grower = {
+    icon = xeno_zoo_keeper
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_food_processing_facility
+    clothes_texture_index = 2
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_worker_job
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+        }
+    }
+
+    resources = {
+        category = planet_farmers
+        produces = {
+            food = 3
+            consumer_goods = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_robot_empire = yes
+                }
+            }
+            food = -1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                }
+            }
+            food = @requisitorium_food_reduction
+        }
+    }
+
+    overlord_resources = {
+        category = planet_requisitioned_food
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                }
+            }
+            food = @requisitorium_food_overlord
+        }
+    }
+
+    triggered_planet_modifier = {
+        planet_amenities_add = 5
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    weight = {
+        weight = @worker_job_weight
+        mult = value:job_weights_modifier|JOB|farmer|RESOURCE|food|
+        modifier = {
+            factor = 1.1
+            owner = { has_valid_civic = civic_agrarian_idyll }
+        }
+        modifier = {
+            factor = 10
+            is_enslaved = yes
+            can_take_servant_job = no
+            NOT = { has_slavery_type = { type = slavery_indentured } }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+            owner = { has_technology = tech_droid_workers }
+        }
+        modifier = {
+            factor = 200
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+            owner = { NOT = { has_technology = tech_droid_workers } }
+        }
+        modifier = {
+            factor = 0.25
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+            owner = { has_valid_civic = civic_agrarian_idyll }
+        }
+        # low income modifier
+        modifier = {
+            factor = 1.2
+            exists = planet
+            planet = {
+                has_available_jobs = farmer
+            }
+            exists = owner
+            owner = {
+                is_ai = yes
+                has_monthly_income = {
+                    resource = food
+                    value < 10
+                }
+            }
+        }
+
+        modifier = {
+            factor = 0.5
+            has_trait = trait_lithoid
+
+            owner = {
+                is_lithoid_empire = yes
+                has_monthly_income = {
+                    resource = food
+                    value >= 0
+                }
+            }
+        }
+    }
+}
+
+grower_drone = {
+    icon = xeno_zoo_keeper
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_food_processing_facility
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+
+    resources = {
+        category = planet_farmers
+        produces = {
+            food = 3
+            energy = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_robot_empire = yes
+                }
+            }
+            food = -1
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                }
+            }
+            food = @requisitorium_food_reduction
+        }
+    }
+
+    overlord_resources = {
+        category = planet_requisitioned_food
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                }
+            }
+            food = @requisitorium_food_overlord
+        }
+    }
+
+    triggered_planet_modifier = {
+        planet_amenities_add = 5
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        trade_value_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    weight = {
+        weight = @simple_drone_job_weight
+        mult = value:job_weights_modifier|JOB|agri_drone|RESOURCE|food|
+        modifier = {
+            factor = 0.9
+            NOT = { has_job = agri_drone }
+            owner = {
+                has_monthly_income = {
+                    resource = food
+                    value > 50
+                }
+            }
+        }
+        modifier = {
+            factor = 1.2
+            has_job = agri_drone
+        }
+        modifier = {
+            factor = 0.9
+            owner = {
+                is_robot_empire = yes
+            }
+        }
+        modifier = {
+            factor = 1.1
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = civic_machine_assimilator }
+            has_trait = trait_cybernetic
+        }
+
+        modifier = {
+            factor = 0.5
+            has_trait = trait_lithoid
+
+            owner = {
+                is_lithoid_empire = yes
+                has_monthly_income = {
+                    resource = food
+                    value >= 0
+                }
+            }
+        }
+    }
+}
+
+#铃奈庵员工
+
+touhou_bookseller = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_suzunaan
+    clothes_texture_index = 2
+    icon = fe_archivist
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+
+    resources = {
+        category = planet_researchers
+        produces = {
+            physics_research = 4
+            engineering_research = 4
+            society_research = 6
+            minor_artifacts = 0.3
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            consumer_goods = 1
+        }
+    }
+
+    overlord_resources = {
+        category = planet_requisitioned_research
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            physics_research = 2
+            engineering_research = 2
+            society_research = 3
+        }
+    }
+
+    triggered_pop_modifier = {
+        potential = {
+            planet = {
+                exists = army_leader
+                army_leader = {
+                    has_trait = leader_trait_academia_recruiter
+                }
+            }
+        }
+        modifier = {
+            pop_defense_armies_add = 1
+        }
+    }
+
+    planet_modifier = {
+        planet_researchers_energy_produces_add = 0.2
+        planet_researchers_produces_mult = 0.02
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+        mult = value:job_weights_research_modifier|JOB|archivist|
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = { has_trait = trait_mechanical }
+        }
+        modifier = {
+            factor = 2
+            has_living_standard = { type = living_standard_academic_privilege }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = touhou_bookseller
+        }
+        modifier = {
+            factor = 0.8
+            is_enslaved = yes
+            has_slavery_type = { type = slavery_indentured }
+        }
+    }
+}
+
+#史官
+
+touhou_historian = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_suzunaan
+    clothes_texture_index = 2
+    icon = fe_archivist
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+
+    resources = {
+        category = planet_culture_workers
+        produces = {
+            society_research = 1
+            unity = 1
+            minor_artifacts = 0.05
+            mult = owner.trigger:num_ascension_perks
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_administrators_produces_mult = 0.05
+        planet_culture_workers_produces_mult = 0.05
+        culture_workers_modifier_mult = 0.05
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+        mult = value:job_weights_research_modifier|JOB|archivist|
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = { has_trait = trait_mechanical }
+        }
+        modifier = {
+            factor = 2
+            has_living_standard = { type = living_standard_academic_privilege }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = touhou_historian
+        }
+        modifier = {
+            factor = 0.8
+            is_enslaved = yes
+            has_slavery_type = { type = slavery_indentured }
+        }
+    }
+}
+
+#烧尸体发电
+corpse_battery = {
+    icon = organic_battery
+    category = worker
+    is_capped_by_modifier = no
+    clothes_texture_index = 2
+
+    pop_modifier = {
+        pop_housing_usage_add = -0.5
+    }
+
+    possible_pre_triggers = {
+        is_sapient = yes
+    }
+
+    possible = {
+        has_trait = trait_zombie
+        planet = {
+            has_building = building_corpses_disposal_center
+        }
+    }
+
+    resources = {
+        category = planet_jobs
+        produces = {
+            energy = 4
+        }
+        produces = {
+            trigger = {
+                planet = { has_active_building = building_energy_grid }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                planet = { has_active_building = building_energy_nexus }
+            }
+            energy = 2
+        }
+    }
+
+    weight = {
+        weight = @special_job_weight
+    }
+}
+
+angler = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_food_processing_facility
+    clothes_texture_index = 2
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_worker_job
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+        }
+    }
+
+    resources = {
+        category = planet_farmers
+        produces = {
+            food = 8
+        }
+        produces = {
+            trigger = {
+                has_councilor = { COUNCILOR = "councilor_anglers" }
+            }
+
+            food = @councilor_anglers_angler_food_bonus
+            mult = value:councilor_level|TYPE|councilor_anglers|
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                }
+            }
+            food = @requisitorium_food_reduction
+        }
+    }
+
+    overlord_resources = {
+        category = planet_requisitioned_food
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                }
+            }
+            food = @requisitorium_food_overlord
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        trade_value_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            has_councilor = { COUNCILOR = "councilor_corporate_anglers" }
+        }
+
+        trade_value_add = @councilor_corporate_anglers_angler_trade_value_bonus
+        mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_corporate_anglers|
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_valid_civic = civic_agrarian_idyll }
+        }
+        planet_amenities_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    weight = {
+        weight = @worker_job_weight
+        mult = value:job_weights_modifier|JOB|angler|RESOURCE|food|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
+        modifier = {
+            factor = 1.1
+            owner = { has_valid_civic = civic_agrarian_idyll }
+        }
+        modifier = {
+            factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+            owner = { has_valid_civic = civic_agrarian_idyll }
+        }
+        modifier = {
+            factor = 10
+            is_enslaved = yes
+            can_take_servant_job = no
+            NOT = { has_slavery_type = { type = slavery_indentured } }
+        }
+        modifier = {
+            factor = 0.25
+            can_take_servant_job = yes
+        }
+    }
+}

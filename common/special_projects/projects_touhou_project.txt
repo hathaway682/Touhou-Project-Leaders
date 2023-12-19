@@ -1,0 +1,191 @@
+@ProspectoriumResourceDiscoveryTime = 60
+# Scholarium Planetary Sensors
+special_project = {
+	key = "SANAE_PLANETARY_SENSORS"
+	timelimit = -1
+	picture = GFX_evt_scholarium_anomaly
+	days_to_research = 60
+	icon = "gfx/interface/icons/situation_log/situation_log_tick.dds"
+	event_scope = ship_event
+	location = yes
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		PREV = {
+			random_list = {
+				1 = { country_event = { id = touhou_paragon_effect.6 scopes = { FROM = FROMFROM } } }
+				1 = { country_event = { id = touhou_paragon_effect.7 scopes = { FROM = FROMFROM } } }
+				1 = { country_event = { id = touhou_paragon_effect.8 scopes = { FROM = FROMFROM } } }
+				1 = { country_event = { id = touhou_paragon_effect.9 scopes = { FROM = FROMFROM } }
+				}
+			}
+		}
+	}
+}
+
+special_project = {
+	key = "GUNGNIR_SPECIAL_PROJECT"
+	timelimit = -1
+	picture = GFX_evt_exploding_ship
+	days_to_research = 60
+	icon = "gfx/interface/icons/situation_log/situation_log_tick.dds"
+	event_scope = SHIP_EVENT
+	location = yes
+
+	requirements = {
+		shipclass_constructor = 1
+	}
+
+	on_success = {
+		custom_tooltip = gungnir_active
+		owner = {
+			hidden_effect = {
+				remove_country_flag = gungnir_used
+			}
+		}
+	}
+}
+
+special_project = {
+	key = "SAKURA_SPECIAL_PROJECT"
+	timelimit = -1
+	picture = GFX_evt_sakura_tree
+	days_to_research = 60
+	icon = "gfx/interface/icons/situation_log/situation_log_tick.dds"
+	event_scope = SHIP_EVENT
+	location = yes
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		owner = {
+			random_owned_leader = {
+				limit = {
+					has_trait = leader_trait_sakura
+				}
+				leader_event = {
+					id = touhou_paragon.42113
+				}
+			}
+		}
+	}
+}
+
+# 无飞升
+special_project = {
+	key = "AKYUU_SPECIAL_PROJECT_NO_ASC"
+	cost = {
+		base = 5000
+	}
+	tech_department = society_technology
+	picture = GFX_evt_genetic_modification
+	location = no
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		event_target:akyuu_leader = {
+			leader_event = { id = touhou_paragon.42412 }
+
+		}
+	}
+
+	on_fail = {
+	}
+
+	on_start = {
+	}
+}
+
+# 义体
+special_project = {
+	key = "AKYUU_SPECIAL_PROJECT_CYBORG"
+	cost = {
+		base = 20000
+	}
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_cybernetics
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		# use event target so a capital-conquering country is not affected
+		event_target:akyuu_leader = {
+			leader_event = { id = touhou_paragon.42413 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# 合成
+special_project = {
+	key = "AKYUU_SPECIAL_PROJECT_SYNTH"
+	cost = {
+		base = 20000
+	}
+	tech_department = physics_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_robot_assembly_plant
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		event_target:akyuu_leader = {
+			leader_event = { id = touhou_paragon.42414 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+# 基因
+special_project = {
+	key = "AKYUU_SPECIAL_PROJECT_GENE"
+	cost = {
+		base = 20000
+	}
+	tech_department = society_technology
+	picture = GFX_evt_circuitry_modification
+	location = no
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		event_target:akyuu_leader = {
+			leader_event = { id = touhou_paragon.42415 }
+		}
+	}
+
+	on_fail = {
+	}
+
+	on_start = {
+	}
+}

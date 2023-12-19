@@ -1,0 +1,399 @@
+situation_utsuho_infection = {
+	picture = GFX_evt_emergency_workers
+	complete_icon_frame = GFX_situation_outcome_frame_red
+	complete_icon = GFX_situation_outcome_unknown
+	on_progress_complete = {
+		custom_tooltip = situation_unknown_outcome_approach
+	}
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_utsuho_infection_nocure
+			add = 5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_utsuho_infection_incure
+			add = 3
+		}
+	}
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 20
+			custom_tooltip = stage_unknown_effects
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 90
+			on_first_enter = {
+				situation_event = { id = touhou_paragon_situation.42661 } #开始治愈
+			}
+			custom_tooltip = stage_unknown_effects
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			on_first_enter = {
+				situation_event = { id = touhou_paragon_situation.42662 } #噩梦前兆
+			}
+			custom_tooltip = stage_unknown_effects
+		}
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_unknown_outcome_approach
+		situation_event = { id = touhou_paragon_situation.42663 } #坏羽病
+		owner = {
+			set_country_flag = touhou_situation_utsuho_infection_over
+		}
+	}
+	approach = {
+		name = approach_utsuho_infection_nocure
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_red
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+	}
+	approach = {
+		name = approach_utsuho_infection_incure
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		potential = {
+			owner = {
+				has_country_flag = utsuho_start_to_cure
+			}
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 20
+				food = 30
+				society_research = 20
+			}
+		}
+	}
+	abort_trigger = {
+		OR = {
+			NOT = { exists = target.owner }
+			target.owner = { NOT = { is_same_value = root.owner } }
+			owner = { has_country_flag = touhou_situation_utsuho_infection_over}
+		}
+	}
+}
+
+situation_utsuho_cure = {
+	picture = GFX_evt_circurtry_modification
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_unknown
+	monthly_progress = {
+		base = 0.5
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_utsuho_observe
+			add = 2
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_utsuho_genetic
+			add = 4
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_utsuho_gaia
+			add = 3
+		}
+		modifier = {
+			desc = string_current_flag
+			has_situation_flag = flag_utsuho_breakthrough
+			add = 0.8
+		}
+		modifier = {
+			desc = string_current_flag
+			has_situation_flag = flag_utsuho_breakthrough_corp
+			add = 0.6
+		}
+	}
+	approach = {
+		name = approach_utsuho_observe
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+			}
+		}
+	}
+	approach = {
+		name = approach_utsuho_genetic
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		potential = {
+			owner = {
+				any_owned_planet = {
+					is_colony = yes
+					is_under_colonization = no
+					OR = {
+						has_building = building_clinic
+						has_building = building_hospital
+					}
+
+				}
+			}
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 30
+			}
+		}
+	}
+	approach = {
+		name = approach_utsuho_gaia
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		potential = {
+			owner = {
+				any_owned_planet = {
+					is_colony = yes
+					is_under_colonization = no
+					NOT = {
+						has_planet_flag = colony_event
+					}
+					is_planet_class = pc_gaia
+				}
+			}
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 20
+			}
+		}
+	}
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 20
+			custom_tooltip = stage_unknown_effects
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 50
+			on_first_enter = {
+				situation_event = { id = touhou_paragon_situation.42668 }
+			}
+			custom_tooltip = stage_unknown_effects
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_blue
+			end = 80
+			on_first_enter = {
+				situation_event = { id = touhou_paragon_situation.42664 }
+			}
+			custom_tooltip = stage_unknown_effects
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_blue
+			end = 100
+			on_first_enter = {
+				situation_event = { id = touhou_paragon_situation.42669 }
+			}
+		}
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_unknown_outcome_approach
+		owner = {
+			set_country_flag = touhou_situation_utsuho_infection_over
+		}
+		situation_event = { id = touhou_paragon_situation.42667 }
+	}
+	on_monthly = {
+		random_events = {
+			80 = 0
+			10 = touhou_paragon_situation.42665
+			10 = touhou_paragon_situation.42666
+		}
+	}
+	abort_trigger = {
+		OR = {
+			NOT = { exists = target.owner }
+			target.owner = { NOT = { is_same_value = root.owner } }
+			owner = { has_country_flag = touhou_situation_utsuho_infection_over}
+		}
+	}
+}
+
+#军事改革
+situation_utsuho_reform = {
+	picture = GFX_evt_utsuho_reform
+	category = positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+	on_progress_complete = {
+		custom_tooltip = situation_unknown_outcome_approach
+		set_situation_locked = yes
+	}
+	monthly_progress = {
+		base = 10.5
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_utsuho_reform_major
+			add = 1
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_utsuho_reform_basic
+			add = 0.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_utsuho_reform_minor
+			add = 0.2
+		}
+		modifier = {
+			desc = string_current_flag
+			has_situation_flag = flag_utsuho_reform_skrand
+			add = 0.3
+		}
+	}
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 25
+			custom_tooltip = stage_unknown_effects
+			modifier = {
+				species_leader_exp_gain = 0.2
+				ship_evasion_mult = -0.1
+				ship_weapon_range_mult = 0.1
+				ship_fire_rate_mult = -0.1
+				ship_weapon_damage = -0.1
+			}
+			on_first_enter = {
+				situation_event = { id = touhou_paragon_situation.42672 }
+			}
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 50
+			custom_tooltip = stage_unknown_effects
+			modifier = {
+				species_leader_exp_gain = 0.1
+				ship_base_speed_mult = -0.1
+				ship_weapon_range_mult = 0.1
+				ship_fire_rate_mult = 0.1
+				ship_weapon_damage = 0.1
+				ships_upkeep_mult = 0.25
+				ship_shield_mult = -0.25
+			}
+			on_first_enter = {
+				situation_event = { id = touhou_paragon_situation.42673 }
+			}
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			end = 75
+			custom_tooltip = stage_unknown_effects
+			modifier = {
+				species_leader_exp_gain = 0.1
+				ship_base_speed_mult = 0.1
+				ship_weapon_damage = 0.25
+				ship_fire_rate_mult = -0.2
+				ships_upkeep_mult = 0.25
+				ship_shield_mult = -0.25
+				ship_armor_mult = -0.25
+			}
+			on_first_enter = {
+				situation_event = { id = touhou_paragon_situation.42674 }
+			}
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			end = 100
+			custom_tooltip = stage_unknown_effects
+			modifier = {
+				species_leader_exp_gain = 0.05
+			}
+			on_first_enter = {
+				situation_event = { id = touhou_paragon_situation.42675 }
+			}
+		}
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_unknown_outcome_approach
+		situation_event = { id = touhou_paragon_situation.42671 } #坏羽病
+		owner = {
+			set_country_flag = touhou_situation_utsuho_reform_over
+		}
+	}
+	approach = {
+		name = approach_utsuho_reform_major
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		modifier = {
+			species_leader_exp_gain = 0.15
+			ships_upkeep_mult = 0.1
+			ship_tracking_mult = 0.05
+			ship_accuracy_mult = 0.05
+		}
+	}
+	approach = {
+		name = approach_utsuho_reform_basic
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		modifier = {
+			species_leader_exp_gain = 0.1
+			ships_upkeep_mult = 0.05
+			ship_speed_mult = -0.1
+		}
+	}
+	approach = {
+		name = approach_utsuho_reform_minor
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_outcome_tooltip
+		}
+		modifier = {
+			species_leader_exp_gain = 0.1
+			ships_upkeep_mult = 0.05
+			ship_speed_mult = -0.1
+		}
+	}
+	abort_trigger = {
+		OR = {
+			NOT = { exists = target.owner }
+			target.owner = { NOT = { is_same_value = root.owner } }
+			owner = {
+				has_country_flag = utsuho_reform_abort
+			}
+		}
+	}
+}

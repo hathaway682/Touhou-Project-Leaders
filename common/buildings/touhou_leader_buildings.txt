@@ -1,0 +1,1065 @@
+##################
+# Unity buildings
+##################
+
+building_moriya_shrine = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+	icon = building_moriya_shrine
+
+	category = unity
+
+	potential = {
+		owner = {
+			OR = {
+				has_civic = civic_moriya_shinto
+				has_civic = civic_moriya_shinto_corp
+				any_owned_leader = {
+					has_trait = leader_trait_miracle
+				}
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			has_major_upgraded_capital = yes
+			AND = {
+				has_upgraded_capital = yes
+				owner = {
+					OR = {
+						has_civic = civic_moriya_shinto
+						has_civic = civic_moriya_shinto_corp
+					}
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_citadel_of_faith
+		building_autocurating_vault
+		building_alpha_hub
+		building_corporate_vault
+	}
+
+	planet_modifier = {
+		job_high_priest_add = 1
+		job_priest_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+
+		}
+		cost = {
+			trigger = {
+				owner = {
+					NOR = {
+						has_civic = civic_moriya_shinto
+						has_civic = civic_moriya_shinto_corp
+					}
+				}
+			}
+			rare_crystals = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			rare_crystals = @b4_rare_upkeep
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					NOR = {
+						has_civic = civic_moriya_shinto
+						has_civic = civic_moriya_shinto_corp
+					}
+				}
+			}
+			rare_crystals = @b4_rare_upkeep
+		}
+		produces = {
+			unity = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_researchers_unity_produces_add = 2
+		planet_priests_physics_research_produces_add = 2
+		planet_priests_society_research_produces_add = 2
+		planet_priests_engineering_research_produces_add = 2
+	}
+
+	triggered_desc = {
+		text = job_high_priest_effect_desc
+	}
+	triggered_desc = {
+		text = job_priest_effect_desc
+	}
+}
+
+building_assembler_mk2 = {
+	base_buildtime = @b4_time
+	base_cap_amount = 1
+	icon = building_wrecking_yards
+
+	category = pop_assembly
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			volatile_motes = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			volatile_motes = @b4_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_pop_assemblers_engineering_research_produces_add = 4
+		planet_pop_assemblers_alloys_upkeep_add = 4
+		planet_pop_assemblers_volatile_motes_upkeep_add = 1
+	}
+
+	prerequisites = { tech_sanae_robot_worker }
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = add_mk2_trait_for_new_robot
+	}
+}
+
+building_fire_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	category = unity
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_technician_energy_produces_add = 4
+	}
+}
+
+building_water_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	category = unity
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_artisans_consumer_goods_produces_add = 3
+		planet_artisans_minerals_upkeep_add = 3
+	}
+}
+
+building_wood_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	category = unity
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_farmers_food_produces_add = 4
+	}
+}
+
+building_metel_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	category = unity
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_metallurgists_alloys_produces_add = 2
+		planet_metallurgists_minerals_upkeep_add = 3
+	}
+}
+
+building_earth_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	category = unity
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_miners_minerals_produces_add = 4
+	}
+}
+
+building_sun_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+	icon = building_fire_catalyst
+
+	category = unity
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b2_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_administrators_unity_produces_add = 1
+		planet_managers_unity_produces_add = 1
+		planet_priests_unity_produces_add = 1
+	}
+}
+
+building_luna_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	category = unity
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b2_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_researchers_physics_research_produces_add = 1
+		planet_researchers_society_research_produces_add = 1
+		planet_researchers_engineering_research_produces_add = 1
+	}
+}
+
+building_great_library = {
+	base_buildtime = @b4_time
+	empire_limit = 1
+	can_demolish = yes
+	icon = building_master_archive
+
+	category = research
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = leader_trait_elements
+			}
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	planet_modifier = {
+		job_touhou_archivist_add = 10
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 100
+			society_research = 100
+			engineering_research = 100
+		}
+		cost = {
+			minerals = @b4_minerals
+			rare_crystals = @b4_rare_cost
+		}
+		upkeep = {
+			energy = 20
+			rare_crystals = @b4_rare_upkeep
+		}
+	}
+
+	upgrades = {
+	}
+}
+
+##人偶组装厂
+building_doll_assembly_plant = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = pop_assembly
+
+	potential = {
+		exists = owner
+		owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_dolls
+			}
+		}
+		OR = {
+			owner = { is_ai = no }
+			NOT = { exists = assembling_species }
+			assembling_species = { is_robotic_species = yes }
+		}
+		owner = {
+			is_regular_empire = yes
+			NOT = { has_policy_flag = robots_outlawed }
+			OR = {
+				is_ai = no
+				NOT = { has_ascension_perk = ap_engineered_evolution }
+				is_materialist = yes
+			}
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	convert_to = {
+		building_machine_assembly_plant
+		building_robot_assembly_plant
+	}
+
+	upgrades = {
+		building_doll_assembly_complex
+	}
+
+	allow = {
+		hidden_trigger = {
+			OR = {
+				owner = { is_ai = no }
+				NAND = {
+					free_district_slots = 0
+					free_building_slots <= 1
+					free_housing <= 0
+					free_jobs <= 0
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				OR = {
+					is_regular_empire = no
+					has_policy_flag = robots_outlawed
+				}
+			}
+			has_modifier = slave_colony
+			AND = {
+				owner = { is_ai = yes }
+				free_district_slots = 0
+				free_building_slots = 0
+				free_housing <= 0
+				free_jobs <= 0
+			}
+			owner = {
+				is_ai = yes
+				has_ascension_perk = ap_engineered_evolution
+				is_materialist = no
+			}
+		}
+	}
+
+	planet_modifier = {
+		job_dollmaker_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = job_dollmaker_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_building = building_clone_vats
+				has_building = building_clone_army_clone_vat
+				has_building = building_posthumous_employment_center
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_organic_species = yes }
+					exists = owner
+					owner = {
+						NOT = { has_policy_flag = roboticist_output_build_cyborgs }
+					}
+				}
+			}
+		}
+		text = tooltip_organic_and_artificial_assembly_warning
+	}
+
+	prerequisites = {
+		"tech_magic_dolls"
+	}
+}
+
+building_doll_assembly_complex = {
+	icon = building_machine_assembly_complex
+	base_buildtime = @b3_time
+	can_build = no
+
+	category = pop_assembly
+
+	potential = {
+		exists = owner
+		OR = {
+			owner = { is_ai = no }
+			NOT = { exists = assembling_species }
+			assembling_species = { is_robotic_species = yes }
+		}
+		owner = {
+			is_regular_empire = yes
+			NOT = { has_policy_flag = robots_outlawed }
+			OR = {
+				is_ai = no
+				NOT = { has_ascension_perk = ap_engineered_evolution }
+				is_materialist = yes
+			}
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	convert_to = {
+		building_machine_assembly_complex
+		building_robot_assembly_complex
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				OR = {
+					is_regular_empire = no
+					has_policy_flag = robots_outlawed
+				}
+			}
+			has_modifier = slave_colony
+			AND = {
+				owner = { is_ai = yes }
+				free_district_slots = 0
+				free_building_slots = 0
+				free_housing <= 0
+				free_jobs <= 0
+			}
+			owner = {
+				is_ai = yes
+				has_ascension_perk = ap_engineered_evolution
+				is_materialist = no
+			}
+		}
+	}
+
+	planet_modifier = {
+		job_dollmaker_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		tech_doll_assembly_complex
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = job_dollmaker_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_building = building_clone_vats
+				has_building = building_clone_army_clone_vat
+				has_building = building_posthumous_employment_center
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_organic_species = yes }
+					exists = owner
+					owner = {
+						NOT = { has_policy_flag = roboticist_output_build_cyborgs }
+					}
+				}
+			}
+		}
+		text = tooltip_organic_and_artificial_assembly_warning
+	}
+}
+
+building_soul_nexus = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+	can_demolish = yes
+	icon = building_master_archive
+
+	category = research
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_sakura
+			}
+		}
+	}
+
+	allow = {
+		owner = {
+			any_owned_planet = {
+				OR = {
+					has_deposit = sakura_tree_1
+					has_deposit = sakura_tree_3
+					has_deposit = sakura_tree_5
+					has_deposit = sakura_tree_8
+				}
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				any_owned_planet = {
+					has_deposit = sakura_tree_1
+				}
+			}
+		}
+		death_pop_generation_chance = 0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				any_owned_planet = {
+					has_deposit = sakura_tree_3
+				}
+			}
+		}
+		death_pop_generation_chance = 0.3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				any_owned_planet = {
+					has_deposit = sakura_tree_5
+				}
+			}
+		}
+		death_pop_generation_chance = 0.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				any_owned_planet = {
+					has_deposit = sakura_tree_8
+				}
+			}
+		}
+		death_pop_generation_chance = 0.8
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	upgrades = {
+	}
+}
+
+building_suzunaan = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+	icon = building_suzunaan
+
+	category = unity
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_books
+			}
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_archaeostudies_faculty
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		job_touhou_bookseller_add = 1
+		mult = owner.bookstore_size
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			minor_artifacts = 50
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	triggered_desc = {
+		text = job_touhou_bookseller_effect_desc
+	}
+}
+
+building_national_historial_archive = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+
+	category = unity
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_memory
+			}
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_archaeostudies_faculty
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		job_touhou_historian_add = 0.02
+		mult = owner.trigger:empire_size
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			minor_artifacts = 50
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	triggered_desc = {
+		text = job_touhou_historian_effect_desc
+	}
+}
+
+building_corpses_disposal_center = {
+	base_buildtime = @b1_time
+
+	category = pop_assembly
+
+	base_cap_amount = 1
+
+	potential = {
+		exists = owner
+		sector = {
+			any_owned_planet = {
+				leader = {
+					has_trait = leader_trait_corpse_manipulation
+				}
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		OR = {
+			owner = { is_ai = no }
+			NOT = { exists = assembling_species }
+			assembling_species = { is_organic_species = yes }
+		}
+		OR = {
+			owner = { is_ai = no }
+			NAND = {
+				free_district_slots = 0
+				free_building_slots <= 1
+				free_housing <= 0
+				free_jobs <= 0
+			}
+		}
+	}
+
+	destroy_trigger = {
+		NOT = {
+			owner = {
+				any_owned_leader = {
+					has_trait = leader_trait_corpse_manipulation
+				}
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_pop_assembly_organic_add = 2
+		planet_amenities_add = 5
+		job_technician_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		# Base cost
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			energy = 10
+			food = 10
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_building = building_robot_assembly_plant
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_robotic_species = yes }
+				}
+			}
+		}
+		text = tooltip_organic_and_artificial_assembly_warning
+	}
+}
+
+building_posthumous_employment_center = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = pop_assembly
+
+	potential = {
+		exists = owner
+		OR = {
+			owner = { is_ai = no }
+			NOT = { exists = assembling_species }
+			assembling_species = { is_organic_species = yes }
+		}
+		OR = {
+			owner = { is_ai = no }
+			NAND = {
+				free_district_slots = 0
+				free_building_slots <= 1
+				free_housing <= 0
+				free_jobs <= 0
+			}
+		}
+		owner = {
+			is_regular_empire = yes
+			OR = {
+				has_valid_civic = civic_permanent_employment
+				has_valid_civic = civic_nether_world_corp
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_valid_civic = civic_permanent_employment
+					has_valid_civic = civic_nether_world_corp
+				}
+			}
+			AND = {
+				owner = { is_ai = yes }
+				free_district_slots = 0
+				free_building_slots = 0
+				free_housing <= 0
+				free_jobs <= 0
+			}
+		}
+	}
+
+	planet_modifier = {
+		job_reassigner_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	triggered_desc = {
+		text = job_reassigner_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_building = building_robot_assembly_plant
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_robotic_species = yes }
+				}
+			}
+		}
+		text = tooltip_organic_and_artificial_assembly_warning
+	}
+}

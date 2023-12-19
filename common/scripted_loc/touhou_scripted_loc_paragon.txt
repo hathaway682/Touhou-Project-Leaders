@@ -1,0 +1,207 @@
+defined_text = {
+	name = ClassPrefix
+	random = no
+	text = {
+		trigger = {
+			has_leader_flag = renowned_leader
+			NOT = { has_touhou_leader_trait = yes }
+		}
+		localization_key = CLASS_PREFIX_RENOWNED
+	}
+	text = {
+		trigger = {
+			has_leader_flag = legendary_leader
+			NOT = { has_touhou_leader_trait = yes }
+		}
+		localization_key = CLASS_PREFIX_LEGENDARY
+	}
+	text = {
+		trigger = {
+			has_touhou_leader_trait = yes
+		}
+		localization_key = CLASS_PREFIX_TOUHOU
+	}
+	default = CLASS_PREFIX_NONE
+}
+
+defined_text = {
+	name = LeaderTierName
+	random = no
+	text = {
+		trigger = {
+			has_leader_flag = renowned_leader
+			NOT = { has_touhou_leader_trait = yes }
+		}
+		localization_key = CLASS_TIER_RENOWNED
+	}
+	text = {
+		trigger = {
+			has_leader_flag = legendary_leader
+			NOT = { has_touhou_leader_trait = yes }
+		}
+		localization_key = CLASS_TIER_LEGENDARY
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_earthquake
+		}
+		localization_key = CLASS_TIER_TENSHI
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_density
+		}
+		localization_key = CLASS_TIER_SUIKA
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_miracle
+		}
+		localization_key = CLASS_TIER_SANAE
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_ice
+		}
+		localization_key = CLASS_TIER_CIRNO
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_kongfu
+		}
+		localization_key = CLASS_TIER_MEILING
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_fly
+		}
+		localization_key = CLASS_TIER_REIMU
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_magic
+		}
+		localization_key = CLASS_TIER_MARISA
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_wave_length
+		}
+		localization_key = CLASS_TIER_REISEN
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_kendo
+		}
+		localization_key = CLASS_TIER_YOUMU
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_time
+		}
+		localization_key = CLASS_TIER_SAKUYA
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_border_merry
+		}
+		localization_key = CLASS_TIER_MERRY
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_star_located
+		}
+		localization_key = CLASS_TIER_RENKO
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_mind_reader
+		}
+		localization_key = CLASS_TIER_SATORI
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_subconscious
+		}
+		localization_key = CLASS_TIER_KOISHI
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_wind
+		}
+		localization_key = CLASS_TIER_AYA
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_trial
+		}
+		localization_key = CLASS_TIER_SHIKIEIKI
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_distance
+		}
+		localization_key = CLASS_TIER_ONODUKA
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_destiny_manipulation
+		}
+		localization_key = CLASS_TIER_REMILIA
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_elements
+		}
+		localization_key = CLASS_TIER_PATCHOULI
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_dolls
+		}
+		localization_key = CLASS_TIER_ALICE
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_death
+		}
+		localization_key = CLASS_TIER_YUYUKO
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_flower
+		}
+		localization_key = CLASS_TIER_YUKA
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_flower_commander
+		}
+		localization_key = CLASS_TIER_YUKA_admiral
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_words
+		}
+		localization_key = CLASS_TIER_KOSUZU
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_memory
+		}
+		localization_key = CLASS_TIER_AKYUU
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_corpse_travel
+		}
+		localization_key = CLASS_TIER_RIN
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_nuclear
+		}
+		localization_key = CLASS_TIER_UTSUHO
+	}
+	default = LEADER_CLASS_TEXT
+}

@@ -1,0 +1,342 @@
+strike_craft_component_template = {
+	key = "STRIKE_CRAFT_SANAE"
+	size = LARGE
+	entity = "bigger_fallen_empire_01_bomber_entity"
+
+
+	weapon_type = point_defence
+	projectile_gfx = "techno_strike_craft_laser_3"
+
+	power = -73
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t6_cost
+			volatile_motes = @l_t6_rare
+		}
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+
+	count = 1
+	regeneration_per_day = 0.5
+	launch_time = 2
+
+	damage = { min = 45 max = 75 }
+	cooldown = 1.0
+	range = 20
+	engagement_range = 150
+	accuracy = 1.00
+	tracking = 1.00
+
+	health = 150
+	armor = 200
+	shield = 200
+	evasion = 0.95
+
+	speed = 1200
+	rotation_speed = 1.0
+	acceleration = 1.8
+
+	shield_penetration = 1.0
+	armor_damage = 2.0
+
+	ship_behavior = "fighters_behavior"
+
+	icon = "GFX_ship_part_strike_craft_skrand"
+	icon_frame = 1
+	component_set = "STRIKE_CRAFT_SANAE"
+	prerequisites = { "tech_sanae_robot_strike_craft" }
+
+	tags = { weapon_type_strike_craft }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "strike_craft" }
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MASTER_SPARK"
+	size = extra_large
+	type = instant
+
+	icon = "GFX_ship_part_master_spark"
+	icon_frame = 1
+
+	firing_arc = 10.0
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_master_spark" }
+	component_set = "MASTER_SPARK"
+	projectile_gfx = "Masterspark_projectile"
+	tags = { weapon_type_energy weapon_role_artillery x_slot }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t6_cost
+			rare_crystals = @xl_t6_rare
+		}
+		upkeep = {
+			energy = @xl_t6_upkeep_energy
+			alloys = @xl_t6_upkeep_alloys
+		}
+	}
+
+	power = -260
+	damage = { min = 2000 max = 3000 }
+
+	hull_damage = 2.0
+	shield_damage = 0.75
+	armor_damage = 2.0
+	armor_penetration = 0.5
+
+	windup = { min = 160.0 max = 200.0 }
+
+	range = 250
+
+	accuracy = 0.95
+	tracking = 0.25
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "FINAL_SPARK"
+	size = titanic
+	type = instant
+
+	icon = "GFX_ship_part_master_spark"
+	icon_frame = 1
+
+	firing_arc = 10.0
+	use_ship_kill_target = no
+
+	tags = { weapon_type_energy weapon_role_artillery t_slot }
+
+	prerequisites = { "tech_final_spark" }
+	component_set = "FINAL_SPARK"
+	projectile_gfx = "Finalspark_projectile"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t6_cost
+			rare_crystals = @titanic_t6_rare
+		}
+		upkeep = {
+			energy = @titanic_t6_upkeep_energy
+			alloys = @titanic_t6_upkeep_alloys
+		}
+	}
+
+	power = -260
+	damage = { min = 10000 max = 15000 }
+
+	hull_damage = 2.0
+	shield_damage = 0.75
+	armor_damage = 2.0
+	armor_penetration = 0.5
+
+	windup = { min = 280.0 max = 320.0 }
+
+	range = 250
+
+	accuracy = 0.95
+	tracking = 0.25
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "FINAL_SPARK_SC"
+	size = titanic
+	type = instant
+
+	icon = "GFX_ship_part_master_spark"
+	icon_frame = 1
+
+	use_ship_kill_target = no
+
+	tags = { weapon_type_energy weapon_role_artillery t_slot }
+
+	hidden = yes
+	component_set = "FINAL_SPARK"
+	projectile_gfx = "Finalspark_projectile"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t6_cost
+			rare_crystals = @titanic_t6_rare
+		}
+		upkeep = {
+			energy = @titanic_t6_upkeep_energy
+			alloys = @titanic_t6_upkeep_alloys
+		}
+	}
+
+	power = -260
+	damage = { min = 10000 max = 15000 }
+
+	hull_damage = 2.0
+	shield_damage = 0.75
+	armor_damage = 2.0
+	armor_penetration = 0.5
+
+	windup = { min = 280.0 max = 320.0 }
+
+	range = 250
+
+	accuracy = 0.95
+	tracking = 0.25
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "BAT_STRIKE_CRAFT"
+	size = LARGE
+	entity = "swarm_01_fighter_entity"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 100
+		}
+	}
+
+	power = -80
+
+	count = 6
+	regeneration_per_day = 6
+	launch_time = 0
+
+	damage = { min = 8 max = 12 }
+	cooldown = 2
+	range = 10
+	engagement_range = 1000
+	accuracy = 1.0
+	tracking = 0.8
+
+	health = 10
+	armor = 10
+	shield = 0
+	evasion = 0.85
+
+	speed = 400
+	rotation_speed = 0.5
+	acceleration = 0.5
+
+	shield_damage = 1.0
+	shield_penetration = 1
+	armor_penetration = 0.66
+
+	ship_behavior = "bombers_behavior"
+
+	weapon_type = instant # Not PD, unlike normal strike craft
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	hidden = yes
+	component_set = "SWARM_STRIKE_CRAFT_1"
+	icon = "GFX_ship_part_swarm_strike_craft_1"
+	icon_frame = 1
+	tags = { weapon_type_strike_craft weapon_swarm weapon_type_space_fauna }
+}
+
+weapon_component_template = {
+	key = "MASTER_SPARK_L"
+	size = large
+	type = instant
+
+	icon = "GFX_ship_part_master_spark"
+	icon_frame = 1
+
+	firing_arc = 10.0
+	use_ship_kill_target = no
+
+	hidden = yes
+	component_set = "MASTER_SPARK"
+	projectile_gfx = "Masterspark_projectile"
+	tags = { weapon_type_energy weapon_role_artillery x_slot }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t6_cost
+			rare_crystals = @xl_t6_rare
+		}
+		upkeep = {
+			energy = @xl_t6_upkeep_energy
+			alloys = @xl_t6_upkeep_alloys
+		}
+	}
+
+	power = -260
+	damage = { min = 2000 max = 3000 }
+
+	hull_damage = 2.0
+	shield_damage = 0.75
+	armor_damage = 2.0
+	armor_penetration = 0.5
+
+	windup = { min = 160.0 max = 200.0 }
+
+	range = 250
+
+	accuracy = 0.95
+	tracking = 0.25
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}

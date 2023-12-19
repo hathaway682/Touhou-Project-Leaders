@@ -1,0 +1,42 @@
+agenda_recruit_talent = {
+	agenda_cost = 3500
+	allow = {
+		has_technology = tech_xeno_linguistics
+	}
+	potential = {
+		has_paragon_dlc = yes
+		is_ai = no
+	}
+	modifier = {
+		leaders_cost_mult = -0.2
+	}
+	finish_modifier = agenda_recruit_talent_finish
+	effect = {
+		custom_tooltip = council_agenda_agenda_recruit_talent_effect
+		hidden_effect = {
+			country_event = {
+				id = touhou_paragon.40001
+			}
+		}
+	}
+}
+
+agenda_dyson_sphere = {
+	agenda_cost = 7000
+	allow = {
+		any_owned_leader = {
+			has_trait = leader_trait_fusion_energy
+			is_councilor = yes
+		}
+	}
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_fusion_energy
+		}
+	}
+	modifier = {
+	}
+	effect = {
+		add_research_option = tech_dyson_sphere
+	}
+}

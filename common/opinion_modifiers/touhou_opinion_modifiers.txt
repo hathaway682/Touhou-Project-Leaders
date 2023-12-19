@@ -1,0 +1,81 @@
+# Bad Opinion of Ethic: Materialist
+triggered_opinion_of_materialist_turned = {
+	trigger = {
+		from = { is_materialist = yes }
+		any_owned_leader = {
+			is_councilor = yes
+			has_trait = leader_trait_common_sense_killer
+		}
+	}
+	opinion = {
+		base = 0
+
+		modifier = {
+			add = 20
+			has_ethic = "ethic_spiritualist"
+			FROM = { has_ethic = "ethic_materialist" }
+		}
+		modifier = {
+			add = 40
+			has_ethic = "ethic_spiritualist"
+			FROM = { has_ethic = "ethic_fanatic_materialist" }
+		}
+		modifier = {
+			add = 40
+			has_ethic = "ethic_fanatic_spiritualist"
+			FROM = { has_ethic = "ethic_materialist" }
+		}
+		modifier = {
+			add = 80
+			has_ethic = "ethic_fanatic_spiritualist"
+			FROM = { has_ethic = "ethic_fanatic_materialist" }
+		}
+	}
+}
+
+# Opinion of Ethic: Spiritualist
+triggered_opinion_of_spiritualist_turned = {
+	trigger = {
+		from = { is_spiritualist = yes }
+		any_owned_leader = {
+			is_councilor = yes
+			has_trait = leader_trait_common_sense_killer
+		}
+	}
+	opinion = {
+		base = 0
+
+		modifier = {
+			add = 20
+			has_ethic = "ethic_materialist"
+			FROM = { has_ethic = "ethic_spiritualist" }
+		}
+		modifier = {
+			add = 40
+			has_ethic = "ethic_materialist"
+			FROM = { has_ethic = "ethic_fanatic_spiritualist" }
+		}
+		modifier = {
+			add = 40
+			has_ethic = "ethic_fanatic_materialist"
+			FROM = { has_ethic = "ethic_spiritualist" }
+		}
+		modifier = {
+			add = 80
+			has_ethic = "ethic_fanatic_materialist"
+			FROM = { has_ethic = "ethic_fanatic_spiritualist" }
+		}
+	}
+}
+
+opinion_aya_diplomacy = {
+	opinion = {
+		base = -1000
+	}
+
+	min = -1000
+
+	decay = {
+		base = 5
+	}
+}

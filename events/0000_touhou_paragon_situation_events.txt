@@ -1,0 +1,582 @@
+namespace = touhou_paragon_situation
+
+#坏羽病局势开始
+country_event = {
+    id = touhou_paragon_situation.42660
+    title = touhou_paragon_situation.42660.name
+    desc = touhou_paragon_situation.42660.desc
+    picture = GFX_evt_emergency_workers
+    is_triggered_only = yes
+    trigger = {
+        AND = {
+            mid_game_years_passed >= 0
+            any_owned_leader = {
+                has_trait = leader_trait_nuclear
+            }
+        }
+    }
+    immediate = {
+        start_situation = {
+            type = situation_utsuho_infection
+            target = root
+            effect = {
+                save_global_event_target_as = utsuho_first_situation
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.42660.a
+        event_target:utsuho_first_situation = {
+            set_situation_approach = approach_utsuho_infection_nocure
+        }
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.42661
+    title = touhou_paragon_situation.42661.name
+    desc = touhou_paragon_situation.42661.desc
+    picture = GFX_evt_emergency_workers
+    is_triggered_only = yes
+    location = target
+    situation = this
+    show_sound = event_mystic_reveal_light
+    immediate = {
+        owner = {
+            start_situation = {
+                type = situation_utsuho_cure
+                target = this
+                effect = {
+                    save_global_event_target_as = utsuho_second_situation
+                }
+            }
+            set_country_flag = utsuho_start_to_cure
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.42661.a
+        event_target:utsuho_first_situation = {
+            set_situation_approach = approach_utsuho_infection_incure
+        }
+        event_target:utsuho_second_situation = {
+            set_situation_approach = approach_utsuho_observe
+        }
+    }
+}
+
+#噩梦前兆
+situation_event = {
+    id = touhou_paragon_situation.42662
+    title = touhou_paragon_situation.42662.name
+    desc = touhou_paragon_situation.42662.desc
+    picture = GFX_evt_emergency_workers
+    is_triggered_only = yes
+    location = target
+    situation = this
+    show_sound = event_mystic_reveal_light
+    immediate = {
+        owner = {
+            every_owned_leader = {
+                if = {
+                    limit = {
+                        has_trait = leader_trait_nuclear
+                    }
+                    add_trait = leader_trait_utsuho_sequela
+                }
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.42662.a
+    }
+}
+
+#坏羽病
+situation_event = {
+    id = touhou_paragon_situation.42663
+    title = touhou_paragon_situation.42663.name
+    desc = touhou_paragon_situation.42663.desc
+    picture = GFX_evt_circuitry_modification
+    is_triggered_only = yes
+    location = target
+    situation = this
+    show_sound = event_mystic_reveal_light
+    immediate = {
+        owner = {
+            every_owned_leader = {
+                if = {
+                    limit = {
+                        has_trait = leader_trait_nuclear
+                    }
+                    add_trait = leader_trait_injured_2
+                }
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.42663.a
+    }
+}
+
+#临床重大突破
+situation_event = {
+    id = touhou_paragon_situation.42664
+    title = touhou_paragon_situation.42664.name
+    desc = touhou_paragon_situation.42664.desc
+    picture = GFX_evt_circuitry_modification
+    is_triggered_only = yes
+    location = target
+    situation = this
+    show_sound = event_mystic_reveal_light
+    option = {
+        name = touhou_paragon_situation.42664.a.corp
+        trigger = {
+            owner = {
+                has_authority = auth_corporate
+            }
+        }
+        event_target:utsuho_first_situation = {
+            add_situation_progress = -10
+        }
+        set_situation_flag = flag_utsuho_breakthrough_corp
+        owner = {
+            add_monthly_resource_mult = {
+                resource = energy
+                value = 2
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.42664.a
+        trigger = {
+            owner = {
+                NOT = { has_authority = auth_corporate }
+            }
+        }
+        event_target:utsuho_first_situation = {
+            add_situation_progress = -10
+        }
+        set_situation_flag = flag_utsuho_breakthrough
+    }
+}
+
+#病情恶化减缓
+situation_event = {
+    id = touhou_paragon_situation.42665
+    title = touhou_paragon_situation.42665.name
+    desc = touhou_paragon_situation.42665.desc
+    picture = GFX_evt_circuitry_modification
+    is_triggered_only = yes
+    show_sound = event_mystic_reveal_light
+    situation = from
+    location = target
+    option = {
+        name = touhou_paragon_situation.42665.a
+        event_target:utsuho_first_situation = {
+            add_situation_progress = -5
+        }
+    }
+}
+
+#研发进度增长
+situation_event = {
+    id = touhou_paragon_situation.42666
+    title = touhou_paragon_situation.42666.name
+    desc = touhou_paragon_situation.42666.desc
+    picture = GFX_evt_circuitry_modification
+    is_triggered_only = yes
+    show_sound = event_mystic_reveal_light
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.42666.a
+        event_target:utsuho_second_situation = {
+            add_situation_progress = 5
+        }
+    }
+}
+
+#坏羽病 good end
+situation_event = {
+    id = touhou_paragon_situation.42667
+    title = touhou_paragon_situation.42667.name
+    desc = touhou_paragon_situation.42667.desc
+    picture = GFX_evt_circuitry_modification
+    is_triggered_only = yes
+    show_sound = event_mystic_reveal_light
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.42667.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 12
+            }
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 12
+            }
+        }
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.42668
+    title = touhou_paragon_situation.42668.name
+    desc = touhou_paragon_situation.42668.desc
+    picture = GFX_evt_circuitry_modification
+    is_triggered_only = yes
+    show_sound = event_mystic_reveal_light
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.42668.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = -3
+            }
+        }
+        event_target:utsuho_second_situation = {
+            add_situation_progress = -10
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.42668.b
+        trigger = {
+            owner = {
+                OR = {
+                    has_authority = auth_dictatorial
+                    has_authority = auth_oligarchic
+                }
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 3
+            }
+        }
+        owner = {
+            home_planet = {
+                random_owned_pop = { kill_pop = yes }
+            }
+        }
+        event_target:utsuho_second_situation = {
+            add_situation_progress = 10
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.42668.c
+        trigger = {
+            owner = {
+                OR = {
+                    has_authority = auth_imperial
+                    has_authority = auth_democratic
+                }
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = -9
+            }
+        }
+        event_target:utsuho_second_situation = {
+            add_situation_progress = 5
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.42668.d
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = -6
+            }
+            add_monthly_resource_mult = {
+                resource = energy
+                value = -6
+            }
+        }
+        event_target:utsuho_second_situation = {
+            add_situation_progress = 5
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.42668.e
+        trigger = {
+            owner = {
+                OR = {
+                    any_owned_leader = {
+                        has_trait =  leader_trait_penglai_medicine
+                    }
+                    has_authority = auth_corporate
+                }
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = energy
+                value = -12
+            }
+        }
+        event_target:utsuho_second_situation = {
+            add_situation_progress = 10
+        }
+    }
+}
+
+#临门一脚
+situation_event = {
+    id = touhou_paragon_situation.42669
+    title = touhou_paragon_situation.42669.name
+    desc = touhou_paragon_situation.42669.desc
+    picture = GFX_evt_circuitry_modification
+    is_triggered_only = yes
+    show_sound = event_mystic_reveal_light
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.42669.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = energy
+                value = -6
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 6
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 6
+            }
+        }
+        event_target:utsuho_second_situation = {
+            random_list = {
+                33 = { add_situation_progress = 10 }
+                33 = { add_situation_progress = 5 }
+                33 = { add_situation_progress = -5 }
+                1 = { add_situation_progress = -50 }
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.42669.b
+        owner = {
+            add_monthly_resource_mult = {
+                resource = energy
+                value = -2
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 2
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 2
+            }
+        }
+        event_target:utsuho_second_situation = {
+            random_list = {
+                50 = { add_situation_progress = 5 }
+                50 = { }
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.42669.c
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = -3
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+            }
+        }
+        event_target:utsuho_second_situation = {
+            random_list = {
+                48 = { add_situation_progress = 10 }
+                48 = { add_situation_progress = 5 }
+                4 = { add_situation_progress = -50 }
+            }
+        }
+    }
+}
+
+#军事改革开始
+country_event = {
+    id = touhou_paragon_situation.42670
+    title = touhou_paragon_situation.42670.name
+    desc = touhou_paragon_situation.42670.desc
+    picture = GFX_evt_utsuho_reform
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_nuclear
+        }
+        not = { has_country_flag = utsuho_reform_over }
+        not = { has_country_flag = utsuho_reform_abort }
+    }
+    is_triggered_only = yes
+    immediate = {
+        start_situation = {
+            type = situation_utsuho_reform
+            target = root
+            effect = {
+                save_global_event_target_as = utsuho_reform_situation
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.42670.a
+        event_target:utsuho_reform_situation = {
+            set_situation_approach = approach_utsuho_reform_basic
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.42670.b
+        add_monthly_resource_mult = {
+            resource = unity
+            value = 3
+        }
+        set_country_flag = utsuho_reform_abort
+    }
+    option = {
+        name = touhou_paragon_situation.42670.c
+        trigger = {
+            has_modifier = integrated_command
+        }
+        event_target:utsuho_reform_situation = {
+            set_situation_flag = flag_utsuho_reform_skrand
+        }
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.42671
+    title = touhou_paragon_situation.42671.name
+    desc = touhou_paragon_situation.42671.desc
+    picture = GFX_evt_hyper_relay_conjunction
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    option = {
+        name = touhou_paragon_situation.42671.a
+        owner = {
+            add_modifier = {
+                modifier = modifier_utsuho_reform_finish
+                days = -1
+            }
+        }
+        destroy_situation = this
+    }
+    option = {
+        name = touhou_paragon_situation.42671.b
+        trigger = {
+            owner = {
+                OR = {
+                    has_ethic = ethic_fanatic_militarist
+                    has_ethic = ethic_militarist
+                }
+            }
+        }
+        owner = {
+            add_modifier = {
+                modifier = modifier_utsuho_reform_finish
+                days = -1
+            }
+        }
+        destroy_situation = this
+        owner = {
+            set_country_flag = flag_utsuho_no_step_back
+        }
+        if = {
+            limit = {
+                owner = {
+                    can_set_policy = {
+                        policy = war_doctrine
+                        option = utsuho_no_step_back
+                    }
+                }
+            }
+            owner = {
+                set_policy = {
+                    policy = war_doctrine
+                    option = utsuho_no_step_back
+                    cooldown = yes
+                }
+            }
+        }
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.42672
+    title = touhou_paragon_situation.42672.name
+    desc = touhou_paragon_situation.42672.desc
+    picture = GFX_evt_hyper_relay_conjunction
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.42672.a
+    }
+}
+situation_event = {
+    id = touhou_paragon_situation.42673
+    title = touhou_paragon_situation.42673.name
+    desc = touhou_paragon_situation.42673.desc
+    picture = GFX_evt_hyper_relay_conjunction
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.42673.a
+    }
+}
+situation_event = {
+    id = touhou_paragon_situation.42674
+    title = touhou_paragon_situation.42674.name
+    desc = touhou_paragon_situation.42674.desc
+    picture = GFX_evt_hyper_relay_conjunction
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.42674.a
+    }
+}
+situation_event = {
+    id = touhou_paragon_situation.42675
+    title = touhou_paragon_situation.42675.name
+    desc = touhou_paragon_situation.42675.desc
+    picture = GFX_evt_hyper_relay_conjunction
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.42675.a
+    }
+}

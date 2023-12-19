@@ -1,0 +1,1845 @@
+##########################################################################
+# Sacrifice Edicts
+##########################################################################
+
+#@Edict1Cost = 50
+#@Edict2Cost = 100
+
+@sacrificeDuration = 1800
+
+@sacrificeReward1 = 0.15
+
+gray_thaumaturgy = {
+	length = 360
+	edict_lock_in_months = 12
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_miracle
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			unity = 100
+			multiplier = value:edict_size_effect
+		}
+	}
+	modifier = {
+		planet_priests_unity_produces_add = -1
+	}
+	effect = {
+		custom_tooltip = gray_thaumaturgy_effect
+		hidden_effect = {
+			country_event = {
+				id = touhou_paragon_effect.3
+				days = 360
+			}
+		}
+	}
+}
+
+information_war_touhou = {
+	length = 1
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_information_war
+		}
+	}
+	resources = {
+		category = edicts_unscaled
+		cost = {
+			influence = 250
+		}
+	}
+	allow = {
+		any_owned_leader = {
+			has_trait = leader_trait_information_war
+		}
+	}
+	effect = {
+		country_event = {
+			id = touhou_paragon_effect.10000
+		}
+	}
+}
+
+reimu_wormhole_key = {
+	length = 1080
+	edict_lock_in_months = 36
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_invincible
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			astral_threads = 500
+		}
+	}
+	effect = {
+		add_modifier = {
+			modifier = paragon_reimu_wormhole_key
+			days = 100
+		}
+		set_timed_country_flag = {
+			flag = jump_drive_allowed
+			days = 100
+		}
+		if = {
+			limit = {
+				has_technology = tech_psionic_theory
+			}
+			hidden_effect = {
+				random_owned_leader = {
+					limit = {
+						has_trait = leader_trait_fly
+					}
+					leader_event = {
+						id = touhou_paragon.40620
+					}
+				}
+			}
+		}
+	}
+}
+
+reimu_invincible = {
+	length = 1800
+	edict_lock_in_months = 60
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_fleet = {
+			exists = leader
+			leader = {
+				has_trait = leader_trait_invincible
+			}
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			astral_threads = 1500
+		}
+	}
+	effect = {
+		custom_tooltip = invincible_effect
+		hidden_effect = {
+			every_owned_fleet = {
+				limit = {
+					exists = leader
+					leader = { has_trait = leader_trait_invincible }
+				}
+				add_modifier = {
+					modifier = invincible_fleet
+					days = 100
+				}
+				fleet_event = {
+					id = touhou_paragon_effect.50
+					days = 100
+				}
+				set_fleet_settings = {
+					is_boss = yes
+				}
+			}
+		}
+	}
+}
+
+koishi_rampage = {
+	length = 1
+	icon = "GFX_edict_type_time"
+	potential = {
+		OR = {
+			any_owned_leader = {
+				has_trait = leader_trait_subconscious
+			}
+			has_country_flag = koishi_rampage
+		}
+	}
+	allow = {
+		any_owned_fleet = {
+			exists = leader
+				leader = {
+				has_trait = leader_trait_subconscious
+			}
+		}
+	}
+	resources = {
+		category = edicts
+	}
+	effect = {
+		custom_tooltip = rampage_effect
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:koishi_country
+					}
+				}
+				create_country = {
+					name = NAME_Koishi_Fleet
+					adjective = NAME_Koishi_Fleet
+					type = koishi_berserk_fleet
+					flag = {
+						icon={
+							category="spherical"
+							file="flag_spherical_12.dds"
+						}
+						background={
+							category="backgrounds"
+							file="flag_BG_31.dds"
+						}
+						colors={
+							"desert_yellow"
+							"swamp_green"
+							"null"
+							"null"
+						}
+					}
+					auto_delete = no
+					randomize_ethos = yes
+					released_from_country = root
+					ignore_initial_colony_error = yes
+				}
+				last_created_country = {
+					save_global_event_target_as = koishi_country
+					copy_techs_from = { target = root }
+				}
+			}
+			else = {
+				event_target:koishi_country = {
+					copy_techs_from = { target = root }
+				}
+			}
+			every_owned_fleet = {
+				limit = {
+					exists = leader
+					leader = { has_trait = leader_trait_subconscious }
+				}
+				add_modifier = {
+					modifier = rampage_fleet
+					days = -1
+				}
+				set_owner = event_target:koishi_country
+				leader = {
+					set_owner = event_target:koishi_country
+				}
+				set_fleet_settings = {
+					can_change_leader = no
+					is_boss = yes
+				}
+			}
+			set_country_flag = koishi_rampage
+		}
+	}
+}
+
+koishi_rampage_end = {
+	length = 1
+	icon = "GFX_edict_type_time"
+	potential = {
+		OR = {
+			any_owned_leader = {
+				has_trait = leader_trait_subconscious
+			}
+			has_country_flag = koishi_rampage
+		}
+	}
+	allow = {
+		has_country_flag = koishi_rampage
+	}
+	resources = {
+		category = edicts
+		cost = {
+			unity = 514
+			multiplier = value:edict_size_effect
+		}
+	}
+	effect = {
+		custom_tooltip = rampage_end_effect
+		event_target:koishi_country = {
+			every_owned_fleet = {
+				solar_system = {
+					every_fleet_in_system = {
+						add_modifier = {
+							modifier = super_ego
+							days = 30
+						}
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			event_target:koishi_country = {
+				every_owned_fleet = {
+					remove_modifier = rampage_fleet
+					set_fleet_settings = {
+						can_change_leader = yes
+						is_boss = no
+					}
+					set_owner = root
+					leader = {
+						set_owner = root
+					}
+					solar_system = {
+						every_fleet_in_system = {
+							add_modifier = {
+								modifier = super_ego
+								days = 30
+							}
+						}
+					}
+				}
+			}
+			remove_country_flag = koishi_rampage
+		}
+	}
+}
+
+#tengu_storm_active = {
+#	length = 210
+#	edict_lock_in_months = 7
+#	icon = "GFX_edict_type_time"
+#	potential = {
+#		any_owned_leader = {
+#			has_trait = leader_trait_wind
+#		}
+#	}
+#	resources = {
+#		category = edicts
+#		cost = {
+#			sr_zro = 10
+#			multiplier = value:edict_size_effect
+#		}
+#	}
+#	allow = {
+#		any_owned_fleet = {
+#			exists = leader
+#			leader = {
+#				has_trait = leader_trait_wind
+#			}
+#		}
+#		NOT = {
+#			any_system = {
+#				has_modifier = tengu_storm
+#			}
+#		}
+#	}
+#	effect = {
+#		custom_tooltip = tengu_storm_effect
+#		hidden_effect = {
+#			save_global_event_target_as = tengu_storm_owner
+#			every_owned_fleet = {
+#				limit = { exists = leader
+#				leader = { has_trait = leader_trait_wind }
+#				}
+#				save_event_target_as = storm_creator
+#				solar_system = {
+#					system_event = {
+#						id = touhou_paragon_effect.501
+#					}
+#					system_event = {
+#						id = touhou_paragon_effect.502
+#						days = 210
+#					}
+#				}
+#			}
+#		}
+#	}
+#}
+
+poison_gas = {
+	length = -1
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		upkeep = {
+			exotic_gases = 0.5
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_prosperity_and_decline
+				is_councilor = yes
+			}
+		}
+	}
+
+	modifier = {
+		army_attack_damage_mult = 0.75
+		army_collateral_damage_mult = 3
+		custom_tooltip = poison_gas_tooltip
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			has_resource = { type = exotic_gases amount > 100 }
+		}
+	}
+}
+
+mutant_gas = {
+	length = -1
+	icon = "GFX_edict_type_time"
+	is_wartime_edict = yes
+
+	resources = {
+		category = ship_edicts
+		upkeep = {
+			exotic_gases = 1.5
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_prosperity_and_decline
+				is_councilor = yes
+			}
+		}
+	}
+
+	modifier = {
+		army_health = 0.25
+		army_morale = 0.25
+		army_damage_mult = 0.4
+		army_collateral_damage_mult = 1
+		custom_tooltip = mutant_gas_tooltip
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			has_resource = { type = exotic_gases amount > 100 }
+		}
+	}
+}
+
+distance_active = {
+	length = 1080
+	edict_lock_in_months = 30
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_distance
+		}
+	}
+	allow = {
+		any_owned_fleet = {
+			exists = leader
+			leader = {
+				has_trait = leader_trait_distance
+			}
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			astral_threads = 750
+		}
+	}
+	effect = {
+		every_owned_fleet = {
+			limit = {
+				exists = leader
+				leader = { has_trait = leader_trait_distance }
+			}
+			solar_system = {
+				every_fleet_in_system = {
+					limit = {
+						OR = {
+							is_owned_by = root
+							owner = {
+								is_in_federation_with = root
+								has_subject = root
+								has_overlord = root
+							}
+						}
+					}
+					add_modifier = {
+						modifier = distance_buff
+						days = 100
+					}
+				}
+				every_fleet_in_system = {
+					limit = {
+						owner = {
+							OR = {
+								is_hostile = root
+								is_at_war_with = root
+							}
+						}
+					}
+					add_modifier = {
+						modifier = distance_debuff
+						days = 100
+					}
+				}
+			}
+		}
+	}
+}
+
+time_active = {
+	length = 720
+	edict_lock_in_months = 24
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_time
+		}
+	}
+	allow = {
+		any_owned_fleet = {
+			exists = leader
+			leader = {
+				has_trait = leader_trait_time
+			}
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			astral_threads = 300
+		}
+	}
+	effect = {
+		every_owned_fleet = {
+			limit = {
+				exists = leader
+				leader = { has_trait = leader_trait_time }
+			}
+			solar_system = {
+				every_fleet_in_system = {
+					limit = {
+						OR = {
+							is_owned_by = root
+							owner = {
+								is_in_federation_with = root
+							}
+						}
+					}
+					add_modifier = {
+						modifier = time_buff
+						days = 60
+					}
+				}
+				every_fleet_in_system = {
+					limit = {
+						owner = {
+							OR = {
+								is_hostile = root
+								is_at_war_with = root
+							}
+						}
+					}
+					add_modifier = {
+						modifier = time_debuff
+						days = 60
+					}
+				}
+			}
+		}
+	}
+}
+
+za_warudo_active = {
+	length = 1080
+	edict_lock_in_months = 30
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_time
+		}
+	}
+	allow = {
+		any_owned_fleet = {
+			exists = leader
+			leader = {
+				has_trait = leader_trait_time
+			}
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			astral_threads = 1200
+		}
+	}
+	effect = {
+		every_owned_fleet = {
+			limit = {
+				exists = leader
+				leader = { has_trait = leader_trait_time }
+			}
+			solar_system = {
+				every_fleet_in_system = {
+					limit = {
+						owner = {
+							OR = {
+								is_hostile = root
+								is_at_war_with = root
+							}
+						}
+					}
+					add_modifier = {
+						modifier = za_warudo_debuff
+						days = 60
+					}
+				}
+			}
+		}
+	}
+}
+
+time_kill = {
+	length = 360
+	edict_lock_in_months = 12
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_time
+		}
+	}
+	allow = {
+		any_owned_army = {
+			exists = leader
+			leader = {
+				has_trait = leader_trait_time
+			}
+			exists = planet
+			planet = {
+				OR = {
+					any_ground_combat_attacker = {
+						exists = leader
+						leader = {
+							has_trait = leader_trait_time
+						}
+					}
+					any_ground_combat_defender = {
+						exists = leader
+						leader = {
+							has_trait = leader_trait_time
+						}
+					}
+				}
+			}
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			astral_threads = 10
+		}
+	}
+	effect = {
+		random_owned_army = {
+			limit = {
+				exists = leader
+				leader = { has_trait = leader_trait_time }
+			}
+			planet = {
+				if = {
+					limit = {
+						any_ground_combat_attacker = {
+							exists = leader
+							leader = {
+								has_trait = leader_trait_time
+							}
+						}
+					}
+					random_list = {
+						1 = {
+							while = {
+								count = 1
+								random_ground_combat_defender = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 2
+										}
+									}
+								}
+							}
+							while = {
+								count = 2
+								random_ground_combat_defender = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 3
+										}
+									}
+								}
+							}
+							while = {
+								count = 3
+								random_ground_combat_defender = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 4
+										}
+									}
+								}
+							}
+							while = {
+								count = 4
+								random_ground_combat_defender = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 5
+										}
+									}
+								}
+							}
+							while = {
+								count = 5
+								random_ground_combat_defender = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 6
+										}
+									}
+								}
+							}
+							while = {
+								count = 6
+								random_ground_combat_defender = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 7
+										}
+									}
+								}
+							}
+							while = {
+								count = 7
+								random_ground_combat_defender = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 8
+										}
+									}
+								}
+							}
+							while = {
+								count = 8
+								random_ground_combat_defender = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 9
+										}
+									}
+								}
+							}
+							while = {
+								count = 9
+								random_ground_combat_defender = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 10
+										}
+									}
+								}
+							}
+							while = {
+								count = 10
+								random_ground_combat_defender = {
+									remove_army = yes
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_ground_combat_defender = {
+							exists = leader
+							leader = {
+								has_trait = leader_trait_time
+							}
+						}
+					}
+					random_list = {
+						1 = {
+							while = {
+								count = 1
+								random_ground_combat_attacker = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 2
+										}
+									}
+								}
+							}
+							while = {
+								count = 2
+								random_ground_combat_attacker = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 3
+										}
+									}
+								}
+							}
+							while = {
+								count = 3
+								random_ground_combat_attacker = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 4
+										}
+									}
+								}
+							}
+							while = {
+								count = 4
+								random_ground_combat_attacker = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 5
+										}
+									}
+								}
+							}
+							while = {
+								count = 5
+								random_ground_combat_attacker = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 6
+										}
+									}
+								}
+							}
+							while = {
+								count = 6
+								random_ground_combat_attacker = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 7
+										}
+									}
+								}
+							}
+							while = {
+								count = 7
+								random_ground_combat_attacker = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 8
+										}
+									}
+								}
+							}
+							while = {
+								count = 8
+								random_ground_combat_attacker = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 9
+										}
+									}
+								}
+							}
+							while = {
+								count = 9
+								random_ground_combat_attacker = {
+									remove_army = yes
+								}
+							}
+						}
+						1 = {
+							modifier = {
+								mult = 0
+								NOT = {
+									root = {
+										any_owned_leader = {
+											has_trait = leader_trait_time
+											has_skill >= 10
+										}
+									}
+								}
+							}
+							while = {
+								count = 10
+								random_ground_combat_attacker = {
+									remove_army = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+bat_swarm = {
+	length = 1080
+	edict_lock_in_months = 36
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_distance
+		}
+	}
+	allow = {
+		any_owned_fleet = {
+			exists = leader
+
+			leader = {
+				has_trait = leader_trait_distance
+			}
+		}
+	}
+	resources = {
+		category = edicts
+	}
+	effect = {
+		custom_tooltip = edict_bat_swarm_effect
+		hidden_effect = {
+			while = {
+				count = 2
+				if = {
+					limit = {
+						any_owned_pop = {
+							is_unemployed = yes
+						}
+					}
+					random_owned_pop = {
+						limit = {
+							is_unemployed = yes
+						}
+						kill_pop = yes
+					}
+				}
+				else_if = {
+					limit = {
+						any_owned_pop = {
+							is_enslaved = yes
+						}
+					}
+					random_owned_pop = {
+						limit = {
+							is_enslaved = yes
+						}
+						kill_pop = yes
+					}
+				}
+				else = {
+					random_owned_pop = {
+						kill_pop = yes
+					}
+				}
+			}
+			save_global_event_target_as = bat_swarm_owner
+			every_owned_fleet = {
+				limit = {
+					leader = { has_trait = leader_trait_blood_magic }
+				}
+				save_event_target_as = bat_swarm_creator
+				solar_system = {
+					system_event = {
+						id = touhou_paragon_effect.705
+					}
+					system_event = {
+						id = touhou_paragon_effect.706
+						days = 360
+					}
+				}
+			}
+		}
+	}
+}
+
+red_fog = {
+	length = 1080
+	edict_lock_in_months = 36
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_distance
+		}
+	}
+	allow = {
+		any_owned_fleet = {
+			exists = leader
+
+			leader = {
+				has_trait = leader_trait_distance
+			}
+		}
+	}
+	resources = {
+		category = edicts
+	}
+	effect = {
+		custom_tooltip = edict_red_fog_effect
+		hidden_effect = {
+			while = {
+				count = 5
+				if = {
+					limit = {
+						any_owned_pop = {
+							is_unemployed = yes
+						}
+					}
+					random_owned_pop = {
+						limit = {
+							is_unemployed = yes
+						}
+						kill_pop = yes
+					}
+				}
+				else_if = {
+					limit = {
+						any_owned_pop = {
+							is_enslaved = yes
+						}
+					}
+					random_owned_pop = {
+						limit = {
+							is_enslaved = yes
+						}
+						kill_pop = yes
+					}
+				}
+				else = {
+					random_owned_pop = {
+						kill_pop = yes
+					}
+				}
+			}
+			owner = {
+				save_global_event_target_as = red_fog_owner
+				every_owned_fleet = {
+					limit = {
+						exists = leader
+						leader = { has_trait = leader_trait_blood_magic }
+					}
+					save_event_target_as = red_fog_creator
+					solar_system = {
+						system_event = {
+							id = touhou_paragon_effect.703
+						}
+						system_event = {
+							id = touhou_paragon_effect.704
+							days = 1800
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+gungnir = {
+	length = 1
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_gungnir
+		}
+	}
+	allow = {
+		any_owned_fleet = {
+			exists = leader
+			leader = {
+				has_trait = leader_trait_gungnir
+			}
+		}
+		custom_tooltip = {
+			fail_text = edict_gungnir_fail_text
+			any_owned_fleet = {
+				leader = { has_trait = leader_trait_gungnir }
+				solar_system = {
+					any_ship_in_system = {
+						OR = {
+							is_ship_class = shipclass_military
+							is_ship_class = shipclass_military_special
+						}
+						OR = {
+							owner = {
+								OR = {
+									is_at_war_with = root
+									is_hostile = root
+								}
+							}
+							AND = {
+								fleet = {
+									is_leased = yes
+								}
+								controller = {
+									owner = {
+										OR = {
+											is_at_war_with = root
+											is_hostile = root
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = edict_gungnir_shooted
+			NOT = { has_country_flag = gungnir_used }
+		}
+	}
+	resources = {
+		category = edicts
+	}
+	effect = {
+		every_owned_fleet = {
+			limit = {
+				leader = { has_trait = leader_trait_gungnir }
+			}
+			solar_system = {
+				ordered_ship_in_system = {
+					position = 0
+					order_by = trigger:has_hp
+					limit = {
+						OR = {
+							is_ship_class = shipclass_military
+							is_ship_class = shipclass_military_special
+						}
+						OR = {
+							owner = {
+								OR = {
+									is_at_war_with = root
+									is_hostile = root
+								}
+							}
+							AND = {
+								fleet = {
+									is_leased = yes
+								}
+								controller = {
+									owner = {
+										OR = {
+											is_at_war_with = root
+											is_hostile = root
+										}
+									}
+								}
+							}
+						}
+					}
+					create_ambient_object = {
+						type = "red_sun_grow_particle_object"
+						location = this
+						duration = 1
+					}
+					create_ambient_object = {
+						type = "abandoned_ship_2_object"
+						location = this
+					}
+					last_created_ambient_object = {
+						enable_special_project = {
+							name = GUNGNIR_SPECIAL_PROJECT
+							owner = root
+							location = this
+						}
+					}
+					reduce_hp = 100000
+				}
+			}
+		}
+		set_country_flag = gungnir_used
+	}
+}
+
+gungnir_starbase = {
+	length = 1
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_gungnir
+		}
+	}
+	allow = {
+		any_owned_fleet = {
+			leader = {
+				has_trait = leader_trait_gungnir
+			}
+		}
+		custom_tooltip = {
+			fail_text = edict_gungnir_fail_text
+			any_owned_fleet = {
+				leader = { has_trait = leader_trait_gungnir }
+				solar_system = {
+					any_ship_in_system = {
+						OR = {
+							is_ship_class = shipclass_military_station
+							is_ship_class = shipclass_starbase
+						}
+						owner = {
+							OR = {
+								is_at_war_with = root
+								is_hostile = root
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = edict_gungnir_shooted
+			NOT = { has_country_flag = gungnir_used }
+		}
+	}
+	resources = {
+		category = edicts
+	}
+	effect = {
+		every_owned_fleet = {
+			limit = {
+				leader = { has_trait = leader_trait_gungnir }
+			}
+			solar_system = {
+				ordered_ship_in_system = {
+					position = 0
+					order_by = trigger:has_hp
+					limit = {
+						OR = {
+							is_ship_class = shipclass_military_station
+							is_ship_class = shipclass_starbase
+						}
+						owner = {
+							OR = {
+								is_at_war_with = root
+								is_hostile = root
+							}
+						}
+					}
+					create_ambient_object = {
+						type = "red_sun_grow_particle_object"
+						location = this
+						duration = 1
+					}
+					create_ambient_object = {
+						type = "abandoned_starbase_01_object"
+						location = this
+					}
+					last_created_ambient_object = {
+						enable_special_project = {
+							name = GUNGNIR_SPECIAL_PROJECT
+							owner = root
+							location = this
+						}
+					}
+					reduce_hp = 100000
+				}
+			}
+		}
+		set_country_flag = gungnir_used
+	}
+}
+
+destiny_manipulation = {
+	length = 1800
+	edict_lock_in_months = 60
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_destiny_manipulation
+			is_councilor = yes
+		}
+	}
+	allow = {
+		any_owned_leader = {
+			has_trait = leader_trait_destiny_manipulation
+			is_councilor = yes
+		}
+	}
+	resources = {
+		category = edicts
+	}
+	effect = {
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_destiny_manipulation
+			}
+			leader_event = {
+				id = touhou_paragon_effect.707
+			}
+		}
+	}
+}
+
+flower_admiral = {
+	length = 360
+	edict_lock_in_months = 12
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_flower_commander
+		}
+	}
+	resources = {
+		category = edicts
+	}
+	allow = {
+		any_owned_fleet = {
+			exists = leader
+			leader = {
+				has_trait = leader_trait_flower_commander
+			}
+		}
+		custom_tooltip = {
+			fail_text = already_flower_admiral
+			NOT = {
+				has_country_flag = double_spark
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = flower_admiral_effect
+		set_country_flag = double_spark
+		hidden_effect = {
+			save_global_event_target_as = double_spark_owner
+			every_owned_fleet = {
+				limit = { exists = leader
+					leader = { has_trait = leader_trait_flower_commander }
+				}
+				save_event_target_as = double_spark_creator
+				solar_system = {
+					system_event = {
+						id = touhou_paragon_effect.804
+					}
+					system_event = {
+						id = touhou_paragon_effect.805
+						days = 360
+					}
+				}
+			}
+		}
+	}
+}
+
+artifical_sun_edict = {
+	length = 360
+	edict_lock_in_months = 12
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_nuclear
+		}
+	}
+	resources = {
+		category = country_base
+		cost = {
+			energy = 16000
+		}
+	}
+	allow = {
+		any_owned_fleet = {
+			exists = leader
+			leader = {
+				has_trait = leader_trait_nuclear
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = artifical_sun_effect
+		hidden_effect = {
+			save_global_event_target_as = artifical_sun_owner
+			every_owned_fleet = {
+				limit = { exists = leader
+					leader = { has_trait = leader_trait_nuclear }
+				}
+				save_event_target_as = artifical_sun_creator
+				solar_system = {
+					system_event = {
+						id = touhou_paragon_effect.1103
+					}
+				}
+			}
+		}
+	}
+}
+
+minor_sun_edict = {
+	length = 360
+	edict_lock_in_months = 12
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_nuclear
+		}
+	}
+	resources = {
+		category = country_base
+		cost = {
+			energy = 16000
+		}
+	}
+	allow = {
+		any_owned_fleet = {
+			exists = leader
+			leader = {
+				has_trait = leader_trait_nuclear
+			}
+		}
+		NOT = {
+			count_owned_ship = {
+				limit = {
+					is_ship_size = minor_star
+				}
+				count >= 10
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = minor_sun_effect
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = {
+					exists = leader
+					leader = {
+						has_trait = leader_trait_nuclear
+					}
+				}
+				create_ship = {
+					name = "NAME_Blame_Star"
+					design = "NAME_Minor_Star"
+				}
+			}
+		}
+	}
+}
+
+crack_star_edict = {
+	length = 1800
+	edict_lock_in_months = 60
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_nuclear
+		}
+	}
+	resources = {
+		category = country_base
+		cost = {
+			energy = 60000
+			sr_dark_matter = 160
+		}
+	}
+	allow = {
+		any_owned_fleet = {
+			exists = leader
+			exists = solar_system
+			leader = {
+				has_trait = leader_trait_nuclear
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = crack_star_effect
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = {
+					exists = leader
+					leader = {
+						has_trait = leader_trait_nuclear
+					}
+				}
+				unassign_leader = this
+				solar_system = {
+					destroy_star_system_nuclear = yes
+				}
+			}
+		}
+	}
+}
+
+change_government_touhou = {
+	length = 1
+	icon = "GFX_edict_type_time"
+	potential = {
+		OR = {
+			has_civic = civic_hakurei_shinto
+			has_civic = civic_moriya_shinto
+			has_civic = civic_kirisame_magic
+			has_civic = civic_scarlet_allience
+			has_civic = civic_nether_world
+			has_civic = civic_penglai_medcine
+			has_civic = civic_hakurei_shinto_corp
+			has_civic = civic_moriya_shinto_corp
+			has_civic = civic_kirisame_magic_corp
+			has_civic = civic_scarlet_allience_corp
+			has_civic = civic_nether_world_corp
+			has_civic = civic_penglai_medcine_corp
+		}
+	}
+	resources = {
+		category = country_base
+		cost = {
+			influence = 200
+		}
+	}
+	allow = {
+		OR = {
+			has_civic = civic_hakurei_shinto
+			has_civic = civic_moriya_shinto
+			has_civic = civic_kirisame_magic
+			has_civic = civic_scarlet_allience
+			has_civic = civic_nether_world
+			has_civic = civic_penglai_medcine
+			has_civic = civic_hakurei_shinto_corp
+			has_civic = civic_moriya_shinto_corp
+			has_civic = civic_kirisame_magic_corp
+			has_civic = civic_scarlet_allience_corp
+			has_civic = civic_nether_world_corp
+			has_civic = civic_penglai_medcine_corp
+		}
+	}
+	effect = {
+		country_event = {
+			id = touhou_paragon.2
+		}
+	}
+}
+
+reset_touhou_leader = {
+	length = 1
+	icon = "GFX_edict_type_time"
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_earthquake
+			}
+			change_leader_portrait = x121
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_density
+			}
+			change_leader_portrait = x98
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_miracle
+			}
+			change_leader_portrait = x72
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_ice
+			}
+			change_leader_portrait = x117
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_kongfu
+			}
+			change_leader_portrait = x89
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_fly
+			}
+			change_leader_portrait = x1
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_magic
+			}
+			change_leader_portrait = x2
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_wave_length
+			}
+			change_leader_portrait = x6
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_kendo
+			}
+			change_leader_portrait = x150
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_time
+			}
+			change_leader_portrait = x88
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_border_merry
+			}
+			change_leader_portrait = x48
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_star_located
+			}
+			change_leader_portrait = x49
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_mind_reader
+			}
+			change_leader_portrait = x81
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_subconscious
+			}
+			change_leader_portrait = x82
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_wind
+			}
+			change_leader_portrait = x105
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_trial
+			}
+			change_leader_portrait = x110
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_distance
+			}
+			change_leader_portrait = x108
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_elements
+			}
+			change_leader_portrait = x91
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_destiny_manipulation
+			}
+			change_leader_portrait = x63
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_dolls
+			}
+			change_leader_portrait = x10
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_death
+			}
+			change_leader_portrait = x16
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_earthquake
+			}
+			change_leader_portrait = x121
+		}
+		random_owned_leader = {
+			limit = {
+				OR = {
+					has_trait = leader_trait_flower
+					has_trait = leader_trait_flower_commander
+				}
+			}
+			change_leader_portrait = x119
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_words
+			}
+			change_leader_portrait = x54
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_memory
+			}
+			change_leader_portrait = x53
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_corpse_travel
+			}
+			change_leader_portrait = x112
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_nuclear
+			}
+			change_leader_portrait = x77
+		}
+	}
+}

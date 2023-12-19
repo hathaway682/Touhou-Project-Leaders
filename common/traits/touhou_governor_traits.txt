@@ -1,0 +1,2699 @@
+@designation_bonus = 50
+
+####################################
+# SHARED TRAITS BLOCKED IN PARAGON #
+####################################
+
+trait_ruler_frontier_spirit = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_frontier_spirit"
+		RARITY = common
+		COUNCIL = yes
+		TIER = none
+	}
+	councilor_modifier = {
+		ship_colonizer_cost_mult = -0.25
+		planet_colony_development_speed_mult = 0.15
+	}
+	leader_potential_add = {
+		has_paragon_dlc = no
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+leader_trait_touhou_intellectual = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_intellectual"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	modifier = {
+		planet_jobs_physics_research_produces_mult = 0.10
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
+	}
+	leader_potential_add = {
+		has_paragon_dlc = no
+	}
+	leader_class = { commander official }
+	initial = no
+	randomized = no
+}
+
+####################################
+#  SHARED TRAITS FREE AND PARAGON  #
+####################################
+
+###################
+leader_trait_touhou_army_veteran = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_army_veteran"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		planet_army_build_speed_mult = 0.15
+		armies_cost_mult = -0.15
+		army_defense_damage_mult = 0.15
+	}
+	leader_potential_add = {
+		is_pool_leader = yes # Starting trait only.
+	}
+	on_gained_effect = {
+		add_age = value:percent_of_leader_lifespan|PERCENT|10|
+		set_random_commander_background_effect = yes
+	}
+	leader_class = { commander official }
+	opposites = { "leader_trait_touhou_retired_fleet_officer" }
+}
+
+leader_trait_touhou_army_veteran_2 = {
+	replace_traits = { "leader_trait_touhou_army_veteran" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_army_veteran"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		planet_army_build_speed_mult = 0.25
+		armies_cost_mult = -0.10
+		army_defense_damage_mult = 0.25
+	}
+	leader_class = { commander official }
+	opposites = { "leader_trait_touhou_retired_fleet_officer" }
+}
+
+###################
+leader_trait_touhou_retired_fleet_officer = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_retired_fleet_officer"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		starbase_shipyard_build_speed_mult = 0.10
+		ship_starting_experience_add = 100
+	}
+	leader_potential_add = {
+		always = no
+	}
+	on_gained_effect = {
+		add_age = value:percent_of_leader_lifespan|PERCENT|10|
+		set_random_commander_background_effect = yes
+	}
+	leader_class = { commander official }
+	opposites = { "leader_trait_touhou_army_veteran" }
+}
+
+leader_trait_touhou_retired_fleet_officer_2 = {
+	replace_traits = { "leader_trait_touhou_retired_fleet_officer" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_retired_fleet_officer"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		starbase_shipyard_build_speed_mult = 0.20
+		ship_starting_experience_add = 200
+	}
+	leader_class = { commander official }
+	opposites = { "leader_trait_touhou_army_veteran" }
+}
+
+###################
+leader_trait_touhou_agrarian_upbringing = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_agrarian_upbringing"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	modifier = {
+		planet_jobs_food_produces_mult = 0.1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	on_gained_effect = {
+		if = {
+			limit = { owner = { is_anglers_empire = yes } }
+			change_background_job = angler
+		}
+		else = {
+			change_background_job = farmer
+		}
+	}
+	leader_class = { commander official }
+}
+
+leader_trait_touhou_agrarian_upbringing_2 = {
+	replace_traits = { "leader_trait_touhou_agrarian_upbringing" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_agrarian_upbringing"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	modifier = {
+		planet_jobs_food_produces_mult = 0.2
+	}
+	leader_class = { commander official }
+}
+
+#########################
+#  NON STARTING TRAITS  #
+#########################
+
+###################
+trait_ruler_fertility_preacher = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_fertility_preacher"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		pop_growth_speed = 0.03
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		planet_pop_assembly_mult = 0.03
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { country_uses_food = yes }
+		}
+		planet_jobs_food_produces_mult = 0.1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @class_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+trait_ruler_fertility_preacher_2 = {
+	replace_traits = { "trait_ruler_fertility_preacher" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_fertility_preacher"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 2
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		pop_growth_speed = 0.05
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		planet_pop_assembly_mult = 0.05
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { country_uses_food = yes }
+		}
+		planet_jobs_food_produces_mult = 0.15
+	}
+	leader_class = { commander official }
+}
+
+###################
+leader_trait_touhou_righteous = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_righteous"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	triggered_planet_modifier = {
+		potential = { trait_is_gestalt_check = no }
+		planet_crime_add = -25
+	}
+	triggered_planet_modifier = {
+		potential = { trait_is_gestalt_check = yes }
+		planet_crime_no_happiness_add = -25
+	}
+	triggered_sector_modifier = {
+		potential = { trait_is_gestalt_check = no }
+		planet_crime_add = -10
+	}
+	triggered_sector_modifier = {
+		potential = { trait_is_gestalt_check = yes }
+		planet_crime_no_happiness_add = -10
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { commander official }
+	opposites = {
+		leader_trait_corrupt
+		leader_trait_corrupt_2
+	}
+	selectable_weight = {
+		weight = @shared_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+}
+
+leader_trait_touhou_righteous_2 = {
+	replace_traits = { "leader_trait_touhou_righteous" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_righteous"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	triggered_planet_modifier = {
+		potential = { trait_is_gestalt_check = no }
+		planet_crime_add = -50
+	}
+	triggered_planet_modifier = {
+		potential = { trait_is_gestalt_check = yes }
+		planet_crime_no_happiness_add = -50
+	}
+	triggered_sector_modifier = {
+		potential = { trait_is_gestalt_check = no }
+		planet_crime_add = -25
+	}
+	triggered_sector_modifier = {
+		potential = { trait_is_gestalt_check = yes }
+		planet_crime_no_happiness_add = -25
+	}
+	leader_class = { commander official }
+	opposites = {
+		leader_trait_corrupt
+		leader_trait_corrupt_2
+	}
+}
+
+###################
+leader_trait_touhou_environmental_engineer = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_environmental_engineer"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	planet_modifier = {
+		deposit_blockers_cost_mult = -0.25
+		planet_clear_blocker_speed_mult = 0.25
+	}
+	sector_modifier = {
+		deposit_blockers_cost_mult = -0.10
+		planet_clear_blocker_speed_mult = 0.10
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @shared_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+}
+
+leader_trait_touhou_environmental_engineer_2 = {
+	replace_traits = { "leader_trait_touhou_environmental_engineer" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_environmental_engineer"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		deposit_blockers_cost_mult = -0.35
+		planet_clear_blocker_speed_mult = 0.35
+	}
+	sector_modifier = {
+		deposit_blockers_cost_mult = -0.15
+		planet_clear_blocker_speed_mult = 0.15
+	}
+	leader_class = { commander official }
+}
+
+###################
+leader_trait_touhou_enlister = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_enlister"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	planet_modifier = {
+		planet_army_build_speed_mult = 0.1
+		armies_cost_mult = -0.1
+	}
+	sector_modifier = {
+		planet_army_build_speed_mult = 0.05
+		armies_cost_mult = -0.05
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @shared_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+}
+
+leader_trait_touhou_enlister_2 = {
+	replace_traits = { "leader_trait_touhou_enlister" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_enlister"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_army_build_speed_mult = 0.2
+		armies_cost_mult = -0.2
+	}
+	sector_modifier = {
+		planet_army_build_speed_mult = 0.1
+		armies_cost_mult = -0.1
+	}
+	leader_class = { commander official }
+}
+
+###################
+leader_trait_touhou_shipwright = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_shipwright"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		starbase_shipyard_build_speed_mult = 0.05
+		starbase_shipyard_build_cost_mult = -0.05
+	}
+	leader_class = { commander official }
+	leader_potential_add = {
+		always = no
+	}
+	opposites = {
+		leader_trait_irenic
+		leader_trait_irenic_2
+	}
+	selectable_weight = {
+		weight = @class_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+leader_trait_touhou_shipwright_2 = {
+	replace_traits = { "leader_trait_touhou_shipwright" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_shipwright"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		starbase_shipyard_build_speed_mult = 0.10
+		starbase_shipyard_build_cost_mult = -0.10
+	}
+	leader_class = { commander official }
+	opposites = {
+		leader_trait_irenic
+		leader_trait_irenic_2
+	}
+}
+
+###################
+leader_trait_touhou_architectural_interest = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_architectural_interest"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	planet_modifier = {
+		planet_structures_upkeep_mult = -0.1
+		planet_building_build_speed_mult = 0.1
+	}
+	sector_modifier = {
+		planet_structures_upkeep_mult = -0.05
+		planet_building_build_speed_mult = 0.05
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { commander official }
+	opposites = {
+		leader_trait_procrastinator
+		leader_trait_procrastinator_2
+	}
+	selectable_weight = {
+		weight = @shared_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+}
+
+leader_trait_touhou_architectural_interest_2 = {
+	replace_traits = { "leader_trait_touhou_architectural_interest" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_architectural_interest"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_structures_upkeep_mult = -0.2
+		planet_building_build_speed_mult = 0.2
+	}
+	sector_modifier = {
+		planet_structures_upkeep_mult = -0.1
+		planet_building_build_speed_mult = 0.1
+	}
+	leader_class = { commander official }
+	opposites = {
+		leader_trait_procrastinator
+		leader_trait_procrastinator_2
+	}
+}
+
+###################
+leader_trait_touhou_trade_focus = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_trader"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		owner = { is_gestalt = no }
+	}
+	planet_modifier = {
+		trade_value_mult = 0.15
+	}
+	sector_modifier = {
+		trade_value_mult = 0.075
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @class_trait_weight
+		inline_script = paragon/governor_weight_mult
+		modifier = {
+			add = @designation_bonus
+			exists = planet
+			planet = {
+				has_trade_designation = yes
+			}
+		}
+	}
+}
+
+leader_trait_touhou_trade_focus_2 = {
+	replace_traits = { "leader_trait_touhou_trade_focus" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_trader"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		trade_value_mult = 0.25
+	}
+	sector_modifier = {
+		trade_value_mult = 0.125
+	}
+	leader_class = { commander official }
+}
+
+###############
+#  VISIONARY  #
+###############
+
+leader_trait_touhou_frontier_spirit = {
+	veteran_class_locked_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_frontier_spirit"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		ship_colonizer_cost_mult = -0.05
+		planet_colony_development_speed_mult = 0.15
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_lord
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+leader_trait_touhou_frontier_spirit_2 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { "leader_trait_touhou_frontier_spirit" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_frontier_spirit"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		ship_colonizer_cost_mult = -0.10
+		planet_colony_development_speed_mult = 0.33
+	}
+	leader_class = { commander official }
+}
+
+leader_trait_touhou_frontier_spirit_3 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { "leader_trait_touhou_frontier_spirit_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_frontier_spirit"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		ship_colonizer_cost_mult = -0.10
+		planet_colony_development_speed_mult = 0.50
+		colony_start_num_pops_add = 1
+	}
+	leader_class = { commander official }
+}
+
+###################
+leader_trait_touhou_cultural_focus = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_cultural_focus"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_lord
+	}
+	councilor_modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @class_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+leader_trait_touhou_cultural_focus_2 = {
+	replace_traits = { "leader_trait_touhou_cultural_focus" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_cultural_focus"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+}
+
+leader_trait_touhou_cultural_focus_3 = {
+	replace_traits = { "leader_trait_touhou_cultural_focus_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_cultural_focus"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		planet_jobs_unity_produces_mult = 0.25
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+}
+
+###################
+trait_ruler_investor = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_investor"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	triggered_councilor_modifier = {
+		potential = { trait_is_gestalt_check = no }
+		trade_value_mult = 0.1
+	}
+	triggered_councilor_modifier = {
+		potential = { trait_is_gestalt_check = yes }
+		planet_jobs_produces_mult = 0.025
+	}
+	leader_potential_add = {
+		OR = {
+			has_paragon_dlc = no
+			has_trait = subclass_commander_lord
+		}
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	opposites = {
+		leader_trait_insider_trading
+		leader_trait_insider_trading_2
+	}
+	selectable_weight = {
+		inline_script = paragon/subclass_free_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+trait_ruler_investor_2 = {
+	replace_traits = { "trait_ruler_investor" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_investor"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	triggered_councilor_modifier = {
+		potential = { trait_is_gestalt_check = no }
+		trade_value_mult = 0.15
+	}
+	triggered_councilor_modifier = {
+		potential = { trait_is_gestalt_check = yes }
+		planet_jobs_produces_mult = 0.05
+	}
+	leader_class = { commander official }
+	opposites = {
+		leader_trait_insider_trading
+		leader_trait_insider_trading_2
+	}
+	veteran_class_locked_trait = yes
+}
+
+trait_ruler_investor_3 = {
+	replace_traits = { "trait_ruler_investor_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_investor"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	triggered_councilor_modifier = {
+		potential = { trait_is_gestalt_check = no }
+		trade_value_mult = 0.25
+	}
+	triggered_councilor_modifier = {
+		potential = { trait_is_gestalt_check = yes }
+		planet_jobs_produces_mult = 0.1
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	opposites = {
+		leader_trait_insider_trading
+		leader_trait_insider_trading_2
+	}
+}
+
+###################
+trait_ruler_architectural_sense = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_architectural_sense"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		planet_buildings_cost_mult = -0.05
+		planet_districts_cost_mult = -0.05
+		planet_building_build_speed_mult = 0.10
+	}
+	leader_potential_add = {
+		OR = {
+			has_paragon_dlc = no
+			has_trait = subclass_commander_lord
+		}
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	selectable_weight = {
+		inline_script = paragon/subclass_free_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+trait_ruler_architectural_sense_2 = {
+	replace_traits = { "trait_ruler_architectural_sense" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_architectural_sense"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		planet_buildings_cost_mult = -0.10
+		planet_districts_cost_mult = -0.10
+		planet_building_build_speed_mult = 0.15
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+}
+
+trait_ruler_architectural_sense_3 = {
+	replace_traits = { "trait_ruler_architectural_sense_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_architectural_sense"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		planet_buildings_cost_mult = -0.1
+		planet_districts_cost_mult = -0.1
+		planet_buildings_upkeep_mult = -0.05
+		planet_districts_upkeep_mult = -0.05
+		planet_building_build_speed_mult = 0.25
+	}
+	veteran_class_locked_trait = yes
+	leader_potential_add = {
+		has_paragon_dlc = yes
+	}
+	leader_class = { commander official }
+}
+
+###################
+trait_ruler_deep_connections = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_deep_connections"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		country_councilor_influence_produces_add = 0.5
+	}
+	veteran_class_locked_trait = yes
+	leader_potential_add = {
+		OR = {
+			has_paragon_dlc = no
+			has_trait = subclass_commander_lord
+		}
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		inline_script = paragon/subclass_free_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+trait_ruler_deep_connections_2 = {
+	replace_traits = { "trait_ruler_deep_connections" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_deep_connections"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		country_councilor_influence_produces_add = 0.75
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+}
+
+trait_ruler_deep_connections_3 = {
+	replace_traits = { "trait_ruler_deep_connections_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_deep_connections"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		country_councilor_influence_produces_add = 1
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+}
+
+###################
+leader_trait_touhou_reformer = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_reformer"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		is_gestalt = no
+		OR = {
+			has_paragon_dlc = no
+			has_trait = subclass_commander_lord
+		}
+	}
+	councilor_modifier = {
+		country_unity_produces_mult = 0.05
+		pop_government_ethic_attraction = 0.35
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	selectable_weight = {
+		inline_script = paragon/subclass_free_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+leader_trait_touhou_reformer_2 = {
+	replace_traits = { "leader_trait_touhou_reformer" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_reformer"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		country_unity_produces_mult = 0.1
+		pop_government_ethic_attraction = 0.5
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+}
+
+leader_trait_touhou_reformer_3 = {
+	replace_traits = { "leader_trait_touhou_reformer_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_reformer"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+	}
+	councilor_modifier = {
+		country_unity_produces_mult = 0.15
+		pop_government_ethic_attraction = 0.75
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+}
+
+###################
+leader_trait_touhou_courtroom_training = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_courtroom_training"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		country_trust_cap_add = 35
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_lord
+		is_xenophobe = no
+		owner = { is_homicidal = no }
+	}
+	leader_class = { commander official }
+	opposites = {
+		leader_trait_intolerant
+		leader_trait_intolerant_2
+	}
+	veteran_class_locked_trait = yes
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+leader_trait_touhou_courtroom_training_2 = {
+	replace_traits = { "leader_trait_touhou_courtroom_training" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_courtroom_training"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		country_trust_cap_add = 50
+	}
+	leader_class = { commander official }
+	opposites = {
+		leader_trait_intolerant
+		leader_trait_intolerant_2
+	}
+	veteran_class_locked_trait = yes
+}
+
+leader_trait_touhou_courtroom_training_3 = {
+	replace_traits = { "leader_trait_touhou_courtroom_training_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_courtroom_training"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		country_trust_cap_add = 75
+	}
+	leader_class = { commander official }
+	opposites = {
+		leader_trait_intolerant
+		leader_trait_intolerant_2
+	}
+	veteran_class_locked_trait = yes
+}
+
+#############
+#  PIONEER  #
+#############
+
+leader_trait_touhou_mining_focus = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_mining_focus"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	planet_modifier = {
+		planet_jobs_minerals_produces_mult = 0.15
+	}
+	sector_modifier = {
+		planet_jobs_minerals_produces_mult = 0.075
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_any_governor_focus = no
+		has_trait = subclass_commander_servant
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+		modifier = {
+			factor = @designation_bonus
+			exists = planet
+			planet = {
+				has_mining_designation = yes
+			}
+		}
+	}
+}
+
+leader_trait_touhou_mining_focus_2 = {
+	replace_traits = { "leader_trait_touhou_mining_focus" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_mining_focus"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_jobs_minerals_produces_mult = 0.25
+	}
+	sector_modifier = {
+		planet_jobs_minerals_produces_mult = 0.125
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+leader_trait_touhou_mining_focus_3 = {
+	replace_traits = { "leader_trait_touhou_mining_focus_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_mining_focus"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	planet_modifier = {
+		planet_jobs_minerals_produces_mult = 0.45
+	}
+	sector_modifier = {
+		planet_jobs_minerals_produces_mult = 0.225
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+###################
+leader_trait_touhou_generator_focus = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_financial"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	planet_modifier = {
+		planet_jobs_energy_produces_mult = 0.15
+	}
+	sector_modifier = {
+		planet_jobs_energy_produces_mult = 0.075
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_any_governor_focus = no
+		has_trait = subclass_commander_servant
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+		modifier = {
+			factor = @designation_bonus
+			exists = planet
+			planet = {
+				has_generator_designation = yes
+			}
+		}
+	}
+}
+
+leader_trait_touhou_generator_focus_2 = {
+	replace_traits = { "leader_trait_touhou_generator_focus" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_financial"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_jobs_energy_produces_mult = 0.25
+	}
+	sector_modifier = {
+		planet_jobs_energy_produces_mult = 0.125
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+leader_trait_touhou_generator_focus_3 = {
+	replace_traits = { "leader_trait_touhou_generator_focus_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_financial"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	planet_modifier = {
+		planet_jobs_energy_produces_mult = 0.45
+	}
+	sector_modifier = {
+		planet_jobs_energy_produces_mult = 0.225
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+###################
+leader_trait_touhou_farming_focus = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_food"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	planet_modifier = {
+		planet_jobs_food_produces_mult = 0.15
+	}
+	sector_modifier = {
+		planet_jobs_food_produces_mult = 0.075
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		owner = { country_uses_food = yes }
+		has_trait = subclass_commander_servant
+		has_any_governor_focus = no
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+		modifier = {
+			factor = @designation_bonus
+			exists = planet
+			planet = {
+				has_farming_designation = yes
+			}
+		}
+	}
+}
+
+leader_trait_touhou_farming_focus_2 = {
+	replace_traits = { "leader_trait_touhou_farming_focus" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_food"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_jobs_food_produces_mult = 0.25
+	}
+	sector_modifier = {
+		planet_jobs_food_produces_mult = 0.125
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+leader_trait_touhou_farming_focus_3 = {
+	replace_traits = { "leader_trait_touhou_farming_focus_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_food"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	planet_modifier = {
+		planet_jobs_food_produces_mult = 0.45
+	}
+	sector_modifier = {
+		planet_jobs_food_produces_mult = 0.225
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+###################
+leader_trait_touhou_settler = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_settler"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_servant
+	}
+	veteran_class_locked_trait = yes
+	planet_modifier = {
+		planet_housing_add = 4
+		planet_amenities_add = 10
+	}
+	sector_modifier = {
+		planet_housing_add = 2
+		planet_amenities_add = 5
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		inline_script = paragon/subclass_free_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+}
+
+leader_trait_touhou_settler_2 = {
+	replace_traits = { "leader_trait_touhou_settler" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_settler"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_housing_add = 6
+		planet_amenities_add = 15
+	}
+	sector_modifier = {
+		planet_housing_add = 3
+		planet_amenities_add = 7
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+}
+
+leader_trait_touhou_settler_3 = {
+	replace_traits = { "leader_trait_touhou_settler_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_settler"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	planet_modifier = {
+		planet_housing_add = 10
+		planet_amenities_add = 25
+	}
+	sector_modifier = {
+		planet_housing_add = 5
+		planet_amenities_add = 10
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+}
+
+###################
+leader_trait_touhou_cartographer = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_cartographer"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		OR = {
+			has_trait = subclass_commander_lord
+			has_trait = subclass_scientist_councilor
+		}
+	}
+	councilor_modifier = {
+		terraform_speed_mult = 0.10
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official scientist }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+leader_trait_touhou_cartographer_2 = {
+	replace_traits = { "leader_trait_touhou_cartographer" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_cartographer"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	councilor_modifier = {
+		terraform_speed_mult = 0.25
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official scientist }
+}
+
+leader_trait_touhou_cartographer_3 = {
+	replace_traits = { "leader_trait_touhou_cartographer_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_cartographer"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	councilor_modifier = {
+		terraform_speed_mult = 0.33
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official scientist }
+}
+
+###################
+leader_trait_touhou_expeditionist = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_expeditionist"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		planet_clear_blocker_speed_mult = 0.10
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_lord
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+leader_trait_touhou_expeditionist_2 = {
+	replace_traits = { "leader_trait_touhou_expeditionist" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_expeditionist"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		planet_clear_blocker_speed_mult = 0.25
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+}
+
+leader_trait_touhou_expeditionist_3 = {
+	replace_traits = { "leader_trait_touhou_expeditionist_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_expeditionist"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		planet_clear_blocker_speed_mult = 0.33
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+}
+
+###################
+leader_trait_touhou_naturalist = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_naturalist"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	planet_modifier = {
+		deposit_blockers_natural_unity_produces_add = 3
+	}
+	sector_modifier = {
+		deposit_blockers_natural_unity_produces_add = 1.5
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		OR = {
+			has_trait = subclass_commander_servant
+			has_trait = subclass_scientist_governor
+		}
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official scientist }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+}
+
+leader_trait_touhou_naturalist_2 = {
+	replace_traits = { "leader_trait_touhou_naturalist" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_naturalist"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		deposit_blockers_natural_unity_produces_add = 6
+	}
+	sector_modifier = {
+		deposit_blockers_natural_unity_produces_add = 3
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official scientist }
+}
+
+leader_trait_touhou_naturalist_3 = {
+	replace_traits = { "leader_trait_touhou_naturalist_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_naturalist"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	planet_modifier = {
+		deposit_blockers_natural_unity_produces_add = 12
+	}
+	sector_modifier = {
+		deposit_blockers_natural_unity_produces_add = 6
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official scientist }
+}
+
+###################
+#  INDUSTRIALIST  #
+###################
+
+leader_trait_touhou_forge_focus = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_forge_focus"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_servant
+		has_any_governor_focus = no
+	}
+	planet_modifier = {
+		planet_jobs_alloys_produces_mult = 0.1
+	}
+	sector_modifier = {
+		planet_jobs_alloys_produces_mult = 0.05
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+		modifier = {
+			add = @designation_bonus
+			exists = planet
+			planet = {
+				has_foundry_designation = yes
+			}
+		}
+	}
+}
+
+leader_trait_touhou_forge_focus_2 = {
+	replace_traits = { "leader_trait_touhou_forge_focus" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_forge_focus"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	veteran_class_locked_trait = yes
+	planet_modifier = {
+		planet_jobs_alloys_produces_mult = 0.2
+	}
+	sector_modifier = {
+		planet_jobs_alloys_produces_mult = 0.1
+	}
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+leader_trait_touhou_forge_focus_3 = {
+	replace_traits = { "leader_trait_touhou_forge_focus_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_forge_focus"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	veteran_class_locked_trait = yes
+	planet_modifier = {
+		planet_jobs_alloys_produces_mult = 0.35
+	}
+	sector_modifier = {
+		planet_jobs_alloys_produces_mult = 0.175
+	}
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+###################
+leader_trait_touhou_industrial_focus = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_industrial_focus"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_servant
+		has_any_governor_focus = no
+		is_gestalt = no
+	}
+	planet_modifier = {
+		planet_jobs_consumer_goods_produces_mult = 0.1
+	}
+	sector_modifier = {
+		planet_jobs_consumer_goods_produces_mult = 0.05
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+		modifier = {
+			add = @designation_bonus
+			exists = planet
+			planet = {
+				has_factory_designation = yes
+			}
+		}
+	}
+}
+
+leader_trait_touhou_industrial_focus_2 = {
+	replace_traits = { "leader_trait_touhou_industrial_focus" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_industrial_focus"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_jobs_consumer_goods_produces_mult = 0.2
+	}
+	sector_modifier = {
+		planet_jobs_consumer_goods_produces_mult = 0.1
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+leader_trait_touhou_industrial_focus_3 = {
+	replace_traits = { "leader_trait_touhou_industrial_focus_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_industrial_focus"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	planet_modifier = {
+		planet_jobs_consumer_goods_produces_mult = 0.35
+	}
+	sector_modifier = {
+		planet_jobs_consumer_goods_produces_mult = 0.175
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+###################
+leader_trait_touhou_refinement_focus = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_refinement_focus"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_servant
+		has_any_governor_focus = no
+	}
+	planet_modifier = {
+		planet_refiners_produces_mult = 0.1
+		planet_translucers_produces_mult = 0.1
+		planet_chemists_produces_mult = 0.1
+	}
+	sector_modifier = {
+		planet_refiners_produces_mult = 0.05
+		planet_translucers_produces_mult = 0.05
+		planet_chemists_produces_mult = 0.05
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+		modifier = {
+			add = @designation_bonus
+			exists = planet
+			planet = {
+				has_refinery_designation = yes
+			}
+		}
+	}
+}
+
+leader_trait_touhou_refinement_focus_2 = {
+	replace_traits = { "leader_trait_touhou_refinement_focus" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_refinement_focus"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_refiners_produces_mult = 0.2
+		planet_translucers_produces_mult = 0.2
+		planet_chemists_produces_mult = 0.2
+	}
+	sector_modifier = {
+		planet_refiners_produces_mult = 0.1
+		planet_translucers_produces_mult = 0.1
+		planet_chemists_produces_mult = 0.1
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+leader_trait_touhou_refinement_focus_3 = {
+	replace_traits = { "leader_trait_touhou_refinement_focus_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_refinement_focus"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	planet_modifier = {
+		planet_refiners_produces_mult = 0.35
+		planet_translucers_produces_mult = 0.35
+		planet_chemists_produces_mult = 0.35
+	}
+	sector_modifier = {
+		planet_refiners_produces_mult = 0.175
+		planet_translucers_produces_mult = 0.175
+		planet_chemists_produces_mult = 0.175
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { commander official }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+###################
+leader_trait_touhou_urbanist = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_urbanist"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_servant
+	}
+	veteran_class_locked_trait = yes
+	planet_modifier = {
+		empire_size_districts_mult = -0.75
+		planet_buildings_upkeep_mult = -0.5
+		planet_districts_upkeep_mult = -0.5
+	}
+	sector_modifier = {
+		empire_size_districts_mult = -0.375
+		planet_buildings_upkeep_mult = -0.25
+		planet_districts_upkeep_mult = -0.25
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+}
+
+###################
+leader_trait_touhou_assembler = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_assembler"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		OR = {
+			has_trait = subclass_commander_servant
+			has_trait = subclass_scientist_governor
+		}
+		owner = {
+			OR = {
+				is_gestalt = yes
+				has_technology = tech_robotic_workers
+			}
+		}
+	}
+	veteran_class_locked_trait = yes
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_hive_empire = no }
+		}
+		planet_pop_assembly_mult = 0.15
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_hive_empire = yes }
+		}
+		planet_pop_assembly_organic_mult = 0.15
+	}
+	triggered_sector_modifier = {
+		potential = {
+			owner = { is_hive_empire = no }
+		}
+		planet_pop_assembly_mult = 0.075
+	}
+	triggered_sector_modifier = {
+		potential = {
+			owner = { is_hive_empire = yes }
+		}
+		planet_pop_assembly_organic_mult = 0.075
+	}
+	leader_class = { commander official scientist }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+}
+
+leader_trait_touhou_assembler_2 = {
+	replace_traits = { "leader_trait_touhou_assembler" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_assembler"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	veteran_class_locked_trait = yes
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_hive_empire = no }
+		}
+		planet_pop_assembly_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_hive_empire = yes }
+		}
+		planet_pop_assembly_organic_mult = 0.25
+	}
+	triggered_sector_modifier = {
+		potential = {
+			owner = { is_hive_empire = no }
+		}
+		planet_pop_assembly_mult = 0.125
+	}
+	triggered_sector_modifier = {
+		potential = {
+			owner = { is_hive_empire = yes }
+		}
+		planet_pop_assembly_organic_mult = 0.125
+	}
+	leader_class = { commander official scientist }
+}
+
+leader_trait_touhou_assembler_3 = {
+	replace_traits = { "leader_trait_touhou_assembler_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_assembler"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	veteran_class_locked_trait = yes
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_hive_empire = no }
+		}
+		planet_pop_assembly_mult = 0.4
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_hive_empire = yes }
+		}
+		planet_pop_assembly_organic_mult = 0.4
+	}
+	triggered_sector_modifier = {
+		potential = {
+			owner = { is_hive_empire = no }
+		}
+		planet_pop_assembly_mult = 0.2
+	}
+	triggered_sector_modifier = {
+		potential = {
+			owner = { is_hive_empire = yes }
+		}
+		planet_pop_assembly_organic_mult = 0.2
+	}
+	leader_class = { commander official scientist }
+}
+
+###################
+leader_trait_touhou_pop_focused = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_pop_focused"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_servant
+	}
+	veteran_class_locked_trait = yes
+	planet_modifier = {
+		planet_jobs_worker_produces_mult = 0.05
+	}
+	sector_modifier = {
+		planet_jobs_worker_produces_mult = 0.025
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+}
+
+leader_trait_touhou_pop_focused_2 = {
+	replace_traits = { "leader_trait_touhou_pop_focused" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_pop_focused"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	veteran_class_locked_trait = yes
+	planet_modifier = {
+		planet_jobs_worker_produces_mult = 0.1
+		planet_jobs_specialist_produces_mult = 0.05
+	}
+	sector_modifier = {
+		planet_jobs_worker_produces_mult = 0.05
+		planet_jobs_specialist_produces_mult = 0.025
+	}
+	leader_class = { commander official }
+}
+
+leader_trait_touhou_pop_focused_3 = {
+	replace_traits = { "leader_trait_touhou_pop_focused_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_pop_focused"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	veteran_class_locked_trait = yes
+	planet_modifier = {
+		planet_jobs_worker_produces_mult = 0.15
+		planet_jobs_specialist_produces_mult = 0.1
+		planet_jobs_ruler_produces_mult = 0.05
+	}
+	sector_modifier = {
+		planet_jobs_worker_produces_mult = 0.075
+		planet_jobs_specialist_produces_mult = 0.05
+		planet_jobs_ruler_produces_mult = 0.025
+	}
+	leader_class = { commander official }
+}
+
+###################
+leader_trait_touhou_distribution_lines = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_fleet_logistician"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_servant
+	}
+	veteran_class_locked_trait = yes
+	planet_modifier = {
+		planet_metallurgists_upkeep_mult = -0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				country_uses_consumer_goods = yes
+			}
+		}
+		planet_artisans_upkeep_mult = -0.05
+	}
+	sector_modifier = {
+		planet_metallurgists_upkeep_mult = -0.025
+	}
+	triggered_sector_modifier = {
+		potential = {
+			owner = {
+				country_uses_consumer_goods = yes
+			}
+		}
+		planet_artisans_upkeep_mult = -0.025
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+}
+
+leader_trait_touhou_distribution_lines_2 = {
+	replace_traits = { "leader_trait_touhou_distribution_lines" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_fleet_logistician"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	veteran_class_locked_trait = yes
+	planet_modifier = {
+		planet_metallurgists_upkeep_mult = -0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				country_uses_consumer_goods = yes
+			}
+		}
+		planet_artisans_upkeep_mult = -0.1
+	}
+	sector_modifier = {
+		planet_metallurgists_upkeep_mult = -0.05
+	}
+	triggered_sector_modifier = {
+		potential = {
+			owner = {
+				country_uses_consumer_goods = yes
+			}
+		}
+		planet_artisans_upkeep_mult = -0.05
+	}
+	leader_class = { commander official }
+}
+
+leader_trait_touhou_distribution_lines_3 = {
+	replace_traits = { "leader_trait_touhou_distribution_lines_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_fleet_logistician"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	veteran_class_locked_trait = yes
+	planet_modifier = {
+		planet_metallurgists_upkeep_mult = -0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				country_uses_consumer_goods = yes
+			}
+		}
+		planet_artisans_upkeep_mult = -0.2
+	}
+	sector_modifier = {
+		planet_metallurgists_upkeep_mult = -0.1
+	}
+	triggered_sector_modifier = {
+		potential = {
+			owner = {
+				country_uses_consumer_goods = yes
+			}
+		}
+		planet_artisans_upkeep_mult = -0.1
+	}
+	leader_class = { commander official }
+}
+
+###################
+# DESTINY TRAITS  #
+###################
+
+leader_trait_touhou_efficient = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_efficient"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_servant
+	}
+	planet_modifier = {
+		planet_jobs_ruler_produces_mult = 0.5
+		pop_cat_ruler_political_power = 0.15
+	}
+	sector_modifier = {
+		planet_jobs_ruler_produces_mult = 0.25
+		pop_cat_ruler_political_power = 0.075
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+leader_trait_touhou_utopian_idealist = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_utopian_idealist"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_servant
+	}
+	planet_modifier = {
+		pop_happiness = 0.2
+		pop_growth_from_immigration = 0.25
+		planet_immigration_pull_mult = 0.1
+	}
+	sector_modifier = {
+		pop_happiness = 0.1
+		pop_growth_from_immigration = 0.125
+		planet_immigration_pull_mult = 0.05
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+leader_trait_touhou_mediator = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_mediator"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_servant
+		has_ethic = ethic_xenophile
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet
+		}
+		pop_job_amenities_mult = 0.02
+		mult = planet.value:species_on_planet
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet
+		}
+		pop_citizen_happiness = 0.02
+		mult = planet.value:species_on_planet
+	}
+	triggered_sector_modifier = {
+		potential = {
+			exists = planet
+		}
+		pop_job_amenities_mult = 0.01
+		mult = planet.value:species_on_planet
+	}
+	triggered_sector_modifier = {
+		potential = {
+			exists = planet
+		}
+		pop_citizen_happiness = 0.01
+		mult = planet.value:species_on_planet
+	}
+	custom_tooltip = leader_trait_mediator_effect
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+leader_trait_touhou_master_diplomat = {
+	destiny_trait = yes
+	cost = 1
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_master_diplomat"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	councilor_modifier = {
+		diplo_weight_mult = 0.2
+		country_trust_cap_add = 50
+		envoys_add = 2
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_lord
+		owner = {
+			is_homicidal = no
+		}
+	}
+	leader_class = { commander official }
+	opposites = {
+		leader_trait_reclusive
+		leader_trait_reclusive_2
+	}
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+leader_trait_touhou_supreme_organizer = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_supreme_organizer"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	councilor_modifier = {
+		empire_size_penalty_mult = -0.1
+		pop_government_ethic_attraction = 0.50
+		pop_happiness = -0.05
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_lord
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+leader_trait_touhou_galvanizer = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_galvanizer"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_servant
+	}
+	planet_modifier = {
+		pop_category_workers_unity_produces_add = 0.5
+		pop_category_specialists_unity_produces_add = 0.5
+		pop_category_rulers_unity_produces_add = 0.5
+		pop_happiness = 0.05
+	}
+	sector_modifier = {
+		pop_category_workers_unity_produces_add = 0.25
+		pop_category_specialists_unity_produces_add = 0.25
+		pop_category_rulers_unity_produces_add = 0.25
+		pop_happiness = 0.05
+	}
+	leader_class = { commander official }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+###################
+
+leader_trait_industrial_espionage = {
+	veteran_class_locked_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_industrial_espionage"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { commander }
+	custom_tooltip = leader_trait_industrial_espionage_effect
+	selectable_weight = {
+		weight = 0
+		inline_script = {
+			script = paragon/ethic_weight_mult
+			IS = materialist
+			NOT = spiritualist
+		}
+	}
+}
+
+leader_trait_industrial_espionage_2 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { "leader_trait_industrial_espionage" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_industrial_espionage"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_class = { commander }
+	custom_tooltip = leader_trait_industrial_espionage_2_effect
+}
+
+leader_trait_industrial_espionage_3 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { "leader_trait_industrial_espionage_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_industrial_espionage"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	modifier = {
+		army_collateral_damage_mult = -0.35
+	}
+	leader_class = { commander }
+	custom_tooltip_with_modifiers = leader_trait_industrial_espionage_2_effect
+}
+
+###################
+# DESTINY TRAITS  #
+###################
+
+leader_trait_demolisher_destiny = {
+	destiny_trait = yes
+	ethic_destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_demolisher
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	modifier = {
+		ship_weapon_damage = 0.3
+		ship_damage_against_starbases_mult = 0.5
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { commander }
+	selectable_weight = 0
+	background_icon = GFX_leader_background_destiny_1
+}
+
+leader_trait_fanatic = {
+	destiny_trait = yes
+	ethic_destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_fanatic
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	modifier = {
+		ship_weapon_damage = 1.5
+		ship_hull_mult = -0.5
+		ship_shield_mult = -0.5
+		ship_armor_mult = -0.5
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { commander }
+	selectable_weight = {
+		weight = 0
+		inline_script = {
+			script = paragon/ethic_weight_mult
+			IS = spiritualist
+			NOT = materialist
+		}
+	}
+	background_icon = GFX_leader_background_destiny_1
+}
+
+leader_trait_reverse_engineer = {
+	destiny_trait = yes
+	ethic_destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_reverse_engineer
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	# Effect in paragon_2.1005 event.
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { commander }
+	custom_tooltip = leader_trait_reverse_engineer_effect
+	selectable_weight = {
+		weight = 0
+		inline_script = {
+			script = paragon/ethic_weight_mult
+			IS = materialist
+			NOT = spiritualist
+		}
+	}
+	background_icon = GFX_leader_background_destiny_1
+}
+
+leader_trait_supreme_admiral = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_supreme_admiral
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	modifier = {
+		command_limit_mult = 0.5
+		ship_fire_rate_mult = 0.1
+		ship_speed_mult = -0.15
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { commander }
+	selectable_weight = {
+		weight = 0
+	}
+	background_icon = GFX_leader_background_destiny_1
+}
+
+leader_trait_pilferer = {
+	destiny_trait = yes
+	ethic_destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_pilferer"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { commander }
+	custom_tooltip = leader_trait_pilferer_effect
+	selectable_weight = 0
+	background_icon = GFX_leader_background_destiny_1
+}
+
+leader_trait_automation_champion = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_automation_champion"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	leader_potential_add = {
+		always = no
+	}
+	modifier = {
+		planet_jobs_robotic_produces_mult = 0.25
+		planet_buildings_upkeep_mult = -0.25
+		planet_districts_upkeep_mult = -0.25
+	}
+	leader_class = { official }
+	selectable_weight = 0
+}
+
+leader_trait_expert_survivalist = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_expert_survivalist"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	leader_potential_add = {
+		always = no
+	}
+	modifier = {
+		pop_environment_tolerance = 0.3
+		planet_pops_upkeep_mult = -0.15
+		pop_growth_speed = 0.15
+	}
+	leader_class = { official }
+	selectable_weight = 0
+	background_icon = GFX_leader_background_destiny_1
+}
+
+leader_trait_repair_crew = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_repair_crew"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { scientist }
+	custom_tooltip = leader_trait_repair_crew_effect
+	selectable_weight = 0
+	background_icon = GFX_leader_background_destiny_1
+}
+
+leader_trait_deep_space_explorer = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_academic_astral_rift_expert
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	modifier = {
+		ship_sensor_range_add = 5
+		ship_hyperlane_range_add = 10
+		ship_speed_mult = 0.25
+		fleet_mia_time_mult = -0.5
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_class = { scientist }
+	selectable_weight = 0
+	background_icon = GFX_leader_background_destiny_1
+}

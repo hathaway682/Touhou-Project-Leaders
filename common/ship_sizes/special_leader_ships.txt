@@ -1,0 +1,111 @@
+minor_star = {
+    is_space_object = yes
+    #graphical_culture = { "guardian_01" }
+    graphical_culture = no
+    entity = k_star_class_star_ship_entity
+    can_be_inspected = no
+    max_speed = @speed_very_slow
+    acceleration = 0.2
+    rotation_speed = 1
+    collision_radius = @titan_collision_radius
+    modifier = {
+        ship_evasion_add = 30
+    }
+    max_hitpoints = 15000
+    combat_size_multiplier = 50
+    size_multiplier = 16
+    fleet_slot_size = 8
+    section_slots = { "mid" = { locator = "part1" } }
+    num_target_locators = 0
+    is_space_station = no
+    icon = ship_size_space_monster
+
+    class = shipclass_military
+    is_designable = no
+
+    components_add_to_cost = no
+    resources = {
+        category = ships
+        cost = {
+            energy = @salvagecostlarge
+        }
+    }
+}
+
+artificial_star = {
+    is_space_object = yes
+    #graphical_culture = { "guardian_01" }
+    graphical_culture = no
+    entity = k_star_class_star_ship_entity
+    can_be_inspected = no
+    max_speed = 0
+    acceleration = 0
+    rotation_speed = 0
+    collision_radius = @titan_collision_radius
+    modifier = {
+        ship_evasion_mult = -1
+        ship_weapon_range_mult = 1.5
+        ship_fire_rate_mult = 0.5
+        ship_weapon_damage = 0.5
+    }
+    max_hitpoints = 100000
+    hull_scale = 4
+    combat_size_multiplier = 50
+    size_multiplier = 16
+    fleet_slot_size = 8
+    section_slots = { "mid" = { locator = "part1" } }
+    num_target_locators = 0
+    is_space_station = yes
+    can_disable = no
+    icon = ship_size_space_monster
+
+    class = shipclass_military
+    is_designable = no
+
+    components_add_to_cost = no
+    resources = {
+        category = ships
+        cost = {
+            energy = @salvagecostlarge
+        }
+    }
+}
+
+# Space Cloud
+oni_cloud = {
+    graphical_culture = no
+    entity = space_cloud_entity
+    is_space_object = yes
+    max_speed = @speed_very_slow
+    rotation_speed = 0.1
+    acceleration = 0.3
+    modifier = {
+        ship_evasion_add = 90
+        ship_shield_add = 10000
+        ship_shield_regen_add_perc = 100
+        ship_hull_regen_add_static = 100
+    }
+    hull_scale = 2
+    max_hitpoints = 10000
+    size_multiplier = 4
+    fleet_slot_size = 4
+    section_slots = { "mid" = { locator = "part1" } }
+    num_target_locators = 0
+    icon = ship_size_space_monster
+    class = shipclass_military
+    is_designable = no
+
+    required_component_set = "ftl_components"
+    required_component_set = "sensor_components"
+    required_component_set = "thruster_components"
+    required_component_set = "ship_aura_components"
+
+    components_add_to_cost = no
+    resources = {
+        category = ships
+        cost = {
+            energy = @salvagecostmedium
+            sr_dark_matter = @salvagecostmediumrare
+        }
+    }
+}

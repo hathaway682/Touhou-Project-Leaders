@@ -1,0 +1,229 @@
+##小太阳
+ship_design = {
+	name = "NAME_Minor_Star"
+	ship_size = minor_star
+	section = {
+		template = "minor_star_key"
+		slot = "mid"
+
+		component = {
+			slot = "EXTRA_LARGE_GUN_01"
+			template = "STELLARITE_BEAM"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "PD_01"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_02"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_03"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_04"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_05"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_06"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_07"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_08"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="GUARDIAN_DRIVE"
+	required_component="STELLARITE_COMBAT_COMPUTER"
+	required_component="SHIP_THRUSTER_3"
+	required_component="SENSOR_3"
+}
+
+ship_design = {
+	name = "NAME_Artificial_Star"
+	ship_size = artificial_star
+	section = {
+		template = "artificial_star_key"
+		slot = "mid"
+
+		component = {
+			slot = "EXTRA_LARGE_GUN_01"
+			template = "STELLARITE_BEAM"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "STELLARITE_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "STELLARITE_PLASMA"
+		}
+		component = {
+			slot = "PD_01"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_02"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_03"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_04"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_05"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_06"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_07"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "PD_08"
+			template = "STELLARITE_LASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="GUARDIAN_DRIVE"
+	required_component="STELLARITE_COMBAT_COMPUTER"
+	required_component="SHIP_THRUSTER_3"
+	required_component="SENSOR_3"
+}
+
+ship_design = {
+	name = "NAME_Cloud_Oni"
+	ship_size = oni_cloud
+	hide_size = yes
+
+	section = {
+		template = "oni_cloud_section"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "ARCHAEO_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "ARCHAEO_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "ARCHAEO_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "ARCHAEO_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "ARCHAEO_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "ARCHAEO_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "ARCHAEO_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "ARCHAEO_MISSILE"
+		}
+	}
+
+	required_component = "GUARDIAN_DRIVE"
+	required_component = "GUARDIAN_SENSORS"
+	required_component = "GUARDIAN_PROPULSION"
+	required_component = "AURA_ONI_FOG"
+}
