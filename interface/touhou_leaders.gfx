@@ -11,6 +11,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/agenda_icons/origin_legendary_leader.dds"
 	}
 	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_sanae_ascension"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_sanae_ascension.dds"
+	}
+	spriteType = {
 		name = "GFX_council_agenda_icon_agenda_dyson_sphere"
 		texturefile = "gfx/interface/icons/agenda_icons/agenda_dyson_sphere.dds"
 	}
@@ -169,6 +173,13 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_sanae_mission"
+		texturefile = "gfx/event_pictures/sanae_mission.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
 	# spriteType = {
 	# 	name = "GFX_text_touhou_leader"
 	# 	texturefile = "gfx/interface/icons/text_icons/text_icon_touhou_leader.dds"

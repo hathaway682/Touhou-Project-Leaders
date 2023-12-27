@@ -383,3 +383,4 @@ THL_trgr_plnt_RULE_can_assembly_organic = {
 		has_building = building_corpses_disposal_center
 	}
 }
+

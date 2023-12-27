@@ -50,6 +50,67 @@ tech_sanae_robot_worker = {
 	}
 }
 
+tech_sanae_mission_mil_nova = {
+	cost = @tier4cost3
+	area = physics
+	category = { voidcraft }
+	tier = 4
+	is_rare = yes
+	ai_update_type = all
+	weight = 0
+
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_miracle
+		}
+	}
+}
+tech_sanae_mission_mil_glidingsnake = {
+	cost = @tier4cost3
+	area = society
+	category = { voidcraft }
+	tier = 4
+	is_rare = yes
+	ai_update_type = all
+	weight = 0
+
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_miracle
+		}
+	}
+}
+tech_sanae_mission_mil_ironwheel = {
+	cost = @tier4cost3
+	area = engineering
+	category = { voidcraft }
+	tier = 4
+	is_rare = yes
+	ai_update_type = all
+	weight = 0
+
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_miracle
+		}
+	}
+}
+tech_sanae_mission_mil_onbashira = {
+	cost = @tier4cost3
+	area = engineering
+	category = { voidcraft }
+	tier = 4
+	is_rare = yes
+	ai_update_type = all
+	weight = 0
+
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_miracle
+		}
+	}
+}
+
 tech_master_spark = {
 	cost = @tier4cost3
 	area = physics

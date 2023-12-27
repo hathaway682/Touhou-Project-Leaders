@@ -177,3 +177,8 @@ touhou_leader_lower_chance = {
 	add = 1
 	mult = paragon_chance_negative
 }
+
+touhou_building_moriya_shrine_counter = {
+	base = 0
+	mult = value:b
+}

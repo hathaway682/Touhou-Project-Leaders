@@ -31,6 +31,9 @@ on_ground_combat_started = {
 on_planet_attackers_win = {
 	events = {
 		touhou_paragon_effect.202
+		paragon_2.1015
+		paragon_2.2130
+		touhou_paragon_mission.40315
 	}
 }
 
@@ -51,6 +54,8 @@ on_monthly_pulse_country = {
 		touhou_paragon_effect.800
 		touhou_paragon.42201
 		touhou_paragon.42202
+		touhou_paragon_mission.40301
+		touhou_paragon_mission.40399 #触发所有早苗的任务判定
 	}
 }
 
@@ -155,12 +160,17 @@ on_army_killed_in_combat = {
 # A fleet has entered a system | See also: on_fleet_auto_move_arrival
 # Scope = Fleet
 # From = System
-#on_entering_system_fleet = {
-#	events = {
-#		touhou_paragon_effect.503
-#		touhou_paragon_effect.504
-#	}
-#}
+on_entering_system_fleet = {
+	#	events = {
+	#		touhou_paragon_effect.503
+	#		touhou_paragon_effect.504
+	#	}
+	random_events = {
+		9 = 0
+		1 = touhou_paragon_effect.42612
+	}
+}
+
 
 # This = owner of fleet 1 (winner)
 # From = owner of fleet 2 (loser)
@@ -180,18 +190,6 @@ on_space_battle_won = {
 on_space_battle_lost = {
 	events = {
 		touhou_paragon_effect.507
-	}
-}
-
-# Triggers country_event for the attacker upon victory (before controller is switched)
-# This = country, lead attacker
-# From = country, planet owner
-# FromFrom = planet
-# 'Attacker' is the side that "IsHostile" to the planet controller. For example: spawned monster armies are attackers, but if they win and the player attempts to retake the planet, the player is the attacker
-on_planet_attackers_win = {
-	events = {
-		paragon_2.1015
-		paragon_2.2130
 	}
 }
 
@@ -335,7 +333,26 @@ on_suika_target_planet_reached = {
 # FromFromFrom = fleet 2
 on_fleet_destroyed_perp = {
 	random_events = {
-		200 = 0
+		100 = 0
 		2 = touhou_paragon_effect.42611
 	}
 }
+
+# No scope, like on_game_start
+on_mid_game_pulse = {
+	events = {
+		touhou_paragon_situation.42660
+	}
+}
+
+# Triggers when a Special Project to apply a species modification template has completed.
+# Note that this will trigger once for each combination of planet & original species.
+#
+# This = Country
+# From = Species ( Post Modification )
+on_modification_complete = {
+	events = {
+		touhou_paragon_mission.40309
+	}
+}
+

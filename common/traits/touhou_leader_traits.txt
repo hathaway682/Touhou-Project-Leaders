@@ -384,6 +384,17 @@ leader_trait_robotist_sanae = {
 		planet_pops_robotics_upkeep_mult = 0.25
 		job_roboticist_per_pop = 0.02
 	}
+	triggered_army_modifier = {
+		potential = {
+			has_leader_flag = touhou_flag_sanae_robotist_update
+			leader_class = commander
+			is_ruler = no
+		}
+		army_damage_mult = 0.50
+		army_collateral_damage_mult = 0.25
+		army_morale_damage_mult = 0.50
+	}
+
 	leader_class = { commander }
 	prerequisites = { tech_robotic_workers }
 	background_icon = GFX_leader_background_destiny_1
@@ -965,6 +976,30 @@ leader_trait_fly = {
 	leader_class = { commander }
 	selectable_weight = 0
 	background_icon = GFX_leader_background_destiny_1
+}
+
+leader_trait_fake_technocracy = {
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_legendary_materialist"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = none
+	}
+	planet_modifier = {
+		job_head_researcher_per_pop = 0.1
+
+	}
+	sector_modifier = {
+		job_head_researcher_per_pop = 0.05
+	}
+
+	veteran_class_locked_trait = yes
+	leader_class = { commander }
+	selectable_weight = {
+		weight = 0
+	}
 }
 
 leader_trait_invincible = {

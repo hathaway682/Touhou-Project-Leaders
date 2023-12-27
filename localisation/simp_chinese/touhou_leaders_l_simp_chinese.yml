@@ -280,7 +280,8 @@
 
  building_moriya_shrine: "守矢分社"
  building_moriya_shrine_desc: "守矢神社在我们银河建立的一个分社，其中的风祝向我们的人民传播她们结合了古代泛灵论和现代科技的奇怪信仰。"
-
+ holding_building_moriya_shrine: "守矢分社"
+ holding_building_moriya_shrine_desc: "守矢神社为我们的附庸建立的一个分社，其中的风祝向我们的人民传播她们结合了古代泛灵论和现代科技的奇怪信仰。"
  building_moriya_shrine_uncapped: "守矢分社"
  building_moriya_shrine_uncapped_desc: "守矢神社在我们银河建立的一个分社，其中的风祝向我们的人民传播她们结合了古代泛灵论和现代科技的信仰。"
 

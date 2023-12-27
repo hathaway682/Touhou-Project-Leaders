@@ -480,3 +480,128 @@ modifier_utsuho_solette_notech = {
 modifier_utsuho_solette_tech = {
 	ship_weapon_damage = 0.1
 }
+
+modifier_sanae_mission_tech_1 = {
+	planet_pops_robotics_upkeep_mult = -0.20
+	ROBOT_species_trait_points_add = 1
+}
+
+modifier_sanae_mission_mil_2_envoy = {
+	envoys_add = 1
+	federation_naval_cap_contribution_mult = 0.50
+}
+
+modifier_sanae_mission_mil_2_subjects = {
+	subject_integration_influence_cost_mult = -0.2
+	divided_patrongage_max_subjects = 1
+}
+
+modifier_sanae_mission_mil_2_intel = {
+	add_base_country_intel = 10
+	intel_decryption_add = 1
+}
+
+modifier_sanae_mission_mil_2_influence = {
+	diplomacy_influence_upkeep_mult = -0.25
+	country_trust_growth = 0.20
+}
+
+modifier_sanae_mission_tech_2 = {
+	all_technology_research_speed = 0.01
+	planet_researchers_upkeep_mult = -0.20
+}
+
+modifier_sanae_mission_faith_2_psionics = {
+	shroud_delve_cooldown = -0.15
+}
+
+modifier_sanae_mission_adm_3 = {
+	country_government_civic_points_add = 1
+}
+
+modifier_sanae_mission_faith_3_noperk = {
+	country_unity_produces_mult = 0.10
+	pop_amenities_usage_mult = -0.10
+	pop_government_ethic_attraction = 0.50
+}
+
+modifier_sanae_mission_faith_3_perk = {
+	country_unity_produces_mult = 0.05
+	pop_amenities_usage_mult = -0.05
+	pop_government_ethic_attraction = 0.25
+}
+
+modifier_sanae_mission_adm_4_eco = {
+	starbase_trade_collection_range_add = 1
+	megastructure_build_speed_mult = 0.25
+}
+
+modifier_sanae_mission_adm_4_mil = {
+	ship_ftl_jumpdrive_range_mult = 0.15
+	ship_jumpdrive_cooldown_mult = -0.15
+}
+
+modifier_sanae_mission_tech_4 = {
+	pop_demotion_time_mult = -0.25
+	job_head_researcher_per_pop = 0.05
+}
+
+modifier_sanae_mission_adm_5_prethoryn = {
+	country_society_tech_research_speed = 0.5
+}
+
+modifier_sanae_mission_adm_5_contingency = {
+	country_megastructure_build_cap_add = 1
+}
+
+modifier_sanae_mission_adm_5_unbidden = {
+	ship_weapon_range_mult = 0.3
+}
+
+modifier_sanae_mission_tech_5_s_composer = {
+	pop_growth_speed = 0.05
+	leader_lifespan_add = 5
+}
+modifier_sanae_mission_tech_5_s_instrument = {
+	planet_jobs_produces_mult = 0.05
+}
+modifier_sanae_mission_tech_5_s_eater = {
+	ship_fire_rate_mult = 0.05
+	army_damage_mult = 0.10
+}
+modifier_sanae_mission_tech_5_s_whisperers = {
+	all_technology_research_speed = 0.05
+}
+modifier_sanae_mission_tech_5_m_composer = {
+	pop_growth_speed = 0.10
+	leader_lifespan_add = 10
+}
+modifier_sanae_mission_tech_5_m_instrument = {
+	planet_jobs_produces_mult = 0.10
+}
+modifier_sanae_mission_tech_5_m_eater = {
+	ship_fire_rate_mult = 0.10
+	army_damage_mult = 0.15
+}
+modifier_sanae_mission_tech_5_m_whisperers = {
+	all_technology_research_speed = 0.10
+}
+modifier_sanae_mission_tech_5_l_composer = {
+	pop_growth_speed = 0.15
+	leader_lifespan_add = 15
+}
+modifier_sanae_mission_tech_5_l_instrument = {
+	planet_jobs_produces_mult = 0.15
+}
+modifier_sanae_mission_tech_5_l_eater = {
+	ship_fire_rate_mult = 0.15
+	army_damage_mult = 0.25
+}
+modifier_sanae_mission_tech_5_l_whisperers = {
+	all_technology_research_speed = 0.15
+}
+
+modifier_sanae_mission_faith_5 = {
+	planetary_ascension_cost_mult = -0.10
+	planetary_ascension_effect_mult = 0.25
+}
