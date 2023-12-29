@@ -9709,3 +9709,27 @@ country_event = {
         }
     }
 }
+
+planet_event = {
+    id = touhou_paragon_effect.41301
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        create_species = {
+            name = random
+            class = random_non_machine
+            portrait = random
+            homeworld = root
+            traits = {
+                trait = random_presapient_trait
+            }
+            sapient = no
+        }
+        while = {
+            count = 3
+            create_pop = {
+                species = last_created_species
+            }
+        }
+    }
+}

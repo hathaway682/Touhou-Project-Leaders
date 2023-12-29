@@ -648,7 +648,7 @@ decision_satori_pet = {
 	sound = event_administrative_work
 	icon = decision_animal_wildlife
 
-	enactment_time = 360
+	enactment_time = 0
 
 	resources = {
 		category = decisions
@@ -671,14 +671,14 @@ decision_satori_pet = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_time
+					has_trait = leader_trait_satori_pets
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_time
+						has_trait = leader_trait_satori_pets
 					}
 				}
 			}
@@ -692,12 +692,21 @@ decision_satori_pet = {
 				is_pre_sapient = yes
 			}
 		}
+		owner = {
+			not = {
+				any_owned_planet = {
+					has_modifier = modifier_satori_pets
+				}
+			}
+		}
 	}
 
 	effect = {
-		hidden_effect = {
-			spawn_presapient_species_randomizer_effect = yes
+		add_modifier = {
+			modifier = modifier_satori_pets
+			days = 180
 		}
+		planet_event = { id = touhou_paragon_effect.41301 days = 180 }
 		custom_tooltip = spawn_presapient_species_effect
 	}
 

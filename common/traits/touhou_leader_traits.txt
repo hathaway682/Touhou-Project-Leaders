@@ -338,7 +338,7 @@ leader_trait_miracle = {
 	}
 	triggered_self_modifier = {
 		potential = { always = yes }
-		leader_scientists_astral_threads_produces_add = 1
+		leader_commanders_astral_threads_produces_add = 1
 		multiplier = trigger:has_skill
 	}
 	planet_modifier = {
