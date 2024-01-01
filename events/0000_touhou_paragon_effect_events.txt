@@ -2479,13 +2479,15 @@ country_event = {
 
 planet_event = {
     id = touhou_paragon_effect.35
-    hide_window = yes
     is_triggered_only = yes
-
+    hide_window = yes
     trigger = {
         has_building = building_assembler_mk2
-        FromFrom = {
-            is_robotic = yes
+        fromfrom = {
+            or = {
+                has_trait = trait_mechanical
+                has_trait = trait_machine_unit
+            }
         }
     }
 
@@ -3596,6 +3598,7 @@ country_event = {
         }
         from = {
             is_pool_leader = no
+            NOT = { leader_class = envoy }
             NOT = {
                 has_trait = leader_trait_death_dealer
             }

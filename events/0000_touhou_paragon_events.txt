@@ -2655,7 +2655,7 @@ country_event = { # 帕秋莉
 			CATCH_PHRASE = patchouli1_catch_phrase
 		}
 		last_created_leader = { #5
-			add_trait = subclass_scientist_governor
+			add_trait = subclass_scientist_councilor
 			add_trait = leader_trait_great_researcher
 			add_trait = leader_trait_science_communicator_3
 			add_trait = leader_trait_elements

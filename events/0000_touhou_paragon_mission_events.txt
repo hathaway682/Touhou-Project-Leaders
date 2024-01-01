@@ -116,7 +116,7 @@ country_event = {
 		has_point_of_interest = {
 			poi = touhou_sanae_mission_chain_mil.1
 		}
-		used_naval_capacity_percent >= 0.90
+		used_naval_capacity_percent >= 0.85
 		#check_variable_arithmetic = {
 		#	which = used_naval_capacity_integer
 		#	divide = max_naval_capacity
@@ -166,7 +166,7 @@ country_event = {
 		}
 		count_owned_pop = {
 			limit = {
-				is_robot_pop = yes
+				has_trait = trait_mechanical
 			}
 			count >= 10
 		}
@@ -546,7 +546,7 @@ country_event = {
 				is_councilor = yes
 				has_skill >= 8
 			}
-			count = 5
+			count >= 5
 		}
 		any_council_member = {
 			has_trait = leader_trait_miracle

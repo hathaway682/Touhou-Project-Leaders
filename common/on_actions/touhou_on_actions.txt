@@ -166,7 +166,7 @@ on_entering_system_fleet = {
 	#		touhou_paragon_effect.504
 	#	}
 	random_events = {
-		9 = 0
+		19 = 0
 		1 = touhou_paragon_effect.42612
 	}
 }
@@ -251,6 +251,7 @@ on_five_year_pulse_country = {
 		touhou_paragon_effect.701#减少一道伤口
 		touhou_paragon.40000 #随机典范领袖
 		touhou_paragon_effect.42601#阿空事件组
+		touhou_paragon_situation.42660
 	}
 }
 
