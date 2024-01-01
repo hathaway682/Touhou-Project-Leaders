@@ -280,7 +280,8 @@
 
  building_moriya_shrine: "守矢分社"
  building_moriya_shrine_desc: "守矢神社在我们银河建立的一个分社，其中的风祝向我们的人民传播她们结合了古代泛灵论和现代科技的奇怪信仰。"
-
+ holding_building_moriya_shrine: "守矢分社"
+ holding_building_moriya_shrine_desc: "守矢神社为我们的附庸建立的一个分社，其中的风祝向我们的人民传播她们结合了古代泛灵论和现代科技的奇怪信仰。"
  building_moriya_shrine_uncapped: "守矢分社"
  building_moriya_shrine_uncapped_desc: "守矢神社在我们银河建立的一个分社，其中的风祝向我们的人民传播她们结合了古代泛灵论和现代科技的信仰。"
 
@@ -786,8 +787,9 @@
  decision_subterranean_district: "地下区划规划"
  decision_subterranean_district_desc: "利用§Y古明地觉§!管理地下的经验开发新的区域。"
  decision_satori_pet: "沟通动物"
+ modifier_satori_pets:0 "沟通动物中"
  decision_satori_pet_desc: "利用古明地觉的读心能力发掘当地动物的§Y开智潜力§!"
- spawn_presapient_species_effect: "在星球上立刻发现一种新的§Y未开智动物§!"
+ spawn_presapient_species_effect: "完成后在星球上发现一种新的§Y未开智动物§!"
 
  NAME_Koishi:0 "古明地恋"
  koishi1:0 "自我封闭内心的觉妖怪，获得了在无意识下进行行动的能力，来自位于地底的地灵殿。"

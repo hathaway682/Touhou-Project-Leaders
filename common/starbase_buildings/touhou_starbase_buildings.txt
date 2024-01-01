@@ -55,6 +55,4 @@ tengo_fortress = {
 	equipped_component = "STARBASE_AURA_TENGU_STORM"
 
 	custom_tooltip = tengu_storm_caster_desc
-
-	show_in_tech = "tech_secrets_zroni"
 }

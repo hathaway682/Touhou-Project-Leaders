@@ -1672,3 +1672,14 @@ destroy_star_system_nuclear = {
 		}
 	}
 }
+
+complete_sanae_mission = {
+	if = {
+		limit = { has_event_chain = "touhou_sanae_mission_chain" }
+		add_event_chain_counter = {
+			event_chain = "touhou_sanae_mission_chain"
+			counter = "touhou_sanae_mission_counter"
+			amount = 1
+		}
+	}
+}

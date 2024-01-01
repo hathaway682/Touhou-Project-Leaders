@@ -1,0 +1,1928 @@
+namespace = touhou_paragon_mission
+
+#早苗任务树
+country_event = {
+	id = touhou_paragon_mission.40301
+	title = touhou_paragon_mission.40301.name
+	desc = touhou_paragon_mission.40301.desc
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		any_owned_leader = {
+			has_trait = leader_trait_miracle
+		}
+	}
+	immediate = {
+		set_country_flag = touhou_sanae_mission_chain
+		begin_event_chain = {
+			event_chain = "touhou_sanae_mission_chain"
+			target = ROOT
+		}
+		create_point_of_interest = {
+			id = touhou_sanae_mission_chain_adm.1
+			name = "touhou_sanae_mission_chain_adm_name"
+			desc = "touhou_sanae_mission_chain_adm_1_desc"
+			event_chain = "touhou_sanae_mission_chain"
+		}
+		create_point_of_interest = {
+			id = touhou_sanae_mission_chain_mil.1
+			name = "touhou_sanae_mission_chain_mil_name"
+			desc = "touhou_sanae_mission_chain_mil_1_desc"
+			event_chain = "touhou_sanae_mission_chain"
+		}
+		create_point_of_interest = {
+			id = touhou_sanae_mission_chain_tech.1
+			name = "touhou_sanae_mission_chain_tech_name"
+			desc = "touhou_sanae_mission_chain_tech_1_desc"
+			event_chain = "touhou_sanae_mission_chain"
+		}
+		create_point_of_interest = {
+			id = touhou_sanae_mission_chain_faith.1
+			name = "touhou_sanae_mission_chain_faith_name"
+			desc = "touhou_sanae_mission_chain_faith_1_desc"
+			event_chain = "touhou_sanae_mission_chain"
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40301.a
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40302
+	title = touhou_paragon_mission.40302.name
+	desc = touhou_paragon_mission.40302.desc
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_adm.1
+		}
+		any_owned_planet = {
+			is_colony = yes
+			or = {
+				has_modifier = modifier_miracle_1
+				has_modifier = modifier_miracle_2
+				has_modifier = modifier_miracle_3
+				has_modifier = modifier_miracle_4
+				has_modifier = modifier_miracle_5
+				has_modifier = modifier_miracle_6
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40302.a
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 6
+		}
+		add_monthly_resource_mult = {
+			resource = food
+			value = 3
+		}
+		add_event_chain_counter = {
+			event_chain = "touhou_sanae_mission_chain"
+			counter = "touhou_sanae_mission_counter"
+			amount = 1
+		}
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_adm.1
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_adm.2
+				name = "touhou_sanae_mission_chain_adm_name"
+				desc = "touhou_sanae_mission_chain_adm_2_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40303
+	title = touhou_paragon_mission.40303.name
+	desc = touhou_paragon_mission.40303.desc
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_mil.1
+		}
+		used_naval_capacity_percent >= 0.85
+		#check_variable_arithmetic = {
+		#	which = used_naval_capacity_integer
+		#	divide = max_naval_capacity
+		#	value > 0.9
+		#}
+	}
+	option = {
+		name = touhou_paragon_mission.40303.a
+		every_owned_leader = {
+			if = {
+				limit = {
+					has_trait = leader_trait_miracle
+				}
+				add_trait = leader_trait_fleet_logistician
+				add_trait = leader_trait_armada_logistician_3
+			}
+		}
+		add_event_chain_counter = {
+			event_chain = "touhou_sanae_mission_chain"
+			counter = "touhou_sanae_mission_counter"
+			amount = 1
+		}
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_mil.1
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_mil.2
+				name = "touhou_sanae_mission_chain_mil_name"
+				desc = "touhou_sanae_mission_chain_mil_2_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40304
+	title = touhou_paragon_mission.40304.name
+	desc = touhou_paragon_mission.40304.desc
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_tech.1
+		}
+		count_owned_pop = {
+			limit = {
+				has_trait = trait_mechanical
+			}
+			count >= 10
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40304.a
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_1
+		}
+		if = {
+			limit = { has_technology = tech_droid_workers }
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+			else = {
+				add_tech_progress = {
+					tech = tech_droid_workers
+					progress = 0.25
+				}
+			}
+		}
+		add_event_chain_counter = {
+			event_chain = "touhou_sanae_mission_chain"
+			counter = "touhou_sanae_mission_counter"
+			amount = 1
+		}
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_tech.1
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_tech.2
+				name = "touhou_sanae_mission_chain_tech_name"
+				desc = "touhou_sanae_mission_chain_tech_2_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40305
+	title = touhou_paragon_mission.40305.name
+	desc = touhou_paragon_mission.40305.desc
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_faith.1
+		}
+		any_owned_planet = {
+			has_building = building_moriya_shrine
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40305.a
+		every_owned_leader = {
+			if = {
+				limit = {
+					has_trait = leader_trait_miracle
+				}
+				add_trait = leader_trait_touhou_architectural_interest_2
+			}
+		}
+		add_resource = {
+			rare_crystals = 200
+		}
+		add_event_chain_counter = {
+			event_chain = "touhou_sanae_mission_chain"
+			counter = "touhou_sanae_mission_counter"
+			amount = 1
+		}
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_faith.1
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_faith.2
+				name = "touhou_sanae_mission_chain_faith_name"
+				desc = "touhou_sanae_mission_chain_faith_2_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40306
+	title = touhou_paragon_mission.40306.name
+	desc = touhou_paragon_mission.40306.desc
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_adm.2
+		}
+		has_monthly_income = {
+			resource = alloys
+			value >= 150
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40306.a
+		every_owned_leader = {
+			if = {
+				limit = {
+					has_trait = leader_trait_miracle
+				}
+				add_trait = leader_trait_scrapper_2
+			}
+		}
+		add_resource = {
+			alloys = 2000
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40306.b
+		force_add_civic = civic_catalytic_processing
+	}
+	option = {
+		name = touhou_paragon_mission.40306.c
+		allow = {
+			has_ascension_perk = ap_enigmatic_engineering
+		}
+		custom_tooltip = SANAE_ENIGMATIC_ALLOYS
+		set_country_flag = touhou_flag_sanae_enigmatic_alloys
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_adm.2
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_adm.3
+				name = "touhou_sanae_mission_chain_adm_name"
+				desc = "touhou_sanae_mission_chain_adm_3_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40307
+	title = touhou_paragon_mission.40307.name
+	desc = touhou_paragon_mission.40307.desc
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_mil.2
+		}
+		or = {
+			has_federation = yes
+			count_subject = {
+				count >= 3
+			}
+			any_spynetwork = {
+				owner = { is_same_value = root }
+				is_spynetwork_level > 60
+			}
+			num_defensive_pacts >= 3
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40307.a
+		allow = { has_federation = yes }
+		add_modifier = {
+			modifier = modifier_sanae_mission_mil_2_envoy
+		}
+
+	}
+	option = {
+		name = touhou_paragon_mission.40307.b
+		allow = {
+			count_subject = {
+				count >= 3
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_mil_2_subjects
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40307.c
+		allow = {
+			any_spynetwork = {
+				owner = { is_same_value = root }
+				is_spynetwork_level > 60
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_mil_2_intel
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40307.d
+		allow = {
+			num_defensive_pacts >= 3
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_mil_2_influence
+		}
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_mil.2
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_mil.3
+				name = "touhou_sanae_mission_chain_mil_name"
+				desc = "touhou_sanae_mission_chain_mil_3_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40308
+	title = touhou_paragon_mission.40308.name
+	desc = touhou_paragon_mission.40308.desc
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_tech.2
+		}
+		any_owned_planet = {
+			is_colony = yes
+			is_under_colonization = no
+			exists = leader
+			leader = {
+				has_trait = leader_trait_miracle
+			}
+			num_assigned_jobs = {
+				job = researcher
+				value >= 30
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40308.a
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_2
+		}
+		every_owned_leader = {
+			if = {
+				limit = {
+					has_trait = leader_trait_miracle
+				}
+				add_trait = leader_trait_adaptable_2
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_tech.2
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_tech.3
+				name = "touhou_sanae_mission_chain_tech_name"
+				desc = "touhou_sanae_mission_chain_tech_3_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40309
+	title = touhou_paragon_mission.40309.name
+	desc = {
+		trigger = { has_tradition = tr_psionics_finish }
+		text = touhou_paragon_mission.40309.desc.psi
+	}
+	desc = {
+		trigger = {
+			or = {
+				has_tradition = tr_synthetics_finish
+				has_tradition = tr_cybernetics_finish
+				has_tradition = tr_genetics_finish
+			}
+		}
+		text = touhou_paragon_mission.40309.desc.notpsi
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_faith.2
+		}
+		or = {
+			has_tradition = tr_psionics_finish
+			has_tradition = tr_synthetics_finish
+			has_tradition = tr_cybernetics_finish
+			has_tradition = tr_genetics_finish
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40309.a
+		trigger = {
+			has_tradition = tr_psionics_finish
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_faith_2_psionics
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40309.b
+		trigger = {
+			or = {
+				has_tradition = tr_synthetics_finish
+				has_tradition = tr_cybernetics_finish
+				has_tradition = tr_genetics_finish
+			}
+
+		}
+		every_owned_pop = {
+			limit = {
+				is_same_species = root
+				species = {
+					has_psionic_species_trait = no
+				}
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_latent_psionic
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_faith.2
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_faith.3
+				name = "touhou_sanae_mission_chain_faith_name"
+				desc = "touhou_sanae_mission_chain_faith_3_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40310
+	title = touhou_paragon_mission.40310.name
+	desc = {
+		text = touhou_paragon_mission.40310.desc.a
+		trigger = { not = { has_ethic = ethic_fanatic_materialist } }
+	}
+	desc = {
+		text = touhou_paragon_mission.40310.desc.b
+		trigger = { has_ethic = ethic_fanatic_materialist }
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_adm.3
+		}
+		count_owned_leader = {
+			limit = {
+				is_councilor = yes
+				has_skill >= 8
+			}
+			count >= 5
+		}
+		any_council_member = {
+			has_trait = leader_trait_miracle
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40310.a
+		add_modifier = {
+			modifier =  modifier_sanae_mission_adm_3
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40310.b
+		allow = {
+			has_ethic = ethic_fanatic_materialist
+		}
+		add_modifier = {
+			modifier =  modifier_sanae_mission_adm_3
+		}
+		every_owned_leader = {
+			if = {
+				limit = {
+					has_trait = leader_trait_miracle
+				}
+				change_background_ethic = ethic_materialist
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_adm.3
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_adm.4
+				name = "touhou_sanae_mission_chain_adm_name"
+				desc = "touhou_sanae_mission_chain_adm_4_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40311
+	title = touhou_paragon_mission.40311.name
+	desc = {
+		text = touhou_paragon_mission.40311.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_mil.3
+		}
+		any_owned_fleet =
+		{
+			leader = {
+				has_trait = leader_trait_miracle
+			}
+			fleet_size >= 180
+		}
+		has_technology = tech_battleships
+	}
+	option = {
+		name = touhou_paragon_mission.40311.a
+		if = {
+			limit = {
+				nor = {
+					has_technology = tech_titans
+					has_technology = tech_juggernaut
+				}
+			}
+			add_tech_progress = {
+				tech = tech_titans
+				progress = 0.2
+			}
+			add_tech_progress = {
+				tech = tech_juggernaut
+				progress = 0.2
+			}
+			else = {
+				create_fleet = {
+					name = "NAME_Dreadnought"
+					effect = {
+						set_owner = root
+						create_ship = {
+							name = random
+							design = "NAME_Type_37" # Psi Jump Dreadnought
+							graphical_culture = "npf_01"
+							upgradable = no
+						}
+						set_location = {
+							target = root.capital_scope
+							distance = 0
+							angle = random
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40311.b
+		if = {
+			limit = {
+				not = {
+					has_relic = r_war_forge
+				}
+			}
+			set_country_flag = touhou_sanae_mission_allow_cybrexwarform
+		}
+		else = {
+			set_variable = {
+				which = cybrex_count
+				value = 20
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40311.c
+		if = {
+			limit = {
+				not = {
+					any_owned_leader = {
+						has_trait = leader_trait_robotist_sanae
+					}
+				}
+			}
+			every_owned_leader = {
+				if = {
+					limit = {
+						has_trait = leader_trait_miracle
+					}
+					leader_event = { id = touhou_paragon.40310 days = 1 random = 3}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						or = {
+							has_technology = tech_sanae_robot_army
+							has_tech_option = tech_sanae_robot_army
+						}
+					}
+					random_list = {
+						1 = { add_research_option = tech_sanae_robot_strike_craft }
+						1 = { add_research_option = tech_sanae_robot_worker }
+					}
+				}
+				if = {
+					limit = {
+						or = {
+							has_technology = tech_sanae_robot_strike_craft
+							has_tech_option = tech_sanae_robot_strike_craft
+						}
+					}
+					random_list = {
+						1 = { add_research_option = tech_sanae_robot_army }
+						1 = { add_research_option = tech_sanae_robot_worker }
+					}
+				}
+				if = {
+					limit = {
+						or = {
+							has_technology = tech_sanae_robot_worker
+							has_tech_option = tech_sanae_robot_worker
+						}
+					}
+					random_list = {
+						1 = { add_research_option = tech_sanae_robot_strike_craft }
+						1 = { add_research_option = tech_sanae_robot_army }
+					}
+				}
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_mil.3
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_mil.4
+				name = "touhou_sanae_mission_chain_mil_name"
+				desc = "touhou_sanae_mission_chain_mil_4_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40312
+	title = touhou_paragon_mission.40312.name
+	desc = {
+		text = touhou_paragon_mission.40312.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_tech.3
+		}
+		check_modifier_value = {
+			modifier = all_technology_research_speed
+			value > 1.0
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40312.a
+		set_country_flag = touhou_flag_sanae_shrine_research_speed
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_tech.3
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_tech.4
+				name = "touhou_sanae_mission_chain_tech_name"
+				desc = "touhou_sanae_mission_chain_tech_4_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40313
+	title = touhou_paragon_mission.40313.name
+	desc = {
+		text = touhou_paragon_mission.40313.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_faith.3
+		}
+		num_ascension_perks >= 4
+		pop_percentage = {
+			limit = {
+				or = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+			percentage >= 0.5
+		}
+		has_monthly_income = {
+			resource = unity
+			value >= 500
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40313.a
+		if = {
+			limit = {
+				has_ascension_perk = ap_one_vision
+			}
+			add_modifier = {
+				modifier = modifier_sanae_mission_faith_3_perk
+			}
+			else = {
+				add_modifier = {
+					modifier = modifier_sanae_mission_faith_3_noperk
+				}
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_faith.3
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_faith.4
+				name = "touhou_sanae_mission_chain_faith_name"
+				desc = "touhou_sanae_mission_chain_faith_4_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40314
+	title = touhou_paragon_mission.40314.name
+	desc = {
+		text = touhou_paragon_mission.40314.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_adm.4
+		}
+		num_owned_active_gateways >= 10
+		trade_income >= 1000
+	}
+	option = {
+		name = touhou_paragon_mission.40314.a
+		add_modifier = {
+			modifier = modifier_sanae_mission_adm_4_eco
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40314.b
+		add_modifier = {
+			modifier = modifier_sanae_mission_adm_4_mil
+		}
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_adm.4
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_adm.4
+				name = "touhou_sanae_mission_chain_adm_name"
+				desc = "touhou_sanae_mission_chain_adm_5_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40315
+	title = touhou_paragon_mission.40315.name
+	desc = {
+		text = touhou_paragon_mission.40315.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_mil.4
+		}
+		any_owned_army = {
+			and = {
+				exists = leader
+				leader = {
+					has_trait = leader_trait_miracle
+				}
+			}
+			or = {
+				and = {
+					army_type = cybrex_warform
+					and = {
+						exists = fleet
+						fleet = { num_ships >= 20 }
+					}
+				}
+				and = {
+					army_type = sanae_warform
+					and = {
+						exists = fleet
+						fleet = { num_ships >= 20 }
+					}
+				}
+				and = {
+					and = {
+						exists = fleet
+						fleet = { num_ships >= 100 }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40315.a
+		allow = {
+			not = {
+				any_owned_leader = {
+					has_trait = leader_trait_robotist_sanae
+				}
+			}
+		}
+		every_owned_leader = {
+			if = {
+				limit = {
+					has_trait = leader_trait_miracle
+				}
+				add_trait = leader_trait_dreaded_2
+				add_trait = leader_trait_heavy_hitter_2
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40315.b
+		allow = {
+			any_owned_leader = {
+				has_trait = leader_trait_robotist_sanae
+			}
+		}
+		every_owned_leader = {
+			if = {
+				limit = {
+					has_trait = leader_trait_miracle
+				}
+				set_leader_flag = touhou_flag_sanae_robotist_update
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_mil.4
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_mil.4
+				name = "touhou_sanae_mission_chain_mil_name"
+				desc = "touhou_sanae_mission_chain_mil_5_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40316
+	title = touhou_paragon_mission.40316.name
+	desc = {
+		text = touhou_paragon_mission.40316.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_tech.4
+		}
+		num_assigned_jobs = {
+			job = head_researcher
+			value >= 20
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40316.a
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_4
+		}
+		set_country_flag = touhou_flag_sanae_headresearcher_update
+	}
+	option = {
+		name = touhou_paragon_mission.40316.b
+		allow = {
+			has_civic = civic_technocracy
+			any_owned_leader = {
+				has_trait = leader_trait_fly
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_4
+		}
+		set_country_flag = touhou_flag_sanae_headresearcher_update
+		every_owned_leader = {
+			limit = {
+				has_trait = leader_trait_fly
+			}
+			add_trait = leader_trait_fake_technocracy
+		}
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_tech.4
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_tech.4
+				name = "touhou_sanae_mission_chain_tech_name"
+				desc = "touhou_sanae_mission_chain_tech_5_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40317
+	title = touhou_paragon_mission.40317.name
+	desc = {
+		text = touhou_paragon_mission.40317.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_faith.4
+		}
+		not = {
+			any_country = {
+				or = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				is_ai = yes
+				is_subject = no
+				not = { is_in_federation_with = root }
+				or = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40317.a
+		set_country_flag = touhou_flag_sanae_churchdistrict_update
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_faith.4
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_faith.4
+				name = "touhou_sanae_mission_chain_faith_name"
+				desc = "touhou_sanae_mission_chain_faith_5_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40318
+	title = touhou_paragon_mission.40318.name
+	desc = {
+		text = touhou_paragon_mission.40318.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		or = {
+			and = {
+				has_point_of_interest = {
+					poi = touhou_sanae_mission_chain_adm.5
+				}
+				any_owned_megastructure = {
+					OR = {
+						is_megastructure_type = ring_world_3_intermediate
+						is_megastructure_type = ring_world_restored
+					}
+				}
+				any_owned_megastructure = {
+					OR = {
+						is_megastructure_type = dyson_sphere_disco
+						is_megastructure_type = dyson_sphere_disco_restored
+					}
+				}
+				any_owned_megastructure = {
+					OR = {
+						is_megastructure_type = spy_orb_4
+						is_megastructure_type = spy_orb_restored
+					}
+				}
+				any_owned_megastructure = {
+					OR = {
+						is_megastructure_type = think_tank_4
+						is_megastructure_type = think_tank_restored
+					}
+				}
+				any_owned_megastructure = {
+					OR = {
+						is_megastructure_type = matter_decompressor_4
+						is_megastructure_type = matter_decompressor_restored
+					}
+				}
+				any_owned_megastructure = {
+					OR = {
+						is_megastructure_type = strategic_coordination_center_3
+						is_megastructure_type = strategic_coordination_center_restored
+					}
+				}
+				any_owned_megastructure = {
+					OR = {
+						is_megastructure_type = strategic_coordination_center_3
+						is_megastructure_type = strategic_coordination_center_restored
+					}
+				}
+				any_owned_megastructure = {
+					OR = {
+						is_megastructure_type = mega_art_installation_3
+						is_megastructure_type = mega_art_installation_4
+						is_megastructure_type = mega_art_installation_restored
+						is_megastructure_type = mega_art_installation_restored_2
+					}
+				}
+				any_owned_megastructure = {
+					OR = {
+						is_megastructure_type = interstellar_assembly_4
+						is_megastructure_type = interstellar_assembly_restored
+					}
+				}
+				any_owned_megastructure = {
+					OR = {
+						is_megastructure_type = mega_shipyard_3
+						is_megastructure_type = mega_shipyard_restored
+					}
+				}
+				any_owned_megastructure = {
+					OR = {
+						is_megastructure_type = quantum_catapult_3
+						is_megastructure_type = quantum_catapult_restored
+						is_megastructure_type = quantum_catapult_improved_slingshot
+					}
+				}
+				any_owned_megastructure = {
+					OR = {
+						is_megastructure_type = strategic_coordination_center_3
+						is_megastructure_type = strategic_coordination_center_restored
+					}
+				}
+			}
+			and = {
+				has_point_of_interest = {
+					poi = touhou_sanae_mission_chain_adm.5
+				}
+				not = { has_ascension_perk = ap_galactic_wonders_utopia}
+				num_ascension_perks >= 8
+			}
+		}
+
+	}
+	option = {
+		name = touhou_paragon_mission.40318.a
+		trigger = {
+			not = { has_ascension_perk = ap_galactic_wonders_utopia}
+			num_ascension_perks >= 8
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40318.b
+		trigger = {
+			has_ascension_perk = ap_galactic_wonders_utopia
+		}
+		allow = {
+			allowed_crisis_type = prethoryn
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_adm_5_prethoryn
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40318.c
+		trigger = {
+			has_ascension_perk = ap_galactic_wonders_utopia
+		}
+		allow = {
+			allowed_crisis_type = contingency
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_adm_5_contingency
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40318.d
+		trigger = {
+			has_ascension_perk = ap_galactic_wonders_utopia
+		}
+		allow = {
+			allowed_crisis_type = unbidden
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_adm_5_unbidden
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40318.e
+		trigger = {
+			has_ascension_perk = ap_galactic_wonders_utopia
+		}
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_adm.5
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_adm.finish
+				name = "touhou_sanae_mission_chain_adm_name"
+				desc = " touhou_sanae_mission_finish"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40319
+	title = touhou_paragon_mission.40319.name
+	desc = {
+		text = touhou_paragon_mission.40319.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_mil.5
+		}
+		or = {
+			and = {
+				check_modifier_value = {
+					modifier = weapon_type_energy_weapon_fire_rate_mult
+					value >= 1.0
+				}
+				check_modifier_value = {
+					modifier = weapon_type_energy_weapon_damage_mult
+					value >= 1.0
+				}
+			}
+			and = {
+				check_modifier_value = {
+					modifier = weapon_type_strike_craft_weapon_damage_mult
+					value >= 2.0
+				}
+				check_modifier_value = {
+					modifier = weapon_type_strike_craft_weapon_fire_rate_mult
+					value >= 2.0
+				}
+			}
+			and = {
+				check_modifier_value = {
+					modifier = weapon_type_explosive_weapon_damage_mult
+					value >= 1.0
+				}
+				check_modifier_value = {
+					modifier = weapon_type_explosive_weapon_fire_rate_mult
+					value >= 1.0
+				}
+			}
+			and = {
+				check_modifier_value = {
+					modifier = weapon_type_kinetic_weapon_damage_mult
+					value >= 1.0
+				}
+				check_modifier_value = {
+					modifier = weapon_type_kinetic_weapon_fire_rate_mult
+					value >= 1.0
+				}
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40319.a
+		allow = {
+			check_modifier_value = {
+				modifier = weapon_type_energy_weapon_fire_rate_mult
+				value >= 1.0
+			}
+			check_modifier_value = {
+				modifier = weapon_type_energy_weapon_damage_mult
+				value >= 1.0
+			}
+		}
+		add_research_option = tech_sanae_mission_mil_nova
+	}
+	option = {
+		name = touhou_paragon_mission.40319.b
+		allow = {
+			check_modifier_value = {
+				modifier = weapon_type_strike_craft_weapon_damage_mult
+				value >= 2.0
+			}
+			check_modifier_value = {
+				modifier = weapon_type_strike_craft_weapon_fire_rate_mult
+				value >= 2.0
+			}
+		}
+		add_research_option = tech_sanae_mission_mil_glidingsnake
+	}
+	option = {
+		name = touhou_paragon_mission.40319.c
+		allow = {
+			check_modifier_value = {
+				modifier = weapon_type_explosive_weapon_damage_mult
+				value >= 1.0
+			}
+			check_modifier_value = {
+				modifier = weapon_type_explosive_weapon_fire_rate_mult
+				value >= 1.0
+			}
+		}
+		add_research_option = tech_sanae_mission_mil_ironwheel
+	}
+	option = {
+		name = touhou_paragon_mission.40319.d
+		allow = {
+			check_modifier_value = {
+				modifier = weapon_type_kinetic_weapon_damage_mult
+				value >= 1.0
+			}
+			check_modifier_value = {
+				modifier = weapon_type_kinetic_weapon_fire_rate_mult
+				value >= 1.0
+			}
+		}
+		add_research_option = tech_sanae_mission_mil_onbashira
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_mil.5
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_mil.finish
+				name = "touhou_sanae_mission_chain_mil_name"
+				desc = " touhou_sanae_mission_finish"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40320
+	title = touhou_paragon_mission.40320.name
+	desc = {
+		text = touhou_paragon_mission.40320.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_tech.5
+		}
+		num_repeatable_techs >= 100
+	}
+	option = {
+		name = touhou_paragon_mission.40320.a
+		add_monthly_resource_mult = {
+			resource = energy
+			value = -3
+		}
+		add_monthly_resource_mult = {
+			resource = minerals
+			value = -3
+		}
+		add_monthly_resource_mult = {
+			resource = food
+			value = -3
+		}
+		add_monthly_resource_mult = {
+			resource = consumer_goods
+			value = -3
+		}
+		add_monthly_resource_mult = {
+			resource = alloys
+			value = -3
+		}
+		add_monthly_resource_mult = {
+			resource = unity
+			value = -3
+		}
+		add_resource = {
+			influence = -50
+		}
+		country_event = { id = touhou_paragon_mission.40321 }
+	}
+	option = {
+		name = touhou_paragon_mission.40320.b
+		add_monthly_resource_mult = {
+			resource = energy
+			value = -15
+		}
+		add_monthly_resource_mult = {
+			resource = minerals
+			value = -15
+		}
+		add_monthly_resource_mult = {
+			resource = food
+			value = -15
+		}
+		add_monthly_resource_mult = {
+			resource = consumer_goods
+			value = -15
+		}
+		add_monthly_resource_mult = {
+			resource = alloys
+			value = -15
+		}
+		add_monthly_resource_mult = {
+			resource = unity
+			value = -15
+		}
+		add_resource = {
+			influence = -250
+		}
+		country_event = { id = touhou_paragon_mission.40322 }
+	}
+	option = {
+		name = touhou_paragon_mission.40320.c
+		add_monthly_resource_mult = {
+			resource = energy
+			value = -30
+		}
+		add_monthly_resource_mult = {
+			resource = minerals
+			value = -30
+		}
+		add_monthly_resource_mult = {
+			resource = food
+			value = -30
+		}
+		add_monthly_resource_mult = {
+			resource = consumer_goods
+			value = -30
+		}
+		add_monthly_resource_mult = {
+			resource = alloys
+			value = -30
+		}
+		add_monthly_resource_mult = {
+			resource = unity
+			value = -30
+		}
+		add_resource = {
+			influence = -500
+		}
+		country_event = { id = touhou_paragon_mission.40323 }
+	}
+	option = {
+		name = touhou_paragon_mission.40320.d
+		custom_tooltip = "covenant.cycle.tooltip"
+		hidden_effect = {
+			add_modifier = { modifier = covenant_end_of_the_cycle days = 18000 }
+			set_global_flag = end_of_the_cycle
+			set_country_flag = has_shroud_patron
+			set_country_flag = covenant_end_of_the_cycle
+			every_owned_planet = {
+				limit = { NOT = { has_modifier = covenant_shroud_marked } }
+				add_modifier = { modifier = covenant_shroud_marked days = -1 }
+			}
+			every_subject = {
+				every_owned_planet = {
+					limit = { NOT = { has_modifier = covenant_shroud_marked } }
+					add_modifier = { modifier = covenant_shroud_marked days = -1 }
+				}
+			}
+			country_event = { id = utopia.3320 days = 18000 }
+		}
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_tech.5
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_tech.finish
+				name = "touhou_sanae_mission_chain_tech_name"
+				desc = " touhou_sanae_mission_finish"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40321
+	title = touhou_paragon_mission.40321.name
+	desc = {
+		text = touhou_paragon_mission.40321.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	event_chain = touhou_sanae_mission_chain
+	option = {
+		name = touhou_paragon_mission.40321.a
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_s_composer
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_s_composer
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40321} }
+			country_event = { id = touhou_paragon_mission.40321 }
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40321.b
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_s_instrument
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_s_instrument
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40321} }
+			country_event = { id = touhou_paragon_mission.40321 }
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40321.c
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_s_eater
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_s_eater
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40321} }
+			country_event = { id = touhou_paragon_mission.40321 }
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40321.d
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_s_whisperers
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_s_whisperers
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40321} }
+			country_event = { id = touhou_paragon_mission.40321 }
+		}
+	}
+	after = {
+		set_country_flag = touhou_flag_twice_40321
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40321
+	title = touhou_paragon_mission.40321.name
+	desc = {
+		text = touhou_paragon_mission.40321.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	event_chain = touhou_sanae_mission_chain
+	option = {
+		name = touhou_paragon_mission.40321.a
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_s_composer
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_s_composer
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40321} }
+			country_event = { id = touhou_paragon_mission.40321 }
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40321.b
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_s_instrument
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_s_instrument
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40321} }
+			country_event = { id = touhou_paragon_mission.40321 }
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40321.c
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_s_eater
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_s_eater
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40321} }
+			country_event = { id = touhou_paragon_mission.40321 }
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40321.d
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_s_whisperers
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_s_whisperers
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40321} }
+			country_event = { id = touhou_paragon_mission.40321 }
+		}
+	}
+	after = {
+		set_country_flag = touhou_flag_twice_40321
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40322
+	title = touhou_paragon_mission.40322.name
+	desc = {
+		text = touhou_paragon_mission.40322.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	event_chain = touhou_sanae_mission_chain
+	option = {
+		name = touhou_paragon_mission.40322.a
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_m_composer
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_m_composer
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40322} }
+			country_event = { id = touhou_paragon_mission.40322 }
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40322.b
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_m_instrument
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_m_instrument
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40322} }
+			country_event = { id = touhou_paragon_mission.40322 }
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40322.c
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_m_eater
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_m_eater
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40322} }
+			country_event = { id = touhou_paragon_mission.40322 }
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40322.d
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_m_whisperers
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_m_whisperers
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40322} }
+			country_event = { id = touhou_paragon_mission.40322 }
+		}
+	}
+	after = {
+		set_country_flag = touhou_flag_twice_40322
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40323
+	title = touhou_paragon_mission.40323.name
+	desc = {
+		text = touhou_paragon_mission.40323.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	event_chain = touhou_sanae_mission_chain
+	option = {
+		name = touhou_paragon_mission.40323.a
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_l_composer
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_l_composer
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40323} }
+			country_event = { id = touhou_paragon_mission.40323 }
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40323.b
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_l_instrument
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_l_instrument
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40323} }
+			country_event = { id = touhou_paragon_mission.40323 }
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40323.c
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_l_eater
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_l_eater
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40323} }
+			country_event = { id = touhou_paragon_mission.40323 }
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40323.d
+		trigger = {
+			not = {
+				has_modifier = modifier_sanae_mission_tech_5_l_whisperers
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_5_l_whisperers
+		}
+		if = {
+			limit = { not = { has_country_flag = touhou_flag_twice_40323} }
+			country_event = { id = touhou_paragon_mission.40323 }
+		}
+	}
+	after = {
+		set_country_flag = touhou_flag_twice_40323
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40324
+	title = touhou_paragon_mission.40324.name
+	desc = {
+		text = touhou_paragon_mission.40324.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_faith.5
+		}
+		count_owned_planet = {
+			limit = {
+				has_planetary_ascension_tier = 10
+			}
+			count >= 5
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40324.a
+		add_modifier = {
+			modifier = modifier_sanae_mission_faith_5
+		}
+		set_country_flag = touhou_flag_sanae_ascension
+		custom_tooltip = SANAE_UNLOCK_AGENDA
+	}
+
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_faith.5
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_faith.finish
+				name = "touhou_sanae_mission_chain_faith_name"
+				desc = " touhou_sanae_mission_finish"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40325
+	title = touhou_paragon_mission.40325.name
+	desc = {
+		text = touhou_paragon_mission.40325.desc
+	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_adm.finish
+		}
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_mil.finish
+		}
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_tech.finish
+		}
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_faith.finish
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40325.a
+		every_owned_leader = {
+			limit = { has_trait = leader_trait_miracle }
+			add_trait = leader_trait_chosen
+		}
+	}
+	after = {
+		hidden_effect = {
+			end_event_chain = touhou_sanae_mission_chain
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40399
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		country_event = { id = touhou_paragon_mission.40302 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40303 days = 1 random = 30 }
+        country_event = { id = touhou_paragon_mission.40304 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40305 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40306 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40307 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40308 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40310 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40311 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40312 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40313 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40314 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40316 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40317 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40318 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40319 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40320 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40324 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40325 days = 1 random = 30 }
+	}
+}

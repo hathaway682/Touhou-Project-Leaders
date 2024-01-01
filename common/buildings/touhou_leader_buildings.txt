@@ -52,6 +52,15 @@ building_moriya_shrine = {
 		job_priest_add = 3
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			owner = { has_country_flag = touhou_flag_sanae_shrine_research_speed}
+		}
+		modifier = {
+			all_technology_research_speed = 0.005
+		}
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -86,6 +95,84 @@ building_moriya_shrine = {
 		}
 		produces = {
 			unity = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_researchers_unity_produces_add = 2
+		planet_priests_physics_research_produces_add = 2
+		planet_priests_society_research_produces_add = 2
+		planet_priests_engineering_research_produces_add = 2
+	}
+
+	triggered_desc = {
+		text = job_high_priest_effect_desc
+	}
+	triggered_desc = {
+		text = job_priest_effect_desc
+	}
+}
+
+holding_building_moriya_shrine = {
+	base_buildtime = @b3_time
+	owner_type = subject_holding
+	icon = building_moriya_shrine
+	base_cap_amount = 1
+
+	category = unity
+
+	potential = {
+		owner.overlord = {
+			OR = {
+				has_civic = civic_moriya_shinto
+				has_civic = civic_moriya_shinto_corp
+				any_owned_leader = {
+					has_trait = leader_trait_miracle
+				}
+			}
+			has_country_flag = touhou_flag_sanae_shrine_research_speed
+		}
+	}
+
+	planet_modifier = {
+		job_high_priest_add = 1
+		job_priest_add = 3
+	}
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			minerals = @b4_minerals
+		}
+		cost = {
+			trigger = {
+				owner.overlord = {
+					NOR = {
+						has_civic = civic_moriya_shinto
+						has_civic = civic_moriya_shinto_corp
+					}
+				}
+			}
+			rare_crystals = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+		}
+		produces = {
+			unity = 10
+		}
+	}
+
+	planet_modifier = {
+		monthly_loyalty = 1.0
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			owner.overlord = { has_country_flag = touhou_flag_sanae_shrine_research_speed}
+		}
+		modifier = {
+			all_technology_research_speed = 0.005
 		}
 	}
 

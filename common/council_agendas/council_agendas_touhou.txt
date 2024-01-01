@@ -40,3 +40,28 @@ agenda_dyson_sphere = {
 		add_research_option = tech_dyson_sphere
 	}
 }
+
+agenda_sanae_ascension = {
+	agenda_cost = 7000
+	allow = {
+		any_owned_leader = {
+			has_trait = leader_trait_miracle
+		}
+	}
+	potential = {
+		has_paragon_dlc = yes
+		is_ai = no
+		has_country_flag = touhou_flag_sanae_ascension
+	}
+	modifier = {
+	}
+	effect = {
+		while = {
+			count = 3
+			random_owned_planet = {
+				limit = { not = { has_planetary_ascension_tier = 10 }}
+				set_planetary_ascension_tier = 10
+			}
+		}
+	}
+}
