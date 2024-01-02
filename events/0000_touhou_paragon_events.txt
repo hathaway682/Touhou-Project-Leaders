@@ -3833,11 +3833,11 @@ country_event = { # 荷取
 		response_text = touhou_paragon.42700.f.response
 		is_dialog_only = yes
 	}
-	option = {
-		name = touhou_paragon.42700.g
-		response_text = touhou_paragon.42700.g.response
-		is_dialog_only = yes
-	}
+	#option = {
+	#	name = touhou_paragon.42700.g
+	#	response_text = touhou_paragon.42700.g.response
+	#	is_dialog_only = yes
+	#}
 	option = {
 		name = HIRE
 		tag = hire_leader

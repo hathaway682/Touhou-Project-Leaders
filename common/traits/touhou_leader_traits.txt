@@ -3674,7 +3674,7 @@ leader_trait_water = {
 		CLASS = scientist
 		ICON = GFX_leader_trait_aquatic_admiral
 		RARITY = paragon
-		COUNCIL = yes
+		COUNCIL = no
 		TIER = none
 	}
 	triggered_planet_modifier = {
@@ -3700,6 +3700,7 @@ leader_trait_water = {
 				}
 				from = {
 					is_wet = yes
+					NOT = { is_planet_class = pc_ocean }
 				}
 			}
 		}

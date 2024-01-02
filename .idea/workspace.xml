@@ -1,36 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="07fc15de-1b2b-4d14-8835-672d5636ce56" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/country_limits/ownership_limits/touhou_ownership_limits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/country_limits/ship_of_size_limits/touhou_ship_of_size_limits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_paragon.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/leader_trait_icons/Frog.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/leader_trait_icons/leader_trait_frog_bless.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/leader_trait_icons/leader_trait_snake_bless.dds" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/armies/touhou_leader_armies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/armies/touhou_leader_armies.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/decisions/touhou_decisions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/decisions/touhou_decisions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/economic_categories/touhou_categories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/economic_categories/touhou_categories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/edicts/touhou_edicts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/edicts/touhou_edicts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/global_ship_designs/special_leader_ships.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/global_ship_designs/special_leader_ships.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_loc/touhou_scripted_loc_paragon.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_triggers/touhou_scripted_triggers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_triggers/touhou_scripted_triggers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/section_templates/special_leader_ships.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/section_templates/special_leader_ships.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/ship_sizes/special_leader_ships.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/ship_sizes/special_leader_ships.txt" afterDir="false" />
+    <list default="true" id="b62ee213-4a26-4afa-bbe7-6a0eb0ae2cc1" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_effect_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_effect_events.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/touhou_leaders.gfx" beforeDir="false" afterPath="$PROJECT_DIR$/interface/touhou_leaders.gfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +14,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 4
-}</component>
-  <component name="ProjectId" id="2Zv6jRKTGanf0HNralX9boRgCEt" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2aOoCtH0SRIGMmpDuiHsAmbSe8Z" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -52,35 +25,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/SteamLibrary/steamapps/common/Stellaris&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-11.0.16-jbr_dcevm-11.0.16-249ae16d76d6-4bd46b1b" />
-      </set>
-    </attachedChunks>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
-      <changelist id="07fc15de-1b2b-4d14-8835-672d5636ce56" name="更改" comment="" />
-      <created>1703290340255</created>
+      <changelist id="b62ee213-4a26-4afa-bbe7-6a0eb0ae2cc1" name="更改" comment="" />
+      <created>1704198862707</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1703290340255</updated>
+      <updated>1704198862707</updated>
     </task>
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
