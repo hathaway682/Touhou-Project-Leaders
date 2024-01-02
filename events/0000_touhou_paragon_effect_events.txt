@@ -9577,7 +9577,7 @@ country_event = {
                 target = event_target:touhou_dead_sakuya_clone
             }
             last_created_leader = {
-                add_trait = leader_trait_regeneration
+                add_trait = leader_trait_regeneration_2
                 add_trait = leader_trait_body_and_spirit
             }
         }
@@ -9649,7 +9649,7 @@ country_event = {
                 }
             }
             last_created_leader = {
-                add_trait = leader_trait_regeneration
+                add_trait = leader_trait_regeneration_2
                 add_trait = leader_trait_cyborg
             }
         }
@@ -9658,7 +9658,7 @@ country_event = {
                 has_tradition = tr_synthetics_finish
             }
             last_created_leader = {
-                add_trait = leader_trait_regeneration
+                add_trait = leader_trait_regeneration_2
                 add_trait = leader_trait_synthetic
             }
         }

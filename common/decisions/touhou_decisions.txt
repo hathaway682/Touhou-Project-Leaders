@@ -1989,7 +1989,7 @@ decision_nuclear_breath = {
 decision_miracle_1 = {
 	owned_planets_only = yes
 	sound = event_psionic_01
-	icon = decision_consecrated_worlds
+	icon = decision_miracle_1
 
 	enactment_time = 300
 
@@ -2051,7 +2051,7 @@ decision_miracle_1 = {
 decision_miracle_2 = {
 	owned_planets_only = yes
 	sound = event_psionic_01
-	icon = decision_consecrated_worlds
+	icon = decision_miracle_2
 
 	enactment_time = 300
 
@@ -2113,7 +2113,7 @@ decision_miracle_2 = {
 decision_miracle_3 = {
 	owned_planets_only = yes
 	sound = event_psionic_01
-	icon = decision_consecrated_worlds
+	icon = decision_miracle_3
 
 	enactment_time = 300
 
@@ -2175,7 +2175,7 @@ decision_miracle_3 = {
 decision_miracle_4 = {
 	owned_planets_only = yes
 	sound = event_psionic_01
-	icon = decision_consecrated_worlds
+	icon = decision_miracle_4
 
 	enactment_time = 300
 
@@ -2237,7 +2237,7 @@ decision_miracle_4 = {
 decision_miracle_5 = {
 	owned_planets_only = yes
 	sound = event_psionic_01
-	icon = decision_consecrated_worlds
+	icon = decision_miracle_5
 
 	enactment_time = 300
 
@@ -2299,7 +2299,7 @@ decision_miracle_5 = {
 decision_miracle_6 = {
 	owned_planets_only = yes
 	sound = event_psionic_01
-	icon = decision_consecrated_worlds
+	icon = decision_miracle_6
 
 	enactment_time = 300
 

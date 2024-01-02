@@ -3,6 +3,12 @@ defined_text = {
 	random = no
 	text = {
 		trigger = {
+			has_touhou_leader_trait = yes
+		}
+		localization_key = CLASS_PREFIX_TOUHOU
+	}
+	text = {
+		trigger = {
 			has_leader_flag = renowned_leader
 			NOT = { has_touhou_leader_trait = yes }
 		}
@@ -15,32 +21,12 @@ defined_text = {
 		}
 		localization_key = CLASS_PREFIX_LEGENDARY
 	}
-	text = {
-		trigger = {
-			has_touhou_leader_trait = yes
-		}
-		localization_key = CLASS_PREFIX_TOUHOU
-	}
 	default = CLASS_PREFIX_NONE
 }
 
 defined_text = {
 	name = LeaderTierName
 	random = no
-	text = {
-		trigger = {
-			has_leader_flag = renowned_leader
-			NOT = { has_touhou_leader_trait = yes }
-		}
-		localization_key = CLASS_TIER_RENOWNED
-	}
-	text = {
-		trigger = {
-			has_leader_flag = legendary_leader
-			NOT = { has_touhou_leader_trait = yes }
-		}
-		localization_key = CLASS_TIER_LEGENDARY
-	}
 	text = {
 		trigger = {
 			has_trait = leader_trait_earthquake
@@ -177,7 +163,7 @@ defined_text = {
 		trigger = {
 			has_trait = leader_trait_flower_commander
 		}
-		localization_key = CLASS_TIER_YUKA_admiral
+		localization_key = CLASS_TIER_YUKA_commander
 	}
 	text = {
 		trigger = {
@@ -202,6 +188,26 @@ defined_text = {
 			has_trait = leader_trait_nuclear
 		}
 		localization_key = CLASS_TIER_UTSUHO
+	}
+	text = {
+		trigger = {
+			has_trait = leader_trait_water
+		}
+		localization_key = CLASS_TIER_NITORI
+	}
+	text = {
+		trigger = {
+			has_leader_flag = renowned_leader
+			NOT = { has_touhou_leader_trait = yes }
+		}
+		localization_key = CLASS_TIER_RENOWNED
+	}
+	text = {
+		trigger = {
+			has_leader_flag = legendary_leader
+			NOT = { has_touhou_leader_trait = yes }
+		}
+		localization_key = CLASS_TIER_LEGENDARY
 	}
 	default = LEADER_CLASS_TEXT
 }

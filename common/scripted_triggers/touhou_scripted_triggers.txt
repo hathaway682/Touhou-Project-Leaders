@@ -83,6 +83,7 @@ has_touhou_leader_trait = {
 		has_trait = leader_trait_memory
 		has_trait = leader_trait_corpse_travel
 		has_trait = leader_trait_nuclear
+		has_trait = leader_trait_water
 	}
 }
 
