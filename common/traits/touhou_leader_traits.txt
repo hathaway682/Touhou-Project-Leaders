@@ -373,16 +373,14 @@ leader_trait_robotist_sanae = {
 		TIER = none
 	}
 	planet_modifier = {
-		planet_jobs_robotic_produces_mult = 0.5
-		planet_pop_assemblers_upkeep_mult = 0.5
-		planet_pops_robotics_upkeep_mult = 0.5
-		job_roboticist_per_pop = 0.04
+		planet_jobs_robotic_produces_mult = 0.4
+		planet_pop_assemblers_upkeep_mult = 0.8
+		planet_pops_robotics_upkeep_mult = 0.8
 	}
 	sector_modifier = {
-		planet_jobs_robotic_produces_mult = 0.25
-		planet_pop_assemblers_upkeep_mult = 0.25
-		planet_pops_robotics_upkeep_mult = 0.25
-		job_roboticist_per_pop = 0.02
+		planet_jobs_robotic_produces_mult = 0.2
+		planet_pop_assemblers_upkeep_mult = 0.4
+		planet_pops_robotics_upkeep_mult = 0.4
 	}
 	triggered_army_modifier = {
 		potential = {
@@ -430,7 +428,7 @@ leader_trait_theurgist = {
 		CLASS = scientist
 		ICON = "GFX_leader_trait_mind_wipe"
 		RARITY = veteran
-		COUNCIL = yes
+		COUNCIL = no
 		TIER = 1
 	}
 	triggered_fleet_modifier = {
@@ -496,8 +494,11 @@ leader_trait_theurgist = {
 		planet_telepaths_unity_produces_add = 0.5
 	}
 	leader_class = { scientist commander official }
+	leader_potential_add = {
+		has_trait = subclass_commander_miko
+	}
 	selectable_weight = {
-		weight = 0
+		weight = 1000
 	}
 }
 
@@ -509,7 +510,7 @@ leader_trait_theurgist_2 = {
 		CLASS = scientist
 		ICON = "GFX_leader_trait_mind_wipe"
 		RARITY = veteran
-		COUNCIL = yes
+		COUNCIL = no
 		TIER = 2
 	}
 	triggered_fleet_modifier = {
@@ -588,7 +589,7 @@ leader_trait_theurgist_3 = {
 		CLASS = scientist
 		ICON = "GFX_leader_trait_mind_wipe"
 		RARITY = veteran
-		COUNCIL = yes
+		COUNCIL = no
 		TIER = 3
 	}
 	triggered_fleet_modifier = {
@@ -664,9 +665,9 @@ leader_trait_snake_bless = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
-		ICON = "GFX_leader_trait_mind_wipe"
+		ICON = "GFX_leader_trait_snake_bless"
 		RARITY = veteran
-		COUNCIL = yes
+		COUNCIL = no
 		TIER = 1
 	}
 	fleet_modifier = {
@@ -692,8 +693,11 @@ leader_trait_snake_bless = {
 		planet_jobs_food_produces_mult = 0.05
 	}
 	leader_class = { scientist commander official }
+	leader_potential_add = {
+		has_trait = leader_trait_miracle
+	}
 	selectable_weight = {
-		weight = 0
+		weight = 1000
 	}
 }
 
@@ -703,9 +707,9 @@ leader_trait_snake_bless_2 = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
-		ICON = "GFX_leader_trait_mind_wipe"
+		ICON = "GFX_leader_trait_snake_bless"
 		RARITY = veteran
-		COUNCIL = yes
+		COUNCIL = no
 		TIER = 2
 	}
 	fleet_modifier = {
@@ -742,9 +746,9 @@ leader_trait_snake_bless_3 = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
-		ICON = "GFX_leader_trait_mind_wipe"
+		ICON = "GFX_leader_trait_snake_bless"
 		RARITY = veteran
-		COUNCIL = yes
+		COUNCIL = no
 		TIER = 3
 	}
 	fleet_modifier = {
@@ -780,9 +784,9 @@ leader_trait_frog_bless = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
-		ICON = "GFX_leader_trait_mind_wipe"
+		ICON = "GFX_leader_trait_frog_bless"
 		RARITY = veteran
-		COUNCIL = yes
+		COUNCIL = no
 		TIER = 1
 	}
 	fleet_modifier = {
@@ -808,8 +812,11 @@ leader_trait_frog_bless = {
 		planet_jobs_food_produces_mult = 0.05
 	}
 	leader_class = { scientist commander official }
+	leader_potential_add = {
+		has_trait = leader_trait_miracle
+	}
 	selectable_weight = {
-		weight = 0
+		weight = 1000
 	}
 }
 
@@ -819,9 +826,9 @@ leader_trait_frog_bless_2 = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
-		ICON = "GFX_leader_trait_mind_wipe"
+		ICON = "GFX_leader_trait_frog_bless"
 		RARITY = veteran
-		COUNCIL = yes
+		COUNCIL = no
 		TIER = 2
 	}
 	fleet_modifier = {
@@ -858,9 +865,9 @@ leader_trait_frog_bless_3 = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
-		ICON = "GFX_leader_trait_mind_wipe"
+		ICON = "GFX_leader_trait_frog_bless"
 		RARITY = veteran
-		COUNCIL = yes
+		COUNCIL = no
 		TIER = 3
 	}
 	fleet_modifier = {
@@ -1605,6 +1612,7 @@ leader_trait_border_merry = {
 		ship_ftl_jumpdrive_range_mult = 0.25
 		shroud_delve_cooldown = -0.25
 		catapult_spread_mult = 0.25
+		country_astral_rift_fail_mult = -0.5
 	}
 	on_gained_effect = {
 		change_background_job = college_student
@@ -1624,9 +1632,10 @@ leader_trait_star_located = {
 		TIER = none
 	}
 	modifier = {
-		ship_sensor_range_add = 6
-		planet_hyperlane_range_add = 12
-		ship_anomaly_generation_chance_mult = 0.25
+		ship_sensor_range_add = 5
+		planet_hyperlane_range_add = 10
+		ship_anomaly_generation_chance_mult = 0.75
+		country_astral_rift_speed_mult = 0.5
 	}
 	on_gained_effect = {
 		change_background_job = college_student
@@ -1970,12 +1979,6 @@ leader_trait_detective = {
 	}
 	planet_modifier = {
 		planet_stability_add = 5
-		pop_happiness = 0.1
-		planet_crime_mult = -1
-	}
-	sector_modifier = {
-		planet_stability_add = 2.5
-		pop_happiness = 0.05
 		planet_crime_mult = -1
 	}
 	veteran_class_locked_trait = yes
@@ -2958,7 +2961,7 @@ leader_trait_flower_commander = {
 	}
 	immortal_leaders = yes
 	background_icon = GFX_leader_background_destiny_1
-	custom_tooltip_with_modifiers = leader_trait_flower_admiral_effect
+	custom_tooltip_with_modifiers = leader_trait_flower_commander_effect
 }
 
 leader_trait_incarnation_of_nature_commander = {
@@ -3002,7 +3005,7 @@ leader_trait_sleeping_terror_commander = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_sleeping_terror_admiral_effect
+	custom_tooltip_with_modifiers = leader_trait_sleeping_terror_commander_effect
 }
 
 leader_trait_words = {
@@ -3576,7 +3579,7 @@ leader_trait_deeper_scarlet_dream = {
 		TIER = none
 	}
 	councilor_modifier = {
-		planet_stability_add = 10
+		pop_amenities_usage_mult = -0.1
 		pop_happiness = 0.1
 		empire_size_mult = -0.05
 	}
@@ -3584,6 +3587,7 @@ leader_trait_deeper_scarlet_dream = {
 	selectable_weight = 0
 	background_icon = GFX_leader_background_destiny_1
 }
+
 leader_trait_nihility_scarlet_dream = {
 	inline_script = {
 		script = trait/icon_negative
@@ -3594,7 +3598,7 @@ leader_trait_nihility_scarlet_dream = {
 		TIER = none
 	}
 	councilor_modifier = {
-		planet_jobs_produces_mult = 0.15
+		all_technology_research_speed = 0.1
 		pop_happiness = -0.1
 		planet_stability_add = -5
 	}
@@ -3611,18 +3615,19 @@ leader_trait_body_and_spirit = {
 		TIER = none
 	}
 	fleet_modifier = {
-		ship_weapon_damage = 0.3
-		ship_speed_mult = 0.3
+		ship_weapon_damage = 0.2
+		ship_shield_hardening_add = 0.3
 	}
 	army_modifier = {
-		army_damage_mult = 0.25
-		army_morale_damage_mult = 0.25
+		army_morale = 0.3
+		army_morale_damage_mult = 0.3
+		army_damage_mult = 0.2
 	}
 	planet_modifier = {
-		planet_psionic_jobs_produces_mult = 0.30
+		planet_psionic_jobs_produces_mult = 0.2
 	}
 	sector_modifier = {
-		planet_psionic_jobs_produces_mult = 0.15
+		planet_psionic_jobs_produces_mult = 0.1
 	}
 	leader_class = { commander }
 	selectable_weight = 0
@@ -3640,21 +3645,361 @@ leader_trait_the_incorruptible = {
 		TIER = none
 	}
 	fleet_modifier = {
-		ship_weapon_damage = 0.3
-		ship_speed_mult = 0.3
+		ship_weapon_damage = 0.2
+		ship_shield_hardening_add = 0.3
 	}
 	army_modifier = {
-		army_damage_mult = 0.25
-		army_morale_damage_mult = 0.25
+		army_health = 0.3
+		army_morale_damage_mult = 0.3
+		army_damage_mult = 0.2
 	}
 	planet_modifier = {
-		pop_happiness = 0.30
+		planet_stability_add = 10
+		planet_jobs_unity_produces_mult = 0.20
 	}
 	sector_modifier = {
-		pop_happiness = 0.15
+		planet_stability_add = 5
+		planet_jobs_unity_produces_mult = 0.10
 	}
 	leader_class = { commander }
 	selectable_weight = 0
 	background_icon = GFX_leader_background_destiny_1
 	immortal_leaders = yes
+}
+
+leader_trait_water = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_aquatic_admiral
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				from = {
+					is_planet_class = pc_ocean
+				}
+			}
+		}
+		modifier = {
+			planet_jobs_produces_mult = 0.3
+			planet_building_build_speed_mult = 0.6
+			planet_buildings_upkeep_mult = -1
+			planet_districts_upkeep_mult = -1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				owner = {
+					is_country_type = paragon_event_country
+				}
+				from = {
+					is_wet = yes
+					not = { is_planet_class = pc_ocean }
+				}
+			}
+		}
+		modifier = {
+			planet_jobs_produces_mult = 0.15
+			planet_building_build_speed_mult = 0.3
+			planet_buildings_upkeep_mult = -0.5
+			planet_districts_upkeep_mult = -0.5
+		}
+	}
+	sector_modifier = {
+		planet_technician_produces_mult = 0.1
+		planet_researchers_produces_mult = 0.1
+	}
+	on_gained_effect = {
+		change_background_job = roboticist
+	}
+	leader_class = { scientist }
+	selectable_weight = 0
+	custom_tooltip_with_modifiers = leader_trait_water_effect
+	background_icon = GFX_leader_background_destiny_1
+}
+
+leader_trait_super_youkai_slug = {
+	veteran_class_locked_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_warlike
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		weapon_type_energy_weapon_damage_mult = 0.05
+		weapon_type_explosive_weapon_damage_mult = 0.05
+		weapon_type_strike_craft_weapon_damage_mult = 0.05
+		weapon_type_explosive_speed_mult = 0.25
+		weapon_type_strike_craft_speed_mult = 0.25
+	}
+	leader_class = { scientist }
+	selectable_weight = 0
+}
+
+leader_trait_super_youkai_slug_2 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { leader_trait_super_youkai_slug }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_warlike
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		weapon_type_energy_weapon_damage_mult = 0.1
+		weapon_type_explosive_weapon_damage_mult = 0.1
+		weapon_type_strike_craft_weapon_damage_mult = 0.1
+		weapon_type_explosive_speed_mult = 0.5
+		weapon_type_strike_craft_speed_mult = 0.5
+	}
+	leader_class = { scientist }
+	selectable_weight = 0
+	custom_tooltip_with_modifiers = leader_trait_super_youkai_slug_effect_tier_2
+	on_gained_effect = {
+		owner = {
+			set_variable = {
+				which = "ness_life_soldier_count"
+				value = 0
+			}
+		}
+	}
+}
+
+leader_trait_super_youkai_slug_3 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { leader_trait_super_youkai_slug_2 }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_warlike
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	councilor_modifier = {
+		weapon_type_energy_weapon_damage_mult = 0.2
+		weapon_type_explosive_weapon_damage_mult = 0.2
+		weapon_type_strike_craft_weapon_damage_mult = 0.2
+		weapon_type_explosive_speed_mult = 1
+		weapon_type_strike_craft_speed_mult = 1
+	}
+	leader_class = { scientist }
+	selectable_weight = 0
+	custom_tooltip_with_modifiers = leader_trait_super_youkai_slug_effect_tier_3
+	on_gained_effect = {
+		owner = {
+			create_ship_design = { design = "NAME_Water_Dragon_Baby" }
+			add_ship_design = last_created_design
+		}
+	}
+}
+
+leader_trait_convenience_house = {
+	veteran_class_locked_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_merchant_of_numa
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	planet_modifier = {
+		pop_lifestyle_trade_mult = 0.1
+		pop_amenities_usage_mult = -0.1
+		planet_pops_upkeep_mult = -0.1
+		planet_traders_physics_research_produces_add = 1
+		planet_traders_engineering_research_produces_add = 1
+	}
+	sector_modifier = {
+		pop_lifestyle_trade_mult = 0.05
+		pop_amenities_usage_mult = -0.05
+		planet_pops_upkeep_mult = -0.05
+		planet_traders_physics_research_produces_add = 0.5
+		planet_traders_engineering_research_produces_add = 0.5
+	}
+	leader_class = { scientist }
+}
+
+leader_trait_convenience_house_2 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { leader_trait_convenience_house }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_merchant_of_numa
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		pop_lifestyle_trade_mult = 0.25
+		pop_amenities_usage_mult = -0.25
+		planet_pops_upkeep_mult = -0.25
+		planet_traders_physics_research_produces_add = 2
+		planet_traders_engineering_research_produces_add = 2
+	}
+	sector_modifier = {
+		pop_lifestyle_trade_mult = 0.125
+		pop_amenities_usage_mult = -0.125
+		planet_pops_upkeep_mult = -0.125
+		planet_traders_physics_research_produces_add = 1
+		planet_traders_engineering_research_produces_add = 1
+	}
+	leader_class = { scientist }
+}
+
+leader_trait_convenience_house_3 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { leader_trait_convenience_house_2 }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_merchant_of_numa
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	planet_modifier = {
+		pop_lifestyle_trade_mult = 0.5
+		pop_amenities_usage_mult = -0.5
+		planet_pops_upkeep_mult = -0.5
+		planet_traders_physics_research_produces_add = 3
+		planet_traders_engineering_research_produces_add = 3
+	}
+	sector_modifier = {
+		pop_lifestyle_trade_mult = 0.25
+		pop_amenities_usage_mult = -0.25
+		planet_pops_upkeep_mult = -0.25
+		planet_traders_physics_research_produces_add = 1.5
+		planet_traders_engineering_research_produces_add = 1.5
+	}
+	leader_class = { scientist }
+}
+
+leader_trait_engineer_in_water = {
+	veteran_class_locked_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_master_salvager
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	planet_modifier = {
+		planet_metallurgists_produces_mult = 0.1
+		planet_metallurgists_physics_research_produces_add = 1
+		planet_artisans_produces_mult = 0.1
+		planet_artisans_engineering_research_produces_add = 1
+	}
+	sector_modifier = {
+		planet_metallurgists_produces_mult = 0.05
+		planet_metallurgists_physics_research_produces_add = 0.5
+		planet_artisans_produces_mult = 0.05
+		planet_artisans_engineering_research_produces_add = 0.5
+	}
+	leader_class = { scientist }
+}
+
+leader_trait_engineer_in_water_2 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { leader_trait_engineer_in_water }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_master_salvager
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_metallurgists_produces_mult = 0.2
+		planet_metallurgists_physics_research_produces_add = 2
+		planet_artisans_produces_mult = 0.2
+		planet_artisans_engineering_research_produces_add = 2
+	}
+	sector_modifier = {
+		planet_metallurgists_produces_mult = 0.1
+		planet_metallurgists_physics_research_produces_add = 1
+		planet_artisans_produces_mult = 0.1
+		planet_artisans_engineering_research_produces_add = 1
+	}
+	leader_class = { scientist }
+}
+
+leader_trait_engineer_in_water_3 = {
+	veteran_class_locked_trait = yes
+	replace_traits = { leader_trait_engineer_in_water_2 }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_master_salvager
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	planet_modifier = {
+		planet_metallurgists_produces_mult = 0.3
+		planet_metallurgists_physics_research_produces_add = 3
+		planet_artisans_produces_mult = 0.3
+		planet_artisans_engineering_research_produces_add = 3
+	}
+	sector_modifier = {
+		planet_metallurgists_produces_mult = 0.15
+		planet_metallurgists_physics_research_produces_add = 1.5
+		planet_artisans_produces_mult = 0.15
+		planet_artisans_engineering_research_produces_add = 1.5
+	}
+	leader_class = { scientist }
+}
+
+leader_trait_optical_camouflage = {
+	veteran_class_locked_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_explorer_cloaking_focus
+		RARITY = veteran
+		COUNCIL = no
+		TIER = none
+	}
+	modifier = {
+		ship_cloaking_strength_add = 5
+	}
+	councilor_modifier = {
+		ship_cloaking_strength_add = 2
+	}
+	leader_class = { scientist }
+	selectable_weight = 0
+}
+
+leader_trait_cucumbers = {
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_homesteader
+		RARITY = veteran
+		COUNCIL = no
+		TIER = none
+	}
+	planet_modifier = {
+		planet_farmers_food_produces_add = 6
+	}
+	sector_modifier = {
+		planet_farmers_food_produces_add = 6
+	}
+	leader_class = { scientist }
+	selectable_weight = 0
 }

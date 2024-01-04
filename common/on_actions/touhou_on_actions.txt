@@ -353,6 +353,16 @@ on_mid_game_pulse = {
 # From = Species ( Post Modification )
 on_modification_complete = {
 	events = {
+		touhou_paragon_mission.403092
+	}
+}
+
+# Called upon entering FTL (on-action name scripted on the Bypass type)
+# THIS = Fleet
+# FROM = System jumping to
+# FROMFROM = System jumped from
+on_entering_shroud_tunnel = {
+	events = {
 		touhou_paragon_mission.40309
 	}
 }

@@ -22,6 +22,19 @@ planet_telepaths = {
 	}
 }
 
+planet_traders = {
+	parent = planet_jobs
+	modifier_category = pop
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
 planet_culture_workers = {
 	parent = planet_jobs
 	generate_mult_modifiers = {

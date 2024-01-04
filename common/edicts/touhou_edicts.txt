@@ -1432,7 +1432,7 @@ destiny_manipulation = {
 	}
 }
 
-flower_admiral = {
+commander = {
 	length = 360
 	edict_lock_in_months = 12
 	icon = "GFX_edict_type_time"
@@ -1452,14 +1452,14 @@ flower_admiral = {
 			}
 		}
 		custom_tooltip = {
-			fail_text = already_flower_admiral
+			fail_text = already_commander
 			NOT = {
 				has_country_flag = double_spark
 			}
 		}
 	}
 	effect = {
-		custom_tooltip = flower_admiral_effect
+		custom_tooltip = commander_effect
 		set_country_flag = double_spark
 		hidden_effect = {
 			save_global_event_target_as = double_spark_owner
