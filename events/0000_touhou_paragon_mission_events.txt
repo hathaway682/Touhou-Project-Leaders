@@ -1,6 +1,6 @@
 namespace = touhou_paragon_mission
 
-#早苗任务树
+#早苗任务树 
 country_event = {
 	id = touhou_paragon_mission.40301
 	title = touhou_paragon_mission.40301.name
