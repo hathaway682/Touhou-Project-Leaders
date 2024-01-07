@@ -654,7 +654,7 @@ country_event = { # ethic leader lottery machine
 				modifier = {
 					add = value:touhou_leader_randomizer|ETHIC|materialist|ETHIC_NEG|spiritualist|LEADER_ID|nitori|
 				}
-				ethic_leader_hire_event = { LEADER_ID = utsuho EVENT_ID = touhou_paragon.42700 }
+				ethic_leader_hire_event = { LEADER_ID = nitori EVENT_ID = touhou_paragon.42700 }
 			}
 		}
 	}
