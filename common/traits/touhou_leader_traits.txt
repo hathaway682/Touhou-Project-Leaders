@@ -3742,7 +3742,10 @@ leader_trait_super_youkai_slug = {
 		weapon_type_strike_craft_speed_mult = 0.25
 	}
 	leader_class = { scientist }
-	selectable_weight = 0
+	selectable_weight = 1000
+	leader_potential_add = {
+		has_trait = leader_trait_water
+	}
 }
 
 leader_trait_super_youkai_slug_2 = {
@@ -3764,7 +3767,7 @@ leader_trait_super_youkai_slug_2 = {
 		weapon_type_strike_craft_speed_mult = 0.5
 	}
 	leader_class = { scientist }
-	selectable_weight = 0
+	selectable_weight = 1000
 	custom_tooltip_with_modifiers = leader_trait_super_youkai_slug_effect_tier_2
 	on_gained_effect = {
 		owner = {
@@ -3795,7 +3798,7 @@ leader_trait_super_youkai_slug_3 = {
 		weapon_type_strike_craft_speed_mult = 1
 	}
 	leader_class = { scientist }
-	selectable_weight = 0
+	selectable_weight = 1000
 	custom_tooltip_with_modifiers = leader_trait_super_youkai_slug_effect_tier_3
 	on_gained_effect = {
 		owner = {
@@ -3830,6 +3833,10 @@ leader_trait_convenience_house = {
 		planet_traders_engineering_research_produces_add = 0.5
 	}
 	leader_class = { scientist }
+	selectable_weight = 1000
+	leader_potential_add = {
+		has_trait = leader_trait_water
+	}
 }
 
 leader_trait_convenience_house_2 = {
@@ -3858,6 +3865,7 @@ leader_trait_convenience_house_2 = {
 		planet_traders_engineering_research_produces_add = 1
 	}
 	leader_class = { scientist }
+	selectable_weight = 1000
 }
 
 leader_trait_convenience_house_3 = {
@@ -3886,6 +3894,7 @@ leader_trait_convenience_house_3 = {
 		planet_traders_engineering_research_produces_add = 1.5
 	}
 	leader_class = { scientist }
+	selectable_weight = 1000
 }
 
 leader_trait_engineer_in_water = {
@@ -3911,6 +3920,10 @@ leader_trait_engineer_in_water = {
 		planet_artisans_engineering_research_produces_add = 0.5
 	}
 	leader_class = { scientist }
+	selectable_weight = 1000
+	leader_potential_add = {
+		has_trait = leader_trait_water
+	}
 }
 
 leader_trait_engineer_in_water_2 = {
@@ -3937,6 +3950,7 @@ leader_trait_engineer_in_water_2 = {
 		planet_artisans_engineering_research_produces_add = 1
 	}
 	leader_class = { scientist }
+	selectable_weight = 1000
 }
 
 leader_trait_engineer_in_water_3 = {
@@ -3963,6 +3977,7 @@ leader_trait_engineer_in_water_3 = {
 		planet_artisans_engineering_research_produces_add = 1.5
 	}
 	leader_class = { scientist }
+	selectable_weight = 1000
 }
 
 leader_trait_optical_camouflage = {

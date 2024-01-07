@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b62ee213-4a26-4afa-bbe7-6a0eb0ae2cc1" name="更改" comment="">
+    <list default="true" id="e7784210-dd34-44ca-b26b-8f8bd35035ab" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" afterDir="false" />
@@ -15,12 +15,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
   "associatedIndex": 3
 }]]></component>
-  <component name="ProjectId" id="2aOoCtH0SRIGMmpDuiHsAmbSe8Z" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2absayBNGM6A8zLUAaaunwN72bm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -32,14 +30,21 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.16-jbr_dcevm-11.0.16-249ae16d76d6-4bd46b1b" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
-      <changelist id="b62ee213-4a26-4afa-bbe7-6a0eb0ae2cc1" name="更改" comment="" />
-      <created>1704198862707</created>
+      <changelist id="e7784210-dd34-44ca-b26b-8f8bd35035ab" name="更改" comment="" />
+      <created>1704598680366</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1704198862707</updated>
+      <updated>1704598680366</updated>
     </task>
     <servers />
   </component>
