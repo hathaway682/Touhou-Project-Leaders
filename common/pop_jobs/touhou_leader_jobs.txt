@@ -644,6 +644,14 @@ grower = {
             }
             food = @requisitorium_food_reduction
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_modifier = modifier_rich_mineral_garden
+                }
+            }
+            minerals = 1
+        }
     }
 
     overlord_resources = {

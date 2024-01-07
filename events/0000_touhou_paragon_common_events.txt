@@ -793,6 +793,7 @@ leader_event = {
 					add_trait_no_notify = leader_trait_eager
 					add_trait_no_notify = leader_trait_intemporal
 					add_trait_no_notify = leader_trait_regeneration_3
+					set_leader_flag = daiyousei_leader
 					set_owner = prev
 				}
 				hire_event_leader_message = {

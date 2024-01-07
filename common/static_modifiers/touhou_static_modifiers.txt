@@ -610,3 +610,9 @@ modifier_satori_pets = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_animal_wildlife.dds"
 	icon_frame = 1
 }
+
+modifier_rich_mineral_garden = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unstable_tectonics.dds"
+	icon_frame = 1
+	custom_tooltip = RICH_MINERAL_GARDEN
+}

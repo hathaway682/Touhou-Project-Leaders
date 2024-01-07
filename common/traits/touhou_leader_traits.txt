@@ -4003,3 +4003,97 @@ leader_trait_cucumbers = {
 	leader_class = { scientist }
 	selectable_weight = 0
 }
+
+leader_trait_heart_break = {
+	inline_script = {
+		script = trait/icon_negative
+		CLASS = leader
+		ICON = "GFX_leader_trait_erratic_morality_core"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = {
+			always = yes
+		}
+		leader_lifespan_add = -40
+		species_leader_exp_gain = -0.4
+	}
+	leader_class = { official }
+	selectable_weight = 0
+}
+
+leader_trait_with_satori = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_emotional_support_pet"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	planet_modifier = {
+		species_empire_size_mult = -0.2
+		planet_jobs_ruler_produces_mult = 0.05
+		planet_jobs_specialist_produces_mult = 0.05
+		planet_jobs_worker_produces_mult = 0.05
+	}
+	sector_modifier = {
+		species_empire_size_mult = -0.1
+		planet_jobs_ruler_produces_mult = 0.025
+		planet_jobs_specialist_produces_mult = 0.025
+		planet_jobs_worker_produces_mult = 0.025
+	}
+	veteran_class_locked_trait = yes
+	leader_class = { official commander }
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_arctic_governing = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_private_mines
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				from = {
+					is_planet_class = pc_arctic
+				}
+			}
+		}
+		modifier = {
+			planet_jobs_produces_mult = 0.3
+			planet_building_build_speed_mult = 0.6
+			planet_buildings_upkeep_mult = -1
+			planet_districts_upkeep_mult = -1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				from = {
+					is_cold = yes
+					not = { is_planet_class = pc_arctic }
+				}
+			}
+		}
+		modifier = {
+			planet_jobs_produces_mult = 0.15
+			planet_building_build_speed_mult = 0.3
+			planet_buildings_upkeep_mult = -0.5
+			planet_districts_upkeep_mult = -0.5
+		}
+	}
+	leader_class = { commander }
+	selectable_weight = 0
+	custom_tooltip = LEADER_TRAIT_ARCTIC_EFFECT
+}

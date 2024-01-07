@@ -114,7 +114,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/planet_nether_icons.dds"
 		noOfFrames = 33
 	}
-
+	spriteType = {
+		name = "GFX_evt_tenshi_and_yuuka"
+		texturefile = "gfx/event_pictures/tenshi_and_yuuka.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 	spriteType = {
 		name = "GFX_evt_utsuho"
 		texturefile = "gfx/event_pictures/utsuho.dds"
@@ -187,7 +192,30 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
-
+	spriteType = {
+		name = "GFX_evt_satori_birthday_horror"
+		texturefile = "gfx/event_pictures/satori_birthday_horror.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_satori_birthday"
+		texturefile = "gfx/event_pictures/satori_birthday.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_book_club"
+		texturefile = "gfx/event_pictures/book_club.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_cirno_daiyousei"
+		texturefile = "gfx/event_pictures/cirno_daiyousei.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 	# spriteType = {
 	# 	name = "GFX_text_touhou_leader"
 	# 	texturefile = "gfx/interface/icons/text_icons/text_icon_touhou_leader.dds"

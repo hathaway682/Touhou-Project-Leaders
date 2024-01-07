@@ -312,6 +312,7 @@ is_memorialist_empire = {
 		has_valid_civic = civic_hive_memorialist
 		has_valid_civic = civic_machine_memorialist
 		has_valid_civic = civic_nether_world
+		has_country_flag = touhou_flag_flavor_book_club_sanctuary_of_repose
 	}
 }
 
@@ -385,3 +386,13 @@ THL_trgr_plnt_RULE_can_assembly_organic = {
 	}
 }
 
+#知识宝库
+is_memory_vault_empire = {
+	OR = {
+		has_valid_civic = civic_memory_vault
+		has_valid_civic = civic_memory_vault_corporate
+		has_valid_civic = civic_memory_vault_machine
+		has_valid_civic = civic_memory_vault_hive
+		has_country_flag = touhou_flag_flavor_book_club_memory_vaults
+	}
+}
