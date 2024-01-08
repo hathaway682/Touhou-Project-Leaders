@@ -3773,7 +3773,7 @@ country_event = { # 荷取
 			DESC = nitori1
 			CATCH_PHRASE =  nitori1_catch_phrase
 		}
-		last_created_leader = { #8
+		last_created_leader = { #4
 			add_trait = subclass_scientist_governor
 			add_trait = leader_trait_water
 			add_trait = leader_trait_robotist
