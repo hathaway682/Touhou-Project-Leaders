@@ -1150,3 +1150,496 @@ building_posthumous_employment_center = {
 		text = tooltip_organic_and_artificial_assembly_warning
 	}
 }
+
+#####################
+# Galactic Paragons Origin Unique Buildings
+#####################
+
+building_paragon_origin_academy = {
+	base_buildtime = 3600
+	base_cap_amount = 1
+	empire_limit = 1
+	can_demolish = yes
+	can_be_ruined = yes
+	can_be_disabled = yes
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = { has_country_flag = legendary_leader_resigned_academy }
+		}
+	}
+
+	category = research
+
+	potential = {
+		custom_tooltip = {
+			text = EMPIRE_UNIQUE_BUILDING
+			owner = { has_country_flag = legendary_leader_resigned_academy }
+		}
+		exists = planet
+		planet = { is_capital = yes }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	country_modifier = {
+		country_leader_cap_add = 1
+	}
+	triggered_country_modifier = {
+		planet_jobs_produces_mult = 0.01
+		mult = owner.paragon_origin_academy_governor
+	}
+	triggered_country_modifier = {
+		all_technology_research_speed = 0.01
+		mult = owner.paragon_origin_academy_scientist
+	}
+	triggered_country_modifier = {
+		ship_fire_rate_mult = 0.01
+		mult = owner.paragon_origin_academy_admiral
+	}
+	triggered_country_modifier = {
+		army_health = 0.01
+		mult = owner.paragon_origin_academy_general
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2500
+		}
+		upkeep = {
+			energy = 10
+			unity = 30
+		}
+	}
+
+	is_essential = yes
+}
+
+#####################
+# Galactic Paragons Buildings
+#####################
+
+building_paragon_memory_vaults = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	empire_limit = 1
+	category = unity
+	can_demolish = yes
+	can_be_ruined = yes
+	can_be_disabled = yes
+	is_essential = yes
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_memory_vault_empire = no
+		}
+	}
+	desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_civic = civic_memory_vault
+					has_civic = civic_memory_vault_corporate
+					has_country_flag = touhou_flag_flavor_book_club_memory_vaults
+				}
+			}
+		}
+		text = building_paragon_memory_vaults_desc
+	}
+	desc = {
+		trigger = {
+			exists = owner
+			owner = { has_civic = civic_memory_vault_machine }
+		}
+		text = building_paragon_memory_vaults_machine_desc
+	}
+	desc = {
+		trigger = {
+			exists = owner
+			owner = { has_civic = civic_memory_vault_hive }
+		}
+		text = building_paragon_memory_vaults_hive_desc
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		hidden_trigger = {
+			owner = {
+				OR = {
+					is_ai = no
+					resource_stockpile_compare = { resource = minerals value >= 800 }
+				}
+			}
+		}
+	}
+
+	potential = {
+		custom_tooltip = {
+			text = EMPIRE_UNIQUE_BUILDING
+			owner = { is_memory_vault_empire = yes }
+		}
+		exists = planet
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		produces = {
+			trigger = {
+				exists = owner
+			}
+			unity = 5
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				planet = { is_variable_set = paragon_memory_vault }
+			}
+			unity = 5
+			multiplier = planet.paragon_memory_vault
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_memory_vault_corporate }
+		}
+		trade_value_add = 10
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_memory_vault_corporate }
+			planet = { is_variable_set = paragon_memory_vault }
+		}
+		trade_value_add = 10
+		mult = planet.paragon_memory_vault
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_civic = civic_memory_vault
+					has_civic = civic_memory_vault_machine
+					has_civic = civic_memory_vault_hive
+					has_country_flag = touhou_flag_flavor_book_club_memory_vaults
+				}
+			}
+		}
+		species_leader_exp_gain = 0.01
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_civic = civic_memory_vault
+					has_civic = civic_memory_vault_machine
+					has_civic = civic_memory_vault_hive
+					has_country_flag = touhou_flag_flavor_book_club_memory_vaults
+				}
+			}
+			planet = { is_variable_set = paragon_memory_vault }
+		}
+		species_leader_exp_gain = 0.01
+		mult = planet.paragon_memory_vault
+	}
+
+	on_built = {
+		set_variable = {
+			which = paragon_memory_vault
+			value = 0
+		}
+	}
+
+	on_destroy = {
+		clear_variable = paragon_memory_vault
+	}
+}
+
+
+##################
+# Memorialists
+##################
+
+#Sanctuary of Repose
+building_galactic_memorial_1 = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			is_memorialist_empire = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				is_memorialist_empire = no
+			}
+		}
+	}
+
+	convert_to = {
+		building_autochthon_monument
+		building_corporate_monument
+		building_simulation_1
+		building_sensorium_1
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 1
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			minerals = @b1_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+	}
+
+	triggered_desc = {
+		text = building_autochthon_monument_effect
+	}
+
+	prerequisites = {
+		"tech_cultural_heritage"
+	}
+
+	#Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_death_chronicler_add = @b1_jobs
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = "job_death_chronicler_effect_desc"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_chronicle_drone_add = @b1_jobs
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = "job_chronicle_drone_effect_desc"
+	}
+
+	#Tomb/Relic worlds
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+			OR = {
+				is_planet_class = pc_nuked
+				is_planet_class = pc_relic
+			}
+		}
+		pop_government_ethic_attraction = 0.20
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			OR = {
+				is_planet_class = pc_nuked
+				is_planet_class = pc_relic
+			}
+		}
+		planet_crime_no_happiness_add = -20
+	}
+
+	upgrades = {
+		building_galactic_memorial_2
+	}
+
+	show_tech_unlock_if = {
+		is_memorialist_empire = yes
+	}
+}
+
+#护林员小屋
+building_ranger_lodge = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = amenity
+	icon = holding_park_ranger_lodge
+	potential = {
+		NOT = {	has_modifier = slave_colony	}
+		owner = {
+			is_regular_empire = yes
+			or = {
+				has_valid_civic = civic_environmentalist
+				has_country_flag = touhou_flag_flavor_book_club_ranger_lodge
+			}
+		}
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_relic
+		}
+		is_artificial = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = no_free_district_for_ranger_lodge
+			planet = {
+				num_free_districts = {
+					type = any
+					value > 0
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+			owner = {
+				NOR = {
+					has_valid_civic = civic_environmentalist
+					has_country_flag = touhou_flag_flavor_book_club_ranger_lodge
+				}
+			}
+			is_planet_class = pc_city
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_relic
+		}
+	}
+
+	ai_resource_production = {
+		unity = 2
+		mult = value:natural_blocker_count
+	}
+
+	ai_resource_production = {
+		unity = 1
+		trigger = { owner_has_resolution = { RES = resolution_ecology_integrated_gardens } }
+		mult = value:natural_blocker_count
+	}
+
+	ai_resource_production = {
+		unity = 1
+		trigger = { owner_has_resolution = { RES = resolution_ecology_environmental_control_board } }
+		mult = value:natural_blocker_count
+	}
+
+	ai_resource_production = {
+		unity = 1
+		trigger = { owner_has_resolution = { RES = resolution_ecology_paradise_initiative } }
+		mult = value:natural_blocker_count
+	}
+
+	planet_modifier = {
+		job_ranger_add = 1 # 1 Ranger no matter what
+		deposit_blockers_natural_unity_produces_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		job_ranger_add = 1 # +1 Ranger per natural blocker
+		mult = value:natural_blocker_count
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner_has_resolution = { RES = resolution_ecology_paradise_initiative }
+		}
+		job_ranger_add = 1 # +1 Ranger per natural blocker if GalCom approves
+		mult = value:natural_blocker_count
+	}
+
+
+	triggered_planet_modifier = {
+		potential = { owner_has_resolution = { RES = resolution_ecology_integrated_gardens } }
+		deposit_blockers_natural_unity_produces_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = { owner_has_resolution = { RES = resolution_ecology_environmental_control_board } }
+		deposit_blockers_natural_unity_produces_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = { owner_has_resolution = { RES = resolution_ecology_paradise_initiative } }
+		deposit_blockers_natural_unity_produces_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	triggered_desc = {
+		text = job_ranger_effect_desc
+	}
+
+	on_built = {
+		planet = {
+			add_blocker = { type = d_big_nature_preserve_blocker }
+		}
+	}
+
+	on_destroy = {
+		planet = {
+			if = {
+				limit = { has_deposit = d_big_nature_preserve_blocker }
+				every_deposit = {
+					limit = {
+						is_deposit_type = d_big_nature_preserve_blocker
+					}
+					remove_deposit = d_big_nature_preserve_blocker
+				}
+			}
+		}
+	}
+}

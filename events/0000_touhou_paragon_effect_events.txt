@@ -9686,7 +9686,6 @@ country_event = {
         name = touhou_paragon_effect.41006.a
         enable_special_project = {
             name = SAKUYA_GENETIC_REVIVE
-            location = this
             owner = root
         }
     }
@@ -9736,3 +9735,270 @@ planet_event = {
         }
     }
 }
+
+#40101天子和幽香的趣味事件
+country_event = {
+    id = touhou_paragon_effect.40101
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.40101.name
+    desc = {
+        text = touhou_paragon_effect.40101.desc
+    }
+    picture = GFX_evt_tenshi_and_yuuka
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait =  leader_trait_earthquake
+        }
+        any_owned_leader = {
+            has_trait =   leader_trait_flower
+        }
+        any_owned_planet = {
+            has_district = district_garden
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40101.a
+        random_owned_planet = {
+            limit = {
+                has_district = district_garden
+            }
+            remove_district = district_garden
+            if = {
+                limit = {
+                    has_planet_flag = unstable
+                }
+                set_planet_flag = unstable_2
+            }
+            else = {
+                set_planet_flag = unstable
+            }
+            add_modifier = {
+                modifier = unstable_tectonics
+                days = -1
+            }
+            add_modifier = {
+                modifier = modifier_rich_mineral_garden
+                days = -1
+            }
+            random_list = {
+                1 = {
+                    add_deposit = d_veiny_cliffs
+                }
+                1 = {
+                    add_deposit = d_mineral_fields
+                }
+                1 = {
+                    add_deposit = d_prosperous_mesa
+                }
+                1 = {
+                    add_deposit = d_ore_rich_caverns
+                }
+                1 = {
+                    add_deposit = d_rich_mountain
+                }
+                1 = {
+                    add_deposit = d_submerged_ore_veins
+                }
+            }
+        }
+        add_resource = {
+            food = 500
+            minerals = 500
+            consumer_goods = 500
+        }
+    }
+}
+
+#41302~41304觉的ck3生日趣味事件
+country_event = {
+    id = touhou_paragon_effect.41304
+    hide_window = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_mind_reader
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_subconscious
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_corpse_travel
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_nuclear
+        }
+    }
+    immediate = {
+        every_owned_leader = {
+            limit = {
+                has_trait = leader_trait_mind_reader
+            }
+            leader_event = { id = touhou_paragon_effect.41302 days = 1 random = 30 }
+        }
+    }
+}
+
+leader_event = {
+    id = touhou_paragon_effect.41302
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.41302.name
+    desc = {
+        text = touhou_paragon_effect.41302.desc
+    }
+    picture = GFX_evt_satori_birthday_horror
+    show_sound = event_ship_explosion
+    option = {
+        name = touhou_paragon_effect.41302.a
+        root = {
+            add_trait = leader_trait_heart_break
+        }
+        hidden_effect = {
+            root = {
+                leader_event = { id = touhou_paragon_effect.41303 days = 2 }
+            }
+        }
+    }
+}
+
+leader_event = {
+    id = touhou_paragon_effect.41303
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.41303.name
+    desc = {
+        text = touhou_paragon_effect.41303.desc
+    }
+    picture = GFX_evt_satori_birthday
+    show_sound = event_planetary_riot
+    immediate = {
+        root = {
+            remove_trait = leader_trait_heart_break
+            remove_trait = leader_trait_procrastinator
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.41303.a
+        owner = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_subconscious
+                }
+                add_trait = leader_trait_with_satori
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.41303.b
+        owner = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_corpse_travel
+                }
+                add_trait = leader_trait_with_satori
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.41303.c
+        owner = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_nuclear
+                }
+                add_trait = leader_trait_with_satori
+            }
+        }
+    }
+}
+
+#帕琪、小铃和觉的书会趣味事件，知识宝库、长眠庇护所、护林员小屋
+country_event = {
+    id = touhou_paragon_effect.41801
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.41801.name
+    desc = {
+        text = touhou_paragon_effect.41801.desc
+    }
+    picture = GFX_evt_book_club
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_mind_reader
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_books
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_knowledge
+        }
+        any_owned_planet = {
+            has_building = building_great_library
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.41801.a
+        set_country_flag = touhou_flag_flavor_book_club_memory_vaults
+        custom_tooltip = TOUHOU_FLAVOR_MEMORY_VAULTS
+    }
+    option = {
+        name = touhou_paragon_effect.41801.b
+        set_country_flag = touhou_flag_flavor_book_club_sanctuary_of_repose
+        custom_tooltip = TOUHOU_FLAVOR_SANCTUARY_OF_REPOSE
+    }
+    option = {
+        name = touhou_paragon_effect.41801.c
+        set_country_flag = touhou_flag_flavor_book_club_ranger_lodge
+        custom_tooltip = TOUHOU_FLAVOR_RANGER_LODGE
+    }
+    option = {
+        name = touhou_paragon_effect.41801.d
+        trigger = {
+            any_owned_leader = {
+                has_trait = leader_trait_magic
+            }
+        }
+        custom_tooltip = TOUHOU_FLAVOR_BOOK_CLUB_MARISA
+    }
+}
+
+#无何有之乡趣味事件，给琪露诺一个当总督的机会
+country_event = {
+    id = touhou_paragon_effect.40401
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.40401.name
+    desc = {
+        text = touhou_paragon_effect.40401.desc
+    }
+    picture = GFX_evt_cirno_daiyousei
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_ice
+        }
+        any_owned_leader = {
+            has_leader_flag = daiyousei_leader
+        }
+        any_owned_planet = {
+            is_planet_class = pc_arctic
+            is_colony = yes
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40401.a
+        every_owned_leader = {
+            limit = {
+                has_trait = leader_trait_ice
+            }
+            add_trait = leader_trait_arctic_governing
+            #    save_event_target_as = target_cirno
+            #}
+        }
+    }
+}
+

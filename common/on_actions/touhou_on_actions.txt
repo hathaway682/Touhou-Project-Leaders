@@ -56,6 +56,10 @@ on_monthly_pulse_country = {
 		touhou_paragon.42202
 		touhou_paragon_mission.40301
 		touhou_paragon_mission.40399 #触发所有早苗的任务判定
+		touhou_paragon_effect.40101 #1.1.4趣味事件包
+		touhou_paragon_effect.41304
+		touhou_paragon_effect.41801
+		touhou_paragon_effect.40401
 	}
 }
 
@@ -340,11 +344,11 @@ on_fleet_destroyed_perp = {
 }
 
 # No scope, like on_game_start
-on_mid_game_pulse = {
-	events = {
-		touhou_paragon_situation.42660
-	}
-}
+#on_mid_game_pulse = {
+#	events = {
+#		touhou_paragon_situation.42660
+#	}
+#}
 
 # Triggers when a Special Project to apply a species modification template has completed.
 # Note that this will trigger once for each combination of planet & original species.
@@ -352,6 +356,16 @@ on_mid_game_pulse = {
 # This = Country
 # From = Species ( Post Modification )
 on_modification_complete = {
+	events = {
+		touhou_paragon_mission.403092
+	}
+}
+
+# Called upon entering FTL (on-action name scripted on the Bypass type)
+# THIS = Fleet
+# FROM = System jumping to
+# FROMFROM = System jumped from
+on_entering_shroud_tunnel = {
 	events = {
 		touhou_paragon_mission.40309
 	}

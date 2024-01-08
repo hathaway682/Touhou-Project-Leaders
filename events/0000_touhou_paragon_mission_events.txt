@@ -1,6 +1,6 @@
 namespace = touhou_paragon_mission
 
-#早苗任务树
+#早苗任务树 
 country_event = {
 	id = touhou_paragon_mission.40301
 	title = touhou_paragon_mission.40301.name
@@ -450,6 +450,50 @@ country_event = {
 		trigger = { has_tradition = tr_psionics_finish }
 		text = touhou_paragon_mission.40309.desc.psi
 	}
+	picture = GFX_evt_sanae_mission
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_chain = touhou_sanae_mission_chain
+	trigger = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_faith.2
+		}
+		or = {
+			has_tradition = tr_psionics_finish
+		}
+		this = {
+			exists = leader
+			leader = {
+				has_trait = leader_trait_miracle
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40309.a
+		trigger = {
+			has_tradition = tr_psionics_finish
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_faith_2_psionics
+		}
+	}
+	after = {
+		hidden_effect = {
+			remove_point_of_interest = touhou_sanae_mission_chain_faith.2
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_faith.3
+				name = "touhou_sanae_mission_chain_faith_name"
+				desc = "touhou_sanae_mission_chain_faith_3_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.403092
+	title = touhou_paragon_mission.40309.name
 	desc = {
 		trigger = {
 			or = {
@@ -470,19 +514,9 @@ country_event = {
 			poi = touhou_sanae_mission_chain_faith.2
 		}
 		or = {
-			has_tradition = tr_psionics_finish
 			has_tradition = tr_synthetics_finish
 			has_tradition = tr_cybernetics_finish
 			has_tradition = tr_genetics_finish
-		}
-	}
-	option = {
-		name = touhou_paragon_mission.40309.a
-		trigger = {
-			has_tradition = tr_psionics_finish
-		}
-		add_modifier = {
-			modifier = modifier_sanae_mission_faith_2_psionics
 		}
 	}
 	option = {
@@ -548,7 +582,8 @@ country_event = {
 			}
 			count >= 5
 		}
-		any_council_member = {
+		any_owned_leader = {
+			is_councilor = yes
 			has_trait = leader_trait_miracle
 		}
 	}
@@ -891,36 +926,33 @@ country_event = {
 	fire_only_once = yes
 	event_chain = touhou_sanae_mission_chain
 	trigger = {
-		has_point_of_interest = {
-			poi = touhou_sanae_mission_chain_mil.4
+		this = {
+			has_point_of_interest = {
+				poi = touhou_sanae_mission_chain_mil.4
+			}
 		}
-		any_owned_army = {
-			and = {
+		fromfrom = {
+			or = {
+				count_ground_combat_attacker = {
+					limit = {
+						army_type = cybrex_warform
+					}
+					count >= 1
+				}
+				count_ground_combat_attacker = {
+					limit = {
+						army_type = sanae_warform
+					}
+					count >= 1
+				}
+				count_ground_combat_attacker = {
+					count >= 10
+				}
+			}
+			any_ground_combat_attacker = {
 				exists = leader
 				leader = {
 					has_trait = leader_trait_miracle
-				}
-			}
-			or = {
-				and = {
-					army_type = cybrex_warform
-					and = {
-						exists = fleet
-						fleet = { num_ships >= 20 }
-					}
-				}
-				and = {
-					army_type = sanae_warform
-					and = {
-						exists = fleet
-						fleet = { num_ships >= 20 }
-					}
-				}
-				and = {
-					and = {
-						exists = fleet
-						fleet = { num_ships >= 100 }
-					}
 				}
 			}
 		}
@@ -959,12 +991,13 @@ country_event = {
 				set_leader_flag = touhou_flag_sanae_robotist_update
 			}
 		}
+		custom_tooltip = UPDATE_ROBOSTIST_SANAE
 	}
 	after = {
 		hidden_effect = {
 			remove_point_of_interest = touhou_sanae_mission_chain_mil.4
 			create_point_of_interest = {
-				id = touhou_sanae_mission_chain_mil.4
+				id = touhou_sanae_mission_chain_mil.5
 				name = "touhou_sanae_mission_chain_mil_name"
 				desc = "touhou_sanae_mission_chain_mil_5_desc"
 				event_chain = "touhou_sanae_mission_chain"
@@ -1023,7 +1056,7 @@ country_event = {
 		hidden_effect = {
 			remove_point_of_interest = touhou_sanae_mission_chain_tech.4
 			create_point_of_interest = {
-				id = touhou_sanae_mission_chain_tech.4
+				id = touhou_sanae_mission_chain_tech.5
 				name = "touhou_sanae_mission_chain_tech_name"
 				desc = "touhou_sanae_mission_chain_tech_5_desc"
 				event_chain = "touhou_sanae_mission_chain"
@@ -1072,7 +1105,7 @@ country_event = {
 		hidden_effect = {
 			remove_point_of_interest = touhou_sanae_mission_chain_faith.4
 			create_point_of_interest = {
-				id = touhou_sanae_mission_chain_faith.4
+				id = touhou_sanae_mission_chain_faith.5
 				name = "touhou_sanae_mission_chain_faith_name"
 				desc = "touhou_sanae_mission_chain_faith_5_desc"
 				event_chain = "touhou_sanae_mission_chain"
@@ -1239,7 +1272,7 @@ country_event = {
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_adm.finish
 				name = "touhou_sanae_mission_chain_adm_name"
-				desc = " touhou_sanae_mission_finish"
+				desc = "touhou_sanae_mission_finish"
 				event_chain = "touhou_sanae_mission_chain"
 			}
 		}
@@ -1366,7 +1399,7 @@ country_event = {
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_mil.finish
 				name = "touhou_sanae_mission_chain_mil_name"
-				desc = " touhou_sanae_mission_finish"
+				desc = "touhou_sanae_mission_finish"
 				event_chain = "touhou_sanae_mission_chain"
 			}
 		}
@@ -1510,7 +1543,7 @@ country_event = {
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_tech.finish
 				name = "touhou_sanae_mission_chain_tech_name"
-				desc = " touhou_sanae_mission_finish"
+				desc = "touhou_sanae_mission_finish"
 				event_chain = "touhou_sanae_mission_chain"
 			}
 		}
@@ -1854,7 +1887,7 @@ country_event = {
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_faith.finish
 				name = "touhou_sanae_mission_chain_faith_name"
-				desc = " touhou_sanae_mission_finish"
+				desc = "touhou_sanae_mission_finish"
 				event_chain = "touhou_sanae_mission_chain"
 			}
 		}
