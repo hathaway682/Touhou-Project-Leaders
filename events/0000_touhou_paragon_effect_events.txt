@@ -3413,14 +3413,31 @@ country_event = {
             exists = leader
             leader = { has_trait = leader_trait_wholehearted }
         }
+        From = {
+            exists = species
+            species = {
+                NOR = {
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+            }
+            NOT = {
+                army_type = ghost
+            }
+        }
     }
 
     immediate = {
-        FromFromFrom = {
-            create_army = {
-                owner = Root
-                species = From.species
-                type = ghost
+        random_list = {
+            1 = {}
+            1 = {
+                FromFromFrom = {
+                    create_army = {
+                        owner = Root
+                        species = From.species
+                        type = ghost
+                    }
+                }
             }
         }
     }
