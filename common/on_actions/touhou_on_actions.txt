@@ -60,6 +60,8 @@ on_monthly_pulse_country = {
 		touhou_paragon_effect.41304
 		touhou_paragon_effect.41801
 		touhou_paragon_effect.40401
+		touhou_paragon_effect.41501
+		touhou_paragon_effect.40701
 	}
 }
 

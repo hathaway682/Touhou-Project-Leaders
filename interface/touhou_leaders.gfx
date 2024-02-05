@@ -216,6 +216,18 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_aya_suika_banquet"
+		texturefile = "gfx/event_pictures/aya_suika_banquet.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_remilia_marisa_bread"
+		texturefile = "gfx/event_pictures/remilia_marisa_bread.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 	# spriteType = {
 	# 	name = "GFX_text_touhou_leader"
 	# 	texturefile = "gfx/interface/icons/text_icons/text_icon_touhou_leader.dds"
