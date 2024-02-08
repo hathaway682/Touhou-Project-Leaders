@@ -1666,7 +1666,7 @@ change_government_touhou = {
 	}
 }
 
-reset_touhou_leader = {
+reset_touhou_leader_portrait = {
 	length = 1
 	icon = "GFX_edict_type_time"
 	potential = {

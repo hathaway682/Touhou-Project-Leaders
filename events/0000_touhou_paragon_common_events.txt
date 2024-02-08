@@ -1700,7 +1700,9 @@ country_event = { #Crisis
 		}
 		has_crisis = yes
 		NOT = {
-			has_country_flag = yuka_become_admiral
+			any_owned_leader = {
+				has_trait = leader_trait_flower_commander
+			}
 		}
 	}
 
@@ -1721,7 +1723,6 @@ country_event = { #Crisis
 		add_research_option = tech_master_spark
 		add_research_option = tech_final_spark
 		hidden_effect = {
-			set_country_flag = yuka_become_admiral
 			random_owned_leader = {
 				limit = {
 					has_trait = leader_trait_flower
@@ -1783,7 +1784,9 @@ country_event = { #Crisis
 			is_country_type = awakened_fallen_empire
 		}
 		NOT = {
-			has_country_flag = yuka_become_admiral
+			any_owned_leader = {
+				has_trait = leader_trait_flower_commander
+			}
 		}
 	}
 

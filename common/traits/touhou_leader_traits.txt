@@ -2975,8 +2975,8 @@ leader_trait_incarnation_of_nature_commander = {
 		TIER = none
 	}
 	fleet_modifier = {
-		ship_hull_regen_add_perc = 0.05
-		ship_armor_regen_add_perc = 0.025
+		ship_hull_regen_add_perc = 0.25
+		ship_armor_regen_add_perc = 0.25
 		weapon_type_space_fauna_weapon_damage_mult = 1
 	}
 	leader_class = { commander }
