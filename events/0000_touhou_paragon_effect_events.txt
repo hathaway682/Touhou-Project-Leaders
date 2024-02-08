@@ -9461,6 +9461,7 @@ country_event = {
                 limit = {
                     has_trait = leader_trait_time
                 }
+                set_leader_flag = sakuya_event_kill
                 kill_leader = {
                     show_notification = yes
                 }
@@ -9477,6 +9478,11 @@ country_event = {
     trigger = {
         from = {
             has_trait = leader_trait_time
+            or = {
+                has_trait = leader_trait_injured
+                has_leader_flag = sakuya_event_kill
+                leader_age >= value:death_age
+            }
         }
     }
     desc = {
@@ -9484,6 +9490,7 @@ country_event = {
     }
     picture = GFX_evt_remilia
     show_sound = event_planetary_riot
+    fire_only_once = yes
     immediate = {
         clone_leader = {
             target = From
@@ -10019,3 +10026,92 @@ country_event = {
     }
 }
 
+
+#东之国的不眠夜事件，要求有萃香和文，在宴会中
+country_event = {
+    id = touhou_paragon_effect.41501
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.41501.name
+    desc = {
+        text = touhou_paragon_effect.41501.desc
+    }
+    picture = GFX_evt_aya_suika_banquet
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_density
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_wind
+        }
+        any_owned_planet = {
+            has_modifier = modifier_endless_banquet
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.41501.a
+        every_owned_planet = {
+            limit = {
+                has_modifier = modifier_endless_banquet
+            }
+            random_moon = {
+                change_pc = pc_shattered
+                random_list = {
+                    1 = { add_deposit = d_minerals_3}
+                    1 = { add_deposit = d_minerals_4}
+                    1 = { add_deposit = d_minerals_5}
+                    1 = { add_deposit = d_minerals_6}
+                }
+            }
+        }
+        every_owned_leader = {
+            limit = {
+                has_trait = leader_trait_wind
+            }
+            add_trait = leader_trait_trade_focus_2
+        }
+    }
+}
+
+#食品级武器
+country_event = {
+    id = touhou_paragon_effect.40701
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.40701.name
+    desc = {
+        text = touhou_paragon_effect.40701.desc
+    }
+    picture = GFX_evt_remilia_marisa_bread
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_destiny_manipulation
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_magic
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_time
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_knowledge
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_wind
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40701.a
+        add_monthly_resource_mult = {
+            resource = energy
+            value = 2
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40701.b
+        set_country_flag = touhou_flag_allow_baguette_army
+        custom_tooltip = TOUHOU_FLAVOR_BAGUETTE_ARMY
+    }
+}

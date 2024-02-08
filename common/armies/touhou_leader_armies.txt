@@ -472,3 +472,45 @@ ness_assault_army = {
 		}
 	}
 }
+
+
+# baguette army
+baguette_army = {
+	damage = 1.25
+	health = 1.00
+	morale = 1.00
+	morale_damage = 1.25
+	collateral_damage = 0.25
+	war_exhaustion = 1.00
+	time = 30
+	icon = GFX_army_type_assault
+	resources = {
+		category = armies
+		cost = {
+			food = 50
+		}
+		upkeep = {
+			food = 0.5
+			energy = 0.5
+		}
+	}
+	potential_country = {
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_valid_civic = civic_machine_assimilator
+		}
+		has_country_flag = touhou_flag_allow_baguette_army
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+	}
+	ai_weight = {
+		base = 0
+	}
+}
