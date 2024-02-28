@@ -443,7 +443,7 @@ country_event = {
 	}
 }
 
-country_event = {
+event = {
 	id = touhou_paragon_mission.40309
 	title = touhou_paragon_mission.40309.name
 	desc = {
@@ -459,9 +459,7 @@ country_event = {
 		has_point_of_interest = {
 			poi = touhou_sanae_mission_chain_faith.2
 		}
-		or = {
-			has_tradition = tr_psionics_finish
-		}
+		has_tradition = tr_psionics_finish
 		this = {
 			exists = leader
 			leader = {
@@ -1169,12 +1167,6 @@ country_event = {
 				}
 				any_owned_megastructure = {
 					OR = {
-						is_megastructure_type = strategic_coordination_center_3
-						is_megastructure_type = strategic_coordination_center_restored
-					}
-				}
-				any_owned_megastructure = {
-					OR = {
 						is_megastructure_type = mega_art_installation_3
 						is_megastructure_type = mega_art_installation_4
 						is_megastructure_type = mega_art_installation_restored
@@ -1198,12 +1190,6 @@ country_event = {
 						is_megastructure_type = quantum_catapult_3
 						is_megastructure_type = quantum_catapult_restored
 						is_megastructure_type = quantum_catapult_improved_slingshot
-					}
-				}
-				any_owned_megastructure = {
-					OR = {
-						is_megastructure_type = strategic_coordination_center_3
-						is_megastructure_type = strategic_coordination_center_restored
 					}
 				}
 			}

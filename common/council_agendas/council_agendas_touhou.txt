@@ -1,5 +1,6 @@
 agenda_recruit_talent = {
 	agenda_cost = 3500
+	agenda_cooldown = 1800
 	allow = {
 		has_technology = tech_xeno_linguistics
 	}

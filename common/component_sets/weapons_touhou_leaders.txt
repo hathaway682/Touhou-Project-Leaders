@@ -15,19 +15,19 @@ component_set = {
 component_set = {
 	key = "GLIDINGSNAKE_SANAE"
 
-	icon = "GFX_ship_part_strike_craft_bomber_3"
+	icon = "GFX_ship_part_strike_craft_skrand"
 	icon_frame = 1
 }
 component_set = {
 	key = "IRONWHEEL_SANAE"
 
-	icon = "TORPEDO_3"
+	icon = "GFX_ship_part_archaeo_missiles"
 	icon_frame = 1
 }
 component_set = {
 	key = "ONBASHIRA_SANAE"
 
-	icon = "GFX_ship_part_strike_craft_skrand"
+	icon = "GFX_ship_part_mass_driver_5"
 	icon_frame = 1
 }
 
