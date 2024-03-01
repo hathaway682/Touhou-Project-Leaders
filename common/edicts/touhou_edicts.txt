@@ -1843,3 +1843,54 @@ reset_touhou_leader_portrait = {
 		}
 	}
 }
+
+sanae_mission_technocracy_for_spiritualist = {
+	length = 1
+	icon = "GFX_edict_type_time"
+	potential = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_tech.4
+		}
+		any_owned_leader = {
+			has_trait = leader_trait_miracle
+		}
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		not = {
+			any_owned_leader = {
+				has_trait = leader_trait_books
+			}
+		}
+	}
+	resources = {
+		category = country_base
+		cost = {
+			influence = 200
+			unity = 10000
+		}
+	}
+	allow = {
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_tech.4
+		}
+		any_owned_leader = {
+			has_trait = leader_trait_miracle
+		}
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		not = {
+			any_owned_leader = {
+				has_trait = leader_trait_books
+			}
+		}
+	}
+	effect = {
+		country_event = {
+			id = touhou_paragon.42300
+		}
+	}
+}

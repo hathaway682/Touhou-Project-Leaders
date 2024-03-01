@@ -9467,6 +9467,16 @@ country_event = {
                 }
             }
         }
+        every_owned_leader = {
+            if = {
+                limit = {
+                    has_trait = leader_trait_time
+                }
+                kill_leader = {
+                    show_notification = yes
+                }
+            }
+        }
     }
 }
 
