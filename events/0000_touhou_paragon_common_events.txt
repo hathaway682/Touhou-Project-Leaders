@@ -1868,7 +1868,9 @@ leader_event = {
 	}
 	desc = {
 		trigger = {
-			has_tradition = tr_cybernetics_finish
+			owner = {
+				has_tradition = tr_cybernetics_finish
+			}
 		}
 		text = touhou_paragon.42410.cyborg
 	}

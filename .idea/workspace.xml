@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7784210-dd34-44ca-b26b-8f8bd35035ab" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/common/solar_system_initializers/special_system_initializers.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/traits/REPLACE_leader_subclasses.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/game_rules/touhou_leader_rules.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/game_rules/touhou_leader_rules.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/planet_classes/touhou_planet_classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/planet_classes/touhou_planet_classes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_triggers/touhou_scripted_triggers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_triggers/touhou_scripted_triggers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/traits/20_leader_subclasses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/traits/touhou_governor_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/touhou_governor_traits.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_common_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_common_events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_effect_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_effect_events.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -296,16 +296,6 @@ is_domestic_robot = {
 	}
 }
 
-is_reanimator = {
-	OR = {
-		has_valid_civic = civic_reanimated_armies
-		has_valid_civic = civic_permanent_employment
-		has_valid_civic = civic_hive_cordyceptic_drones
-		has_valid_civic = civic_nether_world
-		has_valid_civic = civic_nether_world_corp
-	}
-}
-
 is_memorialist_empire = {
 	OR = {
 		has_valid_civic = civic_memorialist
@@ -331,6 +321,8 @@ is_reanimator = {
 		has_valid_civic = civic_reanimated_armies
 		has_valid_civic = civic_permanent_employment
 		has_valid_civic = civic_hive_cordyceptic_drones
+		has_valid_civic = civic_nether_world
+		has_valid_civic = civic_nether_world_corp
 		any_owned_leader = {
 			is_councilor = yes
 			has_trait = leader_trait_corpse_travel
@@ -394,5 +386,62 @@ is_memory_vault_empire = {
 		has_valid_civic = civic_memory_vault_machine
 		has_valid_civic = civic_memory_vault_hive
 		has_country_flag = touhou_flag_flavor_book_club_memory_vaults
+	}
+}
+
+can_be_leader = {
+	has_citizenship_rights = yes
+	NOT = { has_trait = trait_syncretic_proles }
+	can_think = yes
+	OR = {
+		is_robot_pop = no
+		AND = {
+			NOT = { has_trait = leader_trait_dolls }
+			root = {
+				has_technology = tech_synthetic_leaders
+			}
+		}
+		AND = {
+			has_trait = leader_trait_dolls
+			root = {
+				has_technology = tech_sapient_dolls
+			}
+		}
+		root = {
+			AND = {
+				has_authority = auth_machine_intelligence
+				is_mechanical_empire = yes
+			}
+		}
+	}
+	OR = {
+		is_same_species = root
+		root = {
+			NAND = {
+				has_origin = origin_necrophage
+				has_trait = trait_necrophage
+			}
+		}
+	}
+}
+
+can_be_military_leader = {
+	is_enslaved = no
+	is_sapient = yes
+	OR = {
+		is_robot_pop = no
+		owner = { has_policy_flag = ai_full_rights }
+		owner = { has_authority = auth_machine_intelligence }
+	}
+	OR = {
+		AND = { # MIs only accept Fully Integrated leaders
+			owner = { has_authority = auth_machine_intelligence }
+			has_citizenship_type = { type = citizenship_full_machine country = owner }
+			has_military_service_type = { type = military_service_full }
+		}
+		AND = { # non-MIs accept whatever
+			NOT = { owner = { has_authority = auth_machine_intelligence } }
+			has_military_service_type = { type = military_service_full }
+		}
 	}
 }
