@@ -1123,14 +1123,6 @@ planet_event = {
     }
 }
 
-
-random_planet_within_border = {
-    limit = {
-        valid_for_scholarium_sensors = yes
-    }
-    save_event_target_as = planetary_sensor_target
-}
-
 country_event = {
     id = touhou_paragon_effect.33
     hide_window = yes
@@ -3413,14 +3405,31 @@ country_event = {
             exists = leader
             leader = { has_trait = leader_trait_wholehearted }
         }
+        From = {
+            exists = species
+            species = {
+                NOR = {
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+            }
+            NOT = {
+                army_type = ghost
+            }
+        }
     }
 
     immediate = {
-        FromFromFrom = {
-            create_army = {
-                owner = Root
-                species = From.species
-                type = ghost
+        random_list = {
+            1 = {}
+            1 = {
+                FromFromFrom = {
+                    create_army = {
+                        owner = Root
+                        species = From.species
+                        type = ghost
+                    }
+                }
             }
         }
     }
@@ -9079,6 +9088,9 @@ ship_event = {
         }
         ship_event = { id = touhou_paragon_effect.42681 days = 180}
     }
+    option = {
+        name = OK
+    }
 }
 ship_event = {
     id = touhou_paragon_effect.42681
@@ -9108,6 +9120,9 @@ ship_event = {
             exile_leader_as = touhou_paragon_utsuho_diasbled
         }
         ship_event = { id = touhou_paragon_effect.42681 days = 90}
+    }
+    option = {
+        name = OK
     }
 }
 
@@ -9308,6 +9323,9 @@ country_event = {
         }
         set_country_flag = touhou_learder_utsuho_collapse_succeed
     }
+    option = {
+        name = OK
+    }
 }
 
 # 小小太阳
@@ -9424,6 +9442,9 @@ country_event = {
             }
         }
 
+    }
+    option = {
+        name = OK
     }
 }
 
@@ -9568,6 +9589,9 @@ country_event = {
             }
         }
     }
+    option = {
+        name = OK
+    }
 }
 country_event = {
     id = touhou_paragon_effect.41003
@@ -9619,6 +9643,9 @@ country_event = {
             1 = { set_country_flag = touhou_remilia_agree}
         }
         country_event = { id = touhou_paragon_effect.41005 days = 5 random = 5 }
+    }
+    option = {
+        name = OK
     }
 }
 

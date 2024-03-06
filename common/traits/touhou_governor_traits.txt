@@ -69,7 +69,7 @@ leader_trait_touhou_army_veteran = {
 		army_defense_damage_mult = 0.15
 	}
 	leader_potential_add = {
-		is_pool_leader = yes # Starting trait only.
+		always = no
 	}
 	on_gained_effect = {
 		add_age = value:percent_of_leader_lifespan|PERCENT|10|
@@ -551,10 +551,6 @@ leader_trait_touhou_trade_focus = {
 		COUNCIL = no
 		TIER = 1
 	}
-	leader_potential_add = {
-		has_paragon_dlc = yes
-		owner = { is_gestalt = no }
-	}
 	planet_modifier = {
 		trade_value_mult = 0.15
 	}
@@ -602,7 +598,7 @@ leader_trait_touhou_trade_focus_2 = {
 ###############
 
 leader_trait_touhou_frontier_spirit = {
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -627,7 +623,7 @@ leader_trait_touhou_frontier_spirit = {
 }
 
 leader_trait_touhou_frontier_spirit_2 = {
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	replace_traits = { "leader_trait_touhou_frontier_spirit" }
 	inline_script = {
 		script = trait/icon
@@ -645,7 +641,7 @@ leader_trait_touhou_frontier_spirit_2 = {
 }
 
 leader_trait_touhou_frontier_spirit_3 = {
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	replace_traits = { "leader_trait_touhou_frontier_spirit_2" }
 	inline_script = {
 		script = trait/icon
@@ -680,7 +676,7 @@ leader_trait_touhou_cultural_focus = {
 	councilor_modifier = {
 		planet_jobs_unity_produces_mult = 0.1
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	selectable_weight = {
 		weight = @class_trait_weight
@@ -701,7 +697,7 @@ leader_trait_touhou_cultural_focus_2 = {
 	councilor_modifier = {
 		planet_jobs_unity_produces_mult = 0.15
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 }
 
@@ -718,7 +714,7 @@ leader_trait_touhou_cultural_focus_3 = {
 	councilor_modifier = {
 		planet_jobs_unity_produces_mult = 0.25
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 }
 
@@ -746,7 +742,7 @@ trait_ruler_investor = {
 			has_trait = subclass_commander_lord
 		}
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	opposites = {
 		leader_trait_insider_trading
@@ -781,7 +777,7 @@ trait_ruler_investor_2 = {
 		leader_trait_insider_trading
 		leader_trait_insider_trading_2
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 }
 
 trait_ruler_investor_3 = {
@@ -805,7 +801,7 @@ trait_ruler_investor_3 = {
 	leader_potential_add = {
 		has_paragon_dlc = yes
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	opposites = {
 		leader_trait_insider_trading
@@ -834,7 +830,7 @@ trait_ruler_architectural_sense = {
 			has_trait = subclass_commander_lord
 		}
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	selectable_weight = {
 		inline_script = paragon/subclass_free_trait_weight
@@ -857,7 +853,7 @@ trait_ruler_architectural_sense_2 = {
 		planet_districts_cost_mult = -0.10
 		planet_building_build_speed_mult = 0.15
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 }
 
@@ -878,7 +874,7 @@ trait_ruler_architectural_sense_3 = {
 		planet_districts_upkeep_mult = -0.05
 		planet_building_build_speed_mult = 0.25
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_potential_add = {
 		has_paragon_dlc = yes
 	}
@@ -898,7 +894,7 @@ trait_ruler_deep_connections = {
 	councilor_modifier = {
 		country_councilor_influence_produces_add = 0.5
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_potential_add = {
 		OR = {
 			has_paragon_dlc = no
@@ -925,7 +921,7 @@ trait_ruler_deep_connections_2 = {
 	councilor_modifier = {
 		country_councilor_influence_produces_add = 0.75
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 }
 
@@ -945,7 +941,7 @@ trait_ruler_deep_connections_3 = {
 	leader_potential_add = {
 		has_paragon_dlc = yes
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 }
 
@@ -970,7 +966,7 @@ leader_trait_touhou_reformer = {
 		country_unity_produces_mult = 0.05
 		pop_government_ethic_attraction = 0.35
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	selectable_weight = {
 		inline_script = paragon/subclass_free_trait_weight
@@ -992,7 +988,7 @@ leader_trait_touhou_reformer_2 = {
 		country_unity_produces_mult = 0.1
 		pop_government_ethic_attraction = 0.5
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 }
 
@@ -1006,14 +1002,11 @@ leader_trait_touhou_reformer_3 = {
 		COUNCIL = yes
 		TIER = 3
 	}
-	leader_potential_add = {
-		has_paragon_dlc = yes
-	}
 	councilor_modifier = {
 		country_unity_produces_mult = 0.15
 		pop_government_ethic_attraction = 0.75
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 }
 
@@ -1041,7 +1034,7 @@ leader_trait_touhou_courtroom_training = {
 		leader_trait_intolerant
 		leader_trait_intolerant_2
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	selectable_weight = {
 		weight = @subclass_trait_weight
 		inline_script = paragon/council_weight_mult
@@ -1066,7 +1059,7 @@ leader_trait_touhou_courtroom_training_2 = {
 		leader_trait_intolerant
 		leader_trait_intolerant_2
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 }
 
 leader_trait_touhou_courtroom_training_3 = {
@@ -1087,7 +1080,7 @@ leader_trait_touhou_courtroom_training_3 = {
 		leader_trait_intolerant
 		leader_trait_intolerant_2
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 }
 
 #############
@@ -1114,7 +1107,7 @@ leader_trait_touhou_mining_focus = {
 		has_any_governor_focus = no
 		has_trait = subclass_commander_servant
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 	selectable_weight = {
@@ -1146,7 +1139,7 @@ leader_trait_touhou_mining_focus_2 = {
 	sector_modifier = {
 		planet_jobs_minerals_produces_mult = 0.125
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 }
@@ -1167,7 +1160,7 @@ leader_trait_touhou_mining_focus_3 = {
 	sector_modifier = {
 		planet_jobs_minerals_produces_mult = 0.225
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 }
@@ -1193,7 +1186,7 @@ leader_trait_touhou_generator_focus = {
 		has_any_governor_focus = no
 		has_trait = subclass_commander_servant
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 	selectable_weight = {
@@ -1225,7 +1218,7 @@ leader_trait_touhou_generator_focus_2 = {
 	sector_modifier = {
 		planet_jobs_energy_produces_mult = 0.125
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 }
@@ -1246,7 +1239,7 @@ leader_trait_touhou_generator_focus_3 = {
 	sector_modifier = {
 		planet_jobs_energy_produces_mult = 0.225
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 }
@@ -1273,7 +1266,7 @@ leader_trait_touhou_farming_focus = {
 		has_trait = subclass_commander_servant
 		has_any_governor_focus = no
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 	selectable_weight = {
@@ -1305,7 +1298,7 @@ leader_trait_touhou_farming_focus_2 = {
 	sector_modifier = {
 		planet_jobs_food_produces_mult = 0.125
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 }
@@ -1326,7 +1319,7 @@ leader_trait_touhou_farming_focus_3 = {
 	sector_modifier = {
 		planet_jobs_food_produces_mult = 0.225
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 }
@@ -1345,7 +1338,7 @@ leader_trait_touhou_settler = {
 		has_paragon_dlc = yes
 		has_trait = subclass_commander_servant
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	planet_modifier = {
 		planet_housing_add = 4
 		planet_amenities_add = 10
@@ -1379,7 +1372,7 @@ leader_trait_touhou_settler_2 = {
 		planet_housing_add = 3
 		planet_amenities_add = 7
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 }
 
@@ -1401,7 +1394,7 @@ leader_trait_touhou_settler_3 = {
 		planet_housing_add = 5
 		planet_amenities_add = 10
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 }
 
@@ -1425,7 +1418,7 @@ leader_trait_touhou_cartographer = {
 	councilor_modifier = {
 		terraform_speed_mult = 0.10
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official scientist }
 	selectable_weight = {
 		weight = @subclass_trait_weight
@@ -1446,7 +1439,7 @@ leader_trait_touhou_cartographer_2 = {
 	councilor_modifier = {
 		terraform_speed_mult = 0.25
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official scientist }
 }
 
@@ -1463,7 +1456,7 @@ leader_trait_touhou_cartographer_3 = {
 	councilor_modifier = {
 		terraform_speed_mult = 0.33
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official scientist }
 }
 
@@ -1484,7 +1477,7 @@ leader_trait_touhou_expeditionist = {
 		has_paragon_dlc = yes
 		has_trait = subclass_commander_lord
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	selectable_weight = {
 		weight = @subclass_trait_weight
@@ -1505,7 +1498,7 @@ leader_trait_touhou_expeditionist_2 = {
 	councilor_modifier = {
 		planet_clear_blocker_speed_mult = 0.25
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 }
 
@@ -1522,7 +1515,7 @@ leader_trait_touhou_expeditionist_3 = {
 	councilor_modifier = {
 		planet_clear_blocker_speed_mult = 0.33
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 }
 
@@ -1549,7 +1542,7 @@ leader_trait_touhou_naturalist = {
 			has_trait = subclass_scientist_governor
 		}
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official scientist }
 	selectable_weight = {
 		weight = @subclass_trait_weight
@@ -1573,7 +1566,7 @@ leader_trait_touhou_naturalist_2 = {
 	sector_modifier = {
 		deposit_blockers_natural_unity_produces_add = 3
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official scientist }
 }
 
@@ -1593,7 +1586,7 @@ leader_trait_touhou_naturalist_3 = {
 	sector_modifier = {
 		deposit_blockers_natural_unity_produces_add = 6
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official scientist }
 }
 
@@ -1621,7 +1614,7 @@ leader_trait_touhou_forge_focus = {
 	sector_modifier = {
 		planet_jobs_alloys_produces_mult = 0.05
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 	selectable_weight = {
@@ -1647,7 +1640,7 @@ leader_trait_touhou_forge_focus_2 = {
 		COUNCIL = no
 		TIER = 2
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	planet_modifier = {
 		planet_jobs_alloys_produces_mult = 0.2
 	}
@@ -1668,7 +1661,7 @@ leader_trait_touhou_forge_focus_3 = {
 		COUNCIL = no
 		TIER = 3
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	planet_modifier = {
 		planet_jobs_alloys_produces_mult = 0.35
 	}
@@ -1701,7 +1694,7 @@ leader_trait_touhou_industrial_focus = {
 	sector_modifier = {
 		planet_jobs_consumer_goods_produces_mult = 0.05
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 	selectable_weight = {
@@ -1733,7 +1726,7 @@ leader_trait_touhou_industrial_focus_2 = {
 	sector_modifier = {
 		planet_jobs_consumer_goods_produces_mult = 0.1
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 }
@@ -1754,7 +1747,7 @@ leader_trait_touhou_industrial_focus_3 = {
 	sector_modifier = {
 		planet_jobs_consumer_goods_produces_mult = 0.175
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 }
@@ -1784,7 +1777,7 @@ leader_trait_touhou_refinement_focus = {
 		planet_translucers_produces_mult = 0.05
 		planet_chemists_produces_mult = 0.05
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 	selectable_weight = {
@@ -1820,7 +1813,7 @@ leader_trait_touhou_refinement_focus_2 = {
 		planet_translucers_produces_mult = 0.1
 		planet_chemists_produces_mult = 0.1
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 }
@@ -1845,14 +1838,14 @@ leader_trait_touhou_refinement_focus_3 = {
 		planet_translucers_produces_mult = 0.175
 		planet_chemists_produces_mult = 0.175
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	leader_class = { commander official }
 	custom_tooltip_with_modifiers = only_one_governor_focus
 }
 
 ###################
 leader_trait_touhou_urbanist = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1865,7 +1858,7 @@ leader_trait_touhou_urbanist = {
 		has_paragon_dlc = yes
 		has_trait = subclass_commander_servant
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	planet_modifier = {
 		empire_size_districts_mult = -0.75
 		planet_buildings_upkeep_mult = -0.5
@@ -1906,7 +1899,7 @@ leader_trait_touhou_assembler = {
 			}
 		}
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	triggered_planet_modifier = {
 		potential = {
 			owner = { is_hive_empire = no }
@@ -1948,7 +1941,7 @@ leader_trait_touhou_assembler_2 = {
 		COUNCIL = no
 		TIER = 2
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	triggered_planet_modifier = {
 		potential = {
 			owner = { is_hive_empire = no }
@@ -1986,7 +1979,7 @@ leader_trait_touhou_assembler_3 = {
 		COUNCIL = no
 		TIER = 3
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	triggered_planet_modifier = {
 		potential = {
 			owner = { is_hive_empire = no }
@@ -2028,7 +2021,7 @@ leader_trait_touhou_pop_focused = {
 		has_paragon_dlc = yes
 		has_trait = subclass_commander_servant
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	planet_modifier = {
 		planet_jobs_worker_produces_mult = 0.05
 	}
@@ -2052,7 +2045,7 @@ leader_trait_touhou_pop_focused_2 = {
 		COUNCIL = no
 		TIER = 2
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	planet_modifier = {
 		planet_jobs_worker_produces_mult = 0.1
 		planet_jobs_specialist_produces_mult = 0.05
@@ -2074,7 +2067,7 @@ leader_trait_touhou_pop_focused_3 = {
 		COUNCIL = no
 		TIER = 3
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	planet_modifier = {
 		planet_jobs_worker_produces_mult = 0.15
 		planet_jobs_specialist_produces_mult = 0.1
@@ -2102,7 +2095,7 @@ leader_trait_touhou_distribution_lines = {
 		has_paragon_dlc = yes
 		has_trait = subclass_commander_servant
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	planet_modifier = {
 		planet_metallurgists_upkeep_mult = -0.05
 	}
@@ -2142,7 +2135,7 @@ leader_trait_touhou_distribution_lines_2 = {
 		COUNCIL = no
 		TIER = 2
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	planet_modifier = {
 		planet_metallurgists_upkeep_mult = -0.1
 	}
@@ -2178,7 +2171,7 @@ leader_trait_touhou_distribution_lines_3 = {
 		COUNCIL = no
 		TIER = 3
 	}
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	planet_modifier = {
 		planet_metallurgists_upkeep_mult = -0.2
 	}
@@ -2209,7 +2202,7 @@ leader_trait_touhou_distribution_lines_3 = {
 ###################
 
 leader_trait_touhou_efficient = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2239,7 +2232,7 @@ leader_trait_touhou_efficient = {
 }
 
 leader_trait_touhou_utopian_idealist = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2271,7 +2264,7 @@ leader_trait_touhou_utopian_idealist = {
 }
 
 leader_trait_touhou_mediator = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2323,7 +2316,7 @@ leader_trait_touhou_mediator = {
 }
 
 leader_trait_touhou_master_diplomat = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	cost = 1
 	inline_script = {
 		script = trait/icon
@@ -2358,7 +2351,7 @@ leader_trait_touhou_master_diplomat = {
 }
 
 leader_trait_touhou_supreme_organizer = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2385,7 +2378,7 @@ leader_trait_touhou_supreme_organizer = {
 }
 
 leader_trait_touhou_galvanizer = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2421,7 +2414,7 @@ leader_trait_touhou_galvanizer = {
 ###################
 
 leader_trait_industrial_espionage = {
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -2446,7 +2439,7 @@ leader_trait_industrial_espionage = {
 }
 
 leader_trait_industrial_espionage_2 = {
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	replace_traits = { "leader_trait_industrial_espionage" }
 	inline_script = {
 		script = trait/icon
@@ -2461,7 +2454,7 @@ leader_trait_industrial_espionage_2 = {
 }
 
 leader_trait_industrial_espionage_3 = {
-	veteran_class_locked_trait = yes
+	leader_trait_type = veteran
 	replace_traits = { "leader_trait_industrial_espionage_2" }
 	inline_script = {
 		script = trait/icon
@@ -2483,8 +2476,8 @@ leader_trait_industrial_espionage_3 = {
 ###################
 
 leader_trait_demolisher_destiny = {
-	destiny_trait = yes
-	ethic_destiny_trait = yes
+	leader_trait_type = destiny
+	ethic_leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -2506,8 +2499,8 @@ leader_trait_demolisher_destiny = {
 }
 
 leader_trait_fanatic = {
-	destiny_trait = yes
-	ethic_destiny_trait = yes
+	leader_trait_type = destiny
+	ethic_leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -2538,8 +2531,8 @@ leader_trait_fanatic = {
 }
 
 leader_trait_reverse_engineer = {
-	destiny_trait = yes
-	ethic_destiny_trait = yes
+	leader_trait_type = destiny
+	ethic_leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -2566,7 +2559,7 @@ leader_trait_reverse_engineer = {
 }
 
 leader_trait_supreme_admiral = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -2591,8 +2584,8 @@ leader_trait_supreme_admiral = {
 }
 
 leader_trait_pilferer = {
-	destiny_trait = yes
-	ethic_destiny_trait = yes
+	leader_trait_type = destiny
+	ethic_leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -2611,7 +2604,7 @@ leader_trait_pilferer = {
 }
 
 leader_trait_automation_champion = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2633,7 +2626,7 @@ leader_trait_automation_champion = {
 }
 
 leader_trait_expert_survivalist = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2656,7 +2649,7 @@ leader_trait_expert_survivalist = {
 }
 
 leader_trait_repair_crew = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -2675,7 +2668,7 @@ leader_trait_repair_crew = {
 }
 
 leader_trait_deep_space_explorer = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist

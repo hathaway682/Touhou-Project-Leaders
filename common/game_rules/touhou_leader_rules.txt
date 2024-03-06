@@ -283,56 +283,14 @@ can_fill_ruler_job = {
 #Root = country
 #This = pop
 can_generate_leader_from_pop = {
-	has_citizenship_rights = yes
-	NOT = { has_trait = trait_syncretic_proles }
-	can_think = yes
-	OR = {
-		AND = {
-			is_robot_pop = no
-			NOT = { has_trait = trait_thl_doll }
-			root = {
-				OR = {
-					has_technology = tech_synthetic_leaders
-					has_authority = auth_machine_intelligence
-					is_mechanical_empire = yes
-				}
-			}
-		}
-		AND = {
-			is_robot_pop = no
-			has_trait = trait_thl_doll
-			root = {
-				has_technology = tech_doll_leaders
-			}
-		}
-	}
-	OR = {
-		is_same_species = root
-		root = {
-			NAND = {
-				has_origin = origin_necrophage
-				has_trait = trait_necrophage
-			}
-		}
-	}
+	can_be_leader = yes
 }
 
-#Checks whether this species is eligible to become rulers through elections
 #Root = country
-#This = species
-can_generate_leader_from_species = {
-	is_sapient = yes
-	OR = {
-		NAND = {
-			NOT = { root = { has_technology = "tech_synthetic_leaders" } }
-			has_trait = "trait_mechanical"
-		}
-		NAND = {
-			NOT = { root = { has_technology = "tech_synthetic_leaders" } }
-			has_trait = "trait_mechanical"
-		}
-		has_citizenship_type = { type = citizenship_full country = root }
-	}
+#This = pop
+can_generate_military_leader_from_pop = {
+	can_be_leader = yes
+	can_be_military_leader = yes
 }
 
 species_has_happiness = {

@@ -72,7 +72,7 @@ pc_nether = {
 	uses_alternative_skies_for_moons = no
 	uses_alternative_skies_if_has_orbital_ring = no
 
-	carry_cap_per_free_district = @carry_cap_normal
+	carry_cap_per_free_district = @carry_cap_high
 
 	ideal = yes
 
