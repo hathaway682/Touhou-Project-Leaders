@@ -224,6 +224,13 @@ building_assembler_mk2 = {
 		planet_pop_assemblers_volatile_motes_upkeep_add = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_country_flag = kappa_enclave_mk2_already}
+		}
+		job_roboticist_add = 1
+	}
+
 	prerequisites = { tech_sanae_robot_worker }
 
 	triggered_desc = {

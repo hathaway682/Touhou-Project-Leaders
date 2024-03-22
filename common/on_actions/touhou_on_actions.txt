@@ -373,3 +373,12 @@ on_entering_shroud_tunnel = {
 	}
 }
 
+# Triggers when trying to open the diplomacy view for countries with custom diplomacy.
+# Country scope
+# This = target country (player)
+# From = source country
+on_custom_diplomacy = {
+	events = {
+		touhou_paragon_enclave.300
+	}
+}

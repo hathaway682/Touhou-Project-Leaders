@@ -79,3 +79,13 @@ opinion_aya_diplomacy = {
 		base = 5
 	}
 }
+
+opinion_destroyed_kappa_enclave = {
+	opinion = {
+		base = -100
+	}
+
+	decay = {
+		base = 2
+	}
+}

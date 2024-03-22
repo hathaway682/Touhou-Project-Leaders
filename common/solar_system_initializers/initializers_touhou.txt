@@ -1,0 +1,212 @@
+@base_moon_distance = 10
+
+### NEW ENCLAVES ###
+
+# Kappa Enclave
+kappa_enclave_init = {
+	name = "NAME_Kappa_Enclave_Star"
+	class = sc_pulsar
+	usage = misc_system_init
+	usage_odds = {
+		base = 100
+	}
+
+	max_instances = 1
+	spawn_chance = 100 #Guaranteed, assuming usage_odds passes
+
+	flags = { kappa_enclave_system enclave }
+
+	planet = {
+		name = "NAME_Kappa_Enclave_Star"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 15
+		has_ring = no
+	}
+	planet = {
+		class = "rl_unhabitable_planets"
+		count = { min = 2 max = 4 }
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 15 max = 20 }
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_ocean"
+		count = { min = 1 max = 2 }
+		orbit_distance = 40
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 20 max = 25 }
+		has_ring = no
+		init_effect = {
+			clear_deposits = yes
+			clear_planet_modifiers = yes
+			add_modifier = {
+				modifier = strong_magnetic_field
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_shattered"
+		count = { min = 1 max = 1 }
+		orbit_distance = 45
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 15 max = 25 }
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			set_planet_flag = kappa_enclave_planet
+			clear_deposits = yes
+			add_deposit = d_minerals_4
+			if = {
+				limit = {
+					NOT = { exists = event_target:kappa_enclave_country }
+				}
+				save_global_event_target_as = kappa_enclave_planet
+				create_species = {
+					homeworld = this
+					name = "NAME_TOUHOU_Kappa_portrait"
+					class = SALVAGER
+					namelist = HUMAN1
+					portrait = x125#tpop7
+					traits = {
+						ideal_planet_class = pc_ocean
+					}
+				}
+				modify_species = {
+					species = last_created_species
+					add_trait = trait_ingenious
+					add_trait = trait_kappa_aquatic
+					add_trait = trait_deviants
+				}
+				last_created_species = {
+					save_global_event_target_as = kappa_enclave_species_only_for_portrait
+				}
+				create_species = {
+					homeworld = this
+					name = "NAME_TOUHOU_Kappa"
+					class = SALVAGER
+					namelist = HUMAN1
+					portrait = tpop7
+					traits = {
+						ideal_planet_class = pc_ocean
+					}
+				}
+				modify_species = {
+					species = last_created_species
+					add_trait = trait_ingenious
+					add_trait = trait_kappa_aquatic
+					add_trait = trait_deviants
+				}
+				last_created_species = {
+					save_global_event_target_as = kappa_enclave_species
+				}
+				create_country = {
+					name = "NAME_Kappa_Enclave"
+					type = kappa_enclave
+					authority = "auth_democratic"
+					civics =	{
+						civic = civic_moriya_shinto
+					}
+					species = event_target:kappa_enclave_species_only_for_portrait
+					flag = {
+						icon = {
+							category = "enclaves"
+							file = "ne_flag_machine.dds"
+						}
+						background= {
+							category = "backgrounds"
+							file = "sinus.dds"
+						}
+						colors={
+							"light_blue"
+							"frog_green"
+							"null"
+							"null"
+						}
+					}
+					ethos = {
+						ethic = ethic_materialist
+						ethic = ethic_fanatic_xenophile
+					}
+					ignore_initial_colony_error = yes
+				}
+				last_created_country = {
+					set_country_flag = kappa_enclave
+					set_graphical_culture = mammalian_01
+					save_global_event_target_as = kappa_enclave_country
+					create_fleet = {
+						name = "NAME_Kappa_Enclave_Fleet"
+						settings = { spawn_debris = no }
+						effect = {
+							set_owner = prev
+								create_ship = {
+								name = random
+								design = "NAME_Kappa_Enclave_Station"
+								graphical_culture = prev
+							}
+							set_location = {
+								target = prevprev
+								angle = random
+								distance = 15
+							}
+							save_event_target_as = CustomCapital
+							prev = {
+								set_custom_capital_location = event_target:CustomCapital
+							}
+						}
+					}
+					ethic_leader_creator = {
+						SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+						LEADER_PORTRAIT = x125
+						CLASS = scientist
+						NAME = NAME_Nitori
+						LEVEL = 3
+						GENDER = female
+						IMMORTAL = no
+						ETHIC = materialist
+						DESC = nitori1
+						CATCH_PHRASE =  nitori1_catch_phrase
+					}
+					last_created_leader = { #4
+						add_trait = subclass_scientist_governor
+						add_trait = leader_trait_water
+						add_trait = leader_trait_robotist
+						add_trait = leader_trait_super_youkai_slug
+						add_trait = leader_trait_convenience_house
+						add_trait = leader_trait_engineer_in_water
+						add_trait = leader_trait_optical_camouflage
+						add_trait = leader_trait_cucumbers
+						add_trait = leader_trait_regeneration
+						add_trait = leader_trait_insider_trading
+						add_trait = leader_trait_embezzler_2
+						add_trait = leader_trait_reclusive
+						save_global_event_target_as = kappa_enclave_leader
+					}
+					set_leader = last_created_leader
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "rl_unhabitable_planets"
+		count = { min = 1 max = 1 }
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 20 max = 40 }
+		has_ring = no
+	}
+
+	planet = {
+		class = "rl_unhabitable_planets"
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 15 max = 30 }
+		has_ring = no
+	}
+}
