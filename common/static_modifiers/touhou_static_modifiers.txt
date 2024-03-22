@@ -616,3 +616,13 @@ modifier_rich_mineral_garden = {
 	icon_frame = 1
 	custom_tooltip = RICH_MINERAL_GARDEN
 }
+
+modifier_kappa_construction = {
+	planet_building_build_speed_mult = 0.2
+	planet_decision_enact_speed_mult = 0.05
+}
+
+modifier_kappa_robot = {
+	planet_pop_assembly_add = 1
+	planet_pop_assembly_organic_add = 1.125
+}

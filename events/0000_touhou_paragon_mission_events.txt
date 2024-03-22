@@ -443,11 +443,11 @@ country_event = {
 	}
 }
 
-event = {
+fleet_event = {
 	id = touhou_paragon_mission.40309
 	title = touhou_paragon_mission.40309.name
 	desc = {
-		trigger = { has_tradition = tr_psionics_finish }
+		trigger = { owner = { has_tradition = tr_psionics_finish} }
 		text = touhou_paragon_mission.40309.desc.psi
 	}
 	picture = GFX_evt_sanae_mission
@@ -456,10 +456,12 @@ event = {
 	fire_only_once = yes
 	event_chain = touhou_sanae_mission_chain
 	trigger = {
-		has_point_of_interest = {
-			poi = touhou_sanae_mission_chain_faith.2
+		owner = {
+			has_point_of_interest = {
+				poi = touhou_sanae_mission_chain_faith.2
+			}
 		}
-		has_tradition = tr_psionics_finish
+		owner = { has_tradition = tr_psionics_finish}
 		this = {
 			exists = leader
 			leader = {
@@ -470,7 +472,9 @@ event = {
 	option = {
 		name = touhou_paragon_mission.40309.a
 		trigger = {
-			has_tradition = tr_psionics_finish
+			owner = {
+				has_tradition = tr_psionics_finish
+			}
 		}
 		add_modifier = {
 			modifier = modifier_sanae_mission_faith_2_psionics
@@ -478,12 +482,14 @@ event = {
 	}
 	after = {
 		hidden_effect = {
-			remove_point_of_interest = touhou_sanae_mission_chain_faith.2
-			create_point_of_interest = {
-				id = touhou_sanae_mission_chain_faith.3
-				name = "touhou_sanae_mission_chain_faith_name"
-				desc = "touhou_sanae_mission_chain_faith_3_desc"
-				event_chain = "touhou_sanae_mission_chain"
+			owner = {
+				remove_point_of_interest = touhou_sanae_mission_chain_faith.2
+				create_point_of_interest = {
+					id = touhou_sanae_mission_chain_faith.3
+					name = "touhou_sanae_mission_chain_faith_name"
+					desc = "touhou_sanae_mission_chain_faith_3_desc"
+					event_chain = "touhou_sanae_mission_chain"
+				}
 			}
 		}
 	}
@@ -529,7 +535,7 @@ country_event = {
 		}
 		every_owned_pop = {
 			limit = {
-				is_same_species = root
+				is_same_species = from
 				species = {
 					has_psionic_species_trait = no
 				}
@@ -903,7 +909,7 @@ country_event = {
 		hidden_effect = {
 			remove_point_of_interest = touhou_sanae_mission_chain_adm.4
 			create_point_of_interest = {
-				id = touhou_sanae_mission_chain_adm.4
+				id = touhou_sanae_mission_chain_adm.5
 				name = "touhou_sanae_mission_chain_adm_name"
 				desc = "touhou_sanae_mission_chain_adm_5_desc"
 				event_chain = "touhou_sanae_mission_chain"
@@ -1131,14 +1137,8 @@ country_event = {
 				}
 				any_owned_megastructure = {
 					OR = {
-						is_megastructure_type = ring_world_3_intermediate
-						is_megastructure_type = ring_world_restored
-					}
-				}
-				any_owned_megastructure = {
-					OR = {
-						is_megastructure_type = dyson_sphere_disco
-						is_megastructure_type = dyson_sphere_disco_restored
+						is_megastructure_type = dyson_sphere_5
+						is_megastructure_type = dyson_sphere_restored
 					}
 				}
 				any_owned_megastructure = {
@@ -1197,23 +1197,31 @@ country_event = {
 				has_point_of_interest = {
 					poi = touhou_sanae_mission_chain_adm.5
 				}
-				not = { has_ascension_perk = ap_galactic_wonders_utopia}
+				nor = {
+					has_ascension_perk = ap_galactic_wonders_utopia
+					has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+				}
 				num_ascension_perks >= 8
 			}
 		}
-
 	}
 	option = {
 		name = touhou_paragon_mission.40318.a
 		trigger = {
-			not = { has_ascension_perk = ap_galactic_wonders_utopia}
+			nor = {
+				has_ascension_perk = ap_galactic_wonders_utopia
+				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+			}
 			num_ascension_perks >= 8
 		}
 	}
 	option = {
 		name = touhou_paragon_mission.40318.b
 		trigger = {
-			has_ascension_perk = ap_galactic_wonders_utopia
+			or = {
+				has_ascension_perk = ap_galactic_wonders_utopia
+				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+			}
 		}
 		allow = {
 			allowed_crisis_type = prethoryn
@@ -1225,7 +1233,10 @@ country_event = {
 	option = {
 		name = touhou_paragon_mission.40318.c
 		trigger = {
-			has_ascension_perk = ap_galactic_wonders_utopia
+			or = {
+				has_ascension_perk = ap_galactic_wonders_utopia
+				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+			}
 		}
 		allow = {
 			allowed_crisis_type = contingency
@@ -1237,7 +1248,10 @@ country_event = {
 	option = {
 		name = touhou_paragon_mission.40318.d
 		trigger = {
-			has_ascension_perk = ap_galactic_wonders_utopia
+			or = {
+				has_ascension_perk = ap_galactic_wonders_utopia
+				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+			}
 		}
 		allow = {
 			allowed_crisis_type = unbidden
@@ -1249,7 +1263,10 @@ country_event = {
 	option = {
 		name = touhou_paragon_mission.40318.e
 		trigger = {
-			has_ascension_perk = ap_galactic_wonders_utopia
+			or = {
+				has_ascension_perk = ap_galactic_wonders_utopia
+				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+			}
 		}
 	}
 	after = {

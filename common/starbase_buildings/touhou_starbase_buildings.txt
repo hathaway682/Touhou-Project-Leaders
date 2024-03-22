@@ -56,3 +56,55 @@ tengo_fortress = {
 
 	custom_tooltip = tengu_storm_caster_desc
 }
+
+kappa_expanded_shipyard = {
+	icon = "GFX_starbase_irassian_naval_yards"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = { has_country_flag = kappa_expanded_shipyard_enable }
+		is_normal_starbase = yes
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_shipyard"
+			OR = {
+				has_starbase_module = shipyard
+				starbase_buildable_is_in_queue_before = {
+					first = shipyard
+					second = kappa_expanded_shipyard
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 200
+			food = 1000
+		}
+
+		produces = {
+			food = 10
+		}
+
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 0
+			count_starbase_modules = {
+				type = shipyard
+				count < 1
+			}
+		}
+	}
+	custom_tooltip = kappa_expanded_shipyard_desc
+}
