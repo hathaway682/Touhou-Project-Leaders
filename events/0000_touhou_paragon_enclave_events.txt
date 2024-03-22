@@ -3,9 +3,9 @@ namespace = touhou_paragon_enclave
 #####################
 # SALVAGER ENCLAVES
 #####################
-
 # Salvager Enclave Greetings: Gatekeeper event
 # Via on_custom_diplomacy | this = target country (player); from = country being contacted
+
 country_event = {
     id = touhou_paragon_enclave.300
     hide_window = yes
