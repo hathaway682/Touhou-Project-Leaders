@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7784210-dd34-44ca-b26b-8f8bd35035ab" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/common/traits/REPLACE_leader_subclasses.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_spell_card_l_simp_chinese.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/game_rules/touhou_leader_rules.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/game_rules/touhou_leader_rules.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/planet_classes/touhou_planet_classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/planet_classes/touhou_planet_classes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_triggers/touhou_scripted_triggers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_triggers/touhou_scripted_triggers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/traits/20_leader_subclasses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/traits/REPLACE_leader_subclasses.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/common/traits/touhou_governor_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/touhou_governor_traits.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_common_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_common_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_effect_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_effect_events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,13 +31,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Documents/Paradox Interactive/Stellaris/mod/eco",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\Paradox Interactive\Stellaris\mod\touhou_leaders\localisation\simp_chinese" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

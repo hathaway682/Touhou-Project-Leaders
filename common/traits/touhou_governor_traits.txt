@@ -4,7 +4,7 @@
 # SHARED TRAITS BLOCKED IN PARAGON #
 ####################################
 
-trait_ruler_frontier_spirit = {
+trait_touhou_ruler_frontier_spirit = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -18,7 +18,7 @@ trait_ruler_frontier_spirit = {
 		planet_colony_development_speed_mult = 0.15
 	}
 	leader_potential_add = {
-		has_paragon_dlc = no
+		always = no
 	}
 	leader_class = { commander official }
 	selectable_weight = {
@@ -42,7 +42,7 @@ leader_trait_touhou_intellectual = {
 		planet_jobs_engineering_research_produces_mult = 0.10
 	}
 	leader_potential_add = {
-		has_paragon_dlc = no
+		always = no
 	}
 	leader_class = { commander official }
 	initial = no
@@ -190,7 +190,7 @@ leader_trait_touhou_agrarian_upbringing_2 = {
 #########################
 
 ###################
-trait_ruler_fertility_preacher = {
+trait_touhou_ruler_fertility_preacher = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -230,8 +230,8 @@ trait_ruler_fertility_preacher = {
 	}
 }
 
-trait_ruler_fertility_preacher_2 = {
-	replace_traits = { "trait_ruler_fertility_preacher" }
+trait_touhou_ruler_fertility_preacher_2 = {
+	replace_traits = { "trait_touhou_ruler_fertility_preacher" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -719,7 +719,7 @@ leader_trait_touhou_cultural_focus_3 = {
 }
 
 ###################
-trait_ruler_investor = {
+trait_touhou_ruler_investor = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -737,10 +737,7 @@ trait_ruler_investor = {
 		planet_jobs_produces_mult = 0.025
 	}
 	leader_potential_add = {
-		OR = {
-			has_paragon_dlc = no
-			has_trait = subclass_commander_lord
-		}
+		has_trait = subclass_commander_lord
 	}
 	leader_trait_type = veteran
 	leader_class = { commander official }
@@ -754,8 +751,8 @@ trait_ruler_investor = {
 	}
 }
 
-trait_ruler_investor_2 = {
-	replace_traits = { "trait_ruler_investor" }
+trait_touhou_ruler_investor_2 = {
+	replace_traits = { "trait_touhou_ruler_investor" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -780,8 +777,8 @@ trait_ruler_investor_2 = {
 	leader_trait_type = veteran
 }
 
-trait_ruler_investor_3 = {
-	replace_traits = { "trait_ruler_investor_2" }
+trait_touhou_ruler_investor_3 = {
+	replace_traits = { "trait_touhou_ruler_investor_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -798,9 +795,12 @@ trait_ruler_investor_3 = {
 		potential = { trait_is_gestalt_check = yes }
 		planet_jobs_produces_mult = 0.1
 	}
+<<<<<<< HEAD
 	leader_potential_add = {
 		has_paragon_dlc = yes
 	}
+=======
+>>>>>>> a525f427a4f711b0d45363374c6fc5a157ae7ad0
 	leader_trait_type = veteran
 	leader_class = { commander official }
 	opposites = {
@@ -810,7 +810,7 @@ trait_ruler_investor_3 = {
 }
 
 ###################
-trait_ruler_architectural_sense = {
+trait_touhou_ruler_architectural_sense = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -825,10 +825,7 @@ trait_ruler_architectural_sense = {
 		planet_building_build_speed_mult = 0.10
 	}
 	leader_potential_add = {
-		OR = {
-			has_paragon_dlc = no
-			has_trait = subclass_commander_lord
-		}
+		has_trait = subclass_commander_lord
 	}
 	leader_trait_type = veteran
 	leader_class = { commander official }
@@ -838,8 +835,8 @@ trait_ruler_architectural_sense = {
 	}
 }
 
-trait_ruler_architectural_sense_2 = {
-	replace_traits = { "trait_ruler_architectural_sense" }
+trait_touhou_ruler_architectural_sense_2 = {
+	replace_traits = { "trait_touhou_ruler_architectural_sense" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -857,8 +854,8 @@ trait_ruler_architectural_sense_2 = {
 	leader_class = { commander official }
 }
 
-trait_ruler_architectural_sense_3 = {
-	replace_traits = { "trait_ruler_architectural_sense_2" }
+trait_touhou_ruler_architectural_sense_3 = {
+	replace_traits = { "trait_touhou_ruler_architectural_sense_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -875,14 +872,17 @@ trait_ruler_architectural_sense_3 = {
 		planet_building_build_speed_mult = 0.25
 	}
 	leader_trait_type = veteran
+<<<<<<< HEAD
 	leader_potential_add = {
 		has_paragon_dlc = yes
 	}
+=======
+>>>>>>> a525f427a4f711b0d45363374c6fc5a157ae7ad0
 	leader_class = { commander official }
 }
 
 ###################
-trait_ruler_deep_connections = {
+trait_touhou_ruler_deep_connections = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -896,10 +896,7 @@ trait_ruler_deep_connections = {
 	}
 	leader_trait_type = veteran
 	leader_potential_add = {
-		OR = {
-			has_paragon_dlc = no
-			has_trait = subclass_commander_lord
-		}
+		has_trait = subclass_commander_lord
 	}
 	leader_class = { commander official }
 	selectable_weight = {
@@ -908,8 +905,8 @@ trait_ruler_deep_connections = {
 	}
 }
 
-trait_ruler_deep_connections_2 = {
-	replace_traits = { "trait_ruler_deep_connections" }
+trait_touhou_ruler_deep_connections_2 = {
+	replace_traits = { "trait_touhou_ruler_deep_connections" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -925,8 +922,8 @@ trait_ruler_deep_connections_2 = {
 	leader_class = { commander official }
 }
 
-trait_ruler_deep_connections_3 = {
-	replace_traits = { "trait_ruler_deep_connections_2" }
+trait_touhou_ruler_deep_connections_3 = {
+	replace_traits = { "trait_touhou_ruler_deep_connections_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -938,9 +935,12 @@ trait_ruler_deep_connections_3 = {
 	councilor_modifier = {
 		country_councilor_influence_produces_add = 1
 	}
+<<<<<<< HEAD
 	leader_potential_add = {
 		has_paragon_dlc = yes
 	}
+=======
+>>>>>>> a525f427a4f711b0d45363374c6fc5a157ae7ad0
 	leader_trait_type = veteran
 	leader_class = { commander official }
 }
@@ -957,10 +957,7 @@ leader_trait_touhou_reformer = {
 	}
 	leader_potential_add = {
 		is_gestalt = no
-		OR = {
-			has_paragon_dlc = no
-			has_trait = subclass_commander_lord
-		}
+		has_trait = subclass_commander_lord
 	}
 	councilor_modifier = {
 		country_unity_produces_mult = 0.05
@@ -1539,7 +1536,6 @@ leader_trait_touhou_naturalist = {
 		has_paragon_dlc = yes
 		OR = {
 			has_trait = subclass_commander_servant
-			has_trait = subclass_scientist_governor
 		}
 	}
 	leader_trait_type = veteran
@@ -1890,7 +1886,6 @@ leader_trait_touhou_assembler = {
 		has_paragon_dlc = yes
 		OR = {
 			has_trait = subclass_commander_servant
-			has_trait = subclass_scientist_governor
 		}
 		owner = {
 			OR = {

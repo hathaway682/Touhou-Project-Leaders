@@ -1841,6 +1841,12 @@ reset_touhou_leader_portrait = {
 			}
 			change_leader_portrait = x77
 		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_water
+			}
+			change_leader_portrait = x125
+		}
 	}
 }
 
