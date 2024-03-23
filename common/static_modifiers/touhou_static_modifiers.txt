@@ -1,3 +1,5 @@
+
+
 earthquake_damage = {
 	army_defense_health_mult = -0.2
 	army_defense_morale_mult = -0.6

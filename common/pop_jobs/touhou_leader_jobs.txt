@@ -83,7 +83,7 @@ head_researcher = {
         mult = planet.modifier:job_researcher_naval_cap_add
     }
 
-    # This needs to be triggered planet modifier to get the correct scope.
+    # This requirement to be triggered planet modifier to get the correct scope.
     triggered_planet_modifier = {
         potential = {
             always = yes

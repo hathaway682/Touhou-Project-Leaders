@@ -10,7 +10,7 @@
 	# max_decimals: default 2
 	# good: sets if it registers as "good" (i.e. a positive number is green, a negative red). Default no.
 	# neutral: sets if no value is either good or bad (all is yellow). Default no.
-	# hidden: probably hides it in tooltips? Needs testing. Default no.
+	# hidden: probably hides it in tooltips? requirement testing. Default no.
 	# no_diff: not sure what this does either. Default no
 	# cap_zero_to_one: ditto. Default no
 	# localize_with_value_key: expects you to put $VALUE$ in the loc key (the number will be printed there). Default no

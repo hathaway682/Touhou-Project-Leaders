@@ -7,7 +7,7 @@ koishi_berserk_fleet = {
 	share_survey_data = no
 	custom_diplomacy = no
 	enforces_borders = no
-	needs_survey = no
+	requirement_survey = no
 	has_complete_sensor = yes
 	can_have_their_comms_shared = yes
 	government = no
@@ -21,9 +21,9 @@ koishi_berserk_fleet = {
 
 	faction = {
 		hostile = yes
-		needs_border_access = no
+		requirement_border_access = no
 		generate_borders = no
-		needs_colony = no
+		requirement_colony = no
 	}
 	modules = {
 		exclusive_diplomacy_module = {
@@ -44,7 +44,7 @@ koishi_berserk_fleet = {
 	share_survey_data = no
 	custom_diplomacy = no
 	enforces_borders = no
-	needs_survey = no
+	requirement_survey = no
 	has_complete_sensor = yes
 	can_have_their_comms_shared = yes
 	government = no
@@ -55,9 +55,9 @@ koishi_berserk_fleet = {
 
 	faction = {
 		hostile = yes
-		needs_border_access = no
+		requirement_border_access = no
 		generate_borders = no
-		needs_colony = no
+		requirement_colony = no
 	}
 	modules = {
 		exclusive_diplomacy_module = {
@@ -80,9 +80,9 @@ kappa_enclave = {
 	}
 	faction = {
 		hostile = no
-		needs_border_access = no
+		requirement_border_access = no
 		generate_borders = no
-		needs_colony = no
+		requirement_colony = no
 	}
 	custom_diplomacy = yes
 	custom_opinion = yes

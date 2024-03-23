@@ -1683,3 +1683,383 @@ complete_sanae_mission = {
 		}
 	}
 }
+
+set_start_char_id = {
+	if = {
+		limit = {
+			any_owned_leader = {
+				has_touhou_leader_trait = yes
+			}
+		}
+		ordered_owned_leader = {
+			limit = {
+				has_touhou_leader_trait = yes
+			}
+			order_by = value:touhou_leader_id
+			position = 0
+			inverse = yes
+			root = {
+				set_variable = {
+					which = seleted_char_id
+					value = prev.value:touhou_leader_id
+				}
+			}
+			if = {
+				limit = {
+					check_variable_arithmetic = {
+						which = value:leader_num_spell_cards
+						value > 0
+					}
+				}
+				root = {
+					set_variable = {
+						which = seleted_card_id
+						value = 1
+					}
+					set_variable = {
+						which = seleted_card_nums
+						value = prev.value:leader_num_spell_cards
+					}
+				}
+			}
+			else = {
+				root = {
+					set_variable = {
+						which = seleted_card_id
+						value = 0
+					}
+					set_variable = {
+						which = seleted_card_nums
+						value = 0
+					}
+				}
+			}
+		}
+	}
+	else = {
+		set_variable = {
+			which = seleted_char_id
+			value = 0
+		}
+		root = {
+			set_variable = {
+				which = seleted_card_id
+				value = 0
+			}
+			set_variable = {
+				which = seleted_card_nums
+				value = 0
+			}
+		}
+	}
+}
+
+add_char_id = {
+	from = {
+		if = {
+			limit = {
+				any_owned_leader = {
+					has_touhou_leader_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_after_selected
+						value > 0
+					}
+				}
+			}
+			ordered_owned_leader = {
+				limit = {
+					has_touhou_leader_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_after_selected
+						value > 0
+					}
+				}
+				order_by = value:leader_id_after_selected
+				position = 0
+				inverse = yes
+				from = {
+					set_variable = {
+						which = seleted_char_id
+						value = prev.value:touhou_leader_id
+					}
+				}
+				if = {
+					limit = {
+						check_variable_arithmetic = {
+							which = value:leader_num_spell_cards
+							value > 0
+						}
+					}
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = prev.value:leader_num_spell_cards
+						}
+					}
+				}
+				else = {
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 0
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = 0
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_owned_leader = {
+					has_touhou_leader_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_before_selected
+						value > 0
+					}
+				}
+			}
+			ordered_owned_leader = {
+				limit = {
+					has_touhou_leader_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_before_selected
+						value > 0
+					}
+				}
+				order_by = value:leader_id_before_selected
+				position = 0
+				from = {
+					set_variable = {
+						which = seleted_char_id
+						value = prev.value:touhou_leader_id
+					}
+				}
+				if = {
+					limit = {
+						check_variable_arithmetic = {
+							which = value:leader_num_spell_cards
+							value > 0
+						}
+					}
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = prev.value:leader_num_spell_cards
+						}
+					}
+				}
+				else = {
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 0
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = 0
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+subtract_char_id = {
+	from = {
+		if = {
+			limit = {
+				any_owned_leader = {
+					has_touhou_leader_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_before_selected
+						value > 0
+					}
+				}
+			}
+			ordered_owned_leader = {
+				limit = {
+					has_touhou_leader_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_before_selected
+						value > 0
+					}
+				}
+				order_by = value:leader_id_before_selected
+				position = 0
+				inverse = yes
+				from = {
+					set_variable = {
+						which = seleted_char_id
+						value = prev.value:touhou_leader_id
+					}
+				}
+				if = {
+					limit = {
+						check_variable_arithmetic = {
+							which = value:leader_num_spell_cards
+							value > 0
+						}
+					}
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = prev.value:leader_num_spell_cards
+						}
+					}
+				}
+				else = {
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 0
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = 0
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_owned_leader = {
+					has_touhou_leader_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_after_selected
+						value > 0
+					}
+				}
+			}
+			ordered_owned_leader = {
+				limit = {
+					has_touhou_leader_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_after_selected
+						value > 0
+					}
+				}
+				order_by = value:leader_id_after_selected
+				position = 0
+				from = {
+					set_variable = {
+						which = seleted_char_id
+						value = prev.value:touhou_leader_id
+					}
+				}
+				if = {
+					limit = {
+						check_variable_arithmetic = {
+							which = value:leader_num_spell_cards
+							value > 0
+						}
+					}
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = prev.value:leader_num_spell_cards
+						}
+					}
+				}
+				else = {
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 0
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = 0
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+add_card_id = {
+	if = {
+		limit = {
+			check_variable = {
+				which = seleted_card_id
+				value < seleted_card_nums
+			}
+		}
+		change_variable = {
+			which = seleted_card_id
+			value = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = seleted_card_nums
+				value > 0
+			}
+		}
+		set_variable = {
+			which = seleted_card_id
+			value = 1
+		}
+	}
+	else = {
+		set_variable = {
+			which = seleted_card_id
+			value = 0
+		}
+	}
+}
+
+subtract_card_id = {
+	if = {
+		limit = {
+			check_variable = {
+				which = seleted_card_id
+				value > 1
+			}
+		}
+		subtract_variable = {
+			which = seleted_card_id
+			value = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = seleted_card_nums
+				value > 0
+			}
+		}
+		set_variable = {
+			which = seleted_card_id
+			value = seleted_card_nums
+		}
+	}
+	else = {
+		set_variable = {
+			which = seleted_card_id
+			value = 0
+		}
+	}
+}

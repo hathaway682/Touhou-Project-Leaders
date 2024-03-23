@@ -1,0 +1,304 @@
+
+#Scope type varies depending on what is selected
+# This = selected object (if planet, ship, fleet, system, ambient object, megastructure, federation, espionage operation, arc site or first contact) or player country
+# From = player country
+# Note: It's advised to check is_scope_type = planet/whatever in the allow trigger, since it's possible to confuse the scopes if multiple interfaces are open
+
+# Usage example in a .gui file:
+#	effectbuttonType = {
+#		name = button_effect_test
+#		quadTextureSprite = GFX_fleetview_destroy_fleet
+#		position = { x = 283 y = 0 }
+#		scale = 1
+#		orientation = UPPER_LEFT
+#		effect = example_button_effect
+#	}
+
+touhou_no_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+
+	}
+}
+
+touhou_subtract_char_id_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				count_owned_leader = {
+					limit = {
+						has_touhou_leader_trait = yes
+					}
+					count > 1
+				}
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			subtract_char_id = yes
+		}
+	}
+}
+
+touhou_add_char_id_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				count_owned_leader = {
+					limit = {
+						has_touhou_leader_trait = yes
+					}
+					count > 1
+				}
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			add_char_id = yes
+		}
+	}
+}
+
+touhou_subtract_card_id_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				check_variable = {
+					which = seleted_card_nums
+					value > 1
+				}
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			subtract_card_id = yes
+		}
+	}
+}
+
+touhou_add_card_id_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		hidden_trigger = {
+			from = {
+				check_variable = {
+					which = seleted_card_nums
+					value > 1
+				}
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			add_card_id = yes
+		}
+	}
+}
+
+touhou_ex_charge_effect = {
+	potential = {
+		from = {
+			check_variable = {
+				which = ex_charge
+				value = 0
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = touhou_ex_charge_desc
+		hidden_effect = {
+			from = {
+				set_variable = {
+					which = ex_charge
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+touhou_ex_charge_cancel_effect = {
+	potential = {
+		from = {
+			check_variable = {
+				which = ex_charge
+				value = 1
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = touhou_ex_charge_desc
+		hidden_effect = {
+			from = {
+				set_variable = {
+					which = ex_charge
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+touhou_trace_select_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		root = {
+			exists = owner
+			owner = {
+				is_same_value = from
+			}
+			exists = leader
+			leader = {
+				has_touhou_leader_trait = yes
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = touhou_trace_select_desc
+		hidden_effect = {
+			from = {
+				set_variable = {
+					which = seleted_char_id
+					value = root.value:touhou_leader_id
+				}
+			}
+			if = {
+				limit = {
+					check_variable_arithmetic = {
+						which = value:leader_num_spell_cards
+						value > 0
+					}
+				}
+				from = {
+					set_variable = {
+						which = seleted_card_id
+						value = 1
+					}
+					set_variable = {
+						which = seleted_card_nums
+						value = root.value:leader_num_spell_cards
+					}
+				}
+			}
+			else = {
+				from = {
+					set_variable = {
+						which = seleted_card_id
+						value = 0
+					}
+					set_variable = {
+						which = seleted_card_nums
+						value = 0
+					}
+				}
+			}
+		}
+	}
+}
+
+touhou_reimu_spell_card_effect = {
+	potential = {
+		check_variable = {
+			which = seleted_card_id
+			value = 1
+		}
+	}
+	allow = {
+		hidden_trigger = {
+			OR = {
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+					}
+					reimu_card_1_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+					}
+					reimu_card_2_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
+					}
+					reimu_card_3_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 4
+						}
+					}
+					reimu_card_4_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 5
+						}
+					}
+					reimu_card_5_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 6
+						}
+					}
+					reimu_card_6_trigger = yes
+				}
+			}
+		}
+	}
+
+	effect = {
+	}
+}

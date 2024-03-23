@@ -1,0 +1,269 @@
+guiTypes = {
+
+    ### FACTION OVERVIEW GUI ###
+
+    containerWindowType = {
+        name = "touhou_spell_card_view"
+        orientation = center
+        origo = center
+        moveable = yes
+        size = { width = 364 height = 210 }
+        position = { x = -190 y = -220 }
+        orientation = lower_right
+
+        background = {
+            name = "background"
+            quadTextureSprite = "GFX_tile_outliner_bg"
+        }
+
+        #iconType = {
+        #    name = "hex_bg"
+        #    spriteType = "GFX_hex_bg"
+        #    position = { x = -10 y = -14 }
+        #    alwaysTransparent = yes
+        #}
+        #iconType = {
+        #    name = "empire_header_line"
+        #    quadTextureSprite = "GFX_line_long"
+        #    position = { x = 6 y = 22 }
+        #    alwaysTransparent = yes
+        #}
+
+        buttonType = {
+            name = "close"
+            quadTextureSprite = "GFX_close"
+            position = { x= -42 y = 12 }
+            orientation = "UPPER_RIGHT"
+            shortcut = "ESCAPE"
+            clicksound = "back_click"
+        }
+
+        ### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+
+        buttonType = { name = "focus_button" position = { x = -1180 y = -1112 } spriteType = "GFX_fleetview_focus" } # hidden
+        instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1120 y = -115 } } # hidden
+        buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1110 y = -11430 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+        buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+        containerWindowType = {
+            name = "portrait_background"
+            position = { x = -1117 y = -1145 }
+            size = { width = 0 height = 0 } 	# hide portrait window
+            iconType = { name = "event_picture" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+            iconType = { name = "portrait" spriteType = "GFX_portrait_character" } # hidden
+        }
+        containerWindowType = {
+            name = "portrait"
+            position = { x = -1117 y = -1145 }
+            size = { width = 0 height = 0 } # hide portrait window
+            iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask" } # hidden
+            iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+            iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+            iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+        }
+        iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+        instantTextBoxType = { name = "empire_name" font = "malgun_goth_24" } # hidden
+        instantTextBoxType = { name = "empire_government_type" font = "cg_16b" } # hidden
+        instantTextBoxType = { name = "empire_personality_type" font = "cg_16b" } # hidden
+        overlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1145 y = -11138 } } # hidden
+        iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1125 y = -11235 } } # hidden
+        containerWindowType = {
+            name = "leader_details"
+            position = { x = -1125 y = -1175 }
+            containerWindowType = { name = "empire_traits_box" } # hidden
+            instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+            overlappingElementsBoxType = { name = "leader_traits" } # hidden
+            instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+            instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+        }
+        containerWindowType = {
+            name = "opinion_window"
+            position = { x = -1127 y = -11110 }
+            size = { width = 94 height = 30 }
+            iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+            instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+        }
+
+        ### EVENT DIPLO ###
+
+        containerWindowType = {
+            name = "EVENT_DIPLO"
+            position = { x = -2000 y = -5000 }
+            #size = { width = 563 height = 220 }
+            moveable = no
+
+            instantTextBoxType = {
+                name = "action_title"
+                font = "malgun_goth_24"
+                position = { x = 20 y = 0 }
+                maxWidth = 200
+                alwaysTransparent = yes
+            }
+            instantTextBoxType = {
+                name = "action_desc"
+                font = "malgun_goth_24"
+                position = { x = 490 y = 0 }
+                maxWidth = 500
+                maxHeight = 180
+                orientation = "UPPER_LEFT"
+                format = center
+                alwaysTransparent = yes
+                text_color_code = "H"
+            }
+            listboxType = { name = "option_list" position = { x = -11500 y = -1130 } } # hidden option list
+        }
+        # Description Section
+        instantTextBoxType = {
+            name = "alien_message"
+            font = "cg_16b"
+            position = { x = -2000 y = -1000 }
+            maxWidth = 620
+            maxHeight = 200
+            format = left
+            scrollbartype = "standardtext_slider"
+        }
+
+        ###标题
+        # Custom header
+        instantTextBoxType = {
+            name = "touhou_spell_card_header"
+            font = "malgun_goth_24"
+            text = "spell_card_header" 	# header text
+            position = { x = 20 y = 5 }
+            maxWidth = 543
+            maxHeight = 22
+            fixedSize = yes
+            alwaysTransparent = yes
+        }
+
+        effectButtonType = {
+            name = "touhou_mana_text"
+            quadTextureSprite = "GFX_invisible"
+            buttonText = "touhou_mana_value"
+            buttonFont = malgun_goth_24
+            position = { x = 15 y = 36 }
+            size = { width = 274 height = 38 }
+            format = left
+            vertical_alignment = center
+            alwaysTransparent = yes
+            effect = touhou_no_effect
+        }
+
+        effectButtonType = {
+            name = "touhou_cards_text"
+            quadTextureSprite = "GFX_invisible"
+            buttonText = "touhou_cards_value"
+            buttonFont = malgun_goth_24
+            position = { x = 180 y = 36 }
+            size = { width = 274 height = 38 }
+            format = left
+            vertical_alignment = center
+            alwaysTransparent = yes
+            effect = touhou_no_effect
+        }
+
+        effectButtonType = {
+            name = "touhou_select_char_left"
+            quadTextureSprite = "GFX_button_left"
+            position = { x = 10 y = 76 }
+            size = { width = 38 height = 38 }
+            effect = touhou_subtract_char_id_effect
+            orientation = upper_left
+        }
+
+        effectButtonType = {
+            name = "touhou_select_char_right"
+            quadTextureSprite = "GFX_button_right"
+            position = { x = -42 y = 76 }
+            size = { width = 38 height = 38 }
+            effect = touhou_add_char_id_effect
+            orientation = upper_right
+        }
+
+        effectButtonType = {
+            name = "touhou_select_char_text"
+            quadTextureSprite = "GFX_black_box_bg"
+            buttonText = "touhou_selected_char"
+            buttonFont = "malgun_goth_24"
+            position = { x = 48 y = 76 }
+            size = { width = 274 height = 38 }
+            format = center
+            vertical_alignment = center
+            alwaysTransparent = yes
+            effect = touhou_no_effect
+        }
+
+        effectButtonType = {
+            name = "touhou_select_spell_left"
+            quadTextureSprite = "GFX_button_left"
+            position = { x = 10 y = 120 }
+            size = { width = 38 height = 38 }
+            effect = touhou_subtract_card_id_effect
+            orientation = upper_left
+        }
+
+        effectButtonType = {
+            name = "touhou_select_spell_right"
+            quadTextureSprite = "GFX_button_right"
+            position = { x = -42 y = 120 }
+            size = { width = 38 height = 38 }
+            effect = touhou_add_card_id_effect
+            orientation = upper_right
+        }
+
+        effectButtonType = {
+            name = "touhou_select_spell_text"
+            quadTextureSprite = "GFX_black_box_bg"
+            buttonText = "touhou_selected_spell"
+            buttonFont = "malgun_goth_24"
+            position = { x = 48 y = 120 }
+            size = { width = 274 height = 38 }
+            format = center
+            vertical_alignment = center
+            alwaysTransparent = yes
+            effect = touhou_no_effect
+        }
+
+        effectButtonType = {
+            name = "touhou_select_spell_ex_charge"
+            quadTextureSprite = "GFX_button_upgrade_ascension_tier"
+            position = { x = 10 y = 164 }
+            size = { width = 38 height = 38 }
+            alwaysTransparent = yes
+            effect = touhou_ex_charge_effect
+            orientation = upper_left
+        }
+
+        effectButtonType = {
+            name = "touhou_select_spell_ex_charge_selected"
+            quadTextureSprite = "GFX_button_upgrade_ascension_tier_selected"
+            position = { x = 10 y = 164 }
+            size = { width = 38 height = 38 }
+            alwaysTransparent = yes
+            effect = touhou_ex_charge_cancel_effect
+            orientation = upper_left
+        }
+
+        effectButtonType = {
+            name = "touhou_select_char_trace"
+            quadTextureSprite = "GFX_button_track_project"
+            position = { x = 50 y = 164 }
+            size = { width = 38 height = 38 }
+            alwaysTransparent = yes
+            effect = touhou_trace_select_effect
+            orientation = upper_left
+        }
+
+        effectButtonType = {
+            name = "touhou_confirm_button_reimu"
+            quadTextureSprite = "GFX_standard_button_172_34"
+            position = { x = -192 y = 154 }
+            buttonText = "spell_card_requirement_group_1"
+            buttonFont = "malgun_goth_24"
+            size = { width = 116 height = 38 }
+            format = center
+            vertical_alignment = center
+            effect = touhou_reimu_spell_card_effect
+            orientation = upper_right
+        }
+    }
+}

@@ -228,6 +228,13 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+
+	spriteType = {
+		name = "GFX_button_upgrade_ascension_tier_selected"
+		texturefile = "gfx/interface/buttons/button_upgrade_ascension_tier.dds"
+		noOfFrames = 3
+	}
+
 	# spriteType = {
 	# 	name = "GFX_text_touhou_leader"
 	# 	texturefile = "gfx/interface/icons/text_icons/text_icon_touhou_leader.dds"

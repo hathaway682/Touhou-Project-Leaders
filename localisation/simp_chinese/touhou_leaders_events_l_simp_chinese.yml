@@ -1066,3 +1066,6 @@
  TOUHOU_FLAVOR_BAGUETTE_ARMY:0 "现在我们可以招募法棍战士！"
  baguette_army:0 "法棍战士"
  baguette_army_desc:0 "你会记得你被砸过多少片面包吗？"
+
+ touhou_shrine_ruin:0 "废弃神社"
+ touhou_shrine_ruin_desc:0 "在这个宜居的世界的表面上，我们发现了一座荒废的木制建筑，除此之外不存在任何文明的迹象。"

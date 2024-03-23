@@ -1,0 +1,783 @@
+defined_text = {
+	name = GetSelectedLeader
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 1
+				}
+			}
+		}
+		localization_key = touhou_selected_char_1
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 2
+				}
+			}
+		}
+		localization_key = touhou_selected_char_2
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 3
+				}
+			}
+		}
+		localization_key = touhou_selected_char_3
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 4
+				}
+			}
+		}
+		localization_key = touhou_selected_char_4
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 5
+				}
+			}
+		}
+		localization_key = touhou_selected_char_5
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 6
+				}
+			}
+		}
+		localization_key = touhou_selected_char_6
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 7
+				}
+			}
+		}
+		localization_key = touhou_selected_char_7
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 8
+				}
+			}
+		}
+		localization_key = touhou_selected_char_8
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 9
+				}
+			}
+		}
+		localization_key = touhou_selected_char_9
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 10
+				}
+			}
+		}
+		localization_key = touhou_selected_char_10
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 11
+				}
+			}
+		}
+		localization_key = touhou_selected_char_11
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 12
+				}
+			}
+		}
+		localization_key = touhou_selected_char_12
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 13
+				}
+			}
+		}
+		localization_key = touhou_selected_char_13
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 14
+				}
+			}
+		}
+		localization_key = touhou_selected_char_14
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 15
+				}
+			}
+		}
+		localization_key = touhou_selected_char_15
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 16
+				}
+			}
+		}
+		localization_key = touhou_selected_char_16
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 17
+				}
+			}
+		}
+		localization_key = touhou_selected_char_17
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 18
+				}
+			}
+		}
+		localization_key = touhou_selected_char_18
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 19
+				}
+			}
+		}
+		localization_key = touhou_selected_char_19
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 20
+				}
+			}
+		}
+		localization_key = touhou_selected_char_20
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 21
+				}
+			}
+		}
+		localization_key = touhou_selected_char_21
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 22
+				}
+			}
+		}
+		localization_key = touhou_selected_char_22
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 23
+				}
+			}
+		}
+		localization_key = touhou_selected_char_23
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 24
+				}
+			}
+		}
+		localization_key = touhou_selected_char_24
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 25
+				}
+			}
+		}
+		localization_key = touhou_selected_char_25
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 26
+				}
+			}
+		}
+		localization_key = touhou_selected_char_26
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 27
+				}
+			}
+		}
+		localization_key = touhou_selected_char_27
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 28
+				}
+			}
+		}
+		localization_key = touhou_selected_char_28
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 29
+				}
+			}
+		}
+		localization_key = touhou_selected_char_29
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 30
+				}
+			}
+		}
+		localization_key = touhou_selected_char_30
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 31
+				}
+			}
+		}
+		localization_key = touhou_selected_char_31
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 32
+				}
+			}
+		}
+		localization_key = touhou_selected_char_32
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 33
+				}
+			}
+		}
+		localization_key = touhou_selected_char_33
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 34
+				}
+			}
+		}
+		localization_key = touhou_selected_char_34
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 35
+				}
+			}
+		}
+		localization_key = touhou_selected_char_35
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 36
+				}
+			}
+		}
+		localization_key = touhou_selected_char_36
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 37
+				}
+			}
+		}
+		localization_key = touhou_selected_char_37
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 38
+				}
+			}
+		}
+		localization_key = touhou_selected_char_38
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 39
+				}
+			}
+		}
+		localization_key = touhou_selected_char_39
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 40
+				}
+			}
+		}
+		localization_key = touhou_selected_char_40
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 41
+				}
+			}
+		}
+		localization_key = touhou_selected_char_41
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 42
+				}
+			}
+		}
+		localization_key = touhou_selected_char_42
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 43
+				}
+			}
+		}
+		localization_key = touhou_selected_char_43
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 44
+				}
+			}
+		}
+		localization_key = touhou_selected_char_44
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 45
+				}
+			}
+		}
+		localization_key = touhou_selected_char_45
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 46
+				}
+			}
+		}
+		localization_key = touhou_selected_char_46
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 47
+				}
+			}
+		}
+		localization_key = touhou_selected_char_47
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 48
+				}
+			}
+		}
+		localization_key = touhou_selected_char_48
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 49
+				}
+			}
+		}
+		localization_key = touhou_selected_char_49
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 50
+				}
+			}
+		}
+		localization_key = touhou_selected_char_50
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 51
+				}
+			}
+		}
+		localization_key = touhou_selected_char_51
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 52
+				}
+			}
+		}
+		localization_key = touhou_selected_char_52
+	}
+
+	default = touhou_selected_char_0
+}
+
+defined_text = {
+	name = GetSelectedCard
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_group_1
+	}
+
+	default = spell_card_none
+}
+
+defined_text = {
+	name = GetSelectedCardrequirement
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_char_id
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_requirement_group_1
+	}
+
+	default = touhou_error_no_spell
+}
+
+defined_text = {
+	name = GetSelectedCard_1
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_reimu_1
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 2
+				}
+			}
+		}
+		localization_key = spell_card_reimu_2
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 3
+				}
+			}
+		}
+		localization_key = spell_card_reimu_3
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 4
+				}
+			}
+		}
+		localization_key = spell_card_reimu_4
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 5
+				}
+			}
+		}
+		localization_key = spell_card_reimu_5
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 6
+				}
+			}
+		}
+		localization_key = spell_card_reimu_6
+	}
+	default = spell_card_none
+}
+
+defined_text = {
+	name = GetSelectedCardRequirement_1
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+					}
+					NOT = {
+						reimu_card_1_trigger = yes
+					}
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+					}
+					NOT = {
+						reimu_card_2_trigger = yes
+					}
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
+					}
+					NOT = {
+						reimu_card_3_trigger = yes
+					}
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 5
+						}
+					}
+					NOT = {
+						reimu_card_5_trigger = yes
+					}
+				}
+			}
+		}
+		localization_key = touhou_error_wrong_target
+	}
+
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 4
+						}
+					}
+					NOT = {
+						reimu_card_4_trigger = yes
+					}
+				}
+			}
+			OR = {
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 6
+						}
+					}
+					NOT = {
+						reimu_card_6_trigger = yes
+					}
+				}
+			}
+		}
+		localization_key = touhou_error_unmet_needs
+	}
+
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 2
+				}
+			}
+		}
+		localization_key = touhou_error_no_resource
+	}
+
+	default = touhou_error_no_spell
+}

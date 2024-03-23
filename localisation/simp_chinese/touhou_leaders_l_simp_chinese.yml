@@ -448,28 +448,6 @@
  leader_exorcism_roud_3:0 "驱魔棒：超长"
  leader_exorcism_roud_3_desc:1 "这位领袖随身携带的驱魔棒还在不停的增长着，我们不得不增加了旗舰舱室的高度！"
 
-
- decision_planet_barrier:0 "二重结界"
- decision_planet_barrier_desc:1 "使用§Y$NAME_Reimu$§!的结界术保护这颗星球，降低轨道轰炸对其的伤害。"
-
- decision_remove_planet_barrier:0 "二重结界"
- decision_remove_planet_barrier_desc:1 "移除这颗星球上的结界，以在更需要的地方重新布置。"
-
- modifier_planet_barrier:0 "二重结界"
- modifier_planet_barrier_desc:1 "这颗星球受到§Y$NAME_Reimu$§!的结界保护，降低了其被轰炸时受到的伤害。"
-
- bombardment_yume_no_huuin:0 "梦想封印"
- bombardment_yume_no_huuin_desc:3 "$bombardment_yume_no_huuin$轰炸将以灵力制导攻击星球上军事目标，但仍存在平民伤亡风险。\n-对§Y陆军§!造成§R巨大§!伤害\n-对§Y行星§!造成§Y中度§!伤害\n-对§Y人口§!造成§Y中度§!伤害\n-将会轰炸不设防的星球\n-消灭最后一个人口时，将星球封印为屏障星球"
-
- paragon_reimu_wormhole_key:0 "幻想亚空穴"
-
- edict_reimu_wormhole_key:0 "幻想亚空穴"
- edict_reimu_wormhole_key_desc:0 "使用§Y$NAME_Reimu$§!的能力暂时打开空间的裂缝，使我们的舰队得以穿行。"
-
- edict_reimu_invincible:0 "梦想天生"
- edict_reimu_invincible_desc:0 "使用§Y$NAME_Reimu$§!的能力暂时让她率领的舰队进入彻底的无敌状态。"
- invincible_effect:0 "灵梦所在的舰队在§Y100§!天内变为§H无敌状态§!。"
-
  mod_weapon_type_explosive_speed_mult:0 "爆炸武器速度"
 
  NAME_Marisa:0 "雾雨魔理沙"
@@ -1844,8 +1822,6 @@
  touhou_paragon.42700.f.response:0 "咳咳，实在抱歉有点失态了。刚刚兴奋之下的胡言请勿当真，我指的是即将和我们一起到来的山童，虽然我们一直和她们有所矛盾，但毫无疑问，她们是联盟中与我们河童既是对手，又是相互依存互助的好伙伴。"
  touhou_paragon.42700.g:0 "你们当时是怎样想到在银河系里开这样一个集团呢？"
  touhou_paragon.42700.g.response:0 "在来访的路上，我注意到了在你们银河运行的打捞者城邦，他们的商业模式对于我们河童来说值得借鉴，而且这是一个解析各类文明科技的绝好机会，于是我召集我的同族建立一个类似的空间站。你也看到了，我们能提供的东西远比他们更多。"
- #touhou_paragon.42700.g:0 "除了你个人的技术之外，和你们种族的合作还有什么更有利的前景吗？"
- #touhou_paragon.42700.g.response:0 "在来访的路上，我注意到了在你们银河运行的打捞者城邦，他们的商业模式对于我们河童来说值得借鉴，而且这是一个解析各类文明舰船科技的绝好机会，如果你们能提供许可和支持，我可以召集我的同族建立一个类似的空间站，我向你保证，我们能提供的东西远比他们更多。"
  touhou_paragon.42700.hire_custom_tooltip:0 "$NAME_Nitori$作为一名领袖加入了我们的帝国。"
 
  leader_trait_water:0 "操纵水程度的能力"

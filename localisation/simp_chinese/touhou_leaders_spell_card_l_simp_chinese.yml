@@ -2,31 +2,136 @@
  #################################################
  #符卡
  #################################################
- spell_card_tenshi_1:0 "地符「不让土壤之剑」"
- spell_card_tenshi_1_desc:0 "COST：§Y1§!\n目标：任意不存在§Y$unstable_tectonics$§!行星修正的己方§Y殖民地§!。\n\n将气质打入地下使地上产生大的隆起，制造一个增加£district£§Y采矿区划§!上限的行星特征，有概率添加§Y$unstable_tectonics$§!行星修正。"
- spell_card_tenshi_2:0 "非想「非想非非想之剑」"
- spell_card_tenshi_2_desc:0 "COST：§Y1§!\n目标：任意存在§Y环境危害§!的§Y星系§!。（可选择星系内任意对象）\n\n绯想之剑所具备的力量之一，施加气质封印的符卡，消除该星系§P环境危害§!对己方的影响。"
- spell_card_tenshi_3:0 "地震「先忧后乐之剑」"
- spell_card_tenshi_3_desc:0 "COST：§Y2§!\n条件：§H比那名居天子§!正在指挥舰队或陆军。\n目标：和§H比那名居天子§!处于相同星系的§Y敌对行星§!，或是§H比那名居天子§!正在战斗的星球。\n\n将剑刺入地面使地壳产生运动，清扫整个行星表面的敌军，对行星造成§Y50%§!的破坏度，每支敌军都有§Y50%§!概率被消灭。"
- spell_card_tenshi_4:0 "气符「天启气象之剑」"
- spell_card_tenshi_4_desc:0 "COST：§Y3§!\n条件：己方控制存在§Y环境危害§!的星系，存在可用目标。\n目标：任意§Y不存在环境危害§!的§Y星系§!。（可选择星系内任意对象）\n\n绯想之剑所具备的力量之一，以剑为载体聚集气质并释放，使得星系内的敌人舰队承受指定的§P环境危害§!（需要己方控制拥有对应环境危害的星系）。"
- spell_card_tenshi_5:0 "气符「无念无想的境界」"
- spell_card_tenshi_5_desc:0 "COST：§Y1§!\n目标：任意存在§Y指挥官§!的己方运输船部队，或是己方§Y指挥官§!正在战斗的星球。\n\n可以让人感受不到任何痛楚的符卡，使得目标所指挥的部队完全不会受到§Y士气伤害§!。"
- spell_card_tenshi_6:0 "「全人类的绯想天」"
- spell_card_tenshi_6_desc:0 "COST：§Y5§!\n条件：§H比那名居天子§!正在指挥舰队或陆军。\n目标：和§H比那名居天子§!处于相同星系的§Y敌对行星§!，或是§H比那名居天子§!正在战斗的星球。\n\n将周围的气质凝缩在绯想之剑上，并向下方一口气放出的超大技，会彻底清扫星球的人口并将其改造为随机宜居类型。"
-20
- spell_card_suika_1:0 "鬼神「Missing Purple Power」"
- spell_card_suika_1_desc:0 "COST：§Y1§!\n条件：已经部署§H伊吹萃香§!。\n\n§H伊吹萃香§!在自己所在地变形为了可以进行陆地战的§Y鬼王巨人§!，这会将她锁定为自己的§P指挥官§!，可以在星球决议中变回正常形态。"
- spell_card_suika_2:0 "鬼气「蒙蒙迷雾」"
- spell_card_suika_2_desc:0 "COST：§Y1§!\n条件：已经部署§H伊吹萃香§!。\n\n§Y伊吹萃香§!在自己所在地变形为了一团可以进行太空战的§Y鬼雾§!，这会将她锁定为自己的§P指挥官§!，可以通过战舰与星球的互动变回正常形态。"
- spell_card_suika_3:0 "雾符「云集雾散」"
- spell_card_suika_3_desc:0 "COST：§Y2§!\n条件：§H伊吹萃香§!正在指挥舰队或运输船队。\n目标：和§H伊吹萃香§!处于相同星系的§Y友方舰队§!。\n\n将鬼雾作为防壁的防御技，为指定的舰队的每一艘战舰提供数值固定的额外§Y护盾§!。"
- spell_card_suika_4:0 "鬼火「超高密度磷祸术」"
- spell_card_suika_4_desc:0 "COST：§Y3§!\n条件：§H伊吹萃香§!正在指挥舰队或运输船队。\n目标：和§H伊吹萃香§!处于相同星系的§Y敌对舰队§!。\n\n将高密度的热量萃集到敌方舰队处，产生持续损害舰队的高温，受到影响的舰队将不断损失§Y船体值§!。"
- spell_card_suika_5:0 "醉梦「施饿鬼缚之术」"
- spell_card_suika_5_desc:0 "COST：§Y4§!\n条件：§H伊吹萃香§!正在指挥舰队或运输船队。\n目标：和§H伊吹萃香§!处于相同星系的§Y敌对舰队§!。\n\n用锁链束缚敌方的舰队随后牵引至§H伊吹萃香§!所在位置，敌人舰队会暂时承受巨大的§Y亚光速航速§!和§Y舰船武器射速§!减益。如果§H伊吹萃香§!指挥运输船队，该船队会被消耗以发起跳帮战，每个运输船都能§Y夺取§!一艘敌方战舰。"
- spell_card_suika_6:0 "「百万鬼夜行」"
- spell_card_suika_6_desc:0 "COST：§Y5§!\n目标：任意己方§Y星系§!，或§H伊吹萃香§!所在星系的§Y星系§!。（可选择星系内任意对象）\n\n在目标§Y星系§!召唤数支无差别攻击我方以外一切敌人的§Y鬼雾§!舰队，这些舰队不能被控制。"
+ spell_card_header:0 "符卡"
+ touhou_mana_value:0 "魔力：§B0/100§!"
+ touhou_cards_value:0 "可用BOMB：§H0§!"
+ touhou_selected_char:0 "[GetSelectedLeader]"
+ touhou_selected_spell:0 "[GetSelectedCard]"
+
+ touhou_error_no_spell:0 "未选择符卡"
+ touhou_error_wrong_target:0 "无效目标"
+ touhou_error_unmet_needs:0 "未满足要求"
+ touhou_error_no_resource:0 "缺少BOMB资源"
+ touhou_can_confirm:0 "使用符卡"
+
+ touhou_trace_select_desc:0 "§H追踪选择§!/n/n§E选中任意东方领袖管理的对象，再按下此按钮可选择该领袖以使用她的符卡。§!"
+ touhou_ex_charge_desc:0 "§H符卡充能§!/n/n§E使用该按钮施放所选符卡的高级版本，往往比起低级版本有更高的COST和更大的威力。§!"
+
+ touhou_selected_char_0:0 "无可用角色"
+
+ touhou_selected_char_1:0 "博丽灵梦"
+ touhou_selected_char_2:0 "雾雨魔理沙"
+ #红魔乡
+ touhou_selected_char_3:0 "露米娅" #未制作
+ touhou_selected_char_4:0 "琪露诺"
+ touhou_selected_char_5:0 "红美铃"
+ touhou_selected_char_6:0 "帕秋莉·诺蕾姬"
+ touhou_selected_char_7:0 "十六夜咲夜"
+ touhou_selected_char_8:0 "蕾米莉亚·斯卡蕾特"
+ touhou_selected_char_9:0 "芙兰朵露·斯卡蕾特"  #未制作
+ #妖妖梦
+ touhou_selected_char_10:0 "蕾蒂·霍瓦特洛克" #未制作
+ touhou_selected_char_11:0 "橙" #未制作
+ touhou_selected_char_12:0 "爱丽丝·玛格特洛依德"
+ touhou_selected_char_13:0 "莉莉霍瓦特" #未制作
+ touhou_selected_char_14:0 "露娜萨·普莉兹姆利巴" #未制作
+ touhou_selected_char_15:0 "梅露兰·普莉兹姆利巴" #未制作
+ touhou_selected_char_16:0 "莉莉卡·普莉兹姆利巴" #未制作
+ touhou_selected_char_17:0 "魂魄妖梦"
+ touhou_selected_char_18:0 "西行寺幽幽子"
+ touhou_selected_char_19:0 "八云蓝" #未制作
+ touhou_selected_char_20:0 "八云紫" #未制作
+ #萃梦想
+ touhou_selected_char_21:0 "伊吹萃香"
+ #永夜抄
+ touhou_selected_char_22:0 "莉格露·奈特巴格" #未制作
+ touhou_selected_char_23:0 "米斯蒂娅·萝蕾拉" #未制作
+ touhou_selected_char_24:0 "上白泽慧音" #未制作
+ touhou_selected_char_25:0 "因幡帝" #未制作
+ touhou_selected_char_26:0 "铃仙·优昙华院·因幡"
+ touhou_selected_char_27:0 "八意永琳" #未制作
+ touhou_selected_char_28:0 "蓬莱山辉夜" #未制作
+ touhou_selected_char_29:0 "藤原妹红" #未制作
+ #文花帖
+ touhou_selected_char_30:0 "射命丸文"
+ #花映冢
+ touhou_selected_char_31:0 "梅蒂欣·梅兰可莉" #未制作
+ touhou_selected_char_32:0 "风见幽香"
+ touhou_selected_char_33:0 "小野塚小町"
+ touhou_selected_char_34:0 "四季映姬·夜摩仙那度"
+ #风神录
+ touhou_selected_char_35:0 "秋静叶" #计划中
+ touhou_selected_char_36:0 "秋穰子" #计划中
+ touhou_selected_char_37:0 "键山雏" #计划中
+ touhou_selected_char_38:0 "河城荷取"
+ touhou_selected_char_39:0 "犬走椛" #计划中
+ touhou_selected_char_40:0 "东风谷早苗"
+ touhou_selected_char_41:0 "八坂神奈子" #计划中
+ touhou_selected_char_42:0 "洩矢诹访子" #计划中
+ #绯想天
+ touhou_selected_char_43:0 "永江衣玖" #未制作
+ touhou_selected_char_44:0 "比那名居天子"
+ #地灵殿
+ touhou_selected_char_45:0 "琪斯美" #未制作
+ touhou_selected_char_46:0 "黑谷山女" #未制作
+ touhou_selected_char_47:0 "水桥帕露西" #未制作
+ touhou_selected_char_48:0 "星熊勇仪" #未制作
+ touhou_selected_char_49:0 "古明地觉"
+ touhou_selected_char_50:0 "火焰猫燐"
+ touhou_selected_char_51:0 "灵乌路空"
+ touhou_selected_char_52:0 "古明地恋"
+
+ spell_card_none:0 "无可用符卡"
+ spell_card_none_desc:0 ""
+
+ spell_card_group_1:0 "[GetSelectedCard_1]"
+ spell_card_requirement_group_1:0 "[GetSelectedCardRequirement_1]"
+ spell_card_reimu_1:0 "灵符「梦想封印」"
+ spell_card_reimu_1_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Reimu$§!处在同一星系的§Y敌对舰队§!或灵梦正在轨道轰炸/登陆的§Y敌对星球§!。\n\n发射§Y6§!颗光弹，对舰队内敌方战舰造成每颗随机§Y200-1000§!点船体伤害（多颗光弹可以命中同一目标），并['concept_huuin']该舰队§Y30§!天，或§Y50%§!概率消灭最多§Y6§!支陆军。"
+ spell_card_reimu_1_ex:0 "神灵「梦想封印」"
+ spell_card_reimu_1_ex_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Reimu$§!处在同一星系的§Y敌对舰队§!或灵梦正在轨道轰炸/登陆的Y敌对星球§!。\n\n发射§Y8§!颗光弹，对舰队内敌方战舰造成每颗随机§Y2000-4000§!点船体伤害（多颗光弹可以命中同一目标），并['concept_huuin']该舰队§Y30§!天，或消灭最多§Y8§!支陆军。"
+ spell_card_reimu_2:0 "梦符「封魔阵」"
+ spell_card_reimu_2_desc:0 "COST：§Y2§!\n目标：任意与§H$NAME_Reimu$§!处在同一星系或者在我方境内的§Y敌对舰队§!\n\n['concept_huuin']指定的敌方舰队§Y180§!天。"
+ spell_card_reimu_3:0 "梦符「二重结界」"
+ spell_card_reimu_3_desc:0 "COST：§Y1§!\n目标：任意不存在§Y二重结界§!行星修正的己方§Y殖民地§!。\n\n使用结界术保护一颗星球，在§Y2§!年内降低§Y75%§!轨道轰炸对其的伤害。"
+ spell_card_reimu_4:0 "神技「八方龙杀阵」"
+ spell_card_reimu_4_desc:0 "COST：§Y4§!\n条件：§H$NAME_Reimu$§!正在指挥舰队或运输船队，且处在有我方§Y恒星基地§!的星系。\n\n在该星系布设阵法，§Y30§!天布设时间内§H$NAME_Reimu$§!的舰队将被锁定，效果持续§Y5§!年，进入该星系的敌人自动被['concept_huuin']§Y60§!天，且无法从该星系的战斗中§Y撤退§!。"
+ spell_card_reimu_5:0 "梦符「梦想亚空穴」"
+ spell_card_reimu_5_desc:0 "COST：§Y1§!\n目标：§H$NAME_Reimu$§!舰队所在§Y星系§!，或是我方首都星系内的§Y非恒星天体§!。\n\n暂时打开空间的裂缝，在目标天体上空产生一个仅供我方穿行的类似§Y星门§!的通道，其将会存在§Y360§!天。"
+ spell_card_reimu_6:0 "「梦想天生」"
+ spell_card_reimu_6_desc:0 "COST：§Y5§!\n条件：§H$NAME_Reimu$§!正在指挥舰队或运输船队。\n\n使用§H$NAME_Reimu$§!的能力暂时让她率领的舰队进入彻底的§Y无敌状态§!。"
+
+ concept_huuin:0 "封印"
+ concept_huuin_desc:0 "被§H$NAME_Reimu$§!的能力所§Y封印§!的舰队会将§Y亚光速航速§!和§Y跃迁引擎范围§!降低至最低，大幅提高§Y超空间跳跃冷却§!和§Y跃迁引擎冷却§!，使得该舰队丧失机动能力。"
+
+ bombardment_yume_no_huuin:0 "梦想封印"
+ bombardment_yume_no_huuin_desc:3 "$bombardment_yume_no_huuin$轰炸将以灵力制导攻击星球上军事目标，但仍存在平民伤亡风险。\n-对§Y陆军§!造成§R巨大§!伤害\n-对§Y行星§!造成§Y中度§!伤害\n-对§Y人口§!造成§Y中度§!伤害\n-将会轰炸不设防的星球\n-消灭最后一个人口时，将星球封印为屏障星球"
+
+ #spell_card_tenshi_1:0 "地符「不让土壤之剑」"
+ #spell_card_tenshi_1_desc:0 "COST：§Y1§!\n目标：任意不存在§Y$unstable_tectonics$§!行星修正的己方§Y殖民地§!。\n\n将气质打入地下使地上产生大的隆起，制造一个增加£district£§Y采矿区划§!上限的行星特征，有概率添加§Y$unstable_tectonics$§!行星修正。"
+ #spell_card_tenshi_2:0 "非想「非想非非想之剑」"
+ #spell_card_tenshi_2_desc:0 "COST：§Y1§!\n目标：任意存在§Y环境危害§!的§Y星系§!。（可选择星系内任意对象）\n\n绯想之剑所具备的力量之一，施加气质封印的符卡，消除该星系§P环境危害§!对己方的影响。"
+ #spell_card_tenshi_3:0 "地震「先忧后乐之剑」"
+ #spell_card_tenshi_3_desc:0 "COST：§Y2§!\n条件：§H比那名居天子§!正在指挥舰队或陆军。\n目标：和§H比那名居天子§!处于相同星系的§Y敌对行星§!，或是§H比那名居天子§!正在战斗的星球。\n\n将剑刺入地面使地壳产生运动，清扫整个行星表面的敌军，对行星造成§Y50%§!的破坏度，每支敌军都有§Y50%§!概率被消灭。"
+ #spell_card_tenshi_4:0 "气符「天启气象之剑」"
+ #spell_card_tenshi_4_desc:0 "COST：§Y3§!\n条件：己方控制存在§Y环境危害§!的星系，存在可用目标。\n目标：任意§Y不存在环境危害§!的§Y星系§!。（可选择星系内任意对象）\n\n绯想之剑所具备的力量之一，以剑为载体聚集气质并释放，使得星系内的敌人舰队承受指定的§P环境危害§!（需要己方控制拥有对应环境危害的星系）。"
+ #spell_card_tenshi_5:0 "气符「无念无想的境界」"
+ #spell_card_tenshi_5_desc:0 "COST：§Y1§!\n目标：任意存在§Y指挥官§!的己方运输船部队，或是己方§Y指挥官§!正在战斗的星球。\n\n可以让人感受不到任何痛楚的符卡，使得目标所指挥的部队完全不会受到§Y士气伤害§!。"
+ #spell_card_tenshi_6:0 "「全人类的绯想天」"
+ #spell_card_tenshi_6_desc:0 "COST：§Y5§!\n条件：§H比那名居天子§!正在指挥舰队或陆军。\n目标：和§H比那名居天子§!处于相同星系的§Y敌对行星§!，或是§H比那名居天子§!正在战斗的星球。\n\n将周围的气质凝缩在绯想之剑上，并向下方一口气放出的超大技，会彻底清扫星球的人口并将其改造为随机宜居类型。"
+ #
+ #spell_card_suika_1:0 "鬼神「Missing Purple Power」"
+ #spell_card_suika_1_desc:0 "COST：§Y1§!\n条件：已经部署§H伊吹萃香§!。\n\n§H伊吹萃香§!在自己所在地变形为了可以进行陆地战的§Y鬼王巨人§!，这会将她锁定为自己的§P指挥官§!，可以在星球决议中变回正常形态。"
+ #spell_card_suika_2:0 "鬼气「蒙蒙迷雾」"
+ #spell_card_suika_2_desc:0 "COST：§Y1§!\n条件：已经部署§H伊吹萃香§!。\n\n§Y伊吹萃香§!在自己所在地变形为了一团可以进行太空战的§Y鬼雾§!，这会将她锁定为自己的§P指挥官§!，可以通过战舰与星球的互动变回正常形态。"
+ #spell_card_suika_3:0 "雾符「云集雾散」"
+ #spell_card_suika_3_desc:0 "COST：§Y2§!\n条件：§H伊吹萃香§!正在指挥舰队或运输船队。\n目标：和§H伊吹萃香§!处于相同星系的§Y友方舰队§!。\n\n将鬼雾作为防壁的防御技，为指定的舰队的每一艘战舰提供数值固定的额外§Y护盾§!。"
+ #spell_card_suika_4:0 "鬼火「超高密度磷祸术」"
+ #spell_card_suika_4_desc:0 "COST：§Y3§!\n条件：§H伊吹萃香§!正在指挥舰队或运输船队。\n目标：和§H伊吹萃香§!处于相同星系的§Y敌对舰队§!。\n\n将高密度的热量萃集到敌方舰队处，产生持续损害舰队的高温，受到影响的舰队将不断损失§Y船体值§!。"
+ #spell_card_suika_5:0 "醉梦「施饿鬼缚之术」"
+ #spell_card_suika_5_desc:0 "COST：§Y4§!\n条件：§H伊吹萃香§!正在指挥舰队或运输船队。\n目标：和§H伊吹萃香§!处于相同星系的§Y敌对舰队§!。\n\n用锁链束缚敌方的舰队随后牵引至§H伊吹萃香§!所在位置，敌人舰队会暂时承受巨大的§Y亚光速航速§!和§Y舰船武器射速§!减益。如果§H伊吹萃香§!指挥运输船队，该船队会被消耗以发起跳帮战，每个运输船都能§Y夺取§!一艘敌方战舰。"
+ #spell_card_suika_6:0 "「百万鬼夜行」"
+ #spell_card_suika_6_desc:0 "COST：§Y5§!\n目标：任意己方§Y星系§!，或§H伊吹萃香§!所在星系的§Y星系§!。（可选择星系内任意对象）\n\n在目标§Y星系§!召唤数支无差别攻击我方以外一切敌人的§Y鬼雾§!舰队，这些舰队不能被控制。"
 
  spell_card_sanne_1:0 "秘术「Gray Thaumaturgy」"
  spell_card_sanne_1_desc:0 "COST：§Y1§!\n条件：无。\n\n发动奇迹所必要的准备阶段制成的特殊符卡，使用后一个§Y低概率事件§!会在我国境内发生。"

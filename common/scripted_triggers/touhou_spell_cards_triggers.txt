@@ -1,0 +1,157 @@
+reimu_card_1_trigger = {
+	AND = {
+		Root = {
+			is_scope_type = fleet
+			owner = {
+				OR = {
+					is_hostile = from
+					is_at_war_with = from
+				}
+			}
+			solar_system = {
+				any_fleet_in_system = {
+					exists = leader
+					leader = {
+						owner = {
+							is_same_value = from
+						}
+						has_trait = leader_trait_fly
+					}
+				}
+			}
+		}
+	}
+	AND = {
+		Root = {
+			is_scope_type = planet
+			exists = owner
+			owner = {
+				OR = {
+					is_hostile = from
+					is_at_war_with = from
+				}
+			}
+			OR = {
+				any_fleet_in_orbit = {
+					exists = leader
+					leader = {
+						owner = {
+							is_same_value = from
+						}
+						has_trait = leader_trait_fly
+					}
+				}
+				any_planet_army = {
+					exists = leader
+					leader = {
+						owner = {
+							is_same_value = from
+						}
+						has_trait = leader_trait_fly
+					}
+				}
+			}
+		}
+	}
+}
+
+reimu_card_2_trigger = {
+	Root = {
+		is_scope_type = fleet
+		owner = {
+			OR = {
+				is_hostile = from
+				is_at_war_with = from
+			}
+		}
+		solar_system = {
+			OR = {
+				any_fleet_in_system = {
+					exists = leader
+					leader = {
+						owner = {
+							is_same_value = from
+						}
+						has_trait = leader_trait_fly
+					}
+				}
+			}
+			AND = {
+				exists = owner
+				exists = controller
+				owner = {
+					is_same_value = from
+					is_same_value = controller
+				}
+			}
+		}
+	}
+}
+
+reimu_card_3_trigger = {
+	Root = {
+		is_scope_type = planet
+		is_colony = yes
+		exists = owner
+		exists = controller
+		owner = {
+			is_same_value = from
+			is_same_value = controller
+		}
+		NOT = {
+			has_modifier = modifier_planet_barrier
+		}
+	}
+}
+
+reimu_card_4_trigger = {
+	from = {
+		any_controlled_fleet = {
+			exists = leader
+			leader = {
+				owner = {
+					is_same_value = from
+				}
+				has_trait = leader_trait_fly
+			}
+			exists = solar_system
+			solar_system = {
+				exists = owner
+				exists = controller
+				owner = {
+					is_same_value = from
+					is_same_value = controller
+				}
+			}
+		}
+	}
+}
+
+reimu_card_5_trigger = {
+	Root = {
+		is_scope_type = planet
+		is_star = no
+		solar_system = {
+			exists = owner
+			exists = controller
+			owner = {
+				is_same_value = from
+				is_same_value = controller
+			}
+		}
+	}
+}
+
+reimu_card_6_trigger = {
+	from = {
+		any_controlled_fleet = {
+			exists = leader
+			leader = {
+				owner = {
+					is_same_value = from
+				}
+				has_trait = leader_trait_fly
+			}
+		}
+	}
+}

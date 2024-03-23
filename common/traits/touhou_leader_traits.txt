@@ -6,7 +6,7 @@ subclass_commander_lord = {
 	leader_trait_type = subclass
 	inline_script = {
 		script = trait/icon_subclass
-		SUBCLASS = commander_governor
+		SUBCLASS = commander_councilor
 		COUNCIL = no
 	}
 	custom_tooltip_with_modifiers = councilor_subclass_tt
@@ -43,7 +43,7 @@ subclass_commander_lord = {
 		has_trait = subclass_commander_lord
 	}
 	leader_class = { commander }
-	background_icon = "GFX_leader_subclass_commander_governor_background"
+	background_icon = "GFX_leader_subclass_commander_councilor_background"
 }
 subclass_commander_servant = {
 	custom_subtitle = commander_subclass
@@ -94,7 +94,7 @@ subclass_commander_miko = {
 	leader_trait_type = subclass
 	inline_script = {
 		script = trait/icon_subclass
-		SUBCLASS = commander_general
+		SUBCLASS = commander_admiral
 		COUNCIL = no
 	}
 	custom_tooltip_with_modifiers = admiral_subclass_tt
@@ -161,7 +161,7 @@ subclass_commander_miko = {
 		has_trait = subclass_commander_miko
 	}
 	leader_class = { commander }
-	background_icon = "GFX_leader_subclass_commander_governor_background"
+	background_icon = "GFX_leader_subclass_commander_admiral_background"
 }
 ##################
 # SPECIAL TRAITS #
