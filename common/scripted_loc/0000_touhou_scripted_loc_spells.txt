@@ -594,24 +594,7 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetSelectedCardrequirement
-	text = {
-		trigger = {
-			From = {
-				check_variable = {
-					which = seleted_char_id
-					value = 1
-				}
-			}
-		}
-		localization_key = spell_card_requirement_group_1
-	}
-
-	default = touhou_error_no_spell
-}
-
-defined_text = {
-	name = GetSelectedCard_1
+	name = GetSelectedCardReimu
 	text = {
 		trigger = {
 			From = {
@@ -682,7 +665,7 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetSelectedCardRequirement_1
+	name = GetSelectedCardRequirementReimu
 	text = {
 		trigger = {
 			OR = {
@@ -749,8 +732,6 @@ defined_text = {
 						reimu_card_4_trigger = yes
 					}
 				}
-			}
-			OR = {
 				AND = {
 					From = {
 						check_variable = {
@@ -779,5 +760,17 @@ defined_text = {
 		localization_key = touhou_error_no_resource
 	}
 
-	default = touhou_error_no_spell
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 0
+				}
+			}
+		}
+		localization_key = touhou_error_no_spell
+	}
+
+	default = touhou_can_confirm
 }

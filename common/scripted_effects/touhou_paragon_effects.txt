@@ -1999,67 +1999,71 @@ subtract_char_id = {
 }
 
 add_card_id = {
-	if = {
-		limit = {
-			check_variable = {
+	from = {
+		if = {
+			limit = {
+				check_variable = {
+					which = seleted_card_id
+					value < seleted_card_nums
+				}
+			}
+			change_variable = {
 				which = seleted_card_id
-				value < seleted_card_nums
+				value = 1
 			}
 		}
-		change_variable = {
-			which = seleted_card_id
-			value = 1
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = {
-				which = seleted_card_nums
-				value > 0
+		else_if = {
+			limit = {
+				check_variable = {
+					which = seleted_card_nums
+					value > 0
+				}
+			}
+			set_variable = {
+				which = seleted_card_id
+				value = 1
 			}
 		}
-		set_variable = {
-			which = seleted_card_id
-			value = 1
-		}
-	}
-	else = {
-		set_variable = {
-			which = seleted_card_id
-			value = 0
+		else = {
+			set_variable = {
+				which = seleted_card_id
+				value = 0
+			}
 		}
 	}
 }
 
 subtract_card_id = {
-	if = {
-		limit = {
-			check_variable = {
+	from = {
+		if = {
+			limit = {
+				check_variable = {
+					which = seleted_card_id
+					value > 1
+				}
+			}
+			subtract_variable = {
 				which = seleted_card_id
-				value > 1
+				value = 1
 			}
 		}
-		subtract_variable = {
-			which = seleted_card_id
-			value = 1
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = {
-				which = seleted_card_nums
-				value > 0
+		else_if = {
+			limit = {
+				check_variable = {
+					which = seleted_card_nums
+					value > 0
+				}
+			}
+			set_variable = {
+				which = seleted_card_id
+				value = seleted_card_nums
 			}
 		}
-		set_variable = {
-			which = seleted_card_id
-			value = seleted_card_nums
-		}
-	}
-	else = {
-		set_variable = {
-			which = seleted_card_id
-			value = 0
+		else = {
+			set_variable = {
+				which = seleted_card_id
+				value = 0
+			}
 		}
 	}
 }

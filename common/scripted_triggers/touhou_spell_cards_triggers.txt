@@ -78,10 +78,16 @@ reimu_card_2_trigger = {
 			}
 			AND = {
 				exists = owner
-				exists = controller
 				owner = {
 					is_same_value = from
-					is_same_value = controller
+				}
+				OR = {
+					NOT = {
+						exists = controller
+					}
+					owner = {
+						is_same_value = controller
+					}
 				}
 			}
 		}
@@ -93,11 +99,10 @@ reimu_card_3_trigger = {
 		is_scope_type = planet
 		is_colony = yes
 		exists = owner
-		exists = controller
 		owner = {
 			is_same_value = from
-			is_same_value = controller
 		}
+		is_occupied_flag = no
 		NOT = {
 			has_modifier = modifier_planet_barrier
 		}
@@ -117,10 +122,16 @@ reimu_card_4_trigger = {
 			exists = solar_system
 			solar_system = {
 				exists = owner
-				exists = controller
 				owner = {
 					is_same_value = from
-					is_same_value = controller
+				}
+				OR = {
+					NOT = {
+						exists = controller
+					}
+					owner = {
+						is_same_value = controller
+					}
 				}
 			}
 		}
@@ -133,10 +144,16 @@ reimu_card_5_trigger = {
 		is_star = no
 		solar_system = {
 			exists = owner
-			exists = controller
 			owner = {
 				is_same_value = from
-				is_same_value = controller
+			}
+			OR = {
+				NOT = {
+					exists = controller
+				}
+				owner = {
+					is_same_value = controller
+				}
 			}
 		}
 	}

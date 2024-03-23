@@ -231,11 +231,31 @@ touhou_trace_select_effect = {
 	}
 }
 
+touhou_reimu_spell_card_text = {
+	potential = {
+		from = {
+			check_variable = {
+				which = seleted_char_id
+				value = 1
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+
+	}
+}
+
 touhou_reimu_spell_card_effect = {
 	potential = {
-		check_variable = {
-			which = seleted_card_id
-			value = 1
+		from = {
+			check_variable = {
+				which = seleted_char_id
+				value = 1
+			}
 		}
 	}
 	allow = {
@@ -297,6 +317,45 @@ touhou_reimu_spell_card_effect = {
 				}
 			}
 		}
+	}
+
+	effect = {
+	}
+}
+
+touhou_none_spell_card_text = {
+	potential = {
+		from = {
+			NOT = {
+				check_variable = {
+					which = seleted_char_id
+					value = 1
+				}
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+
+	}
+}
+
+touhou_none_spell_card_effect = {
+	potential = {
+		from = {
+			NOT = {
+				check_variable = {
+					which = seleted_char_id
+					value = 1
+				}
+			}
+		}
+	}
+	allow = {
+		always = no
 	}
 
 	effect = {

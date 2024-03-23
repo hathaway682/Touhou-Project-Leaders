@@ -7,8 +7,8 @@ guiTypes = {
         orientation = center
         origo = center
         moveable = yes
-        size = { width = 364 height = 210 }
-        position = { x = -190 y = -220 }
+        size = { width = 364 height = 246 }
+        position = { x = -190 y = -260 }
         orientation = lower_right
 
         background = {
@@ -211,19 +211,6 @@ guiTypes = {
         }
 
         effectButtonType = {
-            name = "touhou_select_spell_text"
-            quadTextureSprite = "GFX_black_box_bg"
-            buttonText = "touhou_selected_spell"
-            buttonFont = "malgun_goth_24"
-            position = { x = 48 y = 120 }
-            size = { width = 274 height = 38 }
-            format = center
-            vertical_alignment = center
-            alwaysTransparent = yes
-            effect = touhou_no_effect
-        }
-
-        effectButtonType = {
             name = "touhou_select_spell_ex_charge"
             quadTextureSprite = "GFX_button_upgrade_ascension_tier"
             position = { x = 10 y = 164 }
@@ -254,6 +241,19 @@ guiTypes = {
         }
 
         effectButtonType = {
+            name = "touhou_select_spell_text"
+            quadTextureSprite = "GFX_black_box_bg"
+            buttonText = "spell_card_group_1"
+            buttonFont = "malgun_goth_24"
+            position = { x = 48 y = 120 }
+            size = { width = 274 height = 38 }
+            format = center
+            vertical_alignment = center
+            alwaysTransparent = yes
+            effect = touhou_no_effect
+        }
+
+        effectButtonType = {
             name = "touhou_confirm_button_reimu"
             quadTextureSprite = "GFX_standard_button_172_34"
             position = { x = -192 y = 154 }
@@ -264,6 +264,19 @@ guiTypes = {
             vertical_alignment = center
             effect = touhou_reimu_spell_card_effect
             orientation = upper_right
+        }
+
+        effectButtonType = {
+            name = "touhou_target_text"
+            quadTextureSprite = "GFX_invisible"
+            buttonText = "touhou_target_text"
+            buttonFont = malgun_goth_24
+            position = { x = 15 y = 204 }
+            size = { width = 274 height = 38 }
+            format = left
+            vertical_alignment = center
+            alwaysTransparent = yes
+            effect = touhou_no_effect
         }
     }
 }

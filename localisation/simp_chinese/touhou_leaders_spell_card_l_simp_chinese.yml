@@ -6,13 +6,15 @@
  touhou_mana_value:0 "魔力：§B0/100§!"
  touhou_cards_value:0 "可用BOMB：§H0§!"
  touhou_selected_char:0 "[GetSelectedLeader]"
- touhou_selected_spell:0 "[GetSelectedCard]"
+ touhou_selected_spell:0 "[GetSelectedCard]" #
 
- touhou_error_no_spell:0 "未选择符卡"
+ touhou_error_no_spell:0 "无可用符卡"
  touhou_error_wrong_target:0 "无效目标"
  touhou_error_unmet_needs:0 "未满足要求"
  touhou_error_no_resource:0 "缺少BOMB资源"
  touhou_can_confirm:0 "使用符卡"
+
+ touhou_target_text:0 "选择：[Root.GetName]"
 
  touhou_trace_select_desc:0 "§H追踪选择§!/n/n§E选中任意东方领袖管理的对象，再按下此按钮可选择该领袖以使用她的符卡。§!"
  touhou_ex_charge_desc:0 "§H符卡充能§!/n/n§E使用该按钮施放所选符卡的高级版本，往往比起低级版本有更高的COST和更大的威力。§!"
@@ -84,8 +86,8 @@
  spell_card_none:0 "无可用符卡"
  spell_card_none_desc:0 ""
 
- spell_card_group_1:0 "[GetSelectedCard_1]"
- spell_card_requirement_group_1:0 "[GetSelectedCardRequirement_1]"
+ spell_card_group_1:0 "[GetSelectedCardReimu]"
+ spell_card_requirement_group_1:0 "[GetSelectedCardRequirementReimu]"
  spell_card_reimu_1:0 "灵符「梦想封印」"
  spell_card_reimu_1_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Reimu$§!处在同一星系的§Y敌对舰队§!或灵梦正在轨道轰炸/登陆的§Y敌对星球§!。\n\n发射§Y6§!颗光弹，对舰队内敌方战舰造成每颗随机§Y200-1000§!点船体伤害（多颗光弹可以命中同一目标），并['concept_huuin']该舰队§Y30§!天，或§Y50%§!概率消灭最多§Y6§!支陆军。"
  spell_card_reimu_1_ex:0 "神灵「梦想封印」"
