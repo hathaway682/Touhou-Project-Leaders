@@ -1683,3 +1683,15 @@ complete_sanae_mission = {
 		}
 	}
 }
+
+continue_marisa_alice_regeneration = {
+	if = {
+		limit = { has_event_chain = "touhou_marisa_alice_regeneration_chain" }
+		add_event_chain_counter = {
+			event_chain = "touhou_marisa_alice_regeneration_chain"
+			counter = "touhou_marisa_alice_regeneration_counter"
+			amount = 1
+		}
+	}
+
+}

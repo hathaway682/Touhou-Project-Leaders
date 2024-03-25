@@ -10135,3 +10135,435 @@ country_event = {
         custom_tooltip = TOUHOU_FLAVOR_BAGUETTE_ARMY
     }
 }
+
+#莎莎爱丽丝趣味事件 1、再生药剂试验
+country_event = {
+    id = touhou_paragon_effect.40702
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.40702.name
+    desc = {
+        text = touhou_paragon_effect.40702.desc
+    }
+    event_chain = touhou_marisa_alice_regeneration_chain
+    picture = GFX_evt_kirisame_marisa_alchemy
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_dolls
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_magic
+        }
+        any_owned_planet = {
+            is_colony = yes
+            num_pops >= 25
+            num_armies >= 2
+        }
+        count_owned_pop = {
+            count >= 300
+        }
+    }
+    immediate = {
+        random_owned_planet = {
+            limit = {
+                is_colony = yes
+                num_pops >= 25
+                num_armies >= 2
+            }
+            save_global_event_target_as = marisa_alice_regeneration_location
+        }
+        begin_event_chain = {
+            event_chain = touhou_marisa_alice_regeneration_chain
+            target = root
+        }
+        create_point_of_interest = {
+            id = marisa_alice_regeneration.1
+            name = "touhou_marisa_alice_regeneration_chain_name"
+            desc = "touhou_marisa_alice_regeneration_chain_desc"
+            event_chain = "touhou_marisa_alice_regeneration_chain"
+            location = event_target:marisa_alice_regeneration_location
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40702.a
+        add_resource = {
+            energy = -1000
+            unity = -2000
+        }
+        add_event_chain_counter = {
+            event_chain = "touhou_marisa_alice_regeneration_chain"
+            counter = "touhou_marisa_alice_regeneration_counter"
+            amount = 1
+        }
+        enable_special_project = {
+            name = "MARISA_ALICE_REGENERATION_CHAIN_EXPERIMENT"
+            location = event_target:marisa_alice_regeneration_location
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40702.b
+        add_resource = {
+            unity = 5000
+        }
+        set_country_flag = marisa_alice_regeneration_complete
+        end_event_chain = "touhou_marisa_alice_regeneration_chain"
+    }
+}
+
+#莎莎爱丽丝趣味事件 2
+country_event = {
+    id = touhou_paragon_effect.40703
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.40703.name
+    desc = {
+        text = touhou_paragon_effect.40703.desc
+    }
+    event_chain = touhou_marisa_alice_regeneration_chain
+    picture = GFX_evt_kirisame_marisa_alchemy
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_dolls
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_magic
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40703.a
+        country_event = { id = touhou_paragon_effect.40704 days = 1}
+        add_resource = {
+            rare_crystals = -5.14
+        }
+        add_monthly_resource_mult = {
+            resource = society_research
+            value = @tier1researchreward
+            min = @tier1researchmin
+            max = @tier1researchmax
+        }
+    }
+    after = {
+        add_event_chain_counter = {
+            event_chain = "touhou_marisa_alice_regeneration_chain"
+            counter = "touhou_marisa_alice_regeneration_counter"
+            amount = 1
+        }
+    }
+}
+
+#莎莎爱丽丝趣味事件 3
+country_event = {
+    id = touhou_paragon_effect.40704
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.40704.name
+    desc = {
+        text = touhou_paragon_effect.40704.desc
+    }
+    event_chain = touhou_marisa_alice_regeneration_chain
+    picture = GFX_evt_kirisame_marisa_alchemy
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_dolls
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_magic
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40704.a
+        country_event = { id = touhou_paragon_effect.40705 days = 10}
+        event_target:marisa_alice_regeneration_location = {
+            add_planet_devastation = 5
+        }
+    }
+    after = {
+        add_event_chain_counter = {
+            event_chain = "touhou_marisa_alice_regeneration_chain"
+            counter = "touhou_marisa_alice_regeneration_counter"
+            amount = 1
+        }
+    }
+}
+
+#莎莎爱丽丝趣味事件 4
+country_event = {
+    id = touhou_paragon_effect.40705
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.40705.name
+    desc = {
+        text = touhou_paragon_effect.40705.desc
+    }
+    event_chain = touhou_marisa_alice_regeneration_chain
+    picture = GFX_evt_kirisame_marisa_mushroom
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_dolls
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_magic
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40705.a
+        country_event = { id = touhou_paragon_effect.40706 days = 10}
+        create_country = {
+            name = "NAME_Deformed_Mushroom"
+            type = faction
+            effect = {
+                set_country_flag = released_youkai_uprising
+                establish_communications_no_message = root
+            }
+        }
+        event_target:marisa_alice_regeneration_location = {
+            add_planet_devastation = 1
+            create_army = {
+                name = "NAME_Deformed_Mushroom"
+                owner = last_created_country
+                type = deformed_mushroom
+            }
+        }
+    }
+    after = {
+        add_event_chain_counter = {
+            event_chain = "touhou_marisa_alice_regeneration_chain"
+            counter = "touhou_marisa_alice_regeneration_counter"
+            amount = 1
+        }
+    }
+}
+
+#莎莎爱丽丝趣味事件 5
+country_event = {
+    id = touhou_paragon_effect.40706
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.40706.name
+    desc = {
+        text = touhou_paragon_effect.40706.desc
+    }
+    event_chain = touhou_marisa_alice_regeneration_chain
+    picture = GFX_evt_kirisame_marisa_mushroom
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_dolls
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_magic
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40706.a
+        country_event = { id = touhou_paragon_effect.40707 days = 30}
+        event_target:marisa_alice_regeneration_location = {
+            add_planet_devastation = 5
+            add_modifier = {
+                modifier = modifier_deformed_mushroom
+                days = -1
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40706.b
+        set_country_flag = marisa_alice_regeneration_complete
+        event_target:marisa_alice_regeneration_location = {
+            random_pop = {
+                kill_pop = yes
+            }
+        }
+        add_resource = {
+            unity = 1000
+        }
+    }
+    after = {
+        add_event_chain_counter = {
+            event_chain = "touhou_marisa_alice_regeneration_chain"
+            counter = "touhou_marisa_alice_regeneration_counter"
+            amount = 1
+        }
+    }
+}
+
+#莎莎爱丽丝趣味事件 6
+country_event = {
+    id = touhou_paragon_effect.40707
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.40707.name
+    desc = {
+        text = touhou_paragon_effect.40707.desc
+    }
+    event_chain = touhou_marisa_alice_regeneration_chain
+    picture = GFX_evt_kirisame_marisa_mushroom
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_dolls
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_magic
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40707.a
+        country_event = { id = touhou_paragon_effect.40708 days = 20}
+        add_resource = {
+            energy = -10000
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40707.b
+        set_country_flag = marisa_alice_regeneration_complete
+        event_target:marisa_alice_regeneration_location = {
+            random_pop = {
+                kill_pop = yes
+            }
+        }
+        add_resource = {
+            unity = 500
+        }
+    }
+    after = {
+        add_event_chain_counter = {
+            event_chain = "touhou_marisa_alice_regeneration_chain"
+            counter = "touhou_marisa_alice_regeneration_counter"
+            amount = 1
+        }
+    }
+}
+
+#莎莎爱丽丝趣味事件 7
+country_event = {
+    id = touhou_paragon_effect.40708
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.40708.name
+    desc = {
+        text = touhou_paragon_effect.40708.desc
+    }
+    event_chain = touhou_marisa_alice_regeneration_chain
+    picture = GFX_evt_alice_goelia
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_dolls
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_magic
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40708.a
+        event_target:marisa_alice_regeneration_location = {
+            create_army = {
+                type = goelia_doll
+                owner = root
+                name = NAME_GOELIA
+            }
+            set_planet_flag = goelia_defender_planet
+        }
+        #country_event = { id = touhou_paragon_effect.40709 days = 5}
+    }
+    after = {
+        add_event_chain_counter = {
+            event_chain = "touhou_marisa_alice_regeneration_chain"
+            counter = "touhou_marisa_alice_regeneration_counter"
+            amount = 1
+        }
+    }
+}
+
+#莎莎爱丽丝趣味事件 8
+country_event = {
+    id = touhou_paragon_effect.40709
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.40709.name
+    desc = {
+        text = touhou_paragon_effect.40709.desc
+    }
+    event_chain = touhou_marisa_alice_regeneration_chain
+    picture = GFX_evt_alice_goelia
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_dolls
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_magic
+        }
+        fromfrom = {
+            has_planet_flag = goelia_defender_planet
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40709.a
+        add_resource = {
+            unity = 10000
+        }
+        event_target:marisa_alice_regeneration_location = {
+            remove_modifier = modifier_deformed_mushroom
+            remove_planet_flag = goelia_defender_planet
+        }
+        country_event = { id = touhou_paragon_effect.40710 days = 5}
+    }
+    after = {
+        add_event_chain_counter = {
+            event_chain = "touhou_marisa_alice_regeneration_chain"
+            counter = "touhou_marisa_alice_regeneration_counter"
+            amount = 1
+        }
+    }
+}
+
+#莎莎爱丽丝趣味事件 8
+country_event = {
+    id = touhou_paragon_effect.40710
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.40710.name
+    desc = {
+        text = touhou_paragon_effect.40710.desc
+    }
+    event_chain = touhou_marisa_alice_regeneration_chain
+    picture = GFX_evt_kirisame_marisa_alchemy
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_dolls
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_magic
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.40710.a
+        add_resource = {
+            unity = 10000
+        }
+        end_event_chain = "touhou_marisa_alice_regeneration_chain"
+        every_owned_leader = {
+            limit = {
+                has_trait = leader_trait_regeneration
+            }
+            remove_trait = leader_trait_regeneration
+            add_trait = leader_trait_regeneration_2
+        }
+        every_owned_leader = {
+            limit = {
+                has_trait = leader_trait_regeneration_2
+            }
+            remove_trait = leader_trait_regeneration
+            add_trait = leader_trait_regeneration_3
+        }
+    }
+    after = {
+        set_country_flag = marisa_alice_regeneration_complete
+    }
+}

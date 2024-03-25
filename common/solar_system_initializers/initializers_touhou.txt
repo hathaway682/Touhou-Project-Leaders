@@ -159,17 +159,15 @@ kappa_enclave_init = {
 							}
 						}
 					}
-					ethic_leader_creator = {
-						SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-						LEADER_PORTRAIT = x125
-						CLASS = scientist
-						NAME = NAME_Nitori
-						LEVEL = 3
-						GENDER = female
-						IMMORTAL = no
-						ETHIC = materialist
-						DESC = nitori1
-						CATCH_PHRASE =  nitori1_catch_phrase
+					create_leader = {
+						name = NAME_Nitori
+						gender = female
+						immortal = yes
+						species = event_target:kappa_enclave_species_only_for_portrait
+						class = scientist
+						skill = 3
+						event_leader = yes
+						background_ethic = materialist
 					}
 					last_created_leader = { #4
 						add_trait = subclass_scientist_governor
