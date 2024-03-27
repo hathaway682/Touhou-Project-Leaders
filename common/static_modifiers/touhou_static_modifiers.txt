@@ -629,6 +629,17 @@ modifier_kappa_robot = {
 	planet_pop_assembly_organic_add = 1.125
 }
 
+modifier_deformed_mushroom = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_animal_wildlife.dds"
+	icon_frame = 3
+	pop_growth_speed = -1
+	planet_stability_add = -20
+	army_defense_morale_mult = -0.5
+	pop_growth_from_immigration = -1
+	planet_immigration_pull_add = -100
+	planet_jobs_society_research_produces_mult = 0.50
+}
+
 huuin_modifier = {
 	ship_speed_mult = -10
 	ship_ftl_jumpdrive_range_mult = -10

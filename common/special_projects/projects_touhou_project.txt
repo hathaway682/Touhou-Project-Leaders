@@ -232,12 +232,39 @@ special_project = {
 	}
 
 	on_success = {
-		country_event = { id = touhou_paragon_effect.41007 }
+		owner = {
+			country_event = { id = touhou_paragon_effect.41007 }
+		}
 	}
 
 	on_fail = {
 	}
 
 	on_start = {
+	}
+}
+
+special_project = {
+	key = "MARISA_ALICE_REGENERATION_CHAIN_EXPERIMENT"
+	cost = 0
+	tech_department = society_technology
+	timelimit = -1
+	picture = GFX_evt_kirisame_marisa_alchemy
+	days_to_research = 30
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = ship_event
+	location = yes
+
+	requirements = {
+		fleet_power = 100
+		#shipclass_military = 3
+		leader = commander
+		has_trait = leader_trait_magic
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = touhou_paragon_effect.40703}
+		}
 	}
 }

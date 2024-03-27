@@ -839,11 +839,11 @@ country_event = {
 					has_ethic = ethic_fanatic_materialist
 				}
 			}
-			percentage >= 0.5
+			percentage >= 0.75
 		}
 		has_monthly_income = {
 			resource = unity
-			value >= 500
+			value >= 5000
 		}
 	}
 	option = {
@@ -1931,7 +1931,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
-			end_event_chain = touhou_sanae_mission_chain
+			end_event_chain = "touhou_sanae_mission_chain"
 		}
 	}
 }

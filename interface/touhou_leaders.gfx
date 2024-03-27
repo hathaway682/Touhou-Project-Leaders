@@ -228,6 +228,30 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_kirisame_marisa_alchemy"
+		texturefile = "gfx/event_pictures/kirisame_marisa_alchemy.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_kirisame_marisa_mushroom"
+		texturefile = "gfx/event_pictures/kirisame_marisa_mushroom.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_alice_dolls"
+		texturefile = "gfx/event_pictures/alice_dolls.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_alice_goelia"
+		texturefile = "gfx/event_pictures/alice_goelia.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 
 	spriteType = {
 		name = "GFX_button_upgrade_ascension_tier_selected"

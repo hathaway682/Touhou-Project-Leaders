@@ -25,3 +25,29 @@ touhou_sanae_mission_chain = {
 		}
 	}
 }
+
+touhou_marisa_alice_regeneration_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	picture = GFX_evt_kirisame_marisa_alchemy
+	counter = {
+		touhou_marisa_alice_regeneration_counter = {
+			max = 8
+		}
+	}
+	abort_trigger = {
+		or = {
+			has_country_flag = marisa_alice_regeneration_complete
+			not = {
+				any_owned_leader = {
+					has_trait = leader_trait_magic
+				}
+			}
+			not = {
+				any_owned_leader = {
+					has_trait = leader_trait_dolls
+				}
+			}
+		}
+	}
+}
+
