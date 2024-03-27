@@ -167,10 +167,9 @@ on_army_killed_in_combat = {
 # Scope = Fleet
 # From = System
 on_entering_system_fleet = {
-	#	events = {
-	#		touhou_paragon_effect.503
-	#		touhou_paragon_effect.504
-	#	}
+	events = {
+		touhou_paragon_spell.2
+	}
 	random_events = {
 		19 = 0
 		1 = touhou_paragon_effect.42612
@@ -381,4 +380,8 @@ on_custom_diplomacy = {
 	events = {
 		touhou_paragon_enclave.300
 	}
+}
+
+on_entering_reimu_gateway = {
+
 }

@@ -36,7 +36,10 @@ planet_event = {
             remove_planet_flag = checking_supreme_warrior
             every_planet_army = {
                 limit = {
-                    army_type = illusion
+                    OR = {
+                        army_type = illusion
+                        army_type = army_suika_splitter
+                    }
                 }
                 remove_army = yes
             }
@@ -2489,19 +2492,6 @@ planet_event = {
                 add_trait = trait_sanae_robot_worker
                 add_traits_at_start_of_list = yes
             }
-        }
-    }
-}
-
-
-fleet_event = {
-    id = touhou_paragon_effect.50
-    hide_window = yes
-    is_triggered_only = yes
-
-    immediate = {
-        set_fleet_settings = {
-            is_boss = no
         }
     }
 }

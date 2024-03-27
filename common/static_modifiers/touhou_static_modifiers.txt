@@ -628,3 +628,13 @@ modifier_kappa_robot = {
 	planet_pop_assembly_add = 1
 	planet_pop_assembly_organic_add = 1.125
 }
+
+huuin_modifier = {
+	ship_speed_mult = -10
+	ship_ftl_jumpdrive_range_mult = -10
+	ship_jumpdrive_cooldown_mult = 999
+	ship_windup_mult = 999
+	ship_winddown_mult = 999
+	ship_disengage_opportunities_add = -100
+	ship_disengage_chance_reduction = 10
+}

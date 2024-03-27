@@ -1,0 +1,209 @@
+reimu_spell_card_1_effect = {
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            random_list = {
+                1 = {
+                    create_ambient_object = {
+                        type = red_sun_grow_particle_object
+                        location = this
+                        duration = 1
+                    }
+                }
+                1 = {
+                    create_ambient_object = {
+                        type = yellow_sun_grow_particle_object
+                        location = this
+                        duration = 1
+                    }
+                }
+                1 = {
+                    create_ambient_object = {
+                        type = blue_sun_grow_particle_object
+                        location = this
+                        duration = 1
+                    }
+                }
+            }
+            while = {
+                count = 6
+                random_owned_ship = {
+                    reroll_random = yes
+                    set_variable_to_random_value = {
+                        which = reimu_spell_damage
+                        min = 200
+                        max = 1000
+                    }
+                    reduce_hp = reimu_spell_damage
+                }
+            }
+            add_modifier = {
+                modifier = huuin_modifier
+                days = 30
+            }
+        }
+    }
+}
+
+reimu_spell_card_1_ex_effect = {
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            random_list = {
+                1 = {
+                    create_ambient_object = {
+                        type = red_sun_grow_particle_object
+                        location = this
+                        duration = 1
+                    }
+                }
+                1 = {
+                    create_ambient_object = {
+                        type = yellow_sun_grow_particle_object
+                        location = this
+                        duration = 1
+                    }
+                }
+                1 = {
+                    create_ambient_object = {
+                        type = blue_sun_grow_particle_object
+                        location = this
+                        duration = 1
+                    }
+                }
+            }
+            while = {
+                count = 8
+                random_owned_ship = {
+                    reroll_random = yes
+                    set_variable_to_random_value = {
+                        which = reimu_spell_damage
+                        min = 2000
+                        max = 4000
+                    }
+                    reduce_hp = reimu_spell_damage
+                }
+            }
+            add_modifier = {
+                modifier = huuin_modifier
+                days = 30
+            }
+        }
+    }
+}
+
+reimu_spell_card_2_effect = {
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            create_ambient_object = {
+                type = red_sun_grow_particle_object
+                location = this
+                duration = 1
+            }
+            add_modifier = {
+                modifier = huuin_modifier
+                days = 120
+            }
+        }
+    }
+}
+
+reimu_spell_card_3_effect = {
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet
+            }
+        }
+        root = {
+            add_modifier = {
+                modifier = modifier_planet_barrier
+            }
+        }
+    }
+}
+
+reimu_spell_card_4_effect = {
+    from = {
+        random_owned_fleet = {
+            limit = {
+                exists = leader
+                leader = {
+                    has_trait = leader_trait_fly
+                }
+            }
+            set_event_locked = yes
+            fleet_event = {
+                id = touhou_paragon_spell.1
+                days = 30
+            }
+        }
+    }
+}
+
+reimu_spell_card_5_effect = {
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet
+            }
+        }
+        root = {
+            solar_system = {
+                spawn_megastructure = {
+                    type = reimu_gateway
+                    planet = root
+                    owner = from
+                    orbit_distance = 5
+                    random_pos = yes
+                    init_effect = {
+                        solar_system = {
+                            set_star_flag = reimu_gateway_planet
+                            system_event = {
+                                id = touhou_paragon_spell.4
+                                days = 360
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+reimu_spell_card_6_effect = {
+    from = {
+        random_owned_fleet = {
+            limit = {
+                exists = leader
+                leader = {
+                    has_trait = leader_trait_fly
+                }
+            }
+            add_modifier = {
+                modifier = invincible_fleet
+                days = 60
+            }
+            fleet_event = {
+                id = touhou_paragon_spell.5
+                days = 60
+            }
+            set_fleet_settings = {
+                is_boss = yes
+            }
+        }
+    }
+}

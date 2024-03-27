@@ -1,0 +1,95 @@
+namespace = touhou_paragon_spell
+
+fleet_event = {
+    id = touhou_paragon_spell.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        set_event_locked = no
+        solar_system = {
+            star = {
+                create_ambient_object = {
+                    type = contingency_2
+                }
+                last_created_ambient_object = {
+                    set_ambient_object_flag = reimu_trap_object
+                }
+            }
+            set_star_flag = reimu_trap_system
+            system_event = {
+                id = touhou_paragon_effect.43
+                days = 720
+            }
+        }
+    }
+}
+
+fleet_event = {
+    id = touhou_paragon_spell.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_star_flag = reimu_trap_system
+        }
+        owner = {
+            OR = {
+                is_hostile = from.owner
+                is_at_war_with = from.owner
+            }
+        }
+    }
+
+    immediate = {
+        add_modifier = {
+            modifier = huuin_modifier
+            days = 180
+        }
+    }
+}
+
+system_event = {
+    id = touhou_paragon_spell.3
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        every_system_ambient_object = {
+            limit = {
+                has_ambient_object_flag = reimu_trap_object
+            }
+            destroy_ambient_object = this
+        }
+        remove_star_flag = reimu_trap_system
+    }
+}
+
+system_event = {
+    id = touhou_paragon_spell.4
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        every_system_megastructure = {
+            limit = {
+                is_megastructure_type = reimu_gateway
+            }
+            delete_megastructure = this
+        }
+        remove_star_flag = reimu_gateway_planet
+    }
+}
+
+fleet_event = {
+    id = touhou_paragon_spell.5
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        set_fleet_settings = {
+            is_boss = no
+        }
+    }
+}

@@ -21,38 +21,6 @@ reimu_card_1_trigger = {
 			}
 		}
 	}
-	AND = {
-		Root = {
-			is_scope_type = planet
-			exists = owner
-			owner = {
-				OR = {
-					is_hostile = from
-					is_at_war_with = from
-				}
-			}
-			OR = {
-				any_fleet_in_orbit = {
-					exists = leader
-					leader = {
-						owner = {
-							is_same_value = from
-						}
-						has_trait = leader_trait_fly
-					}
-				}
-				any_planet_army = {
-					exists = leader
-					leader = {
-						owner = {
-							is_same_value = from
-						}
-						has_trait = leader_trait_fly
-					}
-				}
-			}
-		}
-	}
 }
 
 reimu_card_2_trigger = {
@@ -75,18 +43,10 @@ reimu_card_2_trigger = {
 						has_trait = leader_trait_fly
 					}
 				}
-			}
-			AND = {
-				exists = owner
-				owner = {
-					is_same_value = from
-				}
-				OR = {
-					NOT = {
-						exists = controller
-					}
+				AND = {
+					exists = owner
 					owner = {
-						is_same_value = controller
+						is_same_value = from
 					}
 				}
 			}
@@ -125,14 +85,6 @@ reimu_card_4_trigger = {
 				owner = {
 					is_same_value = from
 				}
-				OR = {
-					NOT = {
-						exists = controller
-					}
-					owner = {
-						is_same_value = controller
-					}
-				}
 			}
 		}
 	}
@@ -143,19 +95,28 @@ reimu_card_5_trigger = {
 		is_scope_type = planet
 		is_star = no
 		solar_system = {
-			exists = owner
-			owner = {
-				is_same_value = from
-			}
 			OR = {
-				NOT = {
-					exists = controller
+				any_fleet_in_system = {
+					exists = leader
+					leader = {
+						owner = {
+							is_same_value = from
+						}
+						has_trait = leader_trait_fly
+					}
 				}
-				owner = {
-					is_same_value = controller
+				AND = {
+					exists = owner
+					owner = {
+						is_same_value = from
+					}
+					any_system_planet = {
+						is_capital = yes
+					}
 				}
 			}
 		}
+		NOT = { has_planet_flag = reimu_gateway_planet }
 	}
 }
 

@@ -1,0 +1,8 @@
+menace = {
+	tradable = no
+	category = other
+
+	ai_weight = {
+		weight = 1
+	}
+}

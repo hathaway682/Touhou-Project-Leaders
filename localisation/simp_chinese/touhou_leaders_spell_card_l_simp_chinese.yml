@@ -17,7 +17,7 @@
  touhou_target_text:0 "选择：[Root.GetName]"
 
  touhou_trace_select_desc:0 "§H追踪选择§!/n/n§E选中任意东方领袖管理的对象，再按下此按钮可选择该领袖以使用她的符卡。§!"
- touhou_ex_charge_desc:0 "§H符卡充能§!/n/n§E使用该按钮施放所选符卡的高级版本，往往比起低级版本有更高的COST和更大的威力。§!"
+ touhou_ex_charge_desc:0 "§H符卡充能§!/n/n§E使用该按钮施放所选符卡的高级版本，一般和低级版本效果类似，但有更高的COST和更大的威力。§!"
 
  touhou_selected_char_0:0 "无可用角色"
 
@@ -86,28 +86,61 @@
  spell_card_none:0 "无可用符卡"
  spell_card_none_desc:0 ""
 
+ touhou_selected_char_1_desc:0 "可用符卡：\n§Y灵符「梦想封印」（1）§! §H神灵「梦想封印」（2）§!\n§Y梦符「封魔阵」（2）§!\n§Y梦符「二重结界」（1）§!\n§Y神技「八方龙杀阵」（4）§!\n§Y梦符「梦想亚空穴」（1）§!\n§Y「梦想天生」（5）§!"
+
  spell_card_group_1:0 "[GetSelectedCardReimu]"
  spell_card_requirement_group_1:0 "[GetSelectedCardRequirementReimu]"
  spell_card_reimu_1:0 "灵符「梦想封印」"
- spell_card_reimu_1_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Reimu$§!处在同一星系的§Y敌对舰队§!或灵梦正在轨道轰炸/登陆的§Y敌对星球§!。\n\n发射§Y6§!颗光弹，对舰队内敌方战舰造成每颗随机§Y200-1000§!点船体伤害（多颗光弹可以命中同一目标），并['concept_huuin']该舰队§Y30§!天，或§Y50%§!概率消灭最多§Y6§!支陆军。"
+ spell_card_reimu_1_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Reimu$§!处在同一星系的§Y敌对舰队§!。\n\n发射§Y6§!颗光弹，对舰队内敌方战舰造成每颗随机§Y200-1000§!点船体伤害（多颗光弹可以命中同一目标），并['concept_huuin']该舰队§Y30§!天。"
  spell_card_reimu_1_ex:0 "神灵「梦想封印」"
- spell_card_reimu_1_ex_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Reimu$§!处在同一星系的§Y敌对舰队§!或灵梦正在轨道轰炸/登陆的Y敌对星球§!。\n\n发射§Y8§!颗光弹，对舰队内敌方战舰造成每颗随机§Y2000-4000§!点船体伤害（多颗光弹可以命中同一目标），并['concept_huuin']该舰队§Y30§!天，或消灭最多§Y8§!支陆军。"
+ spell_card_reimu_1_ex_desc:0 "COST：§Y2§!\n目标：任意与§H$NAME_Reimu$§!处在同一星系的§Y敌对舰队§!。\n\n发射§Y8§!颗光弹，对舰队内敌方战舰造成每颗随机§Y2000-4000§!点船体伤害（多颗光弹可以命中同一目标），并['concept_huuin']该舰队§Y30§!天。"
  spell_card_reimu_2:0 "梦符「封魔阵」"
  spell_card_reimu_2_desc:0 "COST：§Y2§!\n目标：任意与§H$NAME_Reimu$§!处在同一星系或者在我方境内的§Y敌对舰队§!\n\n['concept_huuin']指定的敌方舰队§Y180§!天。"
  spell_card_reimu_3:0 "梦符「二重结界」"
- spell_card_reimu_3_desc:0 "COST：§Y1§!\n目标：任意不存在§Y二重结界§!行星修正的己方§Y殖民地§!。\n\n使用结界术保护一颗星球，在§Y2§!年内降低§Y75%§!轨道轰炸对其的伤害。"
+ spell_card_reimu_3_desc:0 "COST：§Y1§!\n目标：任意不存在§Y二重结界§!行星修正的己方§Y殖民地§!。\n\n使用结界术保护一颗星球，在§Y2§!年内降低§G75%§!轨道轰炸对其的伤害。"
  spell_card_reimu_4:0 "神技「八方龙杀阵」"
- spell_card_reimu_4_desc:0 "COST：§Y4§!\n条件：§H$NAME_Reimu$§!正在指挥舰队或运输船队，且处在有我方§Y恒星基地§!的星系。\n\n在该星系布设阵法，§Y30§!天布设时间内§H$NAME_Reimu$§!的舰队将被锁定，效果持续§Y5§!年，进入该星系的敌人自动被['concept_huuin']§Y60§!天，且无法从该星系的战斗中§Y撤退§!。"
+ spell_card_reimu_4_desc:0 "COST：§Y4§!\n条件：§H$NAME_Reimu$§!正在指挥舰队或运输船队，且处在我方星系内。\n\n在该星系布设阵法，§Y30§!天布设时间内§H$NAME_Reimu$§!的舰队将被锁定，效果持续§Y5§!年，进入该星系的敌人自动被['concept_huuin']§Y180§!天。"
  spell_card_reimu_5:0 "梦符「梦想亚空穴」"
- spell_card_reimu_5_desc:0 "COST：§Y1§!\n目标：§H$NAME_Reimu$§!舰队所在§Y星系§!，或是我方首都星系内的§Y非恒星天体§!。\n\n暂时打开空间的裂缝，在目标天体上空产生一个仅供我方穿行的类似§Y星门§!的通道，其将会存在§Y360§!天。"
+ spell_card_reimu_5_desc:0 "COST：§Y1§!\n目标：§H$NAME_Reimu$§!舰队所在§Y星系§!，或是我方§Y首都星系§!内的§Y非恒星天体§!。\n\n暂时打开空间的裂缝，在目标天体上空产生一个仅供我方穿行的类似§Y星门§!的通道，其将会存在§Y360§!天。"
  spell_card_reimu_6:0 "「梦想天生」"
- spell_card_reimu_6_desc:0 "COST：§Y5§!\n条件：§H$NAME_Reimu$§!正在指挥舰队或运输船队。\n\n使用§H$NAME_Reimu$§!的能力暂时让她率领的舰队进入彻底的§Y无敌状态§!。"
+ spell_card_reimu_6_desc:0 "COST：§Y5§!\n条件：§H$NAME_Reimu$§!正在指挥舰队或运输船队。\n\n使用§H$NAME_Reimu$§!的能力暂时让她率领的舰队在§Y60§!天内进入彻底的§Y无敌状态§!。"
+
+ reimu_gateway: "亚空穴"
+ reimu_gateway_DESC: "使用§H博丽灵梦§!的能力在星系间打开的临时通道。"
+
+ REIMU_GATEWAY_GALACTIC: "亚空穴"
+ REIMU_GATEWAY_GALACTIC_DESC: "该恒星系包含一个§Y亚空穴§!"
+ REIMU_GATEWAY_COUNTRY_CANNOT_USE: "$TRIGGER_FAIL$需要§R博丽灵梦§!的能力，或是§M更强的隙间操控能力§!来使用§Y亚空穴§!。"
 
  concept_huuin:0 "封印"
  concept_huuin_desc:0 "被§H$NAME_Reimu$§!的能力所§Y封印§!的舰队会将§Y亚光速航速§!和§Y跃迁引擎范围§!降低至最低，大幅提高§Y超空间跳跃冷却§!和§Y跃迁引擎冷却§!，使得该舰队丧失机动能力。"
 
- bombardment_yume_no_huuin:0 "梦想封印"
- bombardment_yume_no_huuin_desc:3 "$bombardment_yume_no_huuin$轰炸将以灵力制导攻击星球上军事目标，但仍存在平民伤亡风险。\n-对§Y陆军§!造成§R巨大§!伤害\n-对§Y行星§!造成§Y中度§!伤害\n-对§Y人口§!造成§Y中度§!伤害\n-将会轰炸不设防的星球\n-消灭最后一个人口时，将星球封印为屏障星球"
+ touhou_selected_char_2_desc:0 "可用符卡：\n§Y恋符「Master Spark」（1）§! §H魔炮「Final Spark」（4）§!\n§Y魔符「Stardust Reverie」（2）§! §H黑魔「Event Horizon」（3）§!\n§Y仪符「Orrery's Sun」（2）§! §H天仪「Orrery's Solar System」（3）§!\n§Y魔空「Asteroid Belt」（2）§!\n§Y魔废「Deep Ecological Bomb」（4）§!\n§Y彗星「Blazing Star」（5）§!"
+
+
+ spell_card_marisa_1:0 "恋符「Master Spark」"
+ spell_card_marisa_1_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星或小行星§Y天体§!。\n\n在天体上方生成一个持续使用§YMaster Spark§!攻击的法阵，法阵存在§Y180§!天。"
+ spell_card_marisa_1_ex:0 "魔炮「Final Spark」"
+ spell_card_marisa_1_ex_desc:0 "COST：§Y4§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星或小行星§Y天体§!。\n\n在天体上方生成一个持续使用两挺§YFinal Spark§!攻击的法阵，法阵存在§Y360§!天。"
+ spell_card_marisa_2:0 "魔符「Stardust Reverie」"
+ spell_card_marisa_2_desc:0 "COST：§Y2§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星或小行星§Y天体§!。\n\n使用魔法强化舰队武器，在星系内生成一个为友方提供§G33%§Y舰船武器射速§!增益的法阵，法阵存在§Y180§!天。"
+ spell_card_marisa_2_ex:0 "黑魔「Event Horizon」"
+ spell_card_marisa_2_ex_desc:0 "COST：§Y3§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星或小行星§Y天体§!。\n\n用魔法创造结界，在星系内生成一个为友方提供§G33%§Y舰船武器射速§!增益和为提供敌方§R33%§Y舰船武器射速§!减益的法阵，法阵存在§Y360§!天。"
+ spell_card_marisa_3:0 "仪符「Orrery's Sun」"
+ spell_card_marisa_3_desc:0 "COST：§Y2§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的§Y我方舰队§!。\n\n在舰队中添加§Y4§!座§Y天仪浮游炮§!。"
+ spell_card_marisa_3_ex:0 "天仪「Orrery's Solar System」"
+ spell_card_marisa_3_ex_desc:0 "COST：§Y3§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的§Y我方舰队§!。\n\n在舰队中添加§Y6§!座强化的§Y天仪浮游炮§!。"
+ spell_card_marisa_4:0 "魔空「Asteroid Belt」"
+ spell_card_marisa_4_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的§Y小行星§!。\n\n产生一个制造碎片云的§Y法阵§!，对一定范围内的敌人持续造成§Y船体伤害§!。"
+ spell_card_marisa_5:0 "魔废「Deep Ecological Bomb」"
+ spell_card_marisa_5_desc:0 "COST：§Y4§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的敌方§Y殖民地§!。\n\n向星球上倾泻实验产生的§M魔法废物§!，会发生什么连魔理沙自己都不知道，这是极不道德的行为，会损害其他国家对我们的£opinion£§Y评价§!。"
+ spell_card_marisa_6:0 "彗星「Blazing Star」"
+ spell_card_marisa_6_desc:0 "COST：§Y5§!\n目标：§H$NAME_Marisa$§!正在指挥舰队或运输船队。\n\n化身巨大的彗星进行突击，为魔理沙的舰队提高§G900%§!的§Y亚光速航速§!和§Y舰船武器射速§!，降低§G90%§!的§Y超空间航行冷却§!并提高§G90§!的§Y闪避§!，持续§Y100§!天。"
+
+ spell_card_sanne_1:0 "秘术「Gray Thaumaturgy」"
+ spell_card_sanne_1_desc:0 "COST：§Y1§!\n条件：无。\n\n发动奇迹所必要的准备阶段制成的特殊符卡，使用后一个§Y低概率事件§!会在我国境内发生。"
+ spell_card_sanne_2:0 "奇迹「白昼的客星」"
+ spell_card_sanne_2_desc:0 "COST：§Y1§!\n目标：任意不是黑洞的§Y恒星§!。\n\n大幅强化此恒星的亮度，星系内所有$r_energy$产出上升§Y50%§!，对§I戴森球§!使用则该§Y戴森球§!产出提升§Y100%§!，对中子星/脉冲星使用时，会产生强烈的EMP，使得星系内所有舰队暂时§Y失去作战能力§!。"
 
  #spell_card_tenshi_1:0 "地符「不让土壤之剑」"
  #spell_card_tenshi_1_desc:0 "COST：§Y1§!\n目标：任意不存在§Y$unstable_tectonics$§!行星修正的己方§Y殖民地§!。\n\n将气质打入地下使地上产生大的隆起，制造一个增加£district£§Y采矿区划§!上限的行星特征，有概率添加§Y$unstable_tectonics$§!行星修正。"
@@ -134,8 +167,3 @@
  #spell_card_suika_5_desc:0 "COST：§Y4§!\n条件：§H伊吹萃香§!正在指挥舰队或运输船队。\n目标：和§H伊吹萃香§!处于相同星系的§Y敌对舰队§!。\n\n用锁链束缚敌方的舰队随后牵引至§H伊吹萃香§!所在位置，敌人舰队会暂时承受巨大的§Y亚光速航速§!和§Y舰船武器射速§!减益。如果§H伊吹萃香§!指挥运输船队，该船队会被消耗以发起跳帮战，每个运输船都能§Y夺取§!一艘敌方战舰。"
  #spell_card_suika_6:0 "「百万鬼夜行」"
  #spell_card_suika_6_desc:0 "COST：§Y5§!\n目标：任意己方§Y星系§!，或§H伊吹萃香§!所在星系的§Y星系§!。（可选择星系内任意对象）\n\n在目标§Y星系§!召唤数支无差别攻击我方以外一切敌人的§Y鬼雾§!舰队，这些舰队不能被控制。"
-
- spell_card_sanne_1:0 "秘术「Gray Thaumaturgy」"
- spell_card_sanne_1_desc:0 "COST：§Y1§!\n条件：无。\n\n发动奇迹所必要的准备阶段制成的特殊符卡，使用后一个§Y低概率事件§!会在我国境内发生。"
- spell_card_sanne_2:0 "奇迹「白昼的客星」"
- spell_card_sanne_2_desc:0 "COST：§Y1§!\n目标：任意§Y脉冲星§!。\n\n大幅强化§Y脉冲星§!的辐射，使得在一定范围内的§Y所有星系§!受到EMP的影响，其中的舰队§Y失去作战能力§!。"

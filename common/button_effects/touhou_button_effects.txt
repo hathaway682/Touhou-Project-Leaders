@@ -320,6 +320,72 @@ touhou_reimu_spell_card_effect = {
 	}
 
 	effect = {
+		if = {
+			limit = {
+				From = {
+					check_variable = {
+						which = seleted_card_id
+						value = 1
+					}
+				}
+			}
+			reimu_spell_card_1_effect = yes
+		}
+		else_if = {
+			limit = {
+				From = {
+					check_variable = {
+						which = seleted_card_id
+						value = 2
+					}
+				}
+			}
+			reimu_spell_card_2_effect = yes
+		}
+		else_if = {
+			limit = {
+				From = {
+					check_variable = {
+						which = seleted_card_id
+						value = 3
+					}
+				}
+			}
+			reimu_spell_card_3_effect = yes
+		}
+		else_if = {
+			limit = {
+				From = {
+					check_variable = {
+						which = seleted_card_id
+						value = 4
+					}
+				}
+			}
+			reimu_spell_card_4_effect = yes
+		}
+		else_if = {
+			limit = {
+				From = {
+					check_variable = {
+						which = seleted_card_id
+						value = 5
+					}
+				}
+			}
+			reimu_spell_card_5_effect = yes
+		}
+		else_if = {
+			limit = {
+				From = {
+					check_variable = {
+						which = seleted_card_id
+						value = 6
+					}
+				}
+			}
+			reimu_spell_card_6_effect = yes
+		}
 	}
 }
 
