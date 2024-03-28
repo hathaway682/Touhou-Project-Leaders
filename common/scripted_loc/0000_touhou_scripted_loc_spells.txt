@@ -1186,7 +1186,7 @@ defined_text = {
 						}
 						resource_stockpile_compare = {
 							resource = thl_bomb
-							value < 2
+							value < 1
 						}
 					}
 					AND = {
@@ -1196,7 +1196,7 @@ defined_text = {
 						}
 						resource_stockpile_compare = {
 							resource = thl_bomb
-							value < 3
+							value < 4
 						}
 					}
 					AND = {
@@ -1206,7 +1206,7 @@ defined_text = {
 						}
 						resource_stockpile_compare = {
 							resource = thl_bomb
-							value < 4
+							value < 5
 						}
 					}
 				}
