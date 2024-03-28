@@ -215,7 +215,6 @@ guiTypes = {
             quadTextureSprite = "GFX_button_upgrade_ascension_tier"
             position = { x = 10 y = 164 }
             size = { width = 38 height = 38 }
-            alwaysTransparent = yes
             effect = touhou_ex_charge_effect
             orientation = upper_left
         }
@@ -225,7 +224,6 @@ guiTypes = {
             quadTextureSprite = "GFX_button_upgrade_ascension_tier_selected"
             position = { x = 10 y = 164 }
             size = { width = 38 height = 38 }
-            alwaysTransparent = yes
             effect = touhou_ex_charge_cancel_effect
             orientation = upper_left
         }
@@ -235,7 +233,6 @@ guiTypes = {
             quadTextureSprite = "GFX_button_track_project"
             position = { x = 50 y = 164 }
             size = { width = 38 height = 38 }
-            alwaysTransparent = yes
             effect = touhou_trace_select_effect
             orientation = upper_left
         }

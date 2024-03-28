@@ -970,7 +970,7 @@ defined_text = {
 								}
 								check_variable = {
 									which = ex_charge
-									value = 0
+									value = 1
 								}
 							}
 							check_variable = {

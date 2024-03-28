@@ -129,16 +129,18 @@ touhou_ex_charge_effect = {
 		}
 	}
 	allow = {
-		from = {
-			OR = {
-				AND = {
-					check_variable = {
-						which = seleted_char_id
-						value = 1
-					}
-					check_variable = {
-						which = seleted_card_id
-						value = 1
+		hidden_trigger = {
+			from = {
+				OR = {
+					AND = {
+						check_variable = {
+							which = seleted_char_id
+							value = 1
+						}
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
 					}
 				}
 			}
@@ -168,16 +170,18 @@ touhou_ex_charge_cancel_effect = {
 		}
 	}
 	allow = {
-		from = {
-			OR = {
-				AND = {
-					check_variable = {
-						which = seleted_char_id
-						value = 1
-					}
-					check_variable = {
-						which = seleted_card_id
-						value = 1
+		hidden_trigger = {
+			from = {
+				OR = {
+					AND = {
+						check_variable = {
+							which = seleted_char_id
+							value = 1
+						}
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
 					}
 				}
 			}
@@ -202,14 +206,16 @@ touhou_trace_select_effect = {
 		always = yes
 	}
 	allow = {
-		root = {
-			exists = owner
-			owner = {
-				is_same_value = from
-			}
-			exists = leader
-			leader = {
-				has_touhou_leader_trait = yes
+		hidden_trigger = {
+			root = {
+				exists = owner
+				owner = {
+					is_same_value = from
+				}
+				exists = leader
+				leader = {
+					has_touhou_leader_trait = yes
+				}
 			}
 		}
 	}

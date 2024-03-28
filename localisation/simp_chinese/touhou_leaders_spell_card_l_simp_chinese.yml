@@ -26,8 +26,10 @@
 
  touhou_target_text:0 "选择：[Root.GetName]"
 
- touhou_trace_select_desc:0 "§H追踪选择§!/n/n§E选中任意东方领袖管理的对象，再按下此按钮可选择该领袖以使用她的符卡。§!"
- touhou_ex_charge_desc:0 "§H符卡充能§!/n/n§E使用该按钮施放所选符卡的高级版本，一般和低级版本效果类似，但有更高的COST和更大的威力。§!"
+ touhou_trace_select_desc:0 "§H追踪选择§!\n\n§E选中任意东方领袖管理的对象，再按下此按钮可选择该领袖以使用她的符卡。§!"
+ touhou_trace_select_fail_desc:0 "$TRIGGER_FAIL$请先选择一个由你拥有的东方领袖管理的对象！"
+ touhou_ex_charge_desc:0 "§H符卡充能§!\n\n§E使用该按钮施放所选符卡的高级版本，一般和低级版本效果类似，但有更高的COST和更大的威力。§!"
+ touhou_ex_charge_fail_desc:0 "$TRIGGER_FAIL$该符卡没有高级版！"
 
  touhou_selected_char_0:0 "未选择角色"
 
