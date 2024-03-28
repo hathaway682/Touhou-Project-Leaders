@@ -184,4 +184,12 @@ koishi_card_4_trigger = {
 			}
 		}
 	}
+	from = {
+		any_owned_fleet = {
+			exists = leader
+			leader = {
+				has_trait = leader_trait_subconscious
+			}
+		}
+	}
 }
