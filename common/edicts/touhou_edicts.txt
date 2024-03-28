@@ -9,6 +9,55 @@
 
 @sacrificeReward1 = 0.15
 
+open_spell_cards_gui = {
+	length = 1
+	icon = "GFX_edict_type_policy"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_invincible
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+		}
+	}
+	effect = {
+		country_event = {
+			id = touhou_paragon_spell.10000
+		}
+		country_event = {
+			id = touhou_paragon_ui.1
+		}
+	}
+}
+
+information_war_touhou = {
+	length = 1
+	icon = "GFX_edict_type_policy"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_information_war
+		}
+	}
+	resources = {
+		category = edicts_unscaled
+		cost = {
+			influence = 250
+		}
+	}
+	allow = {
+		any_owned_leader = {
+			has_trait = leader_trait_information_war
+		}
+	}
+	effect = {
+		country_event = {
+			id = touhou_paragon_effect.10000
+		}
+	}
+}
+
 gray_thaumaturgy = {
 	length = 360
 	edict_lock_in_months = 12
@@ -34,116 +83,6 @@ gray_thaumaturgy = {
 			country_event = {
 				id = touhou_paragon_effect.3
 				days = 360
-			}
-		}
-	}
-}
-
-information_war_touhou = {
-	length = 1
-	icon = "GFX_edict_type_time"
-	potential = {
-		any_owned_leader = {
-			has_trait = leader_trait_information_war
-		}
-	}
-	resources = {
-		category = edicts_unscaled
-		cost = {
-			influence = 250
-		}
-	}
-	allow = {
-		any_owned_leader = {
-			has_trait = leader_trait_information_war
-		}
-	}
-	effect = {
-		country_event = {
-			id = touhou_paragon_effect.10000
-		}
-	}
-}
-
-reimu_wormhole_key = {
-	length = 1080
-	edict_lock_in_months = 36
-	icon = "GFX_edict_type_time"
-	potential = {
-		any_owned_leader = {
-			has_trait = leader_trait_invincible
-		}
-	}
-	resources = {
-		category = edicts
-		cost = {
-			astral_threads = 500
-		}
-	}
-	effect = {
-		add_modifier = {
-			modifier = paragon_reimu_wormhole_key
-			days = 100
-		}
-		set_timed_country_flag = {
-			flag = jump_drive_allowed
-			days = 100
-		}
-		if = {
-			limit = {
-				has_technology = tech_psionic_theory
-			}
-			hidden_effect = {
-				random_owned_leader = {
-					limit = {
-						has_trait = leader_trait_fly
-					}
-					leader_event = {
-						id = touhou_paragon.40620
-					}
-				}
-			}
-		}
-	}
-}
-
-reimu_invincible = {
-	length = 1800
-	edict_lock_in_months = 60
-	icon = "GFX_edict_type_time"
-	potential = {
-		any_owned_fleet = {
-			exists = leader
-			leader = {
-				has_trait = leader_trait_invincible
-			}
-		}
-	}
-	resources = {
-		category = edicts
-		cost = {
-			astral_threads = 1500
-		}
-	}
-	effect = {
-		custom_tooltip = invincible_effect
-		hidden_effect = {
-			every_owned_fleet = {
-				limit = {
-					exists = leader
-					leader = { has_trait = leader_trait_invincible }
-				}
-				add_modifier = {
-					modifier = invincible_fleet
-					days = 100
-				}
-				fleet_event = {
-					id = touhou_paragon_effect.50
-					days = 100
-				}
-				set_fleet_settings = {
-					is_boss = yes
-				}
 			}
 		}
 	}

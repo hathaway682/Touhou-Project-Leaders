@@ -131,9 +131,14 @@ rampage_fleet = {
 	ship_shield_penetration_mult = 1
 }
 
+koishi_surprise = {
+	s_slot_weapon_fire_rate_mult = 1
+	m_slot_weapon_fire_rate_mult = 0.5
+}
+
 super_ego = {
-	ship_accuracy_mult = -0.5
-	ship_tracking_mult = -0.5
+	ship_fire_rate_mult = -0.5
+	ship_speed_mult = -0.5
 	ship_evasion_mult = -0.5
 }
 
@@ -648,4 +653,12 @@ huuin_modifier = {
 	ship_winddown_mult = 999
 	ship_disengage_opportunities_add = -100
 	ship_disengage_chance_reduction = 10
+}
+
+modifier_ancestor_dream = {
+	pop_government_ethic_attraction = 1
+	pop_happiness = 0.05
+	planet_jobs_unity_produces_mult = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_unity_symbol.dds"
+	icon_frame = 1
 }

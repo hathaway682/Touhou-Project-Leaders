@@ -3375,22 +3375,6 @@ leader_trait_cyborg_life = {
 		RESOURCE = nanites
 		AMOUNT = 2
 	}
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_jobs_physics_research_produces_mult = 0.20
-		planet_jobs_society_research_produces_mult = 0.20
-		planet_jobs_engineering_research_produces_mult = 0.20
-	}
-	triggered_sector_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_jobs_physics_research_produces_mult = 0.10
-		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_engineering_research_produces_mult = 0.10
-	}
 	planet_modifier = {
 		planet_pops_cyborgs_upkeep_mult = -0.3
 		planet_pop_assemblers_engineering_research_produces_add = 4
@@ -3623,7 +3607,7 @@ leader_trait_bird_brain = {
 	}
 	leader_class = { commander official scientist }
 	self_modifier = {
-		species_leader_exp_gain = -0.33
+		species_leader_exp_gain = -0.5
 		leader_trait_selection_options_add = -1
 	}
 	fleet_modifier = {

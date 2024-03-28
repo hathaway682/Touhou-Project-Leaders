@@ -797,14 +797,7 @@
  leader_trait_subconscious:0 "操纵无意识的程度的能力"
  leader_trait_subconscious_desc:1 "这位领袖没有内心，也没有欲望。"
  leader_trait_subconscious_effect:1 "\n解锁§R本我的解放§!法令，无成本使恋的舰队进入§P狂暴§!状态，舰船武器伤害、射速、穿透提高§G100%§!，但开始§P不受控制地行动并无差别攻击一切目标§!。\n解锁§B抑制「超我」§!法令，消耗凝聚力解除恋舰队的§P狂暴§!状态，并使星系内的敌我舰队在§Y30§!天内§P-50%§!命中、追踪和闪避。"
- NAME_Koishi_Fleet:0 "无意识舰队"
-
- edict_koishi_rampage: "§R本我的解放§!"
- edict_koishi_rampage_desc: "释放舰队成员无意识深处的本能，带来最纯粹的杀戮。"
- rampage_effect: "恋的舰队进入§P狂暴§!状态，舰船武器伤害、射速、穿透提高§G100%§!，但开始§P不受控制地行动并无差别攻击一切目标§!。"
- edict_koishi_rampage_end: "§B抑制「超我」§!"
- edict_koishi_rampage_end_desc: "最大化地压抑精神，使舰队成员从狂暴回归，该效果也会波及星系内的其他敌我舰队。"
- rampage_end_effect: "解除恋舰队的§P狂暴§!状态，并使星系内的敌我舰队在§Y30§!天内§P-50%§!命中、追踪和闪避。"
+ NAME_Koishi_Fleet:0 "无意识"
 
  NAME_Aya:0 "射命丸文"
  aya1:0 "自称的“清正的新闻记者”，在我国注册了一家新闻媒体炮制八卦小报，实际上受命于大天狗在我国担任特使。"

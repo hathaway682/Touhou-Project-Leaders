@@ -7,7 +7,7 @@ country_event = {
 
     trigger = {
         any_owned_leader = {
-            has_touhou_leader_trait = yes
+            has_touhou_supernatural_trait = yes
         }
     }
 

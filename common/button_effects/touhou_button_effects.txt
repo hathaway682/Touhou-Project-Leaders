@@ -36,7 +36,7 @@ touhou_subtract_char_id_effect = {
 			from = {
 				count_owned_leader = {
 					limit = {
-						has_touhou_leader_trait = yes
+						has_touhou_supernatural_trait = yes
 					}
 					count > 1
 				}
@@ -60,7 +60,7 @@ touhou_add_char_id_effect = {
 			from = {
 				count_owned_leader = {
 					limit = {
-						has_touhou_leader_trait = yes
+						has_touhou_supernatural_trait = yes
 					}
 					count > 1
 				}
@@ -214,7 +214,7 @@ touhou_trace_select_effect = {
 				}
 				exists = leader
 				leader = {
-					has_touhou_leader_trait = yes
+					has_touhou_supernatural_trait = yes
 				}
 			}
 		}
@@ -330,12 +330,12 @@ touhou_reimu_spell_card_effect = {
 							which = seleted_card_id
 							value = 2
 						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 2
+						}
 					}
 					reimu_card_2_trigger = yes
-					resource_stockpile_compare = {
-						resource = thl_bomb
-						value >= 2
-					}
 				}
 				AND = {
 					From = {
@@ -343,12 +343,12 @@ touhou_reimu_spell_card_effect = {
 							which = seleted_card_id
 							value = 3
 						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 1
+						}
 					}
 					reimu_card_3_trigger = yes
-					resource_stockpile_compare = {
-						resource = thl_bomb
-						value >= 1
-					}
 				}
 				AND = {
 					From = {
@@ -356,12 +356,12 @@ touhou_reimu_spell_card_effect = {
 							which = seleted_card_id
 							value = 4
 						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 4
+						}
 					}
 					reimu_card_4_trigger = yes
-					resource_stockpile_compare = {
-						resource = thl_bomb
-						value >= 4
-					}
 				}
 				AND = {
 					From = {
@@ -369,12 +369,12 @@ touhou_reimu_spell_card_effect = {
 							which = seleted_card_id
 							value = 5
 						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 1
+						}
 					}
 					reimu_card_5_trigger = yes
-					resource_stockpile_compare = {
-						resource = thl_bomb
-						value >= 1
-					}
 				}
 				AND = {
 					From = {
@@ -382,12 +382,12 @@ touhou_reimu_spell_card_effect = {
 							which = seleted_card_id
 							value = 6
 						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 5
+						}
 					}
 					reimu_card_6_trigger = yes
-					resource_stockpile_compare = {
-						resource = thl_bomb
-						value >= 5
-					}
 				}
 			}
 		}
@@ -395,6 +395,11 @@ touhou_reimu_spell_card_effect = {
 
 	effect = {
 		hidden_effect = {
+			from = {
+				country_event = {
+					id = touhou_paragon_spell.10000
+				}
+			}
 			if = {
 				limit = {
 					From = {
@@ -484,6 +489,157 @@ touhou_reimu_spell_card_effect = {
 	}
 }
 
+touhou_koishi_spell_card_text = {
+	potential = {
+		from = {
+			check_variable = {
+				which = seleted_char_id
+				value = 52
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_subconscious
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = spell_card_koishi_tooltip
+	}
+}
+
+touhou_koishi_spell_card_effect = {
+	potential = {
+		from = {
+			check_variable = {
+				which = seleted_char_id
+				value = 52
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_subconscious
+			}
+		}
+	}
+	allow = {
+		hidden_trigger = {
+			OR = {
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 1
+						}
+					}
+					koishi_card_1_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 2
+						}
+					}
+					koishi_card_2_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 3
+						}
+					}
+					koishi_card_3_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 4
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 4
+						}
+					}
+					koishi_card_4_trigger = yes
+				}
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			from = {
+				country_event = {
+					id = touhou_paragon_spell.10000
+				}
+			}
+			if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						check_variable = {
+							which = ex_charge
+							value = 0
+						}
+					}
+				}
+				koishi_spell_card_1_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+					}
+				}
+				koishi_spell_card_2_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
+					}
+				}
+				koishi_spell_card_3_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 4
+						}
+					}
+				}
+				koishi_spell_card_4_effect = yes
+			}
+		}
+	}
+}
+
 touhou_none_spell_card_text = {
 	potential = {
 		from = {
@@ -495,6 +651,15 @@ touhou_none_spell_card_text = {
 					}
 					any_owned_leader = {
 						has_trait = leader_trait_fly
+					}
+				}
+				AND = {
+					check_variable = {
+						which = seleted_char_id
+						value = 52
+					}
+					any_owned_leader = {
+						has_trait = leader_trait_subconscious
 					}
 				}
 			}

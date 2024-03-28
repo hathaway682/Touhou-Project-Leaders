@@ -649,23 +649,6 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetSelectedCard
-	text = {
-		trigger = {
-			From = {
-				check_variable = {
-					which = seleted_char_id
-					value = 1
-				}
-			}
-		}
-		localization_key = spell_card_reimu_group
-	}
-
-	default = spell_card_none
-}
-
-defined_text = {
 	name = GetSelectedCardReimu
 	text = {
 		trigger = {
@@ -931,9 +914,9 @@ defined_text = {
 
 	text = {
 		trigger = {
-			OR = {
-				AND = {
-					From = {
+			from = {
+				OR = {
+					AND = {
 						OR = {
 							AND = {
 								check_variable = {
@@ -954,14 +937,12 @@ defined_text = {
 								value = 5
 							}
 						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value < 1
+						}
 					}
-					resource_stockpile_compare = {
-						resource = thl_bomb
-						value < 1
-					}
-				}
-				AND = {
-					From = {
+					AND = {
 						OR = {
 							AND = {
 								check_variable = {
@@ -978,10 +959,164 @@ defined_text = {
 								value = 2
 							}
 						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value < 2
+						}
 					}
-					resource_stockpile_compare = {
-						resource = thl_bomb
-						value < 2
+					AND = {
+						check_variable = {
+							which = seleted_card_id
+							value = 4
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value < 4
+						}
+					}
+					AND = {
+						check_variable = {
+							which = seleted_card_id
+							value = 6
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value < 5
+						}
+					}
+				}
+			}
+		}
+		localization_key = touhou_error_no_resource
+	}
+
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 0
+				}
+			}
+		}
+		localization_key = touhou_error_no_spell
+	}
+
+	default = touhou_can_confirm
+}
+
+defined_text = {
+	name = GetSelectedCardKoishi
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_koishi_1
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 2
+				}
+			}
+		}
+		localization_key = spell_card_koishi_2
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 3
+				}
+			}
+		}
+		localization_key = spell_card_koishi_3
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 4
+				}
+			}
+		}
+		localization_key = spell_card_koishi_4
+	}
+	default = spell_card_none
+}
+
+defined_text = {
+	name = GetSelectedCardkoishiKoishi
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_koishi_1_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 2
+				}
+			}
+		}
+		localization_key = spell_card_koishi_2_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 3
+				}
+			}
+		}
+		localization_key = spell_card_koishi_3_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 4
+				}
+			}
+		}
+		localization_key = spell_card_koishi_4_desc
+	}
+	default = spell_card_none
+}
+
+defined_text = {
+	name = GetSelectedCardRequirementKoishi
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+					}
+					NOT = {
+						koishi_card_1_trigger = yes
 					}
 				}
 				AND = {
@@ -991,21 +1126,88 @@ defined_text = {
 							value = 4
 						}
 					}
-					resource_stockpile_compare = {
-						resource = thl_bomb
-						value < 4
+					NOT = {
+						koishi_card_4_trigger = yes
+					}
+				}
+			}
+		}
+		localization_key = touhou_error_wrong_target
+	}
+
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+					}
+					NOT = {
+						koishi_card_2_trigger = yes
 					}
 				}
 				AND = {
 					From = {
 						check_variable = {
 							which = seleted_card_id
-							value = 6
+							value = 3
 						}
 					}
-					resource_stockpile_compare = {
-						resource = thl_bomb
-						value < 5
+					NOT = {
+						koishi_card_3_trigger = yes
+					}
+				}
+			}
+		}
+		localization_key = touhou_error_unmet_needs
+	}
+
+	text = {
+		trigger = {
+			from = {
+				OR = {
+					AND = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value < 1
+						}
+					}
+					AND = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value < 2
+						}
+					}
+					AND = {
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value < 3
+						}
+					}
+					AND = {
+						check_variable = {
+							which = seleted_card_id
+							value = 4
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value < 4
+						}
 					}
 				}
 			}

@@ -237,8 +237,9 @@ guiTypes = {
             orientation = upper_left
         }
 
+        ###灵梦
         effectButtonType = {
-            name = "touhou_select_spell_text"
+            name = "touhou_select_spell_text_reimu"
             quadTextureSprite = "GFX_black_box_bg"
             buttonText = "spell_card_reimu_group"
             buttonFont = "malgun_goth_24"
@@ -247,19 +248,46 @@ guiTypes = {
             format = center
             vertical_alignment = center
             alwaysTransparent = yes
-            effect = touhou_no_effect
+            effect = touhou_reimu_spell_card_text
         }
 
         effectButtonType = {
             name = "touhou_confirm_button_reimu"
             quadTextureSprite = "GFX_standard_button_172_34"
             position = { x = -192 y = 154 }
-            buttonText = "spell_card_requirement_group_1"
+            buttonText = "spell_card_reimu_requirement"
             buttonFont = "malgun_goth_24"
             size = { width = 116 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_reimu_spell_card_effect
+            orientation = upper_right
+        }
+
+        ###恋
+        effectButtonType = {
+            name = "touhou_select_spell_text_koishi"
+            quadTextureSprite = "GFX_black_box_bg"
+            buttonText = "spell_card_koishi_group"
+            buttonFont = "malgun_goth_24"
+            position = { x = 48 y = 120 }
+            size = { width = 274 height = 38 }
+            format = center
+            vertical_alignment = center
+            alwaysTransparent = yes
+            effect = touhou_koishi_spell_card_text
+        }
+
+        effectButtonType = {
+            name = "touhou_confirm_button_koishi"
+            quadTextureSprite = "GFX_standard_button_172_34"
+            position = { x = -192 y = 154 }
+            buttonText = "spell_card_koishi_requirement"
+            buttonFont = "malgun_goth_24"
+            size = { width = 116 height = 38 }
+            format = center
+            vertical_alignment = center
+            effect = touhou_koishi_spell_card_effect
             orientation = upper_right
         }
 

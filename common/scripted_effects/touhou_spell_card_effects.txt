@@ -1,6 +1,8 @@
 reimu_spell_card_1_effect = {
-    add_resource = {
-        thl_bomb = -1
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
     }
     if = {
         limit = {
@@ -53,8 +55,10 @@ reimu_spell_card_1_effect = {
 }
 
 reimu_spell_card_1_ex_effect = {
-    add_resource = {
-        thl_bomb = -2
+    from = {
+        add_resource = {
+            thl_bomb = -2
+        }
     }
     if = {
         limit = {
@@ -107,8 +111,10 @@ reimu_spell_card_1_ex_effect = {
 }
 
 reimu_spell_card_2_effect = {
-    add_resource = {
-        thl_bomb = -2
+    from = {
+        add_resource = {
+            thl_bomb = -2
+        }
     }
     if = {
         limit = {
@@ -131,8 +137,10 @@ reimu_spell_card_2_effect = {
 }
 
 reimu_spell_card_3_effect = {
-    add_resource = {
-        thl_bomb = -1
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
     }
     if = {
         limit = {
@@ -149,8 +157,10 @@ reimu_spell_card_3_effect = {
 }
 
 reimu_spell_card_4_effect = {
-    add_resource = {
-        thl_bomb = -4
+    from = {
+        add_resource = {
+            thl_bomb = -4
+        }
     }
     from = {
         random_owned_fleet = {
@@ -170,8 +180,10 @@ reimu_spell_card_4_effect = {
 }
 
 reimu_spell_card_5_effect = {
-    add_resource = {
-        thl_bomb = -5
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
     }
     if = {
         limit = {
@@ -204,6 +216,11 @@ reimu_spell_card_5_effect = {
 
 reimu_spell_card_6_effect = {
     from = {
+        add_resource = {
+            thl_bomb = -5
+        }
+    }
+    from = {
         random_owned_fleet = {
             limit = {
                 exists = leader
@@ -222,6 +239,150 @@ reimu_spell_card_6_effect = {
             set_fleet_settings = {
                 is_boss = yes
             }
+        }
+    }
+}
+
+koishi_spell_card_1_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet
+            }
+        }
+        root = {
+            add_modifier = {
+                modifier = modifier_ancestor_dream
+            }
+        }
+    }
+}
+
+koishi_spell_card_2_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -2
+        }
+    }
+    if = {
+        limit = {
+            NOT = {
+                exists = event_target:koishi_country
+            }
+        }
+        create_country = {
+            name = NAME_Koishi_Fleet
+            adjective = NAME_Koishi_Fleet
+            type = koishi_berserk_fleet
+            flag = {
+                icon={
+                    category="spherical"
+                    file="flag_spherical_12.dds"
+                }
+                background={
+                    category="backgrounds"
+                    file="flag_BG_31.dds"
+                }
+                colors={
+                    "desert_yellow"
+                    "swamp_green"
+                    "null"
+                    "null"
+                }
+            }
+            auto_delete = no
+            randomize_ethos = yes
+            released_from_country = from
+            ignore_initial_colony_error = yes
+        }
+        last_created_country = {
+            save_global_event_target_as = koishi_country
+            copy_techs_from = { target = from }
+        }
+    }
+    else = {
+        event_target:koishi_country = {
+            copy_techs_from = { target = from }
+        }
+    }
+    from = {
+        every_owned_fleet = {
+            limit = {
+                exists = leader
+                leader = { has_trait = leader_trait_subconscious }
+            }
+            add_modifier = {
+                modifier = rampage_fleet
+                days = -1
+            }
+            set_owner = event_target:koishi_country
+            set_fleet_settings = {
+                can_change_leader = no
+                is_boss = yes
+            }
+        }
+        set_country_flag = koishi_rampage
+    }
+}
+
+koishi_spell_card_3_effect = {
+    from = {
+        remove_country_flag = koishi_rampage
+        add_resource = {
+            thl_bomb = -3
+        }
+    }
+    event_target:koishi_country = {
+        every_owned_fleet = {
+            remove_modifier = rampage_fleet
+            set_fleet_settings = {
+                can_change_leader = yes
+                is_boss = no
+            }
+            set_owner = from
+            leader = {
+                set_owner = from
+            }
+            solar_system = {
+                every_fleet_in_system = {
+                    add_modifier = {
+                        modifier = super_ego
+                        days = 30
+                    }
+                }
+            }
+            solar_system = {
+                every_fleet_in_system = {
+                    add_modifier = {
+                        modifier = super_ego
+                        days = 30
+                    }
+                }
+            }
+        }
+    }
+}
+
+koishi_spell_card_4_effect = {
+    add_resource = {
+        thl_bomb = -4
+    }
+    from = {
+        every_owned_fleet = {
+            limit = {
+                exists = leader
+                leader = { has_trait = leader_trait_subconscious }
+            }
+            add_modifier = {
+                modifier = koishi_surprise
+                days = 30
+            }
+            set_location = root
         }
     }
 }
