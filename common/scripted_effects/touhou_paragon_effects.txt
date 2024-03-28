@@ -2030,6 +2030,10 @@ add_card_id = {
 				value = 0
 			}
 		}
+		set_variable = {
+			which = ex_charge
+			value = 0
+		}
 	}
 }
 
@@ -2064,6 +2068,10 @@ subtract_card_id = {
 				which = seleted_card_id
 				value = 0
 			}
+		}
+		set_variable = {
+			which = ex_charge
+			value = 0
 		}
 	}
 }

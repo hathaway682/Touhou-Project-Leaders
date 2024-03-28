@@ -243,7 +243,7 @@ guiTypes = {
         effectButtonType = {
             name = "touhou_select_spell_text"
             quadTextureSprite = "GFX_black_box_bg"
-            buttonText = "spell_card_group_1"
+            buttonText = "spell_card_reimu_group"
             buttonFont = "malgun_goth_24"
             position = { x = 48 y = 120 }
             size = { width = 274 height = 38 }

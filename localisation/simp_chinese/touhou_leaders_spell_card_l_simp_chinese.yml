@@ -29,7 +29,7 @@
  touhou_trace_select_desc:0 "§H追踪选择§!/n/n§E选中任意东方领袖管理的对象，再按下此按钮可选择该领袖以使用她的符卡。§!"
  touhou_ex_charge_desc:0 "§H符卡充能§!/n/n§E使用该按钮施放所选符卡的高级版本，一般和低级版本效果类似，但有更高的COST和更大的威力。§!"
 
- touhou_selected_char_0:0 "无可用角色"
+ touhou_selected_char_0:0 "未选择角色"
 
  touhou_selected_char_1:0 "博丽灵梦"
  touhou_selected_char_2:0 "雾雨魔理沙"
@@ -93,12 +93,13 @@
  touhou_selected_char_51:0 "灵乌路空"
  touhou_selected_char_52:0 "古明地恋"
 
- spell_card_none:0 "无可用符卡"
+ spell_card_none:0 "未选择符卡"
  spell_card_none_desc:0 ""
 
  touhou_selected_char_1_desc:0 "可用符卡：\n§Y灵符「梦想封印」（1）§! §H神灵「梦想封印」（2）§!\n§Y梦符「封魔阵」（2）§!\n§Y梦符「二重结界」（1）§!\n§Y神技「八方龙杀阵」（4）§!\n§Y梦符「梦想亚空穴」（1）§!\n§Y「梦想天生」（5）§!"
 
- spell_card_group_1:0 "[GetSelectedCardReimu]"
+ spell_card_reimu_group:0 "[GetSelectedCardReimu]"
+ spell_card_reimu_tooltip:0 "[GetSelectedCardReimuDesc]"
  spell_card_requirement_group_1:0 "[GetSelectedCardRequirementReimu]"
  spell_card_reimu_1:0 "灵符「梦想封印」"
  spell_card_reimu_1_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Reimu$§!处在同一星系的§Y敌对舰队§!。\n\n发射§Y6§!颗光弹，对舰队内敌方战舰造成每颗随机§Y200-1000§!点船体伤害（多颗光弹可以命中同一目标），并['concept_huuin']该舰队§Y30§!天。"

@@ -7,6 +7,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 1
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_fly
+				}
 			}
 		}
 		localization_key = touhou_selected_char_1
@@ -17,6 +20,9 @@ defined_text = {
 				check_variable = {
 					which = seleted_char_id
 					value = 2
+				}
+				any_owned_leader = {
+					has_trait = leader_trait_magic
 				}
 			}
 		}
@@ -40,6 +46,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 4
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_ice
+				}
 			}
 		}
 		localization_key = touhou_selected_char_4
@@ -50,6 +59,9 @@ defined_text = {
 				check_variable = {
 					which = seleted_char_id
 					value = 5
+				}
+				any_owned_leader = {
+					has_trait = leader_trait_kongfu
 				}
 			}
 		}
@@ -62,6 +74,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 6
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_elements
+				}
 			}
 		}
 		localization_key = touhou_selected_char_6
@@ -73,6 +88,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 7
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_time
+				}
 			}
 		}
 		localization_key = touhou_selected_char_7
@@ -83,6 +101,9 @@ defined_text = {
 				check_variable = {
 					which = seleted_char_id
 					value = 8
+				}
+				any_owned_leader = {
+					has_trait = leader_trait_destiny_manipulation
 				}
 			}
 		}
@@ -127,6 +148,9 @@ defined_text = {
 				check_variable = {
 					which = seleted_char_id
 					value = 12
+				}
+				any_owned_leader = {
+					has_trait = leader_trait_dolls
 				}
 			}
 		}
@@ -183,6 +207,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 17
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_kendo
+				}
 			}
 		}
 		localization_key = touhou_selected_char_17
@@ -193,6 +220,9 @@ defined_text = {
 				check_variable = {
 					which = seleted_char_id
 					value = 18
+				}
+				any_owned_leader = {
+					has_trait = leader_trait_death
 				}
 			}
 		}
@@ -226,6 +256,9 @@ defined_text = {
 				check_variable = {
 					which = seleted_char_id
 					value = 21
+				}
+				any_owned_leader = {
+					has_trait = leader_trait_density
 				}
 			}
 		}
@@ -282,6 +315,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 26
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_wave_length
+				}
 			}
 		}
 		localization_key = touhou_selected_char_26
@@ -326,6 +362,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 30
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_wind
+				}
 			}
 		}
 		localization_key = touhou_selected_char_30
@@ -348,6 +387,12 @@ defined_text = {
 					which = seleted_char_id
 					value = 32
 				}
+				any_owned_leader = {
+					OR = {
+						has_trait = leader_trait_flower
+						has_trait = leader_trait_flower_commander
+					}
+				}
 			}
 		}
 		localization_key = touhou_selected_char_32
@@ -359,6 +404,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 33
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_distance
+				}
 			}
 		}
 		localization_key = touhou_selected_char_33
@@ -369,6 +417,9 @@ defined_text = {
 				check_variable = {
 					which = seleted_char_id
 					value = 34
+				}
+				any_owned_leader = {
+					has_trait = leader_trait_trial
 				}
 			}
 		}
@@ -414,6 +465,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 38
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_water
+				}
 			}
 		}
 		localization_key = touhou_selected_char_38
@@ -435,6 +489,9 @@ defined_text = {
 				check_variable = {
 					which = seleted_char_id
 					value = 40
+				}
+				any_owned_leader = {
+					has_trait = leader_trait_miracle
 				}
 			}
 		}
@@ -479,6 +536,9 @@ defined_text = {
 				check_variable = {
 					which = seleted_char_id
 					value = 44
+				}
+				any_owned_leader = {
+					has_trait = leader_trait_earthquake
 				}
 			}
 		}
@@ -535,6 +595,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 49
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_mind_reader
+				}
 			}
 		}
 		localization_key = touhou_selected_char_49
@@ -545,6 +608,9 @@ defined_text = {
 				check_variable = {
 					which = seleted_char_id
 					value = 50
+				}
+				any_owned_leader = {
+					has_trait = leader_trait_corpse_travel
 				}
 			}
 		}
@@ -557,6 +623,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 51
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_nuclear
+				}
 			}
 		}
 		localization_key = touhou_selected_char_51
@@ -567,6 +636,9 @@ defined_text = {
 				check_variable = {
 					which = seleted_char_id
 					value = 52
+				}
+				any_owned_leader = {
+					has_trait = leader_trait_subconscious
 				}
 			}
 		}
@@ -587,7 +659,7 @@ defined_text = {
 				}
 			}
 		}
-		localization_key = spell_card_group_1
+		localization_key = spell_card_reimu_group
 	}
 
 	default = spell_card_none
@@ -602,9 +674,28 @@ defined_text = {
 					which = seleted_card_id
 					value = 1
 				}
+				check_variable = {
+					which = ex_charge
+					value = 0
+				}
 			}
 		}
 		localization_key = spell_card_reimu_1
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 1
+				}
+				check_variable = {
+					which = ex_charge
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_reimu_1_ex
 	}
 	text = {
 		trigger = {
@@ -660,6 +751,96 @@ defined_text = {
 			}
 		}
 		localization_key = spell_card_reimu_6
+	}
+	default = spell_card_none
+}
+
+defined_text = {
+	name = GetSelectedCardReimuDesc
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 1
+				}
+				check_variable = {
+					which = ex_charge
+					value = 0
+				}
+			}
+		}
+		localization_key = spell_card_reimu_1_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 1
+				}
+				check_variable = {
+					which = ex_charge
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_reimu_1_ex_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 2
+				}
+			}
+		}
+		localization_key = spell_card_reimu_2_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 3
+				}
+			}
+		}
+		localization_key = spell_card_reimu_3_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 4
+				}
+			}
+		}
+		localization_key = spell_card_reimu_4_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 5
+				}
+			}
+		}
+		localization_key = spell_card_reimu_5_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 6
+				}
+			}
+		}
+		localization_key = spell_card_reimu_6_desc
 	}
 	default = spell_card_none
 }
@@ -754,9 +935,15 @@ defined_text = {
 				AND = {
 					From = {
 						OR = {
-							check_variable = {
-								which = seleted_card_id
-								value = 1
+							AND = {
+								check_variable = {
+									which = seleted_card_id
+									value = 1
+								}
+								check_variable = {
+									which = ex_charge
+									value = 0
+								}
 							}
 							check_variable = {
 								which = seleted_card_id
@@ -775,9 +962,21 @@ defined_text = {
 				}
 				AND = {
 					From = {
-						check_variable = {
-							which = seleted_card_id
-							value = 2
+						OR = {
+							AND = {
+								check_variable = {
+									which = seleted_card_id
+									value = 1
+								}
+								check_variable = {
+									which = ex_charge
+									value = 0
+								}
+							}
+							check_variable = {
+								which = seleted_card_id
+								value = 2
+							}
 						}
 					}
 					resource_stockpile_compare = {

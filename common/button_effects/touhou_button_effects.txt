@@ -129,7 +129,20 @@ touhou_ex_charge_effect = {
 		}
 	}
 	allow = {
-		always = yes
+		from = {
+			OR = {
+				AND = {
+					check_variable = {
+						which = seleted_char_id
+						value = 1
+					}
+					check_variable = {
+						which = seleted_card_id
+						value = 1
+					}
+				}
+			}
+		}
 	}
 
 	effect = {
@@ -155,7 +168,20 @@ touhou_ex_charge_cancel_effect = {
 		}
 	}
 	allow = {
-		always = yes
+		from = {
+			OR = {
+				AND = {
+					check_variable = {
+						which = seleted_char_id
+						value = 1
+					}
+					check_variable = {
+						which = seleted_card_id
+						value = 1
+					}
+				}
+			}
+		}
 	}
 
 	effect = {
@@ -238,6 +264,9 @@ touhou_reimu_spell_card_text = {
 				which = seleted_char_id
 				value = 1
 			}
+			any_owned_leader = {
+				has_trait = leader_trait_fly
+			}
 		}
 	}
 	allow = {
@@ -245,7 +274,7 @@ touhou_reimu_spell_card_text = {
 	}
 
 	effect = {
-
+		custom_tooltip = spell_card_reimu_tooltip
 	}
 }
 
@@ -255,6 +284,9 @@ touhou_reimu_spell_card_effect = {
 			check_variable = {
 				which = seleted_char_id
 				value = 1
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_fly
 			}
 		}
 	}
@@ -267,12 +299,24 @@ touhou_reimu_spell_card_effect = {
 							which = seleted_card_id
 							value = 1
 						}
+						OR = {
+							AND = {
+								resource_stockpile_compare = {
+									resource = thl_bomb
+									value >= 1
+								}
+								check_variable = {
+									which = ex_charge
+									value = 0
+								}
+							}
+							resource_stockpile_compare = {
+								resource = thl_bomb
+								value >= 2
+							}
+						}
 					}
 					reimu_card_1_trigger = yes
-					resource_stockpile_compare = {
-						resource = thl_bomb
-						value >= 1
-					}
 				}
 				AND = {
 					From = {
@@ -344,71 +388,92 @@ touhou_reimu_spell_card_effect = {
 	}
 
 	effect = {
-		if = {
-			limit = {
-				From = {
-					check_variable = {
-						which = seleted_card_id
-						value = 1
+		hidden_effect = {
+			if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						check_variable = {
+							which = ex_charge
+							value = 0
+						}
 					}
 				}
+				reimu_spell_card_1_effect = yes
 			}
-			reimu_spell_card_1_effect = yes
-		}
-		else_if = {
-			limit = {
-				From = {
-					check_variable = {
-						which = seleted_card_id
-						value = 2
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						check_variable = {
+							which = ex_charge
+							value = 1
+						}
 					}
 				}
+				reimu_spell_card_1_ex_effect = yes
 			}
-			reimu_spell_card_2_effect = yes
-		}
-		else_if = {
-			limit = {
-				From = {
-					check_variable = {
-						which = seleted_card_id
-						value = 3
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
 					}
 				}
+				reimu_spell_card_2_effect = yes
 			}
-			reimu_spell_card_3_effect = yes
-		}
-		else_if = {
-			limit = {
-				From = {
-					check_variable = {
-						which = seleted_card_id
-						value = 4
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
 					}
 				}
+				reimu_spell_card_3_effect = yes
 			}
-			reimu_spell_card_4_effect = yes
-		}
-		else_if = {
-			limit = {
-				From = {
-					check_variable = {
-						which = seleted_card_id
-						value = 5
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 4
+						}
 					}
 				}
+				reimu_spell_card_4_effect = yes
 			}
-			reimu_spell_card_5_effect = yes
-		}
-		else_if = {
-			limit = {
-				From = {
-					check_variable = {
-						which = seleted_card_id
-						value = 6
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 5
+						}
 					}
 				}
+				reimu_spell_card_5_effect = yes
 			}
-			reimu_spell_card_6_effect = yes
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 6
+						}
+					}
+				}
+				reimu_spell_card_6_effect = yes
+			}
 		}
 	}
 }
@@ -416,10 +481,15 @@ touhou_reimu_spell_card_effect = {
 touhou_none_spell_card_text = {
 	potential = {
 		from = {
-			NOT = {
-				check_variable = {
-					which = seleted_char_id
-					value = 1
+			NOR = {
+				AND = {
+					check_variable = {
+						which = seleted_char_id
+						value = 1
+					}
+					any_owned_leader = {
+						has_trait = leader_trait_fly
+					}
 				}
 			}
 		}
@@ -436,10 +506,15 @@ touhou_none_spell_card_text = {
 touhou_none_spell_card_effect = {
 	potential = {
 		from = {
-			NOT = {
-				check_variable = {
-					which = seleted_char_id
-					value = 1
+			NOR = {
+				AND = {
+					check_variable = {
+						which = seleted_char_id
+						value = 1
+					}
+					any_owned_leader = {
+						has_trait = leader_trait_fly
+					}
 				}
 			}
 		}
