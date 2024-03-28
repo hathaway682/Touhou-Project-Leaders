@@ -296,3 +296,15 @@ leader_num_spell_cards = {
 		has_trait = leader_trait_fly
 	}
 }
+
+mana_need_per_bomb = {
+	base = 5
+	complex_trigger_modifier = {
+		trigger = resource_stockpile_compare
+		parameters = {
+			resource = thl_bomb
+		}
+		mode = add
+	}
+	multiply = 10
+}

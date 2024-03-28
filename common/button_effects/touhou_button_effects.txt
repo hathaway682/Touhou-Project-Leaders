@@ -269,6 +269,10 @@ touhou_reimu_spell_card_effect = {
 						}
 					}
 					reimu_card_1_trigger = yes
+					resource_stockpile_compare = {
+						resource = thl_bomb
+						value >= 1
+					}
 				}
 				AND = {
 					From = {
@@ -278,6 +282,10 @@ touhou_reimu_spell_card_effect = {
 						}
 					}
 					reimu_card_2_trigger = yes
+					resource_stockpile_compare = {
+						resource = thl_bomb
+						value >= 2
+					}
 				}
 				AND = {
 					From = {
@@ -287,6 +295,10 @@ touhou_reimu_spell_card_effect = {
 						}
 					}
 					reimu_card_3_trigger = yes
+					resource_stockpile_compare = {
+						resource = thl_bomb
+						value >= 1
+					}
 				}
 				AND = {
 					From = {
@@ -296,6 +308,10 @@ touhou_reimu_spell_card_effect = {
 						}
 					}
 					reimu_card_4_trigger = yes
+					resource_stockpile_compare = {
+						resource = thl_bomb
+						value >= 4
+					}
 				}
 				AND = {
 					From = {
@@ -305,6 +321,10 @@ touhou_reimu_spell_card_effect = {
 						}
 					}
 					reimu_card_5_trigger = yes
+					resource_stockpile_compare = {
+						resource = thl_bomb
+						value >= 1
+					}
 				}
 				AND = {
 					From = {
@@ -314,6 +334,10 @@ touhou_reimu_spell_card_effect = {
 						}
 					}
 					reimu_card_6_trigger = yes
+					resource_stockpile_compare = {
+						resource = thl_bomb
+						value >= 5
+					}
 				}
 			}
 		}

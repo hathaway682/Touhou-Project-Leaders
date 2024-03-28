@@ -750,10 +750,64 @@ defined_text = {
 
 	text = {
 		trigger = {
-			From = {
-				check_variable = {
-					which = seleted_card_id
-					value = 2
+			OR = {
+				AND = {
+					From = {
+						OR = {
+							check_variable = {
+								which = seleted_card_id
+								value = 1
+							}
+							check_variable = {
+								which = seleted_card_id
+								value = 3
+							}
+							check_variable = {
+								which = seleted_card_id
+								value = 5
+							}
+						}
+					}
+					resource_stockpile_compare = {
+						resource = thl_bomb
+						value < 1
+					}
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+					}
+					resource_stockpile_compare = {
+						resource = thl_bomb
+						value < 2
+					}
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 4
+						}
+					}
+					resource_stockpile_compare = {
+						resource = thl_bomb
+						value < 4
+					}
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 6
+						}
+					}
+					resource_stockpile_compare = {
+						resource = thl_bomb
+						value < 5
+					}
 				}
 			}
 		}

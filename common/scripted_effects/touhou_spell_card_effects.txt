@@ -1,4 +1,7 @@
 reimu_spell_card_1_effect = {
+    add_resource = {
+        thl_bomb = -1
+    }
     if = {
         limit = {
             root = {
@@ -50,6 +53,9 @@ reimu_spell_card_1_effect = {
 }
 
 reimu_spell_card_1_ex_effect = {
+    add_resource = {
+        thl_bomb = -2
+    }
     if = {
         limit = {
             root = {
@@ -101,6 +107,9 @@ reimu_spell_card_1_ex_effect = {
 }
 
 reimu_spell_card_2_effect = {
+    add_resource = {
+        thl_bomb = -2
+    }
     if = {
         limit = {
             root = {
@@ -122,6 +131,9 @@ reimu_spell_card_2_effect = {
 }
 
 reimu_spell_card_3_effect = {
+    add_resource = {
+        thl_bomb = -1
+    }
     if = {
         limit = {
             root = {
@@ -137,6 +149,9 @@ reimu_spell_card_3_effect = {
 }
 
 reimu_spell_card_4_effect = {
+    add_resource = {
+        thl_bomb = -4
+    }
     from = {
         random_owned_fleet = {
             limit = {
@@ -155,6 +170,9 @@ reimu_spell_card_4_effect = {
 }
 
 reimu_spell_card_5_effect = {
+    add_resource = {
+        thl_bomb = -5
+    }
     if = {
         limit = {
             root = {

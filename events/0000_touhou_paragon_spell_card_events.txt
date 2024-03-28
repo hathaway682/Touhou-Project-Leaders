@@ -1,5 +1,49 @@
 namespace = touhou_paragon_spell
 
+country_event = {
+    id = touhou_paragon_spell.10000
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        any_owned_leader = {
+            has_touhou_leader_trait = yes
+        }
+    }
+
+    immediate = {
+        while = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = thl_mana
+                    value = value:mana_need_per_bomb
+                }
+            }
+            add_resource = {
+                thl_mana = -1
+                multiplier = value:mana_need_per_bomb
+            }
+            add_resource = {
+                thl_bomb = 1
+            }
+        }
+        export_resource_stockpile_to_variable = {
+            resource = thl_mana
+            variable = interface_mana
+        }
+        round_variable = interface_mana
+        export_resource_stockpile_to_variable = {
+            resource = thl_bomb
+            variable = interface_bomb
+        }
+        round_variable = interface_bomb
+        set_variable = {
+            which = interface_mana_need
+            value = value:mana_need_per_bomb
+        }
+    }
+}
+
 fleet_event = {
     id = touhou_paragon_spell.1
     hide_window = yes
@@ -18,7 +62,7 @@ fleet_event = {
             }
             set_star_flag = reimu_trap_system
             system_event = {
-                id = touhou_paragon_effect.43
+                id = touhou_paragon_spell.3
                 days = 720
             }
         }

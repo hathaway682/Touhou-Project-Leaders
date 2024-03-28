@@ -1,4 +1,13 @@
-menace = {
+thl_mana = {
+	tradable = no
+	category = other
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+thl_bomb = {
 	tradable = no
 	category = other
 

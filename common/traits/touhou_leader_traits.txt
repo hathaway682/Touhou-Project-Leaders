@@ -177,6 +177,11 @@ leader_trait_earthquake = {
 		TIER = none
 	}
 	custom_tooltip_with_modifiers = leader_trait_earthquake_effect
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
 	planet_modifier = {
 		planet_structures_cost_mult = -0.20
 		deposit_blockers_cost_mult = -0.66
@@ -276,6 +281,11 @@ leader_trait_density = {
 		COUNCIL = no
 		TIER = none
 	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
 	planet_modifier = {
 		planet_stability_add = 10
 		planet_crime_add = -30
@@ -335,6 +345,11 @@ leader_trait_miracle = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_thl_mana_produces_add = 1
+		mult = trigger:has_skill
 	}
 	triggered_self_modifier = {
 		potential = { always = yes }
@@ -908,6 +923,11 @@ leader_trait_ice = {
 		COUNCIL = no
 		TIER = none
 	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
 	fleet_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = 0.3
 		weapon_type_kinetic_weapon_fire_rate_mult = 0.15
@@ -933,6 +953,11 @@ leader_trait_kongfu = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_thl_mana_produces_add = 1
+		mult = trigger:has_skill
 	}
 	army_modifier = {
 		army_damage_taken_mult = -0.5
@@ -964,6 +989,11 @@ leader_trait_fly = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_thl_mana_produces_add = 1
+		mult = trigger:has_skill
 	}
 	fleet_modifier = {
 		ship_speed_mult = 0.3
@@ -1139,6 +1169,11 @@ leader_trait_magic = {
 		COUNCIL = no
 		TIER = none
 	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
 	fleet_modifier = {
 		weapon_type_energy_weapon_damage_mult = 0.5
 		weapon_type_explosive_weapon_damage_mult = 0.25
@@ -1292,6 +1327,11 @@ leader_trait_wave_length = {
 		COUNCIL = no
 		TIER = none
 	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
 	custom_tooltip_with_modifiers = leader_trait_wave_length_effect
 	fleet_modifier = {
 		ship_evasion_add = 30
@@ -1416,6 +1456,11 @@ leader_trait_kendo = {
 		COUNCIL = no
 		TIER = none
 	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
 	custom_tooltip_with_modifiers = leader_trait_kendo_effect
 	self_modifier = {
 		planet_combat_width_add = -2
@@ -1522,6 +1567,11 @@ leader_trait_time = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_thl_mana_produces_add = 1
+		mult = trigger:has_skill
 	}
 	custom_tooltip_with_modifiers = leader_trait_time_effect
 	self_modifier = {
@@ -1868,6 +1918,11 @@ leader_trait_subconscious = {
 		COUNCIL = no
 		TIER = none
 	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
 	fleet_modifier = {
 		ship_evasion_add = 514
 		ship_cloaking_strength_add = 514
@@ -1891,6 +1946,11 @@ leader_trait_mind_reader = {
 		RARITY = paragon
 		COUNCIL = yes
 		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_officials_thl_mana_produces_add = 1
+		mult = trigger:has_skill
 	}
 	councilor_modifier = {
 		planet_stability_add = 10
@@ -1998,6 +2058,11 @@ leader_trait_wind = {
 		COUNCIL = no
 		TIER = none
 	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_officials_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
 	leader_class = { official }
 	fleet_modifier = {
 		ship_evasion_add = 5
@@ -2076,6 +2141,11 @@ leader_trait_trial = {
 		RARITY = paragon
 		COUNCIL = yes
 		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_officials_thl_mana_produces_add = 1
+		mult = trigger:has_skill
 	}
 	custom_tooltip_with_modifiers = leader_trait_trial_effect
 	councilor_modifier = {
@@ -2199,6 +2269,11 @@ leader_trait_distance = {
 		COUNCIL = no
 		TIER = none
 	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
 	leader_class = { commander }
 	fleet_modifier = {
 		ship_weapon_range_mult = 0.5
@@ -2272,6 +2347,11 @@ leader_trait_destiny_manipulation = {
 		RARITY = paragon
 		COUNCIL = yes
 		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_thl_mana_produces_add = 1
+		mult = trigger:has_skill
 	}
 	councilor_modifier = {
 		country_ruler_influence_produces_add = 1
@@ -2494,6 +2574,11 @@ leader_trait_elements = {
 		TIER = none
 	}
 	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_scientists_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
+	triggered_self_modifier = {
 		potential = {
 			always = yes
 		}
@@ -2598,6 +2683,11 @@ leader_trait_dolls = {
 		COUNCIL = no
 		TIER = none
 	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_officials_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
 	planet_modifier = {
 		planet_pop_assembly_add = 5
 		doll_control_limit = 20
@@ -2653,6 +2743,11 @@ leader_trait_death = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_officials_thl_mana_produces_add = 1
+		mult = trigger:has_skill
 	}
 	custom_tooltip_with_modifiers = leader_trait_death_effect
 	planet_modifier = {
@@ -2844,6 +2939,11 @@ leader_trait_flower = {
 		COUNCIL = yes
 		TIER = none
 	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_officials_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
 	councilor_modifier = {
 		planet_jobs_food_produces_mult = 0.5
 		pop_job_amenities_mult = 0.15
@@ -2948,6 +3048,11 @@ leader_trait_flower_commander = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_thl_mana_produces_add = 1
+		mult = trigger:has_skill
 	}
 	fleet_modifier = {
 		weapon_type_energy_weapon_damage_mult = 1
@@ -3367,6 +3472,11 @@ leader_trait_corpse_travel = {
 		COUNCIL = yes
 		TIER = none
 	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_officials_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
 	councilor_modifier = {
 		country_resettlement_cost_mult = -1
 		pop_growth_from_immigration = 0.65
@@ -3420,6 +3530,11 @@ leader_trait_nuclear = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_officials_thl_mana_produces_add = 1
+		mult = trigger:has_skill
 	}
 	fleet_modifier = {
 		weapon_type_explosive_weapon_damage_mult = 1
@@ -3672,6 +3787,11 @@ leader_trait_water = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_scientists_thl_mana_produces_add = 1
+		mult = trigger:has_skill
 	}
 	triggered_planet_modifier = {
 		potential = {
