@@ -16,7 +16,7 @@ country_event = {
             limit = {
                 resource_stockpile_compare = {
                     resource = thl_mana
-                    value = value:mana_need_per_bomb
+                    value >= value:mana_need_per_bomb
                 }
             }
             add_resource = {
