@@ -8828,7 +8828,7 @@ country_event = {
     id = touhou_paragon_effect.42602
     title = touhou_paragon_effect.42602.name
     desc = touhou_paragon_effect.42602.desc
-    picture = GFX_evt_utsuho #这里换dds
+    picture = GFX_evt_utsuho
     show_sound = event_planetary_riot
     is_triggered_only = yes
     option = {
@@ -8862,7 +8862,7 @@ country_event = {
     id = touhou_paragon_effect.42603
     title = touhou_paragon_effect.42603.name
     desc = touhou_paragon_effect.42603.desc
-    picture = GFX_evt_utsuho #这里换dds
+    picture = GFX_evt_utsuho
     show_sound = event_planetary_riot
     is_triggered_only = yes
     option = {
@@ -8913,7 +8913,7 @@ country_event = {
     id = touhou_paragon_effect.42604
     title = touhou_paragon_effect.42604.name
     desc = touhou_paragon_effect.42604.desc
-    picture = GFX_evt_utsuho #这里换dds
+    picture = GFX_evt_utsuho
     show_sound = event_planetary_riot
     is_triggered_only = yes
     option = {
@@ -8990,7 +8990,7 @@ country_event = {
     id = touhou_paragon_effect.42605
     title = touhou_paragon_effect.42605.name
     desc = touhou_paragon_effect.42605.desc
-    picture = GFX_evt_utsuho #这里换dds
+    picture = GFX_evt_utsuho
     show_sound = event_planetary_riot
     is_triggered_only = yes
     option = {
@@ -9068,7 +9068,7 @@ ship_event = {
     is_triggered_only = yes
     title = touhou_paragon_effect.42680.name
     desc = touhou_paragon_effect.42680.desc
-    picture = GFX_evt_utsuho #这里换dds
+    picture = GFX_evt_utsuho
     show_sound = event_planetary_riot
     immediate = {
         fleet = { set_event_locked = yes }
@@ -9101,7 +9101,7 @@ ship_event = {
     is_triggered_only = yes
     title = touhou_paragon_effect.42682.name
     desc = touhou_paragon_effect.42682.desc
-    picture = GFX_evt_utsuho #这里换dds
+    picture = GFX_evt_utsuho
     show_sound = event_planetary_riot
     immediate = {
         fleet = { set_event_locked = yes }
@@ -9121,7 +9121,7 @@ country_event = {
     id = touhou_paragon_effect.42606
     title = touhou_paragon_effect.42606.name
     desc = touhou_paragon_effect.42606.desc
-    picture = GFX_evt_utsuho #这里换dds
+    picture = GFX_evt_utsuho
     show_sound = event_planetary_riot
     is_triggered_only = yes
     option = {
@@ -9137,7 +9137,7 @@ country_event = {
     id = touhou_paragon_effect.42607
     title = touhou_paragon_effect.42607.name
     desc = touhou_paragon_effect.42607.desc
-    picture = GFX_evt_utsuho #这里换dds
+    picture = GFX_evt_utsuho
     show_sound = event_planetary_riot
     is_triggered_only = yes
     option = {
@@ -9148,7 +9148,7 @@ country_event = {
     id = touhou_paragon_effect.42608
     title = touhou_paragon_effect.42608.name
     desc = touhou_paragon_effect.42608.desc
-    picture = GFX_evt_utsuho #这里换dds
+    picture = GFX_evt_utsuho
     show_sound = event_planetary_riot
     is_triggered_only = yes
     option = {
@@ -9221,7 +9221,7 @@ ship_event = {
     is_triggered_only = yes
     title = touhou_paragon_effect.42683.name
     desc = touhou_paragon_effect.42683.desc
-    picture = GFX_evt_utsuho #这里换dds
+    picture = GFX_evt_utsuho
     show_sound = event_planetary_riot
     immediate = {
         fleet = { delete_fleet = this }
@@ -9305,7 +9305,7 @@ country_event = {
         text = touhou_paragon_effect.42684.desc.spiritualist
         trigger = { has_ethic = ethic_fanatic_spiritualist }
     }
-    picture = GFX_evt_utsuho #这里换dds
+    picture = GFX_evt_utsuho
     show_sound = event_planetary_riot
     immediate = {
         random_owned_fleet={
@@ -10066,6 +10066,9 @@ country_event = {
                 has_modifier = modifier_endless_banquet
             }
             random_moon = {
+                limit = {
+                    is_colony = no
+                }
                 change_pc = pc_shattered
                 random_list = {
                     1 = { add_deposit = d_minerals_3}
@@ -10555,5 +10558,168 @@ country_event = {
     }
     after = {
         set_country_flag = marisa_alice_regeneration_complete
+    }
+}
+
+#芙兰考古
+country_event = {
+    id = touhou_paragon_effect.43101
+    is_triggered_only = yes
+    fire_only_once = yes
+    title = touhou_paragon_effect.43101.name
+    desc = {
+        text = touhou_paragon_effect.43101.desc
+    }
+    picture = GFX_evt_shattered_planet
+    show_sound = event_planetary_riot
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_destiny_manipulation
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_time
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_elements
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_kongfu
+        }
+        has_technology = tech_colossus
+    }
+    option = {
+        name = touhou_paragon_effect.43101.a
+        random_planet_within_border = {
+            limit = {
+                is_planet_class = pc_barren
+                is_colony = no
+            }
+            change_pc = pc_shattered
+            create_archaeological_site = flan_digsite
+        }
+        add_monthly_resource_mult = {
+            resource = engineering_research
+            value = @tier1researchreward
+            min = @tier1researchmin
+            max = @tier1researchmax
+        }
+        set_country_flag = flan_arc_enable
+    }
+}
+
+fleet_event = {
+    id = touhou_paragon_effect.43102
+    title = touhou_paragon_effect.43101.name
+    desc = touhou_paragon_effect.43102.desc
+    picture = GFX_evt_archaeology_camp
+    show_sound = event_wind_ruins
+    location = from
+    archaeology = yes
+    is_triggered_only = yes
+    option = {
+        name = touhou_paragon_effect.43102.a
+        small_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = touhou_paragon_effect.43103
+    title = touhou_paragon_effect.43101.name
+    desc = touhou_paragon_effect.43103.desc
+    picture = GFX_evt_shattered_planet
+    show_sound = event_wind_ruins
+    location = from
+    archaeology = yes
+    is_triggered_only = yes
+    option = {
+        name = touhou_paragon_effect.43103.a
+        small_artifact_reward = yes
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
+            }
+        }
+    }
+}
+
+fleet_event = {
+    id = touhou_paragon_effect.43104
+    title = touhou_paragon_effect.43101.name
+    desc = touhou_paragon_effect.43104.desc
+    picture = GFX_evt_egg_cracked
+    show_sound = event_wind_ruins
+    location = from
+    archaeology = yes
+    is_triggered_only = yes
+    option = {
+        name = touhou_paragon_effect.43104.a
+        small_artifact_reward = yes
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
+            }
+        }
+    }
+}
+
+fleet_event = {
+    id = touhou_paragon_effect.43105
+    title = touhou_paragon_effect.43101.name
+    desc = touhou_paragon_effect.43105.desc
+    picture = GFX_evt_ship_in_orbit
+    show_sound = event_wind_ruins
+    location = from
+    archaeology = yes
+    is_triggered_only = yes
+    option = {
+        name = touhou_paragon_effect.43105.a
+        medium_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = touhou_paragon_effect.43106
+    title = touhou_paragon_effect.43101.name
+    desc = touhou_paragon_effect.43106.desc
+    picture = GFX_evt_ship_in_orbit_2
+    show_sound = event_wind_ruins
+    location = from
+    archaeology = yes
+    is_triggered_only = yes
+    option = {
+        name = touhou_paragon_effect.43106.a
+        medium_artifact_reward = yes
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
+            }
+        }
+    }
+}
+
+fleet_event = {
+    id = touhou_paragon_effect.43107
+    title = touhou_paragon_effect.43101.name
+    desc = touhou_paragon_effect.43107.desc
+    picture = GFX_evt_scientific_experiments
+    show_sound = event_wind_ruins
+    location = from
+    archaeology = yes
+    is_triggered_only = yes
+    option = {
+        name = touhou_paragon_effect.43107.a
+        small_artifact_reward = yes
+        owner = {
+            country_event = { id = touhou_paragon.43100 days = 1}
+        }
     }
 }
