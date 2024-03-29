@@ -1,4 +1,4 @@
-########## flan arc sites ###########
+########## arc sites ###########
 flan_digsite = {
 	desc = flan_digsite_desc
 	picture = GFX_evt_shattered_planet
