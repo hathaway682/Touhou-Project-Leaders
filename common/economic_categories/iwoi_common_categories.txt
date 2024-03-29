@@ -1,0 +1,32 @@
+planet_livestock = {
+	parent = planet_jobs_productive
+	generate_add_modifiers = {
+		produces
+	}
+	generate_mult_modifiers = {
+		produces
+	}
+	modifier_category = pop
+}
+
+pop_category_xeno_ward = {
+	parent = planet_pops
+	generate_add_modifiers = {
+		produces
+	}
+	generate_mult_modifiers = {
+		produces
+	}
+	modifier_category = pop
+}
+
+shinto_independent_category = {
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+}

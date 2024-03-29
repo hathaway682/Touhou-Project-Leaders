@@ -662,3 +662,12 @@ modifier_ancestor_dream = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_unity_symbol.dds"
 	icon_frame = 1
 }
+
+blessed_by_nameless_god = {
+	country_unity_produces_mult = 0.01
+}
+
+blessed_by_nameless_god_advanced = {
+	country_unity_produces_mult = 0.03
+	pop_happiness = 0.01
+}

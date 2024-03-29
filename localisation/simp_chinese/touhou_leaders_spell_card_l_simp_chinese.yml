@@ -175,7 +175,7 @@
  spell_card_sanne_6_ex:0 "大奇迹「八坂之神风」"
  spell_card_sanne_6_ex_desc:0 "COST：§Y5§!\n目标：任意受到§Y守矢灵能风暴§!修正的星系内的§Y我方恒星基地§!或是§Y建御名方神灵能化身§!。\n\n立刻结束§Y守矢灵能风暴§!在该星系的效果，星系内所有舰队将会进入§Y任务中失踪§!状态。"
  spell_card_sanne_7_ex:0 "秘法「九字切」"
- spell_card_sanne_7_ex_desc:0 "COST：§Y6§!\n条件：§H$NAME_Sanae$§!正在指挥舰队或运输船队。\n\n在星系内生成以九字刻印为形的巨大格状结界，彻底将形势扭向早苗的超大技。持续§Y9§!次此效果，每隔§Y9§!天，降低星系内所有敌对舰船§Y10%§!的§Y船体§!，作用期间以及之后的§Y99§!天，所有敌方舰船无法自战斗中§Y撤退§!。"
+ spell_card_sanne_7_ex_desc:0 "COST：§Y6§!\n条件：§H$NAME_Sanae$§!正在指挥舰队或运输船队。\n\n在星系内生成以九字刻印为形的巨大格状结界，彻底将形势扭向早苗的超大技。持续§Y9§!次此效果，每天降低星系内所有敌对舰船§Y10%§!的§Y船体§!，作用期间以及之后的§Y99§!天，所有敌方舰船无法自战斗中§Y撤退§!。"
 
  spell_card_koishi_group:0 "[GetSelectedCardKoishi]"
  spell_card_koishi_tooltip:0 "[GetSelectedCardKoishiDesc]"

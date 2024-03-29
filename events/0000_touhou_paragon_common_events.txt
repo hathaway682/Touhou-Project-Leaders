@@ -1930,6 +1930,13 @@ leader_event = {
 	option = {
 		name = touhou_paragon.42410.b
 		custom_tooltip = touhou_paragon.42410.b.tooltip
+		owner = {
+			country_event = {
+				id = touhou_paragon.42400
+				days = 43200
+				random = 21600
+			}
+		}
 	}
 }
 
@@ -2141,6 +2148,14 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42411.f
+		custom_tooltip = touhou_paragon.42410.b.tooltip
+		owner = {
+			country_event = {
+				id = touhou_paragon.42400
+				days = 43200
+				random = 21600
+			}
+		}
 	}
 
 	option = {
@@ -2382,5 +2397,220 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+
+ship_event = {
+	id = touhou_paragon.50000
+	title = touhou_paragon.50000.name
+	desc = touhou_paragon.50000.desc
+	picture = GFX_evt_ruined_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.50000.a
+		owner = {
+			country_event = {
+				id = touhou_paragon.50001
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.50001
+	title = touhou_paragon.50001.title
+	diplomatic_title = touhou_paragon.50001.name
+	desc = touhou_paragon.50001.desc
+	location = capital_star
+	show_sound = event_mystic_reveal
+	diplomatic = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = touhou_paragon.50001.a
+		response_text = touhou_paragon.50001.a.responce
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.50001.b
+		response_text = touhou_paragon.50001.b.responce
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.50001.c
+		response_text = touhou_paragon.50001.c.responce
+		is_dialog_only = yes
+	}
+	option = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		name = touhou_paragon.50001.d
+		response_text = touhou_paragon.50001.d.responce
+		is_dialog_only = yes
+	}
+	option = {
+		trigger = {
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		name = touhou_paragon.50001.d.mat
+		response_text = touhou_paragon.50001.d.mat.responce
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.50001.e
+		response_text = touhou_paragon.50001.e.responce
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.50001.f
+		response_text = touhou_paragon.50001.f.responce
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.50001.g
+		response_text = touhou_paragon.50001.g.responce
+		custom_tooltip = touhou_paragon.50001.tooltip
+		add_modifier = {
+			modifier = blessed_by_nameless_god
+			days = -1
+		}
+		hidden_effect = {
+			fromfrom = {
+				set_planet_flag = shirine_ruin_planet
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon.50001.h
+		response_text = touhou_paragon.50001.h.responce
+		custom_tooltip = touhou_paragon.50001.tooltip
+		add_resource = {
+			society_research = 100
+		}
+		hidden_effect = {
+			fromfrom = {
+				set_planet_flag = shirine_ruin_planet
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = touhou_paragon.50002
+	title = touhou_paragon.50002.name
+	desc = touhou_paragon.50002.desc
+	picture = GFX_evt_ruined_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_authority = auth_corporate
+				}
+			}
+		}
+		name = touhou_paragon.50002.a
+		while = {
+			count = 2
+			random_owned_pop = {
+				modify_species = {
+					add_traits_at_start_of_list = yes
+					add_trait = trait_latent_psionic
+				}
+				pop_change_ethic = ethic_spiritualist
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = blessed_by_nameless_god
+			}
+			remove_modifier = blessed_by_nameless_god
+			add_modifier = {
+				modifier = blessed_by_nameless_god_advanced
+				days = -1
+			}
+		}
+		custom_tooltip = touhou_paragon.50002.tooltip
+	}
+
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+				NOT = { has_authority = auth_corporate }
+			}
+		}
+		name = touhou_paragon.50002.a.mat
+		while = {
+			count = 2
+			random_owned_pop = {
+				modify_species = {
+					add_traits_at_start_of_list = yes
+					add_trait = trait_latent_psionic
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = blessed_by_nameless_god
+			}
+			remove_modifier = blessed_by_nameless_god
+			add_modifier = {
+				modifier = blessed_by_nameless_god_advanced
+				days = -1
+			}
+		}
+		custom_tooltip = touhou_paragon.50002.tooltip
+	}
+
+	option = {
+		trigger = {
+			owner = {
+				has_authority = auth_corporate
+			}
+		}
+		name = touhou_paragon.50002.a.corp
+		while = {
+			count = 2
+			random_owned_pop = {
+				modify_species = {
+					add_traits_at_start_of_list = yes
+					add_trait = trait_latent_psionic
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = blessed_by_nameless_god
+			}
+			remove_modifier = blessed_by_nameless_god
+			add_modifier = {
+				modifier = blessed_by_nameless_god_advanced
+				days = -1
+			}
+		}
+		custom_tooltip = touhou_paragon.50002.tooltip.corp
 	}
 }

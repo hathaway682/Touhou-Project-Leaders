@@ -264,106 +264,6 @@ decision_end_banquet = {
 	}
 }
 
-decision_planet_barrier = {
-	owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_consecrated_worlds
-
-	resources = {
-		category = decisions
-	}
-
-	potential = {
-		owner = {
-			any_owned_leader = {
-				has_trait = leader_trait_invincible
-			}
-		}
-	}
-
-	allow = {
-		OR = {
-			AND = {
-				exists = leader
-				leader = {
-					has_trait = leader_trait_invincible
-				}
-			}
-			sector = {
-				sector_capital = {
-					exists = leader
-					leader = {
-						has_trait = leader_trait_invincible
-					}
-				}
-			}
-		}
-		owner = {
-			NOT = {
-				any_owned_planet = {
-					has_modifier = modifier_planet_barrier
-				}
-			}
-		}
-	}
-
-	effect = {
-		add_modifier = {
-			modifier = modifier_planet_barrier
-			days = -1
-		}
-		hidden_effect = {
-			owner = {
-				if = {
-					limit = {
-						has_technology = tech_psionic_theory
-					}
-					hidden_effect = {
-						random_owned_leader = {
-							limit = {
-								has_trait = leader_trait_fly
-							}
-							leader_event = {
-								id = touhou_paragon.40630
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	ai_weight = {
-		weight = 0
-	}
-}
-
-decision_remove_planet_barrier = {
-	owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_consecrated_worlds
-
-	resources = {
-		category = decisions
-	}
-
-	potential = {
-		has_modifier = modifier_planet_barrier
-	}
-
-	allow = {
-		has_modifier = modifier_planet_barrier
-	}
-
-	effect = {
-		remove_modifier = modifier_planet_barrier
-	}
-
-	ai_weight = {
-		weight = 0
-	}
-}
-
 decision_expand_space = {
 	owned_planets_only = yes
 	sound = event_administrative_work
@@ -1763,12 +1663,6 @@ decision_expand_hakurei_shrine = {
 
 	potential = {
 		has_deposit = d_hakurei_shrine
-		owner = {
-			OR = {
-				has_civic = civic_hakurei_shinto
-				has_civic = civic_hakurei_shinto_corp
-			}
-		}
 	}
 
 	allow = {
@@ -1808,6 +1702,7 @@ decision_expand_hakurei_shrine_2 = {
 			OR = {
 				has_civic = civic_hakurei_shinto
 				has_civic = civic_hakurei_shinto_corp
+				has_civic = civic_imperial_cult
 			}
 		}
 	}
@@ -2652,5 +2547,41 @@ decision_suika_transform_giant_to_fog = {
 
 	ai_weight = {
 		weight = 0
+	}
+}
+
+decision_repair_shirne = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_arcology_project
+	enactment_time = 180
+
+	potential = {
+		has_planet_flag = shirine_ruin_planet
+	}
+
+	allow = {
+		always = yes
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 300
+		}
+	}
+
+	effect = {
+		remove_planet_flag = shirine_ruin_planet
+		owner = {
+			set_country_flag = can_build_shirne
+		}
+		planet_event = {
+			id = touhou_paragon.50002
+		}
+	}
+
+	ai_weight = {
+		weight = 100
 	}
 }

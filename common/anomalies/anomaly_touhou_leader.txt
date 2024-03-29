@@ -4,8 +4,8 @@
 
 touhou_shrine_ruin = {
 	desc = "touhou_shrine_ruin_desc"
-	picture = "GFX_evt_ship_in_orbit"
-	level = @precursor_easy
+	picture = "GFX_evt_ruined_shrine"
+	level = 1
 
 	spawn_chance = {
 		modifier = {
@@ -18,5 +18,5 @@ touhou_shrine_ruin = {
 		set_planet_flag = shrine_world
 	}
 
-	on_success = precursor.5
+	on_success = touhou_paragon.50000
 }

@@ -5,7 +5,6 @@
 kazehouri = { icon = colonist possible = { always = no } }
 oni_king = { icon = colonist possible = { always = no } }
 doorman = { icon = colonist possible = { always = no } }
-miko = { icon = colonist possible = { always = no } }
 magician = { icon = colonist possible = { always = no } }
 gardener = { icon = colonist possible = { always = no } }
 head_maid = { icon = colonist possible = { always = no } }
