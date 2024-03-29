@@ -157,6 +157,15 @@ building_moriya_shrine = {
 			rare_crystals = @b3_rare_upkeep
 		}
 	}
+
+	triggered_planet_modifier = {
+		planet_researchers_unity_produces_add = 2
+		planet_priests_physics_research_produces_add = 2
+		planet_priests_society_research_produces_add = 2
+		planet_priests_engineering_research_produces_add = 2
+	}
+
+
 	triggered_desc = {
 		text = job_moriya_miko_effect_desc
 	}
@@ -218,6 +227,13 @@ holding_building_moriya_shrine = {
 		modifier = {
 			all_technology_research_speed = 0.005
 		}
+	}
+
+	triggered_planet_modifier = {
+		planet_researchers_unity_produces_add = 2
+		planet_priests_physics_research_produces_add = 2
+		planet_priests_society_research_produces_add = 2
+		planet_priests_engineering_research_produces_add = 2
 	}
 
 	triggered_desc = {
@@ -282,6 +298,14 @@ building_hakurei_shrine = {
 
 	planet_modifier = {
 		job_hakurei_miko_add = 2
+	}
+
+	triggered_planet_modifier = {
+		pop_defense_armies_add = 1
+	}
+
+	triggered_country_modifier = {
+		country_naval_cap_add = 10
 	}
 
 	resources = {

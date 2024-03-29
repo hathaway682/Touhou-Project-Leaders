@@ -36,9 +36,10 @@ d_hakurei_shrine = {
 
 	planet_modifier = {
 		job_hakurei_miko_add = 2
-		planet_jobs_energy_produces_mult = 0.05
-		planet_jobs_unity_produces_mult = 0.05
-		trade_value_mult = 0.05
+		planet_jobs_energy_produces_mult = 0.1
+		planet_jobs_unity_produces_mult = 0.1
+		trade_value_mult = 0.1
+		pop_defense_armies_add = 1
 	}
 }
 
@@ -52,10 +53,11 @@ d_hakurei_shrine_large = {
 
 	planet_modifier = {
 		job_hakurei_miko_add = 4
-		planet_jobs_energy_produces_mult = 0.15
-		planet_jobs_unity_produces_mult = 0.15
-		trade_value_mult = 0.15
+		planet_jobs_energy_produces_mult = 0.25
+		planet_jobs_unity_produces_mult = 0.25
+		trade_value_mult = 0.25
 		planet_immigration_pull_add = 50
+		pop_defense_armies_add = 1
 	}
 }
 
@@ -69,11 +71,12 @@ d_hakurei_shrine_imperial = {
 
 	planet_modifier = {
 		job_hakurei_miko_add = 6
-		planet_jobs_energy_produces_mult = 0.25
-		planet_jobs_unity_produces_mult = 0.25
-		trade_value_mult = 0.25
+		planet_jobs_energy_produces_mult = 0.5
+		planet_jobs_unity_produces_mult = 0.5
+		trade_value_mult = 0.5
 		planet_immigration_pull_add = 100
 		pop_happiness = 0.1
+		pop_defense_armies_add = 1
 	}
 
 	country_modifier = {
@@ -95,11 +98,12 @@ d_hakurei_shrine_psionic = {
 	triggered_planet_modifier = {
 		job_telepath_add = 3
 		job_hakurei_miko_add = 3
-		planet_jobs_physics_research_produces_mult = 0.15
-		planet_jobs_society_research_produces_mult = 0.15
-		planet_jobs_engineering_research_produces_mult = 0.15
-		planet_jobs_unity_produces_mult = 0.15
+		planet_jobs_physics_research_produces_mult = 0.25
+		planet_jobs_society_research_produces_mult = 0.25
+		planet_jobs_engineering_research_produces_mult = 0.25
+		planet_jobs_unity_produces_mult = 0.25
 		trade_value_mult = 0.15
+		pop_defense_armies_add = 1
 	}
 
 	country_modifier = {
