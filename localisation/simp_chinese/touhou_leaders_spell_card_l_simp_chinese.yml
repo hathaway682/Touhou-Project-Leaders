@@ -17,9 +17,9 @@
  thl_bomb: "BOMB"
  thl_bomb_desc: "§E§H$thl_bomb$§!（£thl_bomb£）是使用§H符卡§!所必须的资源，由积攒的魔力自动转化而来，转化所需魔力随着持有BOMB的数量上升。"
  mod_country_resource_max_thl_bomb_add: "BOMB上限"
- leader_commanders_thl_mana_produces_add: "每月魔力"
- leader_officials_thl_mana_produces_add: "每月魔力"
- leader_scientists_thl_mana_produces_add: "每月魔力"
+ mod_leader_commanders_thl_mana_produces_add: "每月魔力"
+ mod_leader_officials_thl_mana_produces_add: "每月魔力"
+ mod_leader_scientists_thl_mana_produces_add: "每月魔力"
 
  touhou_error_no_spell:0 "无可用符卡"
  touhou_error_wrong_target:0 "无效目标"
