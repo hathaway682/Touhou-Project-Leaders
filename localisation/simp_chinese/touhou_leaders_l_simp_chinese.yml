@@ -435,7 +435,7 @@
  leader_trait_fly_desc:1 "这位领袖可以不受任何力的束缚，以惊人的机动性指挥其舰队躲避敌人的弹幕，力量的差异对她来说也毫无意义。"
  leader_trait_invincible:0 "操纵灵气程度的能力"
  leader_trait_invincible_desc:1 "这位领袖天生具有强大的灵力，尽管在此方面修行不足，但也能轻易做到很多其他个体做不到的事。"
- leader_trait_invincible_effect:0 "$t$进入己方星球轨道时，可使用星球决议在星球上创建一个§H二重结界§!，提供§G-75%§!轨道轰炸伤害，同时只能存在一个。\n$t$激活§H梦想封印§!轰炸姿态，这个轰炸姿态对陆军伤害极大，且会将星球缓慢转化为§E屏障星球§!。\n$t$允许在法令界面激活§H幻想亚空穴§!，消耗少量$r_astral_threads$在§Y100§!天内允许所有舰队进行§Y跃迁§!。\n$t$允许在法令界面激活§H梦想天生§!，消耗大量消耗$r_astral_threads$将灵梦所在的舰队在§Y100§!天内变为§H无敌状态§!。"
+ leader_trait_invincible_effect:0 "$t$解锁诸多可用的§r符卡§!。\n$t$激活§H梦想封印§!轰炸姿态，这个轰炸姿态对陆军伤害极大，且会将星球缓慢转化为§E屏障星球§!。"
  leader_trait_like_cloud_and_water:0 "行云流水"
  leader_trait_like_cloud_and_water_desc:1 "这位领袖在战斗中总是一副冷静、深藏不露的样子，喜欢利用跟踪武器组成阵型将对手束缚然后再慢慢绞杀。"
  leader_trait_like_cloud_and_water_effect:0 "$t$§I敌方舰队将无法从与该领袖的战斗中逃跑。§!"
@@ -796,7 +796,7 @@
 
  leader_trait_subconscious:0 "操纵无意识的程度的能力"
  leader_trait_subconscious_desc:1 "这位领袖没有内心，也没有欲望。"
- leader_trait_subconscious_effect:1 "\n解锁§R本我的解放§!法令，无成本使恋的舰队进入§P狂暴§!状态，舰船武器伤害、射速、穿透提高§G100%§!，但开始§P不受控制地行动并无差别攻击一切目标§!。\n解锁§B抑制「超我」§!法令，消耗凝聚力解除恋舰队的§P狂暴§!状态，并使星系内的敌我舰队在§Y30§!天内§P-50%§!命中、追踪和闪避。"
+ leader_trait_subconscious_effect:1 "\n解锁诸多可用的§r符卡§!。"
  NAME_Koishi_Fleet:0 "无意识"
 
  NAME_Aya:0 "射命丸文"
@@ -1880,7 +1880,7 @@
 
  leader_trait_fall:0 "掌管红叶程度的能力"
  leader_trait_fall_desc:0 "秋天是丰收的季节，也是红叶的季节。秋静叶司掌秋天的“收获”与“凋落”之中的“凋落”。"
- leader_trait_fall_tooltip:0 "在秋静叶管理的星球或星区，每年§Y9§!月都会自动将一个£blocker£§Y自然星球障碍§!替换为£blocker£§Y红叶密林§!。\n\n在参与的战斗中，敌我双方损失的每艘战舰会产生§Y5§!$r_unity$，敌我双方损失的每队陆军会产生§Y50§!$r_unity$。\n\n可以使用§Y众生凋零§!轰炸姿态，该姿态对人口和军队杀伤力巨大，但几乎不会破坏星球。"
+ leader_trait_fall_tooltip:0 "在秋静叶管理的星球或星区，每年§Y9§!月都会自动将一个£blocker£§Y自然星球障碍§!替换为£blocker£§Y红叶密林§!。\n\n在参与的战斗中，敌我双方损失的每艘战舰会产生§Y5§!$r_unity$，敌我双方损失的每队陆军会产生§Y50§!$r_unity$。\n\n可以使用§Y众生凋零§!轰炸姿态，该姿态对人口和军队杀伤力巨大，但几乎不会破坏星球。\n\n解锁诸多可用的§r符卡§!。"
 
  leader_trait_god:0 "御神德"
  leader_trait_god_desc:0 "只要有足够的信仰，神便可以自己改变自己的性质，为此而作的故事被称之为『神话』。"
@@ -1924,7 +1924,7 @@
 
  leader_trait_harvest:0 "掌管丰收程度的能力"
  leader_trait_harvest_desc:0 "秋天是丰收的季节，也是红叶的季节。秋穰子司掌秋天的“收获”与“凋落”之中的“收获”。"
- leader_trait_harvest_tooltip:0 "在秋穰子管理的星球，每年§Y9§!月都会一次性产出额外的£energy£ £minerals£ £food£§Y基础资源§!，相当于星球§Y9§!个月的产出，在秋穰子管理的星区，每年§Y9§!月都会一次性产出额外的£energy£ £minerals£ £food£§Y基础资源§!，相当于星球§Y3§!个月的产出。\n\n在以上地区，若$r_food$产出盈余，人口幸福度和凝聚力产出就会随着人均$r_food$的产量而提升。\n\n允许玩家改变§Y粮食政策§!，随着秋穰子等级的提高，§Y粮食政策§!的选择也会增加。"
+ leader_trait_harvest_tooltip:0 "在秋穰子管理的星球，每年§Y9§!月都会一次性产出额外的£energy£ £minerals£ £food£§Y基础资源§!，相当于星球§Y9§!个月的产出，在秋穰子管理的星区，每年§Y9§!月都会一次性产出额外的£energy£ £minerals£ £food£§Y基础资源§!，相当于星球§Y3§!个月的产出。\n\n在以上地区，若$r_food$产出盈余，人口幸福度和凝聚力产出就会随着人均$r_food$的产量而提升。\n\n允许玩家改变§Y粮食政策§!，随着秋穰子等级的提高，§Y粮食政策§!的选择也会增加。\n\n解锁诸多可用的§r符卡§!。"
 
  policy_food_policy: "粮食政策"
  policy_food_policy_desc: "我们的帝国拥有太多人口需要进食。为了确保粮食不会短缺，我们必须在人口的需求和帝国的成长之间达成平衡。"
