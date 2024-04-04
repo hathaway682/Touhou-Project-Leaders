@@ -3896,7 +3896,7 @@ country_event = { # 静叶
 	}
 }
 
-country_event = { # 荷取
+country_event = { # 穰子
 	id = touhou_paragon.42900
 	title = "touhou_paragon.42900.name"
 	desc = "touhou_paragon.42900.desc"
@@ -3987,7 +3987,7 @@ country_event = { # 荷取
 	}
 }
 
-country_event = { # 静叶
+country_event = { # 雏
 	id = touhou_paragon.43000
 	title = "touhou_paragon.43000.name"
 	desc = "touhou_paragon.43000.desc"
@@ -4002,7 +4002,7 @@ country_event = { # 静叶
 	immediate = {
 		ethic_leader_creator = {
 			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x73
+			LEADER_PORTRAIT = x107
 			CLASS = commander
 			NAME = NAME_Hina
 			LEVEL = 2
