@@ -4288,6 +4288,7 @@ leader_trait_harvest = {
 	}
 	leader_class = { official }
 	selectable_weight = 0
+	immortal_leaders = yes
 	background_icon = GFX_leader_background_destiny_1
 }
 
