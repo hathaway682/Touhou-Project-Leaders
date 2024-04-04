@@ -4231,7 +4231,7 @@ leader_trait_fall = {
 		ship_speed_mult = 0.1
 	}
 	army_modifier = {
-		army_morale = 0.1
+		army_morale_damage_mult = 0.1
 	}
 	planet_modifier = {
 		deposit_blockers_natural_unity_produces_add = 10
