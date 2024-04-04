@@ -9,7 +9,7 @@ touhou_shrine_ruin = {
 
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add = 100
 			is_colonizable = yes
 		}
 	}
