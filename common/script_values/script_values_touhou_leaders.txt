@@ -250,6 +250,14 @@ touhou_leader_id = {
 		has_trait = leader_trait_distance
 	}
 	modifier = {
+		add = 35
+		has_trait = leader_trait_fall
+	}
+	modifier = {
+		add = 36
+		has_trait = leader_trait_harvest
+	}
+	modifier = {
 		add = 38
 		has_trait = leader_trait_water
 	}
@@ -298,6 +306,14 @@ leader_num_spell_cards = {
 	modifier = {
 		add = 4
 		has_trait = leader_trait_subconscious
+	}
+	modifier = {
+		add = 2
+		has_trait = leader_trait_fall
+	}
+	modifier = {
+		add = 2
+		has_trait = leader_trait_harvest
 	}
 }
 

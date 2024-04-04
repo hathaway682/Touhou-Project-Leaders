@@ -595,10 +595,6 @@ touhou_koishi_spell_card_effect = {
 							which = seleted_card_id
 							value = 1
 						}
-						check_variable = {
-							which = ex_charge
-							value = 0
-						}
 					}
 				}
 				koishi_spell_card_1_effect = yes
@@ -640,6 +636,204 @@ touhou_koishi_spell_card_effect = {
 	}
 }
 
+touhou_sizuha_spell_card_text = {
+	potential = {
+		from = {
+			check_variable = {
+				which = seleted_char_id
+				value = 35
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_fall
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = spell_card_sizuha_tooltip
+	}
+}
+
+touhou_sizuha_spell_card_effect = {
+	potential = {
+		from = {
+			check_variable = {
+				which = seleted_char_id
+				value = 35
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_fall
+			}
+		}
+	}
+	allow = {
+		hidden_trigger = {
+			OR = {
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 1
+						}
+					}
+					sizuha_card_1_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 1
+						}
+					}
+					sizuha_card_2_trigger = yes
+				}
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			from = {
+				country_event = {
+					id = touhou_paragon_spell.10000
+				}
+			}
+			if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+					}
+				}
+				sizuha_spell_card_1_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+					}
+				}
+				sizuha_spell_card_2_effect = yes
+			}
+		}
+	}
+}
+
+touhou_minoriko_spell_card_text = {
+	potential = {
+		from = {
+			check_variable = {
+				which = seleted_char_id
+				value = 36
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_harvest
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = spell_card_minoriko_tooltip
+	}
+}
+
+touhou_minoriko_spell_card_effect = {
+	potential = {
+		from = {
+			check_variable = {
+				which = seleted_char_id
+				value = 36
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_harvest
+			}
+		}
+	}
+	allow = {
+		hidden_trigger = {
+			OR = {
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 1
+						}
+					}
+					minoriko_card_1_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 1
+						}
+					}
+					minoriko_card_2_trigger = yes
+				}
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			from = {
+				country_event = {
+					id = touhou_paragon_spell.10000
+				}
+			}
+			if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+					}
+				}
+				minoriko_spell_card_1_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+					}
+				}
+				minoriko_spell_card_2_effect = yes
+			}
+		}
+	}
+}
+
 touhou_none_spell_card_text = {
 	potential = {
 		from = {
@@ -651,6 +845,24 @@ touhou_none_spell_card_text = {
 					}
 					any_owned_leader = {
 						has_trait = leader_trait_fly
+					}
+				}
+				AND = {
+					check_variable = {
+						which = seleted_char_id
+						value = 35
+					}
+					any_owned_leader = {
+						has_trait = leader_trait_fall
+					}
+				}
+				AND = {
+					check_variable = {
+						which = seleted_char_id
+						value = 36
+					}
+					any_owned_leader = {
+						has_trait = leader_trait_harvest
 					}
 				}
 				AND = {
@@ -685,6 +897,33 @@ touhou_none_spell_card_effect = {
 					}
 					any_owned_leader = {
 						has_trait = leader_trait_fly
+					}
+				}
+				AND = {
+					check_variable = {
+						which = seleted_char_id
+						value = 35
+					}
+					any_owned_leader = {
+						has_trait = leader_trait_fall
+					}
+				}
+				AND = {
+					check_variable = {
+						which = seleted_char_id
+						value = 36
+					}
+					any_owned_leader = {
+						has_trait = leader_trait_harvest
+					}
+				}
+				AND = {
+					check_variable = {
+						which = seleted_char_id
+						value = 52
+					}
+					any_owned_leader = {
+						has_trait = leader_trait_subconscious
 					}
 				}
 			}

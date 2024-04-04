@@ -668,6 +668,38 @@ blessed_by_nameless_god = {
 }
 
 blessed_by_nameless_god_advanced = {
-	country_unity_produces_mult = 0.03
+	country_unity_produces_mult = 0.02
 	pop_happiness = 0.01
+}
+
+harvest_happiness = {
+	planet_jobs_unity_produces_mult = 0.02
+	pop_job_amenities_mult = 0.02
+	icon = "gfx/interface/icons/planet_modifiers/pm_lush.dds"
+	icon_frame = 1
+}
+
+fall_in_blast_modifier = {
+	ship_fire_rate_mult = -0.2
+	ship_evasion_mult = -0.2
+	ship_speed_mult = -0.2
+}
+
+aki_bleak_planet = {
+	planet_jobs_food_produces_mult = -2
+	icon = "gfx/interface/icons/planet_modifiers/pm_bleak.dds"
+	icon_frame = 3
+}
+
+aki_terraforming_cost = {
+	terraforming_cost_mult = -0.75
+	icon = "gfx/interface/icons/planet_modifiers/pm_bleak.dds"
+	icon_frame = 1
+}
+
+aki_hazardous_weather = {
+	pop_environment_tolerance = -0.5
+	pop_happiness = -0.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_hazardous_weather.dds"
+	icon_frame = 3
 }

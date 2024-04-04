@@ -5,6 +5,7 @@
 building_shrine = {
 	base_buildtime = @b1_time
 	icon = building_moriya_shrine
+	base_cap_amount = 1
 
 	category = unity
 
@@ -41,12 +42,40 @@ building_shrine = {
 		job_miko_add = 2
 	}
 
-	triggered_country_modifier = {
-		potential = {
-			owner = { has_country_flag = touhou_flag_sanae_shrine_research_speed}
+	on_built = {
+		if = {
+			limit = {
+				OR = {
+					has_deposit = d_nature_preserve_blocker
+					has_deposit = d_big_nature_preserve_blocker
+					has_deposit = d_dense_jungle
+					has_deposit = d_rugged_woods
+					has_deposit = d_lush_jungle
+					has_deposit = d_great_river
+					has_deposit = d_marvelous_oasis
+					has_deposit = d_migrating_forests
+					has_deposit = d_migrating_forest_reserve
+					has_deposit = d_wandering_forests
+					has_deposit = d_seed_bombing_plantoid_blocker
+				}
+			}
+			planet_event = {
+				id = touhou_paragon.50003
+			}
+			set_planet_flag = sizuha_planet
 		}
-		modifier = {
-			all_technology_research_speed = 0.005
+		else_if = {
+			limit = {
+				planet_resource_compare = {
+					resource = food
+					type = produces
+					value > 50
+				}
+			}
+			planet_event = {
+				id = touhou_paragon.50004
+			}
+			set_planet_flag = minoriko_planet
 		}
 	}
 
@@ -300,12 +329,9 @@ building_hakurei_shrine = {
 		job_hakurei_miko_add = 2
 	}
 
-	triggered_planet_modifier = {
-		pop_defense_armies_add = 1
-	}
-
 	triggered_country_modifier = {
-		country_naval_cap_add = 10
+		country_naval_cap_mult = 0.1
+		ship_tracking_add = 2
 	}
 
 	resources = {
@@ -322,7 +348,7 @@ building_hakurei_shrine = {
 					}
 				}
 			}
-			rare_crystals = @b3_rare_cost
+			volatile_motes = @b3_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep

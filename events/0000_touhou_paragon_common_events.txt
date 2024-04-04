@@ -789,7 +789,7 @@ leader_event = {
 					change_leader_portrait = x87
 					add_trait_no_notify = subclass_official_governor
 					add_trait_no_notify = leader_trait_galvanizer
-					add_trait_no_notify = leader_trait_farming_focus
+					add_trait_no_notify = leader_trait_agrarian_upbringing
 					add_trait_no_notify = leader_trait_eager
 					add_trait_no_notify = leader_trait_intemporal
 					add_trait_no_notify = leader_trait_regeneration_3
@@ -2611,6 +2611,42 @@ planet_event = {
 				days = -1
 			}
 		}
-		custom_tooltip = touhou_paragon.50002.tooltip.corp
+		custom_tooltip = touhou_paragon.50002.tooltip
+	}
+}
+
+planet_event = {
+	id = touhou_paragon.50003
+	title = touhou_paragon.50003.name
+	desc = touhou_paragon.50003.desc
+	picture = GFX_evt_ruined_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.50003.a
+		owner = {
+			country_event = {
+				id = touhou_paragon.42800
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = touhou_paragon.50004
+	title = touhou_paragon.50004.name
+	desc = touhou_paragon.50004.desc
+	picture = GFX_evt_ruined_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.50004.a
+		owner = {
+			country_event = {
+				id = touhou_paragon.42900
+			}
+		}
 	}
 }

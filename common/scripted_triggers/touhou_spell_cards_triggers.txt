@@ -193,3 +193,69 @@ koishi_card_4_trigger = {
 		}
 	}
 }
+
+sizuha_card_1_trigger = {
+	Root = {
+		is_scope_type = fleet
+		owner = {
+			OR = {
+				is_hostile = from
+				is_at_war_with = from
+			}
+		}
+		solar_system = {
+			OR = {
+				any_fleet_in_system = {
+					exists = leader
+					leader = {
+						owner = {
+							is_same_value = from
+						}
+						has_trait = leader_trait_fall
+					}
+				}
+				AND = {
+					exists = owner
+					owner = {
+						is_same_value = from
+					}
+				}
+			}
+		}
+	}
+}
+
+sizuha_card_2_trigger = {
+	Root = {
+		is_scope_type = planet
+		is_artificial = no
+		OR = {
+			is_colony = yes
+			is_colonizable = yes
+		}
+	}
+}
+
+minoriko_card_1_trigger = {
+	Root = {
+		is_scope_type = planet
+		is_colony = yes
+		exists = owner
+		owner = {
+			is_same_value = from
+		}
+		is_occupied_flag = no
+		uses_district_set = standard
+	}
+}
+
+minoriko_card_2_trigger = {
+	Root = {
+		is_scope_type = planet
+		is_artificial = no
+		OR = {
+			is_colony = yes
+			is_colonizable = yes
+		}
+	}
+}

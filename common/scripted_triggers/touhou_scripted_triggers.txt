@@ -84,6 +84,8 @@ has_touhou_leader_trait = {
 		has_trait = leader_trait_corpse_travel
 		has_trait = leader_trait_nuclear
 		has_trait = leader_trait_water
+		has_trait = leader_trait_fall
+		has_trait = leader_trait_harvest
 	}
 }
 
@@ -472,5 +474,33 @@ has_touhou_supernatural_trait = {
 		has_trait = leader_trait_corpse_travel
 		has_trait = leader_trait_nuclear
 		has_trait = leader_trait_water
+		has_trait = leader_trait_fall
+		has_trait = leader_trait_harvest
+	}
+}
+
+planet_leader_has_trait = {
+	planet = {
+		exists = leader
+		leader = { has_trait = $TRAIT$ }
+	}
+}
+
+sector_leader_has_trait = {
+	planet = {
+		NOT = {
+			planet = {
+				exists = leader
+				leader = { has_trait = $TRAIT$ }
+			}
+		}
+		planet = {
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = { has_trait = $TRAIT$ }
+				}
+			}
+		}
 	}
 }

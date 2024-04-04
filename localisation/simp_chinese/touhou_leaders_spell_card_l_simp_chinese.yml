@@ -8,6 +8,7 @@
  spell_card_header:0 "符卡"
  touhou_mana_value:0 "魔力：§B[From.interface_mana]/[From.interface_mana_need]§!"
  touhou_cards_value:0 "可用BOMB：§H[From.interface_bomb]§!"
+ touhou_cards_value_hina:0 "可用BOMB：§H[From.interface_bomb]§!+§G[From.jinx_stockpile]§!"
  touhou_selected_char:0 "[GetSelectedLeader]"
 
  thl_mana: "魔力"
@@ -35,7 +36,7 @@
 
  touhou_selected_char_0:0 "未选择角色"
 
- touhou_selected_char_1:0 "博丽灵梦"
+ touhou_selected_char_1:0 "博丽灵梦" #符卡已完成
  touhou_selected_char_2:0 "雾雨魔理沙"
  #红魔乡
  touhou_selected_char_3:0 "露米娅" #未制作
@@ -44,7 +45,7 @@
  touhou_selected_char_6:0 "帕秋莉·诺蕾姬"
  touhou_selected_char_7:0 "十六夜咲夜"
  touhou_selected_char_8:0 "蕾米莉亚·斯卡蕾特"
- touhou_selected_char_9:0 "芙兰朵露·斯卡蕾特"  #未制作
+ touhou_selected_char_9:0 "芙兰朵露·斯卡蕾特" #计划中
  #妖妖梦
  touhou_selected_char_10:0 "蕾蒂·霍瓦特洛克" #未制作
  touhou_selected_char_11:0 "橙" #未制作
@@ -76,8 +77,8 @@
  touhou_selected_char_33:0 "小野塚小町"
  touhou_selected_char_34:0 "四季映姬·夜摩仙那度"
  #风神录
- touhou_selected_char_35:0 "秋静叶" #计划中
- touhou_selected_char_36:0 "秋穰子" #计划中
+ touhou_selected_char_35:0 "秋静叶" #符卡已完成
+ touhou_selected_char_36:0 "秋穰子" #符卡已完成
  touhou_selected_char_37:0 "键山雏" #计划中
  touhou_selected_char_38:0 "河城荷取"
  touhou_selected_char_39:0 "犬走椛" #计划中
@@ -95,7 +96,7 @@
  touhou_selected_char_49:0 "古明地觉"
  touhou_selected_char_50:0 "火焰猫燐"
  touhou_selected_char_51:0 "灵乌路空"
- touhou_selected_char_52:0 "古明地恋"
+ touhou_selected_char_52:0 "古明地恋" #符卡已完成
 
  spell_card_none:0 "未选择符卡"
  spell_card_none_desc:0 ""
@@ -157,7 +158,7 @@
  spell_card_sanne_2:0 "蛙符「操纵蛤蟆」"
  spell_card_sanne_2_desc:0 "COST：§Y1§!\n目标：任意其他国家的§Y非人工星球殖民地§!。\n\n操纵目标星球的两栖生物使其到处袭击路人并自行爆炸，并不会造成多少生命财产损失，但会极大的扰乱正常生活，导致£happiness£§Y幸福度§!和£amenities£§Y舒适度§!的显著下降，对于格式塔国家则只会降低£amenities_no_happiness£§Y舒适度§!，该符卡有概率被替换为高级版本。"
  spell_card_sanne_2_ex:0 "蛇符「神代大蛇」"
- spell_card_sanne_2_ex.desc:0 "COST：§Y5§!\n目标：任意其他国家的§Y非人工星球殖民地§!。\n\n在目标星球生成一只§Y巨蛇§!敌对陆军，直到被击败前，它的存在都会大幅降低£happiness£§Y幸福度§!和£amenities£§Y舒适度§!，并且会持续破坏£building£§Y建筑§!、£district£§Y区划§!和吞噬£pops£§Y人口§!。"
+ spell_card_sanne_2_ex.desc:0 "COST：§Y5§!\n目标：任意其他国家的§Y非人工星球殖民地§!。\n\n在目标星球生成一只§Y巨蛇§!敌对陆军，直到被击败前，它的存在都会大幅降低£happiness£§Y幸福度§!和£mod_pop_environment_tolerance£§Y宜居性§!，并且会持续破坏£building£§Y建筑§!、£district£§Y区划§!和吞噬£pops£§Y人口§!。"
  spell_card_sanne_3:0 "奇迹「客星璀璨之夜」"
  spell_card_sanne_3_desc:0 "COST：§Y1§!\n目标：任意不是黑洞的§Y恒星§!。\n\n大幅强化此恒星的亮度，星系内所有$r_energy$产出上升§Y50%§!，对§Y戴森球§!使用则该§Y戴森球§!产出提升§Y100%§!，对中子星/脉冲星使用时，会产生强烈的EMP，使得星系内所有舰队暂时§Y失去作战能力§!，该符卡有概率被替换为高级版本。"
  spell_card_sanne_3_ex:0 "奇迹「客星辉煌之夜」"
@@ -183,7 +184,7 @@
  spell_card_koishi_1:0 "表象「列祖列宗入梦来」"
  spell_card_koishi_1_desc:0 "COST：§Y1§!\n目标：任意未被占领，未受§Y列祖列宗入梦来§!影响的我方§Y殖民地§!。\n\n让我们的居民能够梦到自己的祖先（实际是我们的集体无意识的反映）的符卡，大幅增加该星球§Y主流思潮吸引§!，略微提高§Y幸福度§!和§Y凝聚力产出§!。"
  spell_card_koishi_2:0 "本能「本我的解放」"
- spell_card_koishi_2_desc:0 "COST：§Y1§!条件：§H$NAME_Koishi$§!正在指挥舰队或运输船队，且未处于§P狂暴§!状态。\n\n释放舰队成员无意识深处的本能，带来最纯粹的杀戮。恋的舰队进入§P狂暴§!状态，§Y舰船武器伤害§!、§Y射速§!、§Y穿透§!提高§G100%§!，但开始§P不受控制地行动并无差别攻击一切目标§!。"
+ spell_card_koishi_2_desc:0 "COST：§Y1§!\n条件：§H$NAME_Koishi$§!正在指挥舰队或运输船队，且未处于§P狂暴§!状态。\n\n释放舰队成员无意识深处的本能，带来最纯粹的杀戮。恋的舰队进入§P狂暴§!状态，§Y舰船武器伤害§!、§Y射速§!、§Y穿透§!提高§G100%§!，但开始§P不受控制地行动并无差别攻击一切目标§!。"
  spell_card_koishi_3:0 "抑制「Super Ego」"
  spell_card_koishi_3_desc:0 "COST：§Y4§!\n条件：§H$NAME_Koishi$§!正在指挥舰队或运输船队，且处于§P狂暴§!状态。\n\n最大化地压抑精神，使舰队成员从狂暴回归。解除恋舰队的§P狂暴§!状态，并使星系内的敌我舰队在§Y30§!天内降低§P50%§!§Y舰船武器伤害§!、§Y亚光速航速§!和§Y闪避§!。"
  spell_card_koishi_4:0 "现在就给你打电话别忘了接哦"
@@ -193,6 +194,50 @@
  #spell_card_koishi_4_desc:0 "COST：§Y3§!\n目标：任意在我国有§Y间谍网§!的国家。\n\n能探测出对手一丝一毫的动摇并将其以图表的形式表现的符卡，使用后彻底清除目标国家在我国的§Y间谍网§!。"
  #spell_card_koishi_5:0 "深层「无意识的基因」"
  #spell_card_koishi_5_desc:0 "COST：§Y1§!\n目标：任意§Y国家§!。\n\n能够读取和改写生物演化的记忆的符卡，使用后目标国家主流人口的特质会发生随机的改变。"
+
+ spell_card_sizuha_group:0 "[GetSelectedCardSizuha]"
+ spell_card_sizuha_tooltip:0 "[GetSelectedCardSizuhaDesc]"
+ spell_card_sizuha_requirement:0 "[GetSelectedCardRequirementSizuha]"
+ spell_card_sizuha_1:0 "秋符「Fall in Blast」"
+ spell_card_sizuha_1_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Sizuha$§!处在同一星系或者在我方境内的§Y敌对舰队§!。\n\n使用星系风暴如秋风扫落叶般冲散敌方舰队的阵型，使其§Y射速§!、§Y闪避§!和§Y航速§!在§Y60§!天内下降§R20%§!，有§Y1%§!概率使其进入§Y任务中失踪§!状态。"
+ spell_card_sizuha_2:0 "枯道「Lost Windrow」"
+ spell_card_sizuha_2_desc:0 "COST：§Y1§!\n目标：任意的§Y非人工宜居星球§!。\n\n使得目标星球的生命枯萎，为星球添加§Y$bleak_planet$§!修正，如果已有该修正，随机杀死两个£pop£§Y人口§!，并在§Y360§!天内使星球$r_food$产出下降§R200%§!，如果星球已没有£pop£§Y人口§!，会将其变为可以减少§Y75%§!花费进行环境改造的§Y荒芜星球§!。"
+
+ aki_bleak_planet:0 "颗粒无收"
+ aki_bleak_planet_desc:0 "揭开第三印的时候，我听见第三个活物说：“你来！”我就观看，见有一匹黑马。骑在马上的手里拿着天平。我听见在四活物中似乎有声音说：“一钱银子买一升麦子，一钱银子买三升大麦，油和酒不可糟蹋。”"
+
+ aki_terraforming_cost:0 "凋落与重生"
+ aki_terraforming_cost_desc:0 "这颗星球上凋零的生命留下的大量有机质为重建生态系统打下了基础。"
+
+ spell_card_minoriko_group:0 "[GetSelectedCardMinoriko]"
+ spell_card_minoriko_tooltip:0 "[GetSelectedCardMinorikoDesc]"
+ spell_card_minoriko_requirement:0 "[GetSelectedCardRequirementMinoriko]"
+ spell_card_minoriko_1:0 "丰收「谷物神的允诺」"
+ spell_card_minoriko_1_desc:0 "COST：§Y1§!\n目标：任意§Y我方非人工殖民地§!。\n\n利用谷物神的力量开拓一块丰收的田地，制造一个增加£district£§Y农业区划§!上限的行星特征。"
+ spell_card_minoriko_2:0 "秋符「秋日无常如少女之心」"
+ spell_card_minoriko_2_desc:0 "COST：§Y1§!\n目标：任意的§Y非人工宜居星球§!。\n\n将秋日的无常天气放大作用于星球，为星球添加§Y$hazardous_weather$§!修正，对已有该修正且有殖民地的星球使用，会产生强烈的风暴随机破坏§Y1§!个£building£§Y建筑§!和§Y1§!个£district£§Y区划§!，并在§Y360§!天内使星球§Y宜居性§!和§Y人口幸福度§!下降§R50%§!，如果星球已没有非首府£building£§Y建筑§!和£district£§Y区划§!，会将星球转化为随机的§Y宜居类型§!，§Y理想城§!会固定成为§Y遗落星球§!。"
+
+ aki_hazardous_weather:0 "风暴"
+ aki_hazardous_weather_desc:0 "毁灭性的风暴正在扫荡星球的表面，所到之处，房屋倒塌，树木折断，生命难以生存。"
+ #静叶：你TM折我树是吧！
+
+ spell_card_hina_group:0 "[GetSelectedCardHina]"
+ spell_card_hina_tooltip:0 "[GetSelectedCardHinaDesc]"
+ spell_card_hina_requirement:0 "[GetSelectedCardRequirementHina]"
+ spell_card_hina_1:0 "厄符「Bad Fortune」"
+ spell_card_hina_1_desc:0 "COST：§G1§!\n目标：任意§Y其他国家§!。\n\n将厄运带给目标国家，触发随机的§R厄运泄露§!负面事件。"
+ spell_card_hina_1_ex:0 "厄符「厄神大人的生理节律」"
+ spell_card_hina_1_ex_desc:0 "COST：§G5§!\n目标：任意§Y其他国家§!。\n\n将厄运持续带给目标国家，连续§Y10§!年每年触发随机的§R厄运泄露§!负面事件。"
+ spell_card_hina_2:0 "疵痕「损坏的护符」"
+ spell_card_hina_2_desc:0 "COST：§G2§!\n目标：任意与§H$NAME_Hina$§!处在同一星系的§Y敌对舰队§!。\n\n令敌方舰队的装甲和护盾出现随机的裂缝，§Y装甲硬化§!和§Y护盾硬化§!下降§R50%§!。"
+ spell_card_hina_3:0 "恶灵「Misfortune's Wheel」"
+ spell_card_hina_3_desc:0 "COST：§G2§!\n目标：任意与§H$NAME_Hina$§!处在同一星系的非恒星或小行星§Y天体§!。\n\n产生一个厄运的漩涡，星系内的敌方舰队的§Y命中§!和§Y闪避§!受其影响会大幅下降。"
+ spell_card_hina_3_ex:0 "悲运「大钟婆之火」"
+ spell_card_hina_3_ex_desc:0 "COST：§G4§!\n目标：任意与§H$NAME_Hina$§!处在同一星系的非恒星或小行星§Y天体§!。\n\n将厄运实体化为火焰的漩涡，星系内的敌方舰队的§Y命中§!和§Y闪避§!受其影响会大幅下降，且会持续削减§Y船体§!。"
+ spell_card_hina_4:0 "创符「Pain Flow」"
+ spell_card_hina_4_desc:0 "COST：§G3§!\n目标：任意的敌对§Y殖民地§!。\n\n将厄运化为痛苦的洪流，目标星球的£mod_pop_happiness£§Y人口幸福度§!在§Y360§!天内下降§Y100%§!。"
+ spell_card_hina_5:0 "创符「流刑人偶」"
+ spell_card_hina_5_desc:0 "COST：§G6§!\n目标：任意敌对§Y领袖§!指挥的对象。\n\n巨大的痛苦直接作用于个人，将目标领袖流放§Y360§!天。"
 
  #spell_card_tenshi_1:0 "地符「不让土壤之剑」"
  #spell_card_tenshi_1_desc:0 "COST：§Y1§!\n目标：任意不存在§Y$unstable_tectonics$§!行星修正的己方§Y殖民地§!。\n\n将气质打入地下使地上产生大的隆起，制造一个增加£district£§Y采矿区划§!上限的行星特征，有概率添加§Y$unstable_tectonics$§!行星修正。"

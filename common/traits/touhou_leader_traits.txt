@@ -1706,7 +1706,7 @@ leader_trait_hifuu = {
 	}
 	modifier = {
 		ship_anomaly_generation_chance_mult = 0.25
-		ship_anomaly_research_speed_mult = 0.45
+		ship_anomaly_research_speed_mult = 0.5
 		ship_archaeological_site_excavation_speed_mult = 0.25
 		ship_archaeological_site_clues_add = 1
 	}
@@ -3235,7 +3235,7 @@ leader_trait_memory = {
 		ship_archaeological_site_excavation_speed_mult = 0.3
 	}
 	planet_modifier = {
-		planet_researchers_society_research_produces_add = 2
+		planet_researchers_society_research_produces_add = 3
 		planet_culture_workers_society_research_produces_add = 3
 	}
 	sector_modifier = {
@@ -3517,7 +3517,7 @@ leader_trait_nuclear = {
 	}
 	triggered_self_modifier = {
 		potential = { always = yes }
-		leader_officials_thl_mana_produces_add = 1
+		leader_commander_thl_mana_produces_add = 1
 		mult = trigger:has_skill
 	}
 	fleet_modifier = {
@@ -4187,8 +4187,7 @@ leader_trait_arctic_governing = {
 		modifier = {
 			planet_jobs_produces_mult = 0.3
 			planet_building_build_speed_mult = 0.6
-			planet_buildings_upkeep_mult = -1
-			planet_districts_upkeep_mult = -1
+			planet_pops_upkeep_mult = -1
 		}
 	}
 
@@ -4204,11 +4203,117 @@ leader_trait_arctic_governing = {
 		modifier = {
 			planet_jobs_produces_mult = 0.15
 			planet_building_build_speed_mult = 0.3
-			planet_buildings_upkeep_mult = -0.5
-			planet_districts_upkeep_mult = -0.5
+			planet_pops_upkeep_mult = -0.5
 		}
 	}
 	leader_class = { commander }
 	selectable_weight = 0
 	custom_tooltip = LEADER_TRAIT_ARCTIC_EFFECT
+}
+
+leader_trait_fall = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_naturalist
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_scientists_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
+	fleet_modifier = {
+		ship_fire_rate_mult = 0.1
+		ship_speed_mult = 0.1
+	}
+	army_modifier = {
+		army_morale = 0.1
+	}
+	planet_modifier = {
+		deposit_blockers_natural_unity_produces_add = 10
+		deposit_blockers_natural_society_research_produces_add = 10
+		planet_jobs_upkeep_mult = -0.1
+	}
+	sector_modifier = {
+		deposit_blockers_natural_unity_produces_add = 4
+		deposit_blockers_natural_society_research_produces_add = 4
+		planet_jobs_upkeep_mult = -0.05
+	}
+	on_gained_effect = {
+		change_background_job = god
+	}
+	leader_class = { commander }
+	selectable_weight = 0
+	immortal_leaders = yes
+	background_icon = GFX_leader_background_destiny_1
+}
+
+leader_trait_harvest = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = GFX_leader_trait_fertility_preacher
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_officials_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
+	galcom_modifier = {
+		diplo_weight_pops_mult = 0.1
+	}
+	federation_modifier = {
+		federation_join_malus_mult = -0.25
+	}
+	planet_modifier = {
+		planet_jobs_food_produces_mult = 0.33
+		pop_growth_speed = 0.1
+		planet_jobs_produces_mult = 0.1
+	}
+	sector_modifier = {
+		planet_jobs_food_produces_mult = 0.15
+		pop_growth_speed = 0.05
+		planet_jobs_produces_mult = 0.05
+	}
+	on_gained_effect = {
+		change_background_job = god
+	}
+	leader_class = { official }
+	selectable_weight = 0
+	background_icon = GFX_leader_background_destiny_1
+}
+
+leader_trait_jinx = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_naturalist
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_scientists_thl_mana_produces_add = 1
+		mult = trigger:has_skill
+	}
+	councilor_modifier = {
+		negative_traits_country = 1
+	}
+	on_gained_effect = {
+		change_background_job = god
+	}
+	leader_class = { commander }
+	selectable_weight = 0
+	immortal_leaders = yes
+	background_icon = GFX_leader_background_destiny_1
 }

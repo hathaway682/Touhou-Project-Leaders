@@ -386,3 +386,343 @@ koishi_spell_card_4_effect = {
         }
     }
 }
+
+sizuha_spell_card_1_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            create_ambient_object = {
+                type = yellow_sun_grow_particle_object
+                location = this
+                duration = 1
+            }
+            add_modifier = {
+                modifier = fall_in_blast_modifier
+                days = 60
+            }
+            random_list = {
+                99 = {}
+                1 = {
+                    set_mia = mia_emergency_ftl
+                }
+            }
+        }
+    }
+}
+
+sizuha_spell_card_2_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_modifier = bleak_planet
+                    }
+                }
+                add_modifier = {
+                    modifier = bleak_planet
+                }
+            }
+            else_if = {
+                limit = {
+                    num_pops > 0
+                }
+                while = {
+                    count = 2
+                    random_owned_pop = {
+                        kill_pop = yes
+                    }
+                    add_modifier = {
+                        modifier = aki_bleak_planet
+                        days = 360
+                    }
+                }
+            }
+            else = {
+                change_pc = pc_barren
+                add_modifier = {
+                    modifier = terraforming_candidate
+                }
+                add_modifier = {
+                    modifier = aki_terraforming_cost
+                }
+            }
+        }
+    }
+}
+
+minoriko_spell_card_1_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            random_list = {
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_nuked
+                            is_planet_class = pc_arctic
+                        }
+                    }
+                    add_deposit = d_lichen_fields
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_arid
+                            is_planet_class = pc_savannah
+                        }
+                    }
+                    add_deposit = d_bountiful_plains
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        is_planet_class = pc_continental
+                    }
+                    add_deposit = d_rugged_woods
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_ocean
+                            is_planet_class = pc_tropical
+                        }
+                    }
+                    add_deposit = d_green_hills
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_alpine
+                            is_planet_class = pc_tundra
+                        }
+                    }
+                    add_deposit = d_forgiving_tundra
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        is_planet_class = pc_ocean
+                    }
+                    add_deposit = d_boggy_fens
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_ocean
+                            is_planet_class = pc_tropical
+                        }
+                    }
+                    add_deposit = d_nutritious_mudland
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_nuked
+                            is_cold = yes
+                        }
+                    }
+                    add_deposit = d_fungal_caves
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_gaia
+                            is_planet_class = pc_tropical
+                            is_planet_class = pc_ocean
+                        }
+                    }
+                    add_deposit = d_lush_jungle
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_savannah
+                            is_planet_class = pc_continental
+                            is_planet_class = pc_gaia
+                            is_planet_class = pc_arid
+                        }
+                    }
+                    add_deposit = d_fertile_lands
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_arid
+                            is_planet_class = pc_desert
+                        }
+                    }
+                    add_deposit = d_great_river
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_continental
+                            is_planet_class = pc_savannah
+                            is_planet_class = pc_gaia
+                        }
+                    }
+                    add_deposit = d_black_soil
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_gaia
+                            is_planet_class = pc_ocean
+                        }
+                    }
+                    add_deposit = d_teeming_reef
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_arid
+                            is_planet_class = pc_desert
+                        }
+                    }
+                    add_deposit = d_marvelous_oasis
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_arid
+                            is_planet_class = pc_desert
+                            is_planet_class = pc_tropical
+                        }
+                    }
+                    add_deposit = d_tropical_island
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        is_cold = yes
+                    }
+                    add_deposit = d_fungal_forest
+                }
+            }
+        }
+    }
+}
+
+minoriko_spell_card_2_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_modifier = hazardous_weather
+                    }
+                }
+                add_modifier = {
+                    modifier = hazardous_weather
+                }
+            }
+            else_if = {
+                limit = {
+                    num_buildings = {
+                        type = any
+                        value > 1
+                    }
+                    num_districts = {
+                        type = any
+                        value > 0
+                    }
+                }
+                ruin_building = random_no_capital
+                remove_last_built_district = yes
+                add_modifier = {
+                    modifier = aki_hazardous_weather
+                    days = 360
+                }
+            }
+            else = {
+                if = {
+                    limit = {
+                        is_planet_class = pc_city
+                    }
+                    change_pc = pc_relic
+                }
+                random_list = {
+                    1 = {
+                        change_pc = pc_desert
+                    }
+                    1 = {
+                        change_pc = pc_arid
+                    }
+                    1 = {
+                        change_pc = pc_savannah
+                    }
+                    1 = {
+                        change_pc = pc_tropical
+                    }
+                    1 = {
+                        change_pc = pc_continental
+                    }
+                    1 = {
+                        change_pc = pc_ocean
+                    }
+                    1 = {
+                        change_pc = pc_arctic
+                    }
+                    1 = {
+                        change_pc = pc_tundra
+                    }
+                    1 = {
+                        change_pc = pc_alpine
+                    }
+                }
+            }
+        }
+    }
+}

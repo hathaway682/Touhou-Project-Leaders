@@ -1169,14 +1169,21 @@
  touhou_paragon.50002.a:0 "也谢谢你，我们的神明朋友。"
  touhou_paragon.50002.a.mat:0 "也谢谢你，我们……神秘的朋友。"
  touhou_paragon.50002.a.corp:0 "交易愉快。"
- touhou_paragon.50002.tooltip:0 "现在你可以在任何星球建造£building£§Y神社§!了！"
- touhou_paragon.50002.tooltip.corp:0 "现在你可以在任何星球建造£building£§Y神社§!了！作为企业政府，你还可以在企业分部里建造同名地产！"
+ touhou_paragon.50002.tooltip:0 "现在你可以在任何星球建造£building£§Y神社§!了！\n\n§M在合适的星球建造该建筑，然后合适的人将造访。§!"
 
  blessed_by_nameless_god:0 "无名神灵的保佑"
  blessed_by_nameless_god_desc:0 "很微弱，但是确实能感受到其中的温暖。"
 
  blessed_by_nameless_god_advanced:0 "无名神灵的保佑"
  blessed_by_nameless_god_advanced_desc:0 "很微弱，但是确实能感受到其中的温暖。"
+
+ touhou_paragon.50003.name:0 "红叶之神社"
+ touhou_paragon.50003.desc:0 "我们的自然学家精心挑选了一处§Y[Root.GetName]§!的落叶阔叶林，作为神社的建造地点，他们相信，季节交替之际美丽的红叶之景，或许能够吸引某位神明的到来。果然，在这一年的秋季，我们的巫女团队收到了神明的声音，经过一场降神仪式，神明的身姿显现在了我们面前。"
+ touhou_paragon.50003.a:0 "显示在通讯屏幕上。"
+
+ touhou_paragon.50004.name:0 "丰收之神社"
+ touhou_paragon.50004.desc:0 "§Y[Root.GetName]§!作为我们重要的农业生产基地，当地的神社自然也是应本地农民的要求建在了农田之中。因此我们的巫女团队推测，这座神社应该会受到丰收之神的关注。不出所料，在这一年的庆祝丰收的仪式上，一位神明伪装成售卖烤红薯的商贩不请自来了。"
+ touhou_paragon.50004.a:0 "显示在通讯屏幕上。"
 
  building_shrine: "神社"
  building_shrine_desc: "神社不是神灵建造的，而是信徒建造的。祭祀实际存在的神灵，神灵就会自然寄宿在其中。"

@@ -16,6 +16,7 @@ boatman = { icon = colonist possible = { always = no } }
 ghost_lead = { icon = colonist possible = { always = no } }
 fire_trolley = { icon = colonist possible = { always = no } }
 sun_bird = { icon = colonist possible = { always = no } }
+god = { icon = colonist possible = { always = no } }
 
 ###替换原版
 head_researcher = {
@@ -1176,6 +1177,72 @@ angler = {
         modifier = {
             factor = 0.25
             can_take_servant_job = yes
+        }
+    }
+}
+
+maple_sugar_harvester = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = holding_tree_of_life_sapling
+    clothes_texture_index = 2
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+
+    resources = {
+        category = planet_rangers
+        produces = {
+            food = 4
+            rare_crystals = 1
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_amenities_add = 5
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+        mult = value:job_weights_modifier|JOB|maple_sugar_harvester|RESOURCE|food|
+        mult = value:job_weights_modifier|JOB|maple_sugar_harvester|RESOURCE|rare_crystals|
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = { has_trait = trait_mechanical }
+        }
+        modifier = {
+            factor = 2
+            has_living_standard = { type = living_standard_academic_privilege }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = maple_sugar_harvester
+        }
+        modifier = {
+            factor = 0.8
+            is_enslaved = yes
+            has_slavery_type = { type = slavery_indentured }
         }
     }
 }
