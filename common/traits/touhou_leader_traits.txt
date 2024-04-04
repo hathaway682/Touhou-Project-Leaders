@@ -4250,6 +4250,7 @@ leader_trait_fall = {
 	selectable_weight = 0
 	immortal_leaders = yes
 	background_icon = GFX_leader_background_destiny_1
+	custom_tooltip_with_modifiers = leader_trait_fall_tooltip
 }
 
 leader_trait_harvest = {
@@ -4290,6 +4291,7 @@ leader_trait_harvest = {
 	selectable_weight = 0
 	immortal_leaders = yes
 	background_icon = GFX_leader_background_destiny_1
+	custom_tooltip_with_modifiers = leader_trait_harvest_tooltip
 }
 
 leader_trait_jinx = {
