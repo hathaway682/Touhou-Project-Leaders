@@ -253,6 +253,7 @@ on_yearly_pulse_country = {
 	events = {
 		touhou_paragon.41234 #随机事件
 		touhou_paragon_effect.42613 #给阿空喰煞神选
+		touhou_paragon_effect.70
 	}
 }
 

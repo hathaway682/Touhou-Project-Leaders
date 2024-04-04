@@ -6957,29 +6957,104 @@ planet_event = {
     }
 }
 
-planet_event = {
+country_event = {
     id = touhou_paragon_effect.70
     hide_window = yes
     is_triggered_only = yes
-
     trigger = {
-        OR = {
-            AND = {
-                exists = leader
-                leader = {
-                    has_trait = leader_trait_fall
-                }
-            }
-            sector = {
-                sector_capital = {
+        any_owned_planet = {
+            OR = {
+                AND = {
                     exists = leader
                     leader = {
                         has_trait = leader_trait_fall
                     }
                 }
+                sector = {
+                    sector_capital = {
+                        exists = leader
+                        leader = {
+                            has_trait = leader_trait_fall
+                        }
+                    }
+                }
+                AND = {
+                    exists = leader
+                    leader = {
+                        has_trait = leader_trait_harvest
+                    }
+                }
+                sector = {
+                    sector_capital = {
+                        exists = leader
+                        leader = {
+                            has_trait = leader_trait_harvest
+                        }
+                    }
+                }
             }
         }
     }
+
+    immediate = {
+        every_owned_planet = {
+            if = {
+                limit = {
+                    has_deposit = yes
+                    OR = {
+                        AND = {
+                            exists = leader
+                            leader = {
+                                has_trait = leader_trait_fall
+                            }
+                        }
+                        sector = {
+                            sector_capital = {
+                                exists = leader
+                                leader = {
+                                    has_trait = leader_trait_fall
+                                }
+                            }
+                        }
+                    }
+                }
+                planet_event = {
+                    id = touhou_paragon_effect.71
+                    days = 270
+                }
+            }
+            if = {
+                limit = {
+                    OR = {
+                        AND = {
+                            exists = leader
+                            leader = {
+                                has_trait = leader_trait_harvest
+                            }
+                        }
+                        sector = {
+                            sector_capital = {
+                                exists = leader
+                                leader = {
+                                    has_trait = leader_trait_harvest
+                                }
+                            }
+                        }
+                    }
+                }
+                planet_event = {
+                    id = touhou_paragon_effect.72
+                    days = 270
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_effect.71
+    hide_window = yes
+    is_triggered_only = yes
 
     immediate = {
         random_deposit = {
@@ -6996,28 +7071,9 @@ planet_event = {
 }
 
 planet_event = {
-    id = touhou_paragon_effect.71
+    id = touhou_paragon_effect.72
     hide_window = yes
     is_triggered_only = yes
-
-    trigger = {
-        OR = {
-            AND = {
-                exists = leader
-                leader = {
-                    has_trait = leader_trait_harvest
-                }
-            }
-            sector = {
-                sector_capital = {
-                    exists = leader
-                    leader = {
-                        has_trait = leader_trait_harvest
-                    }
-                }
-            }
-        }
-    }
 
     immediate = {
         export_trigger_value_to_variable = {
