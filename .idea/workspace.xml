@@ -5,31 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7784210-dd34-44ca-b26b-8f8bd35035ab" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_maple_suger_harvester.dds" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/bombardment_stances/replace_bombardment_stances.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/bombardment_stances/replace_bombardment_stances.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/buildings/touhou_leader_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/touhou_leader_buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/button_effects/touhou_button_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/button_effects/touhou_button_effects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/deposits/touhou_paragon_deposits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/deposits/touhou_paragon_deposits.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/edicts/touhou_edicts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/edicts/touhou_edicts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/message_types/iwoi_message_types.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/message_types/iwoi_message_types.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/on_actions/touhou_on_actions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/on_actions/touhou_on_actions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/policies/touhou_policies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/policies/touhou_policies.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pop_jobs/thl_religion_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/pop_jobs/thl_religion_jobs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pop_jobs/touhou_leader_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/pop_jobs/touhou_leader_jobs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/script_values/script_values_touhou_leaders.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/script_values/script_values_touhou_leaders.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_effects/touhou_spell_card_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/touhou_spell_card_effects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_spells.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_spells.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_triggers/touhou_scripted_triggers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_triggers/touhou_scripted_triggers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_triggers/touhou_spell_cards_triggers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_triggers/touhou_spell_cards_triggers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/static_modifiers/touhou_static_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/static_modifiers/touhou_static_modifiers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/traits/touhou_governor_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/touhou_governor_traits.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_common_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_common_events.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_effect_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_effect_events.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/BOMB.gfx" beforeDir="false" afterPath="$PROJECT_DIR$/interface/BOMB.gfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/touhou_spell_cards_view.gui" beforeDir="false" afterPath="$PROJECT_DIR$/interface/touhou_spell_cards_view.gui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/traits/leader_trait_icons/leader_trait_frog_bless.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/leader_trait_icons/leader_trait_frog_bless.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/traits/leader_trait_icons/leader_trait_snake_bless.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/leader_trait_icons/leader_trait_snake_bless.dds" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_l_simp_chinese.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_spell_card_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_spell_card_l_simp_chinese.yml" afterDir="false" />

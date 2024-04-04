@@ -3986,3 +3986,99 @@ country_event = { # 荷取
 		}
 	}
 }
+
+country_event = { # 静叶
+	id = touhou_paragon.43000
+	title = "touhou_paragon.43000.name"
+	desc = "touhou_paragon.43000.desc"
+	show_sound = event_psionic
+	is_triggered_only = yes
+
+	picture = GFX_leader_recruitment_bg_renowned
+	auto_opens = no
+	event_window_type = leader_recruit
+	notification_event_icon = "GFX_message_touhou_leaders"
+
+	immediate = {
+		ethic_leader_creator = {
+			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+			LEADER_PORTRAIT = x73
+			CLASS = commander
+			NAME = NAME_Hina
+			LEVEL = 2
+			GENDER = female
+			IMMORTAL = no
+			ETHIC = xenoplile
+			DESC = hina1
+			CATCH_PHRASE =  hina1_catch_phrase
+		}
+		last_created_leader = { #3
+			add_trait = subclass_commander_governor
+			add_trait = leader_trait_jinx
+			add_trait = leader_trait_mediator
+			add_trait = leader_trait_restrained
+			add_trait = leader_trait_dreaded
+			add_trait = leader_trait_uninspiring
+		}
+	}
+
+	picture_event_data = {
+		portrait = event_target:ethic_leader
+		room = ethic_spaceship_room
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			remove_global_flag = hina # Put this leader back into the pool, so player could still get him
+			ethic_leader_kill_effect = yes
+			set_country_flag = dismissed_hina
+		}
+	}
+	option = {
+		name = touhou_paragon.43000.a
+		response_text = touhou_paragon.43000.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43000.b
+		response_text = touhou_paragon.43000.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43000.c
+		response_text = touhou_paragon.43000.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43000.d
+		response_text = touhou_paragon.43000.d.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43000.e
+		response_text = touhou_paragon.43000.e.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43000.f
+		response_text = touhou_paragon.43000.f.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43000.g
+		response_text = touhou_paragon.43000.g.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = HIRE
+		tag = hire_leader
+		custom_tooltip = touhou_paragon.43000.hire_custom_tooltip
+		hidden_effect = {
+			ethic_leader_hire_effect = {
+				GLOBAL_EVENT_TARGET = renowned_hina
+			}
+		}
+	}
+}

@@ -93,6 +93,7 @@ leader_event = {
                             has_trait = leader_trait_jinx
                         }
                     }
+                    NOT = { has_trait = leader_trait_jinx }
                 }
                 owner = {
                     change_variable = {
