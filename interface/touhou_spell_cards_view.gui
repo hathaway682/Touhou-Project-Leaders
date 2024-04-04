@@ -345,6 +345,33 @@ guiTypes = {
             orientation = upper_right
         }
 
+        ###恋
+        effectButtonType = {
+            name = "touhou_select_spell_text_none"
+            quadTextureSprite = "GFX_black_box_bg"
+            buttonText = "spell_card_none_group"
+            buttonFont = "malgun_goth_24"
+            position = { x = 48 y = 120 }
+            size = { width = 274 height = 38 }
+            format = center
+            vertical_alignment = center
+            alwaysTransparent = yes
+            effect = touhou_none_spell_card_text
+        }
+
+        effectButtonType = {
+            name = "touhou_confirm_button_none"
+            quadTextureSprite = "GFX_standard_button_172_34"
+            position = { x = -192 y = 154 }
+            buttonText = "spell_card_none_requirement"
+            buttonFont = "malgun_goth_24"
+            size = { width = 116 height = 38 }
+            format = center
+            vertical_alignment = center
+            effect = touhou_none_spell_card_effect
+            orientation = upper_right
+        }
+
         effectButtonType = {
             name = "touhou_target_text"
             quadTextureSprite = "GFX_invisible"
