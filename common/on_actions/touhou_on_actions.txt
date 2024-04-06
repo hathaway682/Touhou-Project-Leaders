@@ -394,6 +394,12 @@ on_entering_reimu_gateway = {
 
 }
 
+#use for custom country types that need first contact paths
+# THIS = first_contact
+on_first_contact_stage_1_no_path = {
+	events = {
+		touhou_paragon_enclave.301
+
 # Fired by scripted_action_possible in utility_component_template on a ship,
 # when the ship reaches its target planet, in this case.
 # Reference to this on_action is set by its scripted_action_name.
