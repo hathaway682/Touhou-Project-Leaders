@@ -829,3 +829,99 @@ country_event = {
         country_event = { id = touhou_paragon_enclave.305 }
     }
 }
+
+first_contact_event = {
+    id = touhou_paragon_enclave.301
+    hide_window = yes
+    trigger = {
+        contact_country = {
+            is_country_type = kappa_enclave
+        }
+    }
+    is_triggered_only = yes
+    first_contact = yes
+    immediate = {
+        set_site_progress_locked = yes
+    }
+    after = {
+        set_site_progress_locked = no
+        set_first_contact_stage = kappa_enclave_stage_1
+    }
+}
+
+first_contact_event = {
+    id = touhou_paragon_enclave.302
+    title = first_contact_critters.1.name
+    desc = first_contact_critters.1.desc
+    picture = GFX_evt_satellite_in_orbit
+    inline_script = first_contact_event_sounds
+
+    is_triggered_only = yes
+    first_contact = yes
+
+    immediate = {
+        set_site_progress_locked = yes
+    }
+
+    after = {
+        set_site_progress_locked = no
+    }
+
+    option = {
+        name = first_contact_critters.1.A
+        set_first_contact_stage = kappa_enclave_stage_2
+    }
+}
+
+first_contact_event = {
+    id = touhou_paragon_enclave.303
+    title = first_contact_critters.5.name
+    desc = first_contact_critters.5.desc
+    picture = GFX_evt_space_station
+
+    inline_script = first_contact_event_sounds
+    is_triggered_only = yes
+    first_contact = yes
+
+    immediate = {
+        set_site_progress_locked = yes
+    }
+
+    option = {
+        name = SCUM
+        trigger = {
+            owner = { has_valid_civic = civic_fanatic_purifiers }
+        }
+    }
+
+    option = {
+        name = TASTY
+        trigger = {
+            owner = { has_valid_civic = civic_hive_devouring_swarm }
+        }
+    }
+
+    option = {
+        name = EXTERMINATE
+        trigger = {
+            owner = { has_valid_civic = civic_machine_terminator }
+        }
+    }
+
+    option = {
+        name = first_contact_critters.5.A
+        trigger = {
+            owner = {
+                NOR = {
+                    has_valid_civic = civic_fanatic_purifiers
+                    has_valid_civic = civic_hive_devouring_swarm
+                    has_valid_civic = civic_machine_terminator
+                }
+            }
+        }
+    }
+    after = {
+        set_site_progress_locked = no
+        finish_first_contact_effect = yes
+    }
+}

@@ -389,3 +389,11 @@ on_custom_diplomacy = {
 on_entering_reimu_gateway = {
 
 }
+
+#use for custom country types that need first contact paths
+# THIS = first_contact
+on_first_contact_stage_1_no_path = {
+	events = {
+		touhou_paragon_enclave.301
+	}
+}
