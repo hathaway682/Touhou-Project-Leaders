@@ -80,7 +80,7 @@ on_planet_surveyed = {
 on_tech_increased = {
 	events = {
 		touhou_paragon_effect.32
-		touhou_paragon_effect.43101
+		#touhou_paragon_effect.43101
 	}
 }
 
@@ -163,6 +163,7 @@ on_army_killed_in_combat = {
 		touhou_paragon_effect.400
 		touhou_paragon_effect.401
 		touhou_paragon_effect.402
+		touhou_paragon_effect.72
 	}
 }
 
@@ -252,6 +253,7 @@ on_yearly_pulse_country = {
 	events = {
 		touhou_paragon.41234 #随机事件
 		touhou_paragon_effect.42613 #给阿空喰煞神选
+		touhou_paragon_effect.70#秋姐妹
 	}
 }
 
@@ -329,11 +331,13 @@ on_ship_destroyed_victim = {
 	}
 }
 
-# This = planet
-# From = fleet
-on_suika_target_planet_reached = {
+# This = owner of ship 1 (combatant)
+# From = owner of ship 2 (destroyed)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_perp = {
 	events = {
-		touhou_paragon_effect.99
+		touhou_paragon_effect.73 # On ship destroyed leader traits.
 	}
 }
 
@@ -395,5 +399,21 @@ on_entering_reimu_gateway = {
 on_first_contact_stage_1_no_path = {
 	events = {
 		touhou_paragon_enclave.301
+
+# Fired by scripted_action_possible in utility_component_template on a ship,
+# when the ship reaches its target planet, in this case.
+# Reference to this on_action is set by its scripted_action_name.
+# This = planet
+# From = fleet
+
+on_suika_target_planet_reached = {
+	events = {
+		touhou_paragon_effect.99
+	}
+}
+
+on_asteroid_target_planet_reached = {
+	events = {
+		touhou_paragon_spell.7
 	}
 }

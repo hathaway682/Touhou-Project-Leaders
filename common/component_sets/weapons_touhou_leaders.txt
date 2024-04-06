@@ -44,3 +44,10 @@ component_set = {
 	icon = "GFX_ship_part_master_spark"
 	icon_frame = 1
 }
+
+component_set = {
+	key = "asteroid_impact"
+
+	icon = "GFX_ship_part_aura_minefield"
+	icon_frame = 1
+}

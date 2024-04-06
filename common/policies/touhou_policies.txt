@@ -111,3 +111,131 @@ war_doctrine = {
         }
     }
 }
+
+food_policy = {
+    potential = {
+        any_owned_leader = {
+            has_trait = leader_trait_harvest
+        }
+    }
+
+    option = {
+        name = "food_policy_rationing"
+
+        modifier = {
+            planet_pops_organics_food_upkeep_mult = -0.25
+            planet_pops_organics_minerals_upkeep_mult = -0.25
+            pop_growth_speed = -0.1
+            biological_pop_happiness = -0.1
+            lithoid_pop_happiness = -0.1
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "food_policy_normal"
+
+        modifier = {}
+
+        AI_weight = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = "food_policy_generous"
+
+        modifier = {
+            planet_pops_organics_food_upkeep_mult = 0.25
+            planet_pops_organics_minerals_upkeep_mult = 0.25
+            biological_pop_happiness = 0.05
+            lithoid_pop_happiness = 0.05
+            pop_growth_speed = 0.10
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "food_policy_hearty"
+
+        valid = {
+            custom_tooltip = {
+                text = level_3_aki
+                any_owned_leader = {
+                    has_trait = leader_trait_harvest
+                    has_skill = 3
+                }
+            }
+        }
+
+        modifier = {
+            planet_pops_organics_food_upkeep_mult = 0.5
+            planet_pops_organics_minerals_upkeep_mult = 0.5
+            biological_pop_happiness = 0.15
+            lithoid_pop_happiness = 0.15
+            pop_growth_speed = 0.20
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "food_policy_lavish"
+
+        valid = {
+            custom_tooltip = {
+                text = level_6_aki
+                any_owned_leader = {
+                    has_trait = leader_trait_harvest
+                    has_skill = 6
+                }
+            }
+        }
+
+        modifier = {
+            planet_pops_organics_food_upkeep_mult = 0.75
+            planet_pops_organics_minerals_upkeep_mult = 0.75
+            biological_pop_happiness = 0.25
+            lithoid_pop_happiness = 0.25
+            pop_growth_speed = 0.30
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "food_policy_luxurious"
+
+        valid = {
+            custom_tooltip = {
+                text = level_10_aki
+                any_owned_leader = {
+                    has_trait = leader_trait_harvest
+                    has_skill = 10
+                }
+            }
+        }
+
+        modifier = {
+            planet_pops_organics_food_upkeep_mult = 1
+            planet_pops_organics_minerals_upkeep_mult = 1
+            biological_pop_happiness = 0.4
+            lithoid_pop_happiness = 0.4
+            pop_growth_speed = 0.40
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+}

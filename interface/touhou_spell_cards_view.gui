@@ -264,6 +264,60 @@ guiTypes = {
             orientation = upper_right
         }
 
+        ###静叶
+        effectButtonType = {
+            name = "touhou_select_spell_text_sizuha"
+            quadTextureSprite = "GFX_black_box_bg"
+            buttonText = "spell_card_sizuha_group"
+            buttonFont = "malgun_goth_24"
+            position = { x = 48 y = 120 }
+            size = { width = 274 height = 38 }
+            format = center
+            vertical_alignment = center
+            alwaysTransparent = yes
+            effect = touhou_sizuha_spell_card_effect
+        }
+
+        effectButtonType = {
+            name = "touhou_confirm_button_sizuha"
+            quadTextureSprite = "GFX_standard_button_172_34"
+            position = { x = -192 y = 154 }
+            buttonText = "spell_card_sizuha_requirement"
+            buttonFont = "malgun_goth_24"
+            size = { width = 116 height = 38 }
+            format = center
+            vertical_alignment = center
+            effect = touhou_sizuha_spell_card_effect
+            orientation = upper_right
+        }
+
+        ###穰子
+        effectButtonType = {
+            name = "touhou_select_spell_text_minoriko"
+            quadTextureSprite = "GFX_black_box_bg"
+            buttonText = "spell_card_minoriko_group"
+            buttonFont = "malgun_goth_24"
+            position = { x = 48 y = 120 }
+            size = { width = 274 height = 38 }
+            format = center
+            vertical_alignment = center
+            alwaysTransparent = yes
+            effect = touhou_minoriko_spell_card_effect
+        }
+
+        effectButtonType = {
+            name = "touhou_confirm_button_minoriko"
+            quadTextureSprite = "GFX_standard_button_172_34"
+            position = { x = -192 y = 154 }
+            buttonText = "spell_card_minoriko_requirement"
+            buttonFont = "malgun_goth_24"
+            size = { width = 116 height = 38 }
+            format = center
+            vertical_alignment = center
+            effect = touhou_minoriko_spell_card_effect
+            orientation = upper_right
+        }
+
         ###恋
         effectButtonType = {
             name = "touhou_select_spell_text_koishi"
@@ -288,6 +342,33 @@ guiTypes = {
             format = center
             vertical_alignment = center
             effect = touhou_koishi_spell_card_effect
+            orientation = upper_right
+        }
+
+        ###恋
+        effectButtonType = {
+            name = "touhou_select_spell_text_none"
+            quadTextureSprite = "GFX_black_box_bg"
+            buttonText = "spell_card_none_group"
+            buttonFont = "malgun_goth_24"
+            position = { x = 48 y = 120 }
+            size = { width = 274 height = 38 }
+            format = center
+            vertical_alignment = center
+            alwaysTransparent = yes
+            effect = touhou_none_spell_card_text
+        }
+
+        effectButtonType = {
+            name = "touhou_confirm_button_none"
+            quadTextureSprite = "GFX_standard_button_172_34"
+            position = { x = -192 y = 154 }
+            buttonText = "spell_card_none_requirement"
+            buttonFont = "malgun_goth_24"
+            size = { width = 116 height = 38 }
+            format = center
+            vertical_alignment = center
+            effect = touhou_none_spell_card_effect
             orientation = upper_right
         }
 

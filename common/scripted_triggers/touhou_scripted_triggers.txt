@@ -28,8 +28,8 @@ prosperity_gospel_check_trigger = {
 			owner = {
 				OR = {
 					has_valid_civic = civic_gospel_of_the_masses
-					has_valid_civic = civic_hakurei_shinto
-					has_valid_civic = civic_moriya_shinto
+					has_valid_civic = civic_hakurei_shinto_corp
+					has_valid_civic = civic_moriya_shinto_corp
 				}
 			}
 			AND = {
@@ -37,8 +37,8 @@ prosperity_gospel_check_trigger = {
 				branch_office_owner = {
 					OR = {
 						has_valid_civic = civic_gospel_of_the_masses
-						has_valid_civic = civic_hakurei_shinto
-						has_valid_civic = civic_moriya_shinto
+						has_valid_civic = civic_hakurei_shinto_corp
+						has_valid_civic = civic_moriya_shinto_corp
 					}
 				}
 			}
@@ -84,6 +84,18 @@ has_touhou_leader_trait = {
 		has_trait = leader_trait_corpse_travel
 		has_trait = leader_trait_nuclear
 		has_trait = leader_trait_water
+		has_trait = leader_trait_fall
+		has_trait = leader_trait_harvest
+	}
+}
+
+has_touhou_spell_trait = {
+	OR = {
+		has_trait = leader_trait_fly
+		has_trait = leader_trait_magic
+		has_trait = leader_trait_subconscious
+		has_trait = leader_trait_fall
+		has_trait = leader_trait_harvest
 	}
 }
 
@@ -408,7 +420,7 @@ can_be_leader = {
 			}
 		}
 		root = {
-			AND = {
+			OR = {
 				has_authority = auth_machine_intelligence
 				is_mechanical_empire = yes
 			}
@@ -472,5 +484,33 @@ has_touhou_supernatural_trait = {
 		has_trait = leader_trait_corpse_travel
 		has_trait = leader_trait_nuclear
 		has_trait = leader_trait_water
+		has_trait = leader_trait_fall
+		has_trait = leader_trait_harvest
+	}
+}
+
+planet_leader_has_trait = {
+	planet = {
+		exists = leader
+		leader = { has_trait = $TRAIT$ }
+	}
+}
+
+sector_leader_has_trait = {
+	planet = {
+		NOT = {
+			planet = {
+				exists = leader
+				leader = { has_trait = $TRAIT$ }
+			}
+		}
+		planet = {
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = { has_trait = $TRAIT$ }
+				}
+			}
+		}
 	}
 }

@@ -321,6 +321,65 @@ weapon_component_template = {
 }
 
 weapon_component_template = {
+	key = "MASTER_SPARK_SC"
+	size = extra_large
+	type = instant
+
+	icon = "GFX_ship_part_master_spark"
+	icon_frame = 1
+
+	firing_arc = 360.0
+	use_ship_kill_target = no
+	hidden = yes
+
+	prerequisites = { "tech_master_spark" }
+	component_set = "MASTER_SPARK"
+	projectile_gfx = "Masterspark_projectile"
+	tags = { weapon_type_energy weapon_role_artillery x_slot }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t6_cost
+			rare_crystals = @xl_t6_rare
+		}
+		upkeep = {
+			energy = @xl_t6_upkeep_energy
+			alloys = @xl_t6_upkeep_alloys
+		}
+	}
+
+	power = -260
+	damage = { min = 2000 max = 3000 }
+
+	hull_damage = 2.0
+	shield_damage = 0.75
+	armor_damage = 2.0
+	armor_penetration = 0.5
+
+	windup = { min = 160.0 max = 200.0 }
+
+	range = 250
+
+	accuracy = 0.95
+	tracking = 0.25
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+weapon_component_template = {
 	key = "FINAL_SPARK"
 	size = titanic
 	type = instant
@@ -385,11 +444,12 @@ weapon_component_template = {
 	icon = "GFX_ship_part_master_spark"
 	icon_frame = 1
 
+	firing_arc = 360.0
 	use_ship_kill_target = no
+	hidden = yes
 
 	tags = { weapon_type_energy weapon_role_artillery t_slot }
 
-	hidden = yes
 	component_set = "FINAL_SPARK"
 	projectile_gfx = "Finalspark_projectile"
 	resources = {

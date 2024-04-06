@@ -2,10 +2,102 @@
 # Unity buildings
 ##################
 
+building_shrine = {
+	base_buildtime = @b1_time
+	icon = building_moriya_shrine
+	base_cap_amount = 1
+
+	category = unity
+
+	potential = {
+		owner = {
+			has_country_flag = can_build_shirne
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_temple
+		building_heritage_site
+		building_simulation_1
+		building_hive_node
+	}
+
+	upgrades = {
+		building_moriya_shrine
+		building_hakurei_shrine
+	}
+
+	planet_modifier = {
+		job_miko_add = 2
+	}
+
+	on_built = {
+		if = {
+			limit = {
+				OR = {
+					has_deposit = d_nature_preserve_blocker
+					has_deposit = d_big_nature_preserve_blocker
+					has_deposit = d_dense_jungle
+					has_deposit = d_rugged_woods
+					has_deposit = d_lush_jungle
+					has_deposit = d_great_river
+					has_deposit = d_marvelous_oasis
+					has_deposit = d_migrating_forests
+					has_deposit = d_migrating_forest_reserve
+					has_deposit = d_wandering_forests
+					has_deposit = d_seed_bombing_plantoid_blocker
+				}
+			}
+			planet_event = {
+				id = touhou_paragon.50003
+			}
+			set_planet_flag = sizuha_planet
+		}
+		else_if = {
+			limit = {
+				planet_resource_compare = {
+					resource = food
+					type = produces
+					value > 50
+				}
+			}
+			planet_event = {
+				id = touhou_paragon.50004
+			}
+			set_planet_flag = minoriko_planet
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+	triggered_desc = {
+		text = job_miko_effect_desc
+	}
+}
+
 building_moriya_shrine = {
 	base_buildtime = @b3_time
-	base_cap_amount = 1
 	icon = building_moriya_shrine
+	can_build = no
 
 	category = unity
 
@@ -18,6 +110,9 @@ building_moriya_shrine = {
 					has_trait = leader_trait_miracle
 				}
 			}
+		}
+		NOT = {
+			has_modifier = slave_colony
 		}
 	}
 
@@ -48,8 +143,7 @@ building_moriya_shrine = {
 	}
 
 	planet_modifier = {
-		job_high_priest_add = 1
-		job_priest_add = 3
+		job_moriya_miko_add = 2
 	}
 
 	triggered_country_modifier = {
@@ -64,8 +158,7 @@ building_moriya_shrine = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @b4_minerals
-
+			minerals = @b3_minerals
 		}
 		cost = {
 			trigger = {
@@ -76,11 +169,10 @@ building_moriya_shrine = {
 					}
 				}
 			}
-			rare_crystals = @b4_rare_cost
+			rare_crystals = @b3_rare_cost
 		}
 		upkeep = {
-			energy = @b4_upkeep
-			rare_crystals = @b4_rare_upkeep
+			energy = @b3_upkeep
 		}
 		upkeep = {
 			trigger = {
@@ -91,10 +183,7 @@ building_moriya_shrine = {
 					}
 				}
 			}
-			rare_crystals = @b4_rare_upkeep
-		}
-		produces = {
-			unity = 10
+			rare_crystals = @b3_rare_upkeep
 		}
 	}
 
@@ -105,11 +194,9 @@ building_moriya_shrine = {
 		planet_priests_engineering_research_produces_add = 2
 	}
 
+
 	triggered_desc = {
-		text = job_high_priest_effect_desc
-	}
-	triggered_desc = {
-		text = job_priest_effect_desc
+		text = job_moriya_miko_effect_desc
 	}
 }
 
@@ -117,7 +204,6 @@ holding_building_moriya_shrine = {
 	base_buildtime = @b3_time
 	owner_type = subject_holding
 	icon = building_moriya_shrine
-	base_cap_amount = 1
 
 	category = unity
 
@@ -135,14 +221,13 @@ holding_building_moriya_shrine = {
 	}
 
 	planet_modifier = {
-		job_high_priest_add = 1
-		job_priest_add = 3
+		job_moriya_miko_add = 2
 	}
 
 	resources = {
 		category = planet_holdings
 		cost = {
-			minerals = @b4_minerals
+			minerals = @b3_minerals
 		}
 		cost = {
 			trigger = {
@@ -153,13 +238,10 @@ holding_building_moriya_shrine = {
 					}
 				}
 			}
-			rare_crystals = @b4_rare_cost
+			rare_crystals = @b3_rare_cost
 		}
 		upkeep = {
-			energy = @b4_upkeep
-		}
-		produces = {
-			unity = 10
+			energy = @b3_upkeep
 		}
 	}
 
@@ -184,10 +266,107 @@ holding_building_moriya_shrine = {
 	}
 
 	triggered_desc = {
-		text = job_high_priest_effect_desc
+		text = job_moriya_miko_effect_desc
+	}
+}
+
+building_hakurei_shrine = {
+	base_buildtime = @b3_time
+	icon = building_hakurei_shrine
+	can_build = no
+
+	category = unity
+
+	potential = {
+		owner = {
+			any_owned_planet = {
+				OR = {
+					has_deposit = d_hakurei_shrine
+					has_deposit = d_hakurei_shrine_large
+					has_deposit = d_hakurei_shrine_imperial
+					has_deposit = d_hakurei_shrine_psionic
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		OR = {
+			has_major_upgraded_capital = yes
+			AND = {
+				has_upgraded_capital = yes
+				owner = {
+					OR = {
+						has_civic = civic_hakurei_shinto
+						has_civic = civic_hakurei_shinto_corp
+					}
+				}
+			}
+		}
+		NOR = {
+			has_deposit = d_hakurei_shrine
+			has_deposit = d_hakurei_shrine_large
+			has_deposit = d_hakurei_shrine_imperial
+			has_deposit = d_hakurei_shrine_psionic
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_citadel_of_faith
+		building_autocurating_vault
+		building_alpha_hub
+		building_corporate_vault
+	}
+
+	planet_modifier = {
+		job_hakurei_miko_add = 2
+	}
+
+	triggered_country_modifier = {
+		country_naval_cap_mult = 0.1
+		ship_tracking_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		cost = {
+			trigger = {
+				owner = {
+					NOR = {
+						has_civic = civic_hakurei_shinto
+						has_civic = civic_hakurei_shinto_corp
+					}
+				}
+			}
+			volatile_motes = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					NOR = {
+						has_civic = civic_hakurei_shinto
+						has_civic = civic_hakurei_shinto_corp
+					}
+				}
+			}
+			rare_crystals = @b3_rare_upkeep
+		}
 	}
 	triggered_desc = {
-		text = job_priest_effect_desc
+		text = job_hakurei_miko_effect_desc
 	}
 }
 
