@@ -129,7 +129,8 @@ touhou_ex_charge_effect = {
 		}
 	}
 	allow = {
-		hidden_trigger = {
+		custom_tooltip = {
+			fail_text = touhou_ex_charge_fail_desc
 			from = {
 				OR = {
 					AND = {
@@ -143,6 +144,12 @@ touhou_ex_charge_effect = {
 						}
 					}
 				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = touhou_need_technology_desc
+			from = {
+				has_technology = tech_mana_field_emission_array
 			}
 		}
 	}

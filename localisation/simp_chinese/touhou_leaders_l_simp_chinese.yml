@@ -4,6 +4,7 @@
  #################################################
 
  CLASS_PREFIX_TOUHOU:0 "§r东方Project"
+ CLASS_PREFIX_TOUHOU_LEGEND:0 "§l东方Project"
 
  touhou_leader_plural: "幻想乡领袖"
  touhou_leader_plural_with_icon: "£touhou_leader£幻想乡领袖"
@@ -352,9 +353,9 @@
  touhou_paragon.40400.hire_custom_tooltip:0 "§Y$NAME_Cirno$§!作为一名§H领袖§!加入了我们的帝国。"
 
  touhou_paragon.40420.name:0 "老友重逢"
- touhou_paragon.40420.desc:1 "一个蓝裙绿发的妖精找到了我们，她自称§Y$DAIYOUSEI_NAME$§!，是§Y[Root.GetName]§!的朋友，因为担心她的安全来寻找她，在得知§Y[Root.GetName]§!在我们这愉快的效力后，她表示愿意和§Y[Root.GetName]§!一起工作，§Y[Root.GetName]§!见到她之后十分高兴，希望两位老朋友的重逢会让她们日后工作更有干劲。"
+ touhou_paragon.40420.desc:1 "一个蓝裙绿发的妖精找到了我们，她自称§Y大妖精§!，是§Y[Root.GetName]§!的朋友，因为担心她的安全来寻找她，在得知§Y[Root.GetName]§!在我们这愉快的效力后，她表示愿意和§Y[Root.GetName]§!一起工作，§Y[Root.GetName]§!见到她之后十分高兴，希望两位老朋友的重逢会让她们日后工作更有干劲。"
  touhou_paragon.40420.a:0 "朋友一生一起走！"
- touhou_paragon.40420.a.custom_tooltip:0 "一个叫§Y$DAIYOUSEI_NAME$§!的妖精作为一名§H领袖§!加入了我们的帝国。"
+ touhou_paragon.40420.a.custom_tooltip:0 "一个叫§Y大妖精§!的妖精作为一名§H领袖§!加入了我们的帝国。"
  DAIYOUSEI_NAME:0 "大妖精"
  DAIYOUSEI_DESC:0 "琪露诺的好朋友，无名的大妖精。"
 
@@ -410,7 +411,7 @@
  reimu1:0 "博丽神社的巫女，因为紫的恶作剧出现于此，弹幕战的专家。"
  reimu1_catch_phrase:0 "敌人什么的，只要统统退治掉就行啦！"
 
- CLASS_TIER_REIMU:0 "§r乐园的可爱巫女§!"
+ CLASS_TIER_REIMU:0 "§l乐园的可爱巫女§!"
 
  touhou_paragon.40600.name: "$NAME_Reimu$"
 
@@ -773,7 +774,7 @@
  koishi1:0 "自我封闭内心的觉妖怪，获得了在无意识下进行行动的能力，来自位于地底的地灵殿。"
  koishi1_catch_phrase:0 "我和你无冤无仇，但我就送给你死在路旁的未来吧。不用担心，尸体我会让猫运走，你就可以永远地住在我家了！"
 
- CLASS_TIER_KOISHI:0 "§r紧闭的恋之瞳§!"
+ CLASS_TIER_KOISHI:0 "§l紧闭的恋之瞳§!"
 
  touhou_paragon.41400.name:0 "$NAME_Koishi$"
 
@@ -844,9 +845,6 @@
 
  friendly_aura_starbase_tengu_storm: "风暴加速"
  hostile_aura_starbase_tengu_storm: "风暴乱流"
-
- spell_card: "术式"
- spell_card_plural: "术式"
 
  touhou_paragon_effect.10000.name: "天狗的情报屋"
  touhou_paragon_effect.10000.desc: "我们新闻记者从不编造谎言，只是让真相出现在对自己有利的地方。你手里显然握着一些有趣的真相，那么是那个不幸的国家要承担这些真相的代价呢？"
@@ -1860,7 +1858,7 @@
  sizuha1:0 "掌管幻想乡秋天的八百万神之一，掌管着红叶，是红叶之神。"
  sizuha1_catch_phrase:0 "树叶啊，总让人觉得到了秋天才会变成红色，但其实从发芽的时候，它们就开始带上了美丽而虚幻的鲜红哦。"
 
- CLASS_TIER_SIZUHA:0 "§r寂寞与终焉的象征§!"
+ CLASS_TIER_SIZUHA:0 "§l寂寞与终焉的象征§!"
 
  touhou_paragon.42800.name:0 "$NAME_Sizuha$"
  touhou_paragon.42800.desc:0 "§H这位神明有着一头金色齐颈短发，头戴枫叶状头饰，穿着像枫叶一样从红向下渐变为黄的裙子，下摆也为枫叶状碎花。很容易就能猜出，她的神格也与红叶有关。§!\n\n你，喜欢秋天的红叶吗？……这样啊，很好，我是秋静叶。是掌管红叶的秋之神。色彩鲜艳的红叶，能够让看到的人都看入迷。终将散去的短暂生命也是其魅力的一部分。话说回来，如果能让所有人都理解这其中的美好的话，大家会更加崇拜我的吧。为了守护秋天与红叶，我也不能置身事外。"
@@ -1904,7 +1902,7 @@
  minoriko1:0 "掌管幻想乡秋天的八百万神之一，掌管着丰收，是丰收之神。"
  minoriko1_catch_phrase:0 "马上就到秋天了——食物会变得越来越好吃哦——今天就让我特别为你们提早带来秋天的味觉吧——"
 
- CLASS_TIER_MINORIKO:0 "§r丰裕与收成的象征§!"
+ CLASS_TIER_MINORIKO:0 "§l丰裕与收成的象征§!"
 
  touhou_paragon.42900.name:0 "$NAME_Minoriko$"
  touhou_paragon.42900.desc:0 "§H这位神明有着一头金色齐颈短发，略卷。头戴红色荷叶边帽子，右侧的帽檐上有一串葡萄作为装饰，身穿红色围裙，系着黑色带子，围裙里面穿着宽松的黄色长袖。围裙下部有金色稻穗图案，裙摆有荷叶边。她的身上有一股红薯的香味。§!\n\n那边那位，喜欢红薯吗?我是秋穰子!秋之神姐妹中的妹妹，是掌管丰收的神明哦。多亏了我才能培育出好吃的大米和软糯的南瓜哦，所以要好好信仰我哦.....不过，我只是八百万神明中的一个罢了，哎嘿嘿。如果是为了人们而四处奔波的你们的话我可以给你当后勤哦？那么，你想吃什么呢？"

@@ -328,3 +328,16 @@ mana_need_per_bomb = {
 	}
 	multiply = 10
 }
+
+num_spell_card_leaders = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				has_touhou_spell_trait = yes
+			}
+		}
+		mode = add
+	}
+}

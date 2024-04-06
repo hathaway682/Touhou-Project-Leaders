@@ -670,14 +670,16 @@ minoriko_spell_card_2_effect = {
             }
             else_if = {
                 limit = {
-                    num_buildings = {
-                        type = any
-                        value > 1
-                    }
-                    num_districts = {
-                        type = any
-                        value > 0
-                    }
+                   OR = {
+                       num_buildings = {
+                           type = any
+                           value > 1
+                       }
+                       num_districts = {
+                           type = any
+                           value > 0
+                       }
+                   }
                 }
                 ruin_building = random_no_capital
                 remove_last_built_district = yes
@@ -723,6 +725,229 @@ minoriko_spell_card_2_effect = {
                     }
                 }
             }
+        }
+    }
+}
+
+marisa_spell_card_1_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            create_fleet = {
+                name = "NAME_Master_Spark"
+                effect = {
+                    set_owner = from
+                    create_ship = {
+                        name = "NAME_Master_Spark"
+                        design = "NAME_Master_Spark"
+                        graphical_culture = "extra_dimensional_01"
+                    }
+                    set_location = root
+                    set_fleet_flag = master_spark_fleet
+                    fleet_event = {
+                        id = touhou_paragon_spell.6
+                        days = 180
+                    }
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_1_ex_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -4
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            create_fleet = {
+                name = "NAME_Final_Spark"
+                effect = {
+                    set_owner = from
+                    create_ship = {
+                        name = "NAME_Final_Spark"
+                        design = "NAME_Final_Spark"
+                        graphical_culture = "extra_dimensional_01"
+                    }
+                    set_location = root
+                    set_fleet_flag = final_spark_fleet
+                    fleet_event = {
+                        id = touhou_paragon_spell.6
+                        days = 360
+                    }
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_2_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -2
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            create_fleet = {
+                name = "NAME_Stardust_Reverie"
+                effect = {
+                    set_owner = from
+                    create_ship = {
+                        name = "NAME_Stardust_Reverie"
+                        design = "NAME_Stardust_Reverie"
+                        graphical_culture = "extra_dimensional_01"
+                    }
+                    set_location = root
+                    set_fleet_flag = stardust_reverie_fleet
+                    fleet_event = {
+                        id = touhou_paragon_spell.6
+                        days = 180
+                    }
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_2_ex_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -3
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            create_fleet = {
+                name = "NAME_Event_Horizon"
+                effect = {
+                    set_owner = from
+                    create_ship = {
+                        name = "NAME_Event_Horizon"
+                        design = "NAME_Event_Horizon"
+                        graphical_culture = "extra_dimensional_01"
+                    }
+                    set_location = root
+                    set_fleet_flag = event_horizon_fleet
+                    fleet_event = {
+                        id = touhou_paragon_spell.6
+                        days = 360
+                    }
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_3_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -2
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            while = {
+                count = 4
+                create_ship = {
+                    random_existing_design = marisa_cannon
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_3_ex_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -3
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            while = {
+                count = 6
+                create_ship = {
+                    random_existing_design = marisa_cannon_titanic
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_4_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -2
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            create_fleet = {
+                name = "NAME_Controlled_Asteroid"
+                effect = {
+                    set_owner = from
+                    create_ship = {
+                        name = "NAME_Asteroid"
+                        design = "NAME_Marisa_Asteroid"
+                        prefix = no
+                        upgradable = no
+                    }
+                    set_fleet_settings = {
+                        can_change_composition = no
+                        can_change_leader = no
+                        can_upgrade = no
+                        uses_naval_capacity = no
+                        spawn_debris = no
+                    }
+                    add_modifier = {
+                        modifier = cannot_escape
+                    }
+                    set_location = root
+                }
+            }
+            remove_planet = yes
         }
     }
 }

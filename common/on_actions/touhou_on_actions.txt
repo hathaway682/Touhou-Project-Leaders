@@ -253,7 +253,7 @@ on_yearly_pulse_country = {
 	events = {
 		touhou_paragon.41234 #随机事件
 		touhou_paragon_effect.42613 #给阿空喰煞神选
-		touhou_paragon_effect.70
+		touhou_paragon_effect.70#秋姐妹
 	}
 }
 
@@ -341,14 +341,6 @@ on_ship_destroyed_perp = {
 	}
 }
 
-# This = planet
-# From = fleet
-on_suika_target_planet_reached = {
-	events = {
-		touhou_paragon_effect.99
-	}
-}
-
 # This = owner of fleet 1 (combatant)
 # From = owner of fleet 2 (destroyed)
 # FromFrom = fleet 1
@@ -402,9 +394,20 @@ on_entering_reimu_gateway = {
 
 }
 
-# This = Planet
-on_blocker_cleared = {
+# Fired by scripted_action_possible in utility_component_template on a ship,
+# when the ship reaches its target planet, in this case.
+# Reference to this on_action is set by its scripted_action_name.
+# This = planet
+# From = fleet
+
+on_suika_target_planet_reached = {
 	events = {
-		touhou_paragon_effect.70 # 替换障碍
+		touhou_paragon_effect.99
+	}
+}
+
+on_asteroid_target_planet_reached = {
+	events = {
+		touhou_paragon_spell.7
 	}
 }

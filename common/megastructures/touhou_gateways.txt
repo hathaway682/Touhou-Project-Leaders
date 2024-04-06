@@ -1,6 +1,6 @@
 # see README.txt for example
 reimu_gateway = {
-	entity = "astral_rift_4_entity"
+	entity = "astral_scar_entity"
 	construction_entity = "construction_platform_entity"
 	portrait = "GFX_evt_astral_rift"
 

@@ -89,3 +89,89 @@ opinion_destroyed_kappa_enclave = {
 		base = 2
 	}
 }
+
+# Cracked a Planet Like an Egg (regular Empires' opinion of world cracker)
+opinion_asteroid_impected_a_world = {
+	opinion = {
+		base = -100
+	}
+
+	accumulative = yes
+
+	min = -500
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_asteroid_impected_an_uninhabited_world = {
+	opinion = {
+		base = -30
+	}
+
+	accumulative = yes
+
+	min = -150
+
+	decay = {
+		base = 1
+	}
+}
+
+# Cracked My Planet Like an Egg (victim Empire's opinion of world cracker)
+opinion_asteroid_impected_my_world = {
+	opinion = {
+		base = -1000
+	}
+
+	accumulative = yes
+
+	min = -5000
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_asteroid_impected_my_uninhabited_world = {
+	opinion = {
+		base = -300
+	}
+
+	accumulative = yes
+
+	min = -1500
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_asteroid_impected_a_primitive_world = {
+	opinion = {
+		base = -40
+	}
+
+	accumulative = yes
+
+	min = -200
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_asteroid_impected_a_primitive_world_phile = {
+	opinion = {
+		base = -60
+	}
+
+	accumulative = yes
+
+	min = -300
+
+	decay = {
+		base = 1
+	}
+}

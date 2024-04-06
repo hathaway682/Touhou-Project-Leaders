@@ -93,209 +93,6 @@ gray_thaumaturgy = {
 	}
 }
 
-koishi_rampage = {
-	length = 1
-	icon = "GFX_edict_type_time"
-	potential = {
-		OR = {
-			any_owned_leader = {
-				has_trait = leader_trait_subconscious
-			}
-			has_country_flag = koishi_rampage
-		}
-	}
-	allow = {
-		any_owned_fleet = {
-			exists = leader
-				leader = {
-				has_trait = leader_trait_subconscious
-			}
-		}
-	}
-	resources = {
-		category = edicts
-	}
-	effect = {
-		custom_tooltip = rampage_effect
-		hidden_effect = {
-			if = {
-				limit = {
-					NOT = {
-						exists = event_target:koishi_country
-					}
-				}
-				create_country = {
-					name = NAME_Koishi_Fleet
-					adjective = NAME_Koishi_Fleet
-					type = koishi_berserk_fleet
-					flag = {
-						icon={
-							category="spherical"
-							file="flag_spherical_12.dds"
-						}
-						background={
-							category="backgrounds"
-							file="flag_BG_31.dds"
-						}
-						colors={
-							"desert_yellow"
-							"swamp_green"
-							"null"
-							"null"
-						}
-					}
-					auto_delete = no
-					randomize_ethos = yes
-					released_from_country = root
-					ignore_initial_colony_error = yes
-				}
-				last_created_country = {
-					save_global_event_target_as = koishi_country
-					copy_techs_from = { target = root }
-				}
-			}
-			else = {
-				event_target:koishi_country = {
-					copy_techs_from = { target = root }
-				}
-			}
-			every_owned_fleet = {
-				limit = {
-					exists = leader
-					leader = { has_trait = leader_trait_subconscious }
-				}
-				add_modifier = {
-					modifier = rampage_fleet
-					days = -1
-				}
-				set_owner = event_target:koishi_country
-				leader = {
-					set_owner = event_target:koishi_country
-				}
-				set_fleet_settings = {
-					can_change_leader = no
-					is_boss = yes
-				}
-			}
-			set_country_flag = koishi_rampage
-		}
-	}
-}
-
-koishi_rampage_end = {
-	length = 1
-	icon = "GFX_edict_type_time"
-	potential = {
-		OR = {
-			any_owned_leader = {
-				has_trait = leader_trait_subconscious
-			}
-			has_country_flag = koishi_rampage
-		}
-	}
-	allow = {
-		has_country_flag = koishi_rampage
-	}
-	resources = {
-		category = edicts
-		cost = {
-			unity = 514
-			multiplier = value:edict_size_effect
-		}
-	}
-	effect = {
-		custom_tooltip = rampage_end_effect
-		event_target:koishi_country = {
-			every_owned_fleet = {
-				solar_system = {
-					every_fleet_in_system = {
-						add_modifier = {
-							modifier = super_ego
-							days = 30
-						}
-					}
-				}
-			}
-		}
-		hidden_effect = {
-			event_target:koishi_country = {
-				every_owned_fleet = {
-					remove_modifier = rampage_fleet
-					set_fleet_settings = {
-						can_change_leader = yes
-						is_boss = no
-					}
-					set_owner = root
-					leader = {
-						set_owner = root
-					}
-					solar_system = {
-						every_fleet_in_system = {
-							add_modifier = {
-								modifier = super_ego
-								days = 30
-							}
-						}
-					}
-				}
-			}
-			remove_country_flag = koishi_rampage
-		}
-	}
-}
-
-#tengu_storm_active = {
-#	length = 210
-#	edict_lock_in_months = 7
-#	icon = "GFX_edict_type_time"
-#	potential = {
-#		any_owned_leader = {
-#			has_trait = leader_trait_wind
-#		}
-#	}
-#	resources = {
-#		category = edicts
-#		cost = {
-#			sr_zro = 10
-#			multiplier = value:edict_size_effect
-#		}
-#	}
-#	allow = {
-#		any_owned_fleet = {
-#			exists = leader
-#			leader = {
-#				has_trait = leader_trait_wind
-#			}
-#		}
-#		NOT = {
-#			any_system = {
-#				has_modifier = tengu_storm
-#			}
-#		}
-#	}
-#	effect = {
-#		custom_tooltip = tengu_storm_effect
-#		hidden_effect = {
-#			save_global_event_target_as = tengu_storm_owner
-#			every_owned_fleet = {
-#				limit = { exists = leader
-#				leader = { has_trait = leader_trait_wind }
-#				}
-#				save_event_target_as = storm_creator
-#				solar_system = {
-#					system_event = {
-#						id = touhou_paragon_effect.501
-#					}
-#					system_event = {
-#						id = touhou_paragon_effect.502
-#						days = 210
-#					}
-#				}
-#			}
-#		}
-#	}
-#}
-
 poison_gas = {
 	length = -1
 	icon = "GFX_edict_type_time"
@@ -1376,7 +1173,7 @@ destiny_manipulation = {
 	}
 }
 
-commander = {
+flower_commander = {
 	length = 360
 	edict_lock_in_months = 12
 	icon = "GFX_edict_type_time"
@@ -1396,14 +1193,14 @@ commander = {
 			}
 		}
 		custom_tooltip = {
-			fail_text = already_commander
+			fail_text = already_flower_commander
 			NOT = {
 				has_country_flag = double_spark
 			}
 		}
 	}
 	effect = {
-		custom_tooltip = commander_effect
+		custom_tooltip = flower_commander_effect
 		set_country_flag = double_spark
 		hidden_effect = {
 			save_global_event_target_as = double_spark_owner
@@ -1790,6 +1587,18 @@ reset_touhou_leader_portrait = {
 				has_trait = leader_trait_water
 			}
 			change_leader_portrait = x125
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_fall
+			}
+			change_leader_portrait = x73
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_harvest
+			}
+			change_leader_portrait = x74
 		}
 	}
 }

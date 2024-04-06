@@ -432,6 +432,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 35
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_fall
+				}
 			}
 		}
 		localization_key = touhou_selected_char_35
@@ -443,6 +446,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 36
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_harvest
+				}
 			}
 		}
 		localization_key = touhou_selected_char_36
@@ -453,6 +459,9 @@ defined_text = {
 				check_variable = {
 					which = seleted_char_id
 					value = 37
+				}
+				any_owned_leader = {
+					has_trait = leader_trait_jinx
 				}
 			}
 		}

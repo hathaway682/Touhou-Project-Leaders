@@ -331,3 +331,55 @@ ship_section_template = {
 	aux_utility_slots = 2
 	large_utility_slots = 4
 }
+
+ship_section_template = {
+	key = "MARISA_CANNON_CORE"
+	fits_on_slot = "ship"
+	ship_size = marisa_cannon
+	entity = "ion_cannon_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "EXTAR_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "xl_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 6
+	aux_utility_slots = 3
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 0
+		}
+	}
+}
+
+ship_section_template = {
+	key = "MARISA_CANNON_TITANIC_CORE"
+	fits_on_slot = "ship"
+	ship_size = marisa_cannon_titanic
+	entity = "ion_cannon_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "TITANIC_GUN_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "xl_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 6
+	aux_utility_slots = 3
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 0
+		}
+	}
+}

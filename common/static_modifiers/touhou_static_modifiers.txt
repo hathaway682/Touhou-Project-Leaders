@@ -47,11 +47,11 @@ paragon_reimu_wormhole_key = {
 }
 
 invincible_fleet = {
-	ship_shield_regen_add_perc = 1
-	ship_armor_regen_add_perc = 1
-	ship_hull_regen_add_perc = 1
-	ship_armor_hardening_add = 2
-	ship_shield_hardening_add = 2
+	ship_shield_regen_add_perc = 10
+	ship_armor_regen_add_perc = 10
+	ship_hull_regen_add_perc = 10
+	ship_armor_hardening_add = 10
+	ship_shield_hardening_add = 10
 	ship_armor_add = 100000000
 	ship_shield_add = 100000000
 	ship_hull_add = 100000000

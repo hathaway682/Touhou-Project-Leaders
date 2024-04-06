@@ -28,8 +28,8 @@ prosperity_gospel_check_trigger = {
 			owner = {
 				OR = {
 					has_valid_civic = civic_gospel_of_the_masses
-					has_valid_civic = civic_hakurei_shinto
-					has_valid_civic = civic_moriya_shinto
+					has_valid_civic = civic_hakurei_shinto_corp
+					has_valid_civic = civic_moriya_shinto_corp
 				}
 			}
 			AND = {
@@ -37,8 +37,8 @@ prosperity_gospel_check_trigger = {
 				branch_office_owner = {
 					OR = {
 						has_valid_civic = civic_gospel_of_the_masses
-						has_valid_civic = civic_hakurei_shinto
-						has_valid_civic = civic_moriya_shinto
+						has_valid_civic = civic_hakurei_shinto_corp
+						has_valid_civic = civic_moriya_shinto_corp
 					}
 				}
 			}
@@ -84,6 +84,16 @@ has_touhou_leader_trait = {
 		has_trait = leader_trait_corpse_travel
 		has_trait = leader_trait_nuclear
 		has_trait = leader_trait_water
+		has_trait = leader_trait_fall
+		has_trait = leader_trait_harvest
+	}
+}
+
+has_touhou_spell_trait = {
+	OR = {
+		has_trait = leader_trait_fly
+		has_trait = leader_trait_magic
+		has_trait = leader_trait_subconscious
 		has_trait = leader_trait_fall
 		has_trait = leader_trait_harvest
 	}

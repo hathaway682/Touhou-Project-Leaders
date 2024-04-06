@@ -352,64 +352,6 @@ decision_expand_space = {
 	}
 }
 
-#decision_za_warudo = {
-#	owned_planets_only = yes
-#	sound = event_administrative_work
-#	icon = decision_synth_sabotage
-#
-#	resources = {
-#		category = decisions
-#	}
-#
-#	potential = {
-#		solar_system = {
-#			count_starbase_buildings = {
-#				type = za_warudo
-#				count >= 1
-#			}
-#		}
-#	}
-#
-#	allow = {
-#		exists = leader
-#		leader = {
-#			has_trait = leader_trait_time
-#		}
-#		NOT = {
-#			solar_system = {
-#				any_system_planet = {
-#					has_modifier = za_warudo_cooldown
-#				}
-#			}
-#		}
-#	}
-#
-#	effect = {
-#		solar_system = {
-#			every_fleet_in_system = {
-#				limit = {
-#					owner = {
-#						is_hostile = root.owner
-#						is_at_war_with = root.owner
-#					}
-#				}
-#				add_modifier = {
-#					modifier = disabled_fleet
-#					days = 90
-#				}
-#			}
-#		}
-#		add_modifier = {
-#			modifier = za_warudo_cooldown
-#			days = 900
-#		}
-#	}
-#
-#	ai_weight = {
-#		weight = 0
-#	}
-#}
-
 decision_extradimensional_experimentation = {
 	owned_planets_only = yes
 	sound = event_laboratory_sound
