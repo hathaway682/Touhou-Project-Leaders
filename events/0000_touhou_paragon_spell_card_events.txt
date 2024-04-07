@@ -625,20 +625,372 @@ planet_event = {
                 }
             }
         }
-        # Add war exhaustion to planet owner
-        if = {
-            limit = {
-                exists = owner
-            }
-            owner = {
-                if = {
-                    limit = { #isn't the case when the crisis bombards planets, for instance
-                        is_at_war_with = from
+        random_list = {
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.101
+                        scopes = {
+                            from = root
+                        }
                     }
-                    add_static_war_exhaustion = {
-                        attacker = from
-                        location = root
-                        value_for_planet_destruction = 1.0
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.201
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.102
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.202
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.103
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.203
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.104
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.204
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.105
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.205
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.106
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.206
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.107
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.207
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.108
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.208
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.109
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.209
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.110
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.210
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.111
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.211
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.112
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.212
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.113
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.213
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.114
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.214
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.115
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.215
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.116
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.216
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.117
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.217
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.118
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.218
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.119
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.219
+                        scopes = {
+                            from = from
+                        }
+                    }
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    from = {
+                        NOT = {
+                            has_country_flag = marisa_alice_regeneration_complete
+                        }
+                    }
+                }
+                from = {
+                    country_event = {
+                        id = touhou_paragon_spell.120
+                        scopes = {
+                            from = root
+                        }
+                    }
+                }
+                root = {
+                    planet_event = {
+                        id = touhou_paragon_spell.220
+                        scopes = {
+                            from = from
+                        }
                     }
                 }
             }
@@ -698,7 +1050,7 @@ planet_event = {
         }
         else = {
             add_modifier = {
-                modifier = toxic_spehre
+                modifier = toxic_habitat_marisa
                 days = 10800
             }
         }
@@ -847,19 +1199,27 @@ planet_event = {
             remove_district = district_arcology_organic_housing
             remove_district = district_arcology_religious
             add_blocker = {
-                type = d_fungoid_extermination
+                type = d_infestation_marisa
             }
             add_blocker = {
-                type = d_fungoid_extermination
+                type = d_infestation_marisa
             }
             add_blocker = {
-                type = d_fungoid_extermination
+                type = d_infestation_marisa
             }
             add_blocker = {
-                type = d_fungoid_extermination
+                type = d_infestation_marisa
             }
             add_blocker = {
-                type = d_fungoid_extermination
+                type = d_infestation_marisa
+            }
+            every_planet_army = {
+                random_list = {
+                    1 = {}
+                    3 = {
+                        remove_army = yes
+                    }
+                }
             }
             add_planet_devastation = 75
         }

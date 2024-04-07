@@ -304,6 +304,10 @@ leader_num_spell_cards = {
 		has_trait = leader_trait_fly
 	}
 	modifier = {
+		add = 6
+		has_trait = leader_trait_magic
+	}
+	modifier = {
 		add = 4
 		has_trait = leader_trait_subconscious
 	}

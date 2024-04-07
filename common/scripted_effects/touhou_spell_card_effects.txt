@@ -914,7 +914,7 @@ marisa_spell_card_3_ex_effect = {
 marisa_spell_card_4_effect = {
     from = {
         add_resource = {
-            thl_bomb = -2
+            thl_bomb = -4
         }
     }
     if = {
@@ -948,6 +948,51 @@ marisa_spell_card_4_effect = {
                 }
             }
             remove_planet = yes
+        }
+    }
+}
+
+marisa_spell_card_5_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -4
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            planet_event = {
+                id = touhou_paragon_spell.100
+                scopes = {
+                    from = from
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_6_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -5
+        }
+    }
+    from = {
+        random_owned_fleet = {
+            limit = {
+                exists = leader
+                leader = {
+                    has_trait = leader_trait_magic
+                }
+            }
+            add_modifier = {
+                modifier = blazing_star
+                days = 180
+            }
         }
     }
 }

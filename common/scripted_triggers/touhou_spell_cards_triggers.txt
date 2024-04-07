@@ -318,22 +318,25 @@ marisa_card_3_trigger = {
 				}
 			}
 		}
-		From ={
-			OR = {
-				AND = {
-					has_technology = tech_battleships
-					has_existing_ship_design = marisa_cannon
-					NOT = {
-						check_variable = {
-							which = ex_charge
-							value = 1
-						}
+	}
+}
+
+marisa_card_3_trigger_country = {
+	From ={
+		OR = {
+			AND = {
+				has_technology = tech_battleships
+				has_existing_ship_design = marisa_cannon
+				NOT = {
+					check_variable = {
+						which = ex_charge
+						value = 1
 					}
 				}
-				AND = {
-					has_technology = tech_titans
-					has_existing_ship_design = marisa_cannon_titanic
-				}
+			}
+			AND = {
+				has_technology = tech_titans
+				has_existing_ship_design = marisa_cannon_titanic
 			}
 		}
 	}
@@ -365,18 +368,14 @@ marisa_card_5_trigger = {
 			is_scope_type = planet
 			is_colony = yes
 			owner = {
-				is_at_war_with = from
-			}
-			solar_system = {
-				any_fleet_in_system = {
-					exists = leader
-					leader = {
-						owner = {
-							is_same_value = from
-						}
-						has_trait = leader_trait_magic
-					}
+				OR = {
+					is_hostile = from
+					is_at_war_with = from
 				}
+			}
+			any_fleet_in_orbit = {
+				is_civilian = no
+				is_controlled_by = from
 			}
 		}
 	}

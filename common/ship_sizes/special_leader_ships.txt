@@ -219,6 +219,7 @@ marisa_cannon = {
     icon = ship_size_military_station
     construction_type = starbase_shipyard
     required_component_set = "power_core"
+    required_component_set = "ftl_components"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
 
@@ -268,6 +269,7 @@ marisa_cannon_titanic = {
     icon = ship_size_military_station
     construction_type = starbase_shipyard
     required_component_set = "power_core"
+    required_component_set = "ftl_components"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
 
@@ -295,4 +297,268 @@ marisa_asteroid = {
     is_civilian = no
     class = shipclass_military
     is_designable = no
+}
+
+###目前我需要它们占位，也许有一天会用上
+elite_corvette = {
+    formation_priority = @corvette_formation_priority
+    entity = corvette_entity
+    max_speed = @speed_very_fast
+    acceleration = 0.35
+    rotation_speed = 0.1
+    collision_radius = 2.5
+    max_hitpoints = @corvette_hp
+    modifier = {
+        ship_evasion_add = 90
+        ship_piracy_suppression_add = 10
+        ship_hull_mult = 1
+        ship_shield_mult = 1
+        ship_armor_mult = 1
+        ship_speed_mult = 0.4
+        ship_tracking_add = 10
+    }
+    ship_modifier = {
+        
+    }
+    size_multiplier = 1
+    hull_scale = 1.5
+    fleet_slot_size = 1
+    section_slots = { "mid" = { locator = "part1" } }
+    num_target_locators = 2
+    is_space_station = no
+    icon = ship_size_military_1
+    base_buildtime = @corvette_build_time
+    can_have_federation_design = no
+    enable_default_design = yes
+    use_shipnames_from = corvette
+
+    default_behavior = swarm
+
+    prerequisites = { "tech_corvettes" }
+    potential_country = { always = no }
+
+    combat_disengage_chance = 1.00
+
+    class = shipclass_military
+    construction_type = starbase_shipyard
+    required_component_set = "power_core"
+    required_component_set = "ftl_components"
+    required_component_set = "thruster_components"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+
+    resources = {
+        category = ships
+        cost = {
+            alloys = 30
+            unity = 30
+        }
+        upkeep = {
+            energy = @corvette_upkeep_energy
+            alloys = @corvette_upkeep_alloys
+            mult = 2
+        }
+    }
+
+    min_upgrade_cost = {
+        alloys = 1
+    }
+}
+
+elite_destroyer = {
+    entity = destroyer_entity
+    formation_priority = @destroyer_formation_priority
+    max_speed = @speed_fast
+    acceleration = 0.3
+    rotation_speed = 0.2
+    collision_radius = 3
+    max_hitpoints = @destroyer_hp
+    modifier = {
+        ship_evasion_add = @destroyer_evasion
+        ship_piracy_suppression_add = 8
+        ship_hull_mult = 1
+        ship_shield_mult = 1
+        ship_armor_mult = 1
+        ship_fire_rate_mult = 0.4
+        ship_tracking_mult = 40
+    }
+    ship_modifier = {
+        
+    }
+    size_multiplier = 2
+    hull_scale = 1.5
+    fleet_slot_size = 2
+    section_slots = { "bow" = { locator = "part1" } "stern" = { locator = "part2" } }
+    num_target_locators = 4
+    icon = ship_size_military_2
+    class = shipclass_military
+    is_space_station = no
+    base_buildtime = @destroyer_build_time
+    can_have_federation_design = no
+    enable_default_design = yes
+    use_shipnames_from = destroyer
+
+    default_behavior = artillery
+
+    prerequisites = { "tech_destroyers" }
+    potential_country = { always = no }
+
+    combat_disengage_chance = 1.50
+
+    class = shipclass_military
+    construction_type = starbase_shipyard
+    required_component_set = "power_core"
+    required_component_set = "ftl_components"
+    required_component_set = "thruster_components"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+
+    resources = {
+        category = ships
+        cost = {
+            alloys = 60
+            unity = 60
+        }
+        upkeep = {
+            energy = @destroyer_upkeep_energy
+            alloys = @destroyer_upkeep_alloys
+            mult = 2
+        }
+    }
+    min_upgrade_cost = {
+        alloys = 2
+    }
+}
+
+elite_cruiser = {
+    entity = cruiser_entity
+    formation_priority = @cruiser_formation_priority
+    max_speed = @speed_default
+    acceleration = 0.25
+    rotation_speed = 0.175
+    collision_radius = 4
+    max_hitpoints = @cruiser_hp
+    modifier = {
+        ship_evasion_add = @cruiser_evasion
+        ship_piracy_suppression_add = 6
+        ship_hull_mult = 1
+        ship_shield_mult = 1
+        ship_armor_mult = 1
+        ship_weapon_damage = 0.4
+        ship_accuracy_add = 20
+        ship_tracking_add = 10
+    }
+    ship_modifier = {
+
+    }
+    size_multiplier = 4
+    hull_scale = 1.5
+    fleet_slot_size = 3
+    section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
+    num_target_locators = 4
+    is_space_station = no
+    icon = ship_size_military_4
+    class = shipclass_military
+    base_buildtime = @cruiser_build_time
+    can_have_federation_design = no
+    enable_default_design = yes
+    use_shipnames_from = cruiser
+
+    default_behavior = artillery
+
+    prerequisites = { "tech_cruisers" }
+    potential_country = { always = no }
+
+    combat_disengage_chance = 1.50
+
+    class = shipclass_military
+    construction_type = starbase_shipyard
+    required_component_set = "power_core"
+    required_component_set = "ftl_components"
+    required_component_set = "thruster_components"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+
+    resources = {
+        category = ships
+        cost = {
+            alloys = 120
+            unity = 120
+        }
+        upkeep = {
+            energy = @cruiser_upkeep_energy
+            alloys = @cruiser_upkeep_alloys
+            mult = 2
+        }
+    }
+
+    min_upgrade_cost = {
+        alloys = 4
+    }
+}
+
+elite_battleship = {
+    entity = battleship_entity
+    formation_priority = @battleship_formation_priority
+    max_speed = @speed_slow
+    acceleration = 0.2
+    rotation_speed = 0.15
+    collision_radius = 4.5
+    max_hitpoints = @battleship_hp
+    modifier = {
+        ship_evasion_add = @battleship_evasion
+        ship_piracy_suppression_add = 4
+        ship_hull_mult = 1
+        ship_shield_mult = 1
+        ship_armor_mult = 1
+        ship_weapon_range_mult = 0.4
+        ship_accuracy_add = 10
+        ship_tracking_add = 10
+    }
+    ship_modifier = {
+
+    }
+    size_multiplier = 8
+    hull_scale = 1.5
+    fleet_slot_size = 4
+    section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
+    num_target_locators = 4
+    is_space_station = no
+    icon = ship_size_military_8
+    base_buildtime = @battleship_build_time
+    can_have_federation_design = no
+    enable_default_design = yes
+    use_shipnames_from = battleship
+
+    default_behavior = artillery
+
+    prerequisites = { "tech_battleships" }
+    potential_country = { always = no }
+
+    combat_disengage_chance = 1.25
+
+    class = shipclass_military
+    construction_type = starbase_shipyard
+    required_component_set = "power_core"
+    required_component_set = "ftl_components"
+    required_component_set = "thruster_components"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+
+    resources = {
+        category = ships
+        cost = {
+            alloys = 240
+            unity = 240
+        }
+        upkeep = {
+            energy = @battleship_upkeep_energy
+            alloys = @battleship_upkeep_alloys
+            mult = 2
+        }
+    }
+
+    min_upgrade_cost = {
+        alloys = 8
+    }
 }

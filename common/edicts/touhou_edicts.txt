@@ -14,12 +14,7 @@ open_spell_cards_gui = {
 	icon = "GFX_edict_type_policy"
 	potential = {
 		any_owned_leader = {
-			OR = {
-				has_trait = leader_trait_invincible
-				has_trait = leader_trait_subconscious
-				has_trait = leader_trait_fall
-				has_trait = leader_trait_harvest
-			}
+			has_touhou_spell_trait = yes
 		}
 	}
 	resources = {

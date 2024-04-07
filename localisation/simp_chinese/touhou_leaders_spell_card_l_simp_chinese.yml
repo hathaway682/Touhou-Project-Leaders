@@ -142,7 +142,7 @@
  concept_huuin:0 "封印"
  concept_huuin_desc:0 "被§H$NAME_Reimu$§!的能力所§Y封印§!的舰队会将§Y亚光速航速§!和§Y跃迁引擎范围§!降低至最低，大幅提高§Y超空间跳跃冷却§!和§Y跃迁引擎冷却§!，使得该舰队丧失机动能力。"
 
- touhou_selected_char_2_desc:0 "可用符卡：\n§Y恋符「Master Spark」（1）§! §H魔炮「Final Spark」（4）§!\n§Y魔符「Stardust Reverie」（2）§! §H黑魔「Event Horizon」（3）§!\n§Y仪符「Orrery's Sun」（2）§! §H天仪「Orrery's Solar System」（3）§!\n§Y魔空「Asteroid Belt」（2）§!\n§Y魔废「Deep Ecological Bomb」（4）§!\n§Y彗星「Blazing Star」（5）§!"
+ touhou_selected_char_2_desc:0 "可用符卡：\n§Y恋符「Master Spark」（1）§! §H魔炮「Final Spark」（4）§!\n§Y魔符「Stardust Reverie」（2）§! §H黑魔「Event Horizon」（3）§!\n§Y仪符「Orrery's Sun」（2）§! §H天仪「Orrery's Solar System」（3）§!\n§Y魔空「Asteroid Belt」（4）§!\n§Y魔废「Deep Ecological Bomb」（4）§!\n§Y彗星「Blazing Star」（5）§!"
 
  spell_card_marisa_group:0 "[GetSelectedCardMarisa]"
  spell_card_marisa_tooltip:0 "[GetSelectedCardMarisaDesc]"
@@ -170,6 +170,8 @@
  marisa_cannon_plural: "浮游炮（X）"
  marisa_cannon_titanic: "浮游炮（T）"
  marisa_cannon_titanic_plural: "浮游炮（T）"
+ MARISA_CANNON_CORE: "浮游炮核心"
+ MARISA_CANNON_TITANIC_CORE: "离子加农核心"
  marisa_asteroid: "小行星"
  marisa_asteroid_plural: "小行星"
  NAME_Controlled_Asteroid: "受控小行星"
@@ -194,10 +196,13 @@
  opinion_polluted_a_primitive_world: "污染了一个前超光速星球"
  opinion_polluted_a_primitive_world_phile: "$opinion_cracked_a_primitive_world_phile$"
 
- toxic_spehre: "被毒害的巨构"
- toxic_spehre_desc: "这个巨型结构内部的大气如今拥有强烈的毒性，这使得它不再适合居住。"
+ toxic_habitat_marisa: "被毒害的居住站"
+ toxic_habitat_marisa_desc: "这个居住站内部的大气如今拥有强烈的毒性，这使得它不再适合居住。"
  paradisiacal_habitat_marisa: "$paradisiacal_habitat$"
  paradisiacal_habitat_marisa_desc: "$paradisiacal_habitat_desc$"
+
+ d_infestation_marisa: "剧毒废土"
+ d_infestation_marisa_desc: "这片土地已被毒性极强的废弃物覆盖，要想重新开发利用这里，必须先清理掉这些废弃物。"
 
  NAME_Master_Spark:0 "恋符「Master Spark」"
  NAME_Final_Spark:0 "魔炮「Final Spark」"

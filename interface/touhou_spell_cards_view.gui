@@ -247,7 +247,6 @@ guiTypes = {
             size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
-            alwaysTransparent = yes
             effect = touhou_reimu_spell_card_text
         }
 
@@ -264,6 +263,33 @@ guiTypes = {
             orientation = upper_right
         }
 
+        ###魔理沙
+        effectButtonType = {
+            name = "touhou_select_spell_text_marisa"
+            quadTextureSprite = "GFX_black_box_bg"
+            buttonText = "spell_card_marisa_group"
+            buttonFont = "malgun_goth_24"
+            position = { x = 48 y = 120 }
+            size = { width = 274 height = 38 }
+            format = center
+            vertical_alignment = center
+            effect = touhou_marisa_spell_card_text
+        }
+
+        effectButtonType = {
+            name = "touhou_confirm_button_marisa"
+            quadTextureSprite = "GFX_standard_button_172_34"
+            position = { x = -192 y = 154 }
+            buttonText = "spell_card_marisa_requirement"
+            buttonFont = "malgun_goth_24"
+            size = { width = 116 height = 38 }
+            format = center
+            vertical_alignment = center
+            effect = touhou_marisa_spell_card_effect
+            orientation = upper_right
+        }
+
+
         ###静叶
         effectButtonType = {
             name = "touhou_select_spell_text_sizuha"
@@ -274,7 +300,6 @@ guiTypes = {
             size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
-            alwaysTransparent = yes
             effect = touhou_sizuha_spell_card_effect
         }
 
@@ -301,7 +326,6 @@ guiTypes = {
             size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
-            alwaysTransparent = yes
             effect = touhou_minoriko_spell_card_effect
         }
 
@@ -328,7 +352,6 @@ guiTypes = {
             size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
-            alwaysTransparent = yes
             effect = touhou_koishi_spell_card_text
         }
 
@@ -355,7 +378,6 @@ guiTypes = {
             size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
-            alwaysTransparent = yes
             effect = touhou_none_spell_card_text
         }
 

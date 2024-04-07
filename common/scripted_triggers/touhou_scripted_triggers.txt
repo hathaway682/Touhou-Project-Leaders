@@ -514,3 +514,53 @@ sector_leader_has_trait = {
 		}
 	}
 }
+
+did_not_select_spell_leader = {
+	NOR = {
+		AND = {
+			check_variable = {
+				which = seleted_char_id
+				value = 1
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_fly
+			}
+		}
+		AND = {
+			check_variable = {
+				which = seleted_char_id
+				value = 2
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_magic
+			}
+		}
+		AND = {
+			check_variable = {
+				which = seleted_char_id
+				value = 35
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_fall
+			}
+		}
+		AND = {
+			check_variable = {
+				which = seleted_char_id
+				value = 36
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_harvest
+			}
+		}
+		AND = {
+			check_variable = {
+				which = seleted_char_id
+				value = 52
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_subconscious
+			}
+		}
+	}
+}

@@ -143,6 +143,36 @@ touhou_ex_charge_effect = {
 							value = 1
 						}
 					}
+					AND = {
+						check_variable = {
+							which = seleted_char_id
+							value = 2
+						}
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+					}
+					AND = {
+						check_variable = {
+							which = seleted_char_id
+							value = 2
+						}
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+					}
+					AND = {
+						check_variable = {
+							which = seleted_char_id
+							value = 2
+						}
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
+					}
 				}
 			}
 		}
@@ -177,22 +207,7 @@ touhou_ex_charge_cancel_effect = {
 		}
 	}
 	allow = {
-		hidden_trigger = {
-			from = {
-				OR = {
-					AND = {
-						check_variable = {
-							which = seleted_char_id
-							value = 1
-						}
-						check_variable = {
-							which = seleted_card_id
-							value = 1
-						}
-					}
-				}
-			}
-		}
+		always = yes
 	}
 
 	effect = {
@@ -402,11 +417,6 @@ touhou_reimu_spell_card_effect = {
 
 	effect = {
 		hidden_effect = {
-			from = {
-				country_event = {
-					id = touhou_paragon_spell.10000
-				}
-			}
 			if = {
 				limit = {
 					From = {
@@ -491,6 +501,11 @@ touhou_reimu_spell_card_effect = {
 					}
 				}
 				reimu_spell_card_6_effect = yes
+			}
+			from = {
+				country_event = {
+					id = touhou_paragon_spell.10000
+				}
 			}
 		}
 	}
@@ -590,11 +605,6 @@ touhou_koishi_spell_card_effect = {
 
 	effect = {
 		hidden_effect = {
-			from = {
-				country_event = {
-					id = touhou_paragon_spell.10000
-				}
-			}
 			if = {
 				limit = {
 					From = {
@@ -638,6 +648,11 @@ touhou_koishi_spell_card_effect = {
 					}
 				}
 				koishi_spell_card_4_effect = yes
+			}
+			from = {
+				country_event = {
+					id = touhou_paragon_spell.10000
+				}
 			}
 		}
 	}
@@ -711,11 +726,6 @@ touhou_sizuha_spell_card_effect = {
 
 	effect = {
 		hidden_effect = {
-			from = {
-				country_event = {
-					id = touhou_paragon_spell.10000
-				}
-			}
 			if = {
 				limit = {
 					From = {
@@ -737,6 +747,11 @@ touhou_sizuha_spell_card_effect = {
 					}
 				}
 				sizuha_spell_card_2_effect = yes
+			}
+			from = {
+				country_event = {
+					id = touhou_paragon_spell.10000
+				}
 			}
 		}
 	}
@@ -805,6 +820,11 @@ touhou_minoriko_spell_card_effect = {
 					minoriko_card_2_trigger = yes
 				}
 			}
+			from = {
+				country_event = {
+					id = touhou_paragon_spell.10000
+				}
+			}
 		}
 	}
 
@@ -841,47 +861,299 @@ touhou_minoriko_spell_card_effect = {
 	}
 }
 
+touhou_marisa_spell_card_text = {
+	potential = {
+		from = {
+			check_variable = {
+				which = seleted_char_id
+				value = 2
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_magic
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = spell_card_marisa_tooltip
+	}
+}
+
+touhou_marisa_spell_card_effect = {
+	potential = {
+		from = {
+			check_variable = {
+				which = seleted_char_id
+				value = 2
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_magic
+			}
+		}
+	}
+	allow = {
+		hidden_trigger = {
+			OR = {
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						OR = {
+							AND = {
+								resource_stockpile_compare = {
+									resource = thl_bomb
+									value >= 1
+								}
+								check_variable = {
+									which = ex_charge
+									value = 0
+								}
+							}
+							resource_stockpile_compare = {
+								resource = thl_bomb
+								value >= 4
+							}
+						}
+					}
+					marisa_card_1_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+						OR = {
+							AND = {
+								resource_stockpile_compare = {
+									resource = thl_bomb
+									value >= 2
+								}
+								check_variable = {
+									which = ex_charge
+									value = 0
+								}
+							}
+							resource_stockpile_compare = {
+								resource = thl_bomb
+								value >= 3
+							}
+						}
+					}
+					marisa_card_2_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
+						OR = {
+							AND = {
+								resource_stockpile_compare = {
+									resource = thl_bomb
+									value >= 2
+								}
+								check_variable = {
+									which = ex_charge
+									value = 0
+								}
+							}
+							resource_stockpile_compare = {
+								resource = thl_bomb
+								value >= 3
+							}
+						}
+					}
+					marisa_card_3_trigger = yes
+					marisa_card_3_trigger_country = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 4
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 4
+						}
+					}
+					marisa_card_4_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 5
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 4
+						}
+					}
+					marisa_card_5_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 6
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value >= 5
+						}
+					}
+					marisa_card_6_trigger = yes
+				}
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						check_variable = {
+							which = ex_charge
+							value = 0
+						}
+					}
+				}
+				marisa_spell_card_1_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						check_variable = {
+							which = ex_charge
+							value = 1
+						}
+					}
+				}
+				marisa_spell_card_1_ex_effect = yes
+			}
+			if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+						check_variable = {
+							which = ex_charge
+							value = 0
+						}
+					}
+				}
+				marisa_spell_card_2_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+						check_variable = {
+							which = ex_charge
+							value = 1
+						}
+					}
+				}
+				marisa_spell_card_2_ex_effect = yes
+			}
+			if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
+						check_variable = {
+							which = ex_charge
+							value = 0
+						}
+					}
+				}
+				marisa_spell_card_3_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
+						check_variable = {
+							which = ex_charge
+							value = 1
+						}
+					}
+				}
+				marisa_spell_card_3_ex_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 4
+						}
+					}
+				}
+				marisa_spell_card_4_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 5
+						}
+					}
+				}
+				marisa_spell_card_5_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 6
+						}
+					}
+				}
+				marisa_spell_card_6_effect = yes
+			}
+			from = {
+				country_event = {
+					id = touhou_paragon_spell.10000
+				}
+			}
+		}
+	}
+}
+
 touhou_none_spell_card_text = {
 	potential = {
 		from = {
-			NOR = {
-				AND = {
-					check_variable = {
-						which = seleted_char_id
-						value = 1
-					}
-					any_owned_leader = {
-						has_trait = leader_trait_fly
-					}
-				}
-				AND = {
-					check_variable = {
-						which = seleted_char_id
-						value = 35
-					}
-					any_owned_leader = {
-						has_trait = leader_trait_fall
-					}
-				}
-				AND = {
-					check_variable = {
-						which = seleted_char_id
-						value = 36
-					}
-					any_owned_leader = {
-						has_trait = leader_trait_harvest
-					}
-				}
-				AND = {
-					check_variable = {
-						which = seleted_char_id
-						value = 52
-					}
-					any_owned_leader = {
-						has_trait = leader_trait_subconscious
-					}
-				}
-			}
+			did_not_select_spell_leader = yes
 		}
 	}
 	allow = {
@@ -896,44 +1168,7 @@ touhou_none_spell_card_text = {
 touhou_none_spell_card_effect = {
 	potential = {
 		from = {
-			NOR = {
-				AND = {
-					check_variable = {
-						which = seleted_char_id
-						value = 1
-					}
-					any_owned_leader = {
-						has_trait = leader_trait_fly
-					}
-				}
-				AND = {
-					check_variable = {
-						which = seleted_char_id
-						value = 35
-					}
-					any_owned_leader = {
-						has_trait = leader_trait_fall
-					}
-				}
-				AND = {
-					check_variable = {
-						which = seleted_char_id
-						value = 36
-					}
-					any_owned_leader = {
-						has_trait = leader_trait_harvest
-					}
-				}
-				AND = {
-					check_variable = {
-						which = seleted_char_id
-						value = 52
-					}
-					any_owned_leader = {
-						has_trait = leader_trait_subconscious
-					}
-				}
-			}
+			did_not_select_spell_leader = yes
 		}
 	}
 	allow = {

@@ -360,7 +360,7 @@ weapon_component_template = {
 
 	windup = { min = 160.0 max = 200.0 }
 
-	range = 250
+	range = 1000
 
 	accuracy = 0.95
 	tracking = 0.25
@@ -474,7 +474,7 @@ weapon_component_template = {
 
 	windup = { min = 280.0 max = 320.0 }
 
-	range = 250
+	range = 1000
 
 	accuracy = 0.95
 	tracking = 0.25
