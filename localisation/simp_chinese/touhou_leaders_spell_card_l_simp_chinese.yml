@@ -162,7 +162,7 @@
  spell_card_marisa_4:0 "魔空「Asteroid Belt」"
  spell_card_marisa_4_desc:0 "COST：§Y4§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的§Y小行星§!。\n\n控制§Y小行星§!的魔法，目标小行星将成为能够用于撞击星球表面的§Y一次性武器§!，撞击将彻底毁灭行星地表，使其成为一个§P熔岩星球§!，如果星球为§Y巨型结构§!，则会直接将其摧毁。"
  spell_card_marisa_5:0 "魔废「Deep Ecological Bomb」"
- spell_card_marisa_5_desc:0 "COST：§Y4§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系，且正在被我方轰炸的敌方§Y殖民地§!。\n\n向星球上倾泻实验产生的§M魔法废物§!，会发生什么连魔理沙自己都不知道，这是极不道德的行为，会损害其他国家对我们的£opinion£§Y评价§!。"
+ spell_card_marisa_5_desc:0 "COST：§Y4§!\n目标：任意§H$NAME_Marisa$§!正在被我方轰炸的敌方§Y殖民地§!。\n\n向星球上倾泻实验产生的§M魔法废物§!，会发生什么连魔理沙自己都不知道，这是极不道德的行为，会损害其他国家对我们的£opinion£§Y评价§!。"
  spell_card_marisa_6:0 "彗星「Blazing Star」"
  spell_card_marisa_6_desc:0 "COST：§Y5§!\n条件：§H$NAME_Marisa$§!正在指挥舰队或运输船队。\n\n化身巨大的彗星进行突击，为魔理沙的舰队提高§G900%§!的§Y亚光速航速§!和§Y舰船武器射速§!，降低§G90%§!的§Y超空间航行冷却§!并提高§G90§!的§Y闪避§!，持续§G180§!天。"
 
@@ -187,6 +187,17 @@
  opinion_asteroid_impected_a_world: "使用小行星撞击了星球"
  opinion_asteroid_impected_a_primitive_world: "使用小行星撞击了一个前超光速星球"
  opinion_asteroid_impected_a_primitive_world_phile: "$opinion_cracked_a_primitive_world_phile$"
+ opinion_polluted_my_uninhabited_world: "污染了我们的未殖民的行星"
+ opinion_polluted_an_uninhabited_world: "污染了一颗未殖民的行星"
+ opinion_polluted_my_world: "污染了我们的星球"
+ opinion_polluted_a_world: "污染了星球"
+ opinion_polluted_a_primitive_world: "污染了一个前超光速星球"
+ opinion_polluted_a_primitive_world_phile: "$opinion_cracked_a_primitive_world_phile$"
+
+ toxic_spehre: "被毒害的巨构"
+ toxic_spehre_desc: "这个巨型结构内部的大气如今拥有强烈的毒性，这使得它不再适合居住。"
+ paradisiacal_habitat_marisa: "$paradisiacal_habitat$"
+ paradisiacal_habitat_marisa_desc: "$paradisiacal_habitat_desc$"
 
  NAME_Master_Spark:0 "恋符「Master Spark」"
  NAME_Final_Spark:0 "魔炮「Final Spark」"

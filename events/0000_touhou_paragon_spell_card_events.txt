@@ -476,3 +476,1696 @@ planet_event = {
         remove_planet_flag = asteroid_impected
     }
 }
+
+#废料倾泻
+planet_event = {
+    id = touhou_paragon_spell.100
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                exists = owner
+                owner = {
+                    NOT = { is_same_value = from }
+                    OR = {
+                        is_country_type = default
+                        is_country_type = fallen_empire
+                        is_country_type = awakened_fallen_empire
+                    }
+                }
+            }
+            # Generate threat
+            if = {
+                limit = {
+                    is_colony = yes
+                }
+                add_threat = { who = from amount = 3 }
+                # modifier for allies + those upset by genocide
+                every_country = {
+                    limit = {
+                        NOR = {
+                            is_same_value = from
+                            is_same_value = root.owner
+                            AND = {
+                                has_federation = yes
+                                is_in_federation_with = from
+                            }
+                        }
+                        OR = {
+                            has_communications = from
+                            has_communications = root.owner
+                        }
+                        OR = {
+                            AND = {
+                                has_federation = yes
+                                is_in_federation_with = root.owner
+                            }
+                            has_ai_personality = awakened_fallen_empire_xenophile
+                            AND = {
+                                is_country_type = default
+                                OR = {
+                                    is_egalitarian = yes
+                                    is_xenophile = yes
+                                }
+                            }
+                        }
+                    }
+                    if = {
+                        limit = { root = { is_colony = no } }
+                        add_opinion_modifier = {
+                            modifier = opinion_asteroid_impected_an_uninhabited_world
+                            who = from
+                        }
+                    }
+                    else = {
+                        add_opinion_modifier = {
+                            modifier = opinion_asteroid_impected_a_world
+                            who = from
+                        }
+                    }
+                }
+            }
+            else = {
+                add_threat = { who = from amount = 1 }
+            }
+            # modifiers for victim
+            owner = {
+                if = {
+                    limit = { root = { is_colony = no } }
+                    add_opinion_modifier = {
+                        modifier = opinion_polluted_my_uninhabited_world
+                        who = from
+                    }
+                }
+                else = {
+                    add_opinion_modifier = {
+                        modifier = opinion_polluted_my_world
+                        who = from
+                    }
+                }
+                if = {
+                    limit = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+                    add_modifier = {
+                        modifier = colossus_victim
+                        days = 10800 # 30 years
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    exists = owner
+                    owner = { is_country_type = primitive }
+                }
+                # modifier for allies + those upset by genocide
+                every_country = {
+                    limit = {
+                        NOT = { is_same_value = from }
+                        OR = {
+                            has_communications = from
+                            has_communications = root.owner
+                        }
+                        OR = {
+                            has_ai_personality = awakened_fallen_empire_xenophile
+                            AND = {
+                                is_country_type = default
+                                NOR = {
+                                    is_xenophobe = yes
+                                    is_homicidal = yes
+                                    is_xenophile = yes
+                                }
+                            }
+                        }
+                    }
+                    add_opinion_modifier = {
+                        modifier = opinion_polluted_a_primitive_world
+                        who = from
+                    }
+                }
+                every_country = {
+                    limit = {
+                        NOT = { is_same_value = from }
+                        OR = {
+                            has_communications = from
+                            has_communications = root.owner
+                        }
+                        OR = {
+                            has_ai_personality = awakened_fallen_empire_xenophile
+                            AND = {
+                                is_country_type = default
+                                is_xenophile = yes
+                            }
+                        }
+                    }
+                    add_opinion_modifier = {
+                        modifier = opinion_polluted_a_primitive_world_phile
+                        who = from
+                    }
+                }
+            }
+        }
+        # Add war exhaustion to planet owner
+        if = {
+            limit = {
+                exists = owner
+            }
+            owner = {
+                if = {
+                    limit = { #isn't the case when the crisis bombards planets, for instance
+                        is_at_war_with = from
+                    }
+                    add_static_war_exhaustion = {
+                        attacker = from
+                        location = root
+                        value_for_planet_destruction = 1.0
+                    }
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.101
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.101.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.201
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.201.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        every_owned_pop = {
+            kill_pop = yes
+        }
+        if = {
+            limit = {
+                exists = orbital_defence
+            }
+            destroy_fleet = orbital_defence
+        }
+        remove_all_buildings = yes
+        remove_all_districts = yes
+        if = {
+            limit = {
+                is_artificial = no
+            }
+            change_pc = pc_toxic
+            add_modifier = {
+                modifier = toxic_terraforming_candidate
+            }
+            reroll_deposits = yes
+        }
+        else = {
+            add_modifier = {
+                modifier = toxic_spehre
+                days = 10800
+            }
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.102
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.102.desc
+        trigger = {
+            from = {
+                is_artificial = no
+            }
+        }
+    }
+    desc = {
+        text = touhou_paragon_spell.102.artifical.desc
+        trigger = {
+            from = {
+                is_artificial = no
+            }
+        }
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.202
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.202.desc
+        trigger = {
+            is_artificial = no
+        }
+    }
+    desc = {
+        text = touhou_paragon_spell.202.artifical.desc
+        trigger = {
+            is_artificial = yes
+        }
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                is_artificial = yes
+            }
+            every_owned_pop = {
+                kill_pop = yes
+            }
+            remove_all_buildings = yes
+            remove_all_districts = yes
+            if = {
+                limit = {
+                    is_planet_class = pc_ringworld_habitable
+                }
+                change_pc = pc_ringworld_habitable_damaged
+                spawn_ringworld_cracker_effect = yes
+            }
+            else_if = {
+                limit = {
+                    is_planet_class = pc_habitat
+                }
+                spawn_habitat_cracker_effect = yes
+            }
+            else = {
+                remove_planet = yes
+            }
+        }
+        else = {
+            if = {
+                limit = {
+                    num_pops > 40
+                }
+                while = {
+                    count = 16
+                    random_owned_pop = {
+                        kill_pop = yes
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    num_pops > 30
+                }
+                while = {
+                    count = 8
+                    random_owned_pop = {
+                        kill_pop = yes
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    num_pops > 20
+                }
+                while = {
+                    count = 4
+                    random_owned_pop = {
+                        kill_pop = yes
+                    }
+                }
+            }
+            else = {
+                while = {
+                    count = 2
+                    random_owned_pop = {
+                        kill_pop = yes
+                    }
+                }
+            }
+            ruin_building = random_no_capital
+            ruin_building = random_no_capital
+            ruin_building = random_no_capital
+            remove_district = district_farming
+            remove_district = district_farming_uncapped
+            remove_district = district_mining
+            remove_district = district_mining_uncapped
+            remove_district = district_generator
+            remove_district = district_generator_uncapped
+            remove_district = district_city
+            remove_district = district_industrial
+            remove_district = district_arcology_civilian_industry
+            remove_district = district_arcology_administrative
+            remove_district = district_arcology_arms_industry
+            remove_district = district_arcology_housing
+            remove_district = district_arcology_leisure
+            remove_district = district_arcology_organic_housing
+            remove_district = district_arcology_religious
+            add_blocker = {
+                type = d_fungoid_extermination
+            }
+            add_blocker = {
+                type = d_fungoid_extermination
+            }
+            add_blocker = {
+                type = d_fungoid_extermination
+            }
+            add_blocker = {
+                type = d_fungoid_extermination
+            }
+            add_blocker = {
+                type = d_fungoid_extermination
+            }
+            add_planet_devastation = 75
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.103
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.103.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.203
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.203.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        create_army = {
+            name = "NAME_Deformed_Creatures"
+            owner = from
+            type = "mutant_army"
+        }
+        create_army = {
+            name = "NAME_Twisted_Beasts"
+            owner = from
+            type = "mutant_army"
+        }
+        create_army = {
+            name = "NAME_Mutated_Horrors"
+            owner = from
+            type = "mutant_army"
+        }
+        every_owned_pop = {
+            random_list = {
+                9 = {}
+                1 = {
+                    planet = {
+                        create_army = {
+                            type = mutant_army
+                            owner = from
+                        }
+                    }
+                    kill_pop = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.104
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.104.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.204
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.204.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        create_country = {
+            name = "NAME_Deformed_Creatures"
+            type = faction
+            auto_delete = yes
+            flag = {
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                establish_communications_no_message = root.owner
+                establish_contact = { who = root.owner location = root.solar_system }
+                establish_communications_no_message = from
+                establish_contact = { who = from location = root.solar_system }
+            }
+        }
+        create_army = {
+            name = "NAME_Deformed_Creatures"
+            owner = last_created_country
+            type = "mutant_army"
+        }
+        create_army = {
+            name = "NAME_Twisted_Beasts"
+            owner = last_created_country
+            type = "mutant_army"
+        }
+        create_army = {
+            name = "NAME_Mutated_Horrors"
+            owner = last_created_country
+            type = "mutant_army"
+        }
+        every_owned_pop = {
+            random_list = {
+                9 = {}
+                1 = {
+                    planet = {
+                        create_army = {
+                            type = mutant_army
+                            owner = last_created_country
+                        }
+                    }
+                    kill_pop = yes
+                }
+            }
+        }
+        set_planet_flag = terraforming_mutants_invade_planet
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.105
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.105.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.205
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.204.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        create_army = {
+            name = "NAME_Deformed_Creatures"
+            owner = root.owner
+            type = "mutant_army"
+        }
+        create_army = {
+            name = "NAME_Twisted_Beasts"
+            owner = root.owner
+            type = "mutant_army"
+        }
+        create_army = {
+            name = "NAME_Mutated_Horrors"
+            owner = root.owner
+            type = "mutant_army"
+        }
+        every_owned_pop = {
+            random_list = {
+                9 = {}
+                1 = {
+                    planet = {
+                        create_army = {
+                            type = mutant_army
+                            owner = root.owner
+                        }
+                    }
+                    kill_pop = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.106
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.106.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.206
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.206.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        every_owned_pop = {
+            if = {
+                limit = {
+                    has_trait = trait_strong
+                }
+                modify_species = {
+                    remove_trait = trait_strong
+                }
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_trait = trait_very_strong
+                    }
+                }
+                modify_species = {
+                    add_trait = trait_very_strong
+                }
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_trait = trait_unruly
+                    }
+                }
+                modify_species = {
+                    add_trait = trait_unruly
+                }
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_trait = trait_quarrelsome
+                    }
+                }
+                modify_species = {
+                    add_trait = trait_quarrelsome
+                }
+            }
+            planet = {
+                create_army = {
+                    type = rebel_army
+                    owner = from
+                    species = prev.species
+                }
+            }
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.107
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.107.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.207
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.207.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        every_owned_pop = {
+            modify_species = {
+                portrait = random
+            }
+        }
+        last_created_species = {
+            mutate_species = yes
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.108
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.108.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.208
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.208.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        set_planet_flag = pre_ftl_default
+        random_owned_pop = {
+            save_event_target_as = new_pre_ftl_species
+        }
+        create_country = {
+            name = random
+            authority = random
+            day_zero_contact = no
+
+            civics = {
+                civic = civic_landed_nobility
+                civic = civic_flat_world_theory
+            }
+            species = event_target:new_pre_ftl_species
+            ethos = random
+            flag = {
+                icon = {
+                    category = "pre_ftl"
+                    file = "preftl_stone_age.dds"
+                }
+                background= {
+                    category = "backgrounds"
+                    file = "new_dawn.dds"
+                }
+                colors={
+                    "turquoise"
+                    "green"
+                    "null"
+                    "null"
+                }
+            }
+            origin = "origin_default"
+            type = primitive
+            effect = {
+                set_graphical_culture = preindustrial_01
+                set_country_flag = stone_age
+                set_pre_ftl_age = stone_age
+                change_government = {
+                    authority = random
+                    civics = {
+                        civic = civic_secret_of_fire
+                        civic = civic_the_wheel
+                    }
+                }
+            }
+        }
+        set_owner = last_created_country
+        set_capital = yes
+        remove_all_buildings = yes
+        remove_all_districts = yes
+        add_building = building_crude_huts
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.109
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.109.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.209
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.209.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        while = {
+            limit = {
+                any_owned_pop = {
+                    NOR = {
+                        has_trait = trait_mechanical
+                        has_trait = trait_machine_unit
+                    }
+                    is_sapient = yes
+                }
+            }
+            random_owned_pop = {
+                limit = {
+                    NOR = {
+                        has_trait = trait_mechanical
+                        has_trait = trait_machine_unit
+                    }
+                    is_sapient = yes
+                }
+                species = { save_event_target_as = species_target }
+                create_devolved_species = yes
+            }
+            every_owned_pop = {
+                limit = {
+                    NOR = {
+                        has_trait = trait_mechanical
+                        has_trait = trait_machine_unit
+                    }
+                    is_same_species = event_target:species_target
+                    is_sapient = yes
+                }
+                change_species = event_target:devolved_species_target
+            }
+        }
+
+        random_owned_pop = {
+            change_species = event_target:species_target
+        }
+        random_list = {
+            33 = {}
+            33 = {
+                random_owned_pop = {
+                    change_species = event_target:species_target
+                }
+            }
+            33 = {
+                random_owned_pop = {
+                    change_species = event_target:species_target
+                }
+                random_owned_pop = {
+                    change_species = event_target:species_target
+                }
+            }
+        }
+        planet = {
+            every_planet_army = {
+                limit = {
+                    OR = {
+                        army_type = occupation_army
+                        army_type = offspring_defense
+                        army_type = undead_defense_army
+                        army_type = fanatic_guardian
+                        army_type = defense_army
+                        army_type = assault_army
+                        army_type = slave_army
+                        army_type = clone_army
+                        army_type = psionic_army
+                        army_type = xenomorph_army
+                        army_type = gene_warrior_army
+                        army_type = undead_army
+                        army_type = rebel_army
+                        army_type = rebel_slave_defense_army
+                        army_type = primitive_army
+                        army_type = primitive_additional_army
+                        army_type = industrial_army
+                        army_type = postatomic_army
+                        army_type = subterranean_industrial_army
+                        army_type = subterranean_postatomic_army
+                        army_type = mutant_army
+                        army_type = swarm_army
+                        army_type = tree_army
+                        army_type = enraged_army
+                        army_type = ketling_army
+                        army_type = titanic_assault_army
+                        army_type = titanic_azizian_assault_army
+                        army_type = titanic_guardian_army
+                        army_type = imperial_legion
+                        army_type = giant_undead_army
+                        army_type = ice_army
+                        army_type = mercenary_army
+                        army_type = mecha_army
+                        army_type = subterranean_defense_army
+                        army_type = new_world_order_defensive_army
+                        army_type = new_world_order_offensive_army
+                        army_type = warpling_army
+                        army_type = flamestorm_troopers_army
+                    }
+                }
+                remove_army = yes
+            }
+            check_planet_employment = yes
+        }
+        # Special graphics for Habitats and Ring Worlds
+        if = {
+            limit = {
+                is_planet_class = pc_habitat
+            }
+            spawn_habitat_neutron_effect = yes
+        }
+        else_if = {
+            limit = {
+                is_planet_class = pc_ringworld_habitable
+            }
+            spawn_ringworld_neutron_effect = yes
+        }
+        else = {
+            change_pc = this
+        }
+        set_timed_planet_flag = {
+            flag = devolved_planet
+            days = 360
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.110
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.110.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.210
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.210.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_planet_devastation = 25
+        ruin_building = random_no_capital
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.111
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.111.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.211
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.211.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                is_artificial = yes
+            }
+            add_modifier = {
+                modifier = paradisiacal_habitat_marisa
+            }
+        }
+        else_if = {
+            limit = {
+                is_ideal = no
+            }
+            change_pc = pc_gaia
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.112
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.112.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.212
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.212.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        every_owned_pop = {
+            limit = {
+                NOT = { has_trait = trait_aquatic }
+            }
+            kill_pop = yes
+            from.owner = {
+                if = {
+                    limit = { has_ascension_perk = ap_become_the_crisis }
+                    complete_crisis_objective = crisobj_purge_pops
+                }
+            }
+        }
+        if = {
+            limit = {
+                is_artificial = yes
+            }
+            add_modifier = {
+                modifier = flooded_habitat
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = { is_planet_class = pc_broken }
+            }
+            change_pc = pc_ocean
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.113
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.113.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.213
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.213.desc
+        trigger = {
+            owner = {
+                is_spiritualist = no
+            }
+        }
+    }
+    desc = {
+        text = touhou_paragon_spell.213.desc.spi
+        trigger = {
+            owner = {
+                is_spiritualist = yes
+            }
+        }
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        every_owned_pop = {
+            limit = {
+                OR = {
+                    has_trait = trait_mechanical
+                    has_trait = trait_machine_unit
+                    has_trait = trait_hive_mind
+                    has_living_standard = { # Bio-trophies die without care
+                        country = root.owner
+                        type = living_standard_organic_trophy
+                    }
+                }
+            }
+            kill_pop = yes
+            from.owner = {
+                if = {
+                    limit = { has_ascension_perk = ap_become_the_crisis }
+                    complete_crisis_objective = crisobj_purge_pops
+                }
+            }
+        }
+        every_owned_pop = {
+            limit = {
+                NOR = {
+                    has_trait = trait_mechanical
+                    has_trait = trait_machine_unit
+                    has_trait = trait_hive_mind
+                    has_living_standard = {
+                        country = root.owner
+                        type = living_standard_organic_trophy
+                    }
+                }
+            }
+            pop_change_ethic = ethic_spiritualist
+        }
+        # Special graphics for Habitats and Ring Worlds
+        if = {
+            limit = {
+                is_planet_class = pc_habitat
+            }
+            spawn_habitat_divine_effect = yes
+        }
+        else_if = {
+            limit = {
+                is_planet_class = pc_ringworld_habitable
+            }
+            spawn_ringworld_divine_effect = yes
+        }
+        if = {
+            limit = {
+                OR = {
+                    is_planet_class = pc_habitat
+                    is_planet_class = pc_ringworld_habitable
+                }
+            }
+            # nothing
+        }
+        else = {
+            change_pc = this
+        }
+        add_modifier = {
+            modifier = god_rayed
+            days = 3600
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.114
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.114.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.214
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.214.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_modifier = {
+            modifier = atmospheric_aphrodisiac
+        }
+        if = {
+            limit = {
+                num_pops < 2
+            }
+            set_variable = {
+                which = pop_growth_number
+                value = 1
+            }
+        }
+        else_if = {
+            limit = {
+                num_pops > 2
+                num_pops < 6
+            }
+            set_variable = {
+                which = pop_growth_number
+                value = 2
+            }
+        }
+        else_if = {
+            limit = {
+                num_pops > 6
+            }
+            set_variable = {
+                which = pop_growth_number
+                value = 4
+            }
+        }
+        if = {
+            limit = {
+                num_species = 1
+            }
+            random_owned_pop = {
+                save_event_target_as = pop_growth_target
+            }
+            while = {
+                count = pop_growth_number
+                create_pop = {
+                    species = event_target:pop_growth_target
+                }
+            }
+        }
+        else = {
+            while = {
+                count = pop_growth_number
+                random_owned_pop = {
+                    save_event_target_as = pop_growth_target_1
+                }
+                random_owned_pop = {
+                    save_event_target_as = pop_growth_target_2
+                }
+                create_half_species = {
+                    species_one = event_target:pop_growth_target_1
+                    species_two = event_target:pop_growth_target_2
+                    country = root.owner
+                }
+                create_pop = {
+                    species = last_created_species
+                }
+            }
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.115
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.115.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.215
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.215.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_modifier = {
+            modifier = atmospheric_hallucinogen
+        }
+        add_modifier = {
+            modifier = crime_wave
+            days = 3600
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.116
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.116.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.216
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.216.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_modifier = {
+            modifier = titanic_life
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.117
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.117.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.217
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.217.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        create_species = {
+            name = "NAME_Titans"
+            class = random_non_machine
+            portrait = random
+            traits = {
+                trait = trait_very_strong
+            }
+        }
+        create_army = {
+            name = "NAME_Enraged_Guardian"
+            owner = from
+            species = last_created_species
+            type = "titanic_guardian_army"
+        }
+        create_army = {
+            name = "NAME_Enraged_Titan"
+            owner = from
+            species = last_created_species
+            type = titanic_guardian_army
+        }
+        create_army = {
+            name = "NAME_Enraged_Titan"
+            owner = from
+            species = last_created_species
+            type = titanic_guardian_army
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.118
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.118.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.218
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.218.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        create_country = {
+            name = "NAME_Titanic_Life"
+            type = faction
+            auto_delete = yes
+            flag = {
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                establish_communications_no_message = root.owner
+                establish_contact = { who = root.owner location = root.solar_system }
+                establish_communications_no_message = from
+                establish_contact = { who = from location = root.solar_system }
+            }
+        }
+        create_species = {
+            name = "NAME_Titans"
+            class = random_non_machine
+            portrait = random
+            traits = {
+                trait = trait_very_strong
+            }
+        }
+        create_army = {
+            name = "NAME_Enraged_Guardian"
+            owner = last_created_country
+            species = last_created_species
+            type = "titanic_guardian_army"
+        }
+        create_army = {
+            name = "NAME_Enraged_Titan"
+            owner = last_created_country
+            species = last_created_species
+            type = titanic_guardian_army
+        }
+        create_army = {
+            name = "NAME_Enraged_Titan"
+            owner = last_created_country
+            species = last_created_species
+            type = titanic_guardian_army
+        }
+        owner = {
+            set_country_flag = terraforming_mutants_invade_country
+        }
+        set_planet_flag = terraforming_mutants_invade_planet
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.119
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.119.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.219
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.219.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        create_species = {
+            name = "NAME_Titans"
+            class = random_non_machine
+            portrait = random
+            traits = {
+                trait = trait_very_strong
+            }
+        }
+        create_army = {
+            name = "NAME_Enraged_Guardian"
+            owner = root.owner
+            species = last_created_species
+            type = "titanic_guardian_army"
+        }
+        create_army = {
+            name = "NAME_Enraged_Titan"
+            owner = root.owner
+            species = last_created_species
+            type = titanic_guardian_army
+        }
+        create_army = {
+            name = "NAME_Enraged_Titan"
+            owner = root.owner
+            species = last_created_species
+            type = titanic_guardian_army
+        }
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}
+
+country_event = {
+    id = touhou_paragon_spell.120
+    title = "touhou_paragon_spell.101.name"
+    desc = {
+        text = touhou_paragon_spell.120.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+    location = FROM
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_spell.101.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.220
+    title = "touhou_paragon_spell.201.name"
+    desc = {
+        text = touhou_paragon_spell.220.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    immediate = {
+        create_country = {
+            name = "NAME_Deformed_Mushroom"
+            type = faction
+            auto_delete = yes
+            effect = {
+                establish_communications_no_message = root
+            }
+        }
+        create_army = {
+            name = "NAME_Deformed_Mushroom"
+            owner = last_created_country
+            type = deformed_mushroom
+        }
+        owner = {
+            set_country_flag = terraforming_mutants_invade_country
+        }
+        set_planet_flag = terraforming_mutants_invade_planet
+    }
+
+    option = {
+        name = touhou_paragon_spell.201.a
+    }
+}

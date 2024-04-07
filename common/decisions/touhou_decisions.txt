@@ -1569,6 +1569,7 @@ decision_sakura_tree = {
 				has_trait = leader_trait_sakura
 			}
 		}
+		is_wet = yes
 	}
 
 

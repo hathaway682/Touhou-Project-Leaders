@@ -6,32 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e7784210-dd34-44ca-b26b-8f8bd35035ab" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/armies/touhou_leader_armies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/armies/touhou_leader_armies.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/button_effects/touhou_button_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/button_effects/touhou_button_effects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/component_sets/weapons_touhou_leaders.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/component_sets/weapons_touhou_leaders.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/component_templates/touhou_special_weapons.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/component_templates/touhou_special_weapons.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/component_templates/touhou_starbase_building_auras.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/component_templates/touhou_starbase_building_auras.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/decisions/touhou_decisions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/decisions/touhou_decisions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/edicts/touhou_edicts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/edicts/touhou_edicts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/game_concepts/touhou_concepts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/game_concepts/touhou_concepts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/game_rules/touhou_leader_rules.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/game_rules/touhou_leader_rules.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/global_ship_designs/special_leader_ships.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/global_ship_designs/special_leader_ships.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/global_ship_designs/spell_card_designs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/global_ship_designs/spell_card_designs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/megastructures/touhou_gateways.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/megastructures/touhou_gateways.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/on_actions/touhou_on_actions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/on_actions/touhou_on_actions.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/opinion_modifiers/touhou_opinion_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/opinion_modifiers/touhou_opinion_modifiers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/script_values/script_values_touhou_leaders.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/script_values/script_values_touhou_leaders.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_effects/touhou_spell_card_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/touhou_spell_card_effects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_paragon.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_paragon.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_spells.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_spells.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_triggers/touhou_scripted_triggers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_triggers/touhou_scripted_triggers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_triggers/touhou_spell_cards_triggers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_triggers/touhou_spell_cards_triggers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/section_templates/special_leader_ships.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/section_templates/special_leader_ships.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/section_templates/spell_card.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/section_templates/spell_card.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/ship_sizes/special_leader_ships.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/ship_sizes/special_leader_ships.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/policies/touhou_policies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/policies/touhou_policies.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/static_modifiers/touhou_static_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/static_modifiers/touhou_static_modifiers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/technology/00_touhou_leaders_tech.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/technology/00_touhou_leaders_tech.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/descriptor.mod" beforeDir="false" afterPath="$PROJECT_DIR$/descriptor.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_spell_card_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_spell_card_events.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_l_simp_chinese.yml" afterDir="false" />
