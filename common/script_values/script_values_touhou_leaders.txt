@@ -250,6 +250,14 @@ touhou_leader_id = {
 		has_trait = leader_trait_distance
 	}
 	modifier = {
+		add = 35
+		has_trait = leader_trait_fall
+	}
+	modifier = {
+		add = 36
+		has_trait = leader_trait_harvest
+	}
+	modifier = {
 		add = 38
 		has_trait = leader_trait_water
 	}
@@ -299,6 +307,14 @@ leader_num_spell_cards = {
 		add = 4
 		has_trait = leader_trait_subconscious
 	}
+	modifier = {
+		add = 2
+		has_trait = leader_trait_fall
+	}
+	modifier = {
+		add = 2
+		has_trait = leader_trait_harvest
+	}
 }
 
 mana_need_per_bomb = {
@@ -311,4 +327,17 @@ mana_need_per_bomb = {
 		mode = add
 	}
 	multiply = 10
+}
+
+num_spell_card_leaders = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				has_touhou_spell_trait = yes
+			}
+		}
+		mode = add
+	}
 }

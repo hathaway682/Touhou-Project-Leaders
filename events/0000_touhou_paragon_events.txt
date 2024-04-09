@@ -3805,7 +3805,7 @@ country_event = { # 荷取
 	}
 }
 
-country_event = { # 荷取
+country_event = { # 静叶
 	id = touhou_paragon.42800
 	title = "touhou_paragon.42800.name"
 	desc = "touhou_paragon.42800.desc"
@@ -3820,19 +3820,23 @@ country_event = { # 荷取
 	immediate = {
 		ethic_leader_creator = {
 			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x125
+			LEADER_PORTRAIT = x73
 			CLASS = commander
 			NAME = NAME_Sizuha
-			LEVEL = 3
+			LEVEL = 1
 			GENDER = female
 			IMMORTAL = no
-			ETHIC = materialist
+			ETHIC = pacifist
 			DESC = sizuha1
 			CATCH_PHRASE =  sizuha1_catch_phrase
 		}
-		last_created_leader = { #4
+		last_created_leader = { #2
 			add_trait = subclass_commander_governor
-			add_trait = leader_trait_
+			add_trait = leader_trait_fall
+			add_trait = leader_trait_touhou_totalitarian
+			add_trait = leader_trait_juryrigger
+			add_trait = leader_trait_regeneration_2
+			add_trait = leader_trait_micromanager
 		}
 	}
 
@@ -3845,62 +3849,57 @@ country_event = { # 荷取
 		name = DISMISS
 		tag = dismiss_leader
 		hidden_effect = {
-			remove_global_flag = nitori # Put this leader back into the pool, so player could still get him
+			remove_global_flag = sizuha # Put this leader back into the pool, so player could still get him
 			ethic_leader_kill_effect = yes
-			set_country_flag = dismissed_nitori
+			set_country_flag = dismissed_sizuha
 		}
 	}
 	option = {
-		name = touhou_paragon.42700.a
-		response_text = touhou_paragon.42700.a.response
+		name = touhou_paragon.42800.a
+		response_text = touhou_paragon.42800.a.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = touhou_paragon.42700.b
-		response_text = touhou_paragon.42700.b.response
+		name = touhou_paragon.42800.b
+		response_text = touhou_paragon.42800.b.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = touhou_paragon.42700.c
-		response_text = touhou_paragon.42700.c.response
+		name = touhou_paragon.42800.c
+		response_text = touhou_paragon.42800.c.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = touhou_paragon.42700.d
-		response_text = touhou_paragon.42700.d.response
+		name = touhou_paragon.42800.d
+		response_text = touhou_paragon.42800.d.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = touhou_paragon.42700.e
-		response_text = touhou_paragon.42700.e.response
+		name = touhou_paragon.42800.e
+		response_text = touhou_paragon.42800.e.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = touhou_paragon.42700.f
-		response_text = touhou_paragon.42700.f.response
+		name = touhou_paragon.42800.f
+		response_text = touhou_paragon.42800.f.response
 		is_dialog_only = yes
 	}
-	#option = {
-	#	name = touhou_paragon.42700.g
-	#	response_text = touhou_paragon.42700.g.response
-	#	is_dialog_only = yes
-	#}
 	option = {
 		name = HIRE
 		tag = hire_leader
-		custom_tooltip = touhou_paragon.42700.hire_custom_tooltip
+		custom_tooltip = touhou_paragon.42800.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_nitori
+				GLOBAL_EVENT_TARGET = renowned_sizuha
 			}
 		}
 	}
 }
 
-country_event = { # 荷取
-	id = touhou_paragon.42700
-	title = "touhou_paragon.42700.name"
-	desc = "touhou_paragon.42700.desc"
+country_event = { # 穰子
+	id = touhou_paragon.42900
+	title = "touhou_paragon.42900.name"
+	desc = "touhou_paragon.42900.desc"
 	show_sound = event_psionic
 	is_triggered_only = yes
 
@@ -3912,27 +3911,23 @@ country_event = { # 荷取
 	immediate = {
 		ethic_leader_creator = {
 			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x125
-			CLASS = scientist
-			NAME = NAME_Nitori
-			LEVEL = 3
+			LEADER_PORTRAIT = x74
+			CLASS = official
+			NAME = NAME_Minoriko
+			LEVEL = 1
 			GENDER = female
 			IMMORTAL = no
-			ETHIC = materialist
-			DESC = nitori1
-			CATCH_PHRASE =  nitori1_catch_phrase
+			ETHIC = pacifist
+			DESC = minoriko1
+			CATCH_PHRASE =  minoriko1_catch_phrase
 		}
 		last_created_leader = { #4
-			add_trait = subclass_scientist_governor
-			add_trait = leader_trait_water
-			add_trait = leader_trait_robotist
-			add_trait = leader_trait_super_youkai_slug
-			add_trait = leader_trait_convenience_house
-			add_trait = leader_trait_engineer_in_water
-			add_trait = leader_trait_optical_camouflage
-			add_trait = leader_trait_regeneration
-			add_trait = leader_trait_insider_trading_2
-			add_trait = leader_trait_passive
+			add_trait = subclass_official_governor
+			add_trait = leader_trait_harvest
+			add_trait = leader_trait_utopian_idealist
+			add_trait = trait_ruler_fertility_preacher
+			add_trait = leader_trait_regeneration_2
+			add_trait = leader_trait_profligate
 		}
 	}
 
@@ -3945,53 +3940,144 @@ country_event = { # 荷取
 		name = DISMISS
 		tag = dismiss_leader
 		hidden_effect = {
-			remove_global_flag = nitori # Put this leader back into the pool, so player could still get him
+			remove_global_flag = minoriko # Put this leader back into the pool, so player could still get him
 			ethic_leader_kill_effect = yes
-			set_country_flag = dismissed_nitori
+			set_country_flag = dismissed_minoriko
 		}
 	}
 	option = {
-		name = touhou_paragon.42700.a
-		response_text = touhou_paragon.42700.a.response
+		name = touhou_paragon.42900.a
+		response_text = touhou_paragon.42900.a.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = touhou_paragon.42700.b
-		response_text = touhou_paragon.42700.b.response
+		name = touhou_paragon.42900.b
+		response_text = touhou_paragon.42900.b.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = touhou_paragon.42700.c
-		response_text = touhou_paragon.42700.c.response
+		name = touhou_paragon.42900.c
+		response_text = touhou_paragon.42900.c.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = touhou_paragon.42700.d
-		response_text = touhou_paragon.42700.d.response
+		name = touhou_paragon.42900.d
+		response_text = touhou_paragon.42900.d.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = touhou_paragon.42700.e
-		response_text = touhou_paragon.42700.e.response
+		name = touhou_paragon.42900.e
+		response_text = touhou_paragon.42900.e.response
 		is_dialog_only = yes
 	}
 	option = {
-		name = touhou_paragon.42700.f
-		response_text = touhou_paragon.42700.f.response
+		name = touhou_paragon.42900.f
+		response_text = touhou_paragon.42900.f.response
 		is_dialog_only = yes
 	}
-	#option = {
-	#	name = touhou_paragon.42700.g
-	#	response_text = touhou_paragon.42700.g.response
-	#	is_dialog_only = yes
-	#}
 	option = {
 		name = HIRE
 		tag = hire_leader
-		custom_tooltip = touhou_paragon.42700.hire_custom_tooltip
+		custom_tooltip = touhou_paragon.42900.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_nitori
+				GLOBAL_EVENT_TARGET = renowned_minoriko
+			}
+		}
+	}
+}
+
+country_event = { # 雏
+	id = touhou_paragon.43000
+	title = "touhou_paragon.43000.name"
+	desc = "touhou_paragon.43000.desc"
+	show_sound = event_psionic
+	is_triggered_only = yes
+
+	picture = GFX_leader_recruitment_bg_renowned
+	auto_opens = no
+	event_window_type = leader_recruit
+	notification_event_icon = "GFX_message_touhou_leaders"
+
+	immediate = {
+		ethic_leader_creator = {
+			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+			LEADER_PORTRAIT = x107
+			CLASS = commander
+			NAME = NAME_Hina
+			LEVEL = 2
+			GENDER = female
+			IMMORTAL = no
+			ETHIC = xenoplile
+			DESC = hina1
+			CATCH_PHRASE =  hina1_catch_phrase
+		}
+		last_created_leader = { #3
+			add_trait = subclass_commander_governor
+			add_trait = leader_trait_jinx
+			add_trait = leader_trait_mediator
+			add_trait = leader_trait_restrained
+			add_trait = leader_trait_dreaded
+			add_trait = leader_trait_uninspiring
+		}
+	}
+
+	picture_event_data = {
+		portrait = event_target:ethic_leader
+		room = ethic_spaceship_room
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			remove_global_flag = hina # Put this leader back into the pool, so player could still get him
+			ethic_leader_kill_effect = yes
+			set_country_flag = dismissed_hina
+		}
+	}
+	option = {
+		name = touhou_paragon.43000.a
+		response_text = touhou_paragon.43000.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43000.b
+		response_text = touhou_paragon.43000.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43000.c
+		response_text = touhou_paragon.43000.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43000.d
+		response_text = touhou_paragon.43000.d.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43000.e
+		response_text = touhou_paragon.43000.e.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43000.f
+		response_text = touhou_paragon.43000.f.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43000.g
+		response_text = touhou_paragon.43000.g.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = HIRE
+		tag = hire_leader
+		custom_tooltip = touhou_paragon.43000.hire_custom_tooltip
+		hidden_effect = {
+			ethic_leader_hire_effect = {
+				GLOBAL_EVENT_TARGET = renowned_hina
 			}
 		}
 	}

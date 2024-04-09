@@ -193,3 +193,205 @@ koishi_card_4_trigger = {
 		}
 	}
 }
+
+sizuha_card_1_trigger = {
+	Root = {
+		is_scope_type = fleet
+		owner = {
+			OR = {
+				is_hostile = from
+				is_at_war_with = from
+			}
+		}
+		solar_system = {
+			OR = {
+				any_fleet_in_system = {
+					exists = leader
+					leader = {
+						owner = {
+							is_same_value = from
+						}
+						has_trait = leader_trait_fall
+					}
+				}
+				AND = {
+					exists = owner
+					owner = {
+						is_same_value = from
+					}
+				}
+			}
+		}
+	}
+}
+
+sizuha_card_2_trigger = {
+	Root = {
+		is_scope_type = planet
+		is_artificial = no
+		OR = {
+			is_colony = yes
+			is_colonizable = yes
+		}
+	}
+}
+
+minoriko_card_1_trigger = {
+	Root = {
+		is_scope_type = planet
+		is_colony = yes
+		exists = owner
+		owner = {
+			is_same_value = from
+		}
+		is_occupied_flag = no
+		uses_district_set = standard
+	}
+}
+
+minoriko_card_2_trigger = {
+	Root = {
+		is_scope_type = planet
+		is_artificial = no
+		OR = {
+			is_colony = yes
+			is_colonizable = yes
+		}
+	}
+}
+
+marisa_card_1_trigger = {
+	AND = {
+		Root = {
+			is_scope_type = planet
+			is_star = no
+			solar_system = {
+				any_fleet_in_system = {
+					exists = leader
+					leader = {
+						owner = {
+							is_same_value = from
+						}
+						has_trait = leader_trait_magic
+					}
+				}
+			}
+		}
+	}
+}
+
+marisa_card_2_trigger = {
+	AND = {
+		Root = {
+			is_scope_type = planet
+			is_star = no
+			solar_system = {
+				any_fleet_in_system = {
+					exists = leader
+					leader = {
+						owner = {
+							is_same_value = from
+						}
+						has_trait = leader_trait_magic
+					}
+				}
+			}
+		}
+	}
+}
+
+marisa_card_3_trigger = {
+	AND = {
+		Root = {
+			is_scope_type = fleet
+			is_owned_by = from
+			is_controlled_by = from
+			solar_system = {
+				any_fleet_in_system = {
+					exists = leader
+					leader = {
+						owner = {
+							is_same_value = from
+						}
+						has_trait = leader_trait_magic
+					}
+				}
+			}
+		}
+		From ={
+			OR = {
+				AND = {
+					has_technology = tech_battleships
+					has_existing_ship_design = marisa_cannon
+					NOT = {
+						check_variable = {
+							which = ex_charge
+							value = 1
+						}
+					}
+				}
+				AND = {
+					has_technology = tech_titans
+					has_existing_ship_design = marisa_cannon_titanic
+				}
+			}
+		}
+	}
+}
+
+marisa_card_4_trigger = {
+	AND = {
+		Root = {
+			is_scope_type = planet
+			is_asteroid = yes
+			solar_system = {
+				any_fleet_in_system = {
+					exists = leader
+					leader = {
+						owner = {
+							is_same_value = from
+						}
+						has_trait = leader_trait_magic
+					}
+				}
+			}
+		}
+	}
+}
+
+marisa_card_5_trigger = {
+	AND = {
+		Root = {
+			is_scope_type = planet
+			is_colony = yes
+			owner = {
+				is_at_war_with = from
+			}
+			solar_system = {
+				any_fleet_in_system = {
+					exists = leader
+					leader = {
+						owner = {
+							is_same_value = from
+						}
+						has_trait = leader_trait_magic
+					}
+				}
+			}
+		}
+	}
+}
+
+marisa_card_6_trigger = {
+	from = {
+		any_controlled_fleet = {
+			exists = leader
+			leader = {
+				owner = {
+					is_same_value = from
+				}
+				has_trait = leader_trait_magic
+			}
+		}
+	}
+}

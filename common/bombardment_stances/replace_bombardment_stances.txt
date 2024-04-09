@@ -151,7 +151,6 @@ armageddon = {
 	}
 }
 
-
 yume_no_huuin = {
 	trigger = {
 		exists = leader
@@ -337,3 +336,48 @@ nuclear = {
 		}
 	}
 }
+
+wither = {
+	trigger = {
+		owner = {
+			exists = leader
+			leader = {
+				has_trait = leader_trait_nuclear
+			}
+		}
+	}
+
+	default = no
+
+	stop_when_armies_dead = no
+	abduct_pops = no
+
+	planet_damage = 0.25
+	army_damage = 2
+
+	kill_pop_chance = { # Should only target organics
+		base = 2
+		modifier = {
+			factor = 0
+			OR = {
+				pop_has_trait = trait_machine_unit
+				pop_has_trait = trait_mechanical
+			}
+		}
+	}
+	min_pops_to_kill_pop = 0
+
+	# root = fleet
+	# from = planet
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.01
+			exists = from
+			from = {
+				owner = { NOT = { is_hostile = root.owner } }
+			}
+		}
+	}
+}
+

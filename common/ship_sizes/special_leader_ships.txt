@@ -177,3 +177,122 @@ space_dragon_nitori_baby = {
         max = 10
     }
 }
+
+marisa_cannon = {
+    entity = ion_cannon_entity
+    formation_priority = @battleship_formation_priority
+    max_speed = @speed_slow
+    acceleration = 0.2
+    rotation_speed = 0.15
+    collision_radius = @battleship_collision_radius
+    max_hitpoints = @battleship_hp
+    modifier = {
+        ship_evasion_add = @battleship_evasion
+    }
+    ship_modifier = {
+        ship_weapon_range_mult = 0.20
+    }
+    size_multiplier = 8
+    fleet_slot_size = 8
+    combat_size_multiplier = 8
+    section_slots = { "ship" = { locator = "part1" } }
+    is_designable = yes
+    components_add_to_cost = yes
+    uses_name_prefix = no
+    takes_name_from_ship_design = yes
+    use_shipnames_from = ion_cannon
+    num_target_locators = 1
+    is_space_station = no
+    base_buildtime = @battleship_build_time
+    auto_upgrade = no
+    enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+    enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
+    prerequisites = { "tech_battleships" }
+    potential_country = {
+        any_owned_leader = {
+            has_trait = leader_trait_magic
+        }
+    }
+    class = shipclass_military
+    ship_class_icon_frame = 26
+    icon = ship_size_military_station
+    construction_type = starbase_shipyard
+    required_component_set = "power_core"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+
+    potential_construction = {
+        always = no
+    }
+}
+
+marisa_cannon_titanic = {
+    entity = ion_cannon_entity
+    formation_priority = @battleship_formation_priority
+    max_speed = @speed_slow
+    acceleration = 0.2
+    rotation_speed = 0.15
+    collision_radius = @battleship_collision_radius
+    max_hitpoints = @battleship_hp
+    modifier = {
+        ship_evasion_add = @battleship_evasion
+    }
+    ship_modifier = {
+        ship_weapon_range_mult = 0.20
+    }
+    size_multiplier = 8
+    fleet_slot_size = 8
+    combat_size_multiplier = 8
+    section_slots = { "ship" = { locator = "part1" } }
+    is_designable = yes
+    components_add_to_cost = yes
+    uses_name_prefix = no
+    takes_name_from_ship_design = yes
+    use_shipnames_from = ion_cannon
+    num_target_locators = 1
+    is_space_station = no
+    base_buildtime = @battleship_build_time
+    auto_upgrade = no
+    enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+    enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
+    prerequisites = { "tech_titans" }
+    potential_country = {
+        any_owned_leader = {
+            has_trait = leader_trait_magic
+        }
+    }
+    class = shipclass_military
+    ship_class_icon_frame = 26
+    icon = ship_size_military_station
+    construction_type = starbase_shipyard
+    required_component_set = "power_core"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+
+    potential_construction = {
+        always = no
+    }
+}
+
+marisa_asteroid = {
+    can_be_inspected = no
+    is_space_object = yes
+    entity = asteroid_entity
+    max_speed = @speed_very_slow
+    rotation_speed = 10
+    acceleration = 10
+    modifier = {
+        ship_evasion_mult = -1
+    }
+    max_hitpoints = 9000
+    size_multiplier = 1.5
+    fleet_slot_size = 1
+
+    num_target_locators = 0
+    icon = ship_size_military_1
+    is_civilian = no
+    class = shipclass_military
+    is_designable = no
+}

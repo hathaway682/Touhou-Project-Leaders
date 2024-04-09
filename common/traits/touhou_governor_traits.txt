@@ -2076,6 +2076,67 @@ leader_trait_touhou_pop_focused_3 = {
 	leader_class = { commander official }
 }
 
+leader_trait_touhou_spymaster = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_spymaster"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	councilor_modifier = {
+		spy_network_daily_value_mult = 1.5
+		operations_cost_mult = -0.25
+		envoys_add = 2
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_lord
+	}
+	leader_class = { official commander scientist }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+leader_trait_touhou_totalitarian = {
+	leader_trait_type = destiny
+	ethic_destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_totalitarian"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	councilor_modifier = {
+		diplo_weight_mult = 0.2
+		divided_patrongage_max_subjects = 1
+		country_councilor_influence_produces_add = 1
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_lord
+		has_ethic = ethic_authoritarian
+	}
+	leader_class = { official commander scientist }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/council_weight_mult
+		modifier = {
+			exists = owner
+			owner = { is_overlord = no }
+			factor = 0.3
+		}
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
 ###################
 leader_trait_touhou_distribution_lines = {
 	inline_script = {
@@ -2413,7 +2474,7 @@ leader_trait_industrial_espionage = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
-		ICON = "GFX_leader_trait_industrial_espionage"
+		ICON = "GFX_leader_trait_ambassador_ear_to_the_ground"
 		RARITY = veteran
 		COUNCIL = no
 		TIER = 1
@@ -2439,7 +2500,7 @@ leader_trait_industrial_espionage_2 = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
-		ICON = "GFX_leader_trait_industrial_espionage"
+		ICON = "GFX_leader_trait_ambassador_ear_to_the_ground"
 		RARITY = veteran
 		COUNCIL = no
 		TIER = 2
@@ -2454,7 +2515,7 @@ leader_trait_industrial_espionage_3 = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
-		ICON = "GFX_leader_trait_industrial_espionage"
+		ICON = "GFX_leader_trait_ambassador_ear_to_the_ground"
 		RARITY = veteran
 		COUNCIL = no
 		TIER = 3
@@ -2472,7 +2533,6 @@ leader_trait_industrial_espionage_3 = {
 
 leader_trait_demolisher_destiny = {
 	leader_trait_type = destiny
-	ethic_leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -2495,7 +2555,6 @@ leader_trait_demolisher_destiny = {
 
 leader_trait_fanatic = {
 	leader_trait_type = destiny
-	ethic_leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -2527,7 +2586,6 @@ leader_trait_fanatic = {
 
 leader_trait_reverse_engineer = {
 	leader_trait_type = destiny
-	ethic_leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -2580,7 +2638,6 @@ leader_trait_supreme_admiral = {
 
 leader_trait_pilferer = {
 	leader_trait_type = destiny
-	ethic_leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		CLASS = commander

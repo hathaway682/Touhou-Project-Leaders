@@ -432,6 +432,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 35
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_fall
+				}
 			}
 		}
 		localization_key = touhou_selected_char_35
@@ -443,6 +446,9 @@ defined_text = {
 					which = seleted_char_id
 					value = 36
 				}
+				any_owned_leader = {
+					has_trait = leader_trait_harvest
+				}
 			}
 		}
 		localization_key = touhou_selected_char_36
@@ -453,6 +459,9 @@ defined_text = {
 				check_variable = {
 					which = seleted_char_id
 					value = 37
+				}
+				any_owned_leader = {
+					has_trait = leader_trait_jinx
 				}
 			}
 		}
@@ -1055,7 +1064,7 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetSelectedCardkoishiKoishi
+	name = GetSelectedCardKoishiDesc
 	text = {
 		trigger = {
 			From = {
@@ -1207,6 +1216,268 @@ defined_text = {
 						resource_stockpile_compare = {
 							resource = thl_bomb
 							value < 5
+						}
+					}
+				}
+			}
+		}
+		localization_key = touhou_error_no_resource
+	}
+
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 0
+				}
+			}
+		}
+		localization_key = touhou_error_no_spell
+	}
+
+	default = touhou_can_confirm
+}
+
+defined_text = {
+	name = GetSelectedCardSizuha
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_sizuha_1
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 2
+				}
+			}
+		}
+		localization_key = spell_card_sizuha_2
+	}
+	default = spell_card_none
+}
+
+defined_text = {
+	name = GetSelectedCardSizuhaDesc
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_sizuha_1_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 2
+				}
+			}
+		}
+		localization_key = spell_card_sizuha_2_desc
+	}
+	default = spell_card_none
+}
+
+defined_text = {
+	name = GetSelectedCardRequirementSizuha
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+					}
+					NOT = {
+						sizuha_card_1_trigger = yes
+					}
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+					}
+					NOT = {
+						sizuha_card_2_trigger = yes
+					}
+				}
+			}
+		}
+		localization_key = touhou_error_wrong_target
+	}
+
+	text = {
+		trigger = {
+			from = {
+				OR = {
+					AND = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value < 1
+						}
+					}
+					AND = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value < 1
+						}
+					}
+				}
+			}
+		}
+		localization_key = touhou_error_no_resource
+	}
+
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 0
+				}
+			}
+		}
+		localization_key = touhou_error_no_spell
+	}
+
+	default = touhou_can_confirm
+}
+
+defined_text = {
+	name = GetSelectedCardMinoriko
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_minoriko_1
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 2
+				}
+			}
+		}
+		localization_key = spell_card_minoriko_2
+	}
+	default = spell_card_none
+}
+
+defined_text = {
+	name = GetSelectedCardMinorikoDesc
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_minoriko_1_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 2
+				}
+			}
+		}
+		localization_key = spell_card_minoriko_2_desc
+	}
+	default = spell_card_none
+}
+
+defined_text = {
+	name = GetSelectedCardRequirementMinoriko
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+					}
+					NOT = {
+						minoriko_card_1_trigger = yes
+					}
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+					}
+					NOT = {
+						minoriko_card_2_trigger = yes
+					}
+				}
+			}
+		}
+		localization_key = touhou_error_wrong_target
+	}
+
+	text = {
+		trigger = {
+			from = {
+				OR = {
+					AND = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value < 1
+						}
+					}
+					AND = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+						resource_stockpile_compare = {
+							resource = thl_bomb
+							value < 1
 						}
 					}
 				}

@@ -232,9 +232,6 @@ utility_component_template = {
 				is_at_war_with = root.owner
 			}
 		}
-		NOT = {
-			exists = leader
-		}
 	}
 
 	scripted_action_button_possible = {
@@ -242,14 +239,135 @@ utility_component_template = {
 	}
 
 	scripted_action_finished = {
-		leader = {
-			has_trait = leader_trait_density
+		OR = {
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = leader_trait_density
+				}
+			}
+			any_planet_army = {
+				army_type = army_suika_giant
+			}
 		}
 	}
 
 	scripted_action_name = on_suika_target_planet_reached
 	scripted_action_context_menu_name = transform_context_menu_title
 	scripted_action_tooltip = transform_action_button
-	scripted_action_icon = GFX_fleet_order_button_transfix_terraformation_nucleus_action
+	scripted_action_icon = GFX_fleet_order_button_land_armies
 	scripted_action_activity_key = transform_action_activity_key
+}
+
+utility_component_template = {
+	key = "AURA_STARDUST_REVERIE"
+	size = medium
+	icon = "GFX_ship_part_aura_inspiring_presence"
+	icon_frame = 1
+	power = 0
+
+	component_set = "ship_aura_components"
+
+	size_restriction = { spell_card }
+
+	friendly_aura = {
+		name = "friendly_aura_stardust_reverie"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_stardust_reverie_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_fire_rate_mult = 0.33
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "AURA_EVENT_HORIZON"
+	size = medium
+	icon = "GFX_ship_part_aura_inspiring_presence"
+	icon_frame = 1
+	power = 0
+
+	component_set = "ship_aura_components"
+
+	size_restriction = { spell_card }
+
+	friendly_aura = {
+		name = "friendly_aura_event_horizon"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_event_horizon_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_fire_rate_mult = 0.33
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	hostile_aura = {
+		name = "friendly_aura_event_horizon"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_event_horizon_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_fire_rate_mult = -0.33
+			ship_disengage_chance_reduction = 0.5
+			ship_emergency_ftl_min_days_mult = 0.5
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "ASTEROID_IMPECT"
+	size = medium
+	icon = "GFX_ship_part_border_extruder_1"
+	icon_frame = 1
+	power = 0
+
+	component_set = "asteroid_impact"
+
+	scripted_action_possible = {
+		is_colony = yes
+	}
+
+	scripted_action_finished = {
+		has_planet_flag = asteroid_impected
+	}
+
+	scripted_action_name = on_asteroid_target_planet_reached
+	scripted_action_context_menu_name = asteroid_impact_menu_title
+	scripted_action_tooltip = asteroid_impact_action_button
+	scripted_action_icon = GFX_fleet_order_button_land_armies
+	scripted_action_activity_key = asteroid_impact_action_activity_key
 }

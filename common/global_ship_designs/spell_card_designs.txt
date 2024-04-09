@@ -129,6 +129,40 @@ ship_design = {
 }
 
 ship_design = {
+	name = "NAME_Master_Spark"
+	ship_size = spell_card
+
+	section = {
+		template = "spell_card_gun"
+		slot = "mid"
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "MASTER_SPARK"
+		}
+	}
+}
+
+
+ship_design = {
+	name = "NAME_Final_Spark"
+	ship_size = spell_card
+
+	section = {
+		template = "spell_card_cannon"
+		slot = "mid"
+		component = {
+			slot = "TITANIC_01"
+			template = "FINAL_SPARK_SC"
+		}
+		component = {
+			slot = "TITANIC_02"
+			template = "FINAL_SPARK_SC"
+		}
+	}
+}
+
+
+ship_design = {
 	name = "NAME_Double_Spark"
 	ship_size = spell_card
 
@@ -146,3 +180,40 @@ ship_design = {
 	}
 }
 
+ship_design = {
+	name = "NAME_Stardust_Reverie"
+	ship_size = spell_card
+
+	section = {
+		template = "spell_card_aura"
+		slot = "mid"
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "AURA_STARDUST_REVERIE"
+		}
+	}
+}
+
+ship_design = {
+	name = "NAME_Event_Horizon"
+	ship_size = spell_card
+
+	section = {
+		template = "spell_card_aura"
+		slot = "mid"
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "AURA_EVENT_HORIZON"
+		}
+	}
+}
+
+# Incoming Asteroid
+ship_design = {
+	name = "NAME_Marisa_Asteroid"
+	ship_size = marisa_asteroid
+	use_design_name = yes
+	required_component="HYPER_DRIVE_1"
+	required_component="COMBAT_COMPUTER_COLOSSUS"
+	required_component="ASTEROID_IMPECT"
+}

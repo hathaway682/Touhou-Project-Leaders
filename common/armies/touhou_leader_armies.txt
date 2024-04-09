@@ -225,9 +225,10 @@ army_suika_splitter = {
 }
 
 army_suika_giant = {
-	damage = 10.0
-	health = 20.0
-	morale = 100.0
+	damage = 35
+	morale_damage = 50
+	health = 55
+	morale = 100
 	collateral_damage = 6.0
 	morale_damage = 10.0
 	war_exhaustion = 10.0
@@ -375,9 +376,9 @@ cybrex_warform = {
 # Should be very strong and quite expensive, but cannot get attachments and can be built only in limited numbers
 # Currently limited to 3. Ideally it would be X * Num of planets you have done the project one, but that is too complex for scripts
 ness_assault_army = {
-	damage = 35
-	morale_damage = 50
-	health = 55
+	damage = 7
+	morale_damage = 5
+	health = 11
 	collateral_damage = 10
 	war_exhaustion = 10
 	time = 1800

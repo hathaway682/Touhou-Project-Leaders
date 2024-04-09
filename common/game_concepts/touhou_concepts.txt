@@ -13,5 +13,8 @@ concept_sapient_dolls = {
 concept_doll_leaders = {
 }
 
+concept_ex_charge = {
+}
+
 concept_huuin = {
 }
