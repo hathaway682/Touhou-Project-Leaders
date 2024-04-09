@@ -167,7 +167,7 @@ utility_component_template = {
 utility_component_template = {
 	key = "AURA_ONI_FOG"
 	size = medium
-	icon = "GFX_ship_part_aura_nanobot"
+	icon = "GFX_ship_part_whisperers_covenant_aux"
 	icon_frame = 1
 	power = 80
 
@@ -262,7 +262,7 @@ utility_component_template = {
 utility_component_template = {
 	key = "AURA_STARDUST_REVERIE"
 	size = medium
-	icon = "GFX_ship_part_aura_inspiring_presence"
+	icon = "GFX_ship_part_whisperers_covenant_aux"
 	icon_frame = 1
 	power = 0
 
@@ -295,7 +295,7 @@ utility_component_template = {
 utility_component_template = {
 	key = "AURA_EVENT_HORIZON"
 	size = medium
-	icon = "GFX_ship_part_aura_inspiring_presence"
+	icon = "GFX_ship_part_whisperers_covenant_aux"
 	icon_frame = 1
 	power = 0
 
@@ -325,11 +325,11 @@ utility_component_template = {
 	}
 
 	hostile_aura = {
-		name = "friendly_aura_event_horizon"
+		name = "hostile_aura_event_horizon"
 		system_wide = yes
 
 		stack_info = {
-			id = friendly_event_horizon_aura
+			id = hostile_event_horizon_aura
 			priority = 10
 		}
 
@@ -370,4 +370,77 @@ utility_component_template = {
 	scripted_action_tooltip = asteroid_impact_action_button
 	scripted_action_icon = GFX_fleet_order_button_land_armies
 	scripted_action_activity_key = asteroid_impact_action_activity_key
+}
+
+utility_component_template = {
+	key = "AURA_MISFORTUNE_WHEEL_1"
+	size = medium
+	icon = "GFX_ship_part_whisperers_covenant_aux"
+	icon_frame = 1
+	power = 0
+
+	component_set = "ship_aura_components"
+
+	size_restriction = { spell_card }
+
+	hostile_aura = {
+		name = "friendly_aura_misfortune_wheel"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_missfortune_wheel_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_accuracy_mult = -0.3
+			ship_evasion_mult = -0.3
+			ship_disengage_chance_reduction = 10
+			ship_disengage_opportunities_add = -10
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "AURA_MISFORTUNE_WHEEL_2"
+	size = medium
+	icon = "GFX_ship_part_whisperers_covenant_aux"
+	icon_frame = 1
+	power = 0
+
+	component_set = "ship_aura_components"
+
+	size_restriction = { spell_card }
+
+	hostile_aura = {
+		name = "friendly_aura_misfortune_wheel"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_missfortune_wheel_aura
+			priority = 20
+		}
+
+		modifier = {
+			ship_accuracy_mult = -0.5
+			ship_evasion_mult = -0.5
+			ship_hull_regen_add_perc = -0.5
+			ship_disengage_chance_reduction = 10
+			ship_disengage_opportunities_add = -10
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
 }

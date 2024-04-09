@@ -332,7 +332,6 @@ weapon_component_template = {
 	use_ship_kill_target = no
 	hidden = yes
 
-	prerequisites = { "tech_master_spark" }
 	component_set = "MASTER_SPARK"
 	projectile_gfx = "Masterspark_projectile"
 	tags = { weapon_type_energy weapon_role_artillery x_slot }
@@ -360,7 +359,7 @@ weapon_component_template = {
 
 	windup = { min = 160.0 max = 200.0 }
 
-	range = 1000
+	range = 500
 
 	accuracy = 0.95
 	tracking = 0.25
@@ -474,7 +473,7 @@ weapon_component_template = {
 
 	windup = { min = 280.0 max = 320.0 }
 
-	range = 1000
+	range = 500
 
 	accuracy = 0.95
 	tracking = 0.25

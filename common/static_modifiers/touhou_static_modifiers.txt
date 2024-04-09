@@ -724,3 +724,26 @@ blazing_star = {
 	ship_winddown_mult = -0.9
 	ship_evasion_add = 90
 }
+
+pain_flow_modifier_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_burning_settlement.dds"
+	icon_frame = 3
+	pop_happiness = -1
+	planet_emigration_push_add = 100
+}
+
+pain_flow_modifier_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_burning_settlement.dds"
+	icon_frame = 3
+	custom_tooltip = JINX_MODIFIER_PURGE
+}
+
+broken_amulet_modifier_1 = {
+	ship_armor_hardening_add = -0.5
+	ship_shield_hardening_add = -0.5
+}
+
+broken_amulet_modifier_2 = {
+	ship_armor_hardening_add = -0.75
+	ship_shield_hardening_add = -0.75
+}

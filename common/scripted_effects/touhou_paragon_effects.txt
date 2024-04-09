@@ -2085,5 +2085,24 @@ continue_marisa_alice_regeneration = {
 			amount = 1
 		}
 	}
+}
 
+subtract_jinx_or_bomb = {
+	if = {
+		limit = {
+			check_variable = {
+				which = jinx_stockpile
+				value > 1
+			}
+		}
+		subtract_variable = {
+			which = jinx_stockpile
+			value = 1
+		}
+	}
+	else = {
+		add_resource = {
+			thl_bomb = -1
+		}
+	}
 }

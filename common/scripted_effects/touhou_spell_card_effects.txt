@@ -124,7 +124,7 @@ reimu_spell_card_2_effect = {
         }
         root = {
             create_ambient_object = {
-                type = red_sun_grow_particle_object
+                type = yellow_sun_grow_particle_object
                 location = this
                 duration = 1
             }
@@ -752,7 +752,7 @@ marisa_spell_card_1_effect = {
                         graphical_culture = "extra_dimensional_01"
                     }
                     set_location = root
-                    set_fleet_flag = master_spark_fleet
+                    set_fleet_flag = spell_card_fleet
                     fleet_event = {
                         id = touhou_paragon_spell.6
                         days = 180
@@ -786,7 +786,7 @@ marisa_spell_card_1_ex_effect = {
                         graphical_culture = "extra_dimensional_01"
                     }
                     set_location = root
-                    set_fleet_flag = final_spark_fleet
+                    set_fleet_flag = spell_card_fleet
                     fleet_event = {
                         id = touhou_paragon_spell.6
                         days = 360
@@ -820,7 +820,7 @@ marisa_spell_card_2_effect = {
                         graphical_culture = "extra_dimensional_01"
                     }
                     set_location = root
-                    set_fleet_flag = stardust_reverie_fleet
+                    set_fleet_flag = spell_card_fleet
                     fleet_event = {
                         id = touhou_paragon_spell.6
                         days = 180
@@ -854,7 +854,7 @@ marisa_spell_card_2_ex_effect = {
                         graphical_culture = "extra_dimensional_01"
                     }
                     set_location = root
-                    set_fleet_flag = event_horizon_fleet
+                    set_fleet_flag = spell_card_fleet
                     fleet_event = {
                         id = touhou_paragon_spell.6
                         days = 360
@@ -992,6 +992,226 @@ marisa_spell_card_6_effect = {
             add_modifier = {
                 modifier = blazing_star
                 days = 180
+            }
+        }
+    }
+}
+
+hina_spell_card_1_effect = {
+    from = {
+        subtract_jinx_or_bomb = yes
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = country #保险措施
+            }
+        }
+        root = {
+            random_owned_planet = {
+                planet_event = {
+                    id = touhou_paragon_spell.300
+                }
+            }
+        }
+    }
+}
+
+hina_spell_card_1_ex_effect = {
+    from = {
+        while = {
+            count = 5
+            subtract_jinx_or_bomb = yes
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = country #保险措施
+            }
+        }
+        root = {
+            set_timed_country_flag = {
+                flag = jinx_target_coutry
+                days = 3600
+            }
+        }
+    }
+}
+
+hina_spell_card_2_effect = {
+    from = {
+        while = {
+            count = 3
+            subtract_jinx_or_bomb = yes
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            create_ambient_object = {
+                type = red_sun_grow_particle_object
+                location = this
+                duration = 1
+            }
+            add_modifier = {
+                modifier = broken_amulet_modifier_1
+                days = 60
+            }
+        }
+    }
+}
+
+hina_spell_card_2_ex_effect = {
+    from = {
+        while = {
+            count = 6
+            subtract_jinx_or_bomb = yes
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            create_ambient_object = {
+                type = red_sun_grow_particle_object
+                location = this
+                duration = 1
+            }
+            add_modifier = {
+                modifier = broken_amulet_modifier_2
+                days = 60
+            }
+        }
+    }
+}
+
+hina_spell_card_3_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            create_fleet = {
+                name = "NAME_Misfortune_Wheel_1"
+                effect = {
+                    set_owner = from
+                    create_ship = {
+                        name = "NAME_Misfortune_Wheel_1"
+                        design = "NAME_Misfortune_Wheel_1"
+                        graphical_culture = "extra_dimensional_01"
+                    }
+                    set_location = root
+                    set_fleet_flag = spell_card_fleet
+                    fleet_event = {
+                        id = touhou_paragon_spell.6
+                        days = 180
+                    }
+                }
+            }
+        }
+    }
+}
+
+hina_spell_card_3_ex_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            create_fleet = {
+                name = "NAME_Misfortune_Wheel_2"
+                effect = {
+                    set_owner = from
+                    create_ship = {
+                        name = "NAME_Misfortune_Wheel_2"
+                        design = "NAME_Misfortune_Wheel_2"
+                        graphical_culture = "extra_dimensional_01"
+                    }
+                    set_location = root
+                    set_fleet_flag = spell_card_fleet
+                    fleet_event = {
+                        id = touhou_paragon_spell.6
+                        days = 360
+                    }
+                }
+            }
+        }
+    }
+}
+
+hina_spell_card_4_effect = {
+    from = {
+        while = {
+            count = 2
+            subtract_jinx_or_bomb = yes
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            add_modifier = {
+                modifier = pain_flow_modifier_1
+                days = 360
+            }
+            planet_event = {
+                id = touhou_paragon_spell.300
+            }
+        }
+    }
+}
+
+hina_spell_card_4_ex_effect = {
+    from = {
+        while = {
+            count = 7
+            subtract_jinx_or_bomb = yes
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+
+        }
+        root = {
+            every_owned_pop = {
+                set_pop_flag = event_purge
+                unemploy_pop = yes
+            }
+            add_modifier = {
+                modifier = pain_flow_modifier_2
+                days = 360
+            }
+            planet_event = {
+                id = touhou_paragon_spell.7
+                days = 360
             }
         }
     }

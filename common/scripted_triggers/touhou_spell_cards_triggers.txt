@@ -276,6 +276,11 @@ marisa_card_1_trigger = {
 					}
 				}
 			}
+			NOT = {
+				any_fleet_in_orbit = {
+					has_fleet_flag = spell_card_fleet
+				}
+			}
 		}
 	}
 }
@@ -294,6 +299,11 @@ marisa_card_2_trigger = {
 						}
 						has_trait = leader_trait_magic
 					}
+				}
+			}
+			NOT = {
+				any_fleet_in_orbit = {
+					has_fleet_flag = spell_card_fleet
 				}
 			}
 		}
@@ -390,6 +400,87 @@ marisa_card_6_trigger = {
 					is_same_value = from
 				}
 				has_trait = leader_trait_magic
+			}
+		}
+	}
+}
+
+hina_card_1_trigger = {
+	AND = {
+		Root = {
+			is_scope_type = country
+			is_default_or_fallen = yes
+			NOT = {
+				is_same_value = root
+			}
+		}
+	}
+}
+
+hina_card_2_trigger = {
+	AND = {
+		Root = {
+			is_scope_type = planet
+			is_star = no
+			solar_system = {
+				any_fleet_in_system = {
+					exists = leader
+					leader = {
+						owner = {
+							is_same_value = from
+						}
+						has_trait = leader_trait_jinx
+					}
+				}
+			}
+			NOT = {
+				any_fleet_in_orbit = {
+					has_fleet_flag = spell_card_fleet
+				}
+			}
+			NOR = {
+				has_modifier = broken_amulet_modifier_1
+				has_modifier = broken_amulet_modifier_2
+			}
+		}
+	}
+}
+
+hina_card_3_trigger = {
+	Root = {
+		is_scope_type = fleet
+		owner = {
+			OR = {
+				is_hostile = from
+				is_at_war_with = from
+			}
+		}
+		solar_system = {
+			any_fleet_in_system = {
+				exists = leader
+				leader = {
+					owner = {
+						is_same_value = from
+					}
+					has_trait = leader_trait_jinx
+				}
+			}
+		}
+	}
+}
+
+hina_card_4_trigger = {
+	AND = {
+		Root = {
+			is_scope_type = planet
+			is_star = no
+			is_colony = yes
+			owner = {
+				is_default_or_fallen = yes
+			}
+			NOR = {
+				has_modifier = pain_flow_modifier_1
+				has_modifier = pain_flow_modifier_2
 			}
 		}
 	}

@@ -151,6 +151,20 @@ fleet_event = {
     }
 }
 
+#结束净化
+planet_event = {
+    id = touhou_paragon_spell.7
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        every_owned_pop = {
+            remove_pop_flag = event_purge
+            unemploy_pop = yes
+        }
+    }
+}
+
 #小行星撞击
 planet_event = {
     id = touhou_paragon_spell.7
@@ -663,6 +677,12 @@ planet_event = {
                 }
             }
             1 = {
+                modifier = {
+                    factor = 0
+                    owner = {
+                        is_synthetic_empire = yes
+                    }
+                }
                 from = {
                     country_event = {
                         id = touhou_paragon_spell.103
@@ -681,6 +701,12 @@ planet_event = {
                 }
             }
             1 = {
+                modifier = {
+                    factor = 0
+                    owner = {
+                        is_synthetic_empire = yes
+                    }
+                }
                 from = {
                     country_event = {
                         id = touhou_paragon_spell.104
@@ -699,6 +725,12 @@ planet_event = {
                 }
             }
             1 = {
+                modifier = {
+                    factor = 0
+                    owner = {
+                        is_synthetic_empire = yes
+                    }
+                }
                 from = {
                     country_event = {
                         id = touhou_paragon_spell.105
@@ -717,6 +749,12 @@ planet_event = {
                 }
             }
             1 = {
+                modifier = {
+                    factor = 0
+                    owner = {
+                        is_gestalt = yes
+                    }
+                }
                 from = {
                     country_event = {
                         id = touhou_paragon_spell.106
@@ -735,6 +773,12 @@ planet_event = {
                 }
             }
             1 = {
+                modifier = {
+                    factor = 0
+                    owner = {
+                        is_synthetic_empire = yes
+                    }
+                }
                 from = {
                     country_event = {
                         id = touhou_paragon_spell.107
@@ -753,6 +797,12 @@ planet_event = {
                 }
             }
             1 = {
+                modifier = {
+                    factor = 0
+                    owner = {
+                        is_synthetic_empire = yes
+                    }
+                }
                 from = {
                     country_event = {
                         id = touhou_paragon_spell.108
@@ -771,6 +821,12 @@ planet_event = {
                 }
             }
             1 = {
+                modifier = {
+                    factor = 0
+                    owner = {
+                        is_synthetic_empire = yes
+                    }
+                }
                 from = {
                     country_event = {
                         id = touhou_paragon_spell.109
@@ -861,6 +917,12 @@ planet_event = {
                 }
             }
             1 = {
+                modifier = {
+                    factor = 0
+                    owner = {
+                        is_gestalt = yes
+                    }
+                }
                 from = {
                     country_event = {
                         id = touhou_paragon_spell.114
@@ -879,6 +941,12 @@ planet_event = {
                 }
             }
             1 = {
+                modifier = {
+                    factor = 0
+                    owner = {
+                        is_gestalt = yes
+                    }
+                }
                 from = {
                     country_event = {
                         id = touhou_paragon_spell.115
@@ -2527,5 +2595,231 @@ planet_event = {
 
     option = {
         name = touhou_paragon_spell.201.a
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.300
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        random_list = {
+            1 = {
+                modifier = {
+                    factor = 0
+                    NOR = {
+                        has_district = district_mining
+                        has_district = district_mining_uncapped
+                    }
+                }
+                planet_event = {
+                    id = touhou_paragon_spell.301
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    NOR = {
+                        has_district = district_generator
+                        has_district = district_generator_uncapped
+                    }
+                }
+                planet_event = {
+                    id = touhou_paragon_spell.302
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    NOT = {
+                        has_district = district_industrial
+                    }
+                }
+                planet_event = {
+                    id = touhou_paragon_spell.303
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    num_buildings = {
+                        type = any
+                        value > 1
+                    }
+                }
+                planet_event = {
+                    id = touhou_paragon_spell.304
+                }
+            }
+            1 = {
+                planet_event = {
+                    id = touhou_paragon_spell.305
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.301
+    title = "touhou_paragon_spell.301.name"
+    desc = {
+        text = touhou_paragon_spell.301.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    option = {
+        name = UNFORTUNATE
+        random_owned_pop = {
+            limit = {
+                OR = {
+                    has_job = miner
+                    has_job = scrap_miner
+                    has_job = mining_drone
+                    has_job = scrap_miner_drone
+                }
+            }
+            kill_pop = yes
+        }
+        if = {
+            limit = {
+                has_district = district_mining_uncapped
+            }
+            remove_district = district_mining_uncapped
+        }
+        else = {
+            remove_district = district_mining
+        }
+        add_deposit = d_deep_sinkhole
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.302
+    title = "touhou_paragon_spell.302.name"
+    desc = {
+        text = touhou_paragon_spell.302.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    option = {
+        name = UNFORTUNATE
+        random_owned_pop = {
+            limit = {
+                OR = {
+                    has_job = technician
+                    has_job = technician_drone
+                }
+            }
+            kill_pop = yes
+        }
+        if = {
+            limit = {
+                has_district = district_generator_uncapped
+            }
+            remove_district = district_generator_uncapped
+        }
+        else = {
+            remove_district = district_generator
+        }
+        add_deposit = d_radioactive_wasteland
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.303
+    title = "touhou_paragon_spell.303.name"
+    desc = {
+        text = touhou_paragon_spell.303.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    option = {
+        name = UNFORTUNATE
+        random_owned_pop = {
+            limit = {
+                OR = {
+                    has_job = artisan
+                    has_job = artisan_drone
+                    has_job = artificer
+                    has_job = foundry
+                    has_job = alloy_drone
+                    has_job = catalytic_technician
+                    has_job = catalytic_drone
+                }
+            }
+            kill_pop = yes
+        }
+        remove_district = district_industrial
+        add_deposit = d_failing_infrastructure
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.304
+    title = "touhou_paragon_spell.304.name"
+    desc = {
+        text = touhou_paragon_spell.304.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    option = {
+        name = UNFORTUNATE
+        random_owned_pop = {
+            kill_pop = yes
+        }
+        ruin_building = random_no_capital
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.305
+    title = "touhou_paragon_spell.305.name"
+    desc = {
+        text = touhou_paragon_spell.305.desc
+    }
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    option = {
+        name = UNFORTUNATE
+        if = {
+            limit = {
+                num_pops < 2
+            }
+            random_owned_pop = { kill_pop = yes }
+        }
+        else_if = {
+            limit = {
+                num_pops > 2
+                num_pops < 6
+            }
+            random_owned_pop = { kill_pop = yes }
+            random_owned_pop = { kill_pop = yes }
+        }
+        else_if = {
+            limit = {
+                num_pops > 6
+            }
+            random_owned_pop = { kill_pop = yes }
+            random_owned_pop = { kill_pop = yes }
+            random_owned_pop = { kill_pop = yes }
+            random_owned_pop = { kill_pop = yes }
+        }
     }
 }

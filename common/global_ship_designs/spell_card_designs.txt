@@ -217,3 +217,31 @@ ship_design = {
 	required_component="COMBAT_COMPUTER_COLOSSUS"
 	required_component="ASTEROID_IMPECT"
 }
+
+ship_design = {
+	name = "NAME_Misfortune_Wheel_1"
+	ship_size = spell_card
+
+	section = {
+		template = "spell_card_aura"
+		slot = "mid"
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "AURA_MISFORTUNE_WHEEL_1"
+		}
+	}
+}
+
+ship_design = {
+	name = "NAME_Misfortune_Wheel_2"
+	ship_size = spell_card
+
+	section = {
+		template = "spell_card_aura"
+		slot = "mid"
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "AURA_MISFORTUNE_WHEEL_2"
+		}
+	}
+}
