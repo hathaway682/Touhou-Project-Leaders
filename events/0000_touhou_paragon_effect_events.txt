@@ -10898,6 +10898,7 @@ country_event = {
             counter = "touhou_marisa_alice_regeneration_counter"
             amount = 1
         }
+        country_event = { id = touhou_paragon_effect.40711 days = 180 }
     }
 }
 
@@ -10987,6 +10988,35 @@ country_event = {
     }
     after = {
         set_country_flag = marisa_alice_regeneration_complete
+    }
+}
+
+#莎莎爱丽丝趣味事件 防止打不完的事件杀
+country_event = {
+    id = touhou_paragon_effect.40711
+    is_triggered_only = yes
+    fire_only_once = yes
+    hide_window = yes
+    trigger = {
+        any_owned_leader = {
+            has_trait = leader_trait_dolls
+        }
+        any_owned_leader = {
+            has_trait = leader_trait_magic
+        }
+        any_owned_planet = {
+            has_planet_flag = goelia_defender_planet
+        }
+    }
+    immediate = {
+        event_target:marisa_alice_regeneration_location = {
+            every_ground_combat_attacker = {
+                limit = {
+                    army_type = deformed_mushroom
+                }
+                remove_army = yes
+            }
+        }
     }
 }
 
