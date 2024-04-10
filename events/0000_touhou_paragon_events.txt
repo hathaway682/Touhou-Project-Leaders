@@ -270,7 +270,7 @@ country_event = { # ethic leader lottery machine
 			}
 			0 = { # 早苗（唯心）
 				modifier = {
-					add = value:touhou_leader_randomizer|ETHIC|spiritualist|ETHIC_NEG|materialist|LEADER_ID|sanae|
+					add = value:touhou_leader_sanae_randomizer|ETHIC|spiritualist|LEADER_ID|sanae|
 				}
 				modifier = {
 					mult = 0
@@ -282,7 +282,7 @@ country_event = { # ethic leader lottery machine
 			}
 			0 = { # 早苗（唯物）
 				modifier = {
-					add = value:touhou_leader_randomizer|ETHIC|materialist|ETHIC_NEG|spiritualist|LEADER_ID|sanae|
+					add = value:touhou_leader_sanae_randomizer|ETHIC|materialist|LEADER_ID|sanae|
 				}
 				modifier = {
 					mult = 0
