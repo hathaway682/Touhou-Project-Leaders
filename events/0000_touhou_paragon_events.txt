@@ -229,7 +229,7 @@ country_event = { # Randomizing chance to get an ethic leader, with a grace fact
 					any_owned_starbase = { has_starbase_building = recruitment_office }
 				}
 				country_event = {
-					id = paragon.40001 days = 1 random = 360
+					id = touhou_paragon.40001 days = 1 random = 360
 				}
 			}
 			0 = {
@@ -272,23 +272,11 @@ country_event = { # ethic leader lottery machine
 				modifier = {
 					add = value:touhou_leader_randomizer|ETHIC|spiritualist|ETHIC_NEG|materialist|LEADER_ID|sanae|
 				}
-				modifier = {
-					mult = 0
-					any_owned_leader = {
-						has_trait = leader_trait_miracle
-					}
-				}
 				ethic_leader_hire_event = { LEADER_ID = sanae EVENT_ID = touhou_paragon.40300 }
 			}
 			0 = { # 早苗（唯物）
 				modifier = {
 					add = value:touhou_leader_randomizer|ETHIC|materialist|ETHIC_NEG|spiritualist|LEADER_ID|sanae|
-				}
-				modifier = {
-					mult = 0
-					any_owned_leader = {
-						has_trait = leader_trait_miracle
-					}
 				}
 				ethic_leader_hire_event = { LEADER_ID = sanae EVENT_ID = touhou_paragon.40300 }
 			}

@@ -7,6 +7,10 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
+	trigger = {
+		is_ai = no
+	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -471,6 +475,11 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		if = {
+			limit = {
+				is_spiritualist =
+			}
+		}
 		switch = {
 			trigger = has_civic
 			civic_hakurei_shinto = {
