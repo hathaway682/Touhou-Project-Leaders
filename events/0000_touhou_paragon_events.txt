@@ -229,7 +229,7 @@ country_event = { # Randomizing chance to get an ethic leader, with a grace fact
 					any_owned_starbase = { has_starbase_building = recruitment_office }
 				}
 				country_event = {
-					id = paragon.40001 days = 1 random = 360
+					id = touhou_paragon.40001 days = 1 random = 360
 				}
 			}
 			0 = {
@@ -272,23 +272,11 @@ country_event = { # ethic leader lottery machine
 				modifier = {
 					add = value:touhou_leader_sanae_randomizer|ETHIC|spiritualist|LEADER_ID|sanae|
 				}
-				modifier = {
-					mult = 0
-					any_owned_leader = {
-						has_trait = leader_trait_miracle
-					}
-				}
-				ethic_leader_hire_event = { LEADER_ID = sanaei EVENT_ID = touhou_paragon.40300 }
+				ethic_leader_hire_event = { LEADER_ID = sanae EVENT_ID = touhou_paragon.40300 }
 			}
 			0 = { # 早苗（唯物）
 				modifier = {
 					add = value:touhou_leader_sanae_randomizer|ETHIC|materialist|LEADER_ID|sanae|
-				}
-				modifier = {
-					mult = 0
-					any_owned_leader = {
-						has_trait = leader_trait_miracle
-					}
 				}
 				ethic_leader_hire_event = { LEADER_ID = sanae EVENT_ID = touhou_paragon.40300 }
 			}
@@ -1033,6 +1021,17 @@ country_event = { # 早苗
 				set_leader_flag = touhou_event_leader
 			}
 		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = can_build_shirne
+				}
+			}
+			custom_tooltip = touhou_paragon.50002.tooltip
+			hidden_effect = {
+				set_country_flag = can_build_shirne
+			}
+		}
 	}
 }
 
@@ -1359,6 +1358,17 @@ country_event = { # 灵梦
 				set_leader_flag = touhou_leader
 				set_leader_flag = reimu_leader
 				set_leader_flag = touhou_event_leader
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = can_build_shirne
+				}
+			}
+			custom_tooltip = touhou_paragon.50002.tooltip
+			hidden_effect = {
+				set_country_flag = can_build_shirne
 			}
 		}
 	}
@@ -4078,6 +4088,10 @@ country_event = { # 雏
 		hidden_effect = {
 			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_hina
+			}
+			set_variable = {
+				which = jinx_stockpile
+				value = 0
 			}
 		}
 	}

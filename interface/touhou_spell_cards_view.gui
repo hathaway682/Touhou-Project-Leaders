@@ -158,7 +158,20 @@ guiTypes = {
             format = left
             vertical_alignment = center
             alwaysTransparent = yes
-            effect = touhou_no_effect
+            effect = touhou_bomb_interface_default
+        }
+
+        effectButtonType = {
+            name = "touhou_cards_text_hina"
+            quadTextureSprite = "GFX_invisible"
+            buttonText = "touhou_cards_value_hina"
+            buttonFont = malgun_goth_24
+            position = { x = 180 y = 36 }
+            size = { width = 274 height = 38 }
+            format = left
+            vertical_alignment = center
+            alwaysTransparent = yes
+            effect = touhou_bomb_interface_hina
         }
 
         effectButtonType = {
@@ -342,6 +355,32 @@ guiTypes = {
             orientation = upper_right
         }
 
+        ###雏
+        effectButtonType = {
+            name = "touhou_select_spell_text_hina"
+            quadTextureSprite = "GFX_black_box_bg"
+            buttonText = "spell_card_hina_group"
+            buttonFont = "malgun_goth_24"
+            position = { x = 48 y = 120 }
+            size = { width = 274 height = 38 }
+            format = center
+            vertical_alignment = center
+            effect = touhou_hina_spell_card_effect
+        }
+
+        effectButtonType = {
+            name = "touhou_confirm_button_hina"
+            quadTextureSprite = "GFX_standard_button_172_34"
+            position = { x = -192 y = 154 }
+            buttonText = "spell_card_hina_requirement"
+            buttonFont = "malgun_goth_24"
+            size = { width = 116 height = 38 }
+            format = center
+            vertical_alignment = center
+            effect = touhou_hina_spell_card_effect
+            orientation = upper_right
+        }
+
         ###恋
         effectButtonType = {
             name = "touhou_select_spell_text_koishi"
@@ -368,7 +407,7 @@ guiTypes = {
             orientation = upper_right
         }
 
-        ###恋
+        ###无
         effectButtonType = {
             name = "touhou_select_spell_text_none"
             quadTextureSprite = "GFX_black_box_bg"

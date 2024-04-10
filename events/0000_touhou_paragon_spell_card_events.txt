@@ -2823,3 +2823,53 @@ planet_event = {
         }
     }
 }
+
+country_event = {
+    id = touhou_paragon_spell.350
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_variable_set = jinx_stockpile
+    }
+
+    immediate = {
+        random_owned_leader = {
+            limit = {
+                has_trait = leader_trait_jinx
+            }
+            owner = {
+                set_variable = {
+                    which = jinx_max
+                    value = prev.trigger:has_skill
+                }
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = jinx_stockpile
+                    value > jinx_max
+                }
+            }
+        }
+        random_list = {
+            0 = {
+                add = jinx_max
+                mult = 2
+            }
+            0 = {
+                add = jinx_stockpile
+                random_owned_planet = {
+                    planet_event = {
+                        id = touhou_paragon_spell.300
+                    }
+                }
+                subtract_variable = {
+                    which = jinx_stockpile
+                    value = 1
+                }
+            }
+        }
+    }
+}

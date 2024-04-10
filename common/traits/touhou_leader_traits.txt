@@ -4311,6 +4311,7 @@ leader_trait_jinx = {
 	}
 	councilor_modifier = {
 		negative_traits_country = 1
+		species_leader_exp_gain = 0.25
 	}
 	on_gained_effect = {
 		change_background_job = god
@@ -4319,4 +4320,5 @@ leader_trait_jinx = {
 	selectable_weight = 0
 	immortal_leaders = yes
 	background_icon = GFX_leader_background_destiny_1
+	custom_tooltip_with_modifiers = leader_trait_jinx_tooltip
 }
