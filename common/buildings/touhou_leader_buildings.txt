@@ -61,8 +61,6 @@ building_shrine = {
 			}
 			planet_event = {
 				id = touhou_paragon.50003
-				days = 30
-				random = 330
 			}
 			set_planet_flag = sizuha_planet
 		}
@@ -76,8 +74,6 @@ building_shrine = {
 			}
 			planet_event = {
 				id = touhou_paragon.50004
-				days = 30
-				random = 330
 			}
 			set_planet_flag = minoriko_planet
 		}
@@ -92,8 +88,6 @@ building_shrine = {
 			}
 			planet_event = {
 				id = touhou_paragon.50005
-				days = 30
-				random = 330
 			}
 			set_planet_flag = hina_planet
 		}
