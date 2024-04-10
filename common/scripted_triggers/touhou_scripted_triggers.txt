@@ -86,6 +86,39 @@ has_touhou_leader_trait = {
 		has_trait = leader_trait_water
 		has_trait = leader_trait_fall
 		has_trait = leader_trait_harvest
+		has_trait = leader_trait_jinx
+	}
+}
+
+has_touhou_supernatural_trait = {
+	OR = {
+		has_trait = leader_trait_earthquake
+		has_trait = leader_trait_density
+		has_trait = leader_trait_miracle
+		has_trait = leader_trait_ice
+		has_trait = leader_trait_kongfu
+		has_trait = leader_trait_fly
+		has_trait = leader_trait_magic
+		has_trait = leader_trait_wave_length
+		has_trait = leader_trait_kendo
+		has_trait = leader_trait_time
+		has_trait = leader_trait_mind_reader
+		has_trait = leader_trait_subconscious
+		has_trait = leader_trait_wind
+		has_trait = leader_trait_trial
+		has_trait = leader_trait_distance
+		has_trait = leader_trait_destiny_manipulation
+		has_trait = leader_trait_elements
+		has_trait = leader_trait_dolls
+		has_trait = leader_trait_death
+		has_trait = leader_trait_flower
+		has_trait = leader_trait_flower_commander
+		has_trait = leader_trait_corpse_travel
+		has_trait = leader_trait_nuclear
+		has_trait = leader_trait_water
+		has_trait = leader_trait_fall
+		has_trait = leader_trait_harvest
+		has_trait = leader_trait_jinx
 	}
 }
 
@@ -96,6 +129,7 @@ has_touhou_spell_trait = {
 		has_trait = leader_trait_subconscious
 		has_trait = leader_trait_fall
 		has_trait = leader_trait_harvest
+		has_trait = leader_trait_jinx
 	}
 }
 
@@ -458,37 +492,6 @@ can_be_military_leader = {
 	}
 }
 
-has_touhou_supernatural_trait = {
-	OR = {
-		has_trait = leader_trait_earthquake
-		has_trait = leader_trait_density
-		has_trait = leader_trait_miracle
-		has_trait = leader_trait_ice
-		has_trait = leader_trait_kongfu
-		has_trait = leader_trait_fly
-		has_trait = leader_trait_magic
-		has_trait = leader_trait_wave_length
-		has_trait = leader_trait_kendo
-		has_trait = leader_trait_time
-		has_trait = leader_trait_mind_reader
-		has_trait = leader_trait_subconscious
-		has_trait = leader_trait_wind
-		has_trait = leader_trait_trial
-		has_trait = leader_trait_distance
-		has_trait = leader_trait_destiny_manipulation
-		has_trait = leader_trait_elements
-		has_trait = leader_trait_dolls
-		has_trait = leader_trait_death
-		has_trait = leader_trait_flower
-		has_trait = leader_trait_flower_commander
-		has_trait = leader_trait_corpse_travel
-		has_trait = leader_trait_nuclear
-		has_trait = leader_trait_water
-		has_trait = leader_trait_fall
-		has_trait = leader_trait_harvest
-	}
-}
-
 planet_leader_has_trait = {
 	planet = {
 		exists = leader
@@ -551,6 +554,15 @@ did_not_select_spell_leader = {
 			}
 			any_owned_leader = {
 				has_trait = leader_trait_harvest
+			}
+		}
+		AND = {
+			check_variable = {
+				which = seleted_char_id
+				value = 37
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_jinx
 			}
 		}
 		AND = {

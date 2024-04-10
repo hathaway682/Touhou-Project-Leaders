@@ -27,6 +27,46 @@ touhou_no_effect = {
 	}
 }
 
+touhou_bomb_interface_default = {
+	potential = {
+		NAND = {
+			check_variable = {
+				which = seleted_char_id
+				value = 37
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_jinx
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+
+	}
+}
+
+touhou_bomb_interface_hina = {
+	potential = {
+		check_variable = {
+			which = seleted_char_id
+			value = 37
+		}
+		any_owned_leader = {
+			has_trait = leader_trait_jinx
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+
+	}
+}
+
 touhou_subtract_char_id_effect = {
 	potential = {
 		always = yes
@@ -1140,6 +1180,273 @@ touhou_marisa_spell_card_effect = {
 					}
 				}
 				marisa_spell_card_6_effect = yes
+			}
+			from = {
+				country_event = {
+					id = touhou_paragon_spell.10000
+				}
+			}
+		}
+	}
+}
+
+touhou_hina_spell_card_text = {
+	potential = {
+		from = {
+			check_variable = {
+				which = seleted_char_id
+				value = 37
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_jinx
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = spell_card_hina_tooltip
+	}
+}
+
+touhou_hina_spell_card_effect = {
+	potential = {
+		from = {
+			check_variable = {
+				which = seleted_char_id
+				value = 37
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_jinx
+			}
+		}
+	}
+	allow = {
+		hidden_trigger = {
+			OR = {
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						OR = {
+							AND = {
+								check_variable_arithmetic = {
+									which = value:bombs_plus_jinx
+									value >= 1
+								}
+								check_variable = {
+									which = ex_charge
+									value = 0
+								}
+							}
+							check_variable_arithmetic = {
+								which = value:bombs_plus_jinx
+								value >= 5
+							}
+						}
+					}
+					hina_card_1_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+						OR = {
+							AND = {
+								check_variable_arithmetic = {
+									which = value:bombs_plus_jinx
+									value >= 3
+								}
+								check_variable = {
+									which = ex_charge
+									value = 0
+								}
+							}
+							check_variable_arithmetic = {
+								which = value:bombs_plus_jinx
+								value >= 6
+							}
+						}
+					}
+					hina_card_2_trigger = yes
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
+						OR = {
+							AND = {
+								check_variable_arithmetic = {
+									which = value:bombs_plus_jinx
+									value >= 4
+								}
+								check_variable = {
+									which = ex_charge
+									value = 0
+								}
+							}
+							check_variable_arithmetic = {
+								which = value:bombs_plus_jinx
+								value >= 6
+							}
+						}
+					}
+					hina_card_3_trigger = yes
+				}
+				AND = {
+					From = {
+						OR = {
+							AND = {
+								check_variable_arithmetic = {
+									which = value:bombs_plus_jinx
+									value >= 2
+								}
+								check_variable = {
+									which = ex_charge
+									value = 0
+								}
+							}
+							check_variable_arithmetic = {
+								which = value:bombs_plus_jinx
+								value >= 7
+							}
+						}
+					}
+					hina_card_4_trigger = yes
+				}
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						check_variable = {
+							which = ex_charge
+							value = 0
+						}
+					}
+				}
+				hina_spell_card_1_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						check_variable = {
+							which = ex_charge
+							value = 1
+						}
+					}
+				}
+				hina_spell_card_1_ex_effect = yes
+			}
+			if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+						check_variable = {
+							which = ex_charge
+							value = 0
+						}
+					}
+				}
+				hina_spell_card_2_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+						check_variable = {
+							which = ex_charge
+							value = 1
+						}
+					}
+				}
+				hina_spell_card_2_ex_effect = yes
+			}
+			if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
+						check_variable = {
+							which = ex_charge
+							value = 0
+						}
+					}
+				}
+				hina_spell_card_3_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
+						check_variable = {
+							which = ex_charge
+							value = 1
+						}
+					}
+				}
+				hina_spell_card_3_ex_effect = yes
+			}
+			if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 4
+						}
+						check_variable = {
+							which = ex_charge
+							value = 0
+						}
+					}
+				}
+				hina_spell_card_4_effect = yes
+			}
+			else_if = {
+				limit = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 4
+						}
+						check_variable = {
+							which = ex_charge
+							value = 1
+						}
+					}
+				}
+				hina_spell_card_4_ex_effect = yes
 			}
 			from = {
 				country_event = {

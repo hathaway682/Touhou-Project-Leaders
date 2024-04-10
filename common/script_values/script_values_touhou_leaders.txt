@@ -258,6 +258,10 @@ touhou_leader_id = {
 		has_trait = leader_trait_harvest
 	}
 	modifier = {
+		add = 37
+		has_trait = leader_trait_jinx
+	}
+	modifier = {
 		add = 38
 		has_trait = leader_trait_water
 	}
@@ -319,10 +323,14 @@ leader_num_spell_cards = {
 		add = 2
 		has_trait = leader_trait_harvest
 	}
+	modifier = {
+		add = 4
+		has_trait = leader_trait_jinx
+	}
 }
 
 mana_need_per_bomb = {
-	base = 5
+	base = 3
 	complex_trigger_modifier = {
 		trigger = resource_stockpile_compare
 		parameters = {
@@ -344,4 +352,16 @@ num_spell_card_leaders = {
 		}
 		mode = add
 	}
+}
+
+bombs_plus_jinx = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = resource_stockpile_compare
+		parameters = {
+			resource = thl_bomb
+		}
+		mode = add
+	}
+	add = jinx_stockpile
 }

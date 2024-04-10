@@ -8,10 +8,7 @@ touhou_shrine_ruin = {
 	level = 1
 
 	spawn_chance = {
-		modifier = {
-			add = 100
-			is_colonizable = yes
-		}
+		base = 0
 	}
 
 	on_spawn = {

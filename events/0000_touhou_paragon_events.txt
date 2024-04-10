@@ -278,7 +278,7 @@ country_event = { # ethic leader lottery machine
 						has_trait = leader_trait_miracle
 					}
 				}
-				ethic_leader_hire_event = { LEADER_ID = sanaei EVENT_ID = touhou_paragon.40300 }
+				ethic_leader_hire_event = { LEADER_ID = sanae EVENT_ID = touhou_paragon.40300 }
 			}
 			0 = { # 早苗（唯物）
 				modifier = {
@@ -1033,6 +1033,17 @@ country_event = { # 早苗
 				set_leader_flag = touhou_event_leader
 			}
 		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = can_build_shirne
+				}
+			}
+			custom_tooltip = touhou_paragon.50002.tooltip
+			hidden_effect = {
+				set_country_flag = can_build_shirne
+			}
+		}
 	}
 }
 
@@ -1359,6 +1370,17 @@ country_event = { # 灵梦
 				set_leader_flag = touhou_leader
 				set_leader_flag = reimu_leader
 				set_leader_flag = touhou_event_leader
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = can_build_shirne
+				}
+			}
+			custom_tooltip = touhou_paragon.50002.tooltip
+			hidden_effect = {
+				set_country_flag = can_build_shirne
 			}
 		}
 	}
@@ -4078,6 +4100,10 @@ country_event = { # 雏
 		hidden_effect = {
 			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_hina
+			}
+			set_variable = {
+				which = jinx_stockpile
+				value = 0
 			}
 		}
 	}

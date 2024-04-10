@@ -1986,3 +1986,458 @@ defined_text = {
 
 	default = touhou_can_confirm
 }
+
+defined_text = {
+	name = GetSelectedCardHina
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 1
+				}
+				check_variable = {
+					which = ex_charge
+					value = 0
+				}
+			}
+		}
+		localization_key = spell_card_hina_1
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 1
+				}
+				check_variable = {
+					which = ex_charge
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_hina_1_ex
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 2
+				}
+				check_variable = {
+					which = ex_charge
+					value = 0
+				}
+			}
+		}
+		localization_key = spell_card_hina_2
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 2
+				}
+				check_variable = {
+					which = ex_charge
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_hina_2_ex
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 3
+				}
+				check_variable = {
+					which = ex_charge
+					value = 0
+				}
+			}
+		}
+		localization_key = spell_card_hina_3
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 3
+				}
+				check_variable = {
+					which = ex_charge
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_hina_3_ex
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 4
+				}
+				check_variable = {
+					which = ex_charge
+					value = 0
+				}
+			}
+		}
+		localization_key = spell_card_hina_4
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 4
+				}
+				check_variable = {
+					which = ex_charge
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_hina_4_ex
+	}
+	default = spell_card_none
+}
+
+defined_text = {
+	name = GetSelectedCardHinaDesc
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 1
+				}
+				check_variable = {
+					which = ex_charge
+					value = 0
+				}
+			}
+		}
+		localization_key = spell_card_hina_1_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 1
+				}
+				check_variable = {
+					which = ex_charge
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_hina_1_ex_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 2
+				}
+				check_variable = {
+					which = ex_charge
+					value = 0
+				}
+			}
+		}
+		localization_key = spell_card_hina_2_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 2
+				}
+				check_variable = {
+					which = ex_charge
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_hina_2_ex_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 3
+				}
+				check_variable = {
+					which = ex_charge
+					value = 0
+				}
+			}
+		}
+		localization_key = spell_card_hina_3_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 3
+				}
+				check_variable = {
+					which = ex_charge
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_hina_3_ex_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 4
+				}
+				check_variable = {
+					which = ex_charge
+					value = 0
+				}
+			}
+		}
+		localization_key = spell_card_hina_4_desc
+	}
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 4
+				}
+				check_variable = {
+					which = ex_charge
+					value = 1
+				}
+			}
+		}
+		localization_key = spell_card_hina_4_ex_desc
+	}
+	default = spell_card_none
+}
+
+defined_text = {
+	name = GetSelectedCardRequirementHina
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+					}
+					NOT = {
+						hina_card_1_trigger = yes
+					}
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+					}
+					NOT = {
+						hina_card_2_trigger = yes
+					}
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
+					}
+					NOT = {
+						hina_card_3_trigger = yes
+					}
+				}
+				AND = {
+					From = {
+						check_variable = {
+							which = seleted_card_id
+							value = 4
+						}
+					}
+					NOT = {
+						hina_card_4_trigger = yes
+					}
+				}
+			}
+		}
+		localization_key = touhou_error_wrong_target
+	}
+
+	text = {
+		trigger = {
+			from = {
+				OR = {
+					AND = {
+						OR = {
+							AND = {
+								check_variable = {
+									which = seleted_card_id
+									value = 1
+								}
+								check_variable = {
+									which = ex_charge
+									value = 0
+								}
+							}
+						}
+						check_variable_arithmetic = {
+							which = value:bombs_plus_jinx
+							value < 1
+						}
+					}
+					AND = {
+						AND = {
+							check_variable = {
+								which = seleted_card_id
+								value = 4
+							}
+							check_variable = {
+								which = ex_charge
+								value = 0
+							}
+						}
+						check_variable_arithmetic = {
+							which = value:bombs_plus_jinx
+							value < 2
+						}
+					}
+					AND = {
+						AND = {
+							check_variable = {
+								which = seleted_card_id
+								value = 2
+							}
+							check_variable = {
+								which = ex_charge
+								value = 0
+							}
+						}
+						check_variable_arithmetic = {
+							which = value:bombs_plus_jinx
+							value < 3
+						}
+					}
+					AND = {
+						AND = {
+							check_variable = {
+								which = seleted_card_id
+								value = 3
+							}
+							check_variable = {
+								which = ex_charge
+								value = 0
+							}
+						}
+						check_variable_arithmetic = {
+							which = value:bombs_plus_jinx
+							value < 4
+						}
+					}
+					AND = {
+						AND = {
+							check_variable = {
+								which = seleted_card_id
+								value = 1
+							}
+							check_variable = {
+								which = ex_charge
+								value = 1
+							}
+						}
+						check_variable_arithmetic = {
+							which = value:bombs_plus_jinx
+							value < 5
+						}
+					}
+					AND = {
+						OR = {
+							AND = {
+								check_variable = {
+									which = seleted_card_id
+									value = 2
+								}
+								check_variable = {
+									which = ex_charge
+									value = 1
+								}
+							}
+							AND = {
+								check_variable = {
+									which = seleted_card_id
+									value = 3
+								}
+								check_variable = {
+									which = ex_charge
+									value = 1
+								}
+							}
+						}
+						check_variable_arithmetic = {
+							which = value:bombs_plus_jinx
+							value < 6
+						}
+					}
+					AND = {
+						AND = {
+							check_variable = {
+								which = seleted_card_id
+								value = 4
+							}
+							check_variable = {
+								which = ex_charge
+								value = 1
+							}
+						}
+						check_variable_arithmetic = {
+							which = value:bombs_plus_jinx
+							value < 7
+						}
+					}
+				}
+			}
+		}
+		localization_key = touhou_error_no_resource
+	}
+
+	text = {
+		trigger = {
+			From = {
+				check_variable = {
+					which = seleted_card_id
+					value = 0
+				}
+			}
+		}
+		localization_key = touhou_error_no_spell
+	}
+
+	default = touhou_can_confirm
+}

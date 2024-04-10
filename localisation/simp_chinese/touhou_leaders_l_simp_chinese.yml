@@ -455,7 +455,7 @@
  marisa1:0 "普通的魔法使，在偷窃行为被发现后经谈判加入我们，擅长光与热的魔法。"
  marisa1_catch_phrase:0 "弹幕最重要的是火力DA☆ZE！"
 
- CLASS_TIER_MARISA:0 "§r普通的魔法使§!"
+ CLASS_TIER_MARISA:0 "§l普通的魔法使§!"
 
  touhou_paragon.40700.name: "$NAME_Marisa$"
 
@@ -983,7 +983,7 @@
  leader_trait_trial_effect: "解锁§Y根除犯罪§!决议，消耗$r_unity$和$r_energy$清除一个星球的§Y犯罪修正§!或§Y犯罪集团分部§!"
  leader_trait_mirror: "天知 地知 我知 人知"
  leader_trait_mirror_desc: "这位领袖的宝器使得一切罪恶都无所遁形，审判得以获得公正的裁决。"
- leader_trait_mirror_effect: "解锁§Y净颇梨审判§!决议，以大幅降低£happiness£§Y幸福度§!和$r_research$产出为代价清除£crime£§Y犯罪度§!并大幅提高£stability£§Y稳定度§!和$r_unity$产出\n解锁§Y部署悔悟棒部队§!决议，使得£job_enforcer£§Y执法者§!产出更多£stability£§Y稳定度§!，降低更多£crime£§Y犯罪度§!，并增加§Y防御部队伤害§!\n§Y每个宝器只能部署在一个星球上§!"
+ leader_trait_mirror_effect: "\n解锁诸多可用的§l符卡§!。"
  leader_trait_sermon: "德之说示"
  leader_trait_sermon_desc: "这位领袖在她所管辖的星球四处巡游进行说教，使不同身份的居民都尽自己的本分。"
  leader_trait_death_deal: "有钱能使鬼推磨"
@@ -1978,7 +1978,7 @@
 
  leader_trait_jinx:0 "储存厄运程度的能力"
  leader_trait_jinx_desc:0 "键山雏能够代替别人承受厄运，并将其收集起来，被收集的厄运则会成为她的力量。"
- leader_trait_jinx_tooltip:0 "每当其他领袖将要获得随机§R负面特质§!时，阻止该特质的获取，并为§H键山雏§!提供§Y1§!点§G厄运储存§!，§G厄运储存§!可以代替§HBOMB§!用以施放键山雏的§Y符卡§!，能够安全储存的厄运量等于§H键山雏§!的§Y等级§!，超过上限的§G厄运储存§!有概率泄露并使玩家承受§R负面事件§!。\n\n当前键山雏拥有§Y[From.jinx_stockpile]§!点§G厄运储存§!。"
+ leader_trait_jinx_tooltip:0 "每当其他领袖将要获得随机§R负面特质§!时，阻止该特质的获取，并为§H键山雏§!提供§Y1§!点§G厄运储存§!，能够安全储存的厄运量等于§H键山雏§!的§Y等级§!，超过上限的§G厄运储存§!有概率泄露并使玩家承受§R负面事件§!。\n\n解锁诸多可用的§l符卡§!，§G厄运储存§!可以代替§HBOMB§!用以施放键山雏的§l符卡§!。\n\n当前键山雏拥有§Y[owner.jinx_stockpile]§!点§G厄运储存§!。"
 
  MESSAGE_JINX_STOCKPILE_TITLE: "厄运储存"
  MESSAGE_JINX_STOCKPILE_DESC: "§Y键山雏§!已经阻止§Y$LEADER$§!获得随机负面特质，并增加了§Y1§!点§G厄运储存§!。"

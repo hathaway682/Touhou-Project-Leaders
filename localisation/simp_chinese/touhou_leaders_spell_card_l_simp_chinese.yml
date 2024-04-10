@@ -87,7 +87,7 @@
  #风神录
  touhou_selected_char_35:0 "秋静叶" #符卡已完成
  touhou_selected_char_36:0 "秋穰子" #符卡已完成
- touhou_selected_char_37:0 "键山雏" #计划中
+ touhou_selected_char_37:0 "键山雏" #符卡已完成
  touhou_selected_char_38:0 "河城荷取"
  touhou_selected_char_39:0 "犬走椛" #计划中
  touhou_selected_char_40:0 "东风谷早苗"
@@ -148,13 +148,13 @@
  spell_card_marisa_tooltip:0 "[GetSelectedCardMarisaDesc]"
  spell_card_marisa_requirement:0 "[GetSelectedCardRequirementMarisa]"
  spell_card_marisa_1:0 "恋符「Master Spark」"
- spell_card_marisa_1_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星或小行星，且轨道上没有法阵的§Y天体§!。\n\n在天体上方生成一个持续使用§YMaster Spark§!攻击的法阵，法阵存在§Y180§!天。"
+ spell_card_marisa_1_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n在天体上方生成一个持续使用§YMaster Spark§!攻击的法阵，法阵存在§Y180§!天。"
  spell_card_marisa_1_ex:0 "魔炮「Final Spark」"
- spell_card_marisa_1_ex_desc:0 "COST：§Y4§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星或小行星，且轨道上没有法阵的§Y天体§!。\n\n在天体上方生成一个持续使用两挺§YFinal Spark§!攻击的法阵，法阵存在§Y360§!天。"
+ spell_card_marisa_1_ex_desc:0 "COST：§Y4§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n在天体上方生成一个持续使用两挺§YFinal Spark§!攻击的法阵，法阵存在§Y360§!天。"
  spell_card_marisa_2:0 "魔符「Stardust Reverie」"
- spell_card_marisa_2_desc:0 "COST：§Y2§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星或小行星，且轨道上没有法阵的§Y天体§!。\n\n使用魔法强化舰队武器，在星系内生成一个为友方提供§G33%§!§Y舰船武器射速§!增益的法阵，法阵存在§Y180§!天。"
+ spell_card_marisa_2_desc:0 "COST：§Y2§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n使用魔法强化舰队武器，在星系内生成一个为友方提供§G33%§!§Y舰船武器射速§!增益的法阵，法阵存在§Y180§!天。"
  spell_card_marisa_2_ex:0 "黑魔「Event Horizon」"
- spell_card_marisa_2_ex_desc:0 "COST：§Y3§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星或小行星，且轨道上没有法阵的§Y天体§!。\n\n用魔法创造结界，在星系内生成一个为友方提供§G33%§!§Y舰船武器射速§!增益和为敌方提供§R33%§!§Y舰船武器射速§!减益，§R50%§!§Y撤退概率§!和§Y紧急超光速冷却§!惩罚的法阵，法阵存在§Y360§!天。"
+ spell_card_marisa_2_ex_desc:0 "COST：§Y3§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n用魔法创造结界，在星系内生成一个为友方提供§G33%§!§Y舰船武器射速§!增益和为敌方提供§R33%§!§Y舰船武器射速§!减益，§R50%§!§Y撤退概率§!和§Y紧急超光速冷却§!惩罚的法阵，法阵存在§Y360§!天。"
  spell_card_marisa_3:0 "仪符「Orrery's Sun」"
  spell_card_marisa_3_desc:0 "COST：§Y2§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的§Y我方舰队§!（包括她自己的）。\n条件：拥有£engineering£§Y战列舰§!科技，且至少有一种可用的§Y浮游炮（X）§!设计。\n\n在舰队中添加§Y4§!座随机存在设计的§Y浮游炮（X）§!，设计可在舰船设计器中编辑。"
  spell_card_marisa_3_ex:0 "天仪「Orrery's Solar System」"
@@ -294,9 +294,9 @@
  spell_card_hina_2_ex:0 "疵痕「损坏的护符」"
  spell_card_hina_2_ex_desc:0 "COST：§G6§!\n目标：任意与§H$NAME_Hina$§!处在同一星系且未受同类符卡影响的§Y敌对舰队§!。\n\n令敌方舰队的装甲和护盾出现明显的裂口，§Y装甲硬化§!和§Y护盾硬化§!下降§R75%§!，持续§Y60§!天。"
  spell_card_hina_3:0 "恶灵「Misfortune's Wheel」"
- spell_card_hina_3_desc:0 "COST：§G4§!\n目标：任意与§H$NAME_Hina$§!处在同一星系的非恒星或小行星，且轨道上没有法阵的§Y天体§!。\n\n产生一个厄运的漩涡，持续§Y180§!天，星系内的敌方舰队的§Y命中§!和§Y闪避§!受其影响会下降§R30%§!，且§P无法撤出战斗§!。"
+ spell_card_hina_3_desc:0 "COST：§G4§!\n目标：任意与§H$NAME_Hina$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n产生一个厄运的漩涡，持续§Y180§!天，星系内的敌方舰队的§Y命中§!和§Y闪避§!受其影响会下降§R30%§!，且§P无法撤出战斗§!。"
  spell_card_hina_3_ex:0 "悲运「大钟婆之火」"
- spell_card_hina_3_ex_desc:0 "COST：§G6§!\n目标：任意与§H$NAME_Hina$§!处在同一星系的非恒星或小行星，且轨道上没有法阵的§Y天体§!。\n\n将厄运实体化为火焰的漩涡，持续§Y360§!天，星系内的敌方舰队的§Y命中§!和§Y闪避§!受其影响会下降§R50%§!，§Y船体§!会持续承受伤害，且§P无法撤出战斗§!。"
+ spell_card_hina_3_ex_desc:0 "COST：§G6§!\n目标：任意与§H$NAME_Hina$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n将厄运实体化为火焰的漩涡，持续§Y360§!天，星系内的敌方舰队的§Y命中§!和§Y闪避§!受其影响会下降§R50%§!，§Y船体§!会持续承受伤害，且§P无法撤出战斗§!。"
  spell_card_hina_4:0 "创符「Pain Flow」"
  spell_card_hina_4_desc:0 "COST：§G2§!\n目标：任意其他国家的未受同类符卡影响的§Y殖民地§!。\n\n用巨量的厄运冲刷某地，目标星球的£mod_pop_happiness£§Y人口幸福度§!在§Y360§!天内下降§Y100%§!，并承受随机§R负面事件§!。"
  spell_card_hina_4_ex:0 "创符「流刑人形」"
@@ -312,6 +312,28 @@
  AURA_MISFORTUNE_WHEEL_2: "悲运「大钟婆之火」"
  NAME_Misfortune_Wheel_2: "悲运「大钟婆之火」"
  friendly_aura_misfortune_wheel: "厄运漩涡"
+
+ spell_card_shikieiki_group:0 "[GetSelectedCardShikieiki]"
+ spell_card_shikieiki_tooltip:0 "[GetSelectedCardShikieikiDesc]"
+ spell_card_shikieiki_requirement:0 "[GetSelectedCardRequirementShikieiki]"
+ spell_card_shikieiki_1:0 "审判「Last Judgement」"
+ spell_card_shikieiki_1_desc:0 "COST：§G1§!\n目标：任意我方§Y星球§!。\n\n对目标星球的全部罪行进行最终审判，消除该殖民地所有的§Y犯罪行为§!，例如§Y犯罪负面修正§!和§Y犯罪集团分部§!。"
+ spell_card_shikieiki_2:0 "罪符「罪孽的分量」"
+ spell_card_shikieiki_2_desc:0 "COST：§G2§!\n目标：任意我方§Y星球§!。\n\n部署一支悔悟棒镇暴部队，使得£job_enforcer£§Y执法者§!产出更多£stability£§Y稳定度§!，降低更多£crime£§Y犯罪度§!，并增加§Y防御部队伤害§!。"
+ spell_card_shikieiki_3:0 "审判「净颇梨审判」"
+ spell_card_shikieiki_3_desc:0 "COST：§G3§!\n目标：任意我方§Y星球§!。\n\n榨干一个人全部的个人信息的宝镜将悬于星球之上，以大幅降低£happiness£§Y幸福度§!和$r_research$产出为代价清除£crime£§Y犯罪度§!并大幅提高£stability£§Y稳定度§!和$r_unity$产出。再次对其他星球使用使用会转移宝镜，对已有该效果的星球使用会收回宝镜。"
+
+ spell_card_onoduka_group:0 "[GetSelectedCardOnoduka]"
+ spell_card_onoduka_tooltip:0 "[GetSelectedCardOnodukaDesc]"
+ spell_card_onoduka_requirement:0 "[GetSelectedCardRequirementOnoduka]"
+ spell_card_onoduka_1:0 "地狱「无间之狭间」"
+ spell_card_onoduka_1_desc:0 "COST：§G3§!\n目标：任意与§H$NAME_Onoduka$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n制造一个操纵距离的法阵，大大提高我方舰队射程的同时大大降低敌方舰队射程。"
+ spell_card_onoduka_2:0 "死歌「八重雾中渡」"
+ spell_card_onoduka_2_desc:0 "COST：§G2§!\n目标：任意与§H$NAME_Onoduka$§!处在同一星系的§Y殖民地§!。\n\n死神滥用职权的能力之一，在目标星球上空召唤一支§Y幽灵舰队§!，规模取决于星球人口，舰队会跟随小町的舰队行动。"
+ spell_card_onoduka_3:0 "恨符「充满留恋的紧缚灵」"
+ spell_card_onoduka_3_desc:0 "COST：§G3§!\n目标：任意敌方§Y舰队§!。\n条件：小町正在指挥§Y舰队§!或管理§Y星球§!。\n\n死神滥用职权的能力之一，从小町所在位置召唤一队战力略高于目标的§Y幽灵舰队§!追踪目标舰队，直到目标舰队毁灭或者§Y幽灵舰队§!自身被击败才会消失。"
+ spell_card_onoduka_4:0 "薄命「余命无几许」"
+ spell_card_onoduka_4_desc:0 "COST：§G3§!\n目标：任意敌方§Y舰队§!。\n\n榨干一个人全部的个人信息的宝镜将悬于星球之上，以大幅降低£happiness£§Y幸福度§!和$r_research$产出为代价清除£crime£§Y犯罪度§!并大幅提高£stability£§Y稳定度§!和$r_unity$产出。再次对其他星球使用使用会转移宝镜，对已有该效果的星球使用会收回宝镜。"
 
  #spell_card_hina_5:0 "创符「流刑人偶」"
  #spell_card_hina_5_desc:0 "COST：§G10§!\n目标：任意敌对§Y领袖§!指挥的对象。\n\n看来某个人要倒霉了，将目标领袖流放§Y360§!天。"
