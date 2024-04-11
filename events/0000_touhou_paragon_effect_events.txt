@@ -6970,26 +6970,10 @@ country_event = {
                         has_trait = leader_trait_fall
                     }
                 }
-                sector = {
-                    sector_capital = {
-                        exists = leader
-                        leader = {
-                            has_trait = leader_trait_fall
-                        }
-                    }
-                }
                 AND = {
                     exists = leader
                     leader = {
                         has_trait = leader_trait_harvest
-                    }
-                }
-                sector = {
-                    sector_capital = {
-                        exists = leader
-                        leader = {
-                            has_trait = leader_trait_harvest
-                        }
                     }
                 }
             }
@@ -6998,54 +6982,13 @@ country_event = {
 
     immediate = {
         every_owned_planet = {
-            if = {
-                limit = {
-                    has_deposit = yes
-                    OR = {
-                        AND = {
-                            exists = leader
-                            leader = {
-                                has_trait = leader_trait_fall
-                            }
-                        }
-                        sector = {
-                            sector_capital = {
-                                exists = leader
-                                leader = {
-                                    has_trait = leader_trait_fall
-                                }
-                            }
-                        }
-                    }
-                }
-                planet_event = {
-                    id = touhou_paragon_effect.71
-                    days = 270
-                }
+            planet_event = {
+                id = touhou_paragon_effect.71
+                days = 270
             }
-            if = {
-                limit = {
-                    OR = {
-                        AND = {
-                            exists = leader
-                            leader = {
-                                has_trait = leader_trait_harvest
-                            }
-                        }
-                        sector = {
-                            sector_capital = {
-                                exists = leader
-                                leader = {
-                                    has_trait = leader_trait_harvest
-                                }
-                            }
-                        }
-                    }
-                }
-                planet_event = {
-                    id = touhou_paragon_effect.72
-                    days = 270
-                }
+            planet_event = {
+                id = touhou_paragon_effect.72
+                days = 270
             }
         }
     }
@@ -7057,16 +7000,39 @@ planet_event = {
     is_triggered_only = yes
 
     immediate = {
-        random_deposit = {
+        if = {
             limit = {
-                has_deposit_category = deposit_cat_blockers_natural
-                planet = {
-                    NOT = { has_building = building_ranger_lodge }
+                any_deposit = {
+                    has_deposit_category = deposit_cat_blockers_natural
+                }
+                OR = {
+                    AND = {
+                        exists = leader
+                        leader = {
+                            has_trait = leader_trait_fall
+                        }
+                    }
+                    sector = {
+                        sector_capital = {
+                            exists = leader
+                            leader = {
+                                has_trait = leader_trait_fall
+                            }
+                        }
+                    }
                 }
             }
-            clear_blocker = yes
+            random_deposit = {
+                limit = {
+                    has_deposit_category = deposit_cat_blockers_natural
+                    planet = {
+                        NOT = { has_building = building_ranger_lodge }
+                    }
+                }
+                clear_blocker = yes
+            }
+            add_deposit = d_maple_forest
         }
-        add_deposit = d_maple_forest
     }
 }
 
@@ -7076,99 +7042,119 @@ planet_event = {
     is_triggered_only = yes
 
     immediate = {
-        export_trigger_value_to_variable = {
-            variable = monthly_food
-            trigger = planet_resource_compare
-            parameters = {
-                type = produces
-                resource = food
-            }
-        }
-        export_trigger_value_to_variable = {
-            variable = monthly_minerals
-            trigger = planet_resource_compare
-            parameters = {
-                type = produces
-                resource = minerals
-            }
-        }
-        export_trigger_value_to_variable = {
-            variable = monthly_energy
-            trigger = planet_resource_compare
-            parameters = {
-                type = produces
-                resource = energy
-            }
-        }
         if = {
             limit = {
-                exists = leader
-                leader = {
-                    has_trait = leader_trait_harvest
-                }
-            }
-            owner = {
-                add_resource = {
-                    food = 9
-                    multiplier = monthly_food
-                }
-                add_resource = {
-                    minerals = 9
-                    multiplier = monthly_minerals
-                }
-                add_resource = {
-                    energy = 9
-                    multiplier = monthly_energy
-                }
-            }
-        }
-        else_if = {
-            limit = {
-                sector = {
-                    sector_capital = {
+                OR = {
+                    AND = {
                         exists = leader
                         leader = {
                             has_trait = leader_trait_harvest
                         }
                     }
+                    sector = {
+                        sector_capital = {
+                            exists = leader
+                            leader = {
+                                has_trait = leader_trait_harvest
+                            }
+                        }
+                    }
                 }
             }
-            owner = {
-                add_resource = {
-                    food = 3
-                    multiplier = monthly_food
-                }
-                add_resource = {
-                    minerals = 3
-                    multiplier = monthly_minerals
-                }
-                add_resource = {
-                    energy = 3
-                    multiplier = monthly_energy
-                }
-            }
-        }
-        if = {
-            limit = {
-                planet_resource_compare = {
-                    type = balance
+            export_trigger_value_to_variable = {
+                variable = monthly_food
+                trigger = planet_resource_compare
+                parameters = {
+                    type = produces
                     resource = food
-                    value > 0
                 }
             }
-            set_variable = {
-                which = food_per_pop
-                value = monthly_food
+            export_trigger_value_to_variable = {
+                variable = monthly_minerals
+                trigger = planet_resource_compare
+                parameters = {
+                    type = produces
+                    resource = minerals
+                }
             }
-            divide_variable = {
-                which = food_per_pop
-                value = trigger:num_pops
+            export_trigger_value_to_variable = {
+                variable = monthly_energy
+                trigger = planet_resource_compare
+                parameters = {
+                    type = produces
+                    resource = energy
+                }
             }
-            remove_modifier = harvest_happiness
-            add_modifier = {
-                modifier = harvest_happiness
-                days = -1
-                multiplier = food_per_pop
+            if = {
+                limit = {
+                    exists = leader
+                    leader = {
+                        has_trait = leader_trait_harvest
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 9
+                        multiplier = monthly_food
+                    }
+                    add_resource = {
+                        minerals = 9
+                        multiplier = monthly_minerals
+                    }
+                    add_resource = {
+                        energy = 9
+                        multiplier = monthly_energy
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    sector = {
+                        sector_capital = {
+                            exists = leader
+                            leader = {
+                                has_trait = leader_trait_harvest
+                            }
+                        }
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 3
+                        multiplier = monthly_food
+                    }
+                    add_resource = {
+                        minerals = 3
+                        multiplier = monthly_minerals
+                    }
+                    add_resource = {
+                        energy = 3
+                        multiplier = monthly_energy
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    planet_resource_compare = {
+                        type = balance
+                        resource = food
+                        value > 0
+                    }
+                }
+                set_variable = {
+                    which = food_per_pop
+                    value = monthly_food
+                }
+                divide_variable = {
+                    which = food_per_pop
+                    value = trigger:num_pops
+                }
+                remove_modifier = harvest_happiness
+                add_modifier = {
+                    modifier = harvest_happiness
+                    days = -1
+                    multiplier = food_per_pop
+                }
             }
         }
     }
