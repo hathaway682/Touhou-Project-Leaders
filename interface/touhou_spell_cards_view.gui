@@ -313,7 +313,7 @@ guiTypes = {
             size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
-            effect = touhou_sizuha_spell_card_effect
+            effect = touhou_sizuha_spell_card_text
         }
 
         effectButtonType = {
@@ -339,7 +339,7 @@ guiTypes = {
             size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
-            effect = touhou_minoriko_spell_card_effect
+            effect = touhou_minoriko_spell_card_text
         }
 
         effectButtonType = {
@@ -365,7 +365,7 @@ guiTypes = {
             size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
-            effect = touhou_hina_spell_card_effect
+            effect = touhou_hina_spell_card_text
         }
 
         effectButtonType = {
@@ -429,7 +429,7 @@ guiTypes = {
             size = { width = 116 height = 38 }
             format = center
             vertical_alignment = center
-            effect = touhou_none_spell_card_effect
+            effect = touhou_none_spell_card_text
             orientation = upper_right
         }
 
@@ -443,7 +443,7 @@ guiTypes = {
             format = left
             vertical_alignment = center
             alwaysTransparent = yes
-            effect = touhou_no_effect
+            effect = touhou_none_spell_card_effect
         }
     }
 }
