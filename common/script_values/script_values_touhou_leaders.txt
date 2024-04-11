@@ -34,26 +34,6 @@ touhou_leader_randomizer = {
 	}
 }
 
-touhou_leader_sanae_randomizer = {
-	base = 1
-	modifier = {
-		factor = 5
-		has_ethic = ethic_$ETHIC$
-	}
-	modifier = {
-		factor = 10
-		has_ethic = ethic_fanatic_$ETHIC$
-	}
-	modifier = {
-		factor = 0
-		has_global_flag = $LEADER_ID$
-	}
-	modifier = {
-		factor = 0
-		has_country_flag = dismissed_$LEADER_ID$
-	}
-}
-
 enforcer_job_number = {
 	base = 0
 	complex_trigger_modifier = {
