@@ -13,7 +13,7 @@
 ####################
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_DEFAULT"
+	key = "COMBAT_COMPUTER_TOUHOU_DEFAULT"
 	size = small
 	icon = "GFX_ship_part_computer_default"
 	icon_frame = 1
@@ -33,7 +33,7 @@ utility_component_template = {
 ########################
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_PICKET_DEFAULT"
+	key = "COMBAT_COMPUTER_TOUHOU_PICKET_DEFAULT"
 	size = small
 	icon = "GFX_ship_part_computer_default"
 	icon_frame = 1
@@ -49,7 +49,7 @@ utility_component_template = {
 	class_restriction = { shipclass_military }
 	size_restriction = { elite_destroyer }
 	component_set = "combat_computers"
-	upgrades_to = "COMBAT_COMPUTER_PICKET_BASIC"
+	upgrades_to = "COMBAT_COMPUTER_TOUHOU_PICKET_BASIC"
 
 	ai_weight = {
 		weight = 1
@@ -57,7 +57,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_LINE_DEFAULT"
+	key = "COMBAT_COMPUTER_TOUHOU_LINE_DEFAULT"
 	size = small
 	icon = "GFX_ship_part_computer_default"
 	icon_frame = 1
@@ -73,7 +73,7 @@ utility_component_template = {
 	class_restriction = { shipclass_military }
 	size_restriction = { elite_destroyer elite_cruiser marisa_cannon }
 	component_set = "combat_computers"
-	upgrades_to = "COMBAT_COMPUTER_LINE_BASIC"
+	upgrades_to = "COMBAT_COMPUTER_TOUHOU_LINE_BASIC"
 
 	ai_weight = {
 		weight = 1
@@ -81,7 +81,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_ARTILLERY_DEFAULT"
+	key = "COMBAT_COMPUTER_TOUHOU_ARTILLERY_DEFAULT"
 	size = small
 	icon = "GFX_ship_part_computer_default"
 	icon_frame = 1
@@ -97,7 +97,7 @@ utility_component_template = {
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
 	size_restriction = { elite_cruiser marisa_cannon }
 	component_set = "combat_computers"
-	upgrades_to = "COMBAT_COMPUTER_ARTILLERY_BASIC"
+	upgrades_to = "COMBAT_COMPUTER_TOUHOU_ARTILLERY_BASIC"
 
 	ai_weight = {
 		weight = 1
@@ -109,7 +109,7 @@ utility_component_template = {
 # 'PICKET' COMPUTERS #
 ######################
 utility_component_template = {
-	key = "COMBAT_COMPUTER_PICKET_BASIC"
+	key = "COMBAT_COMPUTER_TOUHOU_PICKET_BASIC"
 	size = small
 	icon = "GFX_ship_part_computer_picket_basic"
 	icon_frame = 1
@@ -125,7 +125,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = "picket"
 	prerequisites = { "tech_combat_computers_1" }
-	upgrades_to = "COMBAT_COMPUTER_PICKET_ADVANCED"
+	upgrades_to = "COMBAT_COMPUTER_TOUHOU_PICKET_ADVANCED"
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.05
@@ -138,7 +138,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_PICKET_ADVANCED"
+	key = "COMBAT_COMPUTER_TOUHOU_PICKET_ADVANCED"
 	size = small
 	icon = "GFX_ship_part_computer_picket_advanced"
 	icon_frame = 1
@@ -154,7 +154,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = "picket"
 	prerequisites = { "tech_combat_computers_2" }
-	upgrades_to = "COMBAT_COMPUTER_PICKET_SAPIENT"
+	upgrades_to = "COMBAT_COMPUTER_TOUHOU_PICKET_SAPIENT"
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.10
@@ -167,7 +167,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_PICKET_SAPIENT"
+	key = "COMBAT_COMPUTER_TOUHOU_PICKET_SAPIENT"
 	size = small
 	icon = "GFX_ship_part_computer_picket_sapient"
 	icon_frame = 1
@@ -208,7 +208,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_PICKET_AUTONOMOUS"
+	key = "COMBAT_COMPUTER_TOUHOU_PICKET_AUTONOMOUS"
 	size = small
 	icon = "GFX_ship_part_computer_picket_sapient"
 	icon_frame = 1
@@ -239,7 +239,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_PICKET_PRECOG"
+	key = "COMBAT_COMPUTER_TOUHOU_PICKET_PRECOG"
 	size = small
 	icon = "GFX_ship_part_computer_picket_precog"
 	icon_frame = 1
@@ -270,7 +270,7 @@ utility_component_template = {
 # 'LINE' COMPUTERS #
 ####################
 utility_component_template = {
-	key = "COMBAT_COMPUTER_LINE_BASIC"
+	key = "COMBAT_COMPUTER_TOUHOU_LINE_BASIC"
 	size = small
 	icon = "GFX_ship_part_computer_line_basic"
 	icon_frame = 1
@@ -286,7 +286,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_1" }
-	upgrades_to = "COMBAT_COMPUTER_LINE_ADVANCED"
+	upgrades_to = "COMBAT_COMPUTER_TOUHOU_LINE_ADVANCED"
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.05
@@ -299,7 +299,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_LINE_ADVANCED"
+	key = "COMBAT_COMPUTER_TOUHOU_LINE_ADVANCED"
 	size = small
 	icon = "GFX_ship_part_computer_line_advanced"
 	icon_frame = 1
@@ -315,7 +315,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_2" }
-	upgrades_to = "COMBAT_COMPUTER_LINE_SAPIENT"
+	upgrades_to = "COMBAT_COMPUTER_TOUHOU_LINE_SAPIENT"
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.10
@@ -328,7 +328,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_LINE_SAPIENT"
+	key = "COMBAT_COMPUTER_TOUHOU_LINE_SAPIENT"
 	size = small
 	icon = "GFX_ship_part_computer_line_sapient"
 	icon_frame = 1
@@ -366,7 +366,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_LINE_AUTONOMOUS"
+	key = "COMBAT_COMPUTER_TOUHOU_LINE_AUTONOMOUS"
 	size = small
 	icon = "GFX_ship_part_computer_line_sapient"
 	icon_frame = 1
@@ -394,7 +394,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_LINE_PRECOG"
+	key = "COMBAT_COMPUTER_TOUHOU_LINE_PRECOG"
 	size = small
 	icon = "GFX_ship_part_computer_line_precog"
 	icon_frame = 1
@@ -426,7 +426,7 @@ utility_component_template = {
 # 'ARTILLERY' COMPUTERS #
 ######################
 utility_component_template = {
-	key = "COMBAT_COMPUTER_ARTILLERY_BASIC"
+	key = "COMBAT_COMPUTER_TOUHOU_ARTILLERY_BASIC"
 	size = small
 	icon = "GFX_ship_part_computer_artillery_basic"
 	icon_frame = 1
@@ -442,7 +442,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_1" }
-	upgrades_to = "COMBAT_COMPUTER_ARTILLERY_ADVANCED"
+	upgrades_to = "COMBAT_COMPUTER_TOUHOU_ARTILLERY_ADVANCED"
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.05
@@ -455,7 +455,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_ARTILLERY_ADVANCED"
+	key = "COMBAT_COMPUTER_TOUHOU_ARTILLERY_ADVANCED"
 	size = small
 	icon = "GFX_ship_part_computer_artillery_advanced"
 	icon_frame = 1
@@ -471,7 +471,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_2" }
-	upgrades_to = "COMBAT_COMPUTER_ARTILLERY_SAPIENT"
+	upgrades_to = "COMBAT_COMPUTER_TOUHOU_ARTILLERY_SAPIENT"
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.10
@@ -484,7 +484,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_ARTILLERY_SAPIENT"
+	key = "COMBAT_COMPUTER_TOUHOU_ARTILLERY_SAPIENT"
 	size = small
 	icon = "GFX_ship_part_computer_artillery_sapient"
 	icon_frame = 1
@@ -523,7 +523,7 @@ utility_component_template = {
 
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_ARTILLERY_AUTONOMOUS"
+	key = "COMBAT_COMPUTER_TOUHOU_ARTILLERY_AUTONOMOUS"
 	size = small
 	icon = "GFX_ship_part_computer_artillery_sapient"
 	icon_frame = 1
@@ -551,7 +551,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_ARTILLERY_PRECOG"
+	key = "COMBAT_COMPUTER_TOUHOU_ARTILLERY_PRECOG"
 	size = small
 	icon = "GFX_ship_part_computer_artillery_precog"
 	icon_frame = 1
@@ -583,7 +583,7 @@ utility_component_template = {
 # 'CARRIER' COMPUTERS #
 ######################
 utility_component_template = {
-	key = "COMBAT_COMPUTER_CARRIER_BASIC"
+	key = "COMBAT_COMPUTER_TOUHOU_CARRIER_BASIC"
 	size = small
 	icon = "GFX_ship_part_computer_carrier_basic"
 	icon_frame = 1
@@ -599,7 +599,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_1" }
-	upgrades_to = "COMBAT_COMPUTER_CARRIER_ADVANCED"
+	upgrades_to = "COMBAT_COMPUTER_TOUHOU_CARRIER_ADVANCED"
 
 	ship_modifier = {
 		ship_engagement_range_mult = 0.25
@@ -611,7 +611,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_CARRIER_ADVANCED"
+	key = "COMBAT_COMPUTER_TOUHOU_CARRIER_ADVANCED"
 	size = small
 	icon = "GFX_ship_part_computer_carrier_advanced"
 	icon_frame = 1
@@ -627,7 +627,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_2" }
-	upgrades_to = "COMBAT_COMPUTER_CARRIER_SAPIENT"
+	upgrades_to = "COMBAT_COMPUTER_TOUHOU_CARRIER_SAPIENT"
 
 	ship_modifier = {
 		ship_engagement_range_mult = 0.50
@@ -639,7 +639,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_CARRIER_SAPIENT"
+	key = "COMBAT_COMPUTER_TOUHOU_CARRIER_SAPIENT"
 	size = small
 	icon = "GFX_ship_part_computer_carrier_sapient"
 	icon_frame = 1
@@ -677,7 +677,7 @@ utility_component_template = {
 
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_CARRIER_AUTONOMOUS"
+	key = "COMBAT_COMPUTER_TOUHOU_CARRIER_AUTONOMOUS"
 	size = small
 	icon = "GFX_ship_part_computer_carrier_sapient"
 	icon_frame = 1
@@ -704,7 +704,7 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COMBAT_COMPUTER_CARRIER_PRECOG"
+	key = "COMBAT_COMPUTER_TOUHOU_CARRIER_PRECOG"
 	size = small
 	icon = "GFX_ship_part_computer_carrier_precog"
 	icon_frame = 1
