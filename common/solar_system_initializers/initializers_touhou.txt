@@ -167,7 +167,7 @@ kappa_enclave_init = {
 						class = scientist
 						skill = 3
 						event_leader = yes
-						background_ethic = materialist
+						background_ethic = ethic_materialist
 					}
 					last_created_leader = { #4
 						add_trait = subclass_scientist_governor

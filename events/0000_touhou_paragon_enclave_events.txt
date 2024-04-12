@@ -209,6 +209,11 @@ country_event = {
                 is_hostile = event_target:kappa_enclave_country
                 is_homicidal = yes
             }
+            not = {
+                any_owned_leader = {
+                    has_trait = leader_trait_water
+                }
+            }
         }
         hidden_effect = {
             country_event = { id = touhou_paragon_enclave.370 }
