@@ -89,7 +89,9 @@ system_blocks_sensors = {
 		has_star_flag = sealed_system
 	}
 }
-
+# Checks if a pop can be assembled
+# This = Species
+# Root = Planet
 can_species_be_assembled = {
 	is_sapient = yes
 	OR = {
@@ -209,6 +211,11 @@ can_species_be_assembled = {
 					}
 				}
 			}
+		}
+	}
+	this = {
+		not = {
+			has_trait = trait_sanae_robot_worker
 		}
 	}
 	has_population_control = {
