@@ -119,7 +119,6 @@ trait_sanae_robot_worker = {
 	cost = 3
 	initial = no
 	allowed_archetypes = { ROBOT MACHINE }
-
 	species_potential_add = {
 		always = no
 	}
@@ -128,6 +127,9 @@ trait_sanae_robot_worker = {
 		always = no
 	}
 
+	species_possible_merge_add = {
+		always = no
+	}
 	modifier = {
 		planet_building_build_speed_mult = 0.1
 		planet_jobs_worker_produces_mult = 1
@@ -136,7 +138,6 @@ trait_sanae_robot_worker = {
 		planet_pops_upkeep_mult = 4
 		pop_resettlement_cost_mult = 4
 	}
-
 	slave_cost = {
 		energy = 2000
 	}

@@ -728,22 +728,9 @@ country_event = {
             energy = 1
             mult = kappa_enclave_cost
         }
-        create_species = {
-            name = "NAME_Primitive_Robot_mk2"
-            plural = "NAME_Primitive_Robots_mk2"
-            class = ROBOT
-            portrait = "default_robot"
-            namelist = "PRT1"
-            traits = {
-                trait = "trait_mechanical"
-            }
-            effect = {
-                save_global_event_target_as = mk2_robot_species
-            }
-        }
         capital_scope = {
             create_pop = {
-                species = event_target:mk2_robot_species
+                species = event_target:kappa_enclave_robot_species
             }
             last_created_pop = {
                 modify_species = {
