@@ -295,15 +295,20 @@ trait_scarlet_blood = {
 trait_kappa_aquatic = {
 	cost = 2
 	sorting_priority = 20
-
-	species_possible_remove = {
-		always = no
-	}
+	initial = no
+	randomized = no
 	species_potential_add = {
 		always = no
 	}
-	initial = no
-
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	forced_happiness = no
+	immortal_leaders = no
+	infertile = no
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	ai_weight = {
