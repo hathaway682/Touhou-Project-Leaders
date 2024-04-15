@@ -1163,6 +1163,17 @@
  touhou_paragon.50001.h.responce:0 "没关系的，作为神明，我有无限的时间等待你们改变心意。\n\n§E并没有理会我们的拒绝，我们的考察队的脑海中突然浮现出了用以重建神社的自动系统的位置，他们最终还是决定从中获取了神社的设计图，并上传到了我们帝国的建筑资料库。\n\n反正就看看也不会怎么样，还挺好看的不是吗。§!"
  touhou_paragon.50001.tooltip:0 "殖民这颗星球后，可以采取星球决议——§Y修复荒废的神社§!，完成后，将会解锁£building£§Y神社§!的建造，并且在这里获得你的第一座£building£§Y神社§!。"
 
+ ruined_shrine_title: "神社与神灵"
+ ruined_shrine_desc: "我们发现的废弃木制建筑作用已被确定名称为神社，作用是祭拜神灵，该神社的神灵请求我们修复它。"
+ ruined_shirne_location: "废弃神社"
+ ruined_shirne_location_desc: "这颗星球的废弃木制建筑作用已被确定名称为神社，作用是祭拜神灵，该神社的神灵请求我们修复它。"
+ leaf_shirne: "落叶之神社"
+ leaf_shirne_desc: "最常用来建设神社的地方就是森林之中。（提示：在有任意§Y森林星球特征§!的星球建造£building£§Y神社§!）"
+ harvest_shirne: "丰收之神社"
+ harvest_shirne_desc: "我们的农民需要一座神社来为丰收祈祷。（提示：在$r_food$月产出在§Y50§!以上的星球建造£building£§Y神社§!）"
+ jinx_shirne: "厄运之神社"
+ jinx_shirne_desc: "饱受厄运困扰的人民也许会很需要一座神社。（提示：在任意£pop£§Y人口§!拥有§R厄运§!特质的星球建造£building£§Y神社§!）"
+
  decision_repair_shirne: "修复荒废的神社"
  decision_repair_shirne_desc: "按照无名神灵的请求，修复祂的神社。"
 
@@ -1187,7 +1198,7 @@
  touhou_paragon.50004.desc:0 "§Y[Root.GetName]§!作为我们重要的农业生产基地，当地的神社自然也是应本地农民的要求建在了农田之中。因此我们的巫女团队推测，这座神社应该会受到丰收之神的关注。不出所料，在这一年的庆祝丰收的仪式上，一位神明伪装成售卖烤红薯的商贩不请自来了。"
  touhou_paragon.50004.a:0 "显示在通讯屏幕上。"
 
- touhou_paragon.50005.name:0 "解厄之神社"
+ touhou_paragon.50005.name:0 "厄运之神社"
  touhou_paragon.50005.desc:0 "§Y[Root.GetName]§!的神社自建成后，就不断有饱受厄运困扰的人前去祈福，有些人还制作雏人偶放入流水随水而去，希望能带走他们的厄运。今日，他们的祈求得到了回应。一位长相如同雏人偶一般的神明现身在了神社，自称能带走他们的厄运。"
  touhou_paragon.50005.a:0 "显示在通讯屏幕上。"
 

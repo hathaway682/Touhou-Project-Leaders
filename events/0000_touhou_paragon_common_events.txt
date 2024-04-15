@@ -2450,6 +2450,10 @@ ship_event = {
 			country_event = {
 				id = touhou_paragon.50001
 			}
+			begin_event_chain = {
+				event_chain = ruined_shrine
+				target = from
+			}
 		}
 	}
 }
@@ -2461,6 +2465,7 @@ country_event = {
 	desc = touhou_paragon.50001.desc
 	location = capital_star
 	show_sound = event_mystic_reveal
+	event_chain = ruined_shrine
 	diplomatic = yes
 	is_triggered_only = yes
 
@@ -2528,6 +2533,14 @@ country_event = {
 				set_planet_flag = shirine_ruin_planet
 			}
 		}
+		create_point_of_interest = {
+			id = ruined_shirne_location
+			name = "ruined_shirne_location"
+			desc = "ruined_shirne_location_desc"
+			event_chain = ruined_shirne
+			category = ruined_shirne_home_cat
+			location = event_target:fromfrom
+		}
 	}
 	option = {
 		name = touhou_paragon.50001.h
@@ -2541,6 +2554,14 @@ country_event = {
 				set_planet_flag = shirine_ruin_planet
 			}
 		}
+		create_point_of_interest = {
+			id = ruined_shirne_location
+			name = "ruined_shirne_location"
+			desc = "ruined_shirne_location_desc"
+			event_chain = ruined_shirne
+			category = ruined_shirne_home_cat
+			location = event_target:fromfrom
+		}
 	}
 }
 
@@ -2550,6 +2571,7 @@ planet_event = {
 	desc = touhou_paragon.50002.desc
 	picture = GFX_evt_ruined_shrine
 	show_sound = event_default
+	event_chain = ruined_shrine
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -2585,6 +2607,33 @@ planet_event = {
 			}
 		}
 		custom_tooltip = touhou_paragon.50002.tooltip
+		owner = {
+			remove_point_of_interest = ruined_shirne_location
+			create_point_of_interest = {
+				id = leaf_shirne
+				name = leaf_shirne
+				desc = leaf_shirne_desc
+				event_chain = ruined_shrine
+				location = capital_scope
+				category = leaf_shirne_cat
+			}
+			create_point_of_interest = {
+				id = harvest_shirne
+				name = harvest_shirne
+				desc = harvest_shirne_desc
+				event_chain = ruined_shrine
+				location = capital_scope
+				category = harvest_shirne_cat
+			}
+			create_point_of_interest = {
+				id = jinx_shirne
+				name = jinx_shirne
+				desc = jinx_shirne_desc
+				event_chain = ruined_shrine
+				location = capital_scope
+				category = jinx_shirne_cat
+			}
+		}
 	}
 
 	option = {
@@ -2618,6 +2667,33 @@ planet_event = {
 			}
 		}
 		custom_tooltip = touhou_paragon.50002.tooltip
+		owner = {
+			remove_point_of_interest = ruined_shirne_location
+			create_point_of_interest = {
+				id = leaf_shirne
+				name = leaf_shirne
+				desc = leaf_shirne_desc
+				event_chain = ruined_shrine
+				location = capital_scope
+				category = leaf_shirne_cat
+			}
+			create_point_of_interest = {
+				id = harvest_shirne
+				name = harvest_shirne
+				desc = harvest_shirne_desc
+				event_chain = ruined_shrine
+				location = capital_scope
+				category = harvest_shirne_cat
+			}
+			create_point_of_interest = {
+				id = jinx_shirne
+				name = jinx_shirne
+				desc = jinx_shirne_desc
+				event_chain = ruined_shrine
+				location = capital_scope
+				category = jinx_shirne_cat
+			}
+		}
 	}
 
 	option = {
@@ -2647,6 +2723,33 @@ planet_event = {
 			}
 		}
 		custom_tooltip = touhou_paragon.50002.tooltip
+		owner = {
+			remove_point_of_interest = ruined_shirne_location
+			create_point_of_interest = {
+				id = leaf_shirne
+				name = leaf_shirne
+				desc = leaf_shirne_desc
+				event_chain = ruined_shrine
+				location = capital_scope
+				category = leaf_shirne_cat
+			}
+			create_point_of_interest = {
+				id = harvest_shirne
+				name = harvest_shirne
+				desc = harvest_shirne_desc
+				event_chain = ruined_shrine
+				location = capital_scope
+				category = harvest_shirne_cat
+			}
+			create_point_of_interest = {
+				id = jinx_shirne
+				name = jinx_shirne
+				desc = jinx_shirne_desc
+				event_chain = ruined_shrine
+				location = capital_scope
+				category = jinx_shirne_cat
+			}
+		}
 	}
 }
 
@@ -2665,6 +2768,7 @@ planet_event = {
 			country_event = {
 				id = touhou_paragon.42800
 			}
+			remove_point_of_interest = leaf_shirne
 		}
 	}
 }
@@ -2684,6 +2788,7 @@ planet_event = {
 			country_event = {
 				id = touhou_paragon.42900
 			}
+			remove_point_of_interest = harvest_shirne
 		}
 	}
 }
@@ -2703,6 +2808,7 @@ planet_event = {
 			country_event = {
 				id = touhou_paragon.43000
 			}
+			remove_point_of_interest = jinx_shirne
 		}
 	}
 }

@@ -418,35 +418,6 @@ hina_card_1_trigger = {
 }
 
 hina_card_2_trigger = {
-	AND = {
-		Root = {
-			is_scope_type = planet
-			is_star = no
-			solar_system = {
-				any_fleet_in_system = {
-					exists = leader
-					leader = {
-						owner = {
-							is_same_value = from
-						}
-						has_trait = leader_trait_jinx
-					}
-				}
-			}
-			NOT = {
-				any_fleet_in_orbit = {
-					has_fleet_flag = spell_card_fleet
-				}
-			}
-			NOR = {
-				has_modifier = broken_amulet_modifier_1
-				has_modifier = broken_amulet_modifier_2
-			}
-		}
-	}
-}
-
-hina_card_3_trigger = {
 	Root = {
 		is_scope_type = fleet
 		owner = {
@@ -464,6 +435,33 @@ hina_card_3_trigger = {
 					}
 					has_trait = leader_trait_jinx
 				}
+			}
+		}
+		NOR = {
+			has_modifier = broken_amulet_modifier_1
+			has_modifier = broken_amulet_modifier_2
+		}
+	}
+}
+
+hina_card_3_trigger = {
+	Root = {
+		is_scope_type = planet
+		is_star = no
+		solar_system = {
+			any_fleet_in_system = {
+				exists = leader
+				leader = {
+					owner = {
+						is_same_value = from
+					}
+					has_trait = leader_trait_jinx
+				}
+			}
+		}
+		NOT = {
+			any_fleet_in_orbit = {
+				has_fleet_flag = spell_card_fleet
 			}
 		}
 	}

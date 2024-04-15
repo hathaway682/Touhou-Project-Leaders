@@ -10,7 +10,10 @@ district_garden = {
 		uses_district_set = standard
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_flower
+				OR = {
+					has_trait = leader_trait_flower
+					has_trait = leader_trait_flower_commander
+				}
 			}
 		}
 	}
@@ -19,7 +22,10 @@ district_garden = {
 		uses_district_set = standard
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_flower
+				OR = {
+					has_trait = leader_trait_flower
+					has_trait = leader_trait_flower_commander
+				}
 			}
 		}
 	}

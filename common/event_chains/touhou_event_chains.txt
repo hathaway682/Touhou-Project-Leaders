@@ -51,3 +51,8 @@ touhou_marisa_alice_regeneration_chain = {
 	}
 }
 
+ruined_shrine = {
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	picture = GFX_evt_ruined_shrine
+}
+
