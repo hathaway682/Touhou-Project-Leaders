@@ -70,7 +70,7 @@ kappa_enclave_init = {
 					homeworld = this
 					name = "NAME_TOUHOU_Kappa_portrait"
 					class = SALVAGER
-					namelist = HUMAN1
+					namelist = NITORI
 					portrait = x125#tpop7
 					traits = {
 						ideal_planet_class = pc_ocean
@@ -167,7 +167,7 @@ kappa_enclave_init = {
 						class = scientist
 						skill = 3
 						event_leader = yes
-						background_ethic = materialist
+						background_ethic = ethic_materialist
 					}
 					last_created_leader = { #4
 						add_trait = subclass_scientist_governor

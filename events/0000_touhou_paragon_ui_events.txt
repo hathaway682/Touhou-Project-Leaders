@@ -8,7 +8,6 @@ country_event = {
     title = OK
     desc = OK
     is_triggered_only = yes
-
     diplomatic = yes
     custom_gui = "touhou_spell_card_view"
 
@@ -20,7 +19,6 @@ country_event = {
     option = {
         name = OK
     }
-
     after = {
         remove_country_flag = spell_cards_view_open
     }
