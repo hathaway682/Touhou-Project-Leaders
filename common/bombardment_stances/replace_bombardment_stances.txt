@@ -342,7 +342,7 @@ wither = {
 		owner = {
 			exists = leader
 			leader = {
-				has_trait = leader_trait_nuclear
+				has_trait = leader_trait_fall
 			}
 		}
 	}

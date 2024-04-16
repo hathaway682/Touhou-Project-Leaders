@@ -406,13 +406,11 @@ marisa_card_6_trigger = {
 }
 
 hina_card_1_trigger = {
-	AND = {
-		Root = {
-			is_scope_type = country
-			is_default_or_fallen = yes
-			NOT = {
-				is_same_value = root
-			}
+	Root = {
+		is_scope_type = country
+		is_default_or_fallen = yes
+		NOT = {
+			is_same_value = from
 		}
 	}
 }
