@@ -496,7 +496,7 @@ fleet_event = {
 }
 
 country_event = {
-	id = touhou_paragon_mission.403092
+	id = touhou_paragon_mission.43092
 	title = touhou_paragon_mission.40309.name
 	desc = {
 		trigger = {
@@ -839,11 +839,11 @@ country_event = {
 					has_ethic = ethic_fanatic_materialist
 				}
 			}
-			percentage >= 0.75
+			percentage >= 0.5
 		}
 		has_monthly_income = {
 			resource = unity
-			value >= 5000
+			value >= 500
 		}
 	}
 	option = {

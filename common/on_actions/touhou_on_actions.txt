@@ -367,7 +367,7 @@ on_fleet_destroyed_perp = {
 # From = Species ( Post Modification )
 on_modification_complete = {
 	events = {
-		touhou_paragon_mission.403092
+		touhou_paragon_mission.43092
 	}
 }
 
