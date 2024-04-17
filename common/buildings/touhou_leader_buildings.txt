@@ -895,7 +895,6 @@ building_doll_assembly_plant = {
 }
 
 building_doll_assembly_complex = {
-	icon = building_machine_assembly_complex
 	base_buildtime = @b3_time
 	can_build = no
 
