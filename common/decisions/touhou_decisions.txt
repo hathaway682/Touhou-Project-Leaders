@@ -1858,11 +1858,6 @@ decision_miracle_1 = {
 		}
 		NOT = {
 			has_modifier = modifier_miracle_1
-			has_modifier = modifier_miracle_2
-			has_modifier = modifier_miracle_3
-			has_modifier = modifier_miracle_4
-			has_modifier = modifier_miracle_5
-			has_modifier = modifier_miracle_6
 		}
 	}
 
@@ -1875,6 +1870,36 @@ decision_miracle_1 = {
 	}
 
 	effect = {
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_2
+			}
+			remove_modifier = modifier_miracle_2
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_4
+			}
+			remove_modifier = modifier_miracle_4
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_5
+			}
+			remove_modifier = modifier_miracle_5
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_6
+			}
+			remove_modifier = modifier_miracle_6
+		}
 		add_modifier = {
 			modifier = modifier_miracle_1
 			days = -1
@@ -1918,13 +1943,8 @@ decision_miracle_2 = {
 				}
 			}
 		}
-		NOR = {
-			has_modifier = modifier_miracle_1
+		NOT = {
 			has_modifier = modifier_miracle_2
-			has_modifier = modifier_miracle_3
-			has_modifier = modifier_miracle_4
-			has_modifier = modifier_miracle_5
-			has_modifier = modifier_miracle_6
 		}
 	}
 
@@ -1937,6 +1957,36 @@ decision_miracle_2 = {
 	}
 
 	effect = {
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_1
+			}
+			remove_modifier = modifier_miracle_1
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_4
+			}
+			remove_modifier = modifier_miracle_4
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_5
+			}
+			remove_modifier = modifier_miracle_5
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_6
+			}
+			remove_modifier = modifier_miracle_6
+		}
 		add_modifier = {
 			modifier = modifier_miracle_2
 			days = -1
@@ -1980,13 +2030,8 @@ decision_miracle_3 = {
 				}
 			}
 		}
-		NOR = {
-			has_modifier = modifier_miracle_1
-			has_modifier = modifier_miracle_2
+		NOT = {
 			has_modifier = modifier_miracle_3
-			has_modifier = modifier_miracle_4
-			has_modifier = modifier_miracle_5
-			has_modifier = modifier_miracle_6
 		}
 	}
 
@@ -1999,6 +2044,36 @@ decision_miracle_3 = {
 	}
 
 	effect = {
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_1
+			}
+			remove_modifier = modifier_miracle_1
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_2
+			}
+			remove_modifier = modifier_miracle_2
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_4
+			}
+			remove_modifier = modifier_miracle_4
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_5
+			}
+			remove_modifier = modifier_miracle_5
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_6
+			}
+			remove_modifier = modifier_miracle_6
+		}
 		add_modifier = {
 			modifier = modifier_miracle_3
 			days = -1
@@ -2042,13 +2117,8 @@ decision_miracle_4 = {
 				}
 			}
 		}
-		NOR = {
-			has_modifier = modifier_miracle_1
-			has_modifier = modifier_miracle_2
-			has_modifier = modifier_miracle_3
+		NOT = {
 			has_modifier = modifier_miracle_4
-			has_modifier = modifier_miracle_5
-			has_modifier = modifier_miracle_6
 		}
 	}
 
@@ -2061,6 +2131,36 @@ decision_miracle_4 = {
 	}
 
 	effect = {
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_1
+			}
+			remove_modifier = modifier_miracle_1
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_2
+			}
+			remove_modifier = modifier_miracle_2
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_5
+			}
+			remove_modifier = modifier_miracle_5
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_6
+			}
+			remove_modifier = modifier_miracle_6
+		}
 		add_modifier = {
 			modifier = modifier_miracle_4
 			days = -1
@@ -2104,13 +2204,8 @@ decision_miracle_5 = {
 				}
 			}
 		}
-		NOR = {
-			has_modifier = modifier_miracle_1
-			has_modifier = modifier_miracle_2
-			has_modifier = modifier_miracle_3
-			has_modifier = modifier_miracle_4
+		NOT = {
 			has_modifier = modifier_miracle_5
-			has_modifier = modifier_miracle_6
 		}
 	}
 
@@ -2123,6 +2218,36 @@ decision_miracle_5 = {
 	}
 
 	effect = {
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_1
+			}
+			remove_modifier = modifier_miracle_1
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_2
+			}
+			remove_modifier = modifier_miracle_2
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_4
+			}
+			remove_modifier = modifier_miracle_4
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_6
+			}
+			remove_modifier = modifier_miracle_6
+		}
 		add_modifier = {
 			modifier = modifier_miracle_5
 			days = -1
@@ -2166,12 +2291,7 @@ decision_miracle_6 = {
 				}
 			}
 		}
-		NOR = {
-			has_modifier = modifier_miracle_1
-			has_modifier = modifier_miracle_2
-			has_modifier = modifier_miracle_3
-			has_modifier = modifier_miracle_4
-			has_modifier = modifier_miracle_5
+		NOT = {
 			has_modifier = modifier_miracle_6
 		}
 	}
@@ -2185,6 +2305,36 @@ decision_miracle_6 = {
 	}
 
 	effect = {
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_1
+			}
+			remove_modifier = modifier_miracle_1
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_2
+			}
+			remove_modifier = modifier_miracle_2
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_4
+			}
+			remove_modifier = modifier_miracle_4
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_5
+			}
+			remove_modifier = modifier_miracle_5
+		}
 		add_modifier = {
 			modifier = modifier_miracle_6
 			days = -1

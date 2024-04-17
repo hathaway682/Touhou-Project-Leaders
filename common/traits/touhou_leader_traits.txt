@@ -2713,7 +2713,7 @@ leader_trait_puppet_show = {
 		CLASS = official
 		ICON = GFX_leader_trait_cultural_focus
 		RARITY = veteran
-		COUNCIL = yes
+		COUNCIL = no
 		TIER = none
 	}
 	planet_modifier = {
