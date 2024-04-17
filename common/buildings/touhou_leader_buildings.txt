@@ -58,6 +58,13 @@ building_shrine = {
 					has_deposit = d_wandering_forests
 					has_deposit = d_seed_bombing_plantoid_blocker
 				}
+				owner = {
+					NOT = {
+						any_owned_leader = {
+							has_trait = leader_trait_fall
+						}
+					}
+				}
 			}
 			planet_event = {
 				id = touhou_paragon.50003
@@ -70,6 +77,13 @@ building_shrine = {
 					resource = food
 					type = produces
 					value > 50
+				}
+				owner = {
+					NOT = {
+						any_owned_leader = {
+							has_trait = leader_trait_harvest
+						}
+					}
 				}
 			}
 			planet_event = {
