@@ -99,6 +99,13 @@ building_shrine = {
 					}
 					free_amenities < 0
 				}
+				owner = {
+					NOT = {
+						any_owned_leader = {
+							has_trait = leader_trait_jinx
+						}
+					}
+				}
 			}
 			planet_event = {
 				id = touhou_paragon.50005
