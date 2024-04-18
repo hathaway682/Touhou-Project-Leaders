@@ -1538,7 +1538,7 @@ leader_trait_gardener = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			trait_is_gestalt_check = no
+			trait_is_gestalt_check = yes
 		}
 		job_chronicle_drone_add = 4
 		planet_jobs_unity_produces_mult = 0.3
@@ -1546,7 +1546,7 @@ leader_trait_gardener = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			trait_is_gestalt_check = no
+			trait_is_gestalt_check = yes
 		}
 		job_chronicle_drone_add = 2
 		planet_jobs_unity_produces_mult = 0.15
