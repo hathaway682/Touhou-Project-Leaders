@@ -496,7 +496,7 @@ fleet_event = {
 }
 
 country_event = {
-	id = touhou_paragon_mission.43092
+	id = touhou_paragon_mission.40399
 	title = touhou_paragon_mission.40309.name
 	desc = {
 		trigger = {
