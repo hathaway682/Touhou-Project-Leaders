@@ -316,15 +316,15 @@ complex_specialist_job_check_trigger = {
 					NOT = { has_trait = trait_thl_doll }
 					owner = {
 						has_technology = tech_droid_workers
+						NOT = { has_policy_flag = ai_outlawed }
 					}
-					NOT = { has_policy_flag = ai_outlawed }
 				}
 				AND = {
 					has_trait = trait_thl_doll
 					owner = {
 						has_technology = tech_automatic_dolls
+						NOT = { has_policy_flag = ai_outlawed }
 					}
-					NOT = { has_policy_flag = ai_outlawed }
 				}
 			}
 		}

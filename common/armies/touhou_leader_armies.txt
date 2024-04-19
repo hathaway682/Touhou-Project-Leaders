@@ -99,11 +99,14 @@ hell_undead = {
 						has_trait = leader_trait_corpse_manipulation
 					}
 				}
-				sector = {
-					sector_capital = {
-						exists = leader
-						leader = {
-							has_trait = leader_trait_corpse_manipulation
+				AND = {
+					exists = sector
+					sector = {
+						sector_capital = {
+							exists = leader
+							leader = {
+								has_trait = leader_trait_corpse_manipulation
+							}
 						}
 					}
 				}
@@ -287,11 +290,14 @@ army_oni_mercenary = {
 					has_trait = leader_trait_oni_power
 				}
 			}
-			sector = {
-				sector_capital = {
-					exists = leader
-					leader = {
-						has_trait = leader_trait_oni_power
+			AND = {
+				exists = sector
+				sector = {
+					sector_capital = {
+						exists = leader
+						leader = {
+							has_trait = leader_trait_oni_power
+						}
 					}
 				}
 			}

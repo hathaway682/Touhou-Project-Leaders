@@ -365,8 +365,8 @@ building_hakurei_shrine = {
 	}
 
 	triggered_country_modifier = {
-		country_naval_cap_mult = 0.1
-		ship_tracking_add = 2
+		ship_accuracy_add = 1
+		ship_tracking_add = 1
 	}
 
 	resources = {
@@ -1220,11 +1220,9 @@ building_corpses_disposal_center = {
 
 	potential = {
 		exists = owner
-		sector = {
-			any_owned_planet = {
-				leader = {
-					has_trait = leader_trait_corpse_manipulation
-				}
+		owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_corpse_manipulation
 			}
 		}
 		NOT = { has_modifier = resort_colony }
