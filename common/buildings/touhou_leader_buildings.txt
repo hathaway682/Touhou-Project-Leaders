@@ -186,7 +186,7 @@ building_moriya_shrine = {
 			owner = { has_country_flag = touhou_flag_sanae_shrine_research_speed}
 		}
 		modifier = {
-			all_technology_research_speed = 0.005
+			all_technology_research_speed = 0.01
 		}
 	}
 
@@ -289,7 +289,7 @@ holding_building_moriya_shrine = {
 			owner.overlord = { has_country_flag = touhou_flag_sanae_shrine_research_speed}
 		}
 		modifier = {
-			all_technology_research_speed = 0.005
+			all_technology_research_speed = 0.01
 		}
 	}
 
