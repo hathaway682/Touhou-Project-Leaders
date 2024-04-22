@@ -270,7 +270,7 @@ country_event = { # ethic leader lottery machine
 			}
 			0 = { # 早苗（唯心）
 				modifier = {
-					add = value:touhou_leader_randomizer|ETHIC|spiritualist|ETHIC_NEG|materialist|LEADER_ID|sanae|
+					add = value:touhou_leader_randomizer|ETHIC|spiritualist|ETHIC_NEG|materialist|LEADER_ID|sanaei|
 				}
 				ethic_leader_hire_event = { LEADER_ID = sanaei EVENT_ID = touhou_paragon.40300 }
 			}

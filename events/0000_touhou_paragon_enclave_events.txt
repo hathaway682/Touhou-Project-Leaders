@@ -737,9 +737,11 @@ country_event = {
             create_pop = {
                 species = event_target:kappa_enclave_robot_species
             }
-            last_created_pop = {
-                modify_species = {
-                    add_trait = trait_sanae_robot_worker
+            hidden_effect = {
+                last_created_pop = {
+                    modify_species = {
+                        add_trait = trait_sanae_robot_worker
+                    }
                 }
             }
         }

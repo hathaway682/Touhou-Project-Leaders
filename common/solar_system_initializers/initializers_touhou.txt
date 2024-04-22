@@ -108,9 +108,6 @@ kappa_enclave_init = {
 					name = "NAME_Kappa_Enclave"
 					type = kappa_enclave
 					authority = "auth_democratic"
-					civics =	{
-						civic = civic_moriya_shinto
-					}
 					species = event_target:kappa_enclave_species_only_for_portrait
 					flag = {
 						icon = {
