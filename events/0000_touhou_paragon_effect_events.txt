@@ -4958,19 +4958,25 @@ fleet_event = {
                 1 = {
                     add_monthly_resource_mult = {
                         resource = physics_research
-                        value = 6
+                        value = @tier1researchreward
+                        min = @tier1researchmin
+                        max = @tier1researchmax
                     }
                 }
                 2 = {
                     add_monthly_resource_mult = {
                         resource = society_research
-                        value = 6
+                        value = @tier1researchreward
+                        min = @tier1researchmin
+                        max = @tier1researchmax
                     }
                 }
                 1 = {
                     add_monthly_resource_mult = {
                         resource = engineering_research
-                        value = 6
+                        value = @tier1researchreward
+                        min = @tier1researchmin
+                        max = @tier1researchmax
                     }
                 }
             }
@@ -9374,6 +9380,11 @@ country_event = {
                 has_ethic = ethic_fanatic_militarist
                 has_ethic = ethic_militarist
             }
+            not = {
+                any_owned_leader = {
+                    has_trait = leader_trait_artifitial_sol
+                }
+            }
         }
 
         every_owned_leader = {
@@ -9391,6 +9402,9 @@ country_event = {
             OR = {
                 has_ethic = ethic_fanatic_spiritualist
                 has_ethic = ethic_spiritualist
+            }
+            not = {
+                has_modifier = modifier_utsuho_fusion_c
             }
         }
         add_modifier = {

@@ -212,11 +212,15 @@ situation_event = {
         owner = {
             add_monthly_resource_mult = {
                 resource = physics_research
-                value = 12
+                value = @tier5researchreward
+                min = @tier5researchmin
+                max = @tier5researchmax
             }
             add_monthly_resource_mult = {
                 resource = society_research
-                value = 12
+                value = @tier5researchreward
+                min = @tier5researchmin
+                max = @tier5researchmax
             }
         }
     }
@@ -349,13 +353,17 @@ situation_event = {
         owner = {
             add_monthly_resource_mult = {
                 resource = physics_research
-                value = 6
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
             }
         }
         owner = {
             add_monthly_resource_mult = {
                 resource = society_research
-                value = 6
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
             }
         }
         event_target:utsuho_second_situation = {
@@ -378,13 +386,17 @@ situation_event = {
         owner = {
             add_monthly_resource_mult = {
                 resource = physics_research
-                value = 2
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
             }
         }
         owner = {
             add_monthly_resource_mult = {
                 resource = society_research
-                value = 2
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
             }
         }
         event_target:utsuho_second_situation = {
@@ -405,13 +417,17 @@ situation_event = {
         owner = {
             add_monthly_resource_mult = {
                 resource = physics_research
-                value = 1
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
             }
         }
         owner = {
             add_monthly_resource_mult = {
                 resource = society_research
-                value = 1
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
             }
         }
         event_target:utsuho_second_situation = {
