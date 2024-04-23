@@ -3779,12 +3779,6 @@ pop_event = {
                             has_trait = leader_trait_price_of_life
                         }
                     }
-                    owner = {
-                        add_resource = {
-                            energy = 100
-                            mult = value:price_of_life
-                        }
-                    }
                 }
             }
             modify_species = {
@@ -4217,6 +4211,10 @@ country_event = {
                 NOT = {
                     has_trait = trait_thl_spirit
                 }
+                NOR = {
+                    is_organic_species = no
+                    has_trait = trait_hive_mind
+                }
             }
         }
     }
@@ -4235,6 +4233,10 @@ country_event = {
                                     NOT = {
                                         has_trait = trait_thl_spirit
                                     }
+                                    NOR = {
+                                        is_organic_species = no
+                                        has_trait = trait_hive_mind
+                                    }
                                 }
                                 modify_species = {
                                     species = this
@@ -4252,6 +4254,10 @@ country_event = {
                                     NOT = {
                                         has_trait = trait_thl_spirit
                                     }
+                                    NOR = {
+                                        is_organic_species = no
+                                        has_trait = trait_hive_mind
+                                    }
                                 }
                                 modify_species = {
                                     species = this
@@ -4268,6 +4274,10 @@ country_event = {
                                 limit = {
                                     NOT = {
                                         has_trait = trait_thl_spirit
+                                    }
+                                    NOR = {
+                                        is_organic_species = no
+                                        has_trait = trait_hive_mind
                                     }
                                 }
                                 modify_species = {
@@ -4298,6 +4308,10 @@ country_event = {
                                 NOT = {
                                     has_trait = trait_thl_spirit
                                 }
+                                NOR = {
+                                    is_organic_species = no
+                                    has_trait = trait_hive_mind
+                                }
                             }
                             modify_species = {
                                 species = this
@@ -4318,6 +4332,10 @@ country_event = {
                                 NOT = {
                                     has_trait = trait_thl_spirit
                                 }
+                                NOR = {
+                                    is_organic_species = no
+                                    has_trait = trait_hive_mind
+                                }
                             }
                             modify_species = {
                                 species = this
@@ -4332,6 +4350,10 @@ country_event = {
                         limit = {
                             NOT = {
                                 has_trait = trait_thl_spirit
+                            }
+                            NOR = {
+                                is_organic_species = no
+                                has_trait = trait_hive_mind
                             }
                         }
                         modify_species = {
@@ -4351,6 +4373,10 @@ country_event = {
                         NOT = {
                             has_trait = trait_thl_spirit
                         }
+                        NOR = {
+                            is_organic_species = no
+                            has_trait = trait_hive_mind
+                        }
                     }
                     modify_species = {
                         species = this
@@ -4369,6 +4395,10 @@ country_event = {
                         limit = {
                             NOT = {
                                 has_trait = trait_thl_spirit
+                            }
+                            NOR = {
+                                is_organic_species = no
+                                has_trait = trait_hive_mind
                             }
                         }
                         modify_species = {
@@ -4390,6 +4420,10 @@ country_event = {
                             NOT = {
                                 has_trait = trait_thl_spirit
                             }
+                            NOR = {
+                                is_organic_species = no
+                                has_trait = trait_hive_mind
+                            }
                         }
                         modify_species = {
                             species = this
@@ -4409,6 +4443,10 @@ country_event = {
                         limit = {
                             NOT = {
                                 has_trait = trait_thl_spirit
+                            }
+                            NOR = {
+                                is_organic_species = no
+                                has_trait = trait_hive_mind
                             }
                         }
                         modify_species = {

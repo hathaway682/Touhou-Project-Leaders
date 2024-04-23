@@ -1409,6 +1409,10 @@ decision_trans_spirit = {
 			NOT = {
 				has_trait = trait_thl_spirit
 			}
+			NOR = {
+				is_organic_species = no
+				has_trait = trait_hive_mind
+			}
 		}
 	}
 
@@ -1432,6 +1436,10 @@ decision_trans_spirit = {
 								NOT = {
 									has_trait = trait_thl_spirit
 								}
+								NOR = {
+									is_organic_species = no
+									has_trait = trait_hive_mind
+								}
 							}
 							modify_species = {
 								species = this
@@ -1449,6 +1457,10 @@ decision_trans_spirit = {
 								NOT = {
 									has_trait = trait_thl_spirit
 								}
+								NOR = {
+									is_organic_species = no
+									has_trait = trait_hive_mind
+								}
 							}
 							modify_species = {
 								species = this
@@ -1465,6 +1477,10 @@ decision_trans_spirit = {
 							limit = {
 								NOT = {
 									has_trait = trait_thl_spirit
+								}
+								NOR = {
+									is_organic_species = no
+									has_trait = trait_hive_mind
 								}
 							}
 							modify_species = {
