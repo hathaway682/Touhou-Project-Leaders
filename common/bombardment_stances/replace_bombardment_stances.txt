@@ -339,11 +339,9 @@ nuclear = {
 
 wither = {
 	trigger = {
-		owner = {
-			exists = leader
-			leader = {
-				has_trait = leader_trait_fall
-			}
+		exists = leader
+		leader = {
+			has_trait = leader_trait_fall
 		}
 	}
 
