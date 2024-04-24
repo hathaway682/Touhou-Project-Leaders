@@ -355,6 +355,9 @@
  touhou_paragon.40420.desc:1 "一个蓝裙绿发的妖精找到了我们，她自称§Y$DAIYOUSEI_NAME$§!，是§Y[Root.GetName]§!的朋友，因为担心她的安全来寻找她，在得知§Y[Root.GetName]§!在我们这愉快的效力后，她表示愿意和§Y[Root.GetName]§!一起工作，§Y[Root.GetName]§!见到她之后十分高兴，希望两位老朋友的重逢会让她们日后工作更有干劲。"
  touhou_paragon.40420.a:0 "朋友一生一起走！"
  touhou_paragon.40420.a.custom_tooltip:0 "一个叫§Y$DAIYOUSEI_NAME$§!的妖精作为一名§H领袖§!加入了我们的帝国。"
+
+ NAME_Fairy:0 "妖精"
+
  DAIYOUSEI_NAME:0 "大妖精"
  DAIYOUSEI_DESC:0 "琪露诺的好朋友，无名的大妖精。"
 

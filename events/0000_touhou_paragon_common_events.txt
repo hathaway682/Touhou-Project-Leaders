@@ -787,8 +787,8 @@ leader_event = {
 						}
 					}
 					create_species = {
-						name = "NAME_Demon_Refugees"
-						plural = "NAME_Demon_Refugee_pl"
+						name = "NAME_Fairy"
+						plural = "NAME_Fairy"
 						class = MAM
 						namelist = random_class
 						portrait = "demon"
@@ -810,12 +810,14 @@ leader_event = {
 					name = "DAIYOUSEI_NAME"
 					custom_description = "DAIYOUSEI_DESC"
 					class = official
+					gender = indeterminable
 					set_age = 17
 					skill = 1
 					randomize_traits = yes
 					background_ethic = ethic_xenophile
 					effect = {
 						save_event_target_as = DAIYOUSEI
+						set_leader_flag = daiyousei_leader
 					}
 					skip_background_generation = yes
 					background_job = none
@@ -1326,12 +1328,14 @@ leader_event = {
 					name = "KOAKUMA_NAME"
 					custom_description = "KOAKUMA_DESC"
 					class = scientist
+					gender = indeterminable
 					set_age = 17
 					skill = 3
 					randomize_traits = yes
 					background_ethic = ethic_xenophile
 					effect = {
 						save_event_target_as = KOAKUMA
+						set_leader_flag = koakuma_leader
 					}
 					skip_background_generation = yes
 					background_job = touhou_archivist
