@@ -11011,17 +11011,17 @@ country_event = {
         end_event_chain = "touhou_marisa_alice_regeneration_chain"
         every_owned_leader = {
             limit = {
+                has_trait = leader_trait_regeneration_2
+            }
+            remove_trait = leader_trait_regeneration_2
+            add_trait = leader_trait_regeneration_3
+        }
+        every_owned_leader = {
+            limit = {
                 has_trait = leader_trait_regeneration
             }
             remove_trait = leader_trait_regeneration
             add_trait = leader_trait_regeneration_2
-        }
-        every_owned_leader = {
-            limit = {
-                has_trait = leader_trait_regeneration_2
-            }
-            remove_trait = leader_trait_regeneration
-            add_trait = leader_trait_regeneration_3
         }
     }
     after = {
