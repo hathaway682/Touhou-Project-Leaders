@@ -2064,7 +2064,7 @@ leader_trait_wind = {
 		mult = trigger:has_skill
 	}
 	leader_class = { official }
-	fleet_modifier = {
+	councilor_modifier = {
 		ship_evasion_add = 5
 		ship_emergency_ftl_mult = -0.5
 		ship_disengage_chance_mult = 0.5
