@@ -2106,3 +2106,81 @@ subtract_jinx_or_bomb = {
 		}
 	}
 }
+
+touhou_moriya_crusade_impose_effect = {
+	if = {
+		limit = {
+			is_ai = yes
+			OR = {
+				has_origin = origin_legendary_leader
+				has_origin = origin_legendary_leader_imperial
+				has_origin = origin_legendary_leader_dictatorial
+			}
+		}
+		random_owned_leader = {
+			limit = { is_ruler = yes }
+			kill_leader = { show_notification = yes }
+		}
+		set_origin = origin_legendary_leader_death
+	}
+	if = {
+		limit = {
+			root = {
+				is_materialist = yes
+			}
+		}
+		shift_ethic = ethic_fanatic_materialist
+	}
+	if = {
+		limit = {
+			root = {
+				is_spiritualist = yes
+			}
+		}
+		shift_ethic = ethic_fanatic_spiritualist
+	}
+	if = {
+		limit = {
+			has_civic = civic_galactic_sovereign
+		}
+		force_remove_civic = civic_galactic_sovereign
+	}
+	if = {
+		limit = {
+			has_civic = civic_galactic_sovereign_megacorp
+		}
+		force_remove_civic = civic_galactic_sovereign_megacorp
+	}
+	if = {
+		limit = {
+			has_civic = civic_psionic_sovereign
+		}
+		force_remove_civic = civic_psionic_sovereign
+	}
+	if = {
+		limit = {
+			root = { has_authority = auth_corporate }
+			has_authority = auth_corporate
+		}
+		set_merchant_government_effect = yes
+	}
+	if = {
+		limit = {
+			root = { has_civic = civic_shared_burden }
+		}
+		force_remove_civic = 1
+		force_add_civic = civic_shared_burden
+	}
+	if = {
+		limit = {
+			root = { has_civic = civic_crusader_spirit }
+		}
+		force_remove_civic = 1
+		force_add_civic = civic_crusader_spirit
+	}
+	add_modifier = { modifier = recently_liberated days = 7200 }
+	add_opinion_modifier = { modifier = opinion_liberated_us who = root }
+	root = {
+		add_opinion_modifier = { modifier = opinion_we_liberated who = from }
+	}
+}
