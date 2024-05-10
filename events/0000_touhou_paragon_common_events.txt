@@ -1039,17 +1039,11 @@ leader_event = {
 					has_ethic = ethic_fanatic_spiritualist
 				}
 			}
-			owner = {
-				has_resource = {
-					type = minerals
-					amount > 800
-				}
-			}
 		}
 		allow = {
 			owner = {
 				has_country_resource = {
-					minerals = 800
+					minerals > 800
 				}
 			}
 		}
