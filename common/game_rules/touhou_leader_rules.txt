@@ -82,6 +82,7 @@ system_blocks_sensors = {
 		is_inside_nebula = yes
 		has_modifier = space_storm
 		has_modifier = zroni_storm
+		has_modifier = queen_scorn_storm
 		has_modifier = tengu_storm
 		has_modifier = bat_swarm
 		has_modifier = red_fog
@@ -94,6 +95,25 @@ system_blocks_sensors = {
 # Root = Planet
 can_species_be_assembled = {
 	is_sapient = yes
+	NOR = {
+		has_trait = trait_exd
+		has_trait = trait_sanae_robot_worker
+	}
+	NOT = {
+		AND = {
+			has_trait = trait_mechanical
+			root.owner = { is_individual_machine = yes }
+		}
+	}
+	NOT = {
+		AND = {
+			has_virtual_species_trait = yes
+			root.owner = {
+				is_fallen_empire = no
+				has_active_tradition = tr_virtuality_finish
+			}
+		}
+	}
 	OR = {
 		AND = {
 			is_robotic = yes
@@ -102,42 +122,14 @@ can_species_be_assembled = {
 					modifier = planet_pop_assembly_add
 					value > 0
 				}
+				owner = {
+					NOT = { has_country_flag = synth_assembly_stopped }
+				}
 			}
 			OR = {
-				NOT = { has_trait = trait_thl_doll }
-				AND = {
-					root = {
-						check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 0 }
-						OR = {
-							any_owned_pop = {
-								has_job = dollmaker
-							}
-							AND = {
-								exists = leader
-								leader = {
-									has_trait = leader_trait_dolls
-								}
-							}
-						}
-					}
-				}
-				AND = {
-					root = {
-						owner = {
-							has_technology = tech_sapient_dolls
-						}
-						OR = {
-							any_owned_pop = {
-								has_job = dollmaker
-							}
-							AND = {
-								exists = leader
-								leader = {
-									has_trait = leader_trait_dolls
-								}
-							}
-						}
-					}
+				NOT = {
+					has_trait = trait_thl_doll
+					dolls_assembly_trigger = yes
 				}
 			}
 		}
@@ -160,15 +152,6 @@ can_species_be_assembled = {
 				root = {
 					any_owned_species = { is_exact_same_species = prevprev }
 				}
-			}
-			else_if = {
-				limit = {
-					root.owner = {
-						has_tradition = tr_cybernetics_assembly_standards
-						has_policy_flag = roboticist_output_build_cyborgs
-					}
-				}
-				has_trait = trait_cybernetic
 			}
 			else_if = {
 				limit = {
@@ -213,11 +196,6 @@ can_species_be_assembled = {
 			}
 		}
 	}
-	this = {
-		not = {
-			has_trait = trait_sanae_robot_worker
-		}
-	}
 	has_population_control = {
 		type = no
 		country = root.owner
@@ -225,7 +203,6 @@ can_species_be_assembled = {
 }
 
 ###人偶
-
 can_fill_ruler_job = {
 	if = {
 		limit = {
@@ -251,31 +228,34 @@ can_fill_ruler_job = {
 			is_enslaved = no
 			is_being_purged = no
 			is_being_assimilated = no
-			NOT = { has_trait = trait_syncretic_proles }
-			can_think = yes
+			# Rule out Traits for servitude & lack of free will
+			NOR = {
+				has_trait = trait_syncretic_proles
+				has_trait = trait_zombie
+				has_trait = trait_nerve_stapled
+			}
+			# Rule out Machine Pops, unless they're rendered sapient
 			OR = {
 				NOT = { has_trait = trait_mechanical }
 				AND = {
-					owner = {
-						OR = {
-							AND = {
-								NOT = { has_trait = trait_thl_doll }
-								owner = {
-									has_technology = tech_synthetic_workers
-								}
-							}
-							AND = {
-								has_trait = trait_thl_doll
-								owner = {
-									has_technology = tech_sapient_dolls
-								}
-							}
-						}
-					}
+					NOT = { has_trait = trait_thl_doll }
+					owner = { has_technology = tech_synthetic_workers }
+					owner = { has_policy_flag = ai_full_rights }
+				}
+				AND = {
+					has_trait = trait_thl_doll
+					owner = { has_technology = tech_doll_leaders }
 					owner = { has_policy_flag = ai_full_rights }
 				}
 			}
-			NOT = { has_citizenship_type = { type = citizenship_organic_trophy country = owner } }
+			# Rule out Organic Trophies
+			NOT = {
+				has_citizenship_type = {
+					type = citizenship_organic_trophy
+					country = owner
+				}
+			}
+			# Rule out violations of the 'Right to Work' Resolution (prioritises organic workers)
 			if = {
 				limit = {
 					divinity_right_to_work_job_check_trigger_exempt = no
@@ -284,20 +264,6 @@ can_fill_ruler_job = {
 			}
 		}
 	}
-}
-
-#Checks whether any leaders (scientists etc) can be formed from this pop
-#Root = country
-#This = pop
-can_generate_leader_from_pop = {
-	can_be_leader = yes
-}
-
-#Root = country
-#This = pop
-can_generate_military_leader_from_pop = {
-	can_be_leader = yes
-	can_be_military_leader = yes
 }
 
 species_has_happiness = {
@@ -309,13 +275,17 @@ species_has_happiness = {
 			OR = {
 				NOT = { exists = from }
 				from = { has_authority = auth_machine_intelligence }
-				from = {
+				AND = {
 					NOT = { has_trait = trait_thl_doll }
-					NOT = { has_technology = tech_synthetic_workers }
+					from = {
+						NOT = { has_technology = tech_synthetic_workers }
+					}
 				}
-				from = {
+				AND = {
 					has_trait = trait_thl_doll
-					NOT = { has_technology = tech_sapient_dolls }
+					from = {
+						NOT = { has_technology = tech_sapient_dolls }
+					}
 				}
 				from = { has_policy_flag = ai_outlawed }
 			}
@@ -454,10 +424,11 @@ can_terraform_planet = {
 
 ###烧尸体发电
 should_force_decline_species = {
-	# Infertile Clone Army pops should decline if in Country that can't have Vats, or there is a Vat shortage.
 	OR = {
+		# Infertile Clone Army pops should decline if in Country that can't have Vats, or there is a Vat shortage.
 		custom_tooltip = {
 			success_text = CLONE_ARMY_FORCE_DECLINE
+			exists = this
 			OR = {
 				has_trait = trait_clone_soldier_infertile
 				has_trait = trait_clone_soldier_infertile_full_potential
@@ -469,7 +440,10 @@ should_force_decline_species = {
 						exists = owner
 						owner = {
 							OR = {
-								NOT = { has_origin = origin_clone_army }					# Can't have Vats.
+								NOR = {
+									has_origin = origin_clone_army
+									has_origin = origin_clone_guard ###兼容星海帝皇
+								}
 								has_country_flag = clone_army_fertility_unlocked			# Can't have Vats anymore.
 								NOT = { owner_main_species = { is_same_species = root } }	# Our Vats can't build this species.
 							}
@@ -479,6 +453,12 @@ should_force_decline_species = {
 					check_variable = { which = clone_pops_missing value < 0 }
 				}
 			}
+		}
+		# This slowly kills off the Syntheic Fertility Species
+		custom_tooltip = {
+			success_text = PATHOGENIC_GENES_FORCE_DECLINE
+			exists = this
+			has_trait = trait_pathogenic_genes
 		}
 		custom_tooltip = {
 			success_text = KILL_CORPSE_BATTERY
@@ -491,8 +471,4 @@ should_force_decline_species = {
 			}
 		}
 	}
-}
-
-can_leader_get_council_trait = {
-	always = yes
 }
