@@ -302,7 +302,6 @@ can_generate_military_leader_from_pop = {
 
 species_has_happiness = {
 	NOR = {
-		has_trait = trait_machine_unit
 		has_trait = trait_hive_mind
 		can_think = no
 		AND = {
@@ -327,6 +326,13 @@ species_has_happiness = {
 			from = {
 				has_authority = auth_machine_intelligence
 				has_civic = civic_machine_assimilator # Assimilator empire
+			}
+		}
+		AND = {
+			has_trait = trait_machine_unit
+			exists = from
+			from = {
+				has_authority = auth_machine_intelligence
 			}
 		}
 	}
