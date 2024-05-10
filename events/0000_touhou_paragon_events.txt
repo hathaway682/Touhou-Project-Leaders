@@ -4018,7 +4018,7 @@ country_event = { # 雏
 			LEVEL = 2
 			GENDER = female
 			IMMORTAL = no
-			ETHIC = xenoplile
+			ETHIC = xenophile
 			DESC = hina1
 			CATCH_PHRASE =  hina1_catch_phrase
 		}

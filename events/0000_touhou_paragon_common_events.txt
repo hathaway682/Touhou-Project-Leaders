@@ -2541,7 +2541,7 @@ country_event = {
 			id = ruined_shirne_location
 			name = "ruined_shirne_location"
 			desc = "ruined_shirne_location_desc"
-			event_chain = ruined_shirne
+			event_chain = ruined_shrine
 			category = ruined_shirne_home_cat
 			location = event_target:fromfrom
 		}
@@ -2564,7 +2564,7 @@ country_event = {
 			desc = "ruined_shirne_location_desc"
 			event_chain = ruined_shirne
 			category = ruined_shirne_home_cat
-			location = event_target:fromfrom
+			location = event_target:shirine_ruin_planet
 		}
 	}
 }

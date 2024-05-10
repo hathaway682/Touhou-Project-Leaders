@@ -403,14 +403,24 @@ ness_assault_army = {
 	}
 
 	potential_country = {
-		has_country_flag = titanic_life_soldiers
+		any_owned_leader = {
+			OR = {
+				has_trait = leader_trait_super_youkai_slug_2
+				has_trait = leader_trait_super_youkai_slug_3
+			}
+		}
 	}
 
 	allow = {
 		custom_tooltip = {
 			text = ness_troop_limit_tooltip
 			owner = {
-				has_country_flag = titanic_life_soldiers
+				any_owned_leader = {
+					OR = {
+						has_trait = leader_trait_super_youkai_slug_2
+						has_trait = leader_trait_super_youkai_slug_3
+					}
+				}
 				NOT = {
 					check_variable = {
 						which = "ness_life_soldier_count"
