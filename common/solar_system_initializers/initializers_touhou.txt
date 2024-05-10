@@ -41,7 +41,7 @@ kappa_enclave_init = {
 		size = { min = 20 max = 25 }
 		has_ring = no
 		init_effect = {
-			clear_deposits = yes
+			#clear_deposits = yes
 			clear_planet_modifiers = yes
 			add_modifier = {
 				modifier = strong_magnetic_field

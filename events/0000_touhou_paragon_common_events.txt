@@ -1040,6 +1040,13 @@ leader_event = {
 				}
 			}
 		}
+		allow = {
+			owner = {
+				has_country_resource = {
+					minerals = 800
+				}
+			}
+		}
 		owner.capital_scope = {
 			add_deposit = d_hakurei_shrine_large
 		}
