@@ -1018,6 +1018,12 @@
  touhou_paragon_enclave.370.a: "太妙了！你在尝试一种很新的工作方法"
  touhou_paragon_enclave.370.b: "恐怕我们内部需要重新讨论一下远程办公的可能性。"
  kappa_enclave_nitori_recruition: "§C河城荷取§!将加入我们！"
+ touhou_paragon_enclave.382.desc:0 "位于[old_kappa_enclave_system.GetName]的河童轨道开发集团的基地最近被摧毁了，是否有河童成功逃离目前还不得而知。"
+ touhou_paragon_enclave.383.desc: "喂？能听见吗？\n\n太好了我亲爱的盟友。玄武之星目前遭到了野蛮袭击，他们一点都不尊重先进技术和自由市场！凶手以为我们已经死了，但正如在河底大战争中一样，吸取以往经验的河童们早就提前准备了逃生艇，相当一部分的成员们都活下来了。\n\n我们希望在[kappa_enclave_new_system.GetName]星系内重新开展活动，因为这里有我们宝贵的水资源。当然，我们只是在那里重建我们的潮涌居住站，星系的控制权还是盟友您的。"
+ touhou_paragon_enclave.383.a:0 "当然，我们会为你提供保护。"
+ touhou_paragon_enclave.383.a_tooltip:0 "[kappa_enclave_new_system.GetName]星系中将重建河童城邦。"
+ touhou_paragon_enclave.383.b:0 "对不起，我们之间还没有建立良好的信任。"
+ touhou_paragon_enclave.383.b.reply:0 "可是我们还能去哪里呢？"
 
  #1.1.4更新趣味事件包
  touhou_paragon_effect.40101.name:0 "花海"

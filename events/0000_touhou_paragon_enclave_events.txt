@@ -1,11 +1,5 @@
 namespace = touhou_paragon_enclave
 
-#####################
-# SALVAGER ENCLAVES
-#####################
-# Salvager Enclave Greetings: Gatekeeper event
-# Via on_custom_diplomacy | this = target country (player); from = country being contacted
-
 country_event = {
     id = touhou_paragon_enclave.300
     hide_window = yes
@@ -29,8 +23,7 @@ country_event = {
     }
 }
 
-# Salvager Enclave: GREETINGS
-# This = player country; event_target:salvager_enclave_country = enclave country
+
 country_event = {
     id = touhou_paragon_enclave.305
     title = touhou_paragon_enclave.305.name
@@ -903,5 +896,185 @@ first_contact_event = {
     after = {
         set_site_progress_locked = no
         finish_first_contact_effect = yes
+    }
+}
+
+#河童城邦的毁灭
+country_event = {
+    id = touhou_paragon_enclave.380
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_country_type = kappa_enclave
+    }
+
+    immediate = {
+        # they will be re-saved when/if station is reestablished
+        fromfrom.solar_system = { save_event_target_as = old_kappa_enclave_system }
+        from = {
+            country_event = { id = touhou_paragon_enclave.381 } # notification for destroyer
+        }
+
+        every_playable_country = {
+            limit = {
+                has_communications = root
+                NOT = { is_same_value = root.from }
+            }
+            country_event = { id = touhou_paragon_enclave.382 } # notification for others
+        }
+
+        # find new location
+        random_playable_country = {
+            limit = {
+                any_owned_planet = {
+                    is_planet_class = pc_ocean
+                }
+            }
+            random_owned_planet = {
+                limit = {
+                    is_planet_class = pc_ocean
+                }
+                save_event_target_as = kappa_enclave_new_system_planet
+                solar_system = {
+                    save_global_event_target_as = kappa_enclave_new_system
+                }
+            }
+            country_event = { id = touhou_paragon_enclave.383 days = 60 }
+        }
+    }
+}
+
+# Any Trader Destroyed (Destroyer)
+country_event = {
+    id = touhou_paragon_enclave.381
+    title = "leviathans.141"
+    desc = "leviathans.141.desc"
+    picture = GFX_evt_space_debris
+    location = event_target:old_kappa_enclave_system
+    show_sound = event_ship_bridge
+    is_triggered_only = yes
+
+    immediate = {
+        every_country = {
+            limit = {
+                is_country_type = default
+                NOR = {
+                    is_same_value = root
+                    has_valid_civic = civic_fanatic_purifiers
+                    has_valid_civic = civic_hive_devouring_swarm
+                    has_valid_civic = civic_machine_terminator
+                }
+            }
+            add_opinion_modifier = {
+                who = root
+                modifier = opinion_destroyed_trader
+            }
+        }
+    }
+    option = {
+        name = EXCELLENT
+        add_resource = {
+            minerals = 2000
+            energy = 2000
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.382
+    title = leviathans.141
+    desc = touhou_paragon_enclave.382.desc
+    picture = GFX_evt_space_debris
+    location = event_target:old_kappa_enclave_system
+    show_sound = event_ship_bridge
+    is_triggered_only = yes
+    option = {
+        name = OK
+    }
+}
+
+
+# Contact to reestablish station
+country_event = {
+    id = touhou_paragon_enclave.383
+    title =  touhou_paragon_enclave.305.name
+    desc = touhou_paragon_enclave.383.desc
+    diplomatic = yes
+    is_triggered_only = yes
+    custom_gui = "enclave_salvager_window"
+    custom_gui_option = "enclave_salvager_option"
+    location = event_target:kappa_enclave_new_system_planet
+    picture_event_data = {
+        portrait = event_target:kappa_enclave_country
+        room = salvagers_room
+    }
+    trigger = { # check that they still own the system
+        event_target:kappa_enclave_new_system = {
+            exists = space_owner
+            space_owner = { is_same_value = root }
+        }
+    }
+
+    option = { # Accept
+        name = touhou_paragon_enclave.383.a
+        custom_tooltip = touhou_paragon_enclave.383.a_tooltip
+        hidden_effect = {
+            event_target:kappa_enclave_country = {
+                create_fleet = {
+                    name = "NAME_Kappa_Enclave_Fleet"
+                    settings = { spawn_debris = no }
+                    effect = {
+                        set_owner = prev
+                        create_ship = {
+                            name = random
+                            design = "NAME_Kappa_Enclave_Station"
+                            graphical_culture = prev
+                        }
+                        set_location = {
+                            target = event_target:kappa_enclave_new_system_planet
+                            angle = random
+                            distance = 15
+                        }
+                        save_event_target_as = CustomCapital
+                        prev = {
+                            set_custom_capital_location = event_target:CustomCapital
+                        }
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = { # Reject
+        name = touhou_paragon_enclave.383.b
+        response_text = touhou_paragon_enclave.383.b.reply
+        hidden_effect = { # find other empire
+            set_country_flag = kappa_reestablishment_rejected
+            random_playable_country = {
+                limit = {
+                    any_owned_planet = {
+                        is_planet_class = pc_ocean
+                    }
+                    not = { has_country_flag = kappa_reestablishment_rejected }
+                }
+                random_owned_planet = {
+                    limit = {
+                        is_planet_class = pc_ocean
+                    }
+                    save_event_target_as = kappa_enclave_new_system_planet
+                    solar_system = {
+                        save_global_event_target_as = kappa_enclave_new_system
+                    }
+                }
+                country_event = { id = touhou_paragon_enclave.383 days = 60 }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
     }
 }

@@ -329,6 +329,7 @@ on_space_battle_lost = {
 on_ship_destroyed_victim = {
 	events = {
 		touhou_paragon_effect.53
+		touhou_paragon_enclave.380
 	}
 }
 
