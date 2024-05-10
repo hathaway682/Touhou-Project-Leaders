@@ -1039,6 +1039,12 @@ leader_event = {
 					has_ethic = ethic_fanatic_spiritualist
 				}
 			}
+			owner = {
+				has_resource = {
+					type = minerals
+					amount > 800
+				}
+			}
 		}
 		owner.capital_scope = {
 			add_deposit = d_hakurei_shrine_large
@@ -1057,6 +1063,16 @@ leader_event = {
 				OR = {
 					has_ethic = ethic_spiritualist
 					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+			owner = {
+				has_resource = {
+					type = minerals
+					amount > 400
+				}
+				has_resource = {
+					type = unity
+					amount > 100
 				}
 			}
 		}
@@ -1079,6 +1095,20 @@ leader_event = {
 				OR = {
 					has_civic = civic_imperial_cult
 					has_civic = civic_psionic_sovereign
+				}
+			}
+			owner = {
+				has_resource = {
+					type = minerals
+					amount > 1200
+				}
+				has_resource = {
+					type = alloys
+					amount > 600
+				}
+				has_resource = {
+					type = rare_crystals
+					amount > 200
 				}
 			}
 		}
@@ -1112,6 +1142,18 @@ leader_event = {
 					has_modifier = covenant_whisperers_in_the_void_0
 					has_modifier = covenant_whisperers_in_the_void
 				}
+				has_resource = {
+					type = minerals
+					amount > 1200
+				}
+				has_resource = {
+					type = alloys
+					amount > 600
+				}
+				has_resource = {
+					type = sr_zro
+					amount > 100
+				}
 			}
 		}
 		name = touhou_paragon.40610.e
@@ -1123,7 +1165,7 @@ leader_event = {
 			add_resource = {
 				minerals = -1200
 				alloys = -600
-				sr_zro = -500
+				sr_zro = -100
 			}
 		}
 		if = {
@@ -1176,6 +1218,12 @@ leader_event = {
 		trigger = {
 			owner = {
 				has_authority = auth_corporate
+			}
+			owner = {
+				has_resource = {
+					type = minerals
+					amount > 800
+				}
 			}
 		}
 		name = touhou_paragon.40610.f
