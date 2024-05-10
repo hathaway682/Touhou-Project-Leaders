@@ -1066,6 +1066,8 @@ leader_event = {
 					has_ethic = ethic_fanatic_spiritualist
 				}
 			}
+		}
+		allow = {
 			owner = {
 				has_resource = {
 					type = minerals
@@ -1098,6 +1100,8 @@ leader_event = {
 					has_civic = civic_psionic_sovereign
 				}
 			}
+		}
+		allow = {
 			owner = {
 				has_resource = {
 					type = minerals
@@ -1143,6 +1147,10 @@ leader_event = {
 					has_modifier = covenant_whisperers_in_the_void_0
 					has_modifier = covenant_whisperers_in_the_void
 				}
+			}
+		}
+		allow = {
+			owner = {
 				has_resource = {
 					type = minerals
 					amount > 1200
@@ -1220,6 +1228,8 @@ leader_event = {
 			owner = {
 				has_authority = auth_corporate
 			}
+		}
+		allow = {
 			owner = {
 				has_resource = {
 					type = minerals
