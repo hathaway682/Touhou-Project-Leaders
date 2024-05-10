@@ -2538,11 +2538,11 @@ country_event = {
 			}
 		}
 		create_point_of_interest = {
-			id = ruined_shirne_location
-			name = "ruined_shirne_location"
-			desc = "ruined_shirne_location_desc"
+			id = ruined_shrine_location
+			name = "ruined_shrine_location"
+			desc = "ruined_shrine_location_desc"
 			event_chain = ruined_shrine
-			category = ruined_shirne_home_cat
+			category = ruined_shrine_home_cat
 			location = event_target:fromfrom
 		}
 	}
@@ -2559,11 +2559,11 @@ country_event = {
 			}
 		}
 		create_point_of_interest = {
-			id = ruined_shirne_location
-			name = "ruined_shirne_location"
-			desc = "ruined_shirne_location_desc"
-			event_chain = ruined_shirne
-			category = ruined_shirne_home_cat
+			id = ruined_shrine_location
+			name = "ruined_shrine_location"
+			desc = "ruined_shrine_location_desc"
+			event_chain = ruined_shrine
+			category = ruined_shrine_home_cat
 			location = event_target:shirine_ruin_planet
 		}
 	}
@@ -2612,7 +2612,7 @@ planet_event = {
 		}
 		custom_tooltip = touhou_paragon.50002.tooltip
 		owner = {
-			remove_point_of_interest = ruined_shirne_location
+			remove_point_of_interest = ruined_shrine_location
 			create_point_of_interest = {
 				id = leaf_shirne
 				name = leaf_shirne
@@ -2672,7 +2672,7 @@ planet_event = {
 		}
 		custom_tooltip = touhou_paragon.50002.tooltip
 		owner = {
-			remove_point_of_interest = ruined_shirne_location
+			remove_point_of_interest = ruined_shrine_location
 			create_point_of_interest = {
 				id = leaf_shirne
 				name = leaf_shirne
@@ -2728,7 +2728,7 @@ planet_event = {
 		}
 		custom_tooltip = touhou_paragon.50002.tooltip
 		owner = {
-			remove_point_of_interest = ruined_shirne_location
+			remove_point_of_interest = ruined_shrine_location
 			create_point_of_interest = {
 				id = leaf_shirne
 				name = leaf_shirne
