@@ -481,3 +481,85 @@ hina_card_4_trigger = {
 		}
 	}
 }
+
+sanae_card_1_trigger = {
+	always = yes
+}
+
+sanae_card_2_trigger = {
+	AND = {
+		Root = {
+			is_scope_type = planet
+			is_star = no
+			is_colony = yes
+			owner = {
+				is_default_or_fallen = yes
+				NOT = {
+					is_same_value = From
+				}
+			}
+			NOR = {
+				has_modifier = pain_flow_modifier_1
+				has_modifier = pain_flow_modifier_2
+			}
+		}
+	}
+}
+
+sanae_card_3_trigger = {
+	AND = {
+		Root = {
+			is_scope_type = planet
+			is_star = yes
+			NOT = {
+				is_star_class = sc_black_hole
+			}
+			is_inside_border = From
+		}
+	}
+}
+
+sanae_card_4_trigger = {
+	AND = {
+		Root = {
+			is_scope_type = planet
+			is_star = no
+			is_colony = yes
+			is_occupied_flag = no
+			owner = {
+				is_default_or_fallen = yes
+				is_same_value = From
+			}
+			is_planet_class = pc_ocean
+		}
+	}
+}
+
+sanae_card_5_trigger = {
+	AND = {
+		Root = {
+			is_scope_type = fleet
+			any_owned_ship = {
+				is_ship_class = shipclass_starbase
+			}
+			owner = {
+				is_default_or_fallen = yes
+				is_same_value = From
+			}
+		}
+	}
+}
+
+sanae_card_6_trigger = {
+	from = {
+		any_controlled_fleet = {
+			exists = leader
+			leader = {
+				owner = {
+					is_same_value = from
+				}
+				has_trait = leader_trait_miracle
+			}
+		}
+	}
+}

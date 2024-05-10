@@ -1039,6 +1039,12 @@ leader_event = {
 					has_ethic = ethic_fanatic_spiritualist
 				}
 			}
+			owner = {
+				has_resource = {
+					type = minerals
+					amount > 800
+				}
+			}
 		}
 		allow = {
 			owner = {
@@ -1066,6 +1072,16 @@ leader_event = {
 					has_ethic = ethic_fanatic_spiritualist
 				}
 			}
+			owner = {
+				has_resource = {
+					type = minerals
+					amount > 400
+				}
+				has_resource = {
+					type = unity
+					amount > 100
+				}
+			}
 		}
 		custom_tooltip = touhou_paragon.40610.min_god.tooltip
 		owner.capital_scope = {
@@ -1086,6 +1102,20 @@ leader_event = {
 				OR = {
 					has_civic = civic_imperial_cult
 					has_civic = civic_psionic_sovereign
+				}
+			}
+			owner = {
+				has_resource = {
+					type = minerals
+					amount > 1200
+				}
+				has_resource = {
+					type = alloys
+					amount > 600
+				}
+				has_resource = {
+					type = rare_crystals
+					amount > 200
 				}
 			}
 		}
@@ -1119,6 +1149,18 @@ leader_event = {
 					has_modifier = covenant_whisperers_in_the_void_0
 					has_modifier = covenant_whisperers_in_the_void
 				}
+				has_resource = {
+					type = minerals
+					amount > 1200
+				}
+				has_resource = {
+					type = alloys
+					amount > 600
+				}
+				has_resource = {
+					type = sr_zro
+					amount > 100
+				}
 			}
 		}
 		name = touhou_paragon.40610.e
@@ -1130,7 +1172,7 @@ leader_event = {
 			add_resource = {
 				minerals = -1200
 				alloys = -600
-				sr_zro = -500
+				sr_zro = -100
 			}
 		}
 		if = {
@@ -1183,6 +1225,12 @@ leader_event = {
 		trigger = {
 			owner = {
 				has_authority = auth_corporate
+			}
+			owner = {
+				has_resource = {
+					type = minerals
+					amount > 800
+				}
 			}
 		}
 		name = touhou_paragon.40610.f
@@ -2545,11 +2593,11 @@ country_event = {
 			}
 		}
 		create_point_of_interest = {
-			id = ruined_shirne_location
-			name = "ruined_shirne_location"
-			desc = "ruined_shirne_location_desc"
-			event_chain = ruined_shirne
-			category = ruined_shirne_home_cat
+			id = ruined_shrine_location
+			name = "ruined_shrine_location"
+			desc = "ruined_shrine_location_desc"
+			event_chain = ruined_shrine
+			category = ruined_shrine_home_cat
 			location = event_target:fromfrom
 		}
 	}
@@ -2566,12 +2614,12 @@ country_event = {
 			}
 		}
 		create_point_of_interest = {
-			id = ruined_shirne_location
-			name = "ruined_shirne_location"
-			desc = "ruined_shirne_location_desc"
-			event_chain = ruined_shirne
-			category = ruined_shirne_home_cat
-			location = event_target:fromfrom
+			id = ruined_shrine_location
+			name = "ruined_shrine_location"
+			desc = "ruined_shrine_location_desc"
+			event_chain = ruined_shrine
+			category = ruined_shrine_home_cat
+			location = event_target:shirine_ruin_planet
 		}
 	}
 }
@@ -2619,7 +2667,7 @@ planet_event = {
 		}
 		custom_tooltip = touhou_paragon.50002.tooltip
 		owner = {
-			remove_point_of_interest = ruined_shirne_location
+			remove_point_of_interest = ruined_shrine_location
 			create_point_of_interest = {
 				id = leaf_shirne
 				name = leaf_shirne
@@ -2679,7 +2727,7 @@ planet_event = {
 		}
 		custom_tooltip = touhou_paragon.50002.tooltip
 		owner = {
-			remove_point_of_interest = ruined_shirne_location
+			remove_point_of_interest = ruined_shrine_location
 			create_point_of_interest = {
 				id = leaf_shirne
 				name = leaf_shirne
@@ -2735,7 +2783,7 @@ planet_event = {
 		}
 		custom_tooltip = touhou_paragon.50002.tooltip
 		owner = {
-			remove_point_of_interest = ruined_shirne_location
+			remove_point_of_interest = ruined_shrine_location
 			create_point_of_interest = {
 				id = leaf_shirne
 				name = leaf_shirne

@@ -1171,8 +1171,8 @@
 
  ruined_shrine_title: "神社与神灵"
  ruined_shrine_desc: "我们发现的废弃木制建筑作用已被确定名称为神社，作用是祭拜神灵，该神社的神灵请求我们修复它。"
- ruined_shirne_location: "废弃神社"
- ruined_shirne_location_desc: "这颗星球的废弃木制建筑作用已被确定名称为神社，作用是祭拜神灵，该神社的神灵请求我们修复它。"
+ ruined_shrine_location: "废弃神社"
+ ruined_shrine_location_desc: "这颗星球的废弃木制建筑作用已被确定名称为神社，作用是祭拜神灵，该神社的神灵请求我们修复它。"
  leaf_shirne: "落叶之神社"
  leaf_shirne_desc: "最常用来建设神社的地方就是森林之中。（提示：在有任意§Y森林星球特征§!的星球建造£building£§Y神社§!）"
  harvest_shirne: "丰收之神社"
