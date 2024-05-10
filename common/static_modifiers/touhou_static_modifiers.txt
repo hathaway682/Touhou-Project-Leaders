@@ -489,8 +489,9 @@ modifier_utsuho_solette_tech = {
 }
 
 modifier_sanae_mission_tech_1 = {
-	planet_pops_robotics_upkeep_mult = -0.20
+	MACHINE_species_trait_points_add = 1
 	ROBOT_species_trait_points_add = 1
+	planet_pops_robotics_upkeep_mult = -0.20
 }
 
 modifier_sanae_mission_mil_2_envoy = {

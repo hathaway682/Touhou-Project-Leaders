@@ -166,7 +166,10 @@ country_event = {
 		}
 		count_owned_pop = {
 			limit = {
-				has_trait = trait_mechanical
+				OR = {
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
 			}
 			count >= 10
 		}

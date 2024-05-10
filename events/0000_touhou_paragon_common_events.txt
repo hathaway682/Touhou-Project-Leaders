@@ -1042,9 +1042,8 @@ leader_event = {
 		}
 		allow = {
 			owner = {
-				has_resource = {
-					type = minerals
-					amount > 800
+				has_country_resource = {
+					minerals > 800
 				}
 			}
 		}
