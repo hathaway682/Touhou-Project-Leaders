@@ -699,6 +699,9 @@ country_event = {
 					has_tradition = tr_synthetics_finish
 					has_tradition = tr_genetics_finish
 					has_tradition = tr_psionics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
 				}
 				any_owned_leader = {
 					has_trait = leader_trait_memory
@@ -1959,6 +1962,9 @@ leader_event = {
 					has_tradition = tr_synthetics_finish
 					has_tradition = tr_genetics_finish
 					has_tradition = tr_psionics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
 				}
 			}
 		}
@@ -1975,7 +1981,12 @@ leader_event = {
 	desc = {
 		trigger = {
 			owner = {
-				has_tradition = tr_synthetics_finish
+				or = {
+					has_tradition = tr_synthetics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
+				}
 			}
 		}
 		text = touhou_paragon.42410.synth
@@ -2049,6 +2060,9 @@ leader_event = {
 					has_tradition = tr_synthetics_finish
 					has_tradition = tr_genetics_finish
 					has_tradition = tr_psionics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
 				}
 			}
 		}
@@ -2065,7 +2079,12 @@ leader_event = {
 	desc = {
 		trigger = {
 			owner = {
-				has_tradition = tr_synthetics_finish
+				or = {
+					has_tradition = tr_synthetics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
+				}
 			}
 		}
 		text = touhou_paragon.42411.synth
@@ -2183,7 +2202,12 @@ leader_event = {
 	option = {
 		trigger = {
 			owner = {
-				has_tradition = tr_synthetics_finish
+				or = {
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
+					has_tradition = tr_synthetics_finish
+				}
 			}
 		}
 		allow = {
@@ -2263,6 +2287,9 @@ leader_event = {
 					has_tradition = tr_cybernetics_finish
 					has_tradition = tr_synthetics_finish
 					has_tradition = tr_genetics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
 				}
 				NOT = {
 					has_country_flag = no_resource_longer
@@ -2292,6 +2319,9 @@ leader_event = {
 					has_tradition = tr_cybernetics_finish
 					has_tradition = tr_synthetics_finish
 					has_tradition = tr_genetics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
 				}
 				has_country_flag = no_resource_longer
 			}
