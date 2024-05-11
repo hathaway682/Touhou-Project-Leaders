@@ -190,6 +190,7 @@ kappa_enclave_init = {
 						namelist = "PRT1"
 						traits = {
 							trait = "trait_mechanical"
+							trait = "trait_wet_planet_preference"
 						}
 						effect = {
 							save_global_event_target_as = kappa_enclave_robot_species

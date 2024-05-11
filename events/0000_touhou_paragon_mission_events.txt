@@ -527,6 +527,9 @@ country_event = {
 			has_tradition = tr_synthetics_finish
 			has_tradition = tr_cybernetics_finish
 			has_tradition = tr_genetics_finish
+			has_tradition = tr_modularity_finish
+			has_tradition = tr_nanotech_finish
+			has_tradition = tr_virtuality_finish
 		}
 	}
 	option = {
@@ -536,6 +539,9 @@ country_event = {
 				has_tradition = tr_synthetics_finish
 				has_tradition = tr_cybernetics_finish
 				has_tradition = tr_genetics_finish
+				has_tradition = tr_modularity_finish
+				has_tradition = tr_nanotech_finish
+				has_tradition = tr_virtuality_finish
 			}
 
 		}
