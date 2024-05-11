@@ -10018,6 +10018,9 @@ country_event = {
                 has_tradition = tr_cybernetics_assimilator_finish
                 has_tradition = tr_cybernetics_finish
                 has_tradition = tr_synthetics_finish
+                has_tradition = tr_modularity_finish
+                has_tradition = tr_nanotech_finish
+                has_tradition = tr_virtuality_finish
             }
         }
         hidden_effect = {
@@ -10156,7 +10159,12 @@ country_event = {
         }
         if = {
             limit = {
-                has_tradition = tr_synthetics_finish
+                or = {
+                    has_tradition = tr_modularity_finish
+                    has_tradition = tr_nanotech_finish
+                    has_tradition = tr_virtuality_finish
+                    has_tradition = tr_synthetics_finish
+                }
             }
             last_created_leader = {
                 add_trait = leader_trait_regeneration_2
