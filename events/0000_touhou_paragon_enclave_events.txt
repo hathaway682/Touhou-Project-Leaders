@@ -668,7 +668,7 @@ country_event = {
             days = 3600
         }
         add_resource = {
-            energy = 10
+            energy = 5
             mult = kappa_enclave_cost
         }
         event_target:kappa_enclave_country = {

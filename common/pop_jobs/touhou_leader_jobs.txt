@@ -318,7 +318,7 @@ foundry = {
                     has_country_flag = touhou_flag_sanae_enigmatic_alloys
                 }
             }
-            alloys = 3.5
+            alloys = 0.5
             engineering_research = 1
         }
 

@@ -576,36 +576,50 @@ country_event = {
 							modifier = {
 								mult = 0
 								owner = {
-									NOT = {
+									NOR = {
 										has_technology = tech_robotic_workers
+										has_technology = tech_robomodding_m
+										has_technology = tech_robomodding
 									}
 								}
 							}
 							modifier = {
 								mult = 10
 								owner = {
-									has_technology = tech_droid_workers
+									OR = {
+										has_technology = tech_droid_workers
+										has_technology = tech_binary_motivators
+									}
 								}
 							}
 							modifier = {
 								mult = 10
 								owner = {
-									has_technology = tech_synthetic_workers
+									OR = {
+										has_technology = tech_synthetic_workers
+										has_technology = tech_nanite_assemblers
+									}
 								}
 							}
-							leader_event = { id = touhou_paragon.40310 days = 1 random = 360 }
+							leader_event = { id = touhou_paragon.40310 }# days = 1 random = 360 }
 						} # 非想天则
 						499 = {
 							modifier = {
 								subtract = 9
 								owner = {
-									has_technology = tech_droid_workers
+									OR = {
+										has_technology = tech_droid_workers
+										has_technology = tech_binary_motivators
+									}
 								}
 							}
 							modifier = {
 								subtract = 90
 								owner = {
-									has_technology = tech_synthetic_workers
+									OR = {
+										has_technology = tech_synthetic_workers
+										has_technology = tech_nanite_assemblers
+									}
 								}
 							}
 						}
