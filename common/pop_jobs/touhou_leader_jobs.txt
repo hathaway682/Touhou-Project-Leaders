@@ -554,25 +554,28 @@ dollmaker = {
             }
             AND = {
                 has_trait = trait_mechanical
-                owner = { has_technology = tech_synthetic_workers }
+                OR = {
+                    owner = { has_technology = tech_synthetic_workers }
+                    owner_is_individual_machine = yes
+                }
             }
         }
     }
 
     planet_modifier = {
-        doll_control_limit = 15
+        doll_control_limit = 20
         planet_pop_assembly_add = 2
     }
 
     triggered_planet_modifier = {
         potential = { owner = { has_technology = tech_automatic_dolls } }
-        doll_control_limit = 15
+        doll_control_limit = 20
         planet_doll_jobs_worker_produces_mult = 0.05
     }
 
     triggered_planet_modifier = {
         potential = { owner = { has_technology = tech_sapient_dolls } }
-        doll_control_limit = -30
+        doll_control_limit = -40
         planet_doll_jobs_specialist_produces_mult = 0.05
     }
 

@@ -748,3 +748,13 @@ broken_amulet_modifier_2 = {
 	ship_armor_hardening_add = -0.75
 	ship_shield_hardening_add = -0.75
 }
+
+sanae_frog_debuff = {
+	pop_environment_tolerance = -0.25
+	pop_happiness = -0.25
+}
+
+sanae_snake_debuff = {
+	pop_environment_tolerance = -2
+	pop_happiness = -1
+}
