@@ -129,8 +129,8 @@ can_species_be_assembled = {
 			OR = {
 				NOT = {
 					has_trait = trait_thl_doll
-					dolls_assembly_trigger = yes
 				}
+				dolls_assembly_trigger = yes
 			}
 		}
 		AND = {
