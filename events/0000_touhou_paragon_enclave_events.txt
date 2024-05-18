@@ -338,6 +338,7 @@ country_event = {
                 amount = 10
             }
         }
+        country_event = { id = touhou_paragon_enclave.305 }
     }
     option = {
         name = touhou_paragon_enclave.310.b
@@ -423,6 +424,7 @@ country_event = {
                 amount = 10
             }
         }
+        country_event = { id = touhou_paragon_enclave.305 }
     }
     option = {
         name = touhou_paragon_enclave.310.b
@@ -547,12 +549,12 @@ country_event = {
         }
         add_modifier = {
             modifier = modifier_kappa_construction
-            days = 90
+            days = 240
             multiplier = kappa_construction_count
         }
         set_timed_country_flag = {
             flag = modifier_kappa_construction_cooldown
-            days = 360
+            days = 720
         }
         add_resource = {
             energy = -200
@@ -578,13 +580,87 @@ country_event = {
                 }
             }
         }
+        country_event = { id = touhou_paragon_enclave.305 }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.341 days = 720 }
+        }
+        ai_chance = {
+            factor = 0
+        }
     }
     option = {
         name = touhou_paragon_enclave.310.b
         country_event = { id = touhou_paragon_enclave.305 }
     }
 }
-
+#建造技术续约
+country_event = {
+    id = touhou_paragon_enclave.341
+    title = touhou_paragon_enclave.340.name
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "enclave_salvager_window"
+    custom_gui_option = "enclave_salvager_option"
+    picture_event_data = {
+        portrait = event_target:kappa_enclave_country
+        room = salvagers_room
+    }
+    location = event_target:kappa_enclave_system
+    desc = {
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        text = touhou_paragon_enclave.341.desc
+    }
+    option = {
+        name = touhou_paragon_enclave.341.a
+        add_modifier = {
+            modifier = modifier_kappa_construction
+            days = 240
+            multiplier = kappa_construction_count
+        }
+        set_timed_country_flag = {
+            flag = modifier_kappa_construction_cooldown
+            days = 720
+        }
+        add_resource = {
+            energy = -200
+            multiplier = kappa_construction_count
+        }
+        event_target:kappa_enclave_country = {
+            add_trust = {
+                who = root
+                amount = 2
+            }
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = kappa_construction_count
+                        value <= 29
+                    }
+                }
+                change_variable = {
+                    which = kappa_construction_count
+                    value = 1
+                }
+            }
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.341 days = 360 }
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.341.b
+    }
+}
 #机器人技术
 country_event = {
     id = touhou_paragon_enclave.350
@@ -641,12 +717,13 @@ country_event = {
                 amount = 2
             }
         }
+        country_event = { id = touhou_paragon_enclave.305 }
     }
     option = {
         name = touhou_paragon_enclave.350.b
         allow = {
             custom_tooltip_fail = {
-                text = kappa_enclave_construction_already
+                text = kappa_enclave_robot_line_already
                 not = {
                     has_modifier = modifier_kappa_robot
                 }
@@ -677,6 +754,10 @@ country_event = {
                 amount = 10
             }
         }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.351 days = 3600}
+        }
+        country_event = { id = touhou_paragon_enclave.305 }
     }
     option = {
         name = touhou_paragon_enclave.310.b
@@ -684,6 +765,65 @@ country_event = {
     }
 }
 
+#机器人续约
+country_event = {
+    id = touhou_paragon_enclave.351
+    title = touhou_paragon_enclave.350.name
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "enclave_salvager_window"
+    custom_gui_option = "enclave_salvager_option"
+    picture_event_data = {
+        portrait = event_target:kappa_enclave_country
+        room = salvagers_room
+    }
+    location = event_target:kappa_enclave_system
+    desc = {
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        text = touhou_paragon_enclave.351.desc
+    }
+    option = {
+        name = touhou_paragon_enclave.351.a
+        allow = {
+            resource_stockpile_compare = {
+                resource = energy
+                value >= -5 #flip to a positive value to make this comparison
+                mult = kappa_enclave_cost
+            }
+            event_target:kappa_enclave_country = {
+                trust = {
+                    who = root
+                    value >= 20
+                }
+            }
+        }
+        add_modifier = {
+            modifier = modifier_kappa_robot
+            days = 3600
+        }
+        add_resource = {
+            energy = 5
+            mult = kappa_enclave_cost
+        }
+        event_target:kappa_enclave_country = {
+            add_trust = {
+                who = root
+                amount = 10
+            }
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.351 days = 3600}
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.351.b
+    }
+}
 #非想天则
 country_event = {
     id = touhou_paragon_enclave.360
