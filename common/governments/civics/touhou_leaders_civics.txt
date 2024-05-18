@@ -36,6 +36,7 @@
 civic_hakurei_shinto = {
 	description = "civic_hakurei_shinto_effects"
 	modification = no
+	alternate_civic_version = civic_hakurei_shinto_corp
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOT = { value = auth_corporate } }
@@ -93,6 +94,7 @@ civic_hakurei_shinto = {
 civic_hakurei_shinto_corp = {
 	description = "civic_hakurei_shinto_corp_effects"
 	modification = no
+	alternate_civic_version = civic_hakurei_shinto
 	potential = {
 		OR = {
 			authority = { value = auth_corporate }
@@ -157,6 +159,7 @@ civic_hakurei_shinto_corp = {
 civic_moriya_shinto = {
 	description = "civic_moriya_shinto_effects"
 	modification = no
+	alternate_civic_version = civic_moriya_shinto_corp
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOT = { value = auth_corporate } }
@@ -214,6 +217,7 @@ civic_moriya_shinto = {
 civic_moriya_shinto_corp = {
 	description = "civic_moriya_shinto_corp_effects"
 	modification = no
+	alternate_civic_version = civic_moriya_shinto
 	potential = {
 		OR = {
 			authority = { value = auth_corporate }
@@ -278,6 +282,7 @@ civic_moriya_shinto_corp = {
 civic_kirisame_magic = {
 	description = "civic_kirisame_magic_effects"
 	modification = no
+	alternate_civic_version = civic_kirisame_magic_corp
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOT = { value = auth_corporate } }
@@ -321,6 +326,7 @@ civic_kirisame_magic = {
 civic_kirisame_magic_corp = {
 	description = "civic_kirisame_magic_corp_effects"
 	modification = no
+	alternate_civic_version = civic_kirisame_magic
 	potential = {
 		OR = {
 			authority = { value = auth_corporate }
@@ -371,6 +377,7 @@ civic_kirisame_magic_corp = {
 civic_scarlet_allience = {
 	description = "civic_scarlet_allience_effects"
 	modification = no
+	alternate_civic_version = civic_scarlet_allience_corp
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOT = { value = auth_corporate } }
@@ -426,6 +433,7 @@ civic_scarlet_allience = {
 civic_scarlet_allience_corp = {
 	description = "civic_scarlet_allience_corp_effects"
 	modification = no
+	alternate_civic_version = civic_scarlet_allience
 	potential = {
 		OR = {
 			authority = { value = auth_corporate }
@@ -486,66 +494,10 @@ civic_scarlet_allience_corp = {
 	}
 }
 
-civic_scarlet_allience = {
-	description = "civic_scarlet_allience_effects"
-	modification = no
-	potential = {
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = { NOT = { value = auth_corporate } }
-	}
-	possible = {
-		ethics = {
-			OR = {
-				value = ethic_authoritarian
-				value = ethic_fanatic_authoritarian
-				value = ethic_militarist
-				value = ethic_fanatic_militarist
-			}
-		}
-		origin = {
-			NOR = {
-				value = origin_imperial_vassal
-				value = origin_scion
-				value = origin_common_ground
-			}
-		}
-		species_archetype = {
-			NOT = {
-				value = LITHOID
-			}
-		}
-		civics = {
-			NOR = {
-				text = can_only_choose_one
-				value = civic_hakurei_shinto
-				value = civic_hakurei_shinto_corp
-				value = civic_moriya_shinto
-				value = civic_moriya_shinto_corp
-				value = civic_kirisame_magic
-				value = civic_kirisame_magic_corp
-				value = civic_nether_world
-				value = civic_nether_world_corp
-				value = civic_penglai_medcine
-				value = civic_penglai_medcine_corp
-				value = civic_hifuu
-			}
-		}
-	}
-	random_weight = { base = 0 }
-	ai_weight = {
-		base = 0
-	}
-	traits = { trait = trait_scarlet_blood }
-	modifier = {
-		country_power_projection_influence_produces_add = 1
-		country_naval_cap_mult = 0.2
-		country_claim_influence_cost_mult = -0.2
-	}
-}
-
 civic_nether_world = {
 	description = "civic_nether_world_effects"
 	modification = no
+	alternate_civic_version = civic_nether_world_corp
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOT = { value = auth_corporate } }
@@ -596,6 +548,7 @@ civic_nether_world = {
 civic_nether_world_corp = {
 	description = "civic_nether_world_corp_effects"
 	modification = no
+	alternate_civic_version = civic_nether_world
 	potential = {
 		OR = {
 			authority = { value = auth_corporate }
@@ -652,6 +605,7 @@ civic_nether_world_corp = {
 civic_penglai_medcine = {
 	description = "civic_penglai_medcine_effects"
 	modification = no
+	alternate_civic_version = civic_penglai_medcine_corp
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOT = { value = auth_corporate } }
@@ -701,6 +655,7 @@ civic_penglai_medcine = {
 civic_penglai_medcine_corp = {
 	description = "civic_penglai_medcine_corp_effects"
 	modification = no
+	alternate_civic_version = civic_penglai_medcine
 	potential = {
 		OR = {
 			authority = { value = auth_corporate }

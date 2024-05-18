@@ -779,15 +779,14 @@ bat_swarm = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_distance
+			has_trait = leader_trait_destiny_manipulation
 		}
 	}
 	allow = {
 		any_owned_fleet = {
 			exists = leader
-
 			leader = {
-				has_trait = leader_trait_distance
+				has_trait = leader_trait_destiny_manipulation
 			}
 		}
 	}
@@ -857,15 +856,14 @@ red_fog = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_distance
+			has_trait = leader_trait_destiny_manipulation
 		}
 	}
 	allow = {
 		any_owned_fleet = {
 			exists = leader
-
 			leader = {
-				has_trait = leader_trait_distance
+				has_trait = leader_trait_destiny_manipulation
 			}
 		}
 	}
@@ -1144,7 +1142,6 @@ destiny_manipulation = {
 	potential = {
 		any_owned_leader = {
 			has_trait = leader_trait_destiny_manipulation
-			is_councilor = yes
 		}
 	}
 	allow = {

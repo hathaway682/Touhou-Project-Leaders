@@ -270,7 +270,7 @@ weapon_component_template = {
 	icon = "GFX_ship_part_master_spark"
 	icon_frame = 1
 
-	firing_arc = 10.0
+	firing_arc = 25.0
 	use_ship_kill_target = no
 
 	prerequisites = { "tech_master_spark" }
@@ -386,7 +386,7 @@ weapon_component_template = {
 	icon = "GFX_ship_part_master_spark"
 	icon_frame = 1
 
-	firing_arc = 10.0
+	firing_arc = 25.0
 	use_ship_kill_target = no
 
 	tags = { weapon_type_energy weapon_role_artillery t_slot }

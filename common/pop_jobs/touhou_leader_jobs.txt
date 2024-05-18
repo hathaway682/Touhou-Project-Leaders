@@ -556,7 +556,14 @@ dollmaker = {
                 has_trait = trait_mechanical
                 OR = {
                     owner = { has_technology = tech_synthetic_workers }
-                    owner_is_individual_machine = yes
+                    owner = { is_individual_machine = yes }
+                }
+            }
+            AND = {
+                has_trait = trait_machine_unit
+                OR = {
+                    owner = { has_technology = tech_synthetic_workers }
+                    owner = { is_individual_machine = yes }
                 }
             }
         }
