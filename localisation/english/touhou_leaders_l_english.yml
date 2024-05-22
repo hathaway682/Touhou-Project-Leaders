@@ -881,7 +881,7 @@
  spell_card_plural: "术式"
 
  touhou_paragon_effect.10000.name: "天狗的情报屋"
- touhou_paragon_effect.10000.desc: "我们新闻记者从不编造谎言，只是让真相出现在对自己有利的地方。你手里显然握着一些有趣的真相，那么是那个不幸的国家要为承担这些真相的代价呢？"
+ touhou_paragon_effect.10000.desc: "我们新闻记者从不编造谎言，只是让真相出现在对自己有利的地方。你手里显然握着一些有趣的真相，那么是哪个不幸的国家要为承担这些真相的代价呢？"
  touhou_paragon_effect.10000.a: "[target_country_1.GetName]"
  touhou_paragon_effect.10000.b: "[target_country_2.GetName]"
  touhou_paragon_effect.10000.c: "[target_country_3.GetName]"

@@ -1147,7 +1147,6 @@ destiny_manipulation = {
 	allow = {
 		any_owned_leader = {
 			has_trait = leader_trait_destiny_manipulation
-			is_councilor = yes
 		}
 	}
 	resources = {

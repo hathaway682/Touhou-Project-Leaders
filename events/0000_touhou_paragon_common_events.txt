@@ -1059,8 +1059,9 @@ leader_event = {
 		}
 		allow = {
 			owner = {
-				has_country_resource = {
-					minerals > 800
+				has_resource = {
+					type = minerals
+					amount > 800
 				}
 			}
 		}
@@ -2638,6 +2639,12 @@ country_event = {
 		hidden_effect = {
 			fromfrom = {
 				set_planet_flag = shirine_ruin_planet
+				if = {
+					limit = {
+						is_colonizable = no
+					}
+					change_pc = pc_continental
+				}
 			}
 		}
 		create_point_of_interest = {
@@ -2659,6 +2666,12 @@ country_event = {
 		hidden_effect = {
 			fromfrom = {
 				set_planet_flag = shirine_ruin_planet
+				if = {
+					limit = {
+						is_colonizable = no
+					}
+					change_pc = pc_continental
+				}
 			}
 		}
 		create_point_of_interest = {
