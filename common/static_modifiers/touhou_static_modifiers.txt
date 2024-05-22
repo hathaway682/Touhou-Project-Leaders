@@ -631,8 +631,8 @@ modifier_kappa_construction = {
 }
 
 modifier_kappa_robot = {
-	planet_pop_assembly_add = 1
-	planet_pop_assembly_organic_add = 1.125
+	planet_pop_assembly_add = 1.5
+	planet_pop_assembly_mult = 0.15
 }
 
 modifier_deformed_mushroom = {

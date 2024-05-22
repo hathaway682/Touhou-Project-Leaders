@@ -140,7 +140,7 @@ kappa_enclave_init = {
 						settings = { spawn_debris = no }
 						effect = {
 							set_owner = prev
-								create_ship = {
+							create_ship = {
 								name = random
 								design = "NAME_Kappa_Enclave_Station"
 								graphical_culture = prev
@@ -154,6 +154,7 @@ kappa_enclave_init = {
 							prev = {
 								set_custom_capital_location = event_target:CustomCapital
 							}
+							save_global_event_target_as = kappa_enclave_system
 						}
 					}
 					create_leader = {
