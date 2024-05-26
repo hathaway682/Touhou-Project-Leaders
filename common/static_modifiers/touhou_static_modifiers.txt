@@ -570,6 +570,12 @@ modifier_sanae_mission_adm_5_unbidden = {
 	ship_weapon_range_mult = 0.3
 }
 
+modifier_sanae_mission_adm_5_synth_queen = {
+	ship_shield_regen_add_perc = 1
+	ship_armor_regen_add_perc = 1
+	ship_hull_regen_add_perc = 1
+}
+
 modifier_sanae_mission_tech_5_s_composer = {
 	pop_growth_speed = 0.05
 	leader_lifespan_add = 5
