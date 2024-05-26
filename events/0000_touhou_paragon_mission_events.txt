@@ -1236,7 +1236,10 @@ country_event = {
 			}
 		}
 		allow = {
-			allowed_crisis_type = prethoryn
+			or = {
+				allowed_crisis_type = prethoryn
+				allowed_crisis_type = all
+			}
 		}
 		add_modifier = {
 			modifier = modifier_sanae_mission_adm_5_prethoryn
@@ -1251,7 +1254,10 @@ country_event = {
 			}
 		}
 		allow = {
-			allowed_crisis_type = contingency
+			or = {
+				allowed_crisis_type = contingency
+				allowed_crisis_type = all
+			}
 		}
 		add_modifier = {
 			modifier = modifier_sanae_mission_adm_5_contingency
@@ -1266,7 +1272,10 @@ country_event = {
 			}
 		}
 		allow = {
-			allowed_crisis_type = unbidden
+			or = {
+				allowed_crisis_type = unbidden
+				allowed_crisis_type = all
+			}
 		}
 		add_modifier = {
 			modifier = modifier_sanae_mission_adm_5_unbidden
@@ -1290,6 +1299,24 @@ country_event = {
 				desc = "touhou_sanae_mission_finish"
 				event_chain = "touhou_sanae_mission_chain"
 			}
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40318.e
+		trigger = {
+			or = {
+				has_ascension_perk = ap_galactic_wonders_utopia
+				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+			}
+		}
+		allow = {
+			or = {
+				allowed_crisis_type = synth_queen
+				allowed_crisis_type = all
+			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_adm_5_synth_queen
 		}
 	}
 }
