@@ -416,19 +416,23 @@ aya_research = {
 	all_technology_research_speed = 0.1
 }
 
+aya_research_victim = {
+	all_technology_research_speed = -0.1
+}
+
 aya_morale_1 = {
-	army_morale = -0.2
-	ship_fire_rate_mult = -0.1
+	army_morale = -0.3
+	ship_fire_rate_mult = -0.15
 }
 
 aya_morale_2 = {
-	army_morale = -0.4
-	ship_fire_rate_mult = -0.2
+	army_morale = -0.6
+	ship_fire_rate_mult = -0.3
 }
 
 aya_morale_3 = {
-	army_morale = -0.66
-	ship_fire_rate_mult = -0.33
+	army_morale = -0.9
+	ship_fire_rate_mult = -0.45
 }
 
 modifier_utsuho_detonation_a = {

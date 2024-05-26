@@ -7972,8 +7972,10 @@ country_event = {
                 category = technology
                 level >= 3
             }
-            NOT = {
-                has_modifier = aya_research
+            event_target:target_country = {
+                NOT = {
+                    has_modifier = aya_research_victim
+                }
             }
         }
         name = touhou_paragon_effect.10001.d
@@ -9131,8 +9133,11 @@ country_event = {
             }
         }
         else = {
-            add_resource = {
-                physics_research = 1000
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 6
+                min = 100
+                max = 1000000
             }
         }
         if = {
@@ -9151,8 +9156,11 @@ country_event = {
             }
         }
         else = {
-            add_resource = {
-                society_research = 1000
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 6
+                min = 100
+                max = 1000000
             }
         }
         if = {
@@ -9171,13 +9179,22 @@ country_event = {
             }
         }
         else = {
-            add_resource = {
-                engineering_research = 1000
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 6
+                min = 100
+                max = 1000000
             }
         }
         add_modifier = {
             modifier = aya_research
             days = 3600
+        }
+        event_target:target_country = {
+            add_modifier = {
+                modifier = aya_research_victim
+                days = 3600
+            }
         }
         name = EXCELLENT
     }
@@ -9197,17 +9214,34 @@ country_event = {
                         modifier = aya_morale_1
                         days = 3600
                     }
+                    modifier = {
+                        add = 2
+                        NOT = {
+                            mid_game_years_passed > 0
+                        }
+                    }
                 }
                 1 = {
                     add_modifier = {
                         modifier = aya_morale_2
                         days = 3600
                     }
+                    modifier = {
+                        add = 2
+                        mid_game_years_passed > 0
+                        NOT = {
+                            end_game_years_passed > 0
+                        }
+                    }
                 }
                 1 = {
                     add_modifier = {
                         modifier = aya_morale_3
                         days = 3600
+                    }
+                    modifier = {
+                        add = 2
+                        end_game_years_passed > 0
                     }
                 }
             }
