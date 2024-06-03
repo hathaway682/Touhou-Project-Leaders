@@ -1004,7 +1004,7 @@ touhou_historian = {
         }
     }
 
-    planet_modifier = {
+    country_modifier = {
         planet_administrators_produces_mult = 0.05
         planet_culture_workers_produces_mult = 0.05
         culture_workers_modifier_mult = 0.05

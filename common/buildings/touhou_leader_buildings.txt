@@ -1163,7 +1163,7 @@ building_suzunaan = {
 
 building_national_historial_archive = {
 	base_buildtime = @b3_time
-	base_cap_amount = 1
+	empire_limit = 1
 
 	category = unity
 
