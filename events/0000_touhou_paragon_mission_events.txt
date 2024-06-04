@@ -654,8 +654,7 @@ country_event = {
 		has_point_of_interest = {
 			poi = touhou_sanae_mission_chain_mil.3
 		}
-		any_owned_fleet =
-		{
+		any_owned_fleet = {
 			leader = {
 				has_trait = leader_trait_miracle
 			}
@@ -681,6 +680,7 @@ country_event = {
 				progress = 0.2
 			}
 			else = {
+				custom_tooltip = touhou_paragon_mission.40311_tooltip.a
 				create_fleet = {
 					name = "NAME_Dreadnought"
 					effect = {
@@ -703,6 +703,7 @@ country_event = {
 	}
 	option = {
 		name = touhou_paragon_mission.40311.b
+		custom_tooltip = touhou_paragon_mission.40311_tooltip.b
 		if = {
 			limit = {
 				not = {
