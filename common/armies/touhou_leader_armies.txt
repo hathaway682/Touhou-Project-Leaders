@@ -363,7 +363,7 @@ cybrex_warform = {
 	potential_country = {
 		or = {
 			has_relic = r_war_forge
-			has_country_flag = sanae_mission_cybrex
+			has_country_flag = touhou_sanae_mission_allow_cybrexwarform
 		}
 	}
 	potential = {
