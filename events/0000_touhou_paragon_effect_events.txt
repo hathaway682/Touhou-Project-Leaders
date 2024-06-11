@@ -11061,6 +11061,7 @@ country_event = {
         every_owned_leader = {
             limit = {
                 has_trait = leader_trait_regeneration
+                not = { has_trait = leader_trait_time }
             }
             remove_trait = leader_trait_regeneration
             add_trait = leader_trait_regeneration_2
