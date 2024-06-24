@@ -1300,7 +1300,7 @@ country_event = {
             }
             owner = {
                 add_resource = {
-                    engineering_research = 1000
+                    engineering_research = 10000
                     mult = prev.trigger:has_level
                 }
             }
@@ -1334,7 +1334,7 @@ country_event = {
             }
             owner = {
                 add_resource = {
-                    society_research = 1000
+                    society_research = 10000
                     mult = prev.trigger:has_level
                 }
             }
@@ -1368,7 +1368,7 @@ country_event = {
             }
             owner = {
                 add_resource = {
-                    physics_research = 1000
+                    physics_research = 10000
                     mult = prev.trigger:has_level
                 }
             }
@@ -11061,6 +11061,7 @@ country_event = {
         every_owned_leader = {
             limit = {
                 has_trait = leader_trait_regeneration
+                not = { has_trait = leader_trait_time }
             }
             remove_trait = leader_trait_regeneration
             add_trait = leader_trait_regeneration_2

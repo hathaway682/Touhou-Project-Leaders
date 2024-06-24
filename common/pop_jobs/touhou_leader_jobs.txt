@@ -316,12 +316,32 @@ foundry = {
             trigger = {
                 owner = {
                     has_country_flag = touhou_flag_sanae_enigmatic_alloys
+                    OR = {
+                        has_tradition = tr_synthetics_finish
+                        has_tradition = tr_modularity_finish
+                    }
+                }
+            }
+            sr_living_metal = 0.1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_country_flag = touhou_flag_sanae_enigmatic_alloys
+                    has_tradition = tr_nanotech_finish
+                }
+            }
+            nanites = 0.1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_country_flag = touhou_flag_sanae_enigmatic_alloys
                 }
             }
             alloys = 0.5
             engineering_research = 1
         }
-
         upkeep = {
             trigger = {
                 planet = {
@@ -348,6 +368,7 @@ foundry = {
             planet = {
                 owner = {
                     has_country_flag = touhou_flag_sanae_enigmatic_alloys
+                    has_tradition = tr_virtuality_finish
                 }
             }
         }
