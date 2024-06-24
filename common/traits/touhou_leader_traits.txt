@@ -3307,7 +3307,7 @@ leader_trait_speculative_fiction = {
 		CLASS = scientist
 		ICON = GFX_leader_trait_ambassador_pact_keeper
 		RARITY = veteran
-		COUNCIL = yes
+		COUNCIL = no
 		TIER = none
 	}
 	planet_modifier = {
