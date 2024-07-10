@@ -357,6 +357,8 @@ utility_component_template = {
 
 	component_set = "asteroid_impact"
 
+	size_restriction = { marisa_asteroid }
+
 	scripted_action_possible = {
 		is_colony = yes
 	}
