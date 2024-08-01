@@ -1267,6 +1267,153 @@ leader_event = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = {
+				not = {
+					any_country = {
+						is_country_type = saisen_box
+					}
+				}
+			}
+			owner = {
+				country_event = { id = touhou_paragon.40611 days = 365 random = 180 }
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = touhou_paragon.40611
+	title = touhou_paragon.40611.name
+	desc = touhou_paragon.40611.desc
+	picture = GFX_evt_plan_of_hakurei_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+	immediate = {
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_fly
+			}
+			save_event_target_as = tp_target_leader
+		}
+	}
+	picture_event_data = {
+		portrait = event_target:tp_target_leader
+	}
+	option = {
+		name = touhou_paragon.40611.a
+		custom_tooltip = touhou_paragon.40611.a.response
+		hidden_effect = {
+			create_country = {
+				name = "NAME_Saisen_Box"
+				type = saisen_box
+				flag = {
+					icon= {
+						category = "gskc"
+						file = "flag_gskc_1.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "horizontal.dds"
+					}
+					colors={
+						"red"
+						"white"
+						"null"
+						"null"
+					}
+				}
+			}
+			last_created_country = {
+				establish_communications_no_message = root
+				create_leader = {
+					class = commander
+					species = event_target:leader_species
+					name = NAME_Reimu
+					event_leader = yes
+					skill = 10
+					set_age = 0
+					traits = {
+						trait = subclass_commander_miko
+						trait = leader_trait_invincible
+						trait = leader_trait_theurgist
+						trait = leader_trait_fly
+					}
+				}
+				set_leader = last_created_leader
+				save_global_event_target_as = saisen_box_country
+			}
+			set_variable = {
+				which = touhou_variable_saisen_count
+				value = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40612
+	title = touhou_paragon.40611.name
+	desc = touhou_paragon.40612.desc
+	picture = GFX_evt_ruined_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = touhou_paragon.40611.a
+		remove_point_of_interest = capital_shirne
+		custom_tooltip = touhou_paragon.40611.a.response
+		hidden_effect = {
+			create_country = {
+				name = "NAME_Saisen_Box"
+				type = saisen_box
+				flag = {
+					icon= {
+						category = "gskc"
+						file = "flag_gskc_1.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "horizontal.dds"
+					}
+					colors={
+						"red"
+						"white"
+						"null"
+						"null"
+					}
+				}
+			}
+			last_created_country = {
+				establish_communications_no_message = root
+				create_leader = {
+					class = commander
+					species = event_target:leader_species
+					name = NAME_Reimu
+					event_leader = yes
+					skill = 10
+					set_age = 0
+					traits = {
+						trait = subclass_commander_miko
+						trait = leader_trait_invincible
+						trait = leader_trait_theurgist
+						trait = leader_trait_fly
+					}
+				}
+				set_leader = last_created_leader
+				save_global_event_target_as = saisen_box_country
+			}
+			set_variable = {
+				which = touhou_variable_saisen_count
+				value = 1
+			}
+		}
+	}
 }
 
 leader_event = {
@@ -2753,6 +2900,23 @@ planet_event = {
 				location = capital_scope
 				category = jinx_shirne_cat
 			}
+			if = {
+				limit = {
+					not = {
+						any_owned_leader = {
+							has_trait = leader_trait_fly
+						}
+					}
+				}
+				create_point_of_interest = {
+					id = capital_shirne
+					name = capital_shirne
+					desc = capital_shirne_desc
+					event_chain = ruined_shrine
+					location = capital_scope
+					category = capital_shirne_cat
+				}
+			}
 		}
 	}
 
@@ -2813,6 +2977,23 @@ planet_event = {
 				location = capital_scope
 				category = jinx_shirne_cat
 			}
+			if = {
+				limit = {
+					not = {
+						any_owned_leader = {
+							has_trait = leader_trait_fly
+						}
+					}
+				}
+				create_point_of_interest = {
+					id = capital_shirne
+					name = capital_shirne
+					desc = capital_shirne_desc
+					event_chain = ruined_shrine
+					location = capital_scope
+					category = capital_shirne_cat
+				}
+			}
 		}
 	}
 
@@ -2868,6 +3049,23 @@ planet_event = {
 				event_chain = ruined_shrine
 				location = capital_scope
 				category = jinx_shirne_cat
+			}
+			if = {
+				limit = {
+					not = {
+						any_owned_leader = {
+							has_trait = leader_trait_fly
+						}
+					}
+				}
+				create_point_of_interest = {
+					id = capital_shirne
+					name = capital_shirne
+					desc = capital_shirne_desc
+					event_chain = ruined_shrine
+					location = capital_scope
+					category = capital_shirne_cat
+				}
 			}
 		}
 	}
