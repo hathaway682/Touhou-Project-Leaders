@@ -860,11 +860,6 @@ touhou_minoriko_spell_card_effect = {
 					minoriko_card_2_trigger = yes
 				}
 			}
-			from = {
-				country_event = {
-					id = touhou_paragon_spell.10000
-				}
-			}
 		}
 	}
 
