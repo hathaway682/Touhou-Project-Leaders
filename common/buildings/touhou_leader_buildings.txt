@@ -112,6 +112,19 @@ building_shrine = {
 			}
 			set_planet_flag = hina_planet
 		}
+		if = {
+			limit = {
+				is_capital = yes
+				not = {
+					any_country = {
+						is_country_type = saisen_box
+					}
+				}
+				owner = {
+					country_event = { id = touhou_paragon.40612 days = 365 random = 180 }
+				}
+			}
+		}
 	}
 
 	resources = {

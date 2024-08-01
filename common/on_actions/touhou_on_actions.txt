@@ -388,7 +388,8 @@ on_entering_shroud_tunnel = {
 # From = source country
 on_custom_diplomacy = {
 	events = {
-		touhou_paragon_enclave.300
+		touhou_paragon_enclave.300#kappa enclave diplomacy main interface
+		touhou_paragon_enclave.40600#saisen box diplomacy main interface
 	}
 }
 

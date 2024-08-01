@@ -1218,3 +1218,619 @@ country_event = {
         }
     }
 }
+
+country_event = {
+    id = touhou_paragon_enclave.40600
+    diplomatic_title = NAME_Saisen_Box
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        room = saisenbox_room
+    }
+    is_triggered_only = yes
+    trigger = {
+        from = {
+            is_country_type = saisen_box
+        }
+        not = {
+            has_country_flag = touhou_flag_in_diplo_with_saisen_box
+        }
+    }
+    title = NAME_Saisen_Box
+    desc = touhou_paragon_enclave.40600.desc
+    immediate = {
+        set_country_flag = touhou_flag_in_diplo_with_saisen_box
+    }
+    option = {
+        name = touhou_paragon_enclave.40600.a
+        trigger = {
+            is_spiritualist = no
+            is_materialist = no
+        }
+        allow = {
+            not = {
+                has_modifier = modifier_saisen_box_timer
+            }
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40605
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40600.b
+        trigger = {
+            is_spiritualist = yes
+        }
+        allow = {
+            not = {
+                has_modifier = modifier_saisen_box_timer
+            }
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40605
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40600.c
+        trigger = {
+            is_materialist = yes
+        }
+        allow = {
+            not = {
+                has_modifier = modifier_saisen_box_timer
+            }
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40605
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40600.d
+        default_hide_option = yes
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.40605
+    diplomatic_title = NAME_Saisen_Box
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        room = saisenbox_room
+    }
+    is_triggered_only = yes
+    title = NAME_Saisen_Box
+    desc = {
+        text = touhou_paragon_enclave.40605.1.desc
+    }
+    desc = {
+        text = touhou_paragon_enclave.40605.2.desc
+    }
+    desc = {
+        text = touhou_paragon_enclave.40605.3.desc
+    }
+    desc = {
+        text = touhou_paragon_enclave.40605.4.desc
+    }
+    desc = {
+        text = touhou_paragon_enclave.40605.5.desc
+    }
+    option = {
+        name = touhou_paragon_enclave.40605.a
+        trigger = {
+            check_variable = {
+                which = touhou_variable_saisen_count
+                value >= 1
+            }
+        }
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 100
+            }
+        }
+        add_resource = { energy = -100 }
+        tooltip = {
+            random_list = {
+                25 = {
+                    random_owned_planet = {
+                        limit = {
+                            is_colony = yes
+                        }
+                        add_modifier = {
+                            modifier = modifier_saisen_hapiness
+                            years = 1
+                        }
+                    }
+                }
+                25 = {
+                    random_owned_planet = {
+                        limit = {
+                            is_colony = yes
+                        }
+                        add_modifier = {
+                            modifier = modifier_saisen_hapiness
+                            months = 30
+                        }
+                    }
+                }
+                25 = {
+                    random_owned_leader = {
+                        add_experience = 300
+                    }
+                }
+                25 = {
+                    random_owned_leader = {
+                        add_experience = 500
+                    }
+                }
+            }
+        }
+        hidden_effect = {
+            random_list = {
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 1
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 2
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 3
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 4
+                    }
+                }
+            }
+            country_event = { id = touhou_paragon_enclave.40610 }
+            change_variable = {
+                which = touhou_variable_saisen_count
+                value = 100
+            }
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            months = 30
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40605.b
+        trigger = {
+            check_variable = {
+                which = touhou_variable_saisen_count
+                value >= 100
+            }
+        }
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        tooltip = {
+            random_list = {
+                25 = {
+                    random_owned_leader = {
+                        add_age = -10
+                    }
+                }
+                25 = {
+                    random_owned_planet = {
+                        limit = {
+                            is_colony = yes
+                        }
+                        add_modifier = {
+                            modifier = modifier_saisen_unity
+                            months = 30
+                        }
+                    }
+                }
+                25 = {
+                    random_owned_planet = {
+                        limit = {
+                            is_colony = yes
+                        }
+                        add_modifier = {
+                            modifier = modifier_saisen_growth
+                            months = 30
+                        }
+                    }
+                }
+                25 = {
+                    add_modifier = {
+                        modifier = modifier_saisen_morale
+                        months = 30
+                    }
+                }
+            }
+        }
+        hidden_effect = {
+            random_list = {
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 1
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 2
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 3
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 4
+                    }
+                }
+            }
+            country_event = { id = touhou_paragon_enclave.40615 }
+            change_variable = {
+                which = touhou_variable_saisen_count
+                value = 1000
+            }
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            months = 30
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40605.c
+        trigger = {
+            check_variable = {
+                which = touhou_variable_saisen_count
+                value >= 1000
+            }
+        }
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 10000
+            }
+        }
+        add_resource = { energy = -10000 }
+        tooltip = {
+            random_list = {
+                25 = {
+                    random_owned_leader = {
+                        add_trait = leader_trait_psionic
+                    }
+                }
+                25 = {
+                    random_owned_leader = {
+                        remove_all_negative_traits = yes
+                    }
+                }
+                25 = {
+                    add_modifier = {
+                        modifier = modifier_saisen_morale_2
+                        months = 30
+                    }
+                }
+                25 = {
+                    add_modifier = {
+                        modifier = modifier_saisen_rate
+                        months = 30
+                    }
+                }
+            }
+        }
+        hidden_effect = {
+            random_list = {
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 1
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 2
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 3
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 4
+                    }
+                }
+            }
+            country_event = { id = touhou_paragon_enclave.40620 }
+            change_variable = {
+                which = touhou_variable_saisen_count
+                value = 10000
+            }
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            months = 30
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40605.d
+        trigger = {
+            check_variable = {
+                which = touhou_variable_saisen_count
+                value >= 100000
+            }
+        }
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 100000
+            }
+            not = {
+                any_owned_leader = {
+                    has_trait = leader_trait_fly
+                }
+            }
+        }
+        add_resource = { energy = -100000 }
+        country_event = { id = touhou_paragon.40600 }
+    }
+    after = {
+        remove_country_flag = touhou_flag_in_diplo_with_saisen_box
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.40610
+    diplomatic_title = NAME_Saisen_Box
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        room = saisenbox_room
+    }
+    is_triggered_only = yes
+    title = NAME_Saisen_Box
+    desc = touhou_paragon_enclave.40610.desc
+    option = {
+        name = GOOD
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 1
+                }
+            }
+            random_owned_planet = {
+                limit = {
+                    is_colony = yes
+                }
+                add_modifier = {
+                    modifier = modifier_saisen_hapiness
+                    years = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 2
+                }
+            }
+            random_owned_planet = {
+                limit = {
+                    is_colony = yes
+                }
+                add_modifier = {
+                    modifier = modifier_saisen_hapiness
+                    months = 30
+                }
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 3
+                }
+            }
+            random_owned_leader = {
+                add_experience = 300
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 4
+                }
+            }
+            random_owned_leader = {
+                add_experience = 500
+            }
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.40615
+    diplomatic_title = NAME_Saisen_Box
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        room = saisenbox_room
+    }
+    is_triggered_only = yes
+    title = NAME_Saisen_Box
+    desc = touhou_paragon_enclave.40615.desc
+    option = {
+        name = GOOD
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 1
+                }
+            }
+            random_owned_leader = {
+                add_age = -10
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 2
+                }
+            }
+            random_owned_planet = {
+                limit = {
+                    is_colony = yes
+                }
+                add_modifier = {
+                    modifier = modifier_saisen_unity
+                    months = 30
+                }
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 3
+                }
+            }
+            random_owned_planet = {
+                limit = {
+                    is_colony = yes
+                }
+                add_modifier = {
+                    modifier = modifier_saisen_growth
+                    months = 30
+                }
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 4
+                }
+            }
+            add_modifier = {
+                modifier = modifier_saisen_morale
+                months = 30
+            }
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.40620
+    diplomatic_title = NAME_Saisen_Box
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        room = saisenbox_room
+    }
+    is_triggered_only = yes
+    title = NAME_Saisen_Box
+    desc = touhou_paragon_enclave.40620.desc
+    option = {
+        name = GOOD
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 1
+                }
+            }
+            random_owned_leader = {
+                add_trait = leader_trait_psionic
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 2
+                }
+                any_owned_leader = {
+                    num_negative_traits >=1
+                }
+            }
+            random_owned_leader = {
+                limit = {
+                    num_negative_traits >= 1
+                }
+                remove_all_negative_traits = yes
+            }
+            else_if = {
+                limit = {
+                    check_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 2
+                    }
+                    not = {
+                        any_owned_leader = {
+                            num_negative_traits >=1
+                        }
+                    }
+                }
+                custom_tooltip = touhou_tooltip_no_negative_traits
+                add_resource = {
+                    energy = 10000
+                }
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 3
+                }
+            }
+            random_owned_planet = {
+                limit = {
+                    is_colony = yes
+                }
+                add_modifier = {
+                    modifier = modifier_saisen_morale_2
+                    months = 30
+                }
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 4
+                }
+            }
+            add_modifier = {
+                modifier = modifier_saisen_rate
+                months = 30
+            }
+        }
+    }
+}
