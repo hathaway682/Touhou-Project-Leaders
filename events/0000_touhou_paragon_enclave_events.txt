@@ -1068,12 +1068,20 @@ country_event = {
         random_playable_country = {
             limit = {
                 any_owned_planet = {
-                    is_planet_class = pc_ocean
+                    OR = {
+                        is_planet_class = pc_ocean
+                        is_planet_class = pc_continental
+                        is_planet_class = pc_tropical
+                    }
                 }
             }
             random_owned_planet = {
                 limit = {
-                    is_planet_class = pc_ocean
+                    OR = {
+                        is_planet_class = pc_ocean
+                        is_planet_class = pc_continental
+                        is_planet_class = pc_tropical
+                    }
                 }
                 save_event_target_as = kappa_enclave_new_system_planet
                 solar_system = {
@@ -1197,13 +1205,21 @@ country_event = {
             random_playable_country = {
                 limit = {
                     any_owned_planet = {
-                        is_planet_class = pc_ocean
+                        OR = {
+                            is_planet_class = pc_ocean
+                            is_planet_class = pc_continental
+                            is_planet_class = pc_tropical
+                        }
                     }
                     not = { has_country_flag = kappa_reestablishment_rejected }
                 }
                 random_owned_planet = {
                     limit = {
-                        is_planet_class = pc_ocean
+                        OR = {
+                            is_planet_class = pc_ocean
+                            is_planet_class = pc_continental
+                            is_planet_class = pc_tropical
+                        }
                     }
                     save_event_target_as = kappa_enclave_new_system_planet
                     solar_system = {
