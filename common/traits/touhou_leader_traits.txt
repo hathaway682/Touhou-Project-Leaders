@@ -4184,7 +4184,6 @@ leader_trait_arctic_governing = {
 			planet_pops_upkeep_mult = -1
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			OR = {
@@ -4200,7 +4199,7 @@ leader_trait_arctic_governing = {
 			planet_pops_upkeep_mult = -0.5
 		}
 	}
-	leader_class = { commander }
+	leader_class = { official commander }
 	selectable_weight = 0
 	custom_tooltip = LEADER_TRAIT_ARCTIC_EFFECT
 }
