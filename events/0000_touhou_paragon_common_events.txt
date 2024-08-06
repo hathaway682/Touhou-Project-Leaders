@@ -1283,7 +1283,6 @@ leader_event = {
 	}
 }
 
-
 country_event = {
 	id = touhou_paragon.40611
 	title = touhou_paragon.40611.name
@@ -2900,23 +2899,7 @@ planet_event = {
 				location = capital_scope
 				category = jinx_shirne_cat
 			}
-			if = {
-				limit = {
-					not = {
-						any_owned_leader = {
-							has_trait = leader_trait_fly
-						}
-					}
-				}
-				create_point_of_interest = {
-					id = capital_shirne
-					name = capital_shirne
-					desc = capital_shirne_desc
-					event_chain = ruined_shrine
-					location = capital_scope
-					category = capital_shirne_cat
-				}
-			}
+			create_shrine_point_of_interest = yes
 		}
 	}
 
@@ -2953,47 +2936,7 @@ planet_event = {
 		custom_tooltip = touhou_paragon.50002.tooltip
 		owner = {
 			remove_point_of_interest = ruined_shrine_location
-			create_point_of_interest = {
-				id = leaf_shirne
-				name = leaf_shirne
-				desc = leaf_shirne_desc
-				event_chain = ruined_shrine
-				location = capital_scope
-				category = leaf_shirne_cat
-			}
-			create_point_of_interest = {
-				id = harvest_shirne
-				name = harvest_shirne
-				desc = harvest_shirne_desc
-				event_chain = ruined_shrine
-				location = capital_scope
-				category = harvest_shirne_cat
-			}
-			create_point_of_interest = {
-				id = jinx_shirne
-				name = jinx_shirne
-				desc = jinx_shirne_desc
-				event_chain = ruined_shrine
-				location = capital_scope
-				category = jinx_shirne_cat
-			}
-			if = {
-				limit = {
-					not = {
-						any_owned_leader = {
-							has_trait = leader_trait_fly
-						}
-					}
-				}
-				create_point_of_interest = {
-					id = capital_shirne
-					name = capital_shirne
-					desc = capital_shirne_desc
-					event_chain = ruined_shrine
-					location = capital_scope
-					category = capital_shirne_cat
-				}
-			}
+			create_shrine_point_of_interest = yes
 		}
 	}
 
@@ -3026,47 +2969,7 @@ planet_event = {
 		custom_tooltip = touhou_paragon.50002.tooltip
 		owner = {
 			remove_point_of_interest = ruined_shrine_location
-			create_point_of_interest = {
-				id = leaf_shirne
-				name = leaf_shirne
-				desc = leaf_shirne_desc
-				event_chain = ruined_shrine
-				location = capital_scope
-				category = leaf_shirne_cat
-			}
-			create_point_of_interest = {
-				id = harvest_shirne
-				name = harvest_shirne
-				desc = harvest_shirne_desc
-				event_chain = ruined_shrine
-				location = capital_scope
-				category = harvest_shirne_cat
-			}
-			create_point_of_interest = {
-				id = jinx_shirne
-				name = jinx_shirne
-				desc = jinx_shirne_desc
-				event_chain = ruined_shrine
-				location = capital_scope
-				category = jinx_shirne_cat
-			}
-			if = {
-				limit = {
-					not = {
-						any_owned_leader = {
-							has_trait = leader_trait_fly
-						}
-					}
-				}
-				create_point_of_interest = {
-					id = capital_shirne
-					name = capital_shirne
-					desc = capital_shirne_desc
-					event_chain = ruined_shrine
-					location = capital_scope
-					category = capital_shirne_cat
-				}
-			}
+			create_shrine_point_of_interest = yes
 		}
 	}
 }
@@ -3127,6 +3030,152 @@ planet_event = {
 				id = touhou_paragon.43000
 			}
 			remove_point_of_interest = jinx_shirne
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43101
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		NOR = {
+			has_global_flag = mystia
+			has_country_flag = dismissed_mystia
+		}
+		any_owned_planet = {
+			num_assigned_jobs = {
+				job = entertainer
+				value >= 8
+			}
+		}
+	}
+	immediate = {
+		set_global_flag = mystia
+		random_owned_planet = {
+			limit = {
+				num_assigned_jobs = {
+					job = entertainer
+					value >= 8
+				}
+			}
+			planet_event = {
+				id = touhou_paragon.43110
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = touhou_paragon.43110
+	title = touhou_paragon.43110.name
+	desc = touhou_paragon.43110.desc
+	picture = GFX_evt_mystia_idol
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43110.a
+		add_modifier = {
+			modifier = mystia_modifier_1
+		}
+		hidden_effect = {
+			remove_global_flag = mystia # Put this leader back into the pool, so player could still get him
+			owner = {
+				set_country_flag = dismissed_mystia
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon.43110.b
+		enable_special_project = {
+			name = MYSTIA_SPECIAL_PROJECT
+			owner = root.owner
+			location = root
+		}
+		save_global_event_target_as = mystia_planet
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43111
+	title = touhou_paragon.43111.name
+	desc = touhou_paragon.43111.desc
+	picture = GFX_evt_mystia_sing
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43111.a
+		country_event = {
+			id = touhou_paragon.43112
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43112
+	title = touhou_paragon.43112.name
+	desc = touhou_paragon.43112.desc
+	picture = GFX_evt_mysita_cook
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43112.a
+		country_event = {
+			id = touhou_paragon.43113
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43113
+	title = touhou_paragon.43113.name
+	desc = touhou_paragon.43113.desc
+	picture = GFX_evt_mysita_cook
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43113.a
+		country_event = {
+			id = touhou_paragon.43114
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43114
+	title = touhou_paragon.43114.name
+	desc = touhou_paragon.43114.desc
+	picture = GFX_evt_mystia_sing
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43114.a
+		country_event = {
+			id = touhou_paragon.43100
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43115
+	title = touhou_paragon.43115.name
+	desc = touhou_paragon.43115.desc
+	picture = GFX_evt_mysita_cook
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43115.a
+		event_target:mystia_planet = {
+			add_modifier = {
+				modifier = mystia_modifier_2
+			}
 		}
 	}
 }

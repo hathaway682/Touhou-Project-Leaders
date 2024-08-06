@@ -258,6 +258,24 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_mystia_idol"
+		texturefile = "gfx/event_pictures/mystia_idol.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_mystia_sing"
+		texturefile = "gfx/event_pictures/mystia_sing.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_mysita_cook"
+		texturefile = "gfx/event_pictures/mysita_cook.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 
 	spriteType = {
 		name = "GFX_button_upgrade_ascension_tier_selected"

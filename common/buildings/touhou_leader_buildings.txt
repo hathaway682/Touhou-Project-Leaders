@@ -1382,6 +1382,113 @@ building_posthumous_employment_center = {
 	}
 }
 
+building_izakaya = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	icon = building_food_conglomerate
+
+	category = trade
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_izakaya
+			}
+		}
+	}
+
+	allow = {
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_holo_theatres
+	}
+
+	planet_modifier = {
+		job_izakaya_worker_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	triggered_desc = {
+		text = job_izakaya_worker_effect_desc
+	}
+}
+
+holding_izakaya = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	owner_type = corporate
+	icon = building_food_conglomerate
+
+	category = trade
+
+	potential = {
+		exists = branch_office_owner
+		branch_office_owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_izakaya
+			}
+		}
+	}
+
+	allow = {
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_holo_theatres
+	}
+
+	planet_modifier = {
+		job_izakaya_worker_add = 2
+	}
+
+	country_modifier = {
+		planet_amenities_mult = 0.05
+		pop_lifestyle_trade_value_mult = 0.1
+		planet_immigration_pull_mult = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			food = 10
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	triggered_desc = {
+		text = job_izakaya_worker_effect_desc
+	}
+}
+
 #####################
 # Galactic Paragons Origin Unique Buildings
 #####################
@@ -1874,3 +1981,5 @@ building_ranger_lodge = {
 		}
 	}
 }
+
+###夜雀食堂

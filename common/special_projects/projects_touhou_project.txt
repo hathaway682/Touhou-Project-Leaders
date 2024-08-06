@@ -264,7 +264,29 @@ special_project = {
 
 	on_success = {
 		owner = {
-			country_event = { id = touhou_paragon_effect.40703}
+			country_event = { id = touhou_paragon_effect.40703 }
+		}
+	}
+}
+
+special_project = {
+	key = "MYSTIA_SPECIAL_PROJECT"
+	cost = 0
+	tech_department = society_technology
+	timelimit = -1
+	picture = GFX_evt_kirisame_marisa_alchemy
+	days_to_research = 30
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = ship_event
+	location = yes
+
+	requirements = {
+		shipclass_transport = 1
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = touhou_paragon.43111 }
 		}
 	}
 }
