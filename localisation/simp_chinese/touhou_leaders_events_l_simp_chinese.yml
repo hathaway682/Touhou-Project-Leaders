@@ -1103,7 +1103,7 @@
  touhou_paragon_effect.40401.a:0 "我要跟着琪露诺酱一起去！"
  leader_trait_arctic_governing:0 "无何有之主"
  leader_trait_arctic_governing_desc:0 "该领袖传授了人民在极寒天气中的适应能力。"
- LEADER_TRAIT_ARCTIC_EFFECT:0 "§Y星球加成仅在管理寒冷星球时生效，在管理极地星球时效果加倍。§!"
+ LEADER_TRAIT_ARCTIC_EFFECT:0 "£planet£§Y行星总督§C效果§!:\n\n£job£岗位产出的资源£mod_produces_mult£： §G+15%§!\n行星建造速度£mod_planet_building_build_speed_mult£： §G+30%§!\n人口维护费£mod_upkeep_mult£： §G-50%§!\n\n§Y星球加成仅在管理寒冷星球时生效，在管理极地星球时效果加倍。§!"
 
  touhou_paragon_effect.41501.name:0 "东之国的不眠夜"
  touhou_paragon_effect.41501.desc:0 "随着暮鼓的敲响，不再被恒星照亮的人们逐渐放了工，三三两两地聚集在集市周围，被快乐所浸染的宴会也就从此开始了。凤箫声起，华灯初上，饮食游戏应有尽有，一整天的劳累也随之烟消云散。\n\n重楼叠苑，朱阁绕转，瓦砾之上便是§Y文§!和§H萃香§!的酒宴。两人故友相逢，又是豪饮海量，自然放不过这宴会之欢。\n\n“遥想当年，天狗与鬼共治妖怪之山时，遥不及眼前盛世美景。”\n“诚然，当时为了相互对抗，人类集结在了神权统治之下。等到懂得享受这熙熙攘攘的世俗之利，更在人妖缔约、结界形成之后了。”\n“为§Y平等§!干杯！”“为§H团结§!干杯！”\n\n灯明人久醉，市烊客长歌。\n荣辉尽于此，皓月欲何托？ "
