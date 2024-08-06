@@ -3044,10 +3044,25 @@ country_event = {
 			has_global_flag = mystia
 			has_country_flag = dismissed_mystia
 		}
+		count_owned_pop = {
+			limit = {
+				OR = {
+					has_job = entertainer
+					has_job = duelist
+				}
+			}
+			count >= 10
+		}
 		any_owned_planet = {
-			num_assigned_jobs = {
-				job = entertainer
-				value >= 8
+			OR = {
+				num_assigned_jobs = {
+					job = entertainer
+					value >= 4
+				}
+				num_assigned_jobs = {
+					job = duelist
+					value >= 4
+				}
 			}
 		}
 	}
@@ -3055,9 +3070,15 @@ country_event = {
 		set_global_flag = mystia
 		random_owned_planet = {
 			limit = {
-				num_assigned_jobs = {
-					job = entertainer
-					value >= 8
+				OR = {
+					num_assigned_jobs = {
+						job = entertainer
+						value >= 4
+					}
+					num_assigned_jobs = {
+						job = duelist
+						value >= 4
+					}
 				}
 			}
 			planet_event = {
