@@ -766,7 +766,7 @@ sanae_frog_debuff = {
 
 sanae_snake_debuff = {
 	pop_environment_tolerance = -2
-	pop_happiness = -1
+	pop_happiness = -2
 }
 
 modifier_saisen_hapiness = {
