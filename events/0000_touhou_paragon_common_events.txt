@@ -2784,7 +2784,7 @@ country_event = {
 		}
 		hidden_effect = {
 			fromfrom = {
-				set_planet_flag = shirine_ruin_planet
+				set_planet_flag = shrine_ruin_planet
 				if = {
 					limit = {
 						is_colonizable = no
@@ -2799,7 +2799,7 @@ country_event = {
 			desc = "ruined_shrine_location_desc"
 			event_chain = ruined_shrine
 			category = ruined_shrine_home_cat
-			location = event_target:shirine_ruin_planet
+			location = event_target:shrine_ruin_planet
 		}
 	}
 	option = {
@@ -2811,7 +2811,7 @@ country_event = {
 		}
 		hidden_effect = {
 			fromfrom = {
-				set_planet_flag = shirine_ruin_planet
+				set_planet_flag = shrine_ruin_planet
 				if = {
 					limit = {
 						is_colonizable = no
@@ -2826,7 +2826,7 @@ country_event = {
 			desc = "ruined_shrine_location_desc"
 			event_chain = ruined_shrine
 			category = ruined_shrine_home_cat
-			location = event_target:shirine_ruin_planet
+			location = event_target:shrine_ruin_planet
 		}
 	}
 }

@@ -2666,7 +2666,7 @@ decision_repair_shirne = {
 	enactment_time = 180
 
 	potential = {
-		has_planet_flag = shirine_ruin_planet
+		has_planet_flag = shrine_ruin_planet
 	}
 
 	allow = {
@@ -2681,7 +2681,7 @@ decision_repair_shirne = {
 	}
 
 	effect = {
-		remove_planet_flag = shirine_ruin_planet
+		remove_planet_flag = shrine_ruin_planet
 		owner = {
 			set_country_flag = can_build_shirne
 		}
