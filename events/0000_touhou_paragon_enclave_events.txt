@@ -1303,6 +1303,7 @@ country_event = {
     option = {
         name = touhou_paragon_enclave.40600.d
         default_hide_option = yes
+        remove_country_flag = touhou_flag_in_diplo_with_saisen_box
     }
 }
 

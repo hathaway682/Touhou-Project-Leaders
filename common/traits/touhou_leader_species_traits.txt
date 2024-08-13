@@ -135,7 +135,7 @@ trait_sanae_robot_worker = {
 		planet_jobs_worker_produces_mult = 1
 		planet_metallurgists_produces_mult = 0.5
 		planet_artisans_produces_mult = 0.5
-		planet_pops_upkeep_mult = 4
+		planet_pops_robotics_upkeep_mult = 4
 		pop_resettlement_cost_mult = 4
 	}
 	slave_cost = {
