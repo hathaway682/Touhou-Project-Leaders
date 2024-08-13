@@ -7204,13 +7204,37 @@ planet_event = {
     }
 }
 
+country_event = {
+    id = touhou_paragon_effect.1205
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        FromFrom = {
+            exists = leader
+            leader = {
+                has_trait = leader_trait_song
+            }
+        }
+    }
+
+    immediate = {
+        FromFromFrom = {
+            add_modifier = {
+                modifier = mysita_blinded
+                days = 30
+            }
+        }
+    }
+}
+
 # On army killed in combat.
 # This = owner
 # From = army
 # FromFrom = opponent
 # FromFromFrom = planet
 country_event = {
-    id = touhou_paragon_effect.72
+    id = touhou_paragon_effect.73
     hide_window = yes
     is_triggered_only = yes
 
@@ -7269,7 +7293,7 @@ country_event = {
 
 # On destroying enemy ship.
 country_event = {
-    id = touhou_paragon_effect.73
+    id = touhou_paragon_effect.74
     hide_window = yes
     is_triggered_only = yes
 

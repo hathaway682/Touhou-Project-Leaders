@@ -144,17 +144,13 @@ space_dragon_nitori_baby = {
     required_component_set = "combat_computers"
 
     potential_country = {
-        is_dragon_breeder_country = yes
+        any_owned_leader = {
+            has_trait = leader_trait_super_youkai_slug_3
+        }
     }
 
     potential_construction = {
         is_scope_type = starbase
-    }
-
-    possible_construction = {
-        any_owned_leader = {
-            has_trait = leader_trait_super_youkai_slug_3
-        }
     }
 
     components_add_to_cost = no

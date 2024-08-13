@@ -2874,14 +2874,104 @@ country_event = {
     }
 }
 
-country_event = {
+planet_event = {
     id = touhou_paragon_spell.400
     hide_window = yes
     is_triggered_only = yes
 
     immediate = {
         add_modifier = {
-            modifier =
+            modifier = sanae_frog_debuff
         }
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.401
+    title = touhou_paragon_spell.401.name
+    text = touhou_paragon_spell.401.desc
+    picture = GFX_evt_nuclear_explosion
+    show_sound = event_super_explosion
+
+    is_triggered_only = yes
+
+    option = {
+        name = UNFORTUNATE
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.402
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        add_modifier = {
+            modifier = sanae_snake_debuff
+        }
+        create_country = {
+            name = "NAME_Giant_Snake"
+            type = faction
+            auto_delete = yes
+            flag = {
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "green"
+                    "green"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                establish_communications_no_message = root
+            }
+        }
+        create_army = {
+            name = "NAME_Giant_Snake"
+            type = giant_snake_army
+            owner = last_created_country
+        }
+        set_planet_flag = giant_snake
+    }
+}
+
+planet_event = {
+    id = touhou_paragon_spell.401
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        add_modifier = {
+            modifier = sanae_snake_debuff
+        }
+        create_country = {
+            name = "NAME_Giant_Snake"
+            type = faction
+            auto_delete = yes
+            flag = {
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "green"
+                    "green"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                establish_communications_no_message = root
+            }
+        }
+        create_army = {
+            name = "NAME_Giant_Snake"
+            type = giant_snake_army
+            owner = last_created_country
+        }
+        set_planet_flag = giant_snake
     }
 }

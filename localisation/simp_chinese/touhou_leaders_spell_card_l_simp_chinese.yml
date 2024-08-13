@@ -53,7 +53,7 @@
  touhou_selected_char_6:0 "帕秋莉·诺蕾姬"
  touhou_selected_char_7:0 "十六夜咲夜"
  touhou_selected_char_8:0 "蕾米莉亚·斯卡蕾特"
- touhou_selected_char_9:0 "芙兰朵露·斯卡蕾特" #计划中
+ touhou_selected_char_9:0 "芙兰朵露·斯卡蕾特" #搁置中
  #妖妖梦
  touhou_selected_char_10:0 "蕾蒂·霍瓦特洛克" #未制作
  touhou_selected_char_11:0 "橙" #未制作
@@ -70,13 +70,13 @@
  touhou_selected_char_21:0 "伊吹萃香"
  #永夜抄
  touhou_selected_char_22:0 "莉格露·奈特巴格" #未制作
- touhou_selected_char_23:0 "米斯蒂娅·萝蕾拉" #未制作
+ touhou_selected_char_23:0 "米斯蒂娅·萝蕾拉" #制作中
  touhou_selected_char_24:0 "上白泽慧音" #未制作
  touhou_selected_char_25:0 "因幡帝" #未制作
  touhou_selected_char_26:0 "铃仙·优昙华院·因幡"
  touhou_selected_char_27:0 "八意永琳" #未制作
- touhou_selected_char_28:0 "蓬莱山辉夜" #未制作
- touhou_selected_char_29:0 "藤原妹红" #未制作
+ touhou_selected_char_28:0 "蓬莱山辉夜" #计划中
+ touhou_selected_char_29:0 "藤原妹红" #计划中
  #文花帖
  touhou_selected_char_30:0 "射命丸文"
  #花映冢
@@ -89,7 +89,7 @@
  touhou_selected_char_36:0 "秋穰子" #符卡已完成
  touhou_selected_char_37:0 "键山雏" #符卡已完成
  touhou_selected_char_38:0 "河城荷取"
- touhou_selected_char_39:0 "犬走椛" #计划中
+ touhou_selected_char_39:0 "犬走椛" #搁置中
  touhou_selected_char_40:0 "东风谷早苗"
  touhou_selected_char_41:0 "八坂神奈子" #计划中
  touhou_selected_char_42:0 "洩矢诹访子" #计划中
@@ -240,6 +240,7 @@
  spell_card_sanne_7_ex_desc:0 "COST：§Y6§!\n条件：§H$NAME_Sanae$§!正在指挥舰队或运输船队。\n\n在星系内生成以九字刻印为形的巨大格状结界，彻底将形势扭向早苗的超大技。持续§Y9§!次此效果，每天降低星系内所有敌对舰船§Y10%§!的§Y船体§!，作用期间以及之后的§Y99§!天，所有敌方舰船无法自战斗中§Y撤退§!。"
 
  giant_snake_army:0 "巨蛇"
+ NAME_Giant_Snake:0 "巨蛇"
  modifier_sanae_star:0 "客星辉煌之夜"
 
  spell_card_koishi_group:0 "[GetSelectedCardKoishi]"

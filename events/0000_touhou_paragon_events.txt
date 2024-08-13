@@ -298,12 +298,6 @@ country_event = { # ethic leader lottery machine
 				}
 				ethic_leader_hire_event = { LEADER_ID = meiling EVENT_ID = touhou_paragon.40500 }
 			}
-			0 = { # 灵梦
-				modifier = {
-					add = value:touhou_leader_randomizer|ETHIC|egalitarian|ETHIC_NEG|authoritarian|LEADER_ID|reimu|
-				}
-				ethic_leader_hire_event = { LEADER_ID = reimu EVENT_ID = touhou_paragon.40600 }
-			}
 			0 = { # 魔理沙
 				modifier = {
 					add = value:touhou_leader_randomizer|ETHIC|militarist|ETHIC_NEG|pacifist|LEADER_ID|marisa|
@@ -3931,7 +3925,7 @@ country_event = { # 穰子
 			DESC = minoriko1
 			CATCH_PHRASE =  minoriko1_catch_phrase
 		}
-		last_created_leader = { #4
+		last_created_leader = { #2
 			add_trait = subclass_official_governor
 			add_trait = leader_trait_harvest
 			add_trait = leader_trait_utopian_idealist
@@ -4092,6 +4086,105 @@ country_event = { # 雏
 			set_variable = {
 				which = jinx_stockpile
 				value = 0
+			}
+		}
+	}
+}
+
+country_event = { # 雏
+	id = touhou_paragon.43100
+	title = "touhou_paragon.43100.name"
+	desc = "touhou_paragon.43100.desc"
+	show_sound = event_psionic
+	is_triggered_only = yes
+
+	picture = GFX_leader_recruitment_bg_renowned
+	auto_opens = no
+	event_window_type = leader_recruit
+	notification_event_icon = "GFX_message_touhou_leaders"
+
+	immediate = {
+		ethic_leader_creator = {
+			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+			LEADER_PORTRAIT = x3
+			CLASS = commander
+			NAME = NAME_Mystia
+			LEVEL = 2
+			GENDER = female
+			IMMORTAL = no
+			ETHIC = xenophile
+			DESC = mystia1
+			CATCH_PHRASE =  mystia1_catch_phrase
+		}
+		last_created_leader = { #2
+			add_trait = subclass_commander_governor
+			add_trait = leader_trait_song
+			add_trait = leader_trait_bellicose
+			add_trait = leader_trait_izakaya
+			add_trait = leader_trait_youkai_punk
+			add_trait = leader_trait_micromanager #鸟之目
+		}
+	}
+
+	picture_event_data = {
+		portrait = event_target:ethic_leader
+		room = ethic_spaceship_room
+	}
+
+	option = {
+		name = touhou_paragon.43100.dismiss
+		tag = dismiss_leader
+		hidden_effect = {
+			remove_global_flag = mystia # Put this leader back into the pool, so player could still get him
+			ethic_leader_kill_effect = yes
+			set_country_flag = dismissed_mystia
+		}
+		country_event = {
+			id = touhou_paragon.43115
+		}
+	}
+	option = {
+		name = touhou_paragon.43100.a
+		response_text = touhou_paragon.43100.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43100.b
+		response_text = touhou_paragon.43100.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43100.c
+		response_text = touhou_paragon.43100.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43100.d
+		response_text = touhou_paragon.43100.d.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43100.e
+		response_text = touhou_paragon.43100.e.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43100.f
+		response_text = touhou_paragon.43100.f.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43100.g
+		response_text = touhou_paragon.43100.g.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43100.hire
+		tag = hire_leader
+		custom_tooltip = touhou_paragon.43100.hire_custom_tooltip
+		hidden_effect = {
+			ethic_leader_hire_effect = {
+				GLOBAL_EVENT_TARGET = renowned_mystia
 			}
 		}
 	}

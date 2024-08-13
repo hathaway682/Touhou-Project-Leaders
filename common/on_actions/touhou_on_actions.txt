@@ -64,6 +64,7 @@ on_monthly_pulse_country = {
 		touhou_paragon_effect.40701
 		touhou_paragon_effect.40702
 		touhou_paragon_spell.10000
+		touhou_paragon.43101 #小碎骨招募判定
 	}
 }
 
@@ -128,6 +129,7 @@ on_entering_battle = {
 		touhou_paragon_effect.1200
 		touhou_paragon_effect.1202
 		touhou_paragon_effect.1051
+		touhou_paragon_effect.1205
 	}
 }
 
@@ -163,7 +165,7 @@ on_army_killed_in_combat = {
 		touhou_paragon_effect.400
 		touhou_paragon_effect.401
 		touhou_paragon_effect.402
-		touhou_paragon_effect.72
+		touhou_paragon_effect.73
 	}
 }
 
@@ -339,7 +341,7 @@ on_ship_destroyed_victim = {
 # FromFromFrom = ship 2
 on_ship_destroyed_perp = {
 	events = {
-		touhou_paragon_effect.73 # On ship destroyed leader traits.
+		touhou_paragon_effect.74 # On ship destroyed leader traits.
 	}
 }
 

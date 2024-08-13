@@ -697,7 +697,7 @@ fall_in_blast_modifier = {
 }
 
 aki_bleak_planet = {
-	planet_jobs_food_produces_mult = -2
+	planet_jobs_food_produces_mult = -10
 	icon = "gfx/interface/icons/planet_modifiers/pm_bleak.dds"
 	icon_frame = 3
 }
@@ -766,7 +766,7 @@ sanae_frog_debuff = {
 
 sanae_snake_debuff = {
 	pop_environment_tolerance = -2
-	pop_happiness = -1
+	pop_happiness = -2
 }
 
 modifier_saisen_hapiness = {
@@ -803,4 +803,24 @@ modifier_saisen_morale_2 = {
 modifier_saisen_rate = {
 	ship_fire_rate_mult = 0.1
 	ship_weapon_range_mult = 0.1
+}
+
+mystia_modifier_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_mystia.dds"
+	icon_frame = 1
+	pop_happiness = 0.1
+	planet_jobs_unity_produces_mult = 0.1
+}
+
+mystia_modifier_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_mystia.dds"
+	icon_frame = 1
+	pop_happiness = 0.2
+	planet_jobs_unity_produces_mult = 0.2
+}
+
+mysita_blinded = {
+	ship_weapon_range_mult = -0.5
+	ship_accuracy_mult = -0.5
+	ship_evasion_mult = -0.5
 }

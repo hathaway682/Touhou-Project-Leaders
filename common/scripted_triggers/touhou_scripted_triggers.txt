@@ -87,6 +87,7 @@ has_touhou_leader_trait = {
 		has_trait = leader_trait_fall
 		has_trait = leader_trait_harvest
 		has_trait = leader_trait_jinx
+		has_trait = leader_trait_song
 	}
 }
 
@@ -119,6 +120,7 @@ has_touhou_supernatural_trait = {
 		has_trait = leader_trait_fall
 		has_trait = leader_trait_harvest
 		has_trait = leader_trait_jinx
+		has_trait = leader_trait_song
 	}
 }
 

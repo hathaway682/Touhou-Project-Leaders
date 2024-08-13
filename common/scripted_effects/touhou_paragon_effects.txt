@@ -2184,3 +2184,74 @@ touhou_moriya_crusade_impose_effect = {
 		add_opinion_modifier = { modifier = opinion_we_liberated who = from }
 	}
 }
+
+create_shrine_point_of_interest = {
+	if = {
+		limit = {
+			NOT = {
+				any_owned_leader = {
+					has_trait = leader_trait_fall
+				}
+			}
+		}
+		create_point_of_interest = {
+			id = leaf_shirne
+			name = leaf_shirne
+			desc = leaf_shirne_desc
+			event_chain = ruined_shrine
+			location = capital_scope
+			category = leaf_shirne_cat
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				any_owned_leader = {
+					has_trait = leader_trait_harvest
+				}
+			}
+		}
+		create_point_of_interest = {
+			id = harvest_shirne
+			name = harvest_shirne
+			desc = harvest_shirne_desc
+			event_chain = ruined_shrine
+			location = capital_scope
+			category = harvest_shirne_cat
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				any_owned_leader = {
+					has_trait = leader_trait_jinx
+				}
+			}
+		}
+		create_point_of_interest = {
+			id = jinx_shirne
+			name = jinx_shirne
+			desc = jinx_shirne_desc
+			event_chain = ruined_shrine
+			location = capital_scope
+			category = jinx_shirne_cat
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				any_owned_leader = {
+					has_trait = leader_trait_fly
+				}
+			}
+		}
+		create_point_of_interest = {
+			id = capital_shirne
+			name = capital_shirne
+			desc = capital_shirne_desc
+			event_chain = ruined_shrine
+			location = capital_scope
+			category = capital_shirne_cat
+		}
+	}
+}
