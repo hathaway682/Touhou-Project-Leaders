@@ -11290,6 +11290,6 @@ country_event = {
                 add_trait = trait_pc_nuked_preference
             }
         }
-
+        add_research_option = tech_hyper_drive_1
     }
 }
