@@ -11289,31 +11289,30 @@ fleet_event = {
 }
 
 #给强迫症种族洁癖玩家留的后门 目前我还没想好怎么写，请不要使用这个事件！
-country_event = {
-    id = touhou_paragon_effect.40007
-    trigger = {
-        always = no
-    }
-    hide_window = yes
-    is_triggered_only = yes
-    immediate = {
-        every_owned_pop = {
-            limit = {
-                is_mechanical_species = no
-            }
-            change_species = owner_species
-        }
-        every_owned_pop = {
-            limit = {
-                is_same_species = root
-            }
-            modify_species = {
-                species = this
-                add_trait = trait_extremely_adaptive
-                remove_trait = trait_nonadaptive
-                add_trait = trait_pc_nuked_preference
-            }
-        }
-        add_modifier = { modifier = low_gravity }
-    }
-}
+#country_event = {
+#    id = touhou_paragon_effect.40007
+#    trigger = {
+#        always = no
+#    }
+#    hide_window = yes
+#    is_triggered_only = yes
+#    immediate = {
+#        every_owned_pop = {
+#            limit = {
+#                is_mechanical_species = no
+#            }
+#            change_species = owner_species
+#        }
+#        every_owned_pop = {
+#            limit = {
+#                is_same_species = root
+#            }
+#            modify_species = {
+#                species = this
+#                add_trait = trait_extremely_adaptive
+#                remove_trait = trait_nonadaptive
+#                add_trait = trait_pc_nuked_preference
+#            }
+#        }
+#    }
+#}
