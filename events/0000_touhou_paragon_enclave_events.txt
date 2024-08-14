@@ -617,6 +617,13 @@ country_event = {
     }
     option = {
         name = touhou_paragon_enclave.341.a
+        allow = {
+            resource_stockpile_compare = {
+                resource = energy
+                value >= -200 #flip to a positive value to make this comparison
+                mult = kappa_construction_count
+            }
+        }
         add_modifier = {
             modifier = modifier_kappa_construction
             days = 240
