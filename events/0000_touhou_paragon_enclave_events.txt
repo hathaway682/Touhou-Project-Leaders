@@ -1783,8 +1783,12 @@ country_event = {
                 }
             }
             random_owned_leader = {
+                limit = {
+                    not = { has_trait = leader_trait_psionic }
+                }
                 add_trait = leader_trait_psionic
             }
+            custom_tooltip = akyuu1
         }
         if = {
             limit = {
@@ -1792,8 +1796,19 @@ country_event = {
                     which = touhou_variable_saisen_switch
                     value = 2
                 }
-                any_owned_leader = {
-                    num_negative_traits >=1
+                OR = {
+                    any_owned_leader = {
+                        num_negative_traits = 1
+                    }
+                    any_owned_leader = {
+                        num_negative_traits = 2
+                    }
+                    any_owned_leader = {
+                        num_negative_traits = 3
+                    }
+                    any_owned_leader = {
+                        num_negative_traits = 4
+                    }
                 }
             }
             random_owned_leader = {
@@ -1802,22 +1817,31 @@ country_event = {
                 }
                 remove_all_negative_traits = yes
             }
-            else_if = {
-                limit = {
-                    check_variable = {
-                        which = touhou_variable_saisen_switch
-                        value = 2
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 2
+                }
+                NOR = {
+                    any_owned_leader = {
+                        num_negative_traits = 1
                     }
-                    not = {
-                        any_owned_leader = {
-                            num_negative_traits >=1
-                        }
+                    any_owned_leader = {
+                        num_negative_traits = 2
+                    }
+                    any_owned_leader = {
+                        num_negative_traits = 3
+                    }
+                    any_owned_leader = {
+                        num_negative_traits = 4
                     }
                 }
-                custom_tooltip = touhou_tooltip_no_negative_traits
-                add_resource = {
-                    energy = 10000
-                }
+            }
+            custom_tooltip = touhou_tooltip_no_negative_traits
+            add_resource = {
+                energy = 10000
             }
         }
         if = {
@@ -1827,14 +1851,9 @@ country_event = {
                     value = 3
                 }
             }
-            random_owned_planet = {
-                limit = {
-                    is_colony = yes
-                }
-                add_modifier = {
-                    modifier = modifier_saisen_morale_2
-                    months = 30
-                }
+            add_modifier = {
+                modifier = modifier_saisen_morale_2
+                months = 30
             }
         }
         if = {

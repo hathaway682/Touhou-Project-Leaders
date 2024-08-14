@@ -396,7 +396,7 @@
  touhou_paragon.40310.a:0 "§H对地压制型§!，大体积就是力量！"
  touhou_paragon.40310.b:0 "§H对空突击型§!，太空战才是未来！"
  touhou_paragon.40310.c:0 "§H民用工程型§!，生产力高于一切！"
-
+ mod_planet_pops_energy_upkeep_mult:0 "岗位能量币维护费"
  tech_sanae_robot_army: "非想天则MK2-对地压制型"
  tech_sanae_robot_army_desc: "我们用金属铸造活动的火山，将其打造为喷薄欲出的武库，再为其加装擎天的巨足。"
  tech_sanae_robot_strike_craft: "非想天则MK2-对空突击型"

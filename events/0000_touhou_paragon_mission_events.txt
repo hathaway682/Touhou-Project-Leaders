@@ -352,7 +352,7 @@ country_event = {
 		name = touhou_paragon_mission.40307.b
 		allow = {
 			count_subject = {
-				count >= 3
+				count >= 2
 			}
 		}
 		add_modifier = {
