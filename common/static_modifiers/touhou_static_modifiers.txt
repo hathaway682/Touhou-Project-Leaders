@@ -796,8 +796,8 @@ modifier_saisen_morale = {
 }
 
 modifier_saisen_morale_2 = {
-	army_morale = 0.5
-	army_attack_morale_mult = 0.25
+	ship_jumpdrive_cooldown_mult = -0.2
+	ship_military_speed_mult = 0.2
 }
 
 modifier_saisen_rate = {
