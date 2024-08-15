@@ -91,6 +91,8 @@
  leader_trait_touhou_bureaucrat: "上下同心"
  leader_trait_touhou_bureaucrat_desc: "这位领袖擅长政府间外交和建立共识。"
  leader_trait_touhou_bureaucrat_tt: "§E每技能等级的$PLANET_EFFECTS_TXT$：§!$TABBED_NEW_LINE$$mod_planet_jobs_unity_produces_mult$：§G+5%§!"
+ leader_trait_touhou_reformer: "改革家"
+ leader_trait_touhou_reformer_desc: "这位领袖是位改革家，致力于建设美好的明日社会。"
 
  leader_trait_touhou_architectural_interest_2: "$leader_trait_touhou_architectural_interest$ II"
  leader_trait_touhou_architectural_interest_2_desc: "$leader_trait_touhou_architectural_interest_desc$"
