@@ -1654,6 +1654,9 @@
  leader_trait_synth_life_desc: "这位领袖通过将自身的意识上传到了一个分布式网络中实现了永生。"
  leader_trait_gene_life: "无限延寿"
  leader_trait_gene_life_desc: "这位领袖通过不断的细胞再生手术以及配套的鸡尾酒疗法实现了永生。"
+ mod_planet_jobs_robotic_physics_research_produces_mult:0 "机器人产出的£physics_research£物理学研究"
+ mod_planet_jobs_robotic_society_research_produces_mult:0 "机器人产出的£society_research£生物学研究"
+ mod_planet_jobs_robotic_engineering_research_produces_mult:0 "机器人产出的£engineering_research£工程学研究"
 
  touhou_paragon_effect.907.name:0 "征服死亡"
  touhou_paragon_effect.907.cyborg:1 "不幸地，稗田阿求的义体在意外事故中遭到了几乎致命的损坏——几乎。依靠足够的备用零件，现在我们已经成功将她的身体修复。"
@@ -1843,7 +1846,7 @@
  leader_trait_cucumbers_desc:0 "河城荷取在来到这个世界时，也带来了她和全体河童最喜欢的食物：黄瓜。为了增加其产量，河童们使用了最能体现她们暴力工业美学的方式……这么大吃下去真的没问题吗？"
  mod_planet_traders_physics_research_produces_add:0 "£job_trader£商贩产出的£physics_research£$physics_research$"
  mod_planet_traders_engineering_research_produces_add:0 "£job_trader£商贩产出的£engineering_research£$engineering_research$"
- mod_planet_metallurgists_physics_research_produces_add:0 "£job_foundry£[GetAlloyProducerPlural]产出的£physics_research£$physics_research$"
+ mod_planet_metallurgists_engineering_research_produces_add:0 "£job_foundry£[GetAlloyProducerPlural]产出的£engineering_research£$engineering_research$"
  mod_planet_artisans_engineering_research_produces_add:0 "£job_artisan£[GetArtisanPlural]产出的£engineering_research£$engineering_research$"
 
  ness_troop_limit_tooltip: "我们只能培育有限的尼斯湖水怪部队。"
