@@ -238,8 +238,7 @@ decision_end_banquet = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 10
-			multiplier = trigger:num_pops
+			influence = 1000
 		}
 	}
 

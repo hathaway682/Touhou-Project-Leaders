@@ -167,10 +167,10 @@ planet_event = {
 
 #小行星撞击
 planet_event = {
-    id = touhou_paragon_spell.7
-    title = "touhou_paragon_spell.7.name"
+    id = touhou_paragon_spell.8
+    title = "touhou_paragon_spell.8.name"
     desc = {
-        text = touhou_paragon_spell.7.desc
+        text = touhou_paragon_spell.8.desc
     }
     picture = GFX_evt_nuclear_explosion
     show_sound = event_super_explosion

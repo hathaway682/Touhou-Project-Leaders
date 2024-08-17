@@ -55,6 +55,7 @@ agenda_sanae_ascension = {
 		has_country_flag = touhou_flag_sanae_ascension
 	}
 	modifier = {
+		planetary_ascension_cost_mult = -0.1
 	}
 	effect = {
 		while = {

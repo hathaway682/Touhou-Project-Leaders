@@ -208,6 +208,11 @@ agenda_recruit_talent_finish = {
 	external_leader_pool_add = 3
 }
 
+agenda_sanae_ascension = {
+	planetary_ascension_cost_mult = -0.25
+	planetary_ascension_effect_mult = 0.25
+}
+
 red_fog = {
 	custom_tooltip = disable_sensor
 }

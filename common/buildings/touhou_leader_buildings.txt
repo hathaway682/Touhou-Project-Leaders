@@ -115,14 +115,15 @@ building_shrine = {
 		if = {
 			limit = {
 				is_capital = yes
-				not = {
-					any_country = {
-						is_country_type = saisen_box
+				NOT = {
+					owner = {
+						has_country_flag = saisen_box_active
 					}
 				}
 			}
 			owner = {
 				country_event = { id = touhou_paragon.40612 days = 365 random = 180 }
+				set_country_flag = saisen_box_active
 			}
 		}
 	}

@@ -106,6 +106,7 @@
  touhou_selected_char_51:0 "灵乌路空"
  touhou_selected_char_52:0 "古明地恋" #符卡已完成
 
+ spell_card_none_group:0 "未选择符卡"
  spell_card_none:0 "未选择符卡"
  spell_card_none_desc:0 ""
 

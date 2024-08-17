@@ -130,15 +130,6 @@ planet_event = {
         if = {
             limit = { has_ground_combat = no }
             remove_planet_flag = checking_supreme_warrior
-            every_planet_army = {
-                limit = {
-                    OR = {
-                        army_type = illusion
-                        army_type = army_suika_splitter
-                    }
-                }
-                remove_army = yes
-            }
         }
         else = {
             # Handle both sides of the ground combat
@@ -248,6 +239,15 @@ country_event = {
 
     immediate = {
         FROMFROM = {
+            every_planet_army = {
+                limit = {
+                    OR = {
+                        army_type = illusion
+                        army_type = army_suika_splitter
+                    }
+                }
+                remove_army = yes
+            }
             every_ground_combat_attacker = {
                 if = {
                     limit = { exists = leader }
@@ -2929,7 +2929,10 @@ country_event = {
         any_owned_planet = {
             has_modifier = modifier_endless_banquet
         }
-        any_country = {
+        any_playable_country = {
+            is_country_type = default
+            is_gestalt = no
+            is_individual_machine = no
             has_communications = root
             NOT = { has_closed_borders = root }
             any_owned_planet = {
@@ -2953,8 +2956,11 @@ country_event = {
             }
             save_event_target_as = banquet_planet
         }
-        random_country = {
+        random_playable_country = {
             limit = {
+                is_country_type = default
+                is_gestalt = no
+                is_individual_machine = no
                 has_communications = root
                 NOT = { has_closed_borders = root }
                 any_owned_planet = {
