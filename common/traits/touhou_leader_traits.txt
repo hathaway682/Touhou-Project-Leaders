@@ -389,13 +389,13 @@ leader_trait_robotist_sanae = {
 	}
 	planet_modifier = {
 		planet_jobs_robotic_produces_mult = 0.4
-		planet_pop_assemblers_upkeep_mult = 0.8
-		planet_pops_robotics_upkeep_mult = 0.8
+		planet_pop_assemblers_upkeep_mult = 0.4
+		planet_pops_robotics_upkeep_mult = 0.4
 	}
 	sector_modifier = {
 		planet_jobs_robotic_produces_mult = 0.2
-		planet_pop_assemblers_upkeep_mult = 0.4
-		planet_pops_robotics_upkeep_mult = 0.4
+		planet_pop_assemblers_upkeep_mult = 0.2
+		planet_pops_robotics_upkeep_mult = 0.2
 	}
 	triggered_army_modifier = {
 		potential = {
@@ -4389,7 +4389,7 @@ leader_trait_izakaya_2 = {
 	leader_trait_type = veteran
 	leader_class = { commander }
 	selectable_weight = {
-		weight = 1000
+		weight = 0
 	}
 	custom_tooltip_with_modifiers = leader_trait_izakaya_tooltip
 }
@@ -4414,7 +4414,7 @@ leader_trait_izakaya_3 = {
 	leader_trait_type = veteran
 	leader_class = { commander }
 	selectable_weight = {
-		weight = 1000
+		weight = 0
 	}
 	custom_tooltip_with_modifiers = leader_trait_izakaya_tooltip
 }
@@ -4470,7 +4470,7 @@ leader_trait_youkai_punk_2 = {
 	leader_trait_type = veteran
 	leader_class = { commander }
 	selectable_weight = {
-		weight = 1000
+		weight = 0
 	}
 }
 
@@ -4498,6 +4498,6 @@ leader_trait_youkai_punk_3 = {
 	leader_trait_type = veteran
 	leader_class = { commander }
 	selectable_weight = {
-		weight = 1000
+		weight = 0
 	}
 }

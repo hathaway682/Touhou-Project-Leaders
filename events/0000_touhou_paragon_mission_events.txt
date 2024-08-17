@@ -301,6 +301,7 @@ country_event = {
 		}
 		custom_tooltip = SANAE_ENIGMATIC_ALLOYS
 		set_country_flag = touhou_flag_sanae_enigmatic_alloys
+
 	}
 	after = {
 		hidden_effect = {
