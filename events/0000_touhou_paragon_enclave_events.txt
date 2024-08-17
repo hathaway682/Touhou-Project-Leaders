@@ -1803,24 +1803,23 @@ country_event = {
                     which = touhou_variable_saisen_switch
                     value = 2
                 }
-                OR = {
-                    any_owned_leader = {
+                any_owned_leader = {
+                    OR = {
                         num_negative_traits = 1
-                    }
-                    any_owned_leader = {
                         num_negative_traits = 2
-                    }
-                    any_owned_leader = {
                         num_negative_traits = 3
-                    }
-                    any_owned_leader = {
                         num_negative_traits = 4
                     }
                 }
             }
             random_owned_leader = {
                 limit = {
-                    num_negative_traits >= 1
+                    OR = {
+                        num_negative_traits = 1
+                        num_negative_traits = 2
+                        num_negative_traits = 3
+                        num_negative_traits = 4
+                    }
                 }
                 remove_all_negative_traits = yes
             }
@@ -1831,18 +1830,14 @@ country_event = {
                     which = touhou_variable_saisen_switch
                     value = 2
                 }
-                NOR = {
+                NOT = {
                     any_owned_leader = {
-                        num_negative_traits = 1
-                    }
-                    any_owned_leader = {
-                        num_negative_traits = 2
-                    }
-                    any_owned_leader = {
-                        num_negative_traits = 3
-                    }
-                    any_owned_leader = {
-                        num_negative_traits = 4
+                        OR = {
+                            num_negative_traits = 1
+                            num_negative_traits = 2
+                            num_negative_traits = 3
+                            num_negative_traits = 4
+                        }
                     }
                 }
             }

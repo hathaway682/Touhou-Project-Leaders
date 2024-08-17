@@ -624,6 +624,10 @@ modifier_sanae_mission_faith_5 = {
 	planetary_ascension_effect_mult = 0.25
 }
 
+modifier_sanae_mission_faith_5_agenda_modifier = {
+	planetary_ascension_effect_mult = 0.2
+}
+
 modifier_satori_pets = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_animal_wildlife.dds"
 	icon_frame = 1

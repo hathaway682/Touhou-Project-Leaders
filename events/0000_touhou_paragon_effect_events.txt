@@ -9929,6 +9929,7 @@ fleet_event = {
         clear_orders = yes
         clear_fleet_actions = this
     }
+    location = this
     option = {
         name = touhou_paragon_effect.42612.a
     }

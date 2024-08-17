@@ -4476,6 +4476,7 @@ leader_trait_youkai_punk_2 = {
 
 leader_trait_youkai_punk_3 = {
 	leader_trait_type = veteran
+	replace_traits = { leader_trait_youkai_punk_2 }
 	inline_script = {
 		script = trait/icon
 		CLASS = leader

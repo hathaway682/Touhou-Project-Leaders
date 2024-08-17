@@ -55,7 +55,9 @@ agenda_sanae_ascension = {
 		has_country_flag = touhou_flag_sanae_ascension
 	}
 	modifier = {
+		planetary_ascension_effect_mult = 0.1
 	}
+	finish_modifier = modifier_sanae_mission_faith_5_agenda_modifier
 	effect = {
 		while = {
 			count = 3
