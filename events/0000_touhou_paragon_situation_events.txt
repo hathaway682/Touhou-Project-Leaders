@@ -214,13 +214,13 @@ situation_event = {
                 resource = physics_research
                 value = @tier4researchreward
                 min = @tier4researchmin
-                max = @tier5researchmax
+                max = @tier4researchmax
             }
             add_monthly_resource_mult = {
                 resource = society_research
-                value = @tier5researchreward
-                min = @tier5researchmin
-                max = @tier5researchmax
+                value = @tier4researchreward
+                min = @tier4researchmin
+                max = @tier4researchmax
             }
         }
     }
