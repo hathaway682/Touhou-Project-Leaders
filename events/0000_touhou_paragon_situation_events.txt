@@ -212,15 +212,15 @@ situation_event = {
         owner = {
             add_monthly_resource_mult = {
                 resource = physics_research
-                value = @tier5researchreward
-                min = @tier5researchmin
-                max = @tier5researchmax
+                value = @tier4researchreward
+                min = @tier4researchmin
+                max = @tier4researchmax
             }
             add_monthly_resource_mult = {
                 resource = society_research
-                value = @tier5researchreward
-                min = @tier5researchmin
-                max = @tier5researchmax
+                value = @tier4researchreward
+                min = @tier4researchmin
+                max = @tier4researchmax
             }
         }
     }

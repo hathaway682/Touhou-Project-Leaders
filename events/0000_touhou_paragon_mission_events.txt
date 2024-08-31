@@ -1171,6 +1171,7 @@ country_event = {
 				}
 				any_owned_megastructure = {
 					OR = {
+						is_megastructure_type = think_tank_3
 						is_megastructure_type = think_tank_4
 						is_megastructure_type = think_tank_restored
 					}
