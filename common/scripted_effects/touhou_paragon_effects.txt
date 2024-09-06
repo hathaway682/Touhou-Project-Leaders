@@ -2255,3 +2255,61 @@ create_shrine_point_of_interest = {
 		}
 	}
 }
+
+speard_moriya_faith = {
+	if = {
+		limit = {
+			any_owned_pop = {
+				is_sapient = yes
+				is_non_sapient_robot = no
+				has_moriya_faith_modifier = no
+			}
+		}
+		random_owned_pop = {
+			limit = {
+				has_moriya_faith_modifier = no
+			}
+			converse_to_moriya_faith = yes
+			set_pop_flag = converse_2
+		}
+	}
+}
+
+converse_to_moriya_faith = {
+	if = {
+		limit = {
+			has_global_flag = moriya_faith_1
+		}
+		add_modifier = {
+			modifier = moriya_faith_1
+			days = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_global_flag = moriya_faith_2
+		}
+		add_modifier = {
+			modifier = moriya_faith_2
+			days = -1
+		}
+	}
+	else = {
+		add_modifier = {
+			modifier = moriya_faith_0
+			days = -1
+		}
+	}
+	event_target:moriya_faith_country = {
+		add_event_chain_counter = {
+			event_chain = spread_the_moriya_faith
+			counter = moriya_faith_pops
+			amount = 1
+		}
+		add_event_chain_counter = {
+			event_chain = spread_the_moriya_faith
+			counter = moriya_faith_goal
+			amount = 1
+		}
+	}
+}

@@ -5,7 +5,6 @@
 kazehouri = { icon = colonist possible = { always = no } }
 oni_king = { icon = colonist possible = { always = no } }
 doorman = { icon = colonist possible = { always = no } }
-magician = { icon = colonist possible = { always = no } }
 gardener = { icon = colonist possible = { always = no } }
 head_maid = { icon = colonist possible = { always = no } }
 college_student = { icon = colonist possible = { always = no } }
@@ -453,7 +452,6 @@ death_chronicler = {
 }
 
 ###档案管理员
-
 touhou_archivist = {
     category = specialist
     condition_string = SPECIALIST_JOB_TRIGGER
@@ -550,7 +548,6 @@ touhou_archivist = {
 }
 
 #人偶师
-
 dollmaker = {
     category = specialist
     condition_string = SPECIALIST_JOB_TRIGGER
@@ -889,7 +886,6 @@ grower_drone = {
 }
 
 #铃奈庵员工
-
 touhou_bookseller = {
     category = specialist
     condition_string = SPECIALIST_JOB_TRIGGER
@@ -915,7 +911,7 @@ touhou_bookseller = {
             physics_research = 4
             engineering_research = 4
             society_research = 6
-            minor_artifacts = 0.3
+            minor_artifacts = 0.5
         }
         upkeep = {
             consumer_goods = 2
@@ -1016,7 +1012,7 @@ touhou_historian = {
         produces = {
             society_research = 1
             unity = 1
-            minor_artifacts = 0.05
+            minor_artifacts = 0.1
             mult = owner.trigger:num_ascension_perks
         }
         upkeep = {
@@ -1025,9 +1021,9 @@ touhou_historian = {
     }
 
     country_modifier = {
-        planet_administrators_produces_mult = 0.05
-        planet_culture_workers_produces_mult = 0.05
-        culture_workers_modifier_mult = 0.05
+        planet_administrators_produces_mult = 0.1
+        planet_culture_workers_produces_mult = 0.1
+        culture_workers_modifier_mult = 0.1
     }
 
     weight = {
@@ -1449,6 +1445,108 @@ izakaya_worker = {
                     NOT = { species = { is_same_value = event_target:custodian_bot } }
                 }
             }
+        }
+    }
+}
+
+magician = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_magic_academy
+    clothes_texture_index = 3
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible = {
+        NOT = {
+            has_trait = trait_thl_magician
+        }
+        battle_thrall_job_check_trigger = yes
+    }
+
+    country_modifier = {
+        country_naval_cap_add = 2
+    }
+
+    triggered_country_modifier = { #intentionally left in
+        potential = {
+            exists = planet
+            planet = {
+                exists = owner
+                owner = { has_technology = "tech_ground_defense_planning" }
+            }
+        }
+        modifier = {
+            country_naval_cap_add = 2
+        }
+    }
+
+    pop_modifier = {
+        pop_defense_armies_add = 3
+    }
+
+    triggered_pop_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                exists = leader
+                leader = {
+                    leader_class = commander
+                }
+            }
+        }
+        modifier = {
+            pop_defense_armies_add = 2
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        produces = {
+            physics_research = 6
+            society_research = 6
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
+
+    triggered_country_modifier = {
+        modifier = {
+            country_naval_cap_add = 1
+        }
+        mult = planet.modifier:job_researcher_naval_cap_add
+    }
+
+    weight = {
+        weight = @ruler_job_weight
+        mult = value:job_weights_research_modifier|JOB|researcher|
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = { has_trait = trait_mechanical }
+        }
+        modifier = {
+            factor = 2
+            has_living_standard = { type = living_standard_academic_privilege }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = magician
+        }
+        modifier = {
+            factor = 0.8
+            is_enslaved = yes
+            has_slavery_type = { type = slavery_indentured }
         }
     }
 }

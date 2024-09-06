@@ -141,6 +141,7 @@ building_shrine = {
 	triggered_desc = {
 		text = job_miko_effect_desc
 	}
+	is_essential = yes
 }
 
 building_moriya_shrine = {
@@ -247,6 +248,7 @@ building_moriya_shrine = {
 	triggered_desc = {
 		text = job_moriya_miko_effect_desc
 	}
+	is_essential = yes
 }
 
 holding_building_moriya_shrine = {
@@ -417,6 +419,7 @@ building_hakurei_shrine = {
 	triggered_desc = {
 		text = job_hakurei_miko_effect_desc
 	}
+	is_essential = yes
 }
 
 building_assembler_mk2 = {
@@ -927,6 +930,7 @@ building_doll_assembly_plant = {
 	prerequisites = {
 		"tech_magic_dolls"
 	}
+	is_essential = yes
 }
 
 building_doll_assembly_complex = {
@@ -1029,6 +1033,7 @@ building_doll_assembly_complex = {
 		}
 		text = tooltip_organic_and_artificial_assembly_warning
 	}
+	is_essential = yes
 }
 
 building_soul_nexus = {
@@ -1296,6 +1301,7 @@ building_corpses_disposal_center = {
 		}
 		text = tooltip_organic_and_artificial_assembly_warning
 	}
+	is_essential = yes
 }
 
 building_posthumous_employment_center = {
@@ -1380,113 +1386,6 @@ building_posthumous_employment_center = {
 			}
 		}
 		text = tooltip_organic_and_artificial_assembly_warning
-	}
-}
-
-building_izakaya = {
-	base_buildtime = @b1_time
-	base_cap_amount = 1
-	icon = building_food_conglomerate
-
-	category = trade
-
-	potential = {
-		owner = {
-			any_owned_leader = {
-				has_trait = leader_trait_izakaya
-			}
-		}
-	}
-
-	allow = {
-		NOT = {
-			has_modifier = slave_colony
-		}
-	}
-
-	destroy_trigger = {
-		has_modifier = slave_colony
-	}
-
-	convert_to = {
-		building_holo_theatres
-	}
-
-	planet_modifier = {
-		job_izakaya_worker_add = 2
-	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = @b1_upkeep
-		}
-	}
-
-	triggered_desc = {
-		text = job_izakaya_worker_effect_desc
-	}
-}
-
-holding_izakaya = {
-	base_buildtime = @b1_time
-	base_cap_amount = 1
-	owner_type = corporate
-	icon = building_food_conglomerate
-
-	category = trade
-
-	potential = {
-		exists = branch_office_owner
-		branch_office_owner = {
-			any_owned_leader = {
-				has_trait = leader_trait_izakaya
-			}
-		}
-	}
-
-	allow = {
-		NOT = {
-			has_modifier = slave_colony
-		}
-	}
-
-	destroy_trigger = {
-		has_modifier = slave_colony
-	}
-
-	convert_to = {
-		building_holo_theatres
-	}
-
-	planet_modifier = {
-		job_izakaya_worker_add = 2
-	}
-
-	country_modifier = {
-		planet_amenities_mult = 0.05
-		pop_lifestyle_trade_value_mult = 0.1
-		planet_immigration_pull_mult = 0.1
-	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 500
-		}
-		produces = {
-			food = 10
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
-
-	triggered_desc = {
-		text = job_izakaya_worker_effect_desc
 	}
 }
 
@@ -1984,3 +1883,161 @@ building_ranger_lodge = {
 }
 
 ###夜雀食堂
+building_izakaya = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	icon = building_food_conglomerate
+
+	category = trade
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_izakaya
+			}
+		}
+	}
+
+	allow = {
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_holo_theatres
+	}
+
+	planet_modifier = {
+		job_izakaya_worker_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	triggered_desc = {
+		text = job_izakaya_worker_effect_desc
+	}
+	is_essential = yes
+}
+
+holding_izakaya = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	owner_type = corporate
+	icon = building_food_conglomerate
+
+	category = trade
+
+	potential = {
+		exists = branch_office_owner
+		branch_office_owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_izakaya
+			}
+		}
+	}
+
+	allow = {
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_holo_theatres
+	}
+
+	planet_modifier = {
+		job_izakaya_worker_add = 2
+	}
+
+	country_modifier = {
+		planet_amenities_mult = 0.05
+		pop_lifestyle_trade_value_mult = 0.1
+		planet_immigration_pull_mult = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			food = 10
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	triggered_desc = {
+		text = job_izakaya_worker_effect_desc
+	}
+}
+
+###魔法学院
+building_magic_academy = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = unity
+
+	potential = {
+		owner = {
+			has_country_flag = immortal_marisa
+			any_owned_leader = {
+				has_trait = leader_trait_magic
+			}
+		}
+	}
+
+	allow = {
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_research_lab_3
+	}
+
+	planet_modifier = {
+		job_magician_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	triggered_desc = {
+		text = job_magician_effect_desc
+	}
+
+	is_essential = yes
+}

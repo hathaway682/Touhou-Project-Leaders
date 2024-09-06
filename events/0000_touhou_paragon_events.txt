@@ -1405,6 +1405,7 @@ country_event = { # 魔理沙
 			add_trait = leader_trait_slipshod
 			add_trait = leader_trait_embezzler_2
 			add_trait = leader_trait_regeneration
+			add_trait = leader_trait_magician
 			add_trait = leader_trait_magic
 			set_leader_flag = touhou_leader
 			set_leader_flag = marisa_leader
@@ -1829,6 +1830,7 @@ country_event = { # 梅莉
 		last_created_leader = { #8
 			add_trait = subclass_scientist_scholar
 			add_trait = leader_trait_hifuu
+			add_trait = leader_trait_century_of_science
 			add_trait = leader_trait_truth_seeker
 			add_trait = leader_trait_relativistic_psychiatry
 			add_trait = leader_trait_academic_astral_rift_expert_3
@@ -1940,6 +1942,7 @@ country_event = { # 莲子
 		last_created_leader = { #8
 			add_trait = subclass_scientist_explorer
 			add_trait = leader_trait_hifuu
+			add_trait = leader_trait_century_of_science
 			add_trait = leader_trait_super_unified_physics
 			add_trait = leader_trait_midas_touch
 			add_trait = leader_trait_academic_astral_rift_expert_2
@@ -2654,6 +2657,7 @@ country_event = { # 帕秋莉
 			add_trait = leader_trait_summon_devils
 			add_trait = leader_trait_regeneration
 			add_trait = leader_trait_neurotic_2
+			add_trait = leader_trait_great_magician
 			add_trait = leader_trait_sick
 			set_age = 17
 		}
@@ -2957,6 +2961,7 @@ country_event = { # 爱丽丝
 			add_trait = leader_trait_dolls
 			add_trait = leader_trait_puppet_show
 			add_trait = leader_trait_regeneration
+			add_trait = leader_trait_great_magician
 			add_trait = leader_trait_intolerant
 			set_age = 17
 		}
@@ -3319,7 +3324,7 @@ country_event = { # 小铃
 			CATCH_PHRASE = kosuzu1_catch_phrase
 		}
 		last_created_leader = { #5
-			add_trait = subclass_scientist_explorer
+			add_trait = subclass_scientist_scholar
 			add_trait = leader_trait_collective_wisdom
 			add_trait = leader_trait_science_communicator
 			add_trait = leader_trait_meticulous_2
@@ -3825,7 +3830,7 @@ country_event = { # 静叶
 		ethic_leader_creator = {
 			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
 			LEADER_PORTRAIT = x73
-			CLASS = commander
+			CLASS = scientist
 			NAME = NAME_Sizuha
 			LEVEL = 1
 			GENDER = female
@@ -3835,12 +3840,12 @@ country_event = { # 静叶
 			CATCH_PHRASE =  sizuha1_catch_phrase
 		}
 		last_created_leader = { #2
-			add_trait = subclass_commander_governor
+			add_trait = subclass_scientist_explorer
 			add_trait = leader_trait_fall
-			add_trait = leader_trait_touhou_totalitarian
-			add_trait = leader_trait_juryrigger
+			add_trait = leader_trait_surveyor
+			add_trait = leader_trait_prospector
 			add_trait = leader_trait_regeneration_2
-			add_trait = leader_trait_micromanager
+			add_trait = leader_trait_paranoid
 		}
 	}
 

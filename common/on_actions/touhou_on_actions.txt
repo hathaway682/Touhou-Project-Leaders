@@ -65,6 +65,13 @@ on_monthly_pulse_country = {
 		touhou_paragon_effect.40702
 		touhou_paragon_spell.10000
 		touhou_paragon.43101 #小碎骨招募判定
+		touhou_paragon.40320 #自动传播守矢信仰
+	}
+}
+
+on_decade_pulse_country = {
+	events = {
+		touhou_paragon.40722
 	}
 }
 
@@ -423,5 +430,43 @@ on_suika_target_planet_reached = {
 on_asteroid_target_planet_reached = {
 	events = {
 		touhou_paragon_spell.8
+	}
+}
+
+# a new leader is created
+# scope: country, from: leader
+on_leader_spawned = {
+	events = {
+		touhou_paragon.40723
+	}
+}
+
+# A leader leveled up.
+# Scope = Country
+# From = Leader
+on_leader_level_up = {
+	events = {
+		touhou_paragon.40721
+		touhou_paragon.40724# Update Gestalt node portraits.
+	}
+}
+
+# A pop has finished purging
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+on_pop_purged = {
+	events = {
+		touhou_paragon.40323
+	}
+}
+
+# A pop has finished declining (while not being purged)
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+on_pop_declined = {
+	events = {
+		touhou_paragon.40323
 	}
 }

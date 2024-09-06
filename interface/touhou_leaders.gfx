@@ -283,6 +283,12 @@ spriteTypes = {
 		noOfFrames = 3
 	}
 
+	spriteType = {
+		name = "GFX_message_pop_magic_transed"
+		texturefile = "gfx/interface/icons/message/message_pop_magic_transed.dds"
+		noOfFrames = 3
+	}
+
 	# spriteType = {
 	# 	name = "GFX_text_touhou_leader"
 	# 	texturefile = "gfx/interface/icons/text_icons/text_icon_touhou_leader.dds"

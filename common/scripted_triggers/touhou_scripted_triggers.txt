@@ -608,3 +608,11 @@ dolls_assembly_trigger = {
 		}
 	}
 }
+
+has_moriya_faith_modifier = {
+	OR = {
+		has_modifier = moriya_faith_0
+		has_modifier = moriya_faith_1
+		has_modifier = moriya_faith_2
+	}
+}

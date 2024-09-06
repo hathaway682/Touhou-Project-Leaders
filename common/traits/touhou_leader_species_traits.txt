@@ -352,3 +352,39 @@ trait_kappa_aquatic = {
 	custom_tooltip_with_modifiers = trait_kappa_aquatic_tooltip
 	icon = "gfx/interface/icons/traits/trait_aquatic.dds"
 }
+
+trait_thl_magician = {
+	cost = 0
+	sorting_priority = 0
+	initial = no
+	randomized = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	forced_happiness = no
+	immortal_leaders = no
+	infertile = no
+	improves_leaders = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	ai_weight = {
+		weight = 0
+	}
+
+	icon = "gfx/interface/icons/traits/trait_psionic_species.dds"
+
+	modifier = {
+		planet_jobs_specialist_produces_mult = 0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.1
+		leader_lifespan_mult = 0.5
+		scientist_skill_levels = 2
+	}
+}

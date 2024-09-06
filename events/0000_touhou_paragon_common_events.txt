@@ -312,6 +312,10 @@ country_event = {
 			}
 			give_technology = { message = no tech = tech_subspace_drive }
 			low_tech_start_add_research_options_effect = yes
+			give_technology = {
+				tech = tech_subspace_drive
+				message = no
+			}
 			add_research_option = tech_hyper_drive_1
 			every_owned_ship = {
 				limit = {
@@ -361,6 +365,7 @@ country_event = {
 						last_created_leader = { #7
 							add_trait = subclass_scientist_scholar
 							add_trait = leader_trait_hifuu
+							add_trait = leader_trait_century_of_science
 							add_trait = leader_trait_truth_seeker
 							add_trait = leader_trait_relativistic_psychiatry
 							add_trait = leader_trait_academic_astral_rift_expert_3
@@ -405,6 +410,7 @@ country_event = {
 						last_created_leader = { #7
 							add_trait = subclass_scientist_explorer
 							add_trait = leader_trait_hifuu
+							add_trait = leader_trait_century_of_science
 							add_trait = leader_trait_super_unified_physics
 							add_trait = leader_trait_midas_touch
 							add_trait = leader_trait_academic_astral_rift_expert_2
@@ -434,6 +440,8 @@ country_event = {
 					set_location = root.capital_star
 				}
 			}
+			set_global_flag = merry
+			set_global_flag = renko
 		}
 		if = {
 			limit = {
@@ -584,7 +592,7 @@ country_event = {
 								}
 							}
 							modifier = {
-								mult = 10
+								mult = 4
 								owner = {
 									OR = {
 										has_technology = tech_droid_workers
@@ -593,7 +601,7 @@ country_event = {
 								}
 							}
 							modifier = {
-								mult = 10
+								mult = 4
 								owner = {
 									OR = {
 										has_technology = tech_synthetic_workers
@@ -603,25 +611,51 @@ country_event = {
 							}
 							leader_event = { id = touhou_paragon.40310 }# days = 1 random = 360 }
 						} # 非想天则
-						499 = {
+						0 = {
 							modifier = {
-								subtract = 9
+								add = 4
 								owner = {
-									OR = {
-										has_technology = tech_droid_workers
-										has_technology = tech_binary_motivators
+									any_owned_planet = {
+										has_building = building_moriya_shrine
 									}
 								}
 							}
 							modifier = {
-								subtract = 90
+								add = 4
 								owner = {
-									OR = {
-										has_technology = tech_synthetic_workers
-										has_technology = tech_nanite_assemblers
+									count_owned_planet = {
+										limit = {
+											has_building = building_moriya_shrine
+										}
+										count >= 2
 									}
 								}
 							}
+							modifier = {
+								add = 8
+								owner = {
+									count_owned_planet = {
+										limit = {
+											has_building = building_moriya_shrine
+										}
+										count >= 3
+									}
+								}
+							}
+							modifier = {
+								add = 16
+								owner = {
+									count_owned_planet = {
+										limit = {
+											has_building = building_moriya_shrine
+										}
+										count >= 4
+									}
+								}
+							}
+							leader_event = { id = touhou_paragon.40321 }
+						}
+						32 = {
 						}
 					}
 				}
@@ -658,9 +692,10 @@ country_event = {
 						9 = {}
 					}
 				}
-				leader_trait_magic = { # 魔理沙
+				leader_trait_magic = {
+					# 魔理沙
 					random_list = {
-						1 = {
+						1 = { # 魔炮
 							modifier = {
 								mult = 0
 								owner = {
@@ -670,21 +705,20 @@ country_event = {
 								}
 							}
 							modifier = {
-								mult = 5
+								mult = 2
 								owner = {
 									has_technology = tech_energy_lance_2
+								}
+							}
+							modifier = {
+								mult = 2
+								owner = {
+									has_technology = tech_titans
 								}
 							}
 							leader_event = { id = touhou_paragon.40710 days = 1 random = 360 }
-						} # 魔炮
-						49 = {
-							modifier = {
-								subtract = 4
-								owner = {
-									has_technology = tech_energy_lance_2
-								}
-							}
 						}
+						8 = {}
 					}
 				}
 			}
@@ -694,15 +728,6 @@ country_event = {
 				any_owned_leader = {
 					has_trait = leader_trait_memory
 					leader_age = 20
-				}
-			}
-			random_owned_leader = {
-				limit = {
-					has_trait = leader_trait_memory
-				}
-				leader_event = {
-					id = touhou_paragon.42410
-					days = 31
 				}
 			}
 		}
@@ -774,6 +799,436 @@ leader_event = {
 		owner = {
 			add_research_option = tech_sanae_robot_worker
 		}
+	}
+}
+
+#传教事件
+country_event = {
+	id = touhou_paragon.40320
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = moriya_faith_active
+	}
+
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				is_sapient = yes
+				is_non_sapient_robot = no
+				OR = {
+					has_job = moriya_miko
+					planet = {
+						has_planet_flag = full_faith
+					}
+				}
+				has_moriya_faith_modifier = no
+			}
+			converse_to_moriya_faith = yes
+			set_pop_flag = converse_1
+		}
+		every_owned_planet = {
+			limit = {
+				any_owned_pop = {
+					is_sapient = yes
+					is_non_sapient_robot = no
+					has_moriya_faith_modifier = no
+				}
+			}
+			every_owned_pop = {
+				limit = {
+					has_moriya_faith_modifier = yes
+					pop_produces_resource = {
+						type = unity
+						amount > 0
+					}
+				}
+				export_trigger_value_to_variable = {
+					trigger = pop_produces_resource
+					parameters = {
+						type = unity
+					}
+					variable = pop_unity_produce
+					rounded = yes
+				}
+				if = {
+					limit = {
+						planet = {
+							any_owned_pop = {
+								is_sapient = yes
+								is_non_sapient_robot = no
+								has_moriya_faith_modifier = no
+							}
+						}
+					}
+				}
+				random_list = {
+					1 = {
+						modifier = {
+							add = this.pop_unity_produce
+						}
+						planet = {
+							speard_moriya_faith = yes
+						}
+					}
+					99 = {
+						modifier = {
+							subtract = this.pop_unity_produce
+						}
+					}
+				}
+			}
+		}
+		every_owned_planet = {
+			limit = {
+				is_colony = yes
+				num_pops >= 2
+				any_owned_pop = {
+					has_moriya_faith_modifier = yes
+				}
+				NOT = {
+					any_owned_pop = {
+						is_sapient = yes
+						is_non_sapient_robot = no
+						has_moriya_faith_modifier = no
+					}
+				}
+				NOT = {
+					has_planet_flag = full_faith
+				}
+			}
+			log = "planet [this.GetName] has full faith"
+			set_planet_flag = full_faith
+			while = {
+				count = 2
+				if = {
+					limit = {
+						any_galaxy_planet = {
+							is_colony = yes
+							exists = owner
+							owner = {
+								is_country_type = default
+								is_gestalt = no
+								OR = {
+									is_same_value = root
+									has_diplo_migration_treaty = root
+									is_in_federation_with = root
+									has_overlord = root
+								}
+							}
+							any_owned_pop = {
+								is_non_sapient_robot = no
+							}
+							NOT = {
+								any_owned_pop = {
+									has_moriya_faith_modifier = yes
+								}
+							}
+						}
+					}
+					random_galaxy_planet = {
+						limit = {
+							is_colony = yes
+							exists = owner
+							owner = {
+								is_country_type = default
+								is_gestalt = no
+								OR = {
+									is_same_value = root
+									has_diplo_migration_treaty = root
+									is_in_federation_with = root
+									has_overlord = root
+								}
+							}
+							any_owned_pop = {
+								is_non_sapient_robot = no
+							}
+							NOT = {
+								any_owned_pop = {
+									has_moriya_faith_modifier = yes
+								}
+							}
+						}
+						weights = {
+							base = 0
+							add = trigger:num_pops
+						}
+						log = "planet [this.GetName] was converted"
+						every_owned_pop = {
+							export_trigger_value_to_variable = {
+								trigger = pop_produces_resource
+								parameters = {
+									type = unity
+								}
+								variable = pop_unity_produce
+								rounded = yes
+							}
+						}
+						ordered_owned_pop = {
+							order_by = pop_unity_produce
+							position = 1
+							limit = {
+								has_moriya_faith_modifier = no
+							}
+							converse_to_moriya_faith = yes
+							set_pop_flag = converse_3
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_completed_event_chain_counter = {
+					event_chain = spread_the_moriya_faith
+					counter = moriya_faith_goal
+				}
+				any_owned_leader = {
+					has_trait = leader_trait_miracle
+				}
+			}
+			random_owned_leader = {
+				limit = {
+					has_trait = leader_trait_miracle
+				}
+				leader_event = {
+					id = touhou_paragon.40330
+				}
+			}
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.40321
+	title = touhou_paragon.40321.name
+	desc = touhou_paragon.40321.desc
+	picture = GFX_evt_mk2_titan_robot
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	option = {
+		name = touhou_paragon.40321.a
+		owner = {
+			begin_event_chain = { event_chain = spread_the_moriya_faith target = this }
+		}
+		hidden_effect = {
+			set_global_flag = moriya_faith_active
+			owner = {
+				save_global_event_target_as = moriya_faith_country
+				every_owned_pop = {
+					limit = {
+						has_job = moriya_miko
+					}
+					converse_to_moriya_faith = yes
+				}
+			}
+			leader_event = {
+				id = touhou_paragon.40322
+				days = 30
+				random = 330
+			}
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.40322
+	title = touhou_paragon.40322.name
+	desc = touhou_paragon.40322.desc
+	picture = GFX_evt_mk2_titan_robot
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	option = {
+		name = touhou_paragon.40322.a
+		set_global_flag = moriya_faith_1
+		custom_tooltip = touhou_paragon.40322.a.tooltip
+		change_background_ethic = ethic_materialist
+		every_galaxy_pop = {
+			limit = {
+				has_modifier = moriya_faith_0
+			}
+			remove_modifier = moriya_faith_0
+			add_modifier = {
+				modifier = moriya_faith_1
+				days = -1
+			}
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40322.b
+		custom_tooltip = touhou_paragon.40322.b.tooltip
+		set_global_flag = moriya_faith_2
+		every_galaxy_pop = {
+			limit = {
+				has_modifier = moriya_faith_0
+			}
+			remove_modifier = moriya_faith_0
+			add_modifier = {
+				modifier = moriya_faith_2
+				days = -1
+			}
+		}
+	}
+}
+
+#守矢信徒人口减少
+planet_event = {
+	id = touhou_paragon.40323
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = moriya_faith_active
+		FromFrom = {
+			has_moriya_faith_modifier = yes
+		}
+	}
+
+	immediate = {
+		event_target:moriya_faith_country = {
+			add_event_chain_counter = {
+				event_chain = spread_the_moriya_faith
+				counter = moriya_faith_pops
+				amount = -1
+			}
+			add_event_chain_counter = {
+				event_chain = spread_the_moriya_faith
+				counter = moriya_faith_goal
+				amount = -1
+			}
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.40330
+	title = touhou_paragon.40330.name
+	desc = touhou_paragon.40330.desc
+	picture = GFX_evt_mk2_titan_robot
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	option = {
+		name = touhou_paragon.40330.a
+		leader_event = {
+			id = touhou_paragon.40331
+			days = 7
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.40331
+	title = touhou_paragon.40331.name
+	desc = touhou_paragon.40331.desc
+	picture = GFX_evt_mk2_titan_robot
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	trigger = {
+		exists = owner
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_trait = leader_trait_theurgist
+			}
+			remove_trait = leader_trait_theurgist
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_theurgist_2
+			}
+			remove_trait = leader_trait_theurgist_2
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_theurgist_3
+			}
+			remove_trait = leader_trait_theurgist_3
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_snake_bless
+			}
+			remove_trait = leader_trait_snake_bless
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_snake_bless_2
+			}
+			remove_trait = leader_trait_snake_bless_2
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_snake_bless_3
+			}
+			remove_trait = leader_trait_snake_bless_3
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_frog_bless
+			}
+			remove_trait = leader_trait_frog_bless
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_frog_bless_2
+			}
+			remove_trait = leader_trait_frog_bless_2
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_frog_bless_3
+			}
+			remove_trait = leader_trait_frog_bless_3
+		}
+		add_trait = leader_trait_godhead
 	}
 }
 
@@ -1496,6 +1951,176 @@ leader_event = {
 		owner = {
 			add_research_option = tech_master_spark
 			add_research_option = tech_final_spark
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.40720
+	title = touhou_paragon.40720.name
+	desc = touhou_paragon.40720.desc
+	picture = GFX_evt_marisa_spell_card
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+
+	}
+
+	option = {
+		name = touhou_paragon.40720.a
+		custom_tooltip = touhou_paragon.40720.a.tooltip
+		remove_trait = leader_trait_magician
+		add_trait = leader_trait_great_magician
+		owner = {
+			set_country_flag = immortal_marisa
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40721
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			exists = owner
+			has_trait = leader_trait_magic
+			has_skill >= 10
+		}
+	}
+
+	immediate = {
+		from = {
+			leader_event = {
+				id = touhou_paragon.40720
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40722
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_planet = {
+			num_assigned_jobs = {
+				job = magician
+				value >= 1
+			}
+		}
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				num_assigned_jobs = {
+					job = magician
+					value >= 1
+				}
+			}
+			set_variable = {
+				which = magic_trans_timer_var
+				value = 3600
+			}
+			set_saved_date = {
+				key = magic_trans_timer
+				days_from_present = magic_trans_timer_var
+				expires = magic_trans_timer_var
+			}
+			every_owned_pop = {
+				limit = {
+					has_job = magician
+					NOT = {
+						has_trait = trait_thl_magician
+					}
+				}
+				modify_species = {
+					species = this
+					add_trait = trait_thl_magician
+					add_traits_at_start_of_list = yes
+				}
+				clear_pop_category = yes
+				planet = {
+					change_variable = {
+						which = var_necrophaged_pops
+						value = 1
+					}
+				}
+			}
+			create_message = {
+				type = MESSAGE_POPS_MAGIC_TRANSED
+				localization = MESSAGE_POPS_MAGIC_TRANSED
+				days = 30
+				target = this
+				variable = {
+					type = name
+					localization = PLANET
+					scope = this
+				}
+				variable = {
+					type = variable
+					varname = var_necrophaged_pops
+					localization = VALUE
+					scope = this
+				}
+			}
+			set_variable = {
+				which = var_necrophaged_pops
+				value = 0
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = touhou_paragon.40723
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from.species = {
+			has_trait = trait_thl_magician
+		}
+	}
+
+	immediate = {
+		from = {
+			add_trait = leader_trait_magician
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40724
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			NOT = {
+				has_trait = leader_trait_magic
+			}
+			has_trait = leader_trait_magician
+			has_skill >= 10
+		}
+	}
+
+	immediate = {
+		from = {
+			remove_trait = leader_trait_magician
+			add_trait = leader_trait_great_magician
 		}
 	}
 }

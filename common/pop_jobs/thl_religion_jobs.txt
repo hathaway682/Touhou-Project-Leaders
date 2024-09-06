@@ -59,17 +59,12 @@ miko = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_latent_psionic
+			OR = {
+				has_trait = trait_latent_psionic
+				has_trait = trait_psionic
+			}
 		}
-		planet_amenities_add = 1
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_psionic
-		}
-		planet_amenities_add = 2
+		planet_psionic_jobs_produces_mult = 0.05
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -135,6 +130,10 @@ miko = {
 			factor = 2
 			has_trait = leader_trait_psionic
 		}
+		modifier = {
+			factor = 10
+			has_moriya_faith_modifier = yes
+		}
 	}
 }
 
@@ -169,7 +168,6 @@ moriya_miko = {
 			trigger = {
 				has_trait = trait_latent_psionic
 			}
-			unity = 1
 			physics_research = 1
 			society_research = 1
 			engineering_research = 1
@@ -178,7 +176,6 @@ moriya_miko = {
 			trigger = {
 				has_trait = trait_psionic
 			}
-			unity = 2
 			physics_research = 2
 			society_research = 2
 			engineering_research = 2
@@ -192,23 +189,18 @@ moriya_miko = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 2
+		planet_amenities_add = 4
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_latent_psionic
+			OR = {
+				has_trait = trait_latent_psionic
+				has_trait = trait_psionic
+			}
 		}
-		planet_amenities_add = 1
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_psionic
-		}
-		planet_amenities_add = 2
+		planet_psionic_jobs_produces_mult = 0.05
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -257,6 +249,10 @@ moriya_miko = {
 			factor = 2
 			has_trait = leader_trait_psionic
 		}
+		modifier = {
+			factor = 10
+			has_moriya_faith_modifier = yes
+		}
 	}
 }
 
@@ -288,7 +284,6 @@ hakurei_miko = {
 			trigger = {
 				has_trait = trait_latent_psionic
 			}
-			unity = 1
 			physics_research = 1
 			society_research = 1
 			engineering_research = 1
@@ -297,7 +292,6 @@ hakurei_miko = {
 			trigger = {
 				has_trait = trait_psionic
 			}
-			unity = 2
 			physics_research = 2
 			society_research = 2
 			engineering_research = 2
@@ -327,11 +321,11 @@ hakurei_miko = {
 
 	planet_modifier = {
 		planet_crime_add = -25
-		planet_stability_add = 2
+		planet_stability_add = 5
 	}
 
 	country_modifier = {
-		country_naval_cap_add = 8
+		country_naval_cap_add = 10
 	}
 
 	triggered_country_modifier = {
@@ -349,20 +343,13 @@ hakurei_miko = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_latent_psionic
+			OR = {
+				has_trait = trait_latent_psionic
+				has_trait = trait_psionic
+			}
 		}
-		modifier = {
-			planet_stability_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_psionic
-		}
-		modifier = {
-			planet_stability_add = 2
-		}
+		planet_psionic_jobs_produces_mult = 0.05
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	triggered_planet_modifier = {
@@ -400,11 +387,11 @@ hakurei_miko = {
 		modifier = {
 			factor = 0.1
 			has_ethic = ethic_materialist
-			NOT = { has_job = priest }
+			NOT = { has_job = hakurei_miko }
 		}
 		modifier = {
 			factor = 1.5
-			has_job = priest
+			has_job = hakurei_miko
 		}
 		modifier = {
 			factor = 0.1
@@ -418,6 +405,10 @@ hakurei_miko = {
 		modifier = {
 			factor = 2
 			has_trait = leader_trait_psionic
+		}
+		modifier = {
+			factor = 10
+			has_moriya_faith_modifier = yes
 		}
 	}
 }

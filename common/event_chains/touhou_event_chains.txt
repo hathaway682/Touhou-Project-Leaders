@@ -27,7 +27,7 @@ touhou_sanae_mission_chain = {
 }
 
 touhou_marisa_alice_regeneration_chain = {
-	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	icon = "gfx/interface/icons/situation_log/situation_log_physics.dds"
 	picture = GFX_evt_kirisame_marisa_alchemy
 	counter = {
 		touhou_marisa_alice_regeneration_counter = {
@@ -56,3 +56,13 @@ ruined_shrine = {
 	picture = GFX_evt_ruined_shrine
 }
 
+spread_the_moriya_faith = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_ruined_shrine
+	counter = {
+		moriya_faith_pops = { }
+		moriya_faith_goal = {
+			max = 1000
+		}
+	}
+}

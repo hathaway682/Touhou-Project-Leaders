@@ -11,6 +11,17 @@ message_type = {
 }
 
 message_type = {
+	key = "MESSAGE_POPS_MAGIC_TRANSED"
+	icon = "GFX_message_pop_magic_transed"
+	icon_frame = 1
+
+	name = "MESSAGE_POPS_MAGIC_TRANSED_TITLE"
+	sound = "event_default"
+	ping = "ping_notification_green"
+	auto_opens = none
+}
+
+message_type = {
 	key = "MESSAGE_JINX_STOCKPILE"
 	icon = "GFX_topbar_leaders_button"
 	icon_frame = 1

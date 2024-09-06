@@ -530,3 +530,67 @@ giant_snake_army = {
 		always = no
 	}
 }
+
+# 魔法使火力小组
+magician_army = {
+	damage = 7.5
+	health = 3.0
+	morale = 2.5
+	morale_damage = 2.5
+	collateral_damage = 4.0
+	war_exhaustion = 4.0
+	time = 720
+	icon = GFX_army_type_psionic
+
+	resources = {
+		category = armies
+
+		cost = {
+			astral_threads = 15
+			minerals = 600
+		}
+		upkeep = {
+			energy = 5
+			astral_threads = 0.5
+		}
+	}
+
+	potential = {
+		from = {
+			has_trait = trait_thl_magician
+		}
+	}
+}
+
+magician_defense_army = {
+	damage = 7.5
+	health = 5.0
+	morale = 4.5
+	morale_damage = 2.5
+	collateral_damage = 0
+	war_exhaustion = 0
+	icon = GFX_army_type_defensive
+	defensive = yes
+	is_pop_spawned = yes
+
+	resources = {
+		category = armies
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_unyielding_resistance_is_frugal }
+			}
+			unity = 0.5
+		}
+	}
+
+	potential = {
+		num_assigned_jobs = {
+			job = magician
+			value >= 1
+		}
+		from = {
+			has_trait = trait_thl_magician
+		}
+	}
+}
