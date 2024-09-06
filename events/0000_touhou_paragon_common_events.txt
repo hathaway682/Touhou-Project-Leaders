@@ -813,6 +813,7 @@ country_event = {
 	}
 
 	immediate = {
+		#守矢巫女和完全信仰的星球自动改信
 		every_owned_pop = {
 			limit = {
 				is_sapient = yes
@@ -828,12 +829,16 @@ country_event = {
 			converse_to_moriya_faith = yes
 			set_pop_flag = converse_1
 		}
+		#星球内传教
 		every_owned_planet = {
 			limit = {
 				any_owned_pop = {
 					is_sapient = yes
 					is_non_sapient_robot = no
 					has_moriya_faith_modifier = no
+				}
+				NOT = {
+					has_planet_flag = full_faith
 				}
 			}
 			every_owned_pop = {
@@ -874,6 +879,7 @@ country_event = {
 				}
 			}
 		}
+		#星球完全信仰时，触发星际传教
 		every_owned_planet = {
 			limit = {
 				is_colony = yes
@@ -972,6 +978,88 @@ country_event = {
 				}
 			}
 		}
+		#国内无信徒人口，和有信仰国家签订协议，触发星际传教
+		if = {
+			limit = {
+				any_owned_pop = {
+					is_sapient = yes
+					is_non_sapient_robot = no
+					has_moriya_faith_modifier = no
+				}
+				NOT = {
+					any_owned_pop = {
+						has_moriya_faith_modifier = yes
+					}
+				}
+				any_country = {
+					OR = {
+						has_civic = civic_moriya_shinto
+						has_civic = civic_moriya_shinto_corp
+						has_event_chain = spread_the_moriya_faith
+					}
+					OR = {
+						has_diplo_migration_treaty = root
+						is_in_federation_with = root
+						has_subject = root
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_owned_planet = {
+						is_colony = yes
+						any_owned_pop = {
+							is_sapient = yes
+							is_non_sapient_robot = no
+						}
+						NOT = {
+							any_owned_pop = {
+								has_moriya_faith_modifier = yes
+							}
+						}
+					}
+				}
+				random_owned_planet = {
+					limit = {
+						is_colony = yes
+						any_owned_pop = {
+							is_sapient = yes
+							is_non_sapient_robot = no
+						}
+						NOT = {
+							any_owned_pop = {
+								has_moriya_faith_modifier = yes
+							}
+						}
+					}
+					weights = {
+						base = 0
+						add = trigger:num_pops
+					}
+					log = "planet [this.GetName] was converted by diplo"
+					every_owned_pop = {
+						export_trigger_value_to_variable = {
+							trigger = pop_produces_resource
+							parameters = {
+								type = unity
+							}
+							variable = pop_unity_produce
+							rounded = yes
+						}
+					}
+					ordered_owned_pop = {
+						order_by = pop_unity_produce
+						position = 1
+						limit = {
+							has_moriya_faith_modifier = no
+						}
+						converse_to_moriya_faith = yes
+						set_pop_flag = converse_4
+					}
+				}
+			}
+		}
+		#完成任务
 		if = {
 			limit = {
 				has_completed_event_chain_counter = {
