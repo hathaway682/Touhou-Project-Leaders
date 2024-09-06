@@ -837,13 +837,6 @@ country_event = {
 				}
 			}
 			every_owned_pop = {
-				limit = {
-					has_moriya_faith_modifier = yes
-					pop_produces_resource = {
-						type = unity
-						amount > 0
-					}
-				}
 				export_trigger_value_to_variable = {
 					trigger = pop_produces_resource
 					parameters = {
@@ -854,6 +847,7 @@ country_event = {
 				}
 				if = {
 					limit = {
+						has_moriya_faith_modifier = yes
 						planet = {
 							any_owned_pop = {
 								is_sapient = yes
@@ -862,19 +856,19 @@ country_event = {
 							}
 						}
 					}
-				}
-				random_list = {
-					1 = {
-						modifier = {
-							add = this.pop_unity_produce
+					random_list = {
+						1 = {
+							modifier = {
+								add = this.pop_unity_produce
+							}
+							planet = {
+								speard_moriya_faith = yes
+							}
 						}
-						planet = {
-							speard_moriya_faith = yes
-						}
-					}
-					99 = {
-						modifier = {
-							subtract = this.pop_unity_produce
+						99 = {
+							modifier = {
+								subtract = this.pop_unity_produce
+							}
 						}
 					}
 				}
@@ -1004,7 +998,7 @@ leader_event = {
 	id = touhou_paragon.40321
 	title = touhou_paragon.40321.name
 	desc = touhou_paragon.40321.desc
-	picture = GFX_evt_mk2_titan_robot
+	picture = GFX_evt_speard_moriya_faith
 	show_sound = event_default
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1049,7 +1043,7 @@ leader_event = {
 	id = touhou_paragon.40322
 	title = touhou_paragon.40322.name
 	desc = touhou_paragon.40322.desc
-	picture = GFX_evt_mk2_titan_robot
+	picture = GFX_evt_speard_moriya_faith
 	show_sound = event_default
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1132,7 +1126,7 @@ leader_event = {
 	id = touhou_paragon.40330
 	title = touhou_paragon.40330.name
 	desc = touhou_paragon.40330.desc
-	picture = GFX_evt_mk2_titan_robot
+	picture = GFX_evt_speard_moriya_faith
 	show_sound = event_default
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1161,7 +1155,7 @@ leader_event = {
 	id = touhou_paragon.40331
 	title = touhou_paragon.40331.name
 	desc = touhou_paragon.40331.desc
-	picture = GFX_evt_mk2_titan_robot
+	picture = GFX_evt_sanae_immortal
 	show_sound = event_default
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1959,7 +1953,7 @@ leader_event = {
 	id = touhou_paragon.40720
 	title = touhou_paragon.40720.name
 	desc = touhou_paragon.40720.desc
-	picture = GFX_evt_marisa_spell_card
+	picture = GFX_evt_marisa_immortal
 	show_sound = event_default
 	is_triggered_only = yes
 	fire_only_once = yes

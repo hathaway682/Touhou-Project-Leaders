@@ -276,6 +276,24 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_marisa_immortal"
+		texturefile = "gfx/event_pictures/marisa_immortal.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_speard_moriya_faith"
+		texturefile = "gfx/event_pictures/speard_moriya_faith.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_sanae_immortal"
+		texturefile = "gfx/event_pictures/sanae_immortal.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 
 	spriteType = {
 		name = "GFX_button_upgrade_ascension_tier_selected"

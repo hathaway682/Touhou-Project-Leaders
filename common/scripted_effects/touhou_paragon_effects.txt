@@ -2266,6 +2266,10 @@ speard_moriya_faith = {
 			}
 		}
 		random_owned_pop = {
+			weights = {
+				base = 1
+				add = pop_unity_produce
+			}
 			limit = {
 				has_moriya_faith_modifier = no
 			}
