@@ -1223,6 +1223,19 @@ leader_event = {
 			remove_trait = leader_trait_frog_bless_3
 		}
 		add_trait = leader_trait_godhead
+		if = {
+			limit = {
+				has_trait = leader_trait_regeneration
+			}
+			remove_trait = leader_trait_regeneration
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_regeneration_2
+			}
+			remove_trait = leader_trait_regeneration_2
+		}
+		add_trait = leader_trait_regeneration_3
 	}
 }
 
