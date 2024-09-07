@@ -4519,7 +4519,7 @@ leader_trait_izakaya_2 = {
 	leader_trait_type = veteran
 	leader_class = { commander }
 	selectable_weight = {
-		weight = 0
+		weight = 1000
 	}
 	custom_tooltip_with_modifiers = leader_trait_izakaya_tooltip
 }
@@ -4543,7 +4543,7 @@ leader_trait_izakaya_3 = {
 	leader_trait_type = veteran
 	leader_class = { commander }
 	selectable_weight = {
-		weight = 0
+		weight = 1000
 	}
 	custom_tooltip_with_modifiers = leader_trait_izakaya_tooltip
 }
@@ -4597,7 +4597,7 @@ leader_trait_youkai_punk_2 = {
 	leader_trait_type = veteran
 	leader_class = { commander }
 	selectable_weight = {
-		weight = 0
+		weight = 1000
 	}
 }
 
@@ -4624,7 +4624,7 @@ leader_trait_youkai_punk_3 = {
 	leader_trait_type = veteran
 	leader_class = { commander }
 	selectable_weight = {
-		weight = 0
+		weight = 1000
 	}
 }
 
