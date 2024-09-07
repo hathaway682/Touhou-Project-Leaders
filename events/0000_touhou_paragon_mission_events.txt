@@ -1976,7 +1976,43 @@ country_event = {
 		name = touhou_paragon_mission.40325.a
 		every_owned_leader = {
 			limit = { has_trait = leader_trait_miracle }
-			add_trait = leader_trait_chosen
+			if = {
+				limit = {
+					has_trait = leader_trait_snake_bless
+				}
+				remove_trait = leader_trait_snake_bless
+			}
+			if = {
+				limit = {
+					has_trait = leader_trait_snake_bless_2
+				}
+				remove_trait = leader_trait_snake_bless_2
+			}
+			if = {
+				limit = {
+					has_trait = leader_trait_snake_bless_3
+				}
+				remove_trait = leader_trait_snake_bless_3
+			}
+			if = {
+				limit = {
+					has_trait = leader_trait_frog_bless
+				}
+				remove_trait = leader_trait_frog_bless
+			}
+			if = {
+				limit = {
+					has_trait = leader_trait_frog_bless_2
+				}
+				remove_trait = leader_trait_frog_bless_2
+			}
+			if = {
+				limit = {
+					has_trait = leader_trait_frog_bless_3
+				}
+				remove_trait = leader_trait_frog_bless_3
+			}
+			add_trait = leader_trait_sanae_complete
 		}
 	}
 	after = {

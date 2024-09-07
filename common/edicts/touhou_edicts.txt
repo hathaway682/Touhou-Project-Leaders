@@ -1660,5 +1660,6 @@ sanae_mission_technocracy_for_spiritualist = {
 		country_event = {
 			id = touhou_paragon.42300
 		}
+		set_global_flag = kosuzu
 	}
 }

@@ -4646,7 +4646,7 @@ leader_trait_youkai_punk_3 = {
 	}
 }
 
-leader_trait_godhead = {
+leader_trait_sanae_complete = {
 	inline_script = {
 		script = trait/icon_psionic
 		CLASS = leader
@@ -4657,28 +4657,21 @@ leader_trait_godhead = {
 	}
 
 	fleet_modifier = {
-		ship_weapon_damage = 1
-		ship_weapon_range_mult = 1
-		ship_hull_mult = 1
-		ship_hull_damage_mult = 1
-		ship_shield_hardening_add = 1
+		ship_fire_rate_mult = 0.60
+		ship_weapon_range_mult = 0.60
+		ship_hull_mult = 0.60
+		ship_hull_damage_mult = 0.60
+		ship_tracking_add = 50
+		ship_accuracy_add = 50
+		ship_tracking_add = 50
 	}
 	army_modifier = {
 		army_damage_mult = 1
 		army_health = 1
 		army_morale = 1
 	}
-	triggered_councilor_modifier = {
-		potential = {
-			is_ruler = yes
-		}
-		pop_government_ethic_attraction = 1
-		country_ruler_influence_produces_add = 2.5
-		category_psionics_research_speed_mult = 1
-	}
 	planet_modifier = {
 		job_moriya_miko_add = 6
-		planet_priests_unity_produces_add = 6
 		planet_priests_physics_research_produces_add = 6
 		planet_priests_society_research_produces_add = 6
 		planet_priests_engineering_research_produces_add = 6
@@ -4686,7 +4679,6 @@ leader_trait_godhead = {
 	}
 	sector_modifier = {
 		job_moriya_miko_add = 3
-		planet_priests_unity_produces_add = 3
 		planet_priests_physics_research_produces_add = 3
 		planet_priests_society_research_produces_add = 3
 		planet_priests_engineering_research_produces_add = 3
