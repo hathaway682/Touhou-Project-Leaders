@@ -1261,7 +1261,8 @@ leader_event = {
 		exists = owner
 	}
 
-	immediate = {
+	option = {
+		name = touhou_paragon.40331.a
 		if = {
 			limit = {
 				has_trait = leader_trait_theurgist
