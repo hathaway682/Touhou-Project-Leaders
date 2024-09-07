@@ -1104,6 +1104,7 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.40321.a
+		custom_tooltip = touhou_paragon.40321.a.tooltip
 		owner = {
 			begin_event_chain = { event_chain = spread_the_moriya_faith target = this }
 		}
@@ -1124,6 +1125,11 @@ leader_event = {
 				random = 330
 			}
 		}
+	}
+
+	option = {
+		name = touhou_paragon.40321.b
+		custom_tooltip = touhou_paragon.40321.b.tooltip
 	}
 }
 
