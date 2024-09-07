@@ -4663,7 +4663,7 @@ leader_trait_sanae_complete = {
 		ship_weapon_range_mult = 0.60
 		ship_tracking_add = 50
 		ship_accuracy_add = 50
-		ship_tracking_add = 50
+		ship_evasion_add = 50
 	}
 	army_modifier = {
 		army_damage_mult = 1
@@ -4671,14 +4671,12 @@ leader_trait_sanae_complete = {
 		army_morale = 1
 	}
 	planet_modifier = {
-		job_moriya_miko_add = 6
 		planet_priests_physics_research_produces_add = 6
 		planet_priests_society_research_produces_add = 6
 		planet_priests_engineering_research_produces_add = 6
 		planet_jobs_produces_mult = 0.3
 	}
 	sector_modifier = {
-		job_moriya_miko_add = 3
 		planet_priests_physics_research_produces_add = 3
 		planet_priests_society_research_produces_add = 3
 		planet_priests_engineering_research_produces_add = 3
