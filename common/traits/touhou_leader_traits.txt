@@ -4494,6 +4494,9 @@ leader_trait_izakaya = {
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
+	leader_potential_add = {
+		has_trait = leader_trait_song
+	}
 	selectable_weight = {
 		weight = 0
 	}
@@ -4518,6 +4521,9 @@ leader_trait_izakaya_2 = {
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
+	leader_potential_add = {
+		has_trait = leader_trait_song
+	}
 	selectable_weight = {
 		weight = 1000
 	}
@@ -4525,7 +4531,7 @@ leader_trait_izakaya_2 = {
 }
 
 leader_trait_izakaya_3 = {
-	replace_traits = { leader_trait_izakaya_3 }
+	replace_traits = { leader_trait_izakaya_2 }
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -4542,6 +4548,9 @@ leader_trait_izakaya_3 = {
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
+	leader_potential_add = {
+		has_trait = leader_trait_song
+	}
 	selectable_weight = {
 		weight = 1000
 	}
@@ -4569,6 +4578,9 @@ leader_trait_youkai_punk = {
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
+	leader_potential_add = {
+		has_trait = leader_trait_song
+	}
 	selectable_weight = {
 		weight = 0
 	}
@@ -4596,6 +4608,9 @@ leader_trait_youkai_punk_2 = {
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
+	leader_potential_add = {
+		has_trait = leader_trait_song
+	}
 	selectable_weight = {
 		weight = 1000
 	}
@@ -4623,6 +4638,9 @@ leader_trait_youkai_punk_3 = {
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
+	leader_potential_add = {
+		has_trait = leader_trait_song
+	}
 	selectable_weight = {
 		weight = 1000
 	}

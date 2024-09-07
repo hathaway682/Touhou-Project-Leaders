@@ -1893,7 +1893,11 @@ building_izakaya = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_izakaya
+				OR = {
+					has_trait = leader_trait_izakaya
+					has_trait = leader_trait_izakaya_2
+					has_trait = leader_trait_izakaya_3
+				}
 			}
 		}
 	}
