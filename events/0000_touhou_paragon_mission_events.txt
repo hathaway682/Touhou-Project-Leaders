@@ -485,14 +485,12 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
-			owner = {
-				remove_point_of_interest = touhou_sanae_mission_chain_faith.2
-				create_point_of_interest = {
-					id = touhou_sanae_mission_chain_faith.3
-					name = "touhou_sanae_mission_chain_faith_name"
-					desc = "touhou_sanae_mission_chain_faith_3_desc"
-					event_chain = "touhou_sanae_mission_chain"
-				}
+			remove_point_of_interest = touhou_sanae_mission_chain_faith.2
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_faith.3
+				name = "touhou_sanae_mission_chain_faith_name"
+				desc = "touhou_sanae_mission_chain_faith_3_desc"
+				event_chain = "touhou_sanae_mission_chain"
 			}
 		}
 	}
@@ -1114,6 +1112,14 @@ country_event = {
 				is_ai = yes
 				is_subject = no
 				not = { is_in_federation_with = root }
+				relative_power = {
+					who = root
+					value >= inferior
+				}
+				NOR = {
+					has_civic = civic_moriya_shinto
+					has_civic = civic_moriya_shinto_corp
+				}
 				or = {
 					is_country_type = default
 					is_country_type = fallen_empire
@@ -2033,7 +2039,7 @@ country_event = {
 						has_trait = leader_trait_regeneration_3
 					}
 				}
-				remove_trait = leader_trait_regeneration_3
+				add_trait = leader_trait_regeneration_3
 			}
 		}
 	}
