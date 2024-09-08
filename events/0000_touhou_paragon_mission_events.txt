@@ -451,7 +451,7 @@ country_event = {
 	id = touhou_paragon_mission.40309
 	title = touhou_paragon_mission.40309.name
 	desc = {
-		trigger = { owner = { has_tradition = tr_psionics_finish} }
+		trigger = { has_tradition = tr_psionics_finish }
 		text = touhou_paragon_mission.40309.desc.psi
 	}
 	picture = GFX_evt_sanae_mission
@@ -460,18 +460,13 @@ country_event = {
 	fire_only_once = yes
 	event_chain = touhou_sanae_mission_chain
 	trigger = {
-		owner = {
-			has_point_of_interest = {
-				poi = touhou_sanae_mission_chain_faith.2
-			}
-			has_modifier = shroud_cooldown
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_faith.2
 		}
-		owner = { has_tradition = tr_psionics_finish}
-		this = {
-			exists = leader
-			leader = {
-				has_trait = leader_trait_miracle
-			}
+		has_modifier = shroud_cooldown
+		has_tradition = tr_psionics_finish
+		any_owned_leader = {
+			has_trait = leader_trait_miracle
 		}
 	}
 	option = {
