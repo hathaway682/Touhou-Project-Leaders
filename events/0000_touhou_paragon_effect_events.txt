@@ -4481,6 +4481,7 @@ planet_event = {
             NOR = {
                 has_trait = trait_zombie
                 has_trait = trait_thl_spirit
+                has_trait = trait_hive_mind
             }
         }
         owner = {
@@ -4509,6 +4510,9 @@ planet_event = {
                 has_deposit = sakura_tree_5
                 has_deposit = sakura_tree_8
             }
+        }
+        NOT = {
+            is_planet_class = pc_cosmogenesis_world
         }
     }
 

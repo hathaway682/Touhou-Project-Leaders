@@ -1927,7 +1927,7 @@ country_event = {
 		}
 		count_owned_planet = {
 			limit = {
-				has_planetary_ascension_tier = 10
+				has_planetary_ascension_tier >= 10
 			}
 			count >= 5
 		}
