@@ -65,7 +65,6 @@ on_monthly_pulse_country = {
 		touhou_paragon_effect.40702
 		touhou_paragon_spell.10000
 		touhou_paragon.43101 #小碎骨招募判定
-		touhou_paragon.40320 #自动传播守矢信仰
 	}
 }
 
@@ -378,16 +377,6 @@ on_fleet_destroyed_perp = {
 on_modification_complete = {
 	events = {
 		touhou_paragon_mission.40398
-	}
-}
-
-# Called upon entering FTL (on-action name scripted on the Bypass type)
-# THIS = Fleet
-# FROM = System jumping to
-# FROMFROM = System jumped from
-on_entering_shroud_tunnel = {
-	events = {
-		touhou_paragon_mission.40309
 	}
 }
 

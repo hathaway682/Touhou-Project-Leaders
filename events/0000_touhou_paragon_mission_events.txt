@@ -447,7 +447,7 @@ country_event = {
 	}
 }
 
-fleet_event = {
+country_event = {
 	id = touhou_paragon_mission.40309
 	title = touhou_paragon_mission.40309.name
 	desc = {
@@ -464,6 +464,7 @@ fleet_event = {
 			has_point_of_interest = {
 				poi = touhou_sanae_mission_chain_faith.2
 			}
+			has_modifier = shroud_cooldown
 		}
 		owner = { has_tradition = tr_psionics_finish}
 		this = {
@@ -476,9 +477,7 @@ fleet_event = {
 	option = {
 		name = touhou_paragon_mission.40309.a
 		trigger = {
-			owner = {
-				has_tradition = tr_psionics_finish
-			}
+			has_tradition = tr_psionics_finish
 		}
 		add_modifier = {
 			modifier = modifier_sanae_mission_faith_2_psionics
@@ -905,12 +904,12 @@ country_event = {
 			poi = touhou_sanae_mission_chain_adm.4
 		}
 		OR = {
-			num_owned_active_gateways >= 10
+			num_owned_active_gateways >= 5
 			count_owned_megastructure = {
 				limit = {
 					is_same_value = AOW_MEGA_advanced_hyperlane_controller
 				}
-				count >= 100
+				count >= 50
 			}
 		}
 		trade_income >= 1000
@@ -1049,7 +1048,7 @@ country_event = {
 		}
 		num_assigned_jobs = {
 			job = head_researcher
-			value >= 20
+			value >= 10
 		}
 	}
 	option = {
@@ -1157,62 +1156,65 @@ country_event = {
 				has_point_of_interest = {
 					poi = touhou_sanae_mission_chain_adm.5
 				}
-				any_owned_megastructure = {
-					OR = {
-						is_megastructure_type = dyson_sphere_5
-						is_megastructure_type = dyson_sphere_restored
+				calc_true_if = {
+					amount >= 5
+					any_owned_megastructure = {
+						OR = {
+							is_megastructure_type = dyson_sphere_5
+							is_megastructure_type = dyson_sphere_restored
+						}
 					}
-				}
-				any_owned_megastructure = {
-					OR = {
-						is_megastructure_type = spy_orb_4
-						is_megastructure_type = spy_orb_restored
+					any_owned_megastructure = {
+						OR = {
+							is_megastructure_type = spy_orb_4
+							is_megastructure_type = spy_orb_restored
+						}
 					}
-				}
-				any_owned_megastructure = {
-					OR = {
-						is_megastructure_type = think_tank_3
-						is_megastructure_type = think_tank_4
-						is_megastructure_type = think_tank_restored
+					any_owned_megastructure = {
+						OR = {
+							is_megastructure_type = think_tank_3
+							is_megastructure_type = think_tank_4
+							is_megastructure_type = think_tank_restored
+						}
 					}
-				}
-				any_owned_megastructure = {
-					OR = {
-						is_megastructure_type = matter_decompressor_4
-						is_megastructure_type = matter_decompressor_restored
+					any_owned_megastructure = {
+						OR = {
+							is_megastructure_type = matter_decompressor_4
+							is_megastructure_type = matter_decompressor_restored
+						}
 					}
-				}
-				any_owned_megastructure = {
-					OR = {
-						is_megastructure_type = strategic_coordination_center_3
-						is_megastructure_type = strategic_coordination_center_restored
+					any_owned_megastructure = {
+						OR = {
+							is_megastructure_type = strategic_coordination_center_3
+							is_megastructure_type = strategic_coordination_center_restored
+						}
 					}
-				}
-				any_owned_megastructure = {
-					OR = {
-						is_megastructure_type = mega_art_installation_3
-						is_megastructure_type = mega_art_installation_4
-						is_megastructure_type = mega_art_installation_restored
-						is_megastructure_type = mega_art_installation_restored_2
+					any_owned_megastructure = {
+						OR = {
+							is_megastructure_type = mega_art_installation_3
+							is_megastructure_type = mega_art_installation_4
+							is_megastructure_type = mega_art_installation_restored
+							is_megastructure_type = mega_art_installation_restored_2
+						}
 					}
-				}
-				any_owned_megastructure = {
-					OR = {
-						is_megastructure_type = interstellar_assembly_4
-						is_megastructure_type = interstellar_assembly_restored
+					any_owned_megastructure = {
+						OR = {
+							is_megastructure_type = interstellar_assembly_4
+							is_megastructure_type = interstellar_assembly_restored
+						}
 					}
-				}
-				any_owned_megastructure = {
-					OR = {
-						is_megastructure_type = mega_shipyard_3
-						is_megastructure_type = mega_shipyard_restored
+					any_owned_megastructure = {
+						OR = {
+							is_megastructure_type = mega_shipyard_3
+							is_megastructure_type = mega_shipyard_restored
+						}
 					}
-				}
-				any_owned_megastructure = {
-					OR = {
-						is_megastructure_type = quantum_catapult_3
-						is_megastructure_type = quantum_catapult_restored
-						is_megastructure_type = quantum_catapult_improved_slingshot
+					any_owned_megastructure = {
+						OR = {
+							is_megastructure_type = quantum_catapult_3
+							is_megastructure_type = quantum_catapult_restored
+							is_megastructure_type = quantum_catapult_improved_slingshot
+						}
 					}
 				}
 			}
@@ -2013,6 +2015,26 @@ country_event = {
 				remove_trait = leader_trait_frog_bless_3
 			}
 			add_trait = leader_trait_sanae_complete
+			if = {
+				limit = {
+					has_trait = leader_trait_regeneration
+				}
+				remove_trait = leader_trait_regeneration
+			}
+			if = {
+				limit = {
+					has_trait = leader_trait_regeneration_2
+				}
+				remove_trait = leader_trait_regeneration_2
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_trait = leader_trait_regeneration_3
+					}
+				}
+				remove_trait = leader_trait_regeneration_3
+			}
 		}
 	}
 	after = {
@@ -2034,6 +2056,7 @@ country_event = {
 		country_event = { id = touhou_paragon_mission.40306 days = 1 random = 30 }
 		country_event = { id = touhou_paragon_mission.40307 days = 1 random = 30 }
 		country_event = { id = touhou_paragon_mission.40308 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40309 days = 1 random = 30 }
 		country_event = { id = touhou_paragon_mission.40310 days = 1 random = 30 }
 		country_event = { id = touhou_paragon_mission.40311 days = 1 random = 30 }
 		country_event = { id = touhou_paragon_mission.40312 days = 1 random = 30 }
