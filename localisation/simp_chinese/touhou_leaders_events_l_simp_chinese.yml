@@ -523,6 +523,8 @@
  touhou_paragon_mission.40301.name:0 "早苗小姐的奇迹☆修行"
  touhou_paragon_mission.40301.desc:0 "作为守矢二柱神的风祝，东风谷早苗的成长被寄予厚望。她身上所背负的，不仅仅是两位神明的期许，朋友们的认可，还有她自己对梦想的追逐。\n野心勃勃的早苗小姐准备从治国之道、军法韬略、技术革新和信仰收集四个方面来提升自己，一起来见证早苗的成长吧！\n（你可以在情报日志中查看当前任务进度与预期奖励）"
  touhou_paragon_mission.40301.a:0 "这也太简单了，赶紧端上来罢！"
+ touhou_paragon_mission.40301.b:0 "（面露难色）"
+ touhou_paragon_mission.40301.b.tooltip:0 "放弃§Y早苗的风祝修行§!事件链，以及其带来的丰富奖励与永生效果。"
  touhou_paragon_mission.40302.name:0 "早苗的风祝修行：治国之道"
  touhou_paragon_mission.40302.desc:0 "早苗完成了一次关于治国之道的修行！\n\n本次修行奖励：3个月产量的£food£粮食；6个月产量的£unity£凝聚力。\n\n一心一意的早苗小姐已经迫不及待地想要接受下一份考验了。"
  touhou_paragon_mission.40302.a:0 "小朋友们不要浪费粮食哦"
