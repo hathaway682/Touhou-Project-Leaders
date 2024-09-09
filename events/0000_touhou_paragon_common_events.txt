@@ -1013,10 +1013,12 @@ leader_event = {
 			exists = capital_scope
 			 NOT = {
 				any_owned_planet = {
-					has_deposit = d_hakurei_shrine
-					has_deposit = d_hakurei_shrine_large
-					has_deposit = d_hakurei_shrine_imperial
-					has_deposit = d_hakurei_shrine_psionic
+					OR = {
+						has_deposit = d_hakurei_shrine
+						has_deposit = d_hakurei_shrine_large
+						has_deposit = d_hakurei_shrine_imperial
+						has_deposit = d_hakurei_shrine_psionic
+					}
 				}
 			}
 		}
