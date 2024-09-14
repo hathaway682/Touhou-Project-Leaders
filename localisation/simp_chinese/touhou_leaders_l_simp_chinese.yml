@@ -236,7 +236,7 @@
  touhou_paragon.40300.hire_custom_tooltip:0 "§Y$NAME_Sanae$§!作为一名§H领袖§!加入了我们的帝国。"
 
  leader_trait_miracle:0 "引发奇迹程度的能力"
- leader_trait_miracle_effect:0 "将§Y官僚§!建筑替换为§Y寺庙§!，允许在国内建造£building£ §Y守矢分社§!。允许使用§Y灰色奇术§!法令，以消耗凝聚力为代价在国内生成一个随机的§Y异常现象§!或触发一个稀有的§Y殖民地事件§!。\n\n$SECTOR_EFFECTS_TXT$：\n$t$可以在所管辖星系使用特殊的§c奇迹§!决议。\n\n$FLEET_EFFECTS_TXT$：\n$t$太空战斗开始时：\n$tt$将§B穿透现实§!以为星系内所有友方舰队提供§Y60§!天的随机§G战斗优势§!。\n\n$ARMY_EFFECTS_TXT$：\n$t$地面战斗开始时：\n$tt$星球上每个£pop£§Y唯心主义人口§!都会产生§Y2§!队§Y守矢狂热者§!部队加入战斗，若该人口拥有§M灵能§!，将会产生更强的§Y守矢神选者§!。"
+ leader_trait_miracle_effect:0 "\n将§Y官僚§!建筑替换为§Y寺庙§!，允许在国内建造£building£ §Y守矢分社§!，通过星球决议，£building£§Y守矢分社§!可以在吸引/排斥。不干预风暴之间切换。\n允许使用§Y灰色奇术§!法令，以消耗凝聚力为代价在国内生成一个随机的§Y异常现象§!或触发一个稀有的§Y殖民地事件§!。\n允许科研船操纵恒星系内的一颗恒星来制造一场§Y宇宙风暴§!，等同于§Y星系天气控制§!飞升的效果。\n\n$SECTOR_EFFECTS_TXT$：\n$t$可以在所管辖星系使用特殊的§c奇迹§!决议。\n\n$FLEET_EFFECTS_TXT$：\n$t$太空战斗开始时：\n$tt$将§B穿透现实§!以为星系内所有友方舰队提供§Y60§!天的随机§G战斗优势§!。\n\n$ARMY_EFFECTS_TXT$：\n$t$地面战斗开始时：\n$tt$星球上每个£pop£§Y唯心主义人口§!都会产生§Y2§!队§Y守矢狂热者§!部队加入战斗，若该人口拥有§M灵能§!，将会产生更强的§Y守矢神选者§!。"
  #$t$勘测宜居星球时：\n$tt$为此宜居星球增加一个随机的§Y星球修正§!或§Y稀有星球特征§!。
  leader_trait_miracle_desc:1 "这位领袖可以通过特定的仪式引发低概率事件。"
  leader_trait_common_sense_killer:0 "常识抹杀者"
@@ -261,8 +261,6 @@
  war_goal_wg_moriya_crusade_desc:0 "这场战争是为了强迫敌人与我们统一意识形态，并可能使其成为我们的附庸。\n\n若本国为唯物主义，将迫使他们信仰唯物主义并添加守矢神道国策。若本国为唯心主义，将迫使他们信仰唯心主义并添加守矢神道国策。\n\n若是以“维持现状”结束战争的话，所占据的恒星系将释放为新的附庸，并统一信仰，前提是他们被释放后必须拥有至少一个行星。\n\n该附庸的初始协议条款由我们的要求臣服战争条款政策决定。"
  wg_moriya_crusade_accept: "§Y[This.GetName]§!被强迫施行与§Y[Root.GetName]§!在唯心主义或唯物主义上相同的主流思潮"
 
- mod_planet_priests_physics_research_produces_add:0 "£job_priest£ £job_death_priest£ $job_priest_plural$产出的£physics£ $PHYSICS$"
- mod_planet_priests_engineering_research_produces_add:0 "£job_priest£ £job_death_priest£ $job_priest_plural$产出的£engineering£ $ENGINEERING$"
  mod_planet_telepaths_physics_research_produces_add:0 "£job_telepath£ $job_telepath_plural$产出的£physics£ $PHYSICS_RESEARCH$"
  mod_planet_telepaths_society_research_produces_add:0 "£job_telepath£ $job_telepath_plural$产出的£society£ $SOCIETY_RESEARCH$"
  mod_planet_telepaths_engineering_research_produces_add:0 "£job_telepath£ $job_telepath_plural$产出的£engineering£ $ENGINEERING_RESEARCH$"
@@ -285,8 +283,21 @@
  building_moriya_shrine_desc: "守矢神社在我们银河建立的一个分社，其中的风祝向我们的人民传播她们结合了古代泛灵论和现代科技的奇怪信仰。"
  holding_building_moriya_shrine: "守矢分社"
  holding_building_moriya_shrine_desc: "守矢神社为我们的附庸建立的一个分社，其中的风祝向我们的人民传播她们结合了古代泛灵论和现代科技的奇怪信仰。"
+ holding_building_moriya_shrine_storm: "通过星球决议，£building£§Y守矢分社§!可以在吸引/排斥。不干预风暴之间切换。"
  building_moriya_shrine_uncapped: "守矢分社"
  building_moriya_shrine_uncapped_desc: "守矢神社在我们银河建立的一个分社，其中的风祝向我们的人民传播她们结合了古代泛灵论和现代科技的信仰。"
+
+ decision_moriya_storm_attraction: "举行呼唤风暴的仪式"
+ decision_moriya_storm_attraction_desc: "司掌风的流动是守矢三神的权能之一，通过适当的仪式（比如让巫女集体在神社门前跳称为“诹访大舞”的舞蹈），守矢神社可以产生吸引宇宙风暴的灵能力场。"
+ decision_moriya_storm_attraction_tooltip: "£building£§Y守矢分社§!将会开始吸引§Y宇宙风暴§!。"
+
+ decision_moriya_storm_repellent: "举行驱逐风暴的仪式"
+ decision_moriya_storm_repellent_desc: "自古以来，人们就会向神明祈求放风调雨顺，通过适当的仪式（比如让巫女集体在神社门前跳称为“诹访大舞”的舞蹈），守矢神社可以产生排斥宇宙风暴的灵能力场。"
+ decision_moriya_storm_repellent_tooltip: "£building£§Y守矢分社§!将会开始排斥§Y宇宙风暴§!。"
+
+ decision_moriya_storm_cancel: "停止干预风暴的仪式"
+ decision_moriya_storm_cancel_desc: "对风暴的干预已经不再必要，相关仪式也应当立刻停止。"
+ decision_moriya_storm_cancel_tooltip: "£building£§Y守矢分社§!不再吸引或排斥§Y宇宙风暴§!。"
 
  decision_miracle_1:0 "守护商业繁荣"
  decision_miracle_1_desc:0 "通过§c东风谷早苗的奇迹§!促进当地$r_trade_value$的增长。"
@@ -372,9 +383,8 @@
  touhou_paragon.40413.desc:0 ""
  touhou_paragon.40413.a:0 "⑨"
  touhou_paragon.40413.b:0 "42"
- touhou_paragon.40413.c:0 "按下按钮“去码头整点薯条"
+ touhou_paragon.40413.c:0 "去码头整点薯条"
  touhou_paragon.40414.desc:0 "这次的文字消失后不再有新的题目出现，而是整个石碑没入地板，留下一个方形的孔洞。忽然，房间里响起了气势磅礴的BGM，孔洞中则发出明亮的光芒，一个背负三对蓝色闪光翅膀、体型酷似人类幼体的身影从中升了出来，在场的所有人都被这奇异的景象惊呆了！"
- touhou_paragon.40414.name.a:0 "按下按钮“⑨”"
 
  touhou_paragon.40420.name:0 "老友重逢"
  touhou_paragon.40420.desc:1 "一个蓝裙绿发的妖精找到了我们，她自称§Y大妖精§!，是§Y[Root.GetName]§!的朋友，因为担心她的安全来寻找她，在得知§Y[Root.GetName]§!在我们这愉快的效力后，她表示愿意和§Y[Root.GetName]§!一起工作，§Y[Root.GetName]§!见到她之后十分高兴，希望两位老朋友的重逢会让她们日后工作更有干劲。"
@@ -851,24 +861,39 @@
 
  leader_trait_wind: "操纵风程度的能力"
  leader_trait_wind_desc: "这位领袖可以操纵星际物质流或制造风暴。"
- leader_trait_wind_effect: "解锁§Y天之八衢§!恒星基地建筑，在星系内产生§Y天狗风暴§!，§R无效化§!所有§Y护盾§!和§Y探测器§!，降低全体§Y命中§!和§Y射速§!，提高星系内我方舰队的§Y舰船速度§!，降低§Y超空间跳跃冷却§!，降低敌方§Y舰船速度§!，降低§Y紧急超光速脱离§!几率，并对该恒星系内的§Y敌对舰船§!造成持续伤害。"
- tengu_storm_caster_desc: "在一个恒星系中制造一场§Y天狗风暴§!：\n阻碍§Y探测器§!\n无效化§Y护盾§!\n降低全体§Y命中§!和§Y射速§!\n提高友方舰队§Y舰船速度§!并降低§Y超空间跳跃冷却§!\n降低敌方舰队§Y舰船速度§!并降低§Y紧急超光速脱离§!几率\n对该恒星系内的§Y敌对舰船§!造成持续伤害"
+ leader_trait_wind_effect: "允许科研船操纵恒星系内的一颗恒星来制造一场§Y宇宙风暴§!，等同于§Y星系天气控制§!飞升的效果。\n\n解锁§Y天之八衢§!恒星基地建筑，在星系内产生§Y天狗风暴§!，§R无效化§!所有§Y护盾§!和§Y探测器§!，降低全体§Y命中§!和§Y射速§!，提高星系内我方舰队的§Y舰船速度§!，降低§Y超空间跳跃冷却§!，降低敌方§Y舰船速度§!，降低§Y紧急超光速脱离§!几率，并对该恒星系内的§Y敌对舰船§!造成持续伤害。"
+ tengu_storm_caster_desc: "在一个恒星系中制造一场§Y小型天狗风暴§!：\n阻碍§Y探测器§!\n无效化§Y护盾§!\n降低全体§Y命中§!和§Y射速§!\n提高友方舰队§Y舰船速度§!并降低§Y超空间跳跃冷却§!\n降低敌方舰队§Y舰船速度§!并降低§Y紧急超光速脱离§!几率\n对该恒星系内的§Y敌对舰船§!造成持续伤害"
  leader_trait_information_war: "开口言是非 秋风吹唇寒"
  leader_trait_information_war_desc: "这位领袖精于选取对自己有利的真相，并利用这些真相获取优势。"
  leader_trait_information_war_effect: "允许在法令界面执行§Y天狗谍报行动§!，只要向任意国家派遣了任意建立间谍网的§Y特使§!且有对应方面的§Y高情报§!，即可花费§Y250§!$r_influence$执行以下行动之一：§E引导思潮§!、§G策划断交§!、§Y煽动叛乱§!、§B窃取科技§!、§R腐蚀士气§!。"
  #leader_trait_quick_reaction_force: "快速反应指挥官"
  #leader_trait_quick_reaction_force_desc: "这位领袖的反应总是快人一步，可以把握瞬息万变的战场局势，并迅速把自己的部队派到需要的地方。"
 
- tengu_storm: "天狗风暴"
+ mod_tengu_storm: "小型天狗风暴"
  NAME_Tengu_Storm: "旋符「红叶扇风」"
- STARBASE_AURA_TENGU_STORM: "天狗风暴"
- aura_starbase_tengu_storm: "天狗风暴"
+ STARBASE_AURA_TENGU_STORM: "小型天狗风暴"
+ aura_starbase_tengu_storm: "小型天狗风暴"
 
  sm_tengo_fortress: "天之八衢"
  sm_tengo_fortress_desc: "这一恒星基地设施使用了§Y射命丸文§!的力量，可以在星际间产生类似风暴的巨型亚空间扰动，对于我方舰队提供强大的助力，同时成为敌方舰队致命的陷阱。"
 
  friendly_aura_starbase_tengu_storm: "风暴加速"
  hostile_aura_starbase_tengu_storm: "风暴乱流"
+
+ tengu_storm: "天狗风暴"
+ tengu_storm_desc: "“天狗风”在地球联合国内的某个地区有着“突然刮起的旋风”的含义，这个词最近被用来形容那些在预测之外突然出现，造成极大危害的宇宙风暴。关于这些风暴出现的原因至今成谜，因此在风暴吹过的地区，总会出现各种各样的关于风暴的流言。当然，这些揣测没有一个是正确的。"
+ tengu_storm_color_tooltip: "§P$tengu_storm$§!"
+ tengu_storm_lore_description: "§L一场极强的$tengu_storm$将威胁该星系，对行星造成破坏。为了生命安全务必寻找庇护！§!"
+
+ tengu_storm_aftermath_modifier: "流言蜚语"
+ tengu_storm_aftermath_modifier_tooltip: ""
+ tengu_storm_aftermath_modifier_severity_desc: "毫无征兆出现又离去的$tengu_storm$，在当地引起了不少的关于风暴成因的流言，奇怪的是，和风暴无关的流言似乎也增加了，所有这一切对当地政府造成了严重的困扰。"
+ tengu_storm_aftermath_modifier_severity_1: "余波：$tengu_storm_aftermath_modifier$"
+ tengu_storm_aftermath_modifier_severity_1_desc: "$particle_storm_aftermath_modifier_severity_desc$"
+ tengu_storm_aftermath_modifier_severity_2: "余波：§H严重§!$tengu_storm_aftermath_modifier$"
+ tengu_storm_aftermath_modifier_severity_2_desc: "$particle_storm_aftermath_modifier_severity_desc$"
+ tengu_storm_aftermath_modifier_severity_3: "余波：§R严重§!$tengu_storm_aftermath_modifier$"
+ tengu_storm_aftermath_modifier_severity_3_desc: "$tengu_storm_aftermath_modifier_severity_desc$"
 
  touhou_paragon_effect.10000.name: "天狗的情报屋"
  touhou_paragon_effect.10000.desc: "我们新闻记者从不编造谎言，只是让真相出现在对自己有利的地方。你手里显然握着一些有趣的真相，那么是那个不幸的国家要承担这些真相的代价呢？"
@@ -2065,7 +2090,7 @@
  CLASS_TIER_TEWI:0 "§r幸运的白兔§!"
 
  touhou_paragon.43200.name:0 "$NAME_Tewi$"
- touhou_paragon.43200.desc:0 ""
+ touhou_paragon.43200.desc:0 "尽管意识到了自己的处境，这只兔子并没有显得惊慌失措，她保持着一贯的巧言令色"
  touhou_paragon.43200.a:0 ""
  touhou_paragon.43200.a.response:0 ""
  touhou_paragon.43200.b:0 ""

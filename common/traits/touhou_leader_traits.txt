@@ -319,6 +319,10 @@ leader_trait_miracle = {
 		COUNCIL = no
 		TIER = none
 	}
+	councilor_modifier = {
+		storm_ship_hull_breaker_mult = -0.5
+		planet_buildings_storm_tech_upkeep_mult = -0.5
+	}
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
@@ -959,8 +963,9 @@ leader_trait_fly = {
 		mult = trigger:has_skill
 	}
 	fleet_modifier = {
+		storm_ship_hull_breaker_mult = -1
 		ship_speed_mult = 0.3
-		ship_evasion_mult = 0.6
+		ship_evasion_mult = 1
 		ship_windup_mult = -0.15
 		ship_winddown_mult = -0.15
 		ship_jumpdrive_cooldown_mult = -0.6
@@ -2208,6 +2213,7 @@ leader_trait_wind = {
 	}
 	leader_class = { official }
 	councilor_modifier = {
+		storm_ship_hull_breaker_mult = -0.5
 		ship_evasion_add = 5
 		ship_emergency_ftl_mult = -0.5
 		ship_disengage_chance_mult = 0.5

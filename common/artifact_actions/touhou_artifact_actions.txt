@@ -153,6 +153,38 @@ artifact_random_secrct_research = {
 					country_event = { id = ancrel.10040 }
 				}
 			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = inetian_research_started
+				}
+				enable_special_project = {
+					name = INETIAN_PROJECTS_04
+					location = event_target:wm_last_storm_shelter
+					owner = root
+				}
+
+				hidden_effect = {
+					set_country_flag = inetian_research_started
+					country_event = { id = ancrel.10040 }
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = adakkaria_research_started
+				}
+				enable_special_project = {
+					name = project_adakkaria_secrets_of
+					location = event_target:adSul_capital
+					owner = root
+				}
+
+				hidden_effect = {
+					set_country_flag = adakkaria_research_started
+					country_event = { id = ancrel.10040 }
+				}
+			}
 		}
 	}
 }

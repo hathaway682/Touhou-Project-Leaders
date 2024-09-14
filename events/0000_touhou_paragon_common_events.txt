@@ -99,6 +99,10 @@ country_event = {
 					assign_leader = last_created_leader
 				}
 			}
+			give_technology = {
+				tech = tech_storm_prediction_1
+				message = no
+			}
 			set_global_flag = sanae
 			set_country_flag = can_build_shirne
 		}

@@ -2693,3 +2693,143 @@ decision_repair_shirne = {
 		weight = 100
 	}
 }
+
+decision_moriya_storm_attraction = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 1
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_miracle
+			}
+		}
+		NOT = {
+			has_planet_flag = moriya_storm_attraction
+		}
+	}
+
+	allow = {
+		has_building = building_moriya_shrine
+	}
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_moriya_storm_attraction_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					has_planet_flag = moriya_storm_repelling
+				}
+				remove_planet_flag = moriya_storm_repelling
+			}
+			set_planet_flag = moriya_storm_attraction
+			create_influence_field_if_needed = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_moriya_storm_repellent = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 1
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_miracle
+			}
+		}
+		NOT = {
+			has_planet_flag = moriya_storm_repelling
+		}
+	}
+
+	allow = {
+		has_building = building_moriya_shrine
+	}
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_moriya_storm_repellent_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					has_planet_flag = moriya_storm_attraction
+				}
+				remove_planet_flag = moriya_storm_attraction
+			}
+			set_planet_flag = moriya_storm_repelling
+			create_influence_field_if_needed = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_moriya_storm_cancel = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 1
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_miracle
+			}
+		}
+		OR = {
+			has_planet_flag = moriya_storm_attraction
+			has_planet_flag = moriya_storm_repelling
+		}
+	}
+
+	allow = {
+		has_building = building_moriya_shrine
+	}
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_moriya_storm_cancel_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					has_planet_flag = moriya_storm_attraction
+				}
+				remove_planet_flag = moriya_storm_attraction
+			}
+			if = {
+				limit = {
+					has_planet_flag = moriya_storm_repelling
+				}
+				remove_planet_flag = moriya_storm_repelling
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

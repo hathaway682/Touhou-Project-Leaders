@@ -83,11 +83,12 @@ system_blocks_sensors = {
 		has_modifier = space_storm
 		has_modifier = zroni_storm
 		has_modifier = queen_scorn_storm
-		has_modifier = tengu_storm
+		has_modifier = mod_tengu_storm
 		has_modifier = bat_swarm
 		has_modifier = red_fog
 		has_star_flag = lcluster
 		has_star_flag = sealed_system
+		has_star_flag = storm_system
 	}
 }
 # Checks if a pop can be assembled
@@ -466,6 +467,18 @@ should_force_decline_species = {
 					is_same_species = root
 					has_job = corpse_battery
 				}
+			}
+		}
+	}
+}
+
+can_country_initiate_storm = {
+	OR = {
+		has_ascension_perk = ap_weather_control
+		any_owned_leader = {
+			OR = {
+				has_trait = leader_trait_wind
+				has_trait = leader_trait_miracle
 			}
 		}
 	}

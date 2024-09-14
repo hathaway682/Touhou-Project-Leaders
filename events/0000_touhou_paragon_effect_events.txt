@@ -3631,7 +3631,7 @@ system_event = {
 
     immediate = {
         add_modifier = {
-            modifier = tengu_storm
+            modifier = mod_tengu_storm
             days = -1
         }
         star = {
@@ -3668,11 +3668,11 @@ system_event = {
     is_triggered_only = yes
 
     trigger = {
-        has_modifier = tengu_storm
+        has_modifier = mod_tengu_storm
     }
 
     immediate = {
-        remove_modifier = tengu_storm
+        remove_modifier = mod_tengu_storm
         every_ambient_object = {
             limit = { has_ambient_object_flag = tengu_storm }
             destroy_ambient_object = this
@@ -7365,7 +7365,7 @@ system_event = {
     is_triggered_only = yes
 
     trigger = {
-        NOT = { has_modifier = tengu_storm }
+        NOT = { has_modifier = mod_tengu_storm }
         starbase = {
             count_starbase_buildings = {
                 type = tengo_fortress
@@ -7377,7 +7377,7 @@ system_event = {
 
     immediate = {
         add_modifier = {
-            modifier = tengu_storm
+            modifier = mod_tengu_storm
             days = -1
         }
         star = {
@@ -7406,11 +7406,11 @@ system_event = {
     is_triggered_only = yes
 
     trigger = {
-        has_modifier = tengu_storm
+        has_modifier = mod_tengu_storm
     }
 
     immediate = {
-        remove_modifier = tengu_storm
+        remove_modifier = mod_tengu_storm
         every_ambient_object = {
             limit = { has_ambient_object_flag = tengu_storm }
             destroy_ambient_object = this

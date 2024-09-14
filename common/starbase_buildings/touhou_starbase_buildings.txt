@@ -38,7 +38,7 @@ tengo_fortress = {
 	on_finished = {
 		if = {
 			limit = {
-				solar_system = { NOT = { has_modifier = tengu_storm } }
+				solar_system = { NOT = { has_modifier = mod_tengu_storm } }
 			}
 			solar_system = {
 				system_event = { id =  touhou_paragon_effect.9900 }
