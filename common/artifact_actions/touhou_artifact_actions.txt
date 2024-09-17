@@ -160,7 +160,7 @@ artifact_random_secrct_research = {
 				}
 				enable_special_project = {
 					name = INETIAN_PROJECTS_04
-					location = event_target:wm_last_storm_shelter
+					location = capital_scope
 					owner = root
 				}
 
@@ -176,7 +176,7 @@ artifact_random_secrct_research = {
 				}
 				enable_special_project = {
 					name = project_adakkaria_secrets_of
-					location = event_target:adSul_capital
+					location = capital_scope
 					owner = root
 				}
 

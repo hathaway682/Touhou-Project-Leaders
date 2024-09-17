@@ -58,6 +58,41 @@ information_war_touhou = {
 	}
 }
 
+rabbit_spy_touhou = {
+	length = 1
+	icon = "GFX_edict_type_policy"
+	potential = {
+		any_owned_leader = {
+			has_trait = leader_trait_rabbit_spy
+		}
+	}
+	resources = {
+		category = edicts_unscaled
+	}
+	allow = {
+		any_owned_leader = {
+			has_trait = leader_trait_rabbit_spy
+		}
+		custom_tooltip = {
+			fail_text = already_open_tewi_trade_ui
+			NOT = {
+				has_country_flag = tewi_trade_ui_open
+			}
+		}
+		custom_tooltip = {
+			fail_text = tewi_trade_cooldown
+			NOT = {
+				has_country_flag = tewi_trade
+			}
+		}
+	}
+	effect = {
+		country_event = {
+			id = touhou_paragon.43220
+		}
+	}
+}
+
 gray_thaumaturgy = {
 	length = 360
 	edict_lock_in_months = 12

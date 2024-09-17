@@ -370,4 +370,112 @@ portrait_groups = {
 			}
 		}
 	}
+	kappa = {
+		default = tpop7
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					tpop7
+					tpop8
+					tpop9
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				portraits = {
+					tpop7
+					tpop8
+					tpop9
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				portraits = {
+					tpop7
+					tpop8
+					tpop9
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					tpop7
+					tpop8
+					tpop9
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					tpop7
+					tpop8
+					tpop9
+				}
+			}
+		}
+	}
+	rabbit = {
+		default = tpop14
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					tpop14
+					tpop15
+					tpop16
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				portraits = {
+					tpop14
+					tpop15
+					tpop16
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				portraits = {
+					tpop14
+					tpop15
+					tpop16
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					tpop14
+					tpop15
+					tpop16
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					tpop14
+					tpop15
+					tpop16
+				}
+			}
+		}
+	}
 }

@@ -2833,3 +2833,69 @@ decision_moriya_storm_cancel = {
 		weight = 0
 	}
 }
+
+decision_rabbit_hole = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 1
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = leader_trait_luck
+			}
+			has_country_flag = unused_rabbit_hole
+		}
+	}
+
+	allow = {
+		any_owned_pop = {
+			has_trait = trait_thl_rabbit
+		}
+		custom_tooltip = {
+			fail_text = already_have_rabbit_hole
+			solar_system = {
+				NOT = {
+					has_star_flag = rabbit_hole
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_rabbit_hole_tooltip
+		hidden_effect = {
+			owner = {
+				remove_country_flag = unused_rabbit_hole
+			}
+			solar_system = {
+				set_star_flag = rabbit_hole
+				event_target:rabbit_hole_system = {
+					prev = {
+						spawn_natural_wormhole = {
+							bypass_type = tewi_rabbithole
+							random_pos = yes
+							orbit_angle = 360
+						}
+					}
+					spawn_natural_wormhole = {
+						bypass_type = tewi_rabbithole
+						random_pos = yes
+						orbit_angle = 360
+					}
+					link_wormholes = prev
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

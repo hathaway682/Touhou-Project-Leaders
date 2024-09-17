@@ -294,6 +294,24 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_tewi_and_reisen"
+		texturefile = "gfx/event_pictures/tewi_and_reisen.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_tewi_moon"
+		texturefile = "gfx/event_pictures/tewi_moon.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_tewi_rabbit"
+		texturefile = "gfx/event_pictures/tewi_rabbit.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 
 	spriteType = {
 		name = "GFX_button_upgrade_ascension_tier_selected"
@@ -304,7 +322,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_message_pop_magic_transed"
 		texturefile = "gfx/interface/icons/message/message_pop_magic_transed.dds"
-		noOfFrames = 3
 	}
 
 	# spriteType = {

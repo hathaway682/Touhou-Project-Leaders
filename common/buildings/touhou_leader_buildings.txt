@@ -51,8 +51,6 @@ building_shrine = {
 					has_deposit = d_dense_jungle
 					has_deposit = d_rugged_woods
 					has_deposit = d_lush_jungle
-					has_deposit = d_great_river
-					has_deposit = d_marvelous_oasis
 					has_deposit = d_migrating_forests
 					has_deposit = d_migrating_forest_reserve
 					has_deposit = d_wandering_forests
@@ -71,7 +69,7 @@ building_shrine = {
 			}
 			set_planet_flag = sizuha_planet
 		}
-		else_if = {
+		if = {
 			limit = {
 				planet_resource_compare = {
 					resource = food
@@ -91,7 +89,7 @@ building_shrine = {
 			}
 			set_planet_flag = minoriko_planet
 		}
-		else_if = {
+		if = {
 			limit = {
 				OR = {
 					any_owned_pop = {

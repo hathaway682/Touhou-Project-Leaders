@@ -78,8 +78,11 @@ kappa_enclave_init = {
 				}
 				modify_species = {
 					species = last_created_species
-					add_trait = trait_ingenious
 					add_trait = trait_kappa_aquatic
+					add_trait = trait_natural_machinist
+					add_trait = trait_intelligent
+					add_trait = trait_natural_engineers
+					add_trait = trait_ingenious
 					add_trait = trait_deviants
 				}
 				last_created_species = {
@@ -90,15 +93,18 @@ kappa_enclave_init = {
 					name = "NAME_TOUHOU_Kappa"
 					class = SALVAGER
 					namelist = HUMAN1
-					portrait = tpop7
+					portrait = kappa
 					traits = {
 						ideal_planet_class = pc_ocean
 					}
 				}
 				modify_species = {
 					species = last_created_species
-					add_trait = trait_ingenious
 					add_trait = trait_kappa_aquatic
+					add_trait = trait_natural_machinist
+					add_trait = trait_intelligent
+					add_trait = trait_natural_engineers
+					add_trait = trait_ingenious
 					add_trait = trait_deviants
 				}
 				last_created_species = {

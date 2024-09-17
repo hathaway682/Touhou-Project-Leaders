@@ -73,7 +73,7 @@ country_event = {
 						LEADER_PORTRAIT = x72
 						CLASS = commander
 						NAME = NAME_Sanae
-						LEVEL = 5
+						level = 4
 						GENDER = female
 						IMMORTAL = no
 						ETHIC = spiritualist
@@ -209,7 +209,7 @@ country_event = {
 				LEADER_PORTRAIT = x150
 				CLASS = commander
 				NAME = NAME_Youmu
-				LEVEL = 5
+				level = 4
 				GENDER = female
 				IMMORTAL = no
 				ETHIC = xenophile
@@ -261,7 +261,7 @@ country_event = {
 				LEADER_PORTRAIT = x6
 				CLASS = commander
 				NAME = NAME_Reisen
-				LEVEL = 5
+				level = 4
 				GENDER = female
 				IMMORTAL = no
 				ETHIC = pacifist
@@ -690,6 +690,14 @@ country_event = {
 					leader_age = 20
 				}
 			}
+			random_owned_leader = {
+				limit = {
+					has_trait = leader_trait_memory
+				}
+				leader_event = {
+					id = touhou_paragon.42410
+				}
+			}
 		}
 		if = {
 			limit = {
@@ -713,6 +721,34 @@ country_event = {
 				}
 				leader_event = {
 					id = touhou_paragon.42411
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				NOT = {
+					has_global_flag = tewi
+				}
+				any_owned_planet = {
+					OR = {
+						has_building = building_hypercomms_forum
+						has_building = building_corporate_forum
+					}
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					OR = {
+						has_building = building_hypercomms_forum
+						has_building = building_corporate_forum
+					}
+				}
+				planet_event = {
+					id = touhou_paragon.43210
 				}
 			}
 		}
@@ -3245,6 +3281,7 @@ country_event = {
 	}
 }
 
+#米丝蒂娅事件链
 planet_event = {
 	id = touhou_paragon.43110
 	title = touhou_paragon.43110.name
@@ -3355,5 +3392,1010 @@ country_event = {
 				modifier = mystia_modifier_2
 			}
 		}
+	}
+}
+
+#因幡帝事件链
+planet_event = {
+	id = touhou_paragon.43210
+	title = touhou_paragon.43210.name
+	desc = touhou_paragon.43210.desc
+	picture = GFX_evt_worrying_signal
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		save_global_event_target_as = tewi_world
+		set_global_flag = tewi
+	}
+
+	#不予调查（放弃因幡帝事件链）
+	option = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+		name = touhou_paragon.43210.a
+		custom_tooltip = touhou_paragon.43210.a.tooltip
+		add_modifier = {
+			modifier = modifier_tewi_world_end
+			days = 3600
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+		name = touhou_paragon.43210.b
+		custom_tooltip = touhou_paragon.43210.a.tooltip
+		add_modifier = {
+			modifier = modifier_tewi_world_end
+			days = 1800
+		}
+	}
+	#调查因幡帝事件链
+	option = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		name = touhou_paragon.43210.c
+		add_modifier = {
+			modifier = modifier_tewi_world_end
+			days = 3600
+		}
+		begin_event_chain = {
+			event_chain = touhou_eientei
+			target = root.owner
+		}
+		enable_special_project = {
+			name = TEWI_SPECIAL_PROJECT
+			owner = root.owner
+			location = root
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		name = touhou_paragon.43210.d
+		add_modifier = {
+			modifier = modifier_tewi_world_end_4
+			days = 3600
+		}
+		begin_event_chain = {
+			event_chain = touhou_eientei
+			target = root.owner
+		}
+		enable_special_project = {
+			name = TEWI_SPECIAL_PROJECT
+			owner = root.owner
+			location = root
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+		name = touhou_paragon.43210.e
+		add_modifier = {
+			modifier = modifier_tewi_world_end_2
+			days = 3600
+		}
+		begin_event_chain = {
+			event_chain = touhou_eientei
+			target = root.owner
+		}
+		enable_special_project = {
+			name = TEWI_SPECIAL_PROJECT
+			owner = root.owner
+			location = root
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				has_ethic = ethic_authoritarian
+			}
+		}
+		name = touhou_paragon.43210.f
+		add_modifier = {
+			modifier = modifier_tewi_world_end_2
+			days = 3600
+		}
+		begin_event_chain = {
+			event_chain = touhou_eientei
+			target = root.owner
+		}
+		enable_special_project = {
+			name = TEWI_SPECIAL_PROJECT
+			owner = root.owner
+			location = root
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		name = touhou_paragon.43210.g
+		add_modifier = {
+			modifier = modifier_tewi_world_end_3
+			days = 3600
+		}
+		begin_event_chain = {
+			event_chain = touhou_eientei
+			target = root.owner
+		}
+		enable_special_project = {
+			name = TEWI_SPECIAL_PROJECT
+			owner = root.owner
+			location = root
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		name = touhou_paragon.43210.h
+		add_modifier = {
+			modifier = modifier_tewi_world_end
+			days = 10800
+		}
+		owner = {
+			add_modifier = {
+				modifier = modifier_tewi_world_end_5
+				days = 10800
+			}
+		}
+		begin_event_chain = {
+			event_chain = touhou_eientei
+			target = root.owner
+		}
+		enable_special_project = {
+			name = TEWI_SPECIAL_PROJECT
+			owner = root.owner
+			location = root
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43211
+	title = touhou_paragon.43211.name
+	desc = touhou_paragon.43211.desc
+	picture = GFX_evt_tewi_rabbit
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43211.a
+		country_event = {
+			id = touhou_paragon.43212
+			days = 30
+			random = 330
+		}
+		hidden_effect = {
+			event_target:tewi_world = {
+				create_species = {
+					name = "NAME_Rabbit"
+					plural = "NAME_Rabbit_pl"
+					class = MAM
+					namelist = random_class
+					portrait = rabbit
+					traits = {
+						trait = trait_pc_continental_preference
+						trait = trait_thl_rabbit
+						trait = trait_extremely_adaptive
+						trait = trait_charismatic
+						trait = trait_communal
+						trait = trait_thrifty
+						trait = trait_weak
+						trait = trait_fleeting
+					}
+					effect = {
+						save_global_event_target_as = rabbit_species
+					}
+				}
+				while = {
+					count = 2
+					create_pop = {
+						species = event_target:rabbit_species
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43212
+	title = touhou_paragon.43212.name
+	desc = touhou_paragon.43212.desc
+	picture = GFX_evt_tewi_and_reisen
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43212.a
+		country_event = {
+			id = touhou_paragon.43213
+			days = 30
+			random = 330
+		}
+		create_point_of_interest = {
+			id = reisen_data
+			name = reisen_data
+			desc = reisen_data_desc
+			event_chain = touhou_eientei
+			category = reisen_data_cat
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43213
+	title = touhou_paragon.43213.name
+	desc = touhou_paragon.43213.desc
+	picture = GFX_evt_tewi_moon
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43213.a
+		country_event = {
+			id = touhou_paragon.43200
+		}
+		hidden_effect = {
+			every_owned_planet = {
+				if = {
+					limit = {
+						has_modifier = modifier_tewi_world_end
+					}
+					remove_modifier = modifier_tewi_world_end
+				}
+				if = {
+					limit = {
+						has_modifier = modifier_tewi_world_end_2
+					}
+					remove_modifier = modifier_tewi_world_end_2
+				}
+				if = {
+					limit = {
+						has_modifier = modifier_tewi_world_end_3
+					}
+					remove_modifier = modifier_tewi_world_end_3
+				}
+				if = {
+					limit = {
+						has_modifier = modifier_tewi_world_end_4
+					}
+					remove_modifier = modifier_tewi_world_end_4
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43220
+	title = touhou_paragon.43220.name
+	desc = touhou_paragon.43220.desc
+	diplomatic = yes
+	picture_event_data = {
+		room = root
+		portrait = x9
+		planet_background = root.capital_scope
+		graphical_culture =root
+		city_level = root
+	}
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = tewi_trade_ui_open
+		if = {
+			limit = {
+				NOT = {
+					is_variable_set = tewi_trade_times
+				}
+			}
+			set_variable = {
+				which = tewi_trade_times
+				value = 0
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon.43220.a
+		country_event = {
+			id = touhou_paragon.43221
+		}
+	}
+	option = {
+		name = touhou_paragon.43220.b
+		response_text = touhou_paragon.43220.b.responce
+	}
+	after = {
+		remove_country_flag = tewi_trade_ui_open
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43221
+	title = touhou_paragon.43221.name
+	desc = touhou_paragon.43221.desc
+	diplomatic = yes
+	picture_event_data = {
+		room = root
+		portrait = x9
+		planet_background = root.capital_scope
+		graphical_culture = root
+		city_level = root
+	}
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = tewi_trade_ui_open
+		random_playable_country = {
+			weights = {
+				base = 0
+				add = trigger:num_owned_planets
+			}
+			limit = {
+				has_communications = root
+			}
+			save_event_target_as = target_country_1
+			set_country_flag = tewi_target_country
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_communications = root
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+			}
+			random_playable_country = {
+				weights = {
+					base = 0
+					add = trigger:num_commercial_pacts
+					add = trigger:num_defensive_pacts
+					add = trigger:num_migration_pacts
+					add = trigger:num_non_aggression_pacts
+					add = trigger:num_research_agreements
+				}
+				limit = {
+					root = {
+					has_communications = prev
+				}
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+				save_event_target_as = target_country_2
+				set_country_flag = tewi_target_country
+			}
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_communications = root
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+			}
+			random_playable_country = {
+				weights = {
+					base = 0
+					add = trigger:num_pops
+					add = trigger:trade_income
+				}
+				limit = {
+					has_communications = root
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+				save_event_target_as = target_country_3
+				set_country_flag = tewi_target_country
+			}
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_communications = root
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+			}
+			random_playable_country = {
+				weights = {
+					base = 0
+					add = trigger:num_researched_techs
+				}
+				limit = {
+					has_communications = root
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+				save_event_target_as = target_country_4
+				set_country_flag = tewi_target_country
+			}
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_communications = root
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+			}
+			random_playable_country = {
+				weights = {
+					base = 0
+					add = trigger:fleet_power
+				}
+				limit = {
+					has_communications = root
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+				save_event_target_as = target_country_5
+				set_country_flag = tewi_target_country
+			}
+		}
+		random_list = {
+			5 = {
+				modifier = {
+					mult = 0
+					NOT = {
+						any_country = {
+							has_communications = root
+							NOR = {
+								has_country_flag = tewi_target_country
+								has_country_flag = rabbit_hole
+							}
+						}
+					}
+				}
+				modifier = {
+					mult = 0
+					has_country_flag = unused_rabbit_hole
+				}
+				random_playable_country = {
+					limit = {
+						has_communications = root
+						NOR = {
+							has_country_flag = tewi_target_country
+							has_country_flag = rabbit_hole
+						}
+					}
+					save_global_event_target_as = rabbit_hole_country
+					capital_star = {
+						solar_system = {
+							save_global_event_target_as = rabbit_hole_system
+						}
+					}
+					set_country_flag = tewi_target_country
+					set_country_flag = rabbit_hole
+				}
+				set_country_flag = sell_rabbit_hole
+			}
+			5 = {
+				modifier = {
+					mult = 0
+					NOT = {
+						any_country = {
+							is_country_type = guardian_dragon
+							NOT = { has_communications = root }
+							num_fleets > 0
+							any_controlled_fleet = {
+								exists = solar_system
+								solar_system = {
+									has_star_flag = guardian
+									is_curator_guardian_poi = no
+								}
+							}
+						}
+					}
+				}
+				set_country_flag = sell_dragon_poi
+			}
+			5 = {
+				modifier = {
+					mult = 0
+					NOT = {
+						has_country_flag = encountered_first_lgate
+						NOT = { has_country_flag = completed_lcluster_chain }
+						NOT = { has_global_flag = l_cluster_opened }
+						has_distar = yes
+					}
+				}
+				set_country_flag = sell_lgate_clue
+			}
+			5 = {
+				modifier = {
+					mult = 0
+					NOR = {
+						AND = {
+							has_event_chain = "vultaum_chain"
+							any_system_within_border = {
+								has_star_flag = precursor_1
+							}
+							NOT = {
+								has_completed_event_chain_counter = {
+									event_chain = vultaum_chain
+									counter = vultaum_artifacts
+								}
+							}
+						}
+						AND = {
+							has_event_chain = "yuht_chain"
+							any_system_within_border = {
+								has_star_flag = precursor_2
+							}
+							NOT = {
+								has_completed_event_chain_counter = {
+									event_chain = yuht_chain
+									counter = yuht_artifacts
+								}
+							}
+						}
+						AND = {
+							has_event_chain = "first_league_chain"
+							any_system_within_border = {
+								has_star_flag = precursor_3
+							}
+							NOT = {
+								has_completed_event_chain_counter = {
+									event_chain = first_league_chain
+									counter = first_league_artifacts
+								}
+							}
+						}
+						AND = {
+							has_event_chain = "irassian_chain"
+							any_system_within_border = {
+								has_star_flag = precursor_4
+							}
+							NOT = {
+								has_completed_event_chain_counter = {
+									event_chain = irassian_chain
+									counter = irassian_artifacts
+								}
+							}
+						}
+						AND = {
+							has_event_chain = "cybrex_chain"
+							any_system_within_border = {
+								has_star_flag = precursor_5
+							}
+							NOT = {
+								has_completed_event_chain_counter = {
+									event_chain = cybrex_chain
+									counter = cybrex_artifacts
+								}
+							}
+						}
+					}
+				}
+				set_country_flag = sell_precursor_clue
+			}
+			0 = {
+				modifier = {
+					add = tewi_trade_times
+				}
+				modifier = {
+					mult = 0
+					any_owned_leader = {
+						has_trait = leader_trait_wave_length
+					}
+				}
+				modifier = {
+					mult = 0
+					has_global_flag = reisen
+				}
+				modifier = {
+					mult = 0
+					has_country_flag = dismissed_reisen
+				}
+				set_country_flag = sell_reisen
+			}
+		}
+	}
+	option = {
+		trigger = {
+			exists = event_target:target_country_1
+		}
+		allow = {
+			has_resource = { type = energy amount > 1000 }
+		}
+		name = touhou_paragon.43221.a
+		add_resource = {
+			energy = -1000
+		}
+		add_intel_report = {
+			category = government
+			level = 4
+			days = 720
+			who = event_target:target_country_1
+		}
+		hidden_effect = {
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+	}
+	option = {
+		trigger = {
+			exists = event_target:target_country_2
+		}
+		allow = {
+			has_resource = { type = energy amount > 1500 }
+		}
+		name = touhou_paragon.43221.b
+		add_resource = {
+			energy = -1500
+		}
+		add_intel_report = {
+			category = diplomacy
+			level = 4
+			days = 720
+			who = event_target:target_country_2
+		}
+		hidden_effect = {
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+	}
+	option = {
+		trigger = {
+			exists = event_target:target_country_3
+		}
+		allow = {
+			has_resource = { type = energy amount > 2000 }
+		}
+		name = touhou_paragon.43221.c
+		add_resource = {
+			energy = -2000
+		}
+		add_intel_report = {
+			category = economy
+			level = 4
+			days = 720
+			who = event_target:target_country_3
+		}
+		hidden_effect = {
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+	}
+	option = {
+		trigger = {
+			exists = event_target:target_country_4
+		}
+		allow = {
+			has_resource = { type = energy amount > 2500 }
+		}
+		name = touhou_paragon.43221.d
+		add_resource = {
+			energy = -2500
+		}
+		add_intel_report = {
+			category = technology
+			level = 4
+			days = 720
+			who = event_target:target_country_4
+		}
+		hidden_effect = {
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+	}
+	option = {
+		trigger = {
+			exists = event_target:target_country_5
+		}
+		allow = {
+			has_resource = { type = energy amount > 3000 }
+		}
+		name = touhou_paragon.43221.e
+		add_resource = {
+			energy = -3000
+		}
+		add_intel_report = {
+			category = military
+			level = 4
+			days = 720
+			who = event_target:target_country_5
+		}
+		hidden_effect = {
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+		response_text = touhou_paragon.43221.a.responce
+	}
+	option = {
+		trigger = {
+			has_country_flag = sell_rabbit_hole
+			exists = event_target:rabbit_hole_country
+		}
+		name = touhou_paragon.43221.f
+		allow = {
+			has_resource = { type = energy amount > 10000 }
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			add_seen_bypass_type = tewi_rabbithole
+			set_country_flag = unused_rabbit_hole
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+		response_text = touhou_paragon.43221.f.responce
+	}
+	option = {
+		trigger = {
+			has_country_flag = sell_dragon_poi
+		}
+		name = touhou_paragon.43221.g
+		allow = {
+			has_resource = { type = energy amount > 10000 }
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			capital_scope = {
+				closest_system = {
+					min_steps = 0
+					max_steps = 999
+					limit = {
+						has_star_flag = guardian
+						is_curator_guardian_poi = no
+						any_fleet_in_system = {
+							exists = owner
+							owner = {
+								is_country_type = guardian_dragon
+								NOT = { has_communications = root }
+							}
+						}
+					}
+					random_fleet_in_system = {
+						limit = {
+							exists = owner
+							owner = {
+								is_country_type = guardian_dragon
+								NOT = { has_communications = root }
+							}
+						}
+						owner = {
+							create_curator_guardian_poi = {
+								POI = curator_poi_dragon
+							}
+						}
+					}
+				}
+			}
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+		response_text = touhou_paragon.43221.g.responce
+	}
+	option = {
+		trigger = {
+			has_country_flag = sell_precursor_clue
+		}
+		name = touhou_paragon.43221.h
+		allow = {
+			has_resource = { type = energy amount > 10000 }
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			country_event = { id = precursor.320 }
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+		response_text = touhou_paragon.43221.h.responce
+	}
+	option = {
+		trigger = {
+			has_country_flag = sell_lgate_clue
+		}
+		name = touhou_paragon.43221.i
+		allow = {
+			has_resource = { type = energy amount > 10000 }
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			generate_lcluster_clue = yes
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+		response_text = touhou_paragon.43221.i.responce
+	}
+	option = {
+		trigger = {
+			has_country_flag = sell_reisen
+		}
+		name = touhou_paragon.43221.reisen
+		allow = {
+			has_resource = { type = energy amount > 53000 }
+		}
+		add_resource = {
+			energy = -53000
+		}
+		country_event = {
+			id = touhou_paragon.40800
+		}
+		hidden_effect = {
+			remove_point_of_interest = reisen_data
+		}
+		response_text = touhou_paragon.43221.reisen.responce
+	}
+	option = {
+		name = touhou_paragon.43221.z
+		response_text = touhou_paragon.43221.z.responce
+	}
+	after = {
+		every_country = {
+			limit = {
+				has_country_flag = tewi_target_country
+			}
+			remove_country_flag = tewi_target_country
+		}
+		remove_country_flag = sell_rabbit_hole
+		remove_country_flag = sell_dragon_poi
+		remove_country_flag = sell_precursor_clue
+		remove_country_flag = sell_lgate_clue
+		remove_country_flag = sell_reisen
+		remove_country_flag = tewi_trade_ui_open
 	}
 }

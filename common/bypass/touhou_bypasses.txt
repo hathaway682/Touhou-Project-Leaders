@@ -47,8 +47,8 @@ reimu_gateway = {
 	ftl_multiplier = 0			# 0 means instant
 	icon_frame = 25
 	remember_instances = no	# whether countries remember meeting a specific instance of that type, or if they just remember seeing the type in general
-	galactic_map_tooltip_header=REIMU_GATEWAY_GALACTIC
-	galactic_map_tooltip_desc=REIMU_GATEWAY_GALACTIC_DESC
+	galactic_map_tooltip_header= REIMU_GATEWAY_GALACTIC
+	galactic_map_tooltip_desc= REIMU_GATEWAY_GALACTIC_DESC
 	connection_type = any_other
 	animation_time = 1
 	ftl_ship_effect = "gateway_ftl_ship_effect_entity"
@@ -61,4 +61,34 @@ reimu_gateway = {
 	}
 
 	on_action = "on_entering_reimu_gateway"
+}
+
+tewi_rabbithole = {
+	name = TEWI_RABBITHOLE_GALACTIC
+	is_pathfind = yes
+	uses_action = no
+	requires_exploration = yes
+	always_active = yes
+	windup_time = 0
+	winddown_time = 0
+	ftl_multiplier = 0
+	extends_sensors = yes
+	icon_frame = 12
+	remember_instances = yes
+	animation_time = 1
+	galactic_map_tooltip_header = TEWI_RABBITHOLE_GALACTIC
+	galactic_map_tooltip_desc = TEWI_RABBITHOLE_GALACTIC_DESC
+	connection_type = one_to_one
+	ftl_ship_effect = "wormhole_ftl_ship_effect_entity"
+	ftl_bypass_effect = "wormhole_ftl_bypass_effect_entity"
+	can_bypass_be_locked = yes
+
+	prerequisites = {
+		tech_wormhole_stabilization
+	}
+
+	potential = {
+		always = yes
+	}
+	on_action = "on_entering_wormhole"
 }

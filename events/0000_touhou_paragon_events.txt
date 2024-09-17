@@ -316,12 +316,6 @@ country_event = { # ethic leader lottery machine
 				}
 				ethic_leader_hire_event = { LEADER_ID = marisa EVENT_ID = touhou_paragon.40700 }
 			}
-			0 = { # 铃仙
-				modifier = {
-					add = value:touhou_leader_randomizer|ETHIC|pacifist|ETHIC_NEG|militarist|LEADER_ID|reisen|
-				}
-				ethic_leader_hire_event = { LEADER_ID = reisen EVENT_ID = touhou_paragon.40800 }
-			}
 			0 = { # 妖梦
 				modifier = {
 					add = value:touhou_leader_randomizer|ETHIC|xenophile|ETHIC_NEG|xenophobe|LEADER_ID|youmu|
@@ -4190,6 +4184,105 @@ country_event = { # 雏
 		hidden_effect = {
 			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_mystia
+			}
+		}
+	}
+}
+
+country_event = { # 雏
+	id = touhou_paragon.43200
+	title = "touhou_paragon.43200.name"
+	desc = "touhou_paragon.43200.desc"
+	show_sound = event_psionic
+	is_triggered_only = yes
+
+	picture = GFX_leader_recruitment_bg_renowned
+	auto_opens = no
+	event_window_type = leader_recruit
+	notification_event_icon = "GFX_message_touhou_leaders"
+
+	immediate = {
+		ethic_leader_creator = {
+			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+			LEADER_PORTRAIT = x9
+			CLASS = official
+			NAME = NAME_Tewi
+			LEVEL = 4
+			GENDER = female
+			IMMORTAL = no
+			ETHIC = xenophile
+			DESC = tewi1
+			CATCH_PHRASE =  tewi1_catch_phrase
+		}
+		last_created_leader = { #5
+			add_trait = subclass_official_governor
+			add_trait = leader_trait_totalitarian
+			add_trait = leader_trait_luck
+			add_trait = leader_trait_rabbit_leader
+			add_trait = leader_trait_rabbit_spy
+			add_trait = leader_trait_consul_general
+			add_trait = leader_trait_trade_focus
+			add_trait = leader_trait_embezzler
+			add_trait = leader_trait_insider_trading
+		}
+	}
+
+	picture_event_data = {
+		portrait = event_target:ethic_leader
+		room = ethic_spaceship_room
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			remove_global_flag = tewi # Put this leader back into the pool, so player could still get him
+			ethic_leader_kill_effect = yes
+			set_country_flag = dismissed_tewi
+		}
+	}
+	option = {
+		name = touhou_paragon.43200.a
+		response_text = touhou_paragon.43200.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43200.b
+		response_text = touhou_paragon.43200.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43200.c
+		response_text = touhou_paragon.43200.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43200.d
+		response_text = touhou_paragon.43200.d.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43200.e
+		response_text = touhou_paragon.43200.e.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43200.f
+		response_text = touhou_paragon.43200.f.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.43200.g
+		response_text = touhou_paragon.43200.g.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = HIRE
+		tag = hire_leader
+		custom_tooltip = touhou_paragon.43200.hire_custom_tooltip
+		hidden_effect = {
+			ethic_leader_hire_effect = {
+				GLOBAL_EVENT_TARGET = renowned_tewi
 			}
 		}
 	}

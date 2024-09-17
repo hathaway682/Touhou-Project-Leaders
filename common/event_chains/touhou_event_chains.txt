@@ -7,7 +7,7 @@
 # event_chain_chainnkey_desc, a description to show in the situation log.
 
 touhou_sanae_mission_chain = {
-	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_sanae_mission
 	counter = {
 		touhou_sanae_mission_counter = {
@@ -56,13 +56,7 @@ ruined_shrine = {
 	picture = GFX_evt_ruined_shrine
 }
 
-spread_the_moriya_faith = {
-	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
-	picture = GFX_evt_ruined_shrine
-	counter = {
-		moriya_faith_pops = { }
-		moriya_faith_goal = {
-			max = 1000
-		}
-	}
+touhou_eientei = {
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	picture = GFX_evt_eientei
 }
