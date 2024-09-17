@@ -1058,7 +1058,7 @@ leader_trait_tracker = {
 		ICON = GFX_leader_artillery_specialization
 		RARITY = veteran
 		COUNCIL = no
-		TIER = 1
+		TIER = none
 	}
 	fleet_modifier = {
 		ship_tracking_add = 100
@@ -4804,7 +4804,7 @@ leader_trait_rabbit_leader_3 = {
 		ICON = GFX_leader_trait_imperial_heir
 		RARITY = veteran
 		COUNCIL = no
-		TIER = 2
+		TIER = 3
 	}
 	planet_modifier = {
 		planet_rabbit_produces_mult = 0.6
