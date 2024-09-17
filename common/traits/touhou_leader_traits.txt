@@ -222,6 +222,9 @@ leader_trait_crimson_sword_2 = {
 		army_morale = 0.5
 	}
 	leader_class = { commander }
+	selectable_weight = {
+		weight = 1000
+	}
 }
 
 leader_trait_crimson_sword_3 = {
@@ -242,6 +245,9 @@ leader_trait_crimson_sword_3 = {
 		army_morale = 0.75
 	}
 	leader_class = { commander }
+	selectable_weight = {
+		weight = 1000
+	}
 }
 
 leader_trait_density = {
