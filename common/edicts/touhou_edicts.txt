@@ -1634,6 +1634,18 @@ reset_touhou_leader_portrait = {
 		}
 		random_owned_leader = {
 			limit = {
+				has_trait = leader_trait_song
+			}
+			change_leader_portrait = x3
+		}
+		random_owned_leader = {
+			limit = {
+				has_trait = leader_trait_luck
+			}
+			change_leader_portrait = x9
+		}
+		random_owned_leader = {
+			limit = {
 				has_leader_flag = daiyousei_leader
 			}
 			change_leader_portrait = x87

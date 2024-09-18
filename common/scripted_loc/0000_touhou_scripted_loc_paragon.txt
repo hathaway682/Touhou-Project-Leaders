@@ -228,6 +228,12 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			has_trait = leader_trait_luck
+		}
+		localization_key = CLASS_TIER_TEWI
+	}
+	text = {
+		trigger = {
 			has_leader_flag = renowned_leader
 			NOT = { has_touhou_leader_trait = yes }
 		}

@@ -88,6 +88,7 @@ has_touhou_leader_trait = {
 		has_trait = leader_trait_harvest
 		has_trait = leader_trait_jinx
 		has_trait = leader_trait_song
+		has_trait = leader_trait_luck
 	}
 }
 
@@ -121,6 +122,7 @@ has_touhou_supernatural_trait = {
 		has_trait = leader_trait_harvest
 		has_trait = leader_trait_jinx
 		has_trait = leader_trait_song
+		has_trait = leader_trait_luck
 	}
 }
 
@@ -606,13 +608,5 @@ dolls_assembly_trigger = {
 				}
 			}
 		}
-	}
-}
-
-has_moriya_faith_modifier = {
-	OR = {
-		has_modifier = moriya_faith_0
-		has_modifier = moriya_faith_1
-		has_modifier = moriya_faith_2
 	}
 }
