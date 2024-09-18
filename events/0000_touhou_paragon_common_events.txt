@@ -640,8 +640,8 @@ country_event = {
 							}
 							modifier = {
 								mult = 0
-								OR = {
-									owner = {
+								owner = {
+									OR = {
 										has_civic = civic_hakurei_shinto
 										has_civic = civic_hakurei_shinto_corp
 									}
