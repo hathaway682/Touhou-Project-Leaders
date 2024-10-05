@@ -1385,7 +1385,7 @@ leader_trait_great_magician = {
 		CLASS = leader
 		ICON = GFX_leader_trait_whisperers_chosen
 		RARITY = common
-		COUNCIL  no
+		COUNCIL = no
 		TIER = none
 	}
 	self_modifier = {

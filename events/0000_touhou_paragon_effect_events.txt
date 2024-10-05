@@ -3703,8 +3703,11 @@ country_event = {
         from = {
             is_pool_leader = no
             NOT = { leader_class = envoy }
-            NOT = {
+            NOR = {
+                has_trait = leader_trait_governor_gray
                 has_trait = leader_trait_death_dealer
+                has_trait = leader_trait_memory
+                has_trait = leader_trait_time
             }
             OR = {
                 NOR = {
@@ -10150,6 +10153,7 @@ country_event = {
                 target = event_target:touhou_dead_sakuya_clone
             }
             last_created_leader = {
+                remove_trait = leader_trait_regeneration
                 add_trait = leader_trait_regeneration_2
                 add_trait = leader_trait_body_and_spirit
             }
@@ -10225,6 +10229,7 @@ country_event = {
                 }
             }
             last_created_leader = {
+                remove_trait = leader_trait_regeneration
                 add_trait = leader_trait_regeneration_2
                 add_trait = leader_trait_cyborg
             }
@@ -10239,6 +10244,7 @@ country_event = {
                 }
             }
             last_created_leader = {
+                remove_trait = leader_trait_regeneration
                 add_trait = leader_trait_regeneration_2
                 add_trait = leader_trait_synthetic
             }
@@ -10287,6 +10293,7 @@ country_event = {
             target = event_target:touhou_dead_sakuya_clone
         }
         last_created_leader = {
+            remove_trait = leader_trait_regeneration
             add_trait = leader_trait_regeneration_2
             add_trait = leader_trait_the_incorruptible
         }

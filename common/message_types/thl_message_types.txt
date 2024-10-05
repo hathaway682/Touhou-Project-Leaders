@@ -34,3 +34,16 @@ message_type = {
 
 	category = leaders
 }
+
+message_type = {
+	key = "MORIYA_STORM_AFTERMATH"
+	icon = "GFX_toast_shroud_storm_aftermath"
+
+	name = "MESSAGE_SHROUD_STORM_AFTERMATH_TITLE"
+	sound = "notification"
+	ping = "arrow_notification_yellow"
+
+	default_toast = yes
+
+	category = cosmic_storm
+}

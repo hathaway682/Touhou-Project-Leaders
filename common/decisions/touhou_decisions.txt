@@ -28,6 +28,15 @@ decision_remove_unstable_tectonics = {
 	allow = {
 		OR = {
 			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_earthquake
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
 				exists = leader
 				leader = {
 					has_trait = leader_trait_earthquake
@@ -111,6 +120,15 @@ decision_add_unstable_tectonics = {
 
 	allow = {
 		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_earthquake
+						is_councilor = yes
+					}
+				}
+			}
 			AND = {
 				exists = leader
 				leader = {
@@ -437,6 +455,15 @@ decision_subterranean_district = {
 	allow = {
 		OR = {
 			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_subterran_manager
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
 				exists = leader
 				leader = {
 					has_trait = leader_trait_subterran_manager
@@ -509,6 +536,15 @@ decision_satori_pet = {
 
 	allow = {
 		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_satori_pets
+						is_councilor = yes
+					}
+				}
+			}
 			AND = {
 				exists = leader
 				leader = {
@@ -599,6 +635,15 @@ decision_root_out_crime = {
 
 	allow = {
 		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_trial
+						is_councilor = yes
+					}
+				}
+			}
 			AND = {
 				exists = leader
 				leader = {
@@ -743,6 +788,15 @@ decision_mirror_trial = {
 	allow = {
 		OR = {
 			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_mirror
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
 				exists = leader
 				leader = {
 					has_trait = leader_trait_mirror
@@ -833,6 +887,15 @@ decision_stick_of_repentance = {
 	allow = {
 		OR = {
 			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_mirror
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
 				exists = leader
 				leader = {
 					has_trait = leader_trait_mirror
@@ -915,6 +978,15 @@ decision_summon_devils = {
 
 	allow = {
 		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_summon_devils
+						is_councilor = yes
+					}
+				}
+			}
 			AND = {
 				exists = leader
 				leader = {
@@ -1002,6 +1074,15 @@ decision_summon_devils_large = {
 	allow = {
 		OR = {
 			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_summon_devils
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
 				exists = leader
 				leader = {
 					has_trait = leader_trait_summon_devils
@@ -1087,6 +1168,15 @@ decision_summon_spirit = {
 
 	allow = {
 		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_death
+						is_councilor = yes
+					}
+				}
+			}
 			AND = {
 				exists = leader
 				leader = {
@@ -1224,6 +1314,15 @@ decision_summon_spirit_large = {
 
 	allow = {
 		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_death
+						is_councilor = yes
+					}
+				}
+			}
 			AND = {
 				exists = leader
 				leader = {
@@ -1390,6 +1489,15 @@ decision_trans_spirit = {
 	allow = {
 		OR = {
 			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_death
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
 				exists = leader
 				leader = {
 					has_trait = leader_trait_death
@@ -1517,6 +1625,15 @@ decision_assimilate_spirit = {
 	allow = {
 		OR = {
 			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_death
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
 				exists = leader
 				leader = {
 					has_trait = leader_trait_death
@@ -1641,6 +1758,9 @@ decision_expand_hakurei_shrine = {
 	effect = {
 		remove_deposit = d_hakurei_shrine
 		add_deposit = d_hakurei_shrine_large
+		last_added_deposit = {
+			set_deposit_flag = keep_deposit_on_terraform
+		}
 	}
 
 	ai_weight = {
@@ -1684,6 +1804,9 @@ decision_expand_hakurei_shrine_2 = {
 	effect = {
 		remove_deposit = d_hakurei_shrine_large
 		add_deposit = d_hakurei_shrine_imperial
+		last_added_deposit = {
+			set_deposit_flag = keep_deposit_on_terraform
+		}
 	}
 
 	ai_weight = {
@@ -1708,6 +1831,15 @@ decision_unlock_books = {
 
 	allow = {
 		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_books
+						is_councilor = yes
+					}
+				}
+			}
 			AND = {
 				exists = leader
 				leader = {
@@ -1811,6 +1943,15 @@ decision_nuclear_breath = {
 	allow = {
 		OR = {
 			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_fusion_energy
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
 				exists = leader
 				leader = {
 					has_trait = leader_trait_fusion_energy
@@ -1856,6 +1997,15 @@ decision_miracle_1 = {
 
 	allow = {
 		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_miracle
+						is_councilor = yes
+					}
+				}
+			}
 			AND = {
 				exists = leader
 				leader = {
@@ -1944,6 +2094,15 @@ decision_miracle_2 = {
 	allow = {
 		OR = {
 			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_miracle
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
 				exists = leader
 				leader = {
 					has_trait = leader_trait_miracle
@@ -2030,6 +2189,15 @@ decision_miracle_3 = {
 
 	allow = {
 		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_miracle
+						is_councilor = yes
+					}
+				}
+			}
 			AND = {
 				exists = leader
 				leader = {
@@ -2118,6 +2286,15 @@ decision_miracle_4 = {
 	allow = {
 		OR = {
 			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_miracle
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
 				exists = leader
 				leader = {
 					has_trait = leader_trait_miracle
@@ -2205,6 +2382,15 @@ decision_miracle_5 = {
 	allow = {
 		OR = {
 			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_miracle
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
 				exists = leader
 				leader = {
 					has_trait = leader_trait_miracle
@@ -2291,6 +2477,15 @@ decision_miracle_6 = {
 
 	allow = {
 		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = leader_trait_miracle
+						is_councilor = yes
+					}
+				}
+			}
 			AND = {
 				exists = leader
 				leader = {

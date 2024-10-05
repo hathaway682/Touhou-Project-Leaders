@@ -21,6 +21,9 @@ country_event = {
 			}
 			capital_scope = {
 				add_deposit = d_hakurei_shrine
+				last_added_deposit = {
+					set_deposit_flag = keep_deposit_on_terraform
+				}
 			}
 			civic_leader_creator = {
 				SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
@@ -1068,6 +1071,9 @@ leader_event = {
 		name = touhou_paragon.40610.a
 		owner.capital_scope = {
 			add_deposit = d_hakurei_shrine
+			last_added_deposit = {
+				set_deposit_flag = keep_deposit_on_terraform
+			}
 		}
 	}
 	option = {
@@ -1090,6 +1096,9 @@ leader_event = {
 		}
 		owner.capital_scope = {
 			add_deposit = d_hakurei_shrine_large
+			last_added_deposit = {
+				set_deposit_flag = keep_deposit_on_terraform
+			}
 		}
 		owner = {
 			add_resource = {
@@ -1123,6 +1132,9 @@ leader_event = {
 		custom_tooltip = touhou_paragon.40610.min_god.tooltip
 		owner.capital_scope = {
 			add_deposit = d_hakurei_shrine_large
+			last_added_deposit = {
+				set_deposit_flag = keep_deposit_on_terraform
+			}
 		}
 		owner = {
 			add_resource = {
@@ -1161,6 +1173,9 @@ leader_event = {
 		custom_tooltip = touhou_paragon.40610.min_god.tooltip
 		owner.capital_scope = {
 			add_deposit = d_hakurei_shrine_imperial
+			last_added_deposit = {
+				set_deposit_flag = keep_deposit_on_terraform
+			}
 		}
 		owner = {
 			add_resource = {
@@ -1210,6 +1225,9 @@ leader_event = {
 		custom_tooltip = touhou_paragon.40610.min_god.tooltip
 		owner.capital_scope = {
 			add_deposit = d_hakurei_shrine_psionic
+			last_added_deposit = {
+				set_deposit_flag = keep_deposit_on_terraform
+			}
 		}
 		owner = {
 			add_resource = {
@@ -1282,6 +1300,9 @@ leader_event = {
 		custom_tooltip = touhou_paragon.40610.f.tooltip
 		owner.capital_scope = {
 			add_deposit = d_hakurei_shrine
+			last_added_deposit = {
+				set_deposit_flag = keep_deposit_on_terraform
+			}
 		}
 		owner = {
 			add_resource = {

@@ -2256,64 +2256,189 @@ create_shrine_point_of_interest = {
 	}
 }
 
-speard_moriya_faith = {
+moriya_storm_add = {
+	set_star_flag = moriya_system
+	set_global_flag = cosmic_storm_has_occurred
+
+	inline_script = {
+		script = cosmic_storms/StormVisuals
+		STORM_NAME = "shroud_storm"
+	}
+
 	if = {
 		limit = {
-			any_owned_pop = {
-				is_sapient = yes
-				is_non_sapient_robot = no
-				has_moriya_faith_modifier = no
+			has_owner = yes
+		}
+		owner = {
+			set_country_flag = affected_by_shroud_storm
+		}
+	}
+	moriya_storm_events = yes
+}
+
+moriya_storm_remove = {
+	remove_storm_visuals_effect = yes
+	remove_star_flag = storm_system
+
+	if = {
+		limit = {
+			has_owner = yes
+		}
+		owner = {
+			remove_country_flag = affected_by_shroud_storm
+		}
+	}
+
+	moriya_storm_apply_aftermath_modifier = yes
+	moriya_storm_apply_deposits = yes
+}
+
+moriya_storm_apply_aftermath_modifier = {
+	every_system_planet = {
+		limit = {
+			OR = {
+				is_colonizable = yes
+				is_colony = yes
 			}
 		}
-		random_owned_pop = {
-			weights = {
-				base = 1
-				add = pop_unity_produce
+
+		storm_apply_aftermath_modifier = {
+
+			severity = {
+				modifier = "shroud_storm_aftermath_modifier_severity_1"
+				days = @Severity1Duration
+				chance = {
+					base = @Severity1BaseChance
+					modifier = {
+						factor = 0
+						OR = {
+							has_modifier = "shroud_storm_aftermath_modifier_severity_2"
+							has_modifier = "shroud_storm_aftermath_modifier_severity_3"
+						}
+					}
+					modifier = {
+						factor =  $FactorSev1|1$
+					}
+				}
+
+				effect = {
+					set_timed_planet_flag = {
+						flag = AFFECTED_BY_MORIYA_AFTERMATH
+						days = @Severity1Duration
+					}
+				}
 			}
-			limit = {
-				has_moriya_faith_modifier = no
+
+			severity = {
+				modifier = "shroud_storm_aftermath_modifier_severity_2"
+				days = @Severity2Duration
+				chance = {
+					base = @Severity2BaseChance
+					modifier = {
+						factor = 0
+						has_modifier = "shroud_storm_aftermath_modifier_severity_3"
+					}
+					modifier = {
+						factor =  $FactorSev2|1$
+					}
+				}
+
+				effect = {
+					set_timed_planet_flag = {
+						flag = AFFECTED_BY_MORIYA_AFTERMATH
+						days = @Severity2Duration
+					}
+				}
 			}
-			converse_to_moriya_faith = yes
-			set_pop_flag = converse_2
+
+			severity = {
+				modifier = "shroud_storm_aftermath_modifier_severity_3"
+				days = @Severity3Duration
+				chance = {
+					base = @Severity3BaseChance
+					modifier = {
+						factor =  $FactorSev3|1$
+					}
+				}
+
+				effect = {
+					set_timed_planet_flag = {
+						flag = AFFECTED_BY_MORIYA_AFTERMATH
+						days = @Severity3Duration
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = { is_colony = yes }
+			owner = {
+				create_message = {
+					type = SHROUD_STORM_AFTERMATH
+					localization = MESSAGE_STORM_AFTERMATH_DESC
+					days = @toast_important_message_days
+					target = prev
+					variable = {
+						type = name
+						localization = PLANET
+						scope = prev
+					}
+					custom_toast_content_text = shroud_storm_aftermath_custom_desc
+				}
+			}
 		}
 	}
 }
 
-converse_to_moriya_faith = {
-	if = {
+moriya_storm_events = {
+	random_system_planet = {
 		limit = {
-			has_global_flag = moriya_faith_1
+			NOT = { has_planet_flag = shroud_storm_changed }
+			is_artificial = no
+			is_astral_scar = no
+			is_asteroid = no
+			NOT = { is_planet_class = pc_molten }
+			NOT = { has_modifier = terraforming_candidate }
 		}
-		add_modifier = {
-			modifier = moriya_faith_1
-			days = -1
+		random_list = {
+			80 = {}
+			20 = {
+				planet_event = { id = cstorms.8500 }
+			}
 		}
 	}
-	else_if = {
+}
+
+moriya_storm_apply_deposits = {
+	every_system_planet = {
 		limit = {
-			has_global_flag = moriya_faith_2
+			OR = {
+				is_colonizable = yes
+				is_colony = yes
+			}
+			is_artificial = no
+			NOR = {
+				has_deposit = d_shroud_storm_1_society
+				has_deposit = d_shroud_storm_2_zro
+				has_deposit = d_shroud_storm_3_happy
+			}
 		}
-		add_modifier = {
-			modifier = moriya_faith_2
-			days = -1
-		}
-	}
-	else = {
-		add_modifier = {
-			modifier = moriya_faith_0
-			days = -1
-		}
-	}
-	event_target:moriya_faith_country = {
-		add_event_chain_counter = {
-			event_chain = spread_the_moriya_faith
-			counter = moriya_faith_pops
-			amount = 1
-		}
-		add_event_chain_counter = {
-			event_chain = spread_the_moriya_faith
-			counter = moriya_faith_goal
-			amount = 1
+
+		random_list = {
+			80 = {}
+			20 = {
+				random_list = {
+					30 = { add_deposit = d_shroud_storm_1_society }
+					30 = { add_deposit = d_shroud_storm_2_zro }
+					30 = { add_deposit = d_shroud_storm_3_happy }
+				}
+				if = {
+					limit = {
+						has_owner = yes
+					}
+					planet_event = { id = cstorms.8000 }
+				}
+			}
 		}
 	}
 }
