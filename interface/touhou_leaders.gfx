@@ -312,6 +312,42 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_alice_and_marisa"
+		texturefile = "gfx/event_pictures/alice_and_marisa.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_marisa_cannon"
+		texturefile = "gfx/event_pictures/marisa_cannon.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_marisa_star"
+		texturefile = "gfx/event_pictures/marisa_star.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_marisa_steal"
+		texturefile = "gfx/event_pictures/marisa_steal.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_reimu_grim"
+		texturefile = "gfx/event_pictures/reimu_grim.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_reimu_vs_marisa"
+		texturefile = "gfx/event_pictures/reimu_vs_marisa.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 
 	spriteType = {
 		name = "GFX_button_upgrade_ascension_tier_selected"

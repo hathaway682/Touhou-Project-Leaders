@@ -727,6 +727,55 @@ country_event = {
 				}
 			}
 		}
+		#米丝蒂娅
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = mystia
+					has_country_flag = dismissed_mystia
+				}
+				count_owned_pop = {
+					limit = {
+						OR = {
+							has_job = entertainer
+							has_job = duelist
+						}
+					}
+					count >= 10
+				}
+				any_owned_planet = {
+					OR = {
+						num_assigned_jobs = {
+							job = entertainer
+							value >= 4
+						}
+						num_assigned_jobs = {
+							job = duelist
+							value >= 4
+						}
+					}
+				}
+			}
+			set_global_flag = mystia
+			random_owned_planet = {
+				limit = {
+					OR = {
+						num_assigned_jobs = {
+							job = entertainer
+							value >= 4
+						}
+						num_assigned_jobs = {
+							job = duelist
+							value >= 4
+						}
+					}
+				}
+				planet_event = {
+					id = touhou_paragon.43110
+				}
+			}
+		}
+		#因幡帝
 		if = {
 			limit = {
 				NOR = {
@@ -753,6 +802,18 @@ country_event = {
 				planet_event = {
 					id = touhou_paragon.43210
 				}
+			}
+		}
+		#魔理沙
+		if = {
+			limit = {
+				num_owned_relics >= 1
+				NOT = {
+					has_global_flag = marisa
+				}
+			}
+			country_event = {
+				id = touhou_paragon.40730
 			}
 		}
 	}
@@ -1710,6 +1771,279 @@ country_event = {
 		from = {
 			remove_trait = leader_trait_magician
 			add_trait = leader_trait_great_magician
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40730
+	title = touhou_paragon.40730.name
+	desc = touhou_paragon.40730.desc
+	picture = GFX_evt_marisa_steal
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		num_owned_relics >= 1
+	}
+
+	option = {
+		name = touhou_paragon.40730.a
+		country_event = {
+			id = touhou_paragon.40731
+			days = 10
+		}
+	}
+
+	option = {
+		trigger = {
+			any_owned_leader = {
+				has_trait = leader_trait_dolls
+			}
+		}
+		name = touhou_paragon.40730.b
+		country_event = {
+			id = touhou_paragon.40735
+			days = 10
+		}
+	}
+
+	option = {
+		trigger = {
+			any_owned_leader = {
+				has_trait = leader_trait_fly
+			}
+		}
+		name = touhou_paragon.40730.c
+		country_event = {
+			id = touhou_paragon.40740
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40731
+	title = touhou_paragon.40731.name
+	desc = touhou_paragon.40731.desc
+	picture = GFX_evt_marisa_spell_card
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.40731.a
+		country_event = {
+			id = touhou_paragon.40732
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40732
+	title = touhou_paragon.40732.name
+	desc = touhou_paragon.40732.desc
+	picture = GFX_evt_marisa_steal
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+
+	option = {
+		name = touhou_paragon.40732.a
+		enable_special_project = {
+			name = MARISA_SPECIAL_PROJECT
+			location = root.capital_scope
+			owner = root
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40733
+	title = touhou_paragon.40733.name
+	desc = touhou_paragon.40733.desc
+	picture = GFX_evt_marisa_cannon
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.40733.a
+		country_event = {
+			id = touhou_paragon.40734
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40734
+	title = touhou_paragon.40734.name
+	desc = touhou_paragon.40734.desc
+	picture = GFX_evt_marisa_star
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.40734.a
+		country_event = {
+			id = touhou_paragon.40700
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40735
+	title = touhou_paragon.40735.name
+	desc = touhou_paragon.40735.desc
+	picture = GFX_evt_alice_dolls
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.40735.a
+		country_event = {
+			id = touhou_paragon.40736
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40736
+	title = touhou_paragon.40736.name
+	desc = touhou_paragon.40736.desc
+	picture = GFX_evt_alice_and_marisa
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.40736.a
+		country_event = {
+			id = touhou_paragon.40737
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40737
+	title = touhou_paragon.40737.name
+	desc = touhou_paragon.40737.desc
+	picture = GFX_evt_alice_goelia
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.40737.a
+		country_event = {
+			id = touhou_paragon.40738
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40738
+	title = touhou_paragon.40738.name
+	desc = touhou_paragon.40738.desc
+	picture = GFX_evt_alice_and_marisa
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+
+	}
+
+	option = {
+		name = touhou_paragon.40738.a
+		country_event = {
+			id = touhou_paragon.40739
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40739
+	title = touhou_paragon.40739.name
+	desc = touhou_paragon.40739.desc
+	picture = GFX_evt_marisa_star
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+
+	}
+
+	option = {
+		name = touhou_paragon.40739.a
+		country_event = {
+			id = touhou_paragon.40700
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40740
+	title = touhou_paragon.40740.name
+	desc = touhou_paragon.40740.desc
+	picture = GFX_evt_reimu_grim
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+
+	}
+
+	option = {
+		name = touhou_paragon.40740.a
+		country_event = {
+			id = touhou_paragon.40741
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40741
+	title = touhou_paragon.40741.name
+	desc = touhou_paragon.40741.desc
+	picture = GFX_evt_reimu_vs_marisa
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+
+	}
+
+	option = {
+		name = touhou_paragon.40741.a
+		country_event = {
+			id = touhou_paragon.40742
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40742
+	title = touhou_paragon.40742.name
+	desc = touhou_paragon.40742.desc
+	picture = GFX_evt_marisa_star
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.40742.a
+		country_event = {
+			id = touhou_paragon.40700
 		}
 	}
 }
@@ -2851,6 +3185,60 @@ leader_event = {
 	}
 }
 
+#火焰猫燐事件链
+country_event = {
+	id = touhou_paragon.42501
+	title = touhou_paragon.42501.name
+	desc = touhou_paragon.42501.desc
+	picture = GFX_evt_marisa_immortal
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.42501.a
+		country_event = {
+			id = touhou_paragon.42502
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.42502
+	title = touhou_paragon.42502.name
+	desc = touhou_paragon.42502.desc
+	picture = GFX_evt_marisa_immortal
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.42502.a
+		country_event = {
+			id = touhou_paragon.42503
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.42503
+	title = touhou_paragon.42503.name
+	desc = touhou_paragon.42503.desc
+	picture = GFX_evt_marisa_immortal
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.42503.a
+		country_event = {
+			id = touhou_paragon.42500
+			days = 10
+		}
+	}
+}
 
 # On winning a space battle.
 country_event = {
@@ -3244,60 +3632,6 @@ planet_event = {
 				id = touhou_paragon.43000
 			}
 			remove_point_of_interest = jinx_shirne
-		}
-	}
-}
-
-country_event = {
-	id = touhou_paragon.43101
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		is_ai = no
-		NOR = {
-			has_global_flag = mystia
-			has_country_flag = dismissed_mystia
-		}
-		count_owned_pop = {
-			limit = {
-				OR = {
-					has_job = entertainer
-					has_job = duelist
-				}
-			}
-			count >= 10
-		}
-		any_owned_planet = {
-			OR = {
-				num_assigned_jobs = {
-					job = entertainer
-					value >= 4
-				}
-				num_assigned_jobs = {
-					job = duelist
-					value >= 4
-				}
-			}
-		}
-	}
-	immediate = {
-		set_global_flag = mystia
-		random_owned_planet = {
-			limit = {
-				OR = {
-					num_assigned_jobs = {
-						job = entertainer
-						value >= 4
-					}
-					num_assigned_jobs = {
-						job = duelist
-						value >= 4
-					}
-				}
-			}
-			planet_event = {
-				id = touhou_paragon.43110
-			}
 		}
 	}
 }
