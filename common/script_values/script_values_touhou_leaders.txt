@@ -365,3 +365,8 @@ bombs_plus_jinx = {
 	}
 	add = jinx_stockpile
 }
+
+touhou_value_reimu_excessive_amount = {
+	base = 5
+	add = touhou_variable_reimu_excessive_amount
+}
