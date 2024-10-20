@@ -482,6 +482,8 @@
  leader_exorcism_roud_2_desc:1 "这位领袖随身携带的驱魔棒被确认在随着战斗增长，并通过某种奇妙的灵能联系增加了舰队武器的攻击范围。"
  leader_exorcism_roud_3:0 "驱魔棒：超长"
  leader_exorcism_roud_3_desc:1 "这位领袖随身携带的驱魔棒还在不停的增长着，我们不得不增加了旗舰舱室的高度！"
+ leader_trait_excessive_reimu:0 "贪欲的贫乏巫女"
+ leader_trait_excessive_reimu_desc:1 "这位领袖对于常见的一般等价物似乎有着过于常人的执着，但似乎从未有因为贪欲而变得富裕而殷实的可能性。"
 
  mod_weapon_type_explosive_speed_mult:0 "爆炸武器速度"
 

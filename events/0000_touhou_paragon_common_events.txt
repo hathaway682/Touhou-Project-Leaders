@@ -46,7 +46,7 @@ country_event = {
 				add_trait = leader_exorcism_roud
 				add_trait = leader_trait_rocketry_specialization
 				add_trait = leader_trait_gifted_2
-				add_trait = leader_trait_excessive_2
+				add_trait = leader_trait_excessive_reimu
 				add_trait = leader_trait_regeneration
 				add_trait = leader_trait_fly
 				set_leader_flag = touhou_leader
@@ -1412,6 +1412,7 @@ country_event = {
 	option = {
 		name = touhou_paragon.40611.a
 		custom_tooltip = touhou_paragon.40611.a.response
+		set_country_flag = touhou_flag_allow_reimu_saisen_box_option
 		hidden_effect = {
 			create_country = {
 				name = "NAME_Saisen_Box"
@@ -1471,7 +1472,7 @@ country_event = {
 	option = {
 		name = touhou_paragon.40611.a
 		remove_point_of_interest = capital_shirne
-		custom_tooltip = touhou_paragon.40611.a.response
+		custom_tooltip = touhou_paragon.40612.a.response
 		hidden_effect = {
 			create_country = {
 				name = "NAME_Saisen_Box"
@@ -1517,6 +1518,58 @@ country_event = {
 				value = 1
 			}
 		}
+	}
+}
+
+#招募灵梦后，触发神灵之名事件，为赛钱箱提供新的选项
+country_event = {
+	id = touhou_paragon.40613
+	title = touhou_paragon.40613.name
+	desc = {
+		trigger = {
+			nor = {
+				has_civic = civic_hakurei_shinto
+				has_civic = civic_hakurei_shinto_corp
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_fly
+			}
+			is_materialist = no
+		}
+		text = touhou_paragon.40613.a.desc
+	}
+	desc = {
+		trigger = {
+			nor = {
+				has_civic = civic_hakurei_shinto
+				has_civic = civic_hakurei_shinto_corp
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_fly
+			}
+			is_materialist = yes
+		}
+		text = touhou_paragon.40613.b.desc
+	}
+	picture = GFX_evt_ruined_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = {
+			trigger = {
+				is_materialist = no
+			}
+			text = touhou_paragon.40613.aa
+		}
+		name = {
+			trigger = {
+				is_materialist = yes
+			}
+			text = touhou_paragon.40613.ab
+		}
+		custom_tooltip = touhou_paragon.40613.a.response
+		set_country_flag = touhou_flag_allow_reimu_saisen_box_option
 	}
 }
 

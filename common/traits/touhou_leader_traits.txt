@@ -4860,3 +4860,33 @@ leader_trait_rabbit_spy = {
 		weight = 0
 	}
 }
+
+leader_trait_excessive_reimu = {
+	leader_trait_type = negative
+	inline_script = {
+		script = trait/icon_negative
+		ICON = "GFX_leader_trait_excessive"
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_consumer_goods_upkeep_add = 1
+		mult = value:touhou_value_reimu_excessive_amount
+	}
+	triggered_self_modifier = {
+		potential = { always = yes }
+		leader_commanders_energy_upkeep_add = 1
+		mult = value:touhou_value_reimu_excessive_amount
+	}
+	leader_class = { commander }
+	selectable_weight = {
+		weight = 0
+	}
+	on_gained_effect = {
+		set_variable = {
+			which = touhou_variable_reimu_excessive_amount
+			value = 1
+		}
+	}
+}

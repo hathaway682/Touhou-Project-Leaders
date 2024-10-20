@@ -1276,7 +1276,7 @@ country_event = { # 灵梦
 			add_trait = leader_exorcism_roud
 			add_trait = leader_trait_rocketry_specialization
 			add_trait = leader_trait_gifted_2
-			add_trait = leader_trait_excessive_2
+			add_trait = leader_trait_excessive_reimu
 			add_trait = leader_trait_regeneration
 			add_trait = leader_trait_fly
 			set_leader_flag = touhou_leader
@@ -1359,6 +1359,7 @@ country_event = { # 灵梦
 				set_country_flag = can_build_shirne
 			}
 		}
+		country_event = { id = touhou_paragon.40613 days = 15 random = 15 }
 	}
 }
 

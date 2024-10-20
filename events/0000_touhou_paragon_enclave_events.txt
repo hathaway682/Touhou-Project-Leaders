@@ -546,6 +546,11 @@ country_event = {
                     has_country_flag = modifier_kappa_construction_cooldown
                 }
             }
+            resource_stockpile_compare = {
+                resource = energy
+                value >= 200 #flip to a positive value to make this comparison
+                mult = kappa_construction_count
+            }
         }
         add_modifier = {
             modifier = modifier_kappa_construction
@@ -620,7 +625,7 @@ country_event = {
         allow = {
             resource_stockpile_compare = {
                 resource = energy
-                value >= -200 #flip to a positive value to make this comparison
+                value >= 200 #flip to a positive value to make this comparison
                 mult = kappa_construction_count
             }
         }
@@ -1312,6 +1317,20 @@ country_event = {
         default_hide_option = yes
         remove_country_flag = touhou_flag_in_diplo_with_saisen_box
     }
+    option = {
+        name = touhou_paragon_enclave.40600.e
+        trigger = {
+            has_country_flag = touhou_flag_allow_reimu_saisen_box_option
+        }
+        allow = {
+            not = {
+                has_modifier = modifier_saisen_box_timer
+            }
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+        }
+    }
 }
 
 country_event = {
@@ -1422,6 +1441,7 @@ country_event = {
                 which = touhou_variable_saisen_count
                 value = 100
             }
+            country_event = { id = touhou_paragon_enclave.40600 days = 900}
         }
         add_modifier = {
             modifier = modifier_saisen_box_timer
@@ -1512,6 +1532,7 @@ country_event = {
                 which = touhou_variable_saisen_count
                 value = 1000
             }
+            country_event = { id = touhou_paragon_enclave.40600 days = 900}
         }
         add_modifier = {
             modifier = modifier_saisen_box_timer
@@ -1591,6 +1612,7 @@ country_event = {
                 which = touhou_variable_saisen_count
                 value = 10000
             }
+            country_event = { id = touhou_paragon_enclave.40600 days = 900}
         }
         add_modifier = {
             modifier = modifier_saisen_box_timer
@@ -1870,5 +1892,768 @@ country_event = {
                 months = 30
             }
         }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.40625
+    diplomatic_title = NAME_Saisen_Box
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        room = saisenbox_room
+    }
+    is_triggered_only = yes
+    title = NAME_Saisen_Box_shrine
+    desc = {
+        trigger = {
+            OR = {
+                is_materialist = yes
+                AND = {
+                    is_spiritualist = no
+                    any_owned_leader = {
+                        has_trait = leader_trait_fly
+                        check_variable_arithmetic = {
+                            which = touhou_variable_reimu_excessive_amount
+                            value >= 300
+                        }
+                    }
+                }
+            }
+        }
+        text = touhou_paragon_enclave.40625.1.desc
+    }
+    desc = {
+        trigger = {
+            is_materialist = no
+            is_spiritualist = no
+            any_owned_leader = {
+                has_trait = leader_trait_fly
+                check_variable_arithmetic = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value >= 150
+                }
+            }
+        }
+        text = touhou_paragon_enclave.40625.2.desc
+    }
+    desc = {
+        trigger = {
+            OR = {
+                is_spiritualist = yes
+                AND = {
+                    is_materialist = no
+                    is_spiritualist = no
+                    any_owned_leader = {
+                        has_trait = leader_trait_fly
+                        check_variable_arithmetic = {
+                            which = touhou_variable_reimu_excessive_amount
+                            value < 150
+                        }
+                    }
+                }
+            }
+        }
+        text = touhou_paragon_enclave.40625.3.desc
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.a
+        custom_tooltip = touhou_paragon_enclave.40625.a.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 100
+            }
+        }
+        add_resource = { energy = -100 }
+        hidden_effect = {
+            random_owned_leader = {
+                limit = {
+                    OR = {
+                        num_negative_traits = 1
+                        num_negative_traits = 2
+                        num_negative_traits = 3
+                        num_negative_traits = 4
+                    }
+                    nor = {
+                        has_trait = leader_trait_excessive_reimu
+                        has_trait = leader_trait_short_life
+                    }
+                }
+                remove_all_negative_traits = yes
+            }
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+            }
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 180
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 180
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.b
+        custom_tooltip = touhou_paragon_enclave.40625.b.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 100
+            }
+        }
+        add_resource = { energy = -100 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+            }
+        }
+        add_modifier = {
+            modifier = modifier_sumiyoshi_sanshin
+            years = 1
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 180
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 180
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.c
+        custom_tooltip = touhou_paragon_enclave.40625.c.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 100
+            }
+        }
+        add_resource = { energy = -100 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+            }
+        }
+        add_modifier = {
+            modifier = modifier_benten
+            years = 2
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 180
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 180
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.d
+        custom_tooltip = touhou_paragon_enclave.40625.d.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_monthly_resource_mult = {
+            resource = physics_research
+            value = 3
+            max = 100000
+            min = 500
+        }
+        add_monthly_resource_mult = {
+            resource = society_research
+            value = 3
+            max = 100000
+            min = 500
+        }
+        add_monthly_resource_mult = {
+            resource = engineering_research
+            value = 3
+            max = 100000
+            min = 500
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.e
+        custom_tooltip = touhou_paragon_enclave.40625.e.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_sugawara_no_michizane
+            years = 2
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.f
+        custom_tooltip = touhou_paragon_enclave.40625.f.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_monthly_resource_mult = {
+            resource = consumer_goods
+            value = 1
+            max = 100000
+            min = 1000
+        }
+        add_monthly_resource_mult = {
+            resource = alloys
+            value = 1
+            max = 50000
+            min = 500
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.g
+        custom_tooltip = touhou_paragon_enclave.40625.g.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        random_owned_leader = {
+            limit = {
+                nor = {
+                    has_trait = leader_trait_time
+                    has_trait = leader_trait_short_life
+                }
+            }
+            add_trait = leader_trait_intemporal
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.h
+        custom_tooltip = touhou_paragon_enclave.40625.h.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_monthly_resource_mult = {
+            resource = energy
+            value = 3
+            max = 100000
+            min = 500
+        }
+        add_monthly_resource_mult = {
+            resource = food
+            value = 3
+            max = 100000
+            min = 500
+        }
+        add_modifier = {
+            modifier = modifier_amaterasu_okami
+            years = 1
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.i
+        custom_tooltip = touhou_paragon_enclave.40625.i.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_hariti
+            years = 1
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.j
+        custom_tooltip = touhou_paragon_enclave.40625.j.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_monthly_resource_mult = {
+            resource = unity
+            value = 6
+            max = 100000
+            min = 1000
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.k
+        custom_tooltip = touhou_paragon_enclave.40625.k.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_sinatsuhiko_no_mikami
+            years = 3
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.l
+        custom_tooltip = touhou_paragon_enclave.40625.l.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_ebisu
+            years = 1
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.m
+        custom_tooltip = touhou_paragon_enclave.40625.m.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 10000
+            }
+        }
+        add_resource = { energy = -10000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 3
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_kanayamahiko_no_kami
+            years = 1
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 720
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 720
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.n
+        custom_tooltip = touhou_paragon_enclave.40625.n.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 10000
+            }
+        }
+        add_resource = { energy = -10000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 3
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_sukenabikona_no_mikoto
+            years = 1
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 720
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 720
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.o
+        custom_tooltip = touhou_paragon_enclave.40625.o.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 10000
+            }
+        }
+        add_resource = { energy = -10000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 3
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_ame_no_tajikarao_no_kami
+            years = 3
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 720
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 720
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.p
+        custom_tooltip = touhou_paragon_enclave.40625.p.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 10000
+            }
+        }
+        add_resource = { energy = -10000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 3
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_susanoo
+            years = 1
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 720
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 720
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.q
+        custom_tooltip = touhou_paragon_enclave.40625.q.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 100000
+            }
+        }
+        add_resource = { energy = -100000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = leader_trait_fly
+                }
+                set_variable_to_random_value = {
+                    which = touhou_variable_reimu_excessive_amount
+                    min = 1
+                    max = 5
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 180
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 180
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.r
+        default_hide_option = yes
+    }
+    after = {
+        remove_country_flag = touhou_flag_in_diplo_with_saisen_box
     }
 }
