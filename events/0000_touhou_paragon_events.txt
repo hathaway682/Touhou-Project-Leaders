@@ -1823,7 +1823,7 @@ country_event = { # 梅莉
 			CATCH_PHRASE = merry1_catch_phrase
 		}
 		last_created_leader = { #8
-			add_trait = subclass_scientist_scholar
+			add_trait = subclass_scientist_councilor
 			add_trait = leader_trait_hifuu
 			add_trait = leader_trait_century_of_science
 			add_trait = leader_trait_truth_seeker

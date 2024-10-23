@@ -1441,7 +1441,7 @@ country_event = {
                 which = touhou_variable_saisen_count
                 value = 100
             }
-            country_event = { id = touhou_paragon_enclave.40600 days = 900}
+            country_event = { id = touhou_paragon_enclave.40605 days = 900}
         }
         add_modifier = {
             modifier = modifier_saisen_box_timer
@@ -1532,7 +1532,7 @@ country_event = {
                 which = touhou_variable_saisen_count
                 value = 1000
             }
-            country_event = { id = touhou_paragon_enclave.40600 days = 900}
+            country_event = { id = touhou_paragon_enclave.40605 days = 900}
         }
         add_modifier = {
             modifier = modifier_saisen_box_timer
@@ -1612,7 +1612,7 @@ country_event = {
                 which = touhou_variable_saisen_count
                 value = 10000
             }
-            country_event = { id = touhou_paragon_enclave.40600 days = 900}
+            country_event = { id = touhou_paragon_enclave.40605 days = 900}
         }
         add_modifier = {
             modifier = modifier_saisen_box_timer
