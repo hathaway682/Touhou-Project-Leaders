@@ -1245,7 +1245,7 @@ country_event = { # 美铃
 country_event = { # 灵梦
 	id = touhou_paragon.40600
 	title = "touhou_paragon.40600.name"
-	desc = "touhou_paragon.40600.desc"add_trait_leader 83886614 subclass_scientist_councilor
+	desc = "touhou_paragon.40600.desc"
 	show_sound = event_psionic
 	is_triggered_only = yes
 
