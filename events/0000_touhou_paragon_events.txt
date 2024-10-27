@@ -314,6 +314,12 @@ country_event = { # ethic leader lottery machine
 						has_trait = leader_trait_dolls
 					}
 				}
+				modifier = {
+					factor = 0
+					any_owned_leader = {
+						has_trait = leader_trait_magic
+					}
+				}
 				ethic_leader_hire_event = { LEADER_ID = marisa EVENT_ID = touhou_paragon.40700 }
 			}
 			0 = { # 妖梦

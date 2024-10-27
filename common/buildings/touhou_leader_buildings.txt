@@ -284,7 +284,7 @@ holding_building_moriya_shrine = {
 	base_buildtime = @b3_time
 	owner_type = subject_holding
 	icon = building_moriya_shrine
-
+	base_cap_amount = 1
 	category = unity
 
 	potential = {
@@ -298,6 +298,7 @@ holding_building_moriya_shrine = {
 			}
 			has_country_flag = touhou_flag_sanae_shrine_research_speed
 		}
+		is_capital = yes
 	}
 
 	planet_modifier = {
