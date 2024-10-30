@@ -33,6 +33,32 @@ utility_component_template = {
 ########################
 
 utility_component_template = {
+	key = "COMBAT_COMPUTER_TOUHOU_SWARM_DEFAULT"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = @power0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost0
+		}
+	}
+	ship_behavior = "swarm"
+
+	class_restriction = { shipclass_military }
+	size_restriction = { elite_corvette }
+	component_set = "combat_computers"
+	upgrades_to = "COMBAT_COMPUTER_SWARM_BASIC"
+	ai_tags = { gunship }
+	ai_tag_weight = 0
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
 	key = "COMBAT_COMPUTER_TOUHOU_PICKET_DEFAULT"
 	size = small
 	icon = "GFX_ship_part_computer_default"
@@ -95,7 +121,7 @@ utility_component_template = {
 	ship_behavior = "artillery"
 
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { elite_cruiser marisa_cannon }
+	size_restriction = { elite_cruiser elite_battleship marisa_cannon marisa_cannon_titanic }
 	component_set = "combat_computers"
 	upgrades_to = "COMBAT_COMPUTER_TOUHOU_ARTILLERY_BASIC"
 

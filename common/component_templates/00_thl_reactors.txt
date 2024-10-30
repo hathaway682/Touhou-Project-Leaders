@@ -210,7 +210,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fission_power" }
 	component_set = "power_core"
-	size_restriction = { marisa_cannon }
+	size_restriction = { elite_battleship marisa_cannon }
 	upgrades_to = "BATTLESHIP_FUSION_REACTOR_TOUHOU"
 
 	ai_weight = {
