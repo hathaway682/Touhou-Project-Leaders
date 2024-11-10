@@ -552,8 +552,12 @@ country_event = {
 			modify_species = {
 				species = this
 				add_trait = trait_latent_psionic
+				effect = {
+					save_event_target_as = psionic_main_species
+				}
 			}
 		}
+		change_dominant_species = { species = event_target:psionic_main_species }
 	}
 	after = {
 		hidden_effect = {

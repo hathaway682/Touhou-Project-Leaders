@@ -298,30 +298,6 @@ country_event = { # ethic leader lottery machine
 				}
 				ethic_leader_hire_event = { LEADER_ID = meiling EVENT_ID = touhou_paragon.40500 }
 			}
-			0 = { # 魔理沙
-				modifier = {
-					add = value:touhou_leader_randomizer|ETHIC|militarist|ETHIC_NEG|pacifist|LEADER_ID|marisa|
-				}
-				modifier = {
-					factor = 3
-					any_owned_leader = {
-						has_trait = leader_trait_elements
-					}
-				}
-				modifier = {
-					factor = 3
-					any_owned_leader = {
-						has_trait = leader_trait_dolls
-					}
-				}
-				modifier = {
-					factor = 0
-					any_owned_leader = {
-						has_trait = leader_trait_magic
-					}
-				}
-				ethic_leader_hire_event = { LEADER_ID = marisa EVENT_ID = touhou_paragon.40700 }
-			}
 			0 = { # 妖梦
 				modifier = {
 					add = value:touhou_leader_randomizer|ETHIC|xenophile|ETHIC_NEG|xenophobe|LEADER_ID|youmu|
