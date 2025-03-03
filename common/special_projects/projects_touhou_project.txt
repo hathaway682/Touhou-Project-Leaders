@@ -68,7 +68,7 @@ special_project = {
 		owner = {
 			random_owned_leader = {
 				limit = {
-					has_trait = leader_trait_sakura
+					has_trait = thl_leader_trait_sakura
 				}
 				leader_event = {
 					id = touhou_paragon.42113
@@ -259,7 +259,7 @@ special_project = {
 		fleet_power = 100
 		#shipclass_military = 3
 		leader = commander
-		has_trait = leader_trait_magic
+		has_trait = thl_leader_trait_magic
 	}
 
 	on_success = {

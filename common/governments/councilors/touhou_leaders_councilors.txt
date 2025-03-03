@@ -109,10 +109,10 @@ councilor_scarlet_allience = {
 	leader_class = { commander official scientist }
 	is_leader_possible = {
 		OR = {
-			has_trait = leader_trait_time
-			has_trait = leader_trait_kongfu
-			has_trait = leader_trait_elements
-			has_trait = leader_trait_destiny_manipulation
+			has_trait = thl_leader_trait_time
+			has_trait = thl_leader_trait_kongfu
+			has_trait = thl_leader_trait_elements
+			has_trait = thl_leader_trait_destiny_manipulation
 		}
 	}
 	civic = civic_scarlet_allience
@@ -125,10 +125,10 @@ councilor_scarlet_allience_corp = {
 	leader_class = { commander official scientist }
 	is_leader_possible = {
 		OR = {
-			has_trait = leader_trait_time
-			has_trait = leader_trait_kongfu
-			has_trait = leader_trait_elements
-			has_trait = leader_trait_destiny_manipulation
+			has_trait = thl_leader_trait_time
+			has_trait = thl_leader_trait_kongfu
+			has_trait = thl_leader_trait_elements
+			has_trait = thl_leader_trait_destiny_manipulation
 		}
 	}
 	civic = civic_scarlet_allience_corp

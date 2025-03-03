@@ -19,7 +19,7 @@ touhou_sanae_mission_chain = {
 			has_country_flag = sanae_mission_complete
 			not = {
 				any_owned_leader = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 			}
 		}
@@ -39,12 +39,12 @@ touhou_marisa_alice_regeneration_chain = {
 			has_country_flag = marisa_alice_regeneration_complete
 			not = {
 				any_owned_leader = {
-					has_trait = leader_trait_magic
+					has_trait = thl_leader_trait_magic
 				}
 			}
 			not = {
 				any_owned_leader = {
-					has_trait = leader_trait_dolls
+					has_trait = thl_leader_trait_dolls
 				}
 			}
 		}

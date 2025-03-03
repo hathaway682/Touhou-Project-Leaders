@@ -73,13 +73,13 @@ hell_undead = {
 
 	show_tech_unlock_if = {
 		any_owned_leader = {
-			has_trait = leader_trait_corpse_manipulation
+			has_trait = thl_leader_trait_corpse_manipulation
 		}
 	}
 
 	potential_country = {
 		any_owned_leader = {
-			has_trait = leader_trait_corpse_manipulation
+			has_trait = thl_leader_trait_corpse_manipulation
 		}
 	}
 	potential = {
@@ -96,7 +96,7 @@ hell_undead = {
 				AND = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_corpse_manipulation
+						has_trait = thl_leader_trait_corpse_manipulation
 					}
 				}
 				AND = {
@@ -105,7 +105,7 @@ hell_undead = {
 						sector_capital = {
 							exists = leader
 							leader = {
-								has_trait = leader_trait_corpse_manipulation
+								has_trait = thl_leader_trait_corpse_manipulation
 							}
 						}
 					}
@@ -277,7 +277,7 @@ army_oni_mercenary = {
 
 	potential_country = {
 		any_owned_leader = {
-			has_trait = leader_trait_oni_power
+			has_trait = thl_leader_trait_oni_power
 		}
 	}
 
@@ -286,7 +286,7 @@ army_oni_mercenary = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_oni_power
+					has_trait = thl_leader_trait_oni_power
 				}
 			}
 			AND = {
@@ -295,7 +295,7 @@ army_oni_mercenary = {
 					sector_capital = {
 						exists = leader
 						leader = {
-							has_trait = leader_trait_oni_power
+							has_trait = thl_leader_trait_oni_power
 						}
 					}
 				}
@@ -404,8 +404,8 @@ ness_assault_army = {
 	potential_country = {
 		any_owned_leader = {
 			OR = {
-				has_trait = leader_trait_super_youkai_slug_2
-				has_trait = leader_trait_super_youkai_slug_3
+				has_trait = thl_leader_trait_super_youkai_slug_2
+				has_trait = thl_leader_trait_super_youkai_slug_3
 			}
 		}
 	}
@@ -416,8 +416,8 @@ ness_assault_army = {
 			owner = {
 				any_owned_leader = {
 					OR = {
-						has_trait = leader_trait_super_youkai_slug_2
-						has_trait = leader_trait_super_youkai_slug_3
+						has_trait = thl_leader_trait_super_youkai_slug_2
+						has_trait = thl_leader_trait_super_youkai_slug_3
 					}
 				}
 				NOT = {

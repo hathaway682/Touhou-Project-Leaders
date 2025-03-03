@@ -49,8 +49,8 @@ trait_thl_spirit = {
 					exists = leader
 					leader = {
 						OR = {
-							has_trait = leader_trait_death
-							has_trait = leader_trait_corpse_manipulation
+							has_trait = thl_leader_trait_death
+							has_trait = thl_leader_trait_corpse_manipulation
 						}
 					}
 				}
@@ -59,10 +59,10 @@ trait_thl_spirit = {
 					any_owned_leader = {
 						is_councilor = yes
 						OR = {
-							has_trait = leader_trait_sakura_1
-							has_trait = leader_trait_sakura_3
-							has_trait = leader_trait_sakura_5
-							has_trait = leader_trait_sakura_8
+							has_trait = thl_leader_trait_sakura_1
+							has_trait = thl_leader_trait_sakura_3
+							has_trait = thl_leader_trait_sakura_5
+							has_trait = thl_leader_trait_sakura_8
 						}
 					}
 				}
@@ -78,8 +78,8 @@ trait_thl_spirit = {
 					exists = leader
 					leader = {
 						OR = {
-							has_trait = leader_trait_death
-							has_trait = leader_trait_corpse_manipulation
+							has_trait = thl_leader_trait_death
+							has_trait = thl_leader_trait_corpse_manipulation
 						}
 					}
 				}
@@ -88,10 +88,10 @@ trait_thl_spirit = {
 					any_owned_leader = {
 						is_councilor = yes
 						OR = {
-							has_trait = leader_trait_sakura_1
-							has_trait = leader_trait_sakura_3
-							has_trait = leader_trait_sakura_5
-							has_trait = leader_trait_sakura_8
+							has_trait = thl_leader_trait_sakura_1
+							has_trait = thl_leader_trait_sakura_3
+							has_trait = thl_leader_trait_sakura_5
+							has_trait = thl_leader_trait_sakura_8
 						}
 					}
 				}
@@ -105,7 +105,7 @@ trait_thl_spirit = {
 			owner = {
 				any_owned_leader = {
 					is_councilor = yes
-					has_trait = leader_trait_dance
+					has_trait = thl_leader_trait_dance
 				}
 			}
 		}
@@ -212,7 +212,7 @@ trait_thl_doll = {
 						AND = {
 							exists = leader
 							leader = {
-								has_trait = leader_trait_dolls
+								has_trait = thl_leader_trait_dolls
 							}
 						}
 					}
@@ -417,7 +417,7 @@ trait_thl_rabbit = {
 		potential = {
 			owner = {
 				any_owned_leader = {
-					has_trait = leader_trait_rabbit_leader
+					has_trait = thl_leader_trait_rabbit_leader
 				}
 			}
 		}
@@ -428,7 +428,7 @@ trait_thl_rabbit = {
 		potential = {
 			owner = {
 				any_owned_leader = {
-					has_trait = leader_trait_rabbit_leader
+					has_trait = thl_leader_trait_rabbit_leader
 				}
 			}
 		}

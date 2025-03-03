@@ -2836,7 +2836,7 @@ country_event = {
     immediate = {
         random_owned_leader = {
             limit = {
-                has_trait = leader_trait_jinx
+                has_trait = thl_leader_trait_jinx
             }
             owner = {
                 set_variable = {

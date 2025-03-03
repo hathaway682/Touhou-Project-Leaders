@@ -16,7 +16,7 @@ raiding = {
 						has_origin = origin_khan_successor
 						any_owned_leader = {
 							is_councilor = yes
-							has_trait = leader_trait_master_sacker
+							has_trait = thl_leader_trait_master_sacker
 						}
 					}
 				}
@@ -24,19 +24,19 @@ raiding = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_master_sacker
+					has_trait = thl_leader_trait_master_sacker
 				}
 			}
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_oni_power
+					has_trait = thl_leader_trait_oni_power
 				}
 			}
 			owner = {
 				any_owned_leader = {
 					is_councilor = yes
-					has_trait = leader_trait_master_sacker
+					has_trait = thl_leader_trait_master_sacker
 				}
 			}
 		}
@@ -183,7 +183,7 @@ freeze = {
 	trigger = {
 		exists = leader
 		leader = {
-			has_trait = leader_trait_ice
+			has_trait = thl_leader_trait_ice
 		}
 	}
 
@@ -273,7 +273,7 @@ raiding_ghost = {
 	trigger = {
 		exists = leader
 		leader = {
-			has_trait = leader_trait_price_of_life
+			has_trait = thl_leader_trait_price_of_life
 		}
 	}
 	default = no
@@ -300,7 +300,7 @@ nuclear = {
 	trigger = {
 		exists = leader
 		leader = {
-			has_trait = leader_trait_nuclear
+			has_trait = thl_leader_trait_nuclear
 		}
 	}
 
@@ -341,7 +341,7 @@ wither = {
 	trigger = {
 		exists = leader
 		leader = {
-			has_trait = leader_trait_fall
+			has_trait = thl_leader_trait_fall
 		}
 	}
 

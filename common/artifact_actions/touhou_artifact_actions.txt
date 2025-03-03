@@ -16,13 +16,13 @@ artifact_random_secrct_research = {
 
 	potential = {
 		 any_owned_leader = {
-			 has_trait = leader_trait_words
+			 has_trait = thl_leader_trait_words
 		 }
 	}
 
 	allow = {
 		any_owned_leader = {
-			has_trait = leader_trait_words
+			has_trait = thl_leader_trait_words
 			is_councilor = yes
 		}
 		custom_tooltip = {

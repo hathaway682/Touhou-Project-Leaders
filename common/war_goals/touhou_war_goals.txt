@@ -16,7 +16,7 @@ wg_moriya_crusade = {
 
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_miracle
+			has_trait = thl_leader_trait_miracle
 		}
 		NOR = {
 			has_valid_civic = civic_inwards_perfection

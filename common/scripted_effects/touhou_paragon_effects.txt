@@ -5,7 +5,7 @@ random_converse_army_if_reisen_attacker = {
 			any_ground_combat_attacker = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_wave_length
+					has_trait = thl_leader_trait_wave_length
 				}
 			}
 		}
@@ -18,7 +18,7 @@ random_converse_army_if_reisen_attacker = {
 					limit = {
 						exists = leader
 						leader = {
-							has_trait = leader_trait_wave_length
+							has_trait = thl_leader_trait_wave_length
 						}
 					}
 					owner = {
@@ -65,7 +65,7 @@ random_converse_army_if_reisen_defender = {
 			any_ground_combat_defender = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_wave_length
+					has_trait = thl_leader_trait_wave_length
 				}
 			}
 		}
@@ -78,7 +78,7 @@ random_converse_army_if_reisen_defender = {
 					limit = {
 						exists = leader
 						leader = {
-							has_trait = leader_trait_wave_length
+							has_trait = thl_leader_trait_wave_length
 						}
 					}
 					owner = {
@@ -125,7 +125,7 @@ random_kill_army_if_youmu_attacker = {
 			any_ground_combat_attacker = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_kendo
+					has_trait = thl_leader_trait_kendo
 				}
 			}
 		}
@@ -150,7 +150,7 @@ random_kill_army_if_youmu_defender = {
 			any_ground_combat_defender = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_kendo
+					has_trait = thl_leader_trait_kendo
 				}
 			}
 		}
@@ -176,7 +176,7 @@ random_kill_army_if_oni_attacker = {
 			any_ground_combat_attacker = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_oni_power
+					has_trait = thl_leader_trait_oni_power
 				}
 			}
 		}
@@ -203,7 +203,7 @@ random_kill_army_if_oni_defender = {
 			any_ground_combat_defender = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_oni_power
+					has_trait = thl_leader_trait_oni_power
 				}
 			}
 		}
@@ -1629,20 +1629,13 @@ destroy_star_system_nuclear = {
 	}
 	every_fleet_in_system = {
 		limit = {
-			owner = {
-				has_trait = leader_trait_nuclear
-			}
-		}
-		unassign_leader = this
-	}
-	every_fleet_in_system = {
-		limit = {
 			NOR = {
+				is_same_value = from
+				# except Extradimensionals
 				AND = {
 					exists = owner
 					owner = {
 						OR = {
-							is_country_type = formless
 							is_country_type = portal_holder
 							is_country_type = extradimensional
 							is_country_type = extradimensional_2
@@ -1652,7 +1645,15 @@ destroy_star_system_nuclear = {
 				}
 			}
 		}
-		destroy_fleet = this
+		if = {
+			limit = {
+				is_mobile = yes
+			}
+			set_mia = mia_return_home
+		}
+		else = {
+			destroy_fleet = this
+		}
 	}
 	every_system_megastructure = {
 		set_ruined_megastructure = yes
@@ -2190,7 +2191,7 @@ create_shrine_point_of_interest = {
 		limit = {
 			NOT = {
 				any_owned_leader = {
-					has_trait = leader_trait_fall
+					has_trait = thl_leader_trait_fall
 				}
 			}
 		}
@@ -2224,7 +2225,7 @@ create_shrine_point_of_interest = {
 		limit = {
 			NOT = {
 				any_owned_leader = {
-					has_trait = leader_trait_jinx
+					has_trait = thl_leader_trait_jinx
 				}
 			}
 		}
@@ -2241,7 +2242,7 @@ create_shrine_point_of_interest = {
 		limit = {
 			NOT = {
 				any_owned_leader = {
-					has_trait = leader_trait_fly
+					has_trait = thl_leader_trait_fly
 				}
 			}
 		}

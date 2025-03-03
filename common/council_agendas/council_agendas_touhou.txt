@@ -26,13 +26,13 @@ agenda_dyson_sphere = {
 	agenda_cost = 7000
 	allow = {
 		any_owned_leader = {
-			has_trait = leader_trait_fusion_energy
+			has_trait = thl_leader_trait_fusion_energy
 			is_councilor = yes
 		}
 	}
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_fusion_energy
+			has_trait = thl_leader_trait_fusion_energy
 		}
 	}
 	modifier = {
@@ -46,7 +46,7 @@ agenda_sanae_ascension = {
 	agenda_cost = 7000
 	allow = {
 		any_owned_leader = {
-			has_trait = leader_trait_miracle
+			has_trait = thl_leader_trait_miracle
 		}
 	}
 	potential = {

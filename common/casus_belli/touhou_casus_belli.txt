@@ -17,7 +17,7 @@ cb_moriya_crusade = {
 		is_country_type = default
 		exists = from
 		any_owned_leader = {
-			has_trait = leader_trait_miracle
+			has_trait = thl_leader_trait_miracle
 		}
 		NOR = {
 			has_ethic = ethic_gestalt_consciousness

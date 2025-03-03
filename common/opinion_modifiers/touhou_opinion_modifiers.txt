@@ -4,7 +4,7 @@ triggered_opinion_of_materialist_turned = {
 		from = { is_materialist = yes }
 		any_owned_leader = {
 			is_councilor = yes
-			has_trait = leader_trait_common_sense_killer
+			has_trait = thl_leader_trait_common_sense_killer
 		}
 	}
 	opinion = {
@@ -39,7 +39,7 @@ triggered_opinion_of_spiritualist_turned = {
 		from = { is_spiritualist = yes }
 		any_owned_leader = {
 			is_councilor = yes
-			has_trait = leader_trait_common_sense_killer
+			has_trait = thl_leader_trait_common_sense_killer
 		}
 	}
 	opinion = {

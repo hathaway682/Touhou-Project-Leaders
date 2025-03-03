@@ -27,12 +27,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/traits/leader_trait_icons/ltrait_perfected_genes.dds"
 	}
 	spriteType = {
-		name = "GFX_leader_trait_frog_bless"
-		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_frog_bless.dds"
+		name = "GFX_thl_leader_trait_frog_bless"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/thl_leader_trait_frog_bless.dds"
 	}
 	spriteType = {
-		name = "GFX_leader_trait_snake_bless"
-		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_snake_bless.dds"
+		name = "GFX_thl_leader_trait_snake_bless"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/thl_leader_trait_snake_bless.dds"
 	}
 
 	spriteType = {

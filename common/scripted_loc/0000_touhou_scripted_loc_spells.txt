@@ -8,7 +8,7 @@ defined_text = {
 					value = 1
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_fly
+					has_trait = thl_leader_trait_fly
 				}
 			}
 		}
@@ -22,7 +22,7 @@ defined_text = {
 					value = 2
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_magic
+					has_trait = thl_leader_trait_magic
 				}
 			}
 		}
@@ -47,7 +47,7 @@ defined_text = {
 					value = 4
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_ice
+					has_trait = thl_leader_trait_ice
 				}
 			}
 		}
@@ -61,7 +61,7 @@ defined_text = {
 					value = 5
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_kongfu
+					has_trait = thl_leader_trait_kongfu
 				}
 			}
 		}
@@ -75,7 +75,7 @@ defined_text = {
 					value = 6
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_elements
+					has_trait = thl_leader_trait_elements
 				}
 			}
 		}
@@ -89,7 +89,7 @@ defined_text = {
 					value = 7
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_time
+					has_trait = thl_leader_trait_time
 				}
 			}
 		}
@@ -103,7 +103,7 @@ defined_text = {
 					value = 8
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_destiny_manipulation
+					has_trait = thl_leader_trait_destiny_manipulation
 				}
 			}
 		}
@@ -150,7 +150,7 @@ defined_text = {
 					value = 12
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_dolls
+					has_trait = thl_leader_trait_dolls
 				}
 			}
 		}
@@ -208,7 +208,7 @@ defined_text = {
 					value = 17
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_kendo
+					has_trait = thl_leader_trait_kendo
 				}
 			}
 		}
@@ -222,7 +222,7 @@ defined_text = {
 					value = 18
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_death
+					has_trait = thl_leader_trait_death
 				}
 			}
 		}
@@ -258,7 +258,7 @@ defined_text = {
 					value = 21
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_density
+					has_trait = thl_leader_trait_density
 				}
 			}
 		}
@@ -316,7 +316,7 @@ defined_text = {
 					value = 26
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_wave_length
+					has_trait = thl_leader_trait_wave_length
 				}
 			}
 		}
@@ -363,7 +363,7 @@ defined_text = {
 					value = 30
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_wind
+					has_trait = thl_leader_trait_wind
 				}
 			}
 		}
@@ -389,8 +389,8 @@ defined_text = {
 				}
 				any_owned_leader = {
 					OR = {
-						has_trait = leader_trait_flower
-						has_trait = leader_trait_flower_commander
+						has_trait = thl_leader_trait_flower
+						has_trait = thl_leader_trait_flower_commander
 					}
 				}
 			}
@@ -405,7 +405,7 @@ defined_text = {
 					value = 33
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_distance
+					has_trait = thl_leader_trait_distance
 				}
 			}
 		}
@@ -419,7 +419,7 @@ defined_text = {
 					value = 34
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_trial
+					has_trait = thl_leader_trait_trial
 				}
 			}
 		}
@@ -433,7 +433,7 @@ defined_text = {
 					value = 35
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_fall
+					has_trait = thl_leader_trait_fall
 				}
 			}
 		}
@@ -461,7 +461,7 @@ defined_text = {
 					value = 37
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_jinx
+					has_trait = thl_leader_trait_jinx
 				}
 			}
 		}
@@ -475,7 +475,7 @@ defined_text = {
 					value = 38
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_water
+					has_trait = thl_leader_trait_water
 				}
 			}
 		}
@@ -500,7 +500,7 @@ defined_text = {
 					value = 40
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 			}
 		}
@@ -547,7 +547,7 @@ defined_text = {
 					value = 44
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_earthquake
+					has_trait = thl_leader_trait_earthquake
 				}
 			}
 		}
@@ -605,7 +605,7 @@ defined_text = {
 					value = 49
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_mind_reader
+					has_trait = thl_leader_trait_mind_reader
 				}
 			}
 		}
@@ -619,7 +619,7 @@ defined_text = {
 					value = 50
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_corpse_travel
+					has_trait = thl_leader_trait_corpse_travel
 				}
 			}
 		}
@@ -633,7 +633,7 @@ defined_text = {
 					value = 51
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_nuclear
+					has_trait = thl_leader_trait_nuclear
 				}
 			}
 		}
@@ -647,7 +647,7 @@ defined_text = {
 					value = 52
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_subconscious
+					has_trait = thl_leader_trait_subconscious
 				}
 			}
 		}

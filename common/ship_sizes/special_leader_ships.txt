@@ -44,9 +44,10 @@ artificial_star = {
     collision_radius = @titan_collision_radius
     modifier = {
         ship_evasion_mult = -1
-        ship_weapon_range_mult = 1.5
-        ship_fire_rate_mult = 0.5
-        ship_weapon_damage = 0.5
+    }
+    ship_modifier = {
+        ship_weapon_range_mult = 3
+        ship_weapon_damage = 1
     }
     max_hitpoints = 100000
     hull_scale = 4
@@ -81,6 +82,8 @@ oni_cloud = {
     acceleration = 0.3
     modifier = {
         ship_evasion_add = 90
+    }
+    ship_modifier = {
         ship_shield_add = 10000
         ship_shield_regen_add_perc = 100
         ship_hull_regen_add_static = 100
@@ -126,6 +129,8 @@ space_dragon_nitori_baby = {
     collision_radius = 15
     modifier = {
         ship_evasion_add = 25
+    }
+    ship_modifier = {
         ships_upkeep_mult = -1
     }
     max_hitpoints = 10000
@@ -145,7 +150,7 @@ space_dragon_nitori_baby = {
 
     potential_country = {
         any_owned_leader = {
-            has_trait = leader_trait_super_youkai_slug_3
+            has_trait = thl_leader_trait_super_youkai_slug_3
         }
     }
 
@@ -186,7 +191,7 @@ marisa_cannon = {
         ship_evasion_add = @battleship_evasion
     }
     ship_modifier = {
-        ship_weapon_range_mult = 0.20
+        ship_weapon_range_mult = 0.50
     }
     size_multiplier = 8
     fleet_slot_size = 8
@@ -207,7 +212,7 @@ marisa_cannon = {
     prerequisites = { "tech_battleships" }
     potential_country = {
         any_owned_leader = {
-            has_trait = leader_trait_magic
+            has_trait = thl_leader_trait_magic
         }
     }
     class = shipclass_military
@@ -236,7 +241,7 @@ marisa_cannon_titanic = {
         ship_evasion_add = @battleship_evasion
     }
     ship_modifier = {
-        ship_weapon_range_mult = 0.20
+        ship_weapon_range_mult = 0.50
     }
     size_multiplier = 8
     fleet_slot_size = 8
@@ -257,7 +262,7 @@ marisa_cannon_titanic = {
     prerequisites = { "tech_titans" }
     potential_country = {
         any_owned_leader = {
-            has_trait = leader_trait_magic
+            has_trait = thl_leader_trait_magic
         }
     }
     class = shipclass_military

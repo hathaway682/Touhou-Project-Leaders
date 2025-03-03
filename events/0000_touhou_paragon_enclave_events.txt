@@ -204,7 +204,7 @@ country_event = {
             }
             not = {
                 any_owned_leader = {
-                    has_trait = leader_trait_water
+                    has_trait = thl_leader_trait_water
                 }
             }
         }
@@ -1634,7 +1634,7 @@ country_event = {
             }
             not = {
                 any_owned_leader = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
             }
         }
@@ -1912,7 +1912,7 @@ country_event = {
                 AND = {
                     is_spiritualist = no
                     any_owned_leader = {
-                        has_trait = leader_trait_fly
+                        has_trait = thl_leader_trait_fly
                         check_variable_arithmetic = {
                             which = touhou_variable_reimu_excessive_amount
                             value >= 300
@@ -1928,7 +1928,7 @@ country_event = {
             is_materialist = no
             is_spiritualist = no
             any_owned_leader = {
-                has_trait = leader_trait_fly
+                has_trait = thl_leader_trait_fly
                 check_variable_arithmetic = {
                     which = touhou_variable_reimu_excessive_amount
                     value >= 150
@@ -1945,7 +1945,7 @@ country_event = {
                     is_materialist = no
                     is_spiritualist = no
                     any_owned_leader = {
-                        has_trait = leader_trait_fly
+                        has_trait = thl_leader_trait_fly
                         check_variable_arithmetic = {
                             which = touhou_variable_reimu_excessive_amount
                             value < 150
@@ -1976,15 +1976,15 @@ country_event = {
                         num_negative_traits = 4
                     }
                     nor = {
-                        has_trait = leader_trait_excessive_reimu
-                        has_trait = leader_trait_short_life
+                        has_trait = thl_leader_trait_excessive_reimu
+                        has_trait = thl_leader_trait_short_life
                     }
                 }
                 remove_all_negative_traits = yes
             }
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2014,7 +2014,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2048,7 +2048,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2082,7 +2082,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2135,7 +2135,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2174,7 +2174,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2221,7 +2221,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2237,8 +2237,8 @@ country_event = {
         random_owned_leader = {
             limit = {
                 nor = {
-                    has_trait = leader_trait_time
-                    has_trait = leader_trait_short_life
+                    has_trait = thl_leader_trait_time
+                    has_trait = thl_leader_trait_short_life
                 }
             }
             add_trait = leader_trait_intemporal
@@ -2265,7 +2265,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2316,7 +2316,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2355,7 +2355,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2396,7 +2396,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2435,7 +2435,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2474,7 +2474,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2513,7 +2513,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2552,7 +2552,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2591,7 +2591,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 change_variable = {
                     which = touhou_variable_reimu_excessive_amount
@@ -2630,7 +2630,7 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
                 set_variable_to_random_value = {
                     which = touhou_variable_reimu_excessive_amount

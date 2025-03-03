@@ -12,7 +12,7 @@ country_event = {
 	event_chain = touhou_sanae_mission_chain
 	trigger = {
 		any_owned_leader = {
-			has_trait = leader_trait_miracle
+			has_trait = thl_leader_trait_miracle
 		}
 	}
 	option = {
@@ -132,7 +132,7 @@ country_event = {
 		every_owned_leader = {
 			if = {
 				limit = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 				add_trait = leader_trait_fleet_logistician
 				add_trait = leader_trait_armada_logistician_3
@@ -237,7 +237,7 @@ country_event = {
 		every_owned_leader = {
 			if = {
 				limit = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 				add_trait = leader_trait_touhou_architectural_interest_2
 			}
@@ -285,7 +285,7 @@ country_event = {
 		every_owned_leader = {
 			if = {
 				limit = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 				add_trait = leader_trait_scrapper_2
 			}
@@ -416,7 +416,7 @@ country_event = {
 			is_under_colonization = no
 			exists = leader
 			leader = {
-				has_trait = leader_trait_miracle
+				has_trait = thl_leader_trait_miracle
 			}
 			num_assigned_jobs = {
 				job = researcher
@@ -432,7 +432,7 @@ country_event = {
 		every_owned_leader = {
 			if = {
 				limit = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 				add_trait = leader_trait_adaptable_2
 			}
@@ -470,7 +470,7 @@ country_event = {
 		has_modifier = shroud_cooldown
 		has_tradition = tr_psionics_finish
 		any_owned_leader = {
-			has_trait = leader_trait_miracle
+			has_trait = thl_leader_trait_miracle
 		}
 	}
 	option = {
@@ -601,7 +601,7 @@ country_event = {
 		}
 		any_owned_leader = {
 			is_councilor = yes
-			has_trait = leader_trait_miracle
+			has_trait = thl_leader_trait_miracle
 		}
 	}
 	option = {
@@ -621,7 +621,7 @@ country_event = {
 		every_owned_leader = {
 			if = {
 				limit = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 				change_background_ethic = ethic_materialist
 			}
@@ -657,7 +657,7 @@ country_event = {
 		}
 		any_owned_fleet = {
 			leader = {
-				has_trait = leader_trait_miracle
+				has_trait = thl_leader_trait_miracle
 			}
 			fleet_size >= 180
 		}
@@ -726,14 +726,14 @@ country_event = {
 			limit = {
 				not = {
 					any_owned_leader = {
-						has_trait = leader_trait_robotist_sanae
+						has_trait = thl_leader_trait_robotist_sanae
 					}
 				}
 			}
 			every_owned_leader = {
 				if = {
 					limit = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 					}
 					leader_event = { id = touhou_paragon.40310 days = 1 random = 3}
 				}
@@ -978,7 +978,7 @@ country_event = {
 			any_ground_combat_attacker = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 			}
 		}
@@ -988,14 +988,14 @@ country_event = {
 		allow = {
 			not = {
 				any_owned_leader = {
-					has_trait = leader_trait_robotist_sanae
+					has_trait = thl_leader_trait_robotist_sanae
 				}
 			}
 		}
 		every_owned_leader = {
 			if = {
 				limit = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 				add_trait = leader_trait_dreaded_2
 				add_trait = leader_trait_heavy_hitter_2
@@ -1006,13 +1006,13 @@ country_event = {
 		name = touhou_paragon_mission.40315.b
 		allow = {
 			any_owned_leader = {
-				has_trait = leader_trait_robotist_sanae
+				has_trait = thl_leader_trait_robotist_sanae
 			}
 		}
 		every_owned_leader = {
 			if = {
 				limit = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 				set_leader_flag = touhou_flag_sanae_robotist_update
 			}
@@ -1064,7 +1064,7 @@ country_event = {
 		allow = {
 			has_civic = civic_technocracy
 			any_owned_leader = {
-				has_trait = leader_trait_fly
+				has_trait = thl_leader_trait_fly
 			}
 		}
 		add_modifier = {
@@ -1073,9 +1073,9 @@ country_event = {
 		set_country_flag = touhou_flag_sanae_headresearcher_update
 		every_owned_leader = {
 			limit = {
-				has_trait = leader_trait_fly
+				has_trait = thl_leader_trait_fly
 			}
-			add_trait = leader_trait_fake_technocracy
+			add_trait = thl_leader_trait_fake_technocracy
 		}
 	}
 	after = {
@@ -1986,63 +1986,63 @@ country_event = {
 	option = {
 		name = touhou_paragon_mission.40325.a
 		every_owned_leader = {
-			limit = { has_trait = leader_trait_miracle }
+			limit = { has_trait = thl_leader_trait_miracle }
 			if = {
 				limit = {
-					has_trait = leader_trait_snake_bless
+					has_trait = thl_leader_trait_snake_bless
 				}
-				remove_trait = leader_trait_snake_bless
+				remove_trait = thl_leader_trait_snake_bless
 			}
 			if = {
 				limit = {
-					has_trait = leader_trait_snake_bless_2
+					has_trait = thl_leader_trait_snake_bless_2
 				}
-				remove_trait = leader_trait_snake_bless_2
+				remove_trait = thl_leader_trait_snake_bless_2
 			}
 			if = {
 				limit = {
-					has_trait = leader_trait_snake_bless_3
+					has_trait = thl_leader_trait_snake_bless_3
 				}
-				remove_trait = leader_trait_snake_bless_3
+				remove_trait = thl_leader_trait_snake_bless_3
 			}
 			if = {
 				limit = {
-					has_trait = leader_trait_frog_bless
+					has_trait = thl_leader_trait_frog_bless
 				}
-				remove_trait = leader_trait_frog_bless
+				remove_trait = thl_leader_trait_frog_bless
 			}
 			if = {
 				limit = {
-					has_trait = leader_trait_frog_bless_2
+					has_trait = thl_leader_trait_frog_bless_2
 				}
-				remove_trait = leader_trait_frog_bless_2
+				remove_trait = thl_leader_trait_frog_bless_2
 			}
 			if = {
 				limit = {
-					has_trait = leader_trait_frog_bless_3
+					has_trait = thl_leader_trait_frog_bless_3
 				}
-				remove_trait = leader_trait_frog_bless_3
+				remove_trait = thl_leader_trait_frog_bless_3
 			}
 			add_trait = leader_trait_sanae_complete
 			if = {
 				limit = {
-					has_trait = leader_trait_regeneration
+					has_trait = thl_leader_trait_regeneration
 				}
-				remove_trait = leader_trait_regeneration
+				remove_trait = thl_leader_trait_regeneration
 			}
 			if = {
 				limit = {
-					has_trait = leader_trait_regeneration_2
+					has_trait = thl_leader_trait_regeneration_2
 				}
-				remove_trait = leader_trait_regeneration_2
+				remove_trait = thl_leader_trait_regeneration_2
 			}
 			if = {
 				limit = {
 					NOT = {
-						has_trait = leader_trait_regeneration_3
+						has_trait = thl_leader_trait_regeneration_3
 					}
 				}
-				add_trait = leader_trait_regeneration_3
+				add_trait = thl_leader_trait_regeneration_3
 			}
 		}
 	}

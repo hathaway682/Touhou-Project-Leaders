@@ -37,7 +37,7 @@ information_war_touhou = {
 	icon = "GFX_edict_type_policy"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_information_war
+			has_trait = thl_leader_trait_information_war
 		}
 	}
 	resources = {
@@ -48,7 +48,7 @@ information_war_touhou = {
 	}
 	allow = {
 		any_owned_leader = {
-			has_trait = leader_trait_information_war
+			has_trait = thl_leader_trait_information_war
 		}
 	}
 	effect = {
@@ -63,7 +63,7 @@ rabbit_spy_touhou = {
 	icon = "GFX_edict_type_policy"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_rabbit_spy
+			has_trait = thl_leader_trait_rabbit_spy
 		}
 	}
 	resources = {
@@ -71,7 +71,7 @@ rabbit_spy_touhou = {
 	}
 	allow = {
 		any_owned_leader = {
-			has_trait = leader_trait_rabbit_spy
+			has_trait = thl_leader_trait_rabbit_spy
 		}
 		custom_tooltip = {
 			fail_text = already_open_tewi_trade_ui
@@ -99,7 +99,7 @@ gray_thaumaturgy = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_miracle
+			has_trait = thl_leader_trait_miracle
 		}
 	}
 	resources = {
@@ -137,7 +137,7 @@ poison_gas = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_prosperity_and_decline
+				has_trait = thl_leader_trait_prosperity_and_decline
 				is_councilor = yes
 			}
 		}
@@ -174,7 +174,7 @@ mutant_gas = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_prosperity_and_decline
+				has_trait = thl_leader_trait_prosperity_and_decline
 				is_councilor = yes
 			}
 		}
@@ -203,14 +203,14 @@ distance_active = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_distance
+			has_trait = thl_leader_trait_distance
 		}
 	}
 	allow = {
 		any_owned_fleet = {
 			exists = leader
 			leader = {
-				has_trait = leader_trait_distance
+				has_trait = thl_leader_trait_distance
 			}
 		}
 	}
@@ -224,7 +224,7 @@ distance_active = {
 		every_owned_fleet = {
 			limit = {
 				exists = leader
-				leader = { has_trait = leader_trait_distance }
+				leader = { has_trait = thl_leader_trait_distance }
 			}
 			solar_system = {
 				every_fleet_in_system = {
@@ -268,14 +268,14 @@ time_active = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_time
+			has_trait = thl_leader_trait_time
 		}
 	}
 	allow = {
 		any_owned_fleet = {
 			exists = leader
 			leader = {
-				has_trait = leader_trait_time
+				has_trait = thl_leader_trait_time
 			}
 		}
 	}
@@ -289,7 +289,7 @@ time_active = {
 		every_owned_fleet = {
 			limit = {
 				exists = leader
-				leader = { has_trait = leader_trait_time }
+				leader = { has_trait = thl_leader_trait_time }
 			}
 			solar_system = {
 				every_fleet_in_system = {
@@ -331,14 +331,14 @@ za_warudo_active = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_time
+			has_trait = thl_leader_trait_time
 		}
 	}
 	allow = {
 		any_owned_fleet = {
 			exists = leader
 			leader = {
-				has_trait = leader_trait_time
+				has_trait = thl_leader_trait_time
 			}
 		}
 	}
@@ -352,7 +352,7 @@ za_warudo_active = {
 		every_owned_fleet = {
 			limit = {
 				exists = leader
-				leader = { has_trait = leader_trait_time }
+				leader = { has_trait = thl_leader_trait_time }
 			}
 			solar_system = {
 				every_fleet_in_system = {
@@ -380,14 +380,14 @@ time_kill = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_time
+			has_trait = thl_leader_trait_time
 		}
 	}
 	allow = {
 		any_owned_army = {
 			exists = leader
 			leader = {
-				has_trait = leader_trait_time
+				has_trait = thl_leader_trait_time
 			}
 			exists = planet
 			planet = {
@@ -395,13 +395,13 @@ time_kill = {
 					any_ground_combat_attacker = {
 						exists = leader
 						leader = {
-							has_trait = leader_trait_time
+							has_trait = thl_leader_trait_time
 						}
 					}
 					any_ground_combat_defender = {
 						exists = leader
 						leader = {
-							has_trait = leader_trait_time
+							has_trait = thl_leader_trait_time
 						}
 					}
 				}
@@ -418,7 +418,7 @@ time_kill = {
 		random_owned_army = {
 			limit = {
 				exists = leader
-				leader = { has_trait = leader_trait_time }
+				leader = { has_trait = thl_leader_trait_time }
 			}
 			planet = {
 				if = {
@@ -426,7 +426,7 @@ time_kill = {
 						any_ground_combat_attacker = {
 							exists = leader
 							leader = {
-								has_trait = leader_trait_time
+								has_trait = thl_leader_trait_time
 							}
 						}
 					}
@@ -445,7 +445,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 2
 										}
 									}
@@ -464,7 +464,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 3
 										}
 									}
@@ -483,7 +483,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 4
 										}
 									}
@@ -502,7 +502,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 5
 										}
 									}
@@ -521,7 +521,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 6
 										}
 									}
@@ -540,7 +540,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 7
 										}
 									}
@@ -559,7 +559,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 8
 										}
 									}
@@ -578,7 +578,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 9
 										}
 									}
@@ -597,7 +597,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 10
 										}
 									}
@@ -617,7 +617,7 @@ time_kill = {
 						any_ground_combat_defender = {
 							exists = leader
 							leader = {
-								has_trait = leader_trait_time
+								has_trait = thl_leader_trait_time
 							}
 						}
 					}
@@ -636,7 +636,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 2
 										}
 									}
@@ -655,7 +655,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 3
 										}
 									}
@@ -674,7 +674,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 4
 										}
 									}
@@ -693,7 +693,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 5
 										}
 									}
@@ -712,7 +712,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 6
 										}
 									}
@@ -731,7 +731,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 7
 										}
 									}
@@ -750,7 +750,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 8
 										}
 									}
@@ -769,7 +769,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 9
 										}
 									}
@@ -788,7 +788,7 @@ time_kill = {
 								NOT = {
 									root = {
 										any_owned_leader = {
-											has_trait = leader_trait_time
+											has_trait = thl_leader_trait_time
 											has_skill >= 10
 										}
 									}
@@ -814,14 +814,14 @@ bat_swarm = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_destiny_manipulation
+			has_trait = thl_leader_trait_destiny_manipulation
 		}
 	}
 	allow = {
 		any_owned_fleet = {
 			exists = leader
 			leader = {
-				has_trait = leader_trait_destiny_manipulation
+				has_trait = thl_leader_trait_destiny_manipulation
 			}
 		}
 	}
@@ -868,7 +868,7 @@ bat_swarm = {
 			save_global_event_target_as = bat_swarm_owner
 			every_owned_fleet = {
 				limit = {
-					leader = { has_trait = leader_trait_blood_magic }
+					leader = { has_trait = thl_leader_trait_blood_magic }
 				}
 				save_event_target_as = bat_swarm_creator
 				solar_system = {
@@ -891,14 +891,14 @@ red_fog = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_destiny_manipulation
+			has_trait = thl_leader_trait_destiny_manipulation
 		}
 	}
 	allow = {
 		any_owned_fleet = {
 			exists = leader
 			leader = {
-				has_trait = leader_trait_destiny_manipulation
+				has_trait = thl_leader_trait_destiny_manipulation
 			}
 		}
 	}
@@ -947,7 +947,7 @@ red_fog = {
 				every_owned_fleet = {
 					limit = {
 						exists = leader
-						leader = { has_trait = leader_trait_blood_magic }
+						leader = { has_trait = thl_leader_trait_blood_magic }
 					}
 					save_event_target_as = red_fog_creator
 					solar_system = {
@@ -970,20 +970,20 @@ gungnir = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_gungnir
+			has_trait = thl_leader_trait_gungnir
 		}
 	}
 	allow = {
 		any_owned_fleet = {
 			exists = leader
 			leader = {
-				has_trait = leader_trait_gungnir
+				has_trait = thl_leader_trait_gungnir
 			}
 		}
 		custom_tooltip = {
 			fail_text = edict_gungnir_fail_text
 			any_owned_fleet = {
-				leader = { has_trait = leader_trait_gungnir }
+				leader = { has_trait = thl_leader_trait_gungnir }
 				solar_system = {
 					any_ship_in_system = {
 						OR = {
@@ -1026,7 +1026,7 @@ gungnir = {
 	effect = {
 		every_owned_fleet = {
 			limit = {
-				leader = { has_trait = leader_trait_gungnir }
+				leader = { has_trait = thl_leader_trait_gungnir }
 			}
 			solar_system = {
 				ordered_ship_in_system = {
@@ -1088,19 +1088,19 @@ gungnir_starbase = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_gungnir
+			has_trait = thl_leader_trait_gungnir
 		}
 	}
 	allow = {
 		any_owned_fleet = {
 			leader = {
-				has_trait = leader_trait_gungnir
+				has_trait = thl_leader_trait_gungnir
 			}
 		}
 		custom_tooltip = {
 			fail_text = edict_gungnir_fail_text
 			any_owned_fleet = {
-				leader = { has_trait = leader_trait_gungnir }
+				leader = { has_trait = thl_leader_trait_gungnir }
 				solar_system = {
 					any_ship_in_system = {
 						OR = {
@@ -1128,7 +1128,7 @@ gungnir_starbase = {
 	effect = {
 		every_owned_fleet = {
 			limit = {
-				leader = { has_trait = leader_trait_gungnir }
+				leader = { has_trait = thl_leader_trait_gungnir }
 			}
 			solar_system = {
 				ordered_ship_in_system = {
@@ -1176,12 +1176,12 @@ destiny_manipulation = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_destiny_manipulation
+			has_trait = thl_leader_trait_destiny_manipulation
 		}
 	}
 	allow = {
 		any_owned_leader = {
-			has_trait = leader_trait_destiny_manipulation
+			has_trait = thl_leader_trait_destiny_manipulation
 		}
 	}
 	resources = {
@@ -1190,7 +1190,7 @@ destiny_manipulation = {
 	effect = {
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_destiny_manipulation
+				has_trait = thl_leader_trait_destiny_manipulation
 			}
 			leader_event = {
 				id = touhou_paragon_effect.707
@@ -1205,7 +1205,7 @@ flower_commander = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_flower_commander
+			has_trait = thl_leader_trait_flower_commander
 		}
 	}
 	resources = {
@@ -1215,7 +1215,7 @@ flower_commander = {
 		any_owned_fleet = {
 			exists = leader
 			leader = {
-				has_trait = leader_trait_flower_commander
+				has_trait = thl_leader_trait_flower_commander
 			}
 		}
 		custom_tooltip = {
@@ -1232,7 +1232,7 @@ flower_commander = {
 			save_global_event_target_as = double_spark_owner
 			every_owned_fleet = {
 				limit = { exists = leader
-					leader = { has_trait = leader_trait_flower_commander }
+					leader = { has_trait = thl_leader_trait_flower_commander }
 				}
 				save_event_target_as = double_spark_creator
 				solar_system = {
@@ -1255,7 +1255,7 @@ artifical_sun_edict = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_nuclear
+			has_trait = thl_leader_trait_nuclear
 		}
 	}
 	resources = {
@@ -1268,7 +1268,7 @@ artifical_sun_edict = {
 		any_owned_fleet = {
 			exists = leader
 			leader = {
-				has_trait = leader_trait_nuclear
+				has_trait = thl_leader_trait_nuclear
 			}
 		}
 	}
@@ -1278,7 +1278,7 @@ artifical_sun_edict = {
 			save_global_event_target_as = artifical_sun_owner
 			every_owned_fleet = {
 				limit = { exists = leader
-					leader = { has_trait = leader_trait_nuclear }
+					leader = { has_trait = thl_leader_trait_nuclear }
 				}
 				save_event_target_as = artifical_sun_creator
 				solar_system = {
@@ -1297,7 +1297,7 @@ minor_sun_edict = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_nuclear
+			has_trait = thl_leader_trait_nuclear
 		}
 	}
 	resources = {
@@ -1310,7 +1310,7 @@ minor_sun_edict = {
 		any_owned_fleet = {
 			exists = leader
 			leader = {
-				has_trait = leader_trait_nuclear
+				has_trait = thl_leader_trait_nuclear
 			}
 		}
 		NOT = {
@@ -1329,7 +1329,7 @@ minor_sun_edict = {
 				limit = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_nuclear
+						has_trait = thl_leader_trait_nuclear
 					}
 				}
 				create_ship = {
@@ -1347,7 +1347,7 @@ crack_star_edict = {
 	icon = "GFX_edict_type_time"
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_nuclear
+			has_trait = thl_leader_trait_nuclear
 		}
 	}
 	resources = {
@@ -1362,7 +1362,7 @@ crack_star_edict = {
 			exists = leader
 			exists = solar_system
 			leader = {
-				has_trait = leader_trait_nuclear
+				has_trait = thl_leader_trait_nuclear
 			}
 		}
 	}
@@ -1373,7 +1373,7 @@ crack_star_edict = {
 				limit = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_nuclear
+						has_trait = thl_leader_trait_nuclear
 					}
 				}
 				unassign_leader = this
@@ -1445,178 +1445,178 @@ reset_touhou_leader_portrait = {
 	effect = {
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_earthquake
+				has_trait = thl_leader_trait_earthquake
 			}
 			change_leader_portrait = x121
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_density
+				has_trait = thl_leader_trait_density
 			}
 			change_leader_portrait = x98
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_miracle
+				has_trait = thl_leader_trait_miracle
 			}
 			change_leader_portrait = x72
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_ice
+				has_trait = thl_leader_trait_ice
 			}
 			change_leader_portrait = x117
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_kongfu
+				has_trait = thl_leader_trait_kongfu
 			}
 			change_leader_portrait = x89
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_fly
+				has_trait = thl_leader_trait_fly
 			}
 			change_leader_portrait = x1
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_magic
+				has_trait = thl_leader_trait_magic
 			}
 			change_leader_portrait = x2
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_wave_length
+				has_trait = thl_leader_trait_wave_length
 			}
 			change_leader_portrait = x6
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_kendo
+				has_trait = thl_leader_trait_kendo
 			}
 			change_leader_portrait = x150
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_time
+				has_trait = thl_leader_trait_time
 			}
 			change_leader_portrait = x88
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_border_merry
+				has_trait = thl_leader_trait_border_merry
 			}
 			change_leader_portrait = x48
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_star_located
+				has_trait = thl_leader_trait_star_located
 			}
 			change_leader_portrait = x49
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_mind_reader
+				has_trait = thl_leader_trait_mind_reader
 			}
 			change_leader_portrait = x81
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_subconscious
+				has_trait = thl_leader_trait_subconscious
 			}
 			change_leader_portrait = x82
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_wind
+				has_trait = thl_leader_trait_wind
 			}
 			change_leader_portrait = x105
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_trial
+				has_trait = thl_leader_trait_trial
 			}
 			change_leader_portrait = x110
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_distance
+				has_trait = thl_leader_trait_distance
 			}
 			change_leader_portrait = x108
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_elements
+				has_trait = thl_leader_trait_elements
 			}
 			change_leader_portrait = x91
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_destiny_manipulation
+				has_trait = thl_leader_trait_destiny_manipulation
 			}
 			change_leader_portrait = x63
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_dolls
+				has_trait = thl_leader_trait_dolls
 			}
 			change_leader_portrait = x10
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_death
+				has_trait = thl_leader_trait_death
 			}
 			change_leader_portrait = x16
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_earthquake
+				has_trait = thl_leader_trait_earthquake
 			}
 			change_leader_portrait = x121
 		}
 		random_owned_leader = {
 			limit = {
 				OR = {
-					has_trait = leader_trait_flower
-					has_trait = leader_trait_flower_commander
+					has_trait = thl_leader_trait_flower
+					has_trait = thl_leader_trait_flower_commander
 				}
 			}
 			change_leader_portrait = x119
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_words
+				has_trait = thl_leader_trait_words
 			}
 			change_leader_portrait = x54
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_memory
+				has_trait = thl_leader_trait_memory
 			}
 			change_leader_portrait = x53
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_corpse_travel
+				has_trait = thl_leader_trait_corpse_travel
 			}
 			change_leader_portrait = x112
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_nuclear
+				has_trait = thl_leader_trait_nuclear
 			}
 			change_leader_portrait = x77
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_water
+				has_trait = thl_leader_trait_water
 			}
 			change_leader_portrait = x125
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_fall
+				has_trait = thl_leader_trait_fall
 			}
 			change_leader_portrait = x73
 		}
@@ -1628,19 +1628,19 @@ reset_touhou_leader_portrait = {
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_jinx
+				has_trait = thl_leader_trait_jinx
 			}
 			change_leader_portrait = x107
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_song
+				has_trait = thl_leader_trait_song
 			}
 			change_leader_portrait = x3
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_luck
+				has_trait = thl_leader_trait_luck
 			}
 			change_leader_portrait = x9
 		}
@@ -1667,7 +1667,7 @@ sanae_mission_technocracy_for_spiritualist = {
 			poi = touhou_sanae_mission_chain_tech.4
 		}
 		any_owned_leader = {
-			has_trait = leader_trait_miracle
+			has_trait = thl_leader_trait_miracle
 		}
 		OR = {
 			has_ethic = ethic_spiritualist
@@ -1675,7 +1675,7 @@ sanae_mission_technocracy_for_spiritualist = {
 		}
 		not = {
 			any_owned_leader = {
-				has_trait = leader_trait_books
+				has_trait = thl_leader_trait_books
 			}
 		}
 	}
@@ -1691,7 +1691,7 @@ sanae_mission_technocracy_for_spiritualist = {
 			poi = touhou_sanae_mission_chain_tech.4
 		}
 		any_owned_leader = {
-			has_trait = leader_trait_miracle
+			has_trait = thl_leader_trait_miracle
 		}
 		OR = {
 			has_ethic = ethic_spiritualist
@@ -1699,7 +1699,7 @@ sanae_mission_technocracy_for_spiritualist = {
 		}
 		not = {
 			any_owned_leader = {
-				has_trait = leader_trait_books
+				has_trait = thl_leader_trait_books
 			}
 		}
 	}

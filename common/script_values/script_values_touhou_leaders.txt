@@ -187,71 +187,71 @@ touhou_leader_id = {
 	base = 0
 	modifier = {
 		add = 1
-		has_trait = leader_trait_fly
+		has_trait = thl_leader_trait_fly
 	}
 	modifier = {
 		add = 2
-		has_trait = leader_trait_magic
+		has_trait = thl_leader_trait_magic
 	}
 	modifier = {
 		add = 4
-		has_trait = leader_trait_ice
+		has_trait = thl_leader_trait_ice
 	}
 	modifier = {
 		add = 5
-		has_trait = leader_trait_kongfu
+		has_trait = thl_leader_trait_kongfu
 	}
 	modifier = {
 		add = 6
-		has_trait = leader_trait_elements
+		has_trait = thl_leader_trait_elements
 	}
 	modifier = {
 		add = 7
-		has_trait = leader_trait_time
+		has_trait = thl_leader_trait_time
 	}
 	modifier = {
 		add = 8
-		has_trait = leader_trait_destiny_manipulation
+		has_trait = thl_leader_trait_destiny_manipulation
 	}
 	modifier = {
 		add = 12
-		has_trait = leader_trait_dolls
+		has_trait = thl_leader_trait_dolls
 	}
 	modifier = {
 		add = 17
-		has_trait = leader_trait_kendo
+		has_trait = thl_leader_trait_kendo
 	}
 	modifier = {
 		add = 18
-		has_trait = leader_trait_death
+		has_trait = thl_leader_trait_death
 	}
 	modifier = {
 		add = 21
-		has_trait = leader_trait_density
+		has_trait = thl_leader_trait_density
 	}
 	modifier = {
 		add = 26
-		has_trait = leader_trait_wave_length
+		has_trait = thl_leader_trait_wave_length
 	}
 	modifier = {
 		add = 30
-		has_trait = leader_trait_wind
+		has_trait = thl_leader_trait_wind
 	}
 	modifier = {
 		add = 32
-		has_trait = leader_trait_flower
+		has_trait = thl_leader_trait_flower
 	}
 	modifier = {
 		add = 32
-		has_trait = leader_trait_flower_commander
+		has_trait = thl_leader_trait_flower_commander
 	}
 	modifier = {
 		add = 33
-		has_trait = leader_trait_distance
+		has_trait = thl_leader_trait_distance
 	}
 	modifier = {
 		add = 35
-		has_trait = leader_trait_fall
+		has_trait = thl_leader_trait_fall
 	}
 	modifier = {
 		add = 36
@@ -259,35 +259,35 @@ touhou_leader_id = {
 	}
 	modifier = {
 		add = 37
-		has_trait = leader_trait_jinx
+		has_trait = thl_leader_trait_jinx
 	}
 	modifier = {
 		add = 38
-		has_trait = leader_trait_water
+		has_trait = thl_leader_trait_water
 	}
 	modifier = {
 		add = 40
-		has_trait = leader_trait_miracle
+		has_trait = thl_leader_trait_miracle
 	}
 	modifier = {
 		add = 44
-		has_trait = leader_trait_earthquake
+		has_trait = thl_leader_trait_earthquake
 	}
 	modifier = {
 		add = 49
-		has_trait = leader_trait_mind_reader
+		has_trait = thl_leader_trait_mind_reader
 	}
 	modifier = {
 		add = 50
-		has_trait = leader_trait_corpse_travel
+		has_trait = thl_leader_trait_corpse_travel
 	}
 	modifier = {
 		add = 51
-		has_trait = leader_trait_nuclear
+		has_trait = thl_leader_trait_nuclear
 	}
 	modifier = {
 		add = 52
-		has_trait = leader_trait_subconscious
+		has_trait = thl_leader_trait_subconscious
 	}
 }
 
@@ -305,19 +305,19 @@ leader_num_spell_cards = {
 	base = 0
 	modifier = {
 		add = 6
-		has_trait = leader_trait_fly
+		has_trait = thl_leader_trait_fly
 	}
 	modifier = {
 		add = 6
-		has_trait = leader_trait_magic
+		has_trait = thl_leader_trait_magic
 	}
 	modifier = {
 		add = 4
-		has_trait = leader_trait_subconscious
+		has_trait = thl_leader_trait_subconscious
 	}
 	modifier = {
 		add = 2
-		has_trait = leader_trait_fall
+		has_trait = thl_leader_trait_fall
 	}
 	modifier = {
 		add = 2
@@ -325,7 +325,7 @@ leader_num_spell_cards = {
 	}
 	modifier = {
 		add = 4
-		has_trait = leader_trait_jinx
+		has_trait = thl_leader_trait_jinx
 	}
 }
 
@@ -369,4 +369,5 @@ bombs_plus_jinx = {
 touhou_value_reimu_excessive_amount = {
 	base = 5
 	add = touhou_variable_reimu_excessive_amount
+	max = 600
 }

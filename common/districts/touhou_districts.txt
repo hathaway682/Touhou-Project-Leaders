@@ -11,8 +11,8 @@ district_garden = {
 		owner = {
 			any_owned_leader = {
 				OR = {
-					has_trait = leader_trait_flower
-					has_trait = leader_trait_flower_commander
+					has_trait = thl_leader_trait_flower
+					has_trait = thl_leader_trait_flower_commander
 				}
 			}
 		}
@@ -23,8 +23,8 @@ district_garden = {
 		owner = {
 			any_owned_leader = {
 				OR = {
-					has_trait = leader_trait_flower
-					has_trait = leader_trait_flower_commander
+					has_trait = thl_leader_trait_flower
+					has_trait = thl_leader_trait_flower_commander
 				}
 			}
 		}
@@ -179,7 +179,7 @@ district_sanae_mission_religious = {
 		uses_district_set = standard
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_miracle
+				has_trait = thl_leader_trait_miracle
 			}
 			has_country_flag = touhou_flag_sanae_churchdistrict_update
 		}
@@ -189,7 +189,7 @@ district_sanae_mission_religious = {
 		uses_district_set = standard
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_miracle
+				has_trait = thl_leader_trait_miracle
 			}
 			has_country_flag = touhou_flag_sanae_churchdistrict_update
 		}

@@ -40,21 +40,23 @@ country_event = {
 			last_created_leader = { #7
 				add_trait = subclass_commander_miko
 				add_trait = leader_trait_invincible
-				add_trait = leader_trait_like_cloud_and_water
-				add_trait = leader_trait_theurgist
-				add_trait = leader_trait_tracker
-				add_trait = leader_exorcism_roud
+				add_trait = thl_leader_trait_like_cloud_and_water
+				add_trait = thl_leader_trait_theurgist
+				add_trait = thl_leader_trait_tracker
+				add_trait = thl_leader_exorcism_roud
 				add_trait = leader_trait_rocketry_specialization
 				add_trait = leader_trait_gifted_2
-				add_trait = leader_trait_excessive_reimu
-				add_trait = leader_trait_regeneration
-				add_trait = leader_trait_fly
+				add_trait = thl_leader_trait_excessive_reimu
+				add_trait = thl_leader_trait_regeneration
+				add_trait = thl_leader_trait_fly
 				set_leader_flag = touhou_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = reimu_leader
 				set_age = 17
 			}
 			set_global_flag = reimu
 			set_country_flag = can_build_shirne
+			set_country_flag = hakurei_shrine_country
 		}
 		if = {
 			limit = {
@@ -85,17 +87,18 @@ country_event = {
 					}
 					last_created_leader = { #6
 						add_trait = subclass_commander_miko
-						add_trait = leader_trait_common_sense_killer
-						add_trait = leader_trait_theurgist
-						add_trait = leader_trait_snake_bless
-						add_trait = leader_trait_frog_bless
+						add_trait = thl_leader_trait_common_sense_killer
+						add_trait = thl_leader_trait_theurgist
+						add_trait = thl_leader_trait_snake_bless
+						add_trait = thl_leader_trait_frog_bless
 						add_trait = leader_trait_shroud_preacher
 						add_trait = leader_trait_crusader_3
 						add_trait = leader_trait_gullible_2
 						add_trait = leader_trait_reckless_2
-						add_trait = leader_trait_regeneration
-						add_trait = leader_trait_miracle
+						add_trait = thl_leader_trait_regeneration
+						add_trait = thl_leader_trait_miracle
 						set_leader_flag = touhou_leader
+						set_leader_flag = legendary_leader
 						set_leader_flag = sanae_leader
 						set_age = 17
 					}
@@ -142,18 +145,19 @@ country_event = {
 					}
 					last_created_leader = { #7
 						add_trait = subclass_commander_admiral
-						add_trait = leader_trait_like_storm_and_wave
-						add_trait = leader_trait_master_sacker
-						add_trait = leader_trait_personal_relationship_genius
+						add_trait = thl_leader_trait_like_storm_and_wave
+						add_trait = thl_leader_trait_master_sacker
+						add_trait = thl_leader_trait_personal_relationship_genius
 						add_trait = leader_trait_reverse_engineer
 						add_trait = leader_trait_industrial_espionage_3
 						add_trait = leader_trait_artillery_specialization
-						add_trait = leader_trait_iron_ass
+						add_trait = thl_leader_trait_iron_ass
 						add_trait = leader_trait_slipshod
 						add_trait = leader_trait_embezzler_2
-						add_trait = leader_trait_regeneration
-						add_trait = leader_trait_magic
+						add_trait = thl_leader_trait_regeneration
+						add_trait = thl_leader_trait_magic
 						set_leader_flag = touhou_leader
+						set_leader_flag = legendary_leader
 						set_leader_flag = marisa_leader
 						set_age = 16
 					}
@@ -184,14 +188,15 @@ country_event = {
 			}
 			last_created_leader = { #7
 				add_trait = subclass_commander_servant
-				add_trait = leader_trait_year_round
+				add_trait = thl_leader_trait_year_round
 				add_trait = leader_trait_arbiter
 				add_trait = leader_trait_touhou_pop_focused_3
 				add_trait = leader_trait_iron_fist
 				add_trait = leader_trait_sadistic
-				add_trait = leader_trait_regeneration
-				add_trait = leader_trait_time
+				add_trait = thl_leader_trait_regeneration
+				add_trait = thl_leader_trait_time
 				set_leader_flag = touhou_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = sakuya_leader
 				set_age = 20
 			}
@@ -222,15 +227,16 @@ country_event = {
 			last_created_leader = { #7
 				add_trait = subclass_commander_servant
 				add_trait = leader_trait_wholehearted
-				add_trait = leader_trait_gardener
+				add_trait = thl_leader_trait_gardener
 				add_trait = leader_trait_bellicose
 				add_trait = leader_trait_heavy_hitter_2
 				add_trait = leader_trait_gale_speed
 				add_trait = leader_trait_passive
 				add_trait = leader_trait_gullible
-				add_trait = leader_trait_regeneration
-				add_trait = leader_trait_kendo
+				add_trait = thl_leader_trait_regeneration
+				add_trait = thl_leader_trait_kendo
 				set_leader_flag = touhou_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = youmu_leader
 				set_age = 17
 			}
@@ -273,9 +279,9 @@ country_event = {
 			}
 			last_created_leader = { #7
 				add_trait = subclass_commander_servant
-				add_trait = leader_trait_penglai_medicine
-				add_trait = leader_trait_prosperity_and_decline
-				add_trait = leader_trait_moon_war_veteran
+				add_trait = thl_leader_trait_penglai_medicine
+				add_trait = thl_leader_trait_prosperity_and_decline
+				add_trait = thl_leader_trait_moon_war_veteran
 				add_trait = leader_trait_academia_recruiter
 				add_trait = leader_trait_restrained_2
 				add_trait = leader_trait_cautious_2
@@ -283,9 +289,10 @@ country_event = {
 				add_trait = leader_trait_passive_2
 				add_trait = leader_trait_reclusive
 				add_trait = leader_trait_melancholic
-				add_trait = leader_trait_regeneration
-				add_trait = leader_trait_wave_length
+				add_trait = thl_leader_trait_regeneration
+				add_trait = thl_leader_trait_wave_length
 				set_leader_flag = touhou_leader
+			set_leader_flag = legendary_leader
 				set_leader_flag = reisen_leader
 				set_age = 17
 			}
@@ -371,17 +378,18 @@ country_event = {
 						}
 						last_created_leader = { #7
 							add_trait = subclass_scientist_councilor
-							add_trait = leader_trait_hifuu
-							add_trait = leader_trait_century_of_science
+							add_trait = thl_leader_trait_hifuu
+							add_trait = thl_leader_trait_century_of_science
 							add_trait = leader_trait_truth_seeker
-							add_trait = leader_trait_relativistic_psychiatry
+							add_trait = thl_leader_trait_relativistic_psychiatry
 							add_trait = leader_trait_academic_astral_rift_expert_3
 							add_trait = leader_trait_roamer
 							add_trait = leader_trait_gifted
 							add_trait = leader_trait_reclusive
 							add_trait = leader_trait_opinionated_2
-							add_trait = leader_trait_border_merry
+							add_trait = thl_leader_trait_border_merry
 							set_leader_flag = touhou_leader
+			set_leader_flag = legendary_leader
 							set_leader_flag = merry_leader
 							set_age = 17
 						}
@@ -416,17 +424,18 @@ country_event = {
 						}
 						last_created_leader = { #7
 							add_trait = subclass_scientist_explorer
-							add_trait = leader_trait_hifuu
-							add_trait = leader_trait_century_of_science
-							add_trait = leader_trait_super_unified_physics
+							add_trait = thl_leader_trait_hifuu
+							add_trait = thl_leader_trait_century_of_science
+							add_trait = thl_leader_trait_super_unified_physics
 							add_trait = leader_trait_midas_touch
 							add_trait = leader_trait_academic_astral_rift_expert_2
 							add_trait = leader_trait_science_communicator
 							add_trait = leader_trait_archaeologist
 							add_trait = leader_trait_reclusive
 							add_trait = leader_trait_opinionated
-							add_trait = leader_trait_star_located
+							add_trait = thl_leader_trait_star_located
 							set_leader_flag = touhou_leader
+			set_leader_flag = legendary_leader
 							set_leader_flag = renko_leader
 							set_age = 17
 						}
@@ -585,7 +594,7 @@ country_event = {
 			limit = { is_touhou_event_leader = yes }
 			switch = {
 				trigger = has_trait
-				leader_trait_miracle = { # 早苗
+				thl_leader_trait_miracle = { # 早苗
 					random_list = {
 						1 = {
 							modifier = {
@@ -622,7 +631,7 @@ country_event = {
 						}
 					}
 				}
-				leader_trait_fly = { # 灵梦
+				thl_leader_trait_fly = { # 灵梦
 					random_list = {
 						1 = {
 							modifier = {
@@ -655,7 +664,7 @@ country_event = {
 						9 = {}
 					}
 				}
-				leader_trait_magic = {
+				thl_leader_trait_magic = {
 					# 魔理沙
 					random_list = {
 						1 = { # 魔炮
@@ -689,13 +698,13 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_leader = {
-					has_trait = leader_trait_memory
+					has_trait = thl_leader_trait_memory
 					leader_age = 20
 				}
 			}
 			random_owned_leader = {
 				limit = {
-					has_trait = leader_trait_memory
+					has_trait = thl_leader_trait_memory
 				}
 				leader_event = {
 					id = touhou_paragon.42410
@@ -714,13 +723,13 @@ country_event = {
 					has_tradition = tr_virtuality_finish
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_memory
+					has_trait = thl_leader_trait_memory
 				}
 				has_country_flag = longer_life
 			}
 			random_owned_leader = {
 				limit = {
-					has_trait = leader_trait_memory
+					has_trait = thl_leader_trait_memory
 				}
 				leader_event = {
 					id = touhou_paragon.42411
@@ -841,21 +850,21 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.40310.a
-		add_trait = leader_trait_robotist_sanae
+		add_trait = thl_leader_trait_robotist_sanae
 		owner = {
 			add_research_option = tech_sanae_robot_army
 		}
 	}
 	option = {
 		name = touhou_paragon.40310.b
-		add_trait = leader_trait_robotist_sanae
+		add_trait = thl_leader_trait_robotist_sanae
 		owner = {
 			add_research_option = tech_sanae_robot_strike_craft
 		}
 	}
 	option = {
 		name = touhou_paragon.40310.c
-		add_trait = leader_trait_robotist_sanae
+		add_trait = thl_leader_trait_robotist_sanae
 		owner = {
 			add_research_option = tech_sanae_robot_worker
 		}
@@ -931,7 +940,7 @@ leader_event = {
 					add_trait_no_notify = leader_trait_agrarian_upbringing
 					add_trait_no_notify = leader_trait_eager
 					add_trait_no_notify = leader_trait_intemporal
-					add_trait_no_notify = leader_trait_regeneration_3
+					add_trait_no_notify = thl_leader_trait_regeneration_3
 					set_leader_flag = daiyousei_leader
 					set_owner = prev
 				}
@@ -1367,12 +1376,15 @@ leader_event = {
 		}
 		owner = {
 			add_resource = {
-				energy = 5000
+				energy = 100000
 				minerals = -800
 			}
 		}
 	}
 	after = {
+		owner = {
+			set_country_flag = hakurei_shrine_country
+		}
 		if = {
 			limit = {
 				not = {
@@ -1401,7 +1413,7 @@ country_event = {
 	immediate = {
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_fly
+				has_trait = thl_leader_trait_fly
 			}
 			save_event_target_as = tp_target_leader
 		}
@@ -1446,8 +1458,8 @@ country_event = {
 					traits = {
 						trait = subclass_commander_miko
 						trait = leader_trait_invincible
-						trait = leader_trait_theurgist
-						trait = leader_trait_fly
+						trait = thl_leader_trait_theurgist
+						trait = thl_leader_trait_fly
 					}
 				}
 				set_leader = last_created_leader
@@ -1506,8 +1518,8 @@ country_event = {
 					traits = {
 						trait = subclass_commander_miko
 						trait = leader_trait_invincible
-						trait = leader_trait_theurgist
-						trait = leader_trait_fly
+						trait = thl_leader_trait_theurgist
+						trait = thl_leader_trait_fly
 					}
 				}
 				set_leader = last_created_leader
@@ -1532,7 +1544,7 @@ country_event = {
 				has_civic = civic_hakurei_shinto_corp
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_fly
+				has_trait = thl_leader_trait_fly
 			}
 			is_materialist = no
 		}
@@ -1545,7 +1557,7 @@ country_event = {
 				has_civic = civic_hakurei_shinto_corp
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_fly
+				has_trait = thl_leader_trait_fly
 			}
 			is_materialist = yes
 		}
@@ -1681,8 +1693,8 @@ leader_event = {
 	option = {
 		name = touhou_paragon.40720.a
 		custom_tooltip = touhou_paragon.40720.a.tooltip
-		remove_trait = leader_trait_magician
-		add_trait = leader_trait_great_magician
+		remove_trait = thl_leader_trait_magician
+		add_trait = thl_leader_trait_great_magician
 		owner = {
 			set_country_flag = immortal_marisa
 		}
@@ -1697,7 +1709,7 @@ country_event = {
 	trigger = {
 		from = {
 			exists = owner
-			has_trait = leader_trait_magic
+			has_trait = thl_leader_trait_magic
 			has_skill >= 10
 		}
 	}
@@ -1800,7 +1812,7 @@ planet_event = {
 
 	immediate = {
 		from = {
-			add_trait = leader_trait_magician
+			add_trait = thl_leader_trait_magician
 		}
 	}
 }
@@ -1813,17 +1825,17 @@ country_event = {
 	trigger = {
 		from = {
 			NOT = {
-				has_trait = leader_trait_magic
+				has_trait = thl_leader_trait_magic
 			}
-			has_trait = leader_trait_magician
+			has_trait = thl_leader_trait_magician
 			has_skill >= 10
 		}
 	}
 
 	immediate = {
 		from = {
-			remove_trait = leader_trait_magician
-			add_trait = leader_trait_great_magician
+			remove_trait = thl_leader_trait_magician
+			add_trait = thl_leader_trait_great_magician
 		}
 	}
 }
@@ -1852,7 +1864,7 @@ country_event = {
 	option = {
 		trigger = {
 			any_owned_leader = {
-				has_trait = leader_trait_dolls
+				has_trait = thl_leader_trait_dolls
 			}
 		}
 		name = touhou_paragon.40730.b
@@ -1865,7 +1877,7 @@ country_event = {
 	option = {
 		trigger = {
 			any_owned_leader = {
-				has_trait = leader_trait_fly
+				has_trait = thl_leader_trait_fly
 			}
 		}
 		name = touhou_paragon.40730.c
@@ -2166,7 +2178,7 @@ leader_event = {
 					add_trait_no_notify = leader_trait_collaborator
 					add_trait_no_notify = leader_trait_science_communicator
 					add_trait_no_notify = leader_trait_intemporal
-					add_trait_no_notify = leader_trait_regeneration_2
+					add_trait_no_notify = thl_leader_trait_regeneration_2
 					set_owner = prev
 				}
 				hire_event_leader_message = {
@@ -2414,8 +2426,8 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42115.a
-		remove_trait = leader_trait_sakura
-		add_trait = leader_trait_sakura_1
+		remove_trait = thl_leader_trait_sakura
+		add_trait = thl_leader_trait_sakura_1
 		leader_event = {
 			id = touhou_paragon.42116
 			days = 3600
@@ -2449,8 +2461,8 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42116.a
-		remove_trait = leader_trait_sakura_1
-		add_trait = leader_trait_sakura_3
+		remove_trait = thl_leader_trait_sakura_1
+		add_trait = thl_leader_trait_sakura_3
 		leader_event = {
 			id = touhou_paragon.42117
 			days = 3600
@@ -2485,8 +2497,8 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42117.a
-		remove_trait = leader_trait_sakura_3
-		add_trait = leader_trait_sakura_5
+		remove_trait = thl_leader_trait_sakura_3
+		add_trait = thl_leader_trait_sakura_5
 		leader_event = {
 			id = touhou_paragon.42118
 			days = 3600
@@ -2521,8 +2533,8 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42118.a
-		remove_trait = leader_trait_sakura_5
-		add_trait = leader_trait_sakura_8
+		remove_trait = thl_leader_trait_sakura_5
+		add_trait = thl_leader_trait_sakura_8
 		event_target:sakura_planet = {
 			change_pc = pc_nether
 			remove_deposit = sakura_tree_5
@@ -2553,12 +2565,12 @@ country_event = { #Crisis
 
 	trigger = {
 		any_owned_leader = {
-			has_trait = leader_trait_flower
+			has_trait = thl_leader_trait_flower
 		}
 		has_crisis = yes
 		NOT = {
 			any_owned_leader = {
-				has_trait = leader_trait_flower_commander
+				has_trait = thl_leader_trait_flower_commander
 			}
 		}
 	}
@@ -2582,7 +2594,7 @@ country_event = { #Crisis
 		hidden_effect = {
 			random_owned_leader = {
 				limit = {
-					has_trait = leader_trait_flower
+					has_trait = thl_leader_trait_flower
 				}
 				kill_leader = {
 					fire = yes
@@ -2616,9 +2628,9 @@ country_event = { #Crisis
 				add_trait = leader_trait_reckless_2
 				add_trait = leader_trait_tyrannical_2
 				add_trait = leader_trait_legendary_harsh_ruler
-				add_trait = leader_trait_flower_commander
-				add_trait = leader_trait_incarnation_of_nature_commander
-				add_trait = leader_trait_sleeping_terror_commander
+				add_trait = thl_leader_trait_flower_commander
+				add_trait = thl_leader_trait_incarnation_of_nature_commander
+				add_trait = thl_leader_trait_sleeping_terror_commander
 				set_age = 17
 			}
 		}
@@ -2635,14 +2647,14 @@ country_event = { #Crisis
 
 	trigger = {
 		any_owned_leader = {
-			has_trait = leader_trait_flower
+			has_trait = thl_leader_trait_flower
 		}
 		any_country = {
 			is_country_type = awakened_fallen_empire
 		}
 		NOT = {
 			any_owned_leader = {
-				has_trait = leader_trait_flower_commander
+				has_trait = thl_leader_trait_flower_commander
 			}
 		}
 	}
@@ -2665,7 +2677,7 @@ country_event = { #Crisis
 			set_country_flag = yuka_become_admiral
 			random_owned_leader = {
 				limit = {
-					has_trait = leader_trait_flower
+					has_trait = thl_leader_trait_flower
 				}
 				kill_leader = {
 					fire = yes
@@ -2698,9 +2710,9 @@ country_event = { #Crisis
 				add_trait = leader_trait_reckless_2
 				add_trait = leader_trait_tyrannical_2
 				add_trait = leader_trait_legendary_harsh_ruler
-				add_trait = leader_trait_flower_commander
-				add_trait = leader_trait_incarnation_of_nature_commander
-				add_trait = leader_trait_sleeping_terror_commander
+				add_trait = thl_leader_trait_flower_commander
+				add_trait = thl_leader_trait_incarnation_of_nature_commander
+				add_trait = thl_leader_trait_sleeping_terror_commander
 				set_age = 17
 			}
 		}
@@ -3112,7 +3124,7 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42412.a
-		add_trait = leader_trait_longer_life
+		add_trait = thl_leader_trait_longer_life
 	}
 }
 
@@ -3138,8 +3150,8 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42413.a
-		remove_trait = leader_trait_short_life
-		add_trait = leader_trait_cyborg_life
+		remove_trait = thl_leader_trait_short_life
+		add_trait = thl_leader_trait_cyborg_life
 		add_trait = leader_trait_expertise_industry
 	}
 }
@@ -3166,8 +3178,8 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42414.a
-		remove_trait = leader_trait_short_life
-		add_trait = leader_trait_synth_life
+		remove_trait = thl_leader_trait_short_life
+		add_trait = thl_leader_trait_synth_life
 		add_trait = leader_trait_expertise_computing
 	}
 }
@@ -3194,8 +3206,8 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42415.a
-		remove_trait = leader_trait_short_life
-		add_trait = leader_trait_gene_life
+		remove_trait = thl_leader_trait_short_life
+		add_trait = thl_leader_trait_gene_life
 		add_trait = leader_trait_expertise_biology
 	}
 }
@@ -3222,7 +3234,7 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42416.a
-		remove_trait = leader_trait_short_life
+		remove_trait = thl_leader_trait_short_life
 		add_trait = leader_trait_whisperers_chosen
 		add_trait = trait_ruler_deep_connections_3
 		add_trait = leader_trait_reformer_3
@@ -4434,7 +4446,7 @@ country_event = {
 				modifier = {
 					mult = 0
 					any_owned_leader = {
-						has_trait = leader_trait_wave_length
+						has_trait = thl_leader_trait_wave_length
 					}
 				}
 				modifier = {

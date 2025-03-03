@@ -167,7 +167,7 @@ reimu_spell_card_4_effect = {
             limit = {
                 exists = leader
                 leader = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
             }
             set_event_locked = yes
@@ -225,7 +225,7 @@ reimu_spell_card_6_effect = {
             limit = {
                 exists = leader
                 leader = {
-                    has_trait = leader_trait_fly
+                    has_trait = thl_leader_trait_fly
                 }
             }
             add_modifier = {
@@ -314,7 +314,7 @@ koishi_spell_card_2_effect = {
         every_owned_fleet = {
             limit = {
                 exists = leader
-                leader = { has_trait = leader_trait_subconscious }
+                leader = { has_trait = thl_leader_trait_subconscious }
             }
             add_modifier = {
                 modifier = rampage_fleet
@@ -376,7 +376,7 @@ koishi_spell_card_4_effect = {
         every_owned_fleet = {
             limit = {
                 exists = leader
-                leader = { has_trait = leader_trait_subconscious }
+                leader = { has_trait = thl_leader_trait_subconscious }
             }
             add_modifier = {
                 modifier = koishi_surprise
@@ -986,7 +986,7 @@ marisa_spell_card_6_effect = {
             limit = {
                 exists = leader
                 leader = {
-                    has_trait = leader_trait_magic
+                    has_trait = thl_leader_trait_magic
                 }
             }
             add_modifier = {

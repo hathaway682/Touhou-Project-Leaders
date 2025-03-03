@@ -61,7 +61,7 @@ tech_sanae_mission_mil_nova = {
 
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_miracle
+			has_trait = thl_leader_trait_miracle
 		}
 	}
 }
@@ -76,7 +76,7 @@ tech_sanae_mission_mil_glidingsnake = {
 
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_miracle
+			has_trait = thl_leader_trait_miracle
 		}
 	}
 }
@@ -91,7 +91,7 @@ tech_sanae_mission_mil_ironwheel = {
 
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_miracle
+			has_trait = thl_leader_trait_miracle
 		}
 	}
 }
@@ -106,7 +106,7 @@ tech_sanae_mission_mil_onbashira = {
 
 	potential = {
 		any_owned_leader = {
-			has_trait = leader_trait_miracle
+			has_trait = thl_leader_trait_miracle
 		}
 	}
 }
@@ -158,7 +158,7 @@ tech_magic_dolls = {
 	potential = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
 		any_owned_leader = {
-			has_trait = leader_trait_dolls
+			has_trait = thl_leader_trait_dolls
 		}
 	}
 
@@ -227,7 +227,7 @@ tech_automatic_dolls = {
 	potential = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
 		any_owned_leader = {
-			has_trait = leader_trait_dolls
+			has_trait = thl_leader_trait_dolls
 		}
 	}
 
@@ -308,7 +308,7 @@ tech_sapient_dolls = {
 	potential = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
 		any_owned_leader = {
-			has_trait = leader_trait_dolls
+			has_trait = thl_leader_trait_dolls
 		}
 	}
 
@@ -401,7 +401,7 @@ tech_doll_leaders = {
 	potential = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
 		any_owned_leader = {
-			has_trait = leader_trait_dolls
+			has_trait = thl_leader_trait_dolls
 		}
 	}
 
@@ -452,7 +452,7 @@ tech_doll_assembly_complex = {
 	potential = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
 		any_owned_leader = {
-			has_trait = leader_trait_dolls
+			has_trait = thl_leader_trait_dolls
 		}
 	}
 

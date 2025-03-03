@@ -13,7 +13,7 @@ has_make_spiritualist_perk = {
 		}
 		any_owned_leader = {
 			is_councilor = yes
-			has_trait = leader_trait_miracle
+			has_trait = thl_leader_trait_miracle
 		}
 		has_valid_civic = civic_hakurei_shinto
 		has_valid_civic = civic_moriya_shinto
@@ -48,92 +48,92 @@ prosperity_gospel_check_trigger = {
 
 is_touhou_event_leader = {
 	OR = {
-		has_trait = leader_trait_miracle
-		has_trait = leader_trait_fly
-		has_trait = leader_trait_magic
+		has_trait = thl_leader_trait_miracle
+		has_trait = thl_leader_trait_fly
+		has_trait = thl_leader_trait_magic
 	}
 }
 
 has_touhou_leader_trait = {
 	OR = {
-		has_trait = leader_trait_earthquake
-		has_trait = leader_trait_density
-		has_trait = leader_trait_miracle
-		has_trait = leader_trait_ice
-		has_trait = leader_trait_kongfu
-		has_trait = leader_trait_fly
-		has_trait = leader_trait_magic
-		has_trait = leader_trait_wave_length
-		has_trait = leader_trait_kendo
-		has_trait = leader_trait_time
-		has_trait = leader_trait_border_merry
-		has_trait = leader_trait_star_located
-		has_trait = leader_trait_mind_reader
-		has_trait = leader_trait_subconscious
-		has_trait = leader_trait_wind
-		has_trait = leader_trait_trial
-		has_trait = leader_trait_distance
-		has_trait = leader_trait_destiny_manipulation
-		has_trait = leader_trait_elements
-		has_trait = leader_trait_dolls
-		has_trait = leader_trait_death
-		has_trait = leader_trait_flower
-		has_trait = leader_trait_flower_commander
-		has_trait = leader_trait_words
-		has_trait = leader_trait_memory
-		has_trait = leader_trait_corpse_travel
-		has_trait = leader_trait_nuclear
-		has_trait = leader_trait_water
-		has_trait = leader_trait_fall
+		has_trait = thl_leader_trait_earthquake
+		has_trait = thl_leader_trait_density
+		has_trait = thl_leader_trait_miracle
+		has_trait = thl_leader_trait_ice
+		has_trait = thl_leader_trait_kongfu
+		has_trait = thl_leader_trait_fly
+		has_trait = thl_leader_trait_magic
+		has_trait = thl_leader_trait_wave_length
+		has_trait = thl_leader_trait_kendo
+		has_trait = thl_leader_trait_time
+		has_trait = thl_leader_trait_border_merry
+		has_trait = thl_leader_trait_star_located
+		has_trait = thl_leader_trait_mind_reader
+		has_trait = thl_leader_trait_subconscious
+		has_trait = thl_leader_trait_wind
+		has_trait = thl_leader_trait_trial
+		has_trait = thl_leader_trait_distance
+		has_trait = thl_leader_trait_destiny_manipulation
+		has_trait = thl_leader_trait_elements
+		has_trait = thl_leader_trait_dolls
+		has_trait = thl_leader_trait_death
+		has_trait = thl_leader_trait_flower
+		has_trait = thl_leader_trait_flower_commander
+		has_trait = thl_leader_trait_words
+		has_trait = thl_leader_trait_memory
+		has_trait = thl_leader_trait_corpse_travel
+		has_trait = thl_leader_trait_nuclear
+		has_trait = thl_leader_trait_water
+		has_trait = thl_leader_trait_fall
 		has_trait = leader_trait_harvest
-		has_trait = leader_trait_jinx
-		has_trait = leader_trait_song
-		has_trait = leader_trait_luck
+		has_trait = thl_leader_trait_jinx
+		has_trait = thl_leader_trait_song
+		has_trait = thl_leader_trait_luck
 	}
 }
 
 has_touhou_supernatural_trait = {
 	OR = {
-		has_trait = leader_trait_earthquake
-		has_trait = leader_trait_density
-		has_trait = leader_trait_miracle
-		has_trait = leader_trait_ice
-		has_trait = leader_trait_kongfu
-		has_trait = leader_trait_fly
-		has_trait = leader_trait_magic
-		has_trait = leader_trait_wave_length
-		has_trait = leader_trait_kendo
-		has_trait = leader_trait_time
-		has_trait = leader_trait_mind_reader
-		has_trait = leader_trait_subconscious
-		has_trait = leader_trait_wind
-		has_trait = leader_trait_trial
-		has_trait = leader_trait_distance
-		has_trait = leader_trait_destiny_manipulation
-		has_trait = leader_trait_elements
-		has_trait = leader_trait_dolls
-		has_trait = leader_trait_death
-		has_trait = leader_trait_flower
-		has_trait = leader_trait_flower_commander
-		has_trait = leader_trait_corpse_travel
-		has_trait = leader_trait_nuclear
-		has_trait = leader_trait_water
-		has_trait = leader_trait_fall
+		has_trait = thl_leader_trait_earthquake
+		has_trait = thl_leader_trait_density
+		has_trait = thl_leader_trait_miracle
+		has_trait = thl_leader_trait_ice
+		has_trait = thl_leader_trait_kongfu
+		has_trait = thl_leader_trait_fly
+		has_trait = thl_leader_trait_magic
+		has_trait = thl_leader_trait_wave_length
+		has_trait = thl_leader_trait_kendo
+		has_trait = thl_leader_trait_time
+		has_trait = thl_leader_trait_mind_reader
+		has_trait = thl_leader_trait_subconscious
+		has_trait = thl_leader_trait_wind
+		has_trait = thl_leader_trait_trial
+		has_trait = thl_leader_trait_distance
+		has_trait = thl_leader_trait_destiny_manipulation
+		has_trait = thl_leader_trait_elements
+		has_trait = thl_leader_trait_dolls
+		has_trait = thl_leader_trait_death
+		has_trait = thl_leader_trait_flower
+		has_trait = thl_leader_trait_flower_commander
+		has_trait = thl_leader_trait_corpse_travel
+		has_trait = thl_leader_trait_nuclear
+		has_trait = thl_leader_trait_water
+		has_trait = thl_leader_trait_fall
 		has_trait = leader_trait_harvest
-		has_trait = leader_trait_jinx
-		has_trait = leader_trait_song
-		has_trait = leader_trait_luck
+		has_trait = thl_leader_trait_jinx
+		has_trait = thl_leader_trait_song
+		has_trait = thl_leader_trait_luck
 	}
 }
 
 has_touhou_spell_trait = {
 	OR = {
-		has_trait = leader_trait_fly
-		has_trait = leader_trait_magic
-		has_trait = leader_trait_subconscious
-		has_trait = leader_trait_fall
+		has_trait = thl_leader_trait_fly
+		has_trait = thl_leader_trait_magic
+		has_trait = thl_leader_trait_subconscious
+		has_trait = thl_leader_trait_fall
 		has_trait = leader_trait_harvest
-		has_trait = leader_trait_jinx
+		has_trait = thl_leader_trait_jinx
 	}
 }
 
@@ -161,7 +161,7 @@ can_be_destiny_target = {
 		has_trait = leader_trait_surveyor
 		has_trait = leader_trait_repair_crew
 		has_trait = leader_trait_robotist
-		has_trait = leader_trait_knowledge_for_the_masses
+		has_trait = thl_leader_trait_knowledge_for_the_masses
 		has_trait = leader_trait_fanatic
 		has_trait = leader_trait_reverse_engineer
 		has_trait = leader_trait_supreme_admiral
@@ -400,7 +400,7 @@ is_reanimator = {
 		has_valid_civic = civic_nether_world_corp
 		any_owned_leader = {
 			is_councilor = yes
-			has_trait = leader_trait_corpse_travel
+			has_trait = thl_leader_trait_corpse_travel
 		}
 	}
 }
@@ -415,7 +415,7 @@ THL_trgr_spcs_RULE_doll_assembly = {
 			any_owned_pop = { has_job = dollmaker }
 			AND = {
 				exists = leader
-				leader = { has_trait = leader_trait_dolls }
+				leader = { has_trait = thl_leader_trait_dolls }
 			}
 		}
 	}
@@ -538,7 +538,7 @@ did_not_select_spell_leader = {
 				value = 1
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_fly
+				has_trait = thl_leader_trait_fly
 			}
 		}
 		AND = {
@@ -547,7 +547,7 @@ did_not_select_spell_leader = {
 				value = 2
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_magic
+				has_trait = thl_leader_trait_magic
 			}
 		}
 		AND = {
@@ -556,7 +556,7 @@ did_not_select_spell_leader = {
 				value = 35
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_fall
+				has_trait = thl_leader_trait_fall
 			}
 		}
 		AND = {
@@ -574,7 +574,7 @@ did_not_select_spell_leader = {
 				value = 37
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_jinx
+				has_trait = thl_leader_trait_jinx
 			}
 		}
 		AND = {
@@ -583,7 +583,7 @@ did_not_select_spell_leader = {
 				value = 52
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_subconscious
+				has_trait = thl_leader_trait_subconscious
 			}
 		}
 	}
@@ -604,7 +604,7 @@ dolls_assembly_trigger = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_dolls
+					has_trait = thl_leader_trait_dolls
 				}
 			}
 		}

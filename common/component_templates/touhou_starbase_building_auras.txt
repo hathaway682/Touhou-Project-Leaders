@@ -243,7 +243,7 @@ utility_component_template = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_density
+					has_trait = thl_leader_trait_density
 				}
 			}
 			any_planet_army = {

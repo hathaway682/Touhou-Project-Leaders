@@ -13,7 +13,7 @@ tengo_fortress = {
 		exists = owner
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_wind
+				has_trait = thl_leader_trait_wind
 			}
 		}
 		is_normal_starbase = yes

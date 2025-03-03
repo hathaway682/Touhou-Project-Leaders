@@ -56,7 +56,7 @@ reimu_gateway = {
 
 	country_can_use = {
 		any_owned_leader = {
-			has_trait = leader_trait_fly
+			has_trait = thl_leader_trait_fly
 		}
 	}
 

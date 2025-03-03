@@ -20,7 +20,7 @@ decision_remove_unstable_tectonics = {
 		has_modifier = unstable_tectonics
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_earthquake
+				has_trait = thl_leader_trait_earthquake
 			}
 		}
 	}
@@ -31,7 +31,7 @@ decision_remove_unstable_tectonics = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_earthquake
+						has_trait = thl_leader_trait_earthquake
 						is_councilor = yes
 					}
 				}
@@ -39,14 +39,14 @@ decision_remove_unstable_tectonics = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_earthquake
+					has_trait = thl_leader_trait_earthquake
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_earthquake
+						has_trait = thl_leader_trait_earthquake
 					}
 				}
 			}
@@ -113,7 +113,7 @@ decision_add_unstable_tectonics = {
 		NOT = { has_modifier = unstable_tectonics }
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_earthquake
+				has_trait = thl_leader_trait_earthquake
 			}
 		}
 	}
@@ -124,7 +124,7 @@ decision_add_unstable_tectonics = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_earthquake
+						has_trait = thl_leader_trait_earthquake
 						is_councilor = yes
 					}
 				}
@@ -132,14 +132,14 @@ decision_add_unstable_tectonics = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_earthquake
+					has_trait = thl_leader_trait_earthquake
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_earthquake
+						has_trait = thl_leader_trait_earthquake
 					}
 				}
 			}
@@ -209,7 +209,7 @@ decision_endless_banquet = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_density
+				has_trait = thl_leader_trait_density
 			}
 		}
 	}
@@ -217,7 +217,7 @@ decision_endless_banquet = {
 	allow = {
 		exists = leader
 		leader = {
-			has_trait = leader_trait_density
+			has_trait = thl_leader_trait_density
 		}
 		owner = {
 			NOR = {
@@ -298,7 +298,7 @@ decision_expand_space = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_time
+				has_trait = thl_leader_trait_time
 			}
 		}
 		NOT = {
@@ -309,7 +309,7 @@ decision_expand_space = {
 	allow = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_time
+				has_trait = thl_leader_trait_time
 				is_councilor = yes
 			}
 		}
@@ -391,7 +391,7 @@ decision_extradimensional_experimentation = {
 			}
 			owner = {
 				any_owned_leader = {
-					has_trait = leader_trait_border_merry
+					has_trait = thl_leader_trait_border_merry
 					is_councilor = yes
 				}
 			}
@@ -441,7 +441,7 @@ decision_subterranean_district = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_subterran_manager
+				has_trait = thl_leader_trait_subterran_manager
 			}
 		}
 		uses_district_set = standard
@@ -458,7 +458,7 @@ decision_subterranean_district = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_subterran_manager
+						has_trait = thl_leader_trait_subterran_manager
 						is_councilor = yes
 					}
 				}
@@ -466,14 +466,14 @@ decision_subterranean_district = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_subterran_manager
+					has_trait = thl_leader_trait_subterran_manager
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_subterran_manager
+						has_trait = thl_leader_trait_subterran_manager
 					}
 				}
 			}
@@ -529,7 +529,7 @@ decision_satori_pet = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_satori_pets
+				has_trait = thl_leader_trait_satori_pets
 			}
 		}
 	}
@@ -540,7 +540,7 @@ decision_satori_pet = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_satori_pets
+						has_trait = thl_leader_trait_satori_pets
 						is_councilor = yes
 					}
 				}
@@ -548,14 +548,14 @@ decision_satori_pet = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_satori_pets
+					has_trait = thl_leader_trait_satori_pets
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_satori_pets
+						has_trait = thl_leader_trait_satori_pets
 					}
 				}
 			}
@@ -639,7 +639,7 @@ decision_root_out_crime = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_trial
+						has_trait = thl_leader_trait_trial
 						is_councilor = yes
 					}
 				}
@@ -647,14 +647,14 @@ decision_root_out_crime = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_trial
+					has_trait = thl_leader_trait_trial
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_trial
+						has_trait = thl_leader_trait_trial
 					}
 				}
 			}
@@ -780,7 +780,7 @@ decision_mirror_trial = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_mirror
+				has_trait = thl_leader_trait_mirror
 			}
 		}
 	}
@@ -791,7 +791,7 @@ decision_mirror_trial = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_mirror
+						has_trait = thl_leader_trait_mirror
 						is_councilor = yes
 					}
 				}
@@ -799,14 +799,14 @@ decision_mirror_trial = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_mirror
+					has_trait = thl_leader_trait_mirror
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_mirror
+						has_trait = thl_leader_trait_mirror
 					}
 				}
 			}
@@ -844,7 +844,7 @@ decision_revoke_mirror_trial = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_mirror
+				has_trait = thl_leader_trait_mirror
 			}
 		}
 	}
@@ -879,7 +879,7 @@ decision_stick_of_repentance = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_mirror
+				has_trait = thl_leader_trait_mirror
 			}
 		}
 	}
@@ -890,7 +890,7 @@ decision_stick_of_repentance = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_mirror
+						has_trait = thl_leader_trait_mirror
 						is_councilor = yes
 					}
 				}
@@ -898,14 +898,14 @@ decision_stick_of_repentance = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_mirror
+					has_trait = thl_leader_trait_mirror
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_mirror
+						has_trait = thl_leader_trait_mirror
 					}
 				}
 			}
@@ -943,7 +943,7 @@ decision_revoke_stick_of_repentance = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_mirror
+				has_trait = thl_leader_trait_mirror
 			}
 		}
 	}
@@ -971,7 +971,7 @@ decision_summon_devils = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_summon_devils
+				has_trait = thl_leader_trait_summon_devils
 			}
 		}
 	}
@@ -982,7 +982,7 @@ decision_summon_devils = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_summon_devils
+						has_trait = thl_leader_trait_summon_devils
 						is_councilor = yes
 					}
 				}
@@ -990,14 +990,14 @@ decision_summon_devils = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_summon_devils
+					has_trait = thl_leader_trait_summon_devils
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_summon_devils
+						has_trait = thl_leader_trait_summon_devils
 					}
 				}
 			}
@@ -1066,7 +1066,7 @@ decision_summon_devils_large = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_summon_devils
+				has_trait = thl_leader_trait_summon_devils
 			}
 		}
 	}
@@ -1077,7 +1077,7 @@ decision_summon_devils_large = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_summon_devils
+						has_trait = thl_leader_trait_summon_devils
 						is_councilor = yes
 					}
 				}
@@ -1085,14 +1085,14 @@ decision_summon_devils_large = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_summon_devils
+					has_trait = thl_leader_trait_summon_devils
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_summon_devils
+						has_trait = thl_leader_trait_summon_devils
 					}
 				}
 			}
@@ -1161,7 +1161,7 @@ decision_summon_spirit = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_death
+				has_trait = thl_leader_trait_death
 			}
 		}
 	}
@@ -1172,7 +1172,7 @@ decision_summon_spirit = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_death
+						has_trait = thl_leader_trait_death
 						is_councilor = yes
 					}
 				}
@@ -1180,14 +1180,14 @@ decision_summon_spirit = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_death
+					has_trait = thl_leader_trait_death
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_death
+						has_trait = thl_leader_trait_death
 					}
 				}
 			}
@@ -1307,7 +1307,7 @@ decision_summon_spirit_large = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_death
+				has_trait = thl_leader_trait_death
 			}
 		}
 	}
@@ -1318,7 +1318,7 @@ decision_summon_spirit_large = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_death
+						has_trait = thl_leader_trait_death
 						is_councilor = yes
 					}
 				}
@@ -1326,14 +1326,14 @@ decision_summon_spirit_large = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_death
+					has_trait = thl_leader_trait_death
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_death
+						has_trait = thl_leader_trait_death
 					}
 				}
 			}
@@ -1481,7 +1481,7 @@ decision_trans_spirit = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_death
+				has_trait = thl_leader_trait_death
 			}
 		}
 	}
@@ -1492,7 +1492,7 @@ decision_trans_spirit = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_death
+						has_trait = thl_leader_trait_death
 						is_councilor = yes
 					}
 				}
@@ -1500,14 +1500,14 @@ decision_trans_spirit = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_death
+					has_trait = thl_leader_trait_death
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_death
+						has_trait = thl_leader_trait_death
 					}
 				}
 			}
@@ -1617,7 +1617,7 @@ decision_assimilate_spirit = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_death
+				has_trait = thl_leader_trait_death
 			}
 		}
 	}
@@ -1628,7 +1628,7 @@ decision_assimilate_spirit = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_death
+						has_trait = thl_leader_trait_death
 						is_councilor = yes
 					}
 				}
@@ -1636,14 +1636,14 @@ decision_assimilate_spirit = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_death
+					has_trait = thl_leader_trait_death
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_death
+						has_trait = thl_leader_trait_death
 					}
 				}
 			}
@@ -1687,7 +1687,7 @@ decision_sakura_tree = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_sakura
+				has_trait = thl_leader_trait_sakura
 			}
 		}
 		NOT = {
@@ -1698,7 +1698,7 @@ decision_sakura_tree = {
 	allow = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_sakura
+				has_trait = thl_leader_trait_sakura
 			}
 		}
 		is_wet = yes
@@ -1716,7 +1716,7 @@ decision_sakura_tree = {
 		owner = {
 			random_owned_leader = {
 				limit = {
-					has_trait = leader_trait_sakura
+					has_trait = thl_leader_trait_sakura
 				}
 				leader_event = {
 					id = touhou_paragon.42110
@@ -1727,6 +1727,40 @@ decision_sakura_tree = {
 
 	ai_weight = {
 		weight = 0
+	}
+}
+
+decision_rebuild_hakurei_shrine = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_arcology_project
+	enactment_time = 30
+
+	potential = {
+		owner = {
+			has_country_flag = hakurei_shrine_country
+			NOT = {
+				any_owned_planet = {
+					OR = {
+						has_deposit = d_hakurei_shrine
+						has_deposit = d_hakurei_shrine_large
+						has_deposit = d_hakurei_shrine_imperial
+						has_deposit = d_hakurei_shrine_psionic
+					}
+				}
+			}
+		}
+	}
+
+	allow = {
+		is_capital = yes
+	}
+
+	effect = {
+		add_deposit = d_hakurei_shrine
+		last_added_deposit = {
+			set_deposit_flag = keep_deposit_on_terraform
+		}
 	}
 }
 
@@ -1824,7 +1858,7 @@ decision_unlock_books = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_books
+				has_trait = thl_leader_trait_books
 			}
 		}
 	}
@@ -1835,7 +1869,7 @@ decision_unlock_books = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_books
+						has_trait = thl_leader_trait_books
 						is_councilor = yes
 					}
 				}
@@ -1843,14 +1877,14 @@ decision_unlock_books = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_books
+					has_trait = thl_leader_trait_books
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_books
+						has_trait = thl_leader_trait_books
 					}
 				}
 			}
@@ -1935,7 +1969,7 @@ decision_nuclear_breath = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_fusion_energy
+				has_trait = thl_leader_trait_fusion_energy
 			}
 		}
 	}
@@ -1946,7 +1980,7 @@ decision_nuclear_breath = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_fusion_energy
+						has_trait = thl_leader_trait_fusion_energy
 						is_councilor = yes
 					}
 				}
@@ -1954,14 +1988,14 @@ decision_nuclear_breath = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_fusion_energy
+					has_trait = thl_leader_trait_fusion_energy
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_fusion_energy
+						has_trait = thl_leader_trait_fusion_energy
 					}
 				}
 			}
@@ -1990,7 +2024,7 @@ decision_miracle_1 = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_miracle
+				has_trait = thl_leader_trait_miracle
 			}
 		}
 	}
@@ -2001,7 +2035,7 @@ decision_miracle_1 = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 						is_councilor = yes
 					}
 				}
@@ -2009,14 +2043,14 @@ decision_miracle_1 = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 					}
 				}
 			}
@@ -2086,7 +2120,7 @@ decision_miracle_2 = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_miracle
+				has_trait = thl_leader_trait_miracle
 			}
 		}
 	}
@@ -2097,7 +2131,7 @@ decision_miracle_2 = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 						is_councilor = yes
 					}
 				}
@@ -2105,14 +2139,14 @@ decision_miracle_2 = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 					}
 				}
 			}
@@ -2182,7 +2216,7 @@ decision_miracle_3 = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_miracle
+				has_trait = thl_leader_trait_miracle
 			}
 		}
 	}
@@ -2193,7 +2227,7 @@ decision_miracle_3 = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 						is_councilor = yes
 					}
 				}
@@ -2201,14 +2235,14 @@ decision_miracle_3 = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 					}
 				}
 			}
@@ -2278,7 +2312,7 @@ decision_miracle_4 = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_miracle
+				has_trait = thl_leader_trait_miracle
 			}
 		}
 	}
@@ -2289,7 +2323,7 @@ decision_miracle_4 = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 						is_councilor = yes
 					}
 				}
@@ -2297,14 +2331,14 @@ decision_miracle_4 = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 					}
 				}
 			}
@@ -2374,7 +2408,7 @@ decision_miracle_5 = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_miracle
+				has_trait = thl_leader_trait_miracle
 			}
 		}
 	}
@@ -2385,7 +2419,7 @@ decision_miracle_5 = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 						is_councilor = yes
 					}
 				}
@@ -2393,14 +2427,14 @@ decision_miracle_5 = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 					}
 				}
 			}
@@ -2470,7 +2504,7 @@ decision_miracle_6 = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_miracle
+				has_trait = thl_leader_trait_miracle
 			}
 		}
 	}
@@ -2481,7 +2515,7 @@ decision_miracle_6 = {
 				exists = owner
 				owner = {
 					any_owned_leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 						is_councilor = yes
 					}
 				}
@@ -2489,14 +2523,14 @@ decision_miracle_6 = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 			}
 			sector = {
 				sector_capital = {
 					exists = leader
 					leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 					}
 				}
 			}
@@ -2566,13 +2600,13 @@ decision_suika_transform_fog = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_density
+					has_trait = thl_leader_trait_density
 				}
 			}
 			any_planet_army = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_density
+					has_trait = thl_leader_trait_density
 				}
 			}
 		}
@@ -2590,13 +2624,13 @@ decision_suika_transform_fog = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_density
+					has_trait = thl_leader_trait_density
 				}
 			}
 			any_planet_army = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_density
+					has_trait = thl_leader_trait_density
 				}
 			}
 		}
@@ -2624,7 +2658,7 @@ decision_suika_transform_fog = {
 				owner = {
 					random_owned_leader = {
 						limit = {
-							has_trait = leader_trait_density
+							has_trait = thl_leader_trait_density
 						}
 						prevprev = {
 							assign_leader = prev
@@ -2661,13 +2695,13 @@ decision_suika_transform_giant = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_density
+					has_trait = thl_leader_trait_density
 				}
 			}
 			any_planet_army = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_density
+					has_trait = thl_leader_trait_density
 				}
 			}
 		}
@@ -2685,13 +2719,13 @@ decision_suika_transform_giant = {
 			AND = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_density
+					has_trait = thl_leader_trait_density
 				}
 			}
 			any_planet_army = {
 				exists = leader
 				leader = {
-					has_trait = leader_trait_density
+					has_trait = thl_leader_trait_density
 				}
 			}
 		}
@@ -2712,7 +2746,7 @@ decision_suika_transform_giant = {
 				owner = {
 					random_owned_leader = {
 						limit = {
-							has_trait = leader_trait_density
+							has_trait = thl_leader_trait_density
 						}
 						prevprev = {
 							assign_leader = prev
@@ -2826,7 +2860,7 @@ decision_suika_transform_giant_to_fog = {
 				owner = {
 					random_owned_leader = {
 						limit = {
-							has_trait = leader_trait_density
+							has_trait = thl_leader_trait_density
 						}
 						prevprev = {
 							assign_leader = prev
@@ -2899,7 +2933,7 @@ decision_moriya_storm_attraction = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_miracle
+				has_trait = thl_leader_trait_miracle
 			}
 		}
 		NOT = {
@@ -2944,7 +2978,7 @@ decision_moriya_storm_repellent = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_miracle
+				has_trait = thl_leader_trait_miracle
 			}
 		}
 		NOT = {
@@ -2989,7 +3023,7 @@ decision_moriya_storm_cancel = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_miracle
+				has_trait = thl_leader_trait_miracle
 			}
 		}
 		OR = {
@@ -3039,7 +3073,7 @@ decision_rabbit_hole = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_luck
+				has_trait = thl_leader_trait_luck
 			}
 			has_country_flag = unused_rabbit_hole
 		}

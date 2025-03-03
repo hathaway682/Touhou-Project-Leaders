@@ -59,7 +59,7 @@ building_shrine = {
 				owner = {
 					NOT = {
 						any_owned_leader = {
-							has_trait = leader_trait_fall
+							has_trait = thl_leader_trait_fall
 						}
 					}
 				}
@@ -100,7 +100,7 @@ building_shrine = {
 				owner = {
 					NOT = {
 						any_owned_leader = {
-							has_trait = leader_trait_jinx
+							has_trait = thl_leader_trait_jinx
 						}
 					}
 				}
@@ -155,7 +155,7 @@ building_moriya_shrine = {
 				has_civic = civic_moriya_shinto
 				has_civic = civic_moriya_shinto_corp
 				any_owned_leader = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 			}
 		}
@@ -293,7 +293,7 @@ holding_building_moriya_shrine = {
 				has_civic = civic_moriya_shinto
 				has_civic = civic_moriya_shinto_corp
 				any_owned_leader = {
-					has_trait = leader_trait_miracle
+					has_trait = thl_leader_trait_miracle
 				}
 			}
 			has_country_flag = touhou_flag_sanae_shrine_research_speed
@@ -516,7 +516,7 @@ building_fire_catalyst = {
 		owner = {
 			any_owned_leader = {
 				is_councilor = yes
-				has_trait = leader_trait_elements
+				has_trait = thl_leader_trait_elements
 			}
 		}
 	}
@@ -556,7 +556,7 @@ building_water_catalyst = {
 		owner = {
 			any_owned_leader = {
 				is_councilor = yes
-				has_trait = leader_trait_elements
+				has_trait = thl_leader_trait_elements
 			}
 		}
 	}
@@ -597,7 +597,7 @@ building_wood_catalyst = {
 		owner = {
 			any_owned_leader = {
 				is_councilor = yes
-				has_trait = leader_trait_elements
+				has_trait = thl_leader_trait_elements
 			}
 		}
 	}
@@ -637,7 +637,7 @@ building_metel_catalyst = {
 		owner = {
 			any_owned_leader = {
 				is_councilor = yes
-				has_trait = leader_trait_elements
+				has_trait = thl_leader_trait_elements
 			}
 		}
 	}
@@ -678,7 +678,7 @@ building_earth_catalyst = {
 		owner = {
 			any_owned_leader = {
 				is_councilor = yes
-				has_trait = leader_trait_elements
+				has_trait = thl_leader_trait_elements
 			}
 		}
 	}
@@ -719,7 +719,7 @@ building_sun_catalyst = {
 		owner = {
 			any_owned_leader = {
 				is_councilor = yes
-				has_trait = leader_trait_elements
+				has_trait = thl_leader_trait_elements
 			}
 		}
 	}
@@ -761,7 +761,7 @@ building_luna_catalyst = {
 		owner = {
 			any_owned_leader = {
 				is_councilor = yes
-				has_trait = leader_trait_elements
+				has_trait = thl_leader_trait_elements
 			}
 		}
 	}
@@ -805,7 +805,7 @@ building_great_library = {
 		owner = {
 			any_owned_leader = {
 				is_councilor = yes
-				has_trait = leader_trait_elements
+				has_trait = thl_leader_trait_elements
 			}
 		}
 	}
@@ -853,7 +853,7 @@ building_doll_assembly_plant = {
 		exists = owner
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_dolls
+				has_trait = thl_leader_trait_dolls
 			}
 		}
 		OR = {
@@ -1081,7 +1081,7 @@ building_soul_nexus = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_sakura
+				has_trait = thl_leader_trait_sakura
 			}
 		}
 	}
@@ -1173,7 +1173,7 @@ building_suzunaan = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_books
+				has_trait = thl_leader_trait_books
 			}
 		}
 	}
@@ -1223,7 +1223,7 @@ building_national_historial_archive = {
 	potential = {
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_memory
+				has_trait = thl_leader_trait_memory
 			}
 		}
 	}
@@ -1275,7 +1275,7 @@ building_corpses_disposal_center = {
 		exists = owner
 		owner = {
 			any_owned_leader = {
-				has_trait = leader_trait_corpse_manipulation
+				has_trait = thl_leader_trait_corpse_manipulation
 			}
 		}
 		NOT = { has_modifier = resort_colony }
@@ -1299,7 +1299,7 @@ building_corpses_disposal_center = {
 		NOT = {
 			owner = {
 				any_owned_leader = {
-					has_trait = leader_trait_corpse_manipulation
+					has_trait = thl_leader_trait_corpse_manipulation
 				}
 			}
 		}
@@ -1928,9 +1928,9 @@ building_izakaya = {
 		owner = {
 			any_owned_leader = {
 				OR = {
-					has_trait = leader_trait_izakaya
-					has_trait = leader_trait_izakaya_2
-					has_trait = leader_trait_izakaya_3
+					has_trait = thl_leader_trait_izakaya
+					has_trait = thl_leader_trait_izakaya_2
+					has_trait = thl_leader_trait_izakaya_3
 				}
 			}
 		}
@@ -1983,9 +1983,9 @@ holding_izakaya = {
 		branch_office_owner = {
 			any_owned_leader = {
 				OR = {
-					has_trait = leader_trait_izakaya
-					has_trait = leader_trait_izakaya_2
-					has_trait = leader_trait_izakaya_3
+					has_trait = thl_leader_trait_izakaya
+					has_trait = thl_leader_trait_izakaya_2
+					has_trait = thl_leader_trait_izakaya_3
 				}
 			}
 		}
@@ -2044,7 +2044,7 @@ building_magic_academy = {
 		owner = {
 			has_country_flag = immortal_marisa
 			any_owned_leader = {
-				has_trait = leader_trait_magic
+				has_trait = thl_leader_trait_magic
 			}
 		}
 	}

@@ -35,7 +35,7 @@ touhou_bomb_interface_default = {
 				value = 37
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_jinx
+				has_trait = thl_leader_trait_jinx
 			}
 		}
 	}
@@ -55,7 +55,7 @@ touhou_bomb_interface_hina = {
 			value = 37
 		}
 		any_owned_leader = {
-			has_trait = leader_trait_jinx
+			has_trait = thl_leader_trait_jinx
 		}
 	}
 	allow = {
@@ -333,7 +333,7 @@ touhou_reimu_spell_card_text = {
 				value = 1
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_fly
+				has_trait = thl_leader_trait_fly
 			}
 		}
 	}
@@ -354,7 +354,7 @@ touhou_reimu_spell_card_effect = {
 				value = 1
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_fly
+				has_trait = thl_leader_trait_fly
 			}
 		}
 	}
@@ -559,7 +559,7 @@ touhou_koishi_spell_card_text = {
 				value = 52
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_subconscious
+				has_trait = thl_leader_trait_subconscious
 			}
 		}
 	}
@@ -580,7 +580,7 @@ touhou_koishi_spell_card_effect = {
 				value = 52
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_subconscious
+				has_trait = thl_leader_trait_subconscious
 			}
 		}
 	}
@@ -706,7 +706,7 @@ touhou_sizuha_spell_card_text = {
 				value = 35
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_fall
+				has_trait = thl_leader_trait_fall
 			}
 		}
 	}
@@ -727,7 +727,7 @@ touhou_sizuha_spell_card_effect = {
 				value = 35
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_fall
+				has_trait = thl_leader_trait_fall
 			}
 		}
 	}
@@ -904,7 +904,7 @@ touhou_marisa_spell_card_text = {
 				value = 2
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_magic
+				has_trait = thl_leader_trait_magic
 			}
 		}
 	}
@@ -925,7 +925,7 @@ touhou_marisa_spell_card_effect = {
 				value = 2
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_magic
+				has_trait = thl_leader_trait_magic
 			}
 		}
 	}
@@ -1193,7 +1193,7 @@ touhou_hina_spell_card_text = {
 				value = 37
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_jinx
+				has_trait = thl_leader_trait_jinx
 			}
 		}
 	}
@@ -1214,7 +1214,7 @@ touhou_hina_spell_card_effect = {
 				value = 37
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_jinx
+				has_trait = thl_leader_trait_jinx
 			}
 		}
 	}

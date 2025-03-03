@@ -26,7 +26,7 @@ moriya_storm = {
 			owner = {
 				NOR = {
 					any_owned_leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 					}
 					has_civic = civic_moriya_shinto
 					has_civic = civic_moriya_shinto_corp
@@ -44,7 +44,7 @@ moriya_storm = {
 			owner = {
 				NOR = {
 					any_owned_leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 					}
 					has_civic = civic_moriya_shinto
 					has_civic = civic_moriya_shinto_corp
@@ -62,7 +62,7 @@ moriya_storm = {
 			owner = {
 				OR = {
 					any_owned_leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 					}
 					has_civic = civic_moriya_shinto
 					has_civic = civic_moriya_shinto_corp
@@ -80,7 +80,7 @@ moriya_storm = {
 			owner = {
 				OR = {
 					any_owned_leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 					}
 					has_civic = civic_moriya_shinto
 					has_civic = civic_moriya_shinto_corp
@@ -119,7 +119,7 @@ moriya_storm = {
 			owner = {
 				NOR = {
 					any_owned_leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 					}
 					has_civic = civic_moriya_shinto
 					has_civic = civic_moriya_shinto_corp
@@ -139,7 +139,7 @@ moriya_storm = {
 			owner = {
 				OR = {
 					any_owned_leader = {
-						has_trait = leader_trait_miracle
+						has_trait = thl_leader_trait_miracle
 					}
 					has_civic = civic_moriya_shinto
 					has_civic = civic_moriya_shinto_corp

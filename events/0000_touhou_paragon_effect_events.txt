@@ -90,10 +90,10 @@ leader_event = {
                 limit = {
                     owner = {
                         any_owned_leader = {
-                            has_trait = leader_trait_jinx
+                            has_trait = thl_leader_trait_jinx
                         }
                     }
-                    NOT = { has_trait = leader_trait_jinx }
+                    NOT = { has_trait = thl_leader_trait_jinx }
                 }
                 owner = {
                     change_variable = {
@@ -143,7 +143,7 @@ planet_event = {
                     any_ground_combat_attacker = {
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_density
+                            has_trait = thl_leader_trait_density
                         }
                     }
                 }
@@ -151,7 +151,7 @@ planet_event = {
                     limit = {
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_density
+                            has_trait = thl_leader_trait_density
                         }
                     }
                     save_event_target_as = suika
@@ -167,7 +167,7 @@ planet_event = {
                     any_ground_combat_defender = {
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_density
+                            has_trait = thl_leader_trait_density
                         }
                     }
                 }
@@ -175,7 +175,7 @@ planet_event = {
                     limit = {
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_density
+                            has_trait = thl_leader_trait_density
                         }
                     }
                     save_event_target_as = suika
@@ -189,7 +189,7 @@ planet_event = {
                 limit = {
                     exists = leader
 				    leader = {
-                        has_trait = leader_trait_density
+                        has_trait = thl_leader_trait_density
                     }
                 }
                 create_army = {
@@ -205,7 +205,7 @@ planet_event = {
                         }
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_density
+                            has_trait = thl_leader_trait_density
                         }
                     }
                 }
@@ -216,7 +216,7 @@ planet_event = {
                         }
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_density
+                            has_trait = thl_leader_trait_density
                         }
                     }
                     save_event_target_as = suika
@@ -474,7 +474,7 @@ country_event = {
                 leader = {
                     OR = {
                         has_trait = leader_trait_tzrynn_tithe
-                        has_trait = leader_trait_oni_power
+                        has_trait = thl_leader_trait_oni_power
                     }
                 }
             }
@@ -490,7 +490,7 @@ country_event = {
                         leader = {
                             OR = {
                                 has_trait = leader_trait_tzrynn_tithe
-                                has_trait = leader_trait_oni_power
+                                has_trait = thl_leader_trait_oni_power
                             }
                         }
                     }
@@ -554,7 +554,7 @@ planet_event = {
         any_ground_combat_attacker = {
             exists = leader
             leader = {
-                has_trait = leader_trait_earthquake
+                has_trait = thl_leader_trait_earthquake
             }
         }
         NOT = { has_modifier = earthquake_damage }
@@ -598,7 +598,7 @@ planet_event = {
             exists = leader
             leader = {
                 leader_class = scientist
-                has_trait = leader_trait_miracle
+                has_trait = thl_leader_trait_miracle
             }
         }
     }
@@ -1012,7 +1012,7 @@ planet_event = {
         fromfrom = {
             exists = leader
             leader = {
-                has_trait = leader_trait_miracle
+                has_trait = thl_leader_trait_miracle
             }
         }
     }
@@ -1299,7 +1299,7 @@ country_event = {
         name = EXCELLENT
         random_owned_leader = {
             limit = {
-                has_trait = leader_trait_miracle
+                has_trait = thl_leader_trait_miracle
             }
             owner = {
                 add_resource = {
@@ -1333,7 +1333,7 @@ country_event = {
         name = EXCELLENT
         random_owned_leader = {
             limit = {
-                has_trait = leader_trait_miracle
+                has_trait = thl_leader_trait_miracle
             }
             owner = {
                 add_resource = {
@@ -1367,7 +1367,7 @@ country_event = {
         name = EXCELLENT
         random_owned_leader = {
             limit = {
-                has_trait = leader_trait_miracle
+                has_trait = thl_leader_trait_miracle
             }
             owner = {
                 add_resource = {
@@ -2559,7 +2559,7 @@ country_event = {
     trigger = {
         any_owned_leader = {
             is_councilor = yes
-            has_trait = leader_trait_common_sense_killer
+            has_trait = thl_leader_trait_common_sense_killer
         }
     }
 
@@ -2606,7 +2606,7 @@ country_event = {
                 FromFrom = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_like_cloud_and_water
+                        has_trait = thl_leader_trait_like_cloud_and_water
                     }
                 }
                 FromFromFrom = {
@@ -2619,7 +2619,7 @@ country_event = {
                 FromFromFrom = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_like_cloud_and_water
+                        has_trait = thl_leader_trait_like_cloud_and_water
                     }
                 }
                 FromFrom = {
@@ -2637,7 +2637,7 @@ country_event = {
                 FromFrom = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_like_cloud_and_water
+                        has_trait = thl_leader_trait_like_cloud_and_water
                     }
                 }
                 FromFromFrom = {
@@ -2662,7 +2662,7 @@ country_event = {
                 FromFromFrom = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_like_cloud_and_water
+                        has_trait = thl_leader_trait_like_cloud_and_water
                     }
                 }
                 FromFrom = {
@@ -2694,7 +2694,7 @@ country_event = {
         FromFrom = {
             exists = leader
             leader = {
-                has_trait = leader_trait_like_storm_and_wave
+                has_trait = thl_leader_trait_like_storm_and_wave
             }
         }
     }
@@ -2719,7 +2719,7 @@ fleet_event = {
             limit = {
                 any_combatant_fleet = {
                     exists = leader
-                    leader = { has_trait = leader_trait_like_cloud_and_water }
+                    leader = { has_trait = thl_leader_trait_like_cloud_and_water }
                 }
             }
             fleet_event = {
@@ -3083,13 +3083,13 @@ planet_event = {
             any_ground_combat_attacker = {
                 exists = leader
                 leader = {
-                    has_trait = leader_trait_wave_length
+                    has_trait = thl_leader_trait_wave_length
                 }
             }
             any_ground_combat_defender = {
                 exists = leader
                 leader = {
-                    has_trait = leader_trait_wave_length
+                    has_trait = thl_leader_trait_wave_length
                 }
             }
         }
@@ -3100,7 +3100,7 @@ planet_event = {
                 any_ground_combat_attacker = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_wave_length
+                        has_trait = thl_leader_trait_wave_length
                     }
                 }
             }
@@ -3156,7 +3156,7 @@ planet_event = {
                 any_ground_combat_defender = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_wave_length
+                        has_trait = thl_leader_trait_wave_length
                     }
                 }
             }
@@ -3421,7 +3421,7 @@ country_event = {
             any_ground_combat_defender = {
                 exists = leader
                 leader = {
-                    has_trait = leader_trait_kendo
+                    has_trait = thl_leader_trait_kendo
                 }
             }
         }
@@ -3451,7 +3451,7 @@ country_event = {
             any_ground_combat_attacker = {
                 exists = leader
                 leader = {
-                    has_trait = leader_trait_kendo
+                    has_trait = thl_leader_trait_kendo
                 }
             }
         }
@@ -3539,7 +3539,7 @@ country_event = {
         FromFrom = {
             exists = leader
             leader = {
-                has_trait = leader_trait_information_war
+                has_trait = thl_leader_trait_information_war
             }
         }
     }
@@ -3570,14 +3570,14 @@ country_event = {
         FromFrom = {
             owner = {
                 any_owned_leader = {
-                    has_trait = leader_trait_information_war
+                    has_trait = thl_leader_trait_information_war
                     is_councilor = yes
                 }
             }
             NOT = {
                 exists = leader
                 leader = {
-                    has_trait = leader_trait_information_war
+                    has_trait = thl_leader_trait_information_war
                 }
             }
         }
@@ -3698,34 +3698,34 @@ country_event = {
     trigger = {
         any_owned_leader = {
             is_councilor = yes
-            has_trait = leader_trait_death_deal
+            has_trait = thl_thl_leader_trait_death_deal
         }
         from = {
             is_pool_leader = no
             NOT = { leader_class = envoy }
             NOR = {
                 has_trait = leader_trait_governor_gray
-                has_trait = leader_trait_death_dealer
-                has_trait = leader_trait_memory
-                has_trait = leader_trait_time
+                has_trait = thl_thl_leader_trait_death_dealer
+                has_trait = thl_leader_trait_memory
+                has_trait = thl_leader_trait_time
             }
             OR = {
                 NOR = {
-                    has_trait = leader_trait_regeneration
-                    has_trait = leader_trait_regeneration_2
-                    has_trait = leader_trait_regeneration_3
+                    has_trait = thl_leader_trait_regeneration
+                    has_trait = thl_leader_trait_regeneration_2
+                    has_trait = thl_leader_trait_regeneration_3
                 }
                 AND = {
-                    has_trait = leader_trait_regeneration
-                    has_trait = leader_trait_injured
+                    has_trait = thl_leader_trait_regeneration
+                    has_trait = thl_leader_trait_injured
                 }
                 AND = {
-                    has_trait = leader_trait_regeneration_2
-                    has_trait = leader_trait_injured_2
+                    has_trait = thl_leader_trait_regeneration_2
+                    has_trait = thl_leader_trait_injured_2
                 }
                 AND = {
-                    has_trait = leader_trait_regeneration_3
-                    has_trait = leader_trait_injured_3
+                    has_trait = thl_leader_trait_regeneration_3
+                    has_trait = thl_leader_trait_injured_3
                 }
             }
         }
@@ -3750,7 +3750,7 @@ country_event = {
                 target = From
             }
             last_created_leader = {
-                add_trait = leader_trait_death_dealer
+                add_trait = thl_thl_leader_trait_death_dealer
             }
         }
     }
@@ -3788,7 +3788,7 @@ pop_event = {
                     limit = {
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_price_of_life
+                            has_trait = thl_leader_trait_price_of_life
                         }
                     }
                 }
@@ -3812,16 +3812,16 @@ country_event = {
         from = {
             OR = {
                 AND = {
-                    has_trait = leader_trait_regeneration
-                    NOT = { has_trait = leader_trait_injured }
+                    has_trait = thl_leader_trait_regeneration
+                    NOT = { has_trait = thl_leader_trait_injured }
                 }
                 AND = {
-                    has_trait = leader_trait_regeneration_2
-                    NOT = { has_trait = leader_trait_injured_2 }
+                    has_trait = thl_leader_trait_regeneration_2
+                    NOT = { has_trait = thl_leader_trait_injured_2 }
                 }
                 AND = {
-                    has_trait = leader_trait_regeneration_3
-                    NOT = { has_trait = leader_trait_injured_3 }
+                    has_trait = thl_leader_trait_regeneration_3
+                    NOT = { has_trait = thl_leader_trait_injured_3 }
                 }
             }
             OR = {
@@ -3838,20 +3838,20 @@ country_event = {
         last_created_leader = {
             if = {
                 limit = {
-                    has_trait = leader_trait_injured_2
+                    has_trait = thl_leader_trait_injured_2
                 }
-                remove_trait = leader_trait_injured_2
-                add_trait = leader_trait_injured_3
+                remove_trait = thl_leader_trait_injured_2
+                add_trait = thl_leader_trait_injured_3
             }
             else_if = {
                 limit = {
-                    has_trait = leader_trait_injured
+                    has_trait = thl_leader_trait_injured
                 }
-                remove_trait = leader_trait_injured
-                add_trait = leader_trait_injured_2
+                remove_trait = thl_leader_trait_injured
+                add_trait = thl_leader_trait_injured_2
             }
             else = {
-                add_trait = leader_trait_injured
+                add_trait = thl_leader_trait_injured
             }
         }
     }
@@ -3866,9 +3866,9 @@ country_event = {
     trigger = {
         any_owned_leader = {
             OR = {
-                has_trait = leader_trait_injured_3
-                has_trait = leader_trait_injured_2
-                has_trait = leader_trait_injured
+                has_trait = thl_leader_trait_injured_3
+                has_trait = thl_leader_trait_injured_2
+                has_trait = thl_leader_trait_injured
             }
         }
     }
@@ -3876,20 +3876,20 @@ country_event = {
         every_owned_leader = {
             if = {
                 limit = {
-                    has_trait = leader_trait_injured_3
+                    has_trait = thl_leader_trait_injured_3
                 }
-                remove_trait = leader_trait_injured_3
-                add_trait = leader_trait_injured_2
+                remove_trait = thl_leader_trait_injured_3
+                add_trait = thl_leader_trait_injured_2
             }
             else_if = {
                 limit = {
-                    has_trait = leader_trait_injured_2
+                    has_trait = thl_leader_trait_injured_2
                 }
-                remove_trait = leader_trait_injured_2
-                add_trait = leader_trait_injured
+                remove_trait = thl_leader_trait_injured_2
+                add_trait = thl_leader_trait_injured
             }
             else = {
-                remove_trait = leader_trait_injured
+                remove_trait = thl_leader_trait_injured
             }
         }
     }
@@ -4079,7 +4079,7 @@ leader_event = {
                     1 = { set_leader_flag = leader_trait_surveyor }
                     1 = { set_leader_flag = leader_trait_repair_crew }
                     1 = { set_leader_flag = leader_trait_robotist }
-                    1 = { set_leader_flag = leader_trait_knowledge_for_the_masses }
+                    1 = { set_leader_flag = thl_leader_trait_knowledge_for_the_masses }
                 }
             }
             random_owned_leader = {
@@ -4156,7 +4156,7 @@ leader_event = {
                 leader_trait_surveyor = { add_trait = leader_trait_surveyor }
                 leader_trait_repair_crew = { add_trait = leader_trait_repair_crew }
                 leader_trait_robotist = { add_trait = leader_trait_robotist }
-                leader_trait_knowledge_for_the_masses = { add_trait = leader_trait_knowledge_for_the_masses }
+                thl_leader_trait_knowledge_for_the_masses = { add_trait = thl_leader_trait_knowledge_for_the_masses }
             }
         }
     }
@@ -4207,7 +4207,7 @@ country_event = {
                 AND = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_death
+                        has_trait = thl_leader_trait_death
                     }
                 }
                 has_modifier = assimilate_spirit
@@ -4306,7 +4306,7 @@ country_event = {
                 limit = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_death
+                        has_trait = thl_leader_trait_death
                     }
                 }
                 if = {
@@ -4496,12 +4496,12 @@ planet_event = {
             NAND = {
                 any_owned_leader = {
                     is_councilor = yes
-                    has_trait = leader_trait_corpse_travel
+                    has_trait = thl_leader_trait_corpse_travel
                 }
                 any_owned_planet = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_corpse_travel
+                        has_trait = thl_leader_trait_corpse_travel
                     }
                 }
             }
@@ -4688,7 +4688,7 @@ planet_event = {
         AND = {
             exists = leader
             leader = {
-                has_trait = leader_trait_incarnation_of_nature
+                has_trait = thl_leader_trait_incarnation_of_nature
             }
         }
     }
@@ -4730,12 +4730,12 @@ planet_event = {
             NAND = {
                 any_owned_leader = {
                     is_councilor = yes
-                    has_trait = leader_trait_corpse_travel
+                    has_trait = thl_leader_trait_corpse_travel
                 }
                 any_owned_planet = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_corpse_travel
+                        has_trait = thl_leader_trait_corpse_travel
                     }
                 }
             }
@@ -4919,7 +4919,7 @@ country_event = {
         FromFrom = {
             exists = leader
             leader = {
-                has_trait = leader_trait_sleeping_terror_commander
+                has_trait = thl_leader_trait_sleeping_terror_commander
             }
         }
     }
@@ -5002,7 +5002,7 @@ fleet_event = {
     trigger = {
         exists = leader
         leader = {
-            has_trait = leader_trait_books
+            has_trait = thl_leader_trait_books
         }
     }
 
@@ -5606,7 +5606,7 @@ country_event = {
     desc = {
         trigger = {
             from = {
-                has_trait = leader_trait_cyborg_life
+                has_trait = thl_leader_trait_cyborg_life
             }
         }
         text = touhou_paragon_effect.907.cyborg
@@ -5614,7 +5614,7 @@ country_event = {
     desc = {
         trigger = {
             from = {
-                has_trait = leader_trait_synth_life
+                has_trait = thl_leader_trait_synth_life
             }
         }
         text = touhou_paragon_effect.907.synth
@@ -5622,7 +5622,7 @@ country_event = {
     desc = {
         trigger = {
             from = {
-                has_trait = leader_trait_gene_life
+                has_trait = thl_leader_trait_gene_life
             }
         }
         text = touhou_paragon_effect.907.gene
@@ -5638,11 +5638,11 @@ country_event = {
 
     trigger = {
         from = {
-            has_trait = leader_trait_memory
+            has_trait = thl_leader_trait_memory
             OR = {
-                has_trait = leader_trait_cyborg_life
-                has_trait = leader_trait_synth_life
-                has_trait = leader_trait_gene_life
+                has_trait = thl_leader_trait_cyborg_life
+                has_trait = thl_leader_trait_synth_life
+                has_trait = thl_leader_trait_gene_life
                 has_trait = leader_trait_composer_chosen
             }
         }
@@ -5757,12 +5757,12 @@ planet_event = {
         from = {
             any_owned_leader = {
                 is_councilor = yes
-                has_trait = leader_trait_corpse_travel
+                has_trait = thl_leader_trait_corpse_travel
             }
             any_owned_planet = {
                 exists = leader
                 leader = {
-                    has_trait = leader_trait_corpse_travel
+                    has_trait = thl_leader_trait_corpse_travel
                 }
             }
         }
@@ -5785,7 +5785,7 @@ planet_event = {
                         any_owned_planet = {
                             exists = leader
                             leader = {
-                                has_trait = leader_trait_corpse_travel
+                                has_trait = thl_leader_trait_corpse_travel
                             }
                         }
                     }
@@ -5820,7 +5820,7 @@ planet_event = {
                 limit = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_corpse_travel
+                        has_trait = thl_leader_trait_corpse_travel
                     }
                 }
                 create_pop = { species = event_target:dead_pop_species }
@@ -5882,12 +5882,12 @@ planet_event = {
         from = {
             any_owned_leader = {
                 is_councilor = yes
-                has_trait = leader_trait_corpse_travel
+                has_trait = thl_leader_trait_corpse_travel
             }
             any_owned_planet = {
                 exists = leader
                 leader = {
-                    has_trait = leader_trait_corpse_travel
+                    has_trait = thl_leader_trait_corpse_travel
                 }
             }
         }
@@ -5910,7 +5910,7 @@ planet_event = {
                         any_owned_planet = {
                             exists = leader
                             leader = {
-                                has_trait = leader_trait_corpse_travel
+                                has_trait = thl_leader_trait_corpse_travel
                             }
                         }
                     }
@@ -5945,7 +5945,7 @@ planet_event = {
                 limit = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_corpse_travel
+                        has_trait = thl_leader_trait_corpse_travel
                     }
                 }
                 create_pop = { species = event_target:dead_pop_species }
@@ -6027,33 +6027,6 @@ system_event = {
                 set_location = event_target:artifical_sun_creator
                 set_fleet_flag = artifical_sun_fleet
             }
-        }
-        every_system_planet = {
-            limit = {
-                OR = {
-                    is_colonizable = yes
-                    is_colony = yes
-                }
-                is_artificial = no
-            }
-            change_pc = pc_nuked
-            reroll_deposits = yes
-            set_planet_flag = armageddon_nuked
-        }
-        every_system_planet = {
-            limit = {
-                is_colonizable = no
-                is_colony = no
-                is_asteroid = no
-                is_star = no
-                NOT = {
-                    is_planet_class = pc_gas_giant
-                }
-                is_artificial = no
-            }
-            change_pc = pc_molten
-            clear_deposits = yes
-            reroll_deposits = yes
         }
     }
 }
@@ -6224,7 +6197,7 @@ country_event = {
         FromFrom = {
             exists = leader
             leader = {
-                has_trait = leader_trait_nuclear
+                has_trait = thl_leader_trait_nuclear
             }
             NOT = {
                 is_variable_set = nuclear_battle_buff
@@ -6238,7 +6211,7 @@ country_event = {
                 FromFrom = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_nuclear
+                        has_trait = thl_leader_trait_nuclear
                     }
                 }
             }
@@ -6316,9 +6289,9 @@ country_event = {
             exists = leader
             leader = {
                 OR = {
-                    has_trait = leader_trait_crimson_sword
-                    has_trait = leader_trait_crimson_sword_2
-                    has_trait = leader_trait_crimson_sword_3
+                    has_trait = thl_leader_trait_crimson_sword
+                    has_trait = thl_leader_trait_crimson_sword_2
+                    has_trait = thl_leader_trait_crimson_sword_3
                 }
             }
         }
@@ -6399,9 +6372,9 @@ fleet_event = {
                     exists = leader
                     leader = {
                         OR = {
-                            has_trait = leader_trait_crimson_sword
-                            has_trait = leader_trait_crimson_sword_2
-                            has_trait = leader_trait_crimson_sword_3
+                            has_trait = thl_leader_trait_crimson_sword
+                            has_trait = thl_leader_trait_crimson_sword_2
+                            has_trait = thl_leader_trait_crimson_sword_3
                         }
                     }
                 }
@@ -6465,7 +6438,7 @@ country_event = {
         FromFrom = {
             exists = leader
             leader = {
-                has_trait = leader_trait_miracle
+                has_trait = thl_leader_trait_miracle
             }
         }
     }
@@ -6577,7 +6550,7 @@ fleet_event = {
                         }
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_miracle
+                            has_trait = thl_leader_trait_miracle
                         }
                     }
                 }
@@ -6647,7 +6620,7 @@ planet_event = {
         any_ground_combat_attacker = {
             exists = leader
             leader = {
-                has_trait = leader_trait_miracle
+                has_trait = thl_leader_trait_miracle
             }
         }
     }
@@ -6656,7 +6629,7 @@ planet_event = {
             limit = {
                 exists = leader
                 leader = {
-                    has_trait = leader_trait_miracle
+                    has_trait = thl_leader_trait_miracle
                 }
             }
             owner = {
@@ -6730,7 +6703,7 @@ country_event = {
                 FromFrom = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_wave_length
+                        has_trait = thl_leader_trait_wave_length
                     }
                 }
                 FromFromFrom = {
@@ -6743,7 +6716,7 @@ country_event = {
                 FromFromFrom = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_wave_length
+                        has_trait = thl_leader_trait_wave_length
                     }
                 }
                 FromFrom = {
@@ -6761,7 +6734,7 @@ country_event = {
                 FromFrom = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_wave_length
+                        has_trait = thl_leader_trait_wave_length
                     }
                 }
                 FromFromFrom = {
@@ -6791,7 +6764,7 @@ country_event = {
                 FromFromFrom = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_wave_length
+                        has_trait = thl_leader_trait_wave_length
                     }
                 }
                 FromFrom = {
@@ -6829,7 +6802,7 @@ fleet_event = {
             limit = {
                 any_combatant_fleet = {
                     exists = leader
-                    leader = { has_trait = leader_trait_wave_length }
+                    leader = { has_trait = thl_leader_trait_wave_length }
                 }
             }
             change_variable = {
@@ -6945,7 +6918,7 @@ planet_event = {
                     from.owner = {
                         random_owned_leader = {
                             limit = {
-                                has_trait = leader_trait_density
+                                has_trait = thl_leader_trait_density
                             }
                             prevprev = {
                                 assign_leader = prev
@@ -6979,7 +6952,7 @@ planet_event = {
             owner = {
                 random_owned_leader = {
                     limit = {
-                        has_trait = leader_trait_density
+                        has_trait = thl_leader_trait_density
                     }
                 }
                 root = {
@@ -6996,7 +6969,7 @@ planet_event = {
                     from.owner = {
                         random_owned_leader = {
                             limit = {
-                                has_trait = leader_trait_density
+                                has_trait = thl_leader_trait_density
                             }
                             prevprev = {
                                 assign_leader = prev
@@ -7027,7 +7000,7 @@ country_event = {
                 AND = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_fall
+                        has_trait = thl_leader_trait_fall
                     }
                 }
                 AND = {
@@ -7069,14 +7042,14 @@ planet_event = {
                     AND = {
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_fall
+                            has_trait = thl_leader_trait_fall
                         }
                     }
                     sector = {
                         sector_capital = {
                             exists = leader
                             leader = {
-                                has_trait = leader_trait_fall
+                                has_trait = thl_leader_trait_fall
                             }
                         }
                     }
@@ -7229,7 +7202,7 @@ country_event = {
         FromFrom = {
             exists = leader
             leader = {
-                has_trait = leader_trait_song
+                has_trait = thl_leader_trait_song
             }
         }
     }
@@ -7262,7 +7235,7 @@ country_event = {
                     any_ground_combat_attacker = {
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_fall
+                            has_trait = thl_leader_trait_fall
                         }
                     }
                 }
@@ -7270,7 +7243,7 @@ country_event = {
                     limit = {
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_fall
+                            has_trait = thl_leader_trait_fall
                         }
                     }
                     owner = {
@@ -7285,7 +7258,7 @@ country_event = {
                     any_ground_combat_defender = {
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_fall
+                            has_trait = thl_leader_trait_fall
                         }
                     }
                 }
@@ -7293,7 +7266,7 @@ country_event = {
                     limit = {
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_fall
+                            has_trait = thl_leader_trait_fall
                         }
                     }
                     owner = {
@@ -7320,7 +7293,7 @@ country_event = {
                 fleet.leader = {
                     if = {
                         limit = {
-                            has_trait = leader_trait_fall
+                            has_trait = thl_leader_trait_fall
                             ROOT.FROM = {
                                 # Owner of losing ship.
                                 is_default_or_fallen = yes
@@ -7341,7 +7314,7 @@ country_event = {
                 fleet.leader = {
                     if = {
                         limit = {
-                            has_trait = leader_trait_fall
+                            has_trait = thl_leader_trait_fall
                             ROOT.FROM = {
                                 # Owner of losing ship.
                                 is_default_or_fallen = yes
@@ -9297,7 +9270,7 @@ country_event = {
     is_triggered_only = yes
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_nuclear
+            has_trait = thl_leader_trait_nuclear
         }
     }
     immediate = {
@@ -9494,7 +9467,7 @@ country_event = {
             }
             not = {
                 any_owned_leader = {
-                    has_trait = leader_trait_artifitial_sol
+                    has_trait = thl_leader_trait_artifitial_sol
                 }
             }
         }
@@ -9502,9 +9475,9 @@ country_event = {
         every_owned_leader = {
             if = {
                 limit = {
-                    has_trait = leader_trait_nuclear
+                    has_trait = thl_leader_trait_nuclear
                 }
-                add_trait = leader_trait_artifitial_sol
+                add_trait = thl_leader_trait_artifitial_sol
             }
         }
     }
@@ -9567,7 +9540,7 @@ country_event = {
                     limit = {
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_nuclear
+                            has_trait = thl_leader_trait_nuclear
                         }
                     }
                     ship_event = { id = touhou_paragon_effect.42680 } #流放阿空
@@ -9593,7 +9566,7 @@ country_event = {
                     limit = {
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_nuclear
+                            has_trait = thl_leader_trait_nuclear
                         }
                     }
                     ship_event = { id = touhou_paragon_effect.42682 } #流放阿空
@@ -9749,7 +9722,7 @@ country_event = {
                 limit = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_nuclear
+                        has_trait = thl_leader_trait_nuclear
                     }
                 }
                 ship_event = { id = touhou_paragon_effect.42683 } #销毁舰队
@@ -9777,7 +9750,7 @@ ship_event = {
                 if = {
                     limit = {
                         leader = {
-                            has_trait = leader_trait_nuclear
+                            has_trait = thl_leader_trait_nuclear
                         }
                     }
                     save_global_event_target_as = touhou_paragon_utsuho_collapsed
@@ -9811,7 +9784,7 @@ ship_event = {
                 if = {
                     limit = {
                         leader = {
-                            has_trait = leader_trait_nuclear
+                            has_trait = thl_leader_trait_nuclear
                         }
                     }
                     save_global_event_target_as = touhou_paragon_utsuho_collapsed
@@ -9877,7 +9850,7 @@ country_event = {
     trigger = {
         is_country_type = default
         any_owned_leader = {
-            has_trait = leader_trait_nuclear
+            has_trait = thl_leader_trait_nuclear
         }
         NOT = {
             has_country_flag = recent_utsuho_nuclear
@@ -9899,7 +9872,7 @@ country_event = {
                 limit = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_nuclear
+                        has_trait = thl_leader_trait_nuclear
                     }
                 }
                 add_modifier = {
@@ -9918,7 +9891,7 @@ country_event = {
                 limit = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_nuclear
+                        has_trait = thl_leader_trait_nuclear
                     }
                 }
                 add_modifier = {
@@ -9938,7 +9911,7 @@ fleet_event = {
     trigger = {
         exists = leader
         leader = {
-            has_trait = leader_trait_nuclear
+            has_trait = thl_leader_trait_nuclear
         }
     }
     immediate = {
@@ -9961,14 +9934,14 @@ country_event = {
     trigger = {
         has_tradition = tr_psionics_finish
         any_owned_leader = {
-            has_trait = leader_trait_nuclear
+            has_trait = thl_leader_trait_nuclear
         }
     }
     immediate = {
         every_owned_leader = {
             if = {
                 limit = {
-                    has_trait = leader_trait_nuclear
+                    has_trait = thl_leader_trait_nuclear
                 }
                 add_trait = leader_trait_eater_chosen
             }
@@ -9995,7 +9968,7 @@ country_event = {
         every_owned_leader = {
             if = {
                 limit = {
-                    has_trait = leader_trait_time
+                    has_trait = thl_leader_trait_time
                 }
                 set_leader_flag = sakuya_event_kill
                 kill_leader = {
@@ -10006,7 +9979,7 @@ country_event = {
         every_owned_leader = {
             if = {
                 limit = {
-                    has_trait = leader_trait_time
+                    has_trait = thl_leader_trait_time
                 }
                 kill_leader = {
                     show_notification = yes
@@ -10023,9 +9996,9 @@ country_event = {
     title = touhou_paragon_effect.41001.name
     trigger = {
         from = {
-            has_trait = leader_trait_time
+            has_trait = thl_leader_trait_time
             or = {
-                has_trait = leader_trait_injured
+                has_trait = thl_leader_trait_injured
                 has_leader_flag = sakuya_event_kill
                 leader_age >= value:death_age
             }
@@ -10051,7 +10024,7 @@ country_event = {
         #every_owned_leader = {
         #    if = {
         #        limit = {
-        #            has_trait = leader_trait_time
+        #            has_trait = thl_leader_trait_time
         #        }
         #        kill_leader = {
         #            show_notification = no
@@ -10118,9 +10091,9 @@ country_event = {
         every_owned_leader = {
             if = {
                 limit = {
-                    has_trait = leader_trait_destiny_manipulation
+                    has_trait = thl_leader_trait_destiny_manipulation
                 }
-                add_trait = leader_trait_deeper_scarlet_dream
+                add_trait = thl_leader_trait_deeper_scarlet_dream
             }
         }
     }
@@ -10153,9 +10126,9 @@ country_event = {
                 target = event_target:touhou_dead_sakuya_clone
             }
             last_created_leader = {
-                remove_trait = leader_trait_regeneration
-                add_trait = leader_trait_regeneration_2
-                add_trait = leader_trait_body_and_spirit
+                remove_trait = thl_leader_trait_regeneration
+                add_trait = thl_leader_trait_regeneration_2
+                add_trait = thl_leader_trait_body_and_spirit
             }
         }
         custom_tooltip = revive_sakuya_chosen
@@ -10207,9 +10180,9 @@ country_event = {
         every_owned_leader = {
             if = {
                 limit = {
-                    has_trait = leader_trait_destiny_manipulation
+                    has_trait = thl_leader_trait_destiny_manipulation
                 }
-                add_trait = leader_trait_deeper_scarlet_dream
+                add_trait = thl_leader_trait_deeper_scarlet_dream
             }
         }
     }
@@ -10229,8 +10202,8 @@ country_event = {
                 }
             }
             last_created_leader = {
-                remove_trait = leader_trait_regeneration
-                add_trait = leader_trait_regeneration_2
+                remove_trait = thl_leader_trait_regeneration
+                add_trait = thl_leader_trait_regeneration_2
                 add_trait = leader_trait_cyborg
             }
         }
@@ -10244,17 +10217,17 @@ country_event = {
                 }
             }
             last_created_leader = {
-                remove_trait = leader_trait_regeneration
-                add_trait = leader_trait_regeneration_2
+                remove_trait = thl_leader_trait_regeneration
+                add_trait = thl_leader_trait_regeneration_2
                 add_trait = leader_trait_synthetic
             }
         }
         every_owned_leader = {
             if = {
                 limit = {
-                    has_trait = leader_trait_destiny_manipulation
+                    has_trait = thl_leader_trait_destiny_manipulation
                 }
-                add_trait = leader_trait_nihility_scarlet_dream
+                add_trait = thl_leader_trait_nihility_scarlet_dream
             }
         }
     }
@@ -10293,9 +10266,9 @@ country_event = {
             target = event_target:touhou_dead_sakuya_clone
         }
         last_created_leader = {
-            remove_trait = leader_trait_regeneration
-            add_trait = leader_trait_regeneration_2
-            add_trait = leader_trait_the_incorruptible
+            remove_trait = thl_leader_trait_regeneration
+            add_trait = thl_leader_trait_regeneration_2
+            add_trait = thl_leader_trait_the_incorruptible
         }
     }
 }
@@ -10337,10 +10310,10 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait =  leader_trait_earthquake
+            has_trait =  thl_leader_trait_earthquake
         }
         any_owned_leader = {
-            has_trait =   leader_trait_flower
+            has_trait =   thl_leader_trait_flower
         }
         any_owned_planet = {
             has_district = district_garden
@@ -10407,22 +10380,22 @@ country_event = {
     fire_only_once = yes
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_mind_reader
+            has_trait = thl_leader_trait_mind_reader
         }
         any_owned_leader = {
-            has_trait = leader_trait_subconscious
+            has_trait = thl_leader_trait_subconscious
         }
         any_owned_leader = {
-            has_trait = leader_trait_corpse_travel
+            has_trait = thl_leader_trait_corpse_travel
         }
         any_owned_leader = {
-            has_trait = leader_trait_nuclear
+            has_trait = thl_leader_trait_nuclear
         }
     }
     immediate = {
         every_owned_leader = {
             limit = {
-                has_trait = leader_trait_mind_reader
+                has_trait = thl_leader_trait_mind_reader
             }
             leader_event = { id = touhou_paragon_effect.41302 days = 1 random = 30 }
         }
@@ -10442,7 +10415,7 @@ leader_event = {
     option = {
         name = touhou_paragon_effect.41302.a
         root = {
-            add_trait = leader_trait_heart_break
+            add_trait = thl_leader_trait_heart_break
         }
         hidden_effect = {
             root = {
@@ -10464,7 +10437,7 @@ leader_event = {
     show_sound = event_planetary_riot
     immediate = {
         root = {
-            remove_trait = leader_trait_heart_break
+            remove_trait = thl_leader_trait_heart_break
             remove_trait = leader_trait_procrastinator
         }
     }
@@ -10473,9 +10446,9 @@ leader_event = {
         owner = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_subconscious
+                    has_trait = thl_leader_trait_subconscious
                 }
-                add_trait = leader_trait_with_satori
+                add_trait = thl_leader_trait_with_satori
             }
         }
     }
@@ -10484,9 +10457,9 @@ leader_event = {
         owner = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_corpse_travel
+                    has_trait = thl_leader_trait_corpse_travel
                 }
-                add_trait = leader_trait_with_satori
+                add_trait = thl_leader_trait_with_satori
             }
         }
     }
@@ -10495,9 +10468,9 @@ leader_event = {
         owner = {
             every_owned_leader = {
                 limit = {
-                    has_trait = leader_trait_nuclear
+                    has_trait = thl_leader_trait_nuclear
                 }
-                add_trait = leader_trait_with_satori
+                add_trait = thl_leader_trait_with_satori
             }
         }
     }
@@ -10516,13 +10489,13 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_mind_reader
+            has_trait = thl_leader_trait_mind_reader
         }
         any_owned_leader = {
-            has_trait = leader_trait_books
+            has_trait = thl_leader_trait_books
         }
         any_owned_leader = {
-            has_trait = leader_trait_knowledge
+            has_trait = thl_leader_trait_knowledge
         }
         any_owned_planet = {
             has_building = building_great_library
@@ -10547,7 +10520,7 @@ country_event = {
         name = touhou_paragon_effect.41801.d
         trigger = {
             any_owned_leader = {
-                has_trait = leader_trait_magic
+                has_trait = thl_leader_trait_magic
             }
         }
         custom_tooltip = TOUHOU_FLAVOR_BOOK_CLUB_MARISA
@@ -10567,7 +10540,7 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_ice
+            has_trait = thl_leader_trait_ice
         }
         any_owned_leader = {
             has_leader_flag = daiyousei_leader
@@ -10581,9 +10554,9 @@ country_event = {
         name = touhou_paragon_effect.40401.a
         every_owned_leader = {
             limit = {
-                has_trait = leader_trait_ice
+                has_trait = thl_leader_trait_ice
             }
-            add_trait = leader_trait_arctic_governing
+            add_trait = thl_leader_trait_arctic_governing
             #    save_event_target_as = target_cirno
             #}
         }
@@ -10604,10 +10577,10 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_density
+            has_trait = thl_leader_trait_density
         }
         any_owned_leader = {
-            has_trait = leader_trait_wind
+            has_trait = thl_leader_trait_wind
         }
         any_owned_planet = {
             has_modifier = modifier_endless_banquet
@@ -10634,7 +10607,7 @@ country_event = {
         }
         every_owned_leader = {
             limit = {
-                has_trait = leader_trait_wind
+                has_trait = thl_leader_trait_wind
             }
             add_trait = leader_trait_trade_focus_2
         }
@@ -10654,19 +10627,19 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_destiny_manipulation
+            has_trait = thl_leader_trait_destiny_manipulation
         }
         any_owned_leader = {
-            has_trait = leader_trait_magic
+            has_trait = thl_leader_trait_magic
         }
         any_owned_leader = {
-            has_trait = leader_trait_time
+            has_trait = thl_leader_trait_time
         }
         any_owned_leader = {
-            has_trait = leader_trait_knowledge
+            has_trait = thl_leader_trait_knowledge
         }
         any_owned_leader = {
-            has_trait = leader_trait_wind
+            has_trait = thl_leader_trait_wind
         }
     }
     option = {
@@ -10697,10 +10670,10 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_dolls
+            has_trait = thl_leader_trait_dolls
         }
         any_owned_leader = {
-            has_trait = leader_trait_magic
+            has_trait = thl_leader_trait_magic
         }
         any_owned_planet = {
             is_colony = yes
@@ -10772,10 +10745,10 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_dolls
+            has_trait = thl_leader_trait_dolls
         }
         any_owned_leader = {
-            has_trait = leader_trait_magic
+            has_trait = thl_leader_trait_magic
         }
     }
     option = {
@@ -10814,10 +10787,10 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_dolls
+            has_trait = thl_leader_trait_dolls
         }
         any_owned_leader = {
-            has_trait = leader_trait_magic
+            has_trait = thl_leader_trait_magic
         }
     }
     option = {
@@ -10850,15 +10823,15 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_dolls
+            has_trait = thl_leader_trait_dolls
         }
         any_owned_leader = {
-            has_trait = leader_trait_magic
+            has_trait = thl_leader_trait_magic
         }
     }
     option = {
         name = touhou_paragon_effect.40705.a
-        country_event = { id = touhou_paragon_effect.40706 days = 10}
+        country_event = { id = touhou_paragon_effect.40706 days = 10 }
         create_country = {
             name = "NAME_Deformed_Mushroom"
             type = faction
@@ -10899,15 +10872,15 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_dolls
+            has_trait = thl_leader_trait_dolls
         }
         any_owned_leader = {
-            has_trait = leader_trait_magic
+            has_trait = thl_leader_trait_magic
         }
     }
     option = {
         name = touhou_paragon_effect.40706.a
-        country_event = { id = touhou_paragon_effect.40707 days = 30}
+        country_event = { id = touhou_paragon_effect.40707 }
         event_target:marisa_alice_regeneration_location = {
             add_planet_devastation = 5
             add_modifier = {
@@ -10951,15 +10924,15 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_dolls
+            has_trait = thl_leader_trait_dolls
         }
         any_owned_leader = {
-            has_trait = leader_trait_magic
+            has_trait = thl_leader_trait_magic
         }
     }
     option = {
         name = touhou_paragon_effect.40707.a
-        country_event = { id = touhou_paragon_effect.40708 days = 20}
+        country_event = { id = touhou_paragon_effect.40708  }
         add_resource = {
             energy = -10000
         }
@@ -10999,10 +10972,10 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_dolls
+            has_trait = thl_leader_trait_dolls
         }
         any_owned_leader = {
-            has_trait = leader_trait_magic
+            has_trait = thl_leader_trait_magic
         }
     }
     option = {
@@ -11041,10 +11014,10 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_dolls
+            has_trait = thl_leader_trait_dolls
         }
         any_owned_leader = {
-            has_trait = leader_trait_magic
+            has_trait = thl_leader_trait_magic
         }
         fromfrom = {
             has_planet_flag = goelia_defender_planet
@@ -11059,7 +11032,7 @@ country_event = {
             remove_modifier = modifier_deformed_mushroom
             remove_planet_flag = goelia_defender_planet
         }
-        country_event = { id = touhou_paragon_effect.40710 days = 5}
+        country_event = { id = touhou_paragon_effect.40710}
     }
     after = {
         add_event_chain_counter = {
@@ -11084,10 +11057,10 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_dolls
+            has_trait = thl_leader_trait_dolls
         }
         any_owned_leader = {
-            has_trait = leader_trait_magic
+            has_trait = thl_leader_trait_magic
         }
     }
     option = {
@@ -11098,18 +11071,18 @@ country_event = {
         end_event_chain = "touhou_marisa_alice_regeneration_chain"
         every_owned_leader = {
             limit = {
-                has_trait = leader_trait_regeneration_2
+                has_trait = thl_leader_trait_regeneration_2
             }
-            remove_trait = leader_trait_regeneration_2
-            add_trait = leader_trait_regeneration_3
+            remove_trait = thl_leader_trait_regeneration_2
+            add_trait = thl_leader_trait_regeneration_3
         }
         every_owned_leader = {
             limit = {
-                has_trait = leader_trait_regeneration
-                not = { has_trait = leader_trait_time }
+                has_trait = thl_leader_trait_regeneration
+                not = { has_trait = thl_leader_trait_time }
             }
-            remove_trait = leader_trait_regeneration
-            add_trait = leader_trait_regeneration_2
+            remove_trait = thl_leader_trait_regeneration
+            add_trait = thl_leader_trait_regeneration_2
         }
     }
     after = {
@@ -11125,10 +11098,10 @@ country_event = {
     hide_window = yes
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_dolls
+            has_trait = thl_leader_trait_dolls
         }
         any_owned_leader = {
-            has_trait = leader_trait_magic
+            has_trait = thl_leader_trait_magic
         }
         any_owned_planet = {
             has_planet_flag = goelia_defender_planet
@@ -11159,16 +11132,16 @@ country_event = {
     show_sound = event_planetary_riot
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_destiny_manipulation
+            has_trait = thl_leader_trait_destiny_manipulation
         }
         any_owned_leader = {
-            has_trait = leader_trait_time
+            has_trait = thl_leader_trait_time
         }
         any_owned_leader = {
-            has_trait = leader_trait_elements
+            has_trait = thl_leader_trait_elements
         }
         any_owned_leader = {
-            has_trait = leader_trait_kongfu
+            has_trait = thl_leader_trait_kongfu
         }
         has_technology = tech_colossus
     }

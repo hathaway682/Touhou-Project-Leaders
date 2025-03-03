@@ -142,7 +142,7 @@ subclass_commander_miko = {
 ##################
 # SPECIAL TRAITS #
 ##################
-leader_trait_earthquake = {
+thl_leader_trait_earthquake = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -152,7 +152,7 @@ leader_trait_earthquake = {
 		COUNCIL = no
 		TIER = none
 	}
-	custom_tooltip_with_modifiers = leader_trait_earthquake_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_earthquake_effect
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
@@ -181,7 +181,7 @@ leader_trait_earthquake = {
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_crimson_sword = {
+thl_leader_trait_crimson_sword = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -204,8 +204,8 @@ leader_trait_crimson_sword = {
 	}
 }
 
-leader_trait_crimson_sword_2 = {
-	replace_traits = { "leader_trait_crimson_sword" }
+thl_leader_trait_crimson_sword_2 = {
+	replace_traits = { "thl_leader_trait_crimson_sword" }
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -227,8 +227,8 @@ leader_trait_crimson_sword_2 = {
 	}
 }
 
-leader_trait_crimson_sword_3 = {
-	replace_traits = { "leader_trait_crimson_sword_2" }
+thl_leader_trait_crimson_sword_3 = {
+	replace_traits = { "thl_leader_trait_crimson_sword_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -250,7 +250,7 @@ leader_trait_crimson_sword_3 = {
 	}
 }
 
-leader_trait_density = {
+thl_leader_trait_density = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -285,11 +285,11 @@ leader_trait_density = {
 		change_background_job = oni_king
 	}
 	immortal_leaders = yes
-	custom_tooltip_with_modifiers = leader_trait_density_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_density_effect
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_oni_power = {
+thl_leader_trait_oni_power = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -309,13 +309,13 @@ leader_trait_oni_power = {
 		army_collateral_damage_mult = -0.33
 	}
 	leader_class = { commander }
-	custom_tooltip_with_modifiers = leader_trait_oni_power_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_oni_power_effect
 	selectable_weight = {
 		weight = 0
 	}
 }
 
-leader_trait_miracle = {
+thl_leader_trait_miracle = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -356,11 +356,11 @@ leader_trait_miracle = {
 	on_gained_effect = {
 		change_background_job = kazehouri
 	}
-	custom_tooltip_with_modifiers = leader_trait_miracle_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_miracle_effect
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_robotist_sanae = {
+thl_leader_trait_robotist_sanae = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -396,7 +396,7 @@ leader_trait_robotist_sanae = {
 	selectable_weight = 0
 }
 
-leader_trait_common_sense_killer = {
+thl_leader_trait_common_sense_killer = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -415,10 +415,10 @@ leader_trait_common_sense_killer = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_common_sense_killer_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_common_sense_killer_effect
 }
 
-leader_trait_theurgist = {
+thl_leader_trait_theurgist = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -498,8 +498,8 @@ leader_trait_theurgist = {
 	}
 }
 
-leader_trait_theurgist_2 = {
-	replace_traits = { leader_trait_theurgist }
+thl_leader_trait_theurgist_2 = {
+	replace_traits = { thl_leader_trait_theurgist }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -576,8 +576,8 @@ leader_trait_theurgist_2 = {
 	}
 }
 
-leader_trait_theurgist_3 = {
-	replace_traits = { leader_trait_theurgist_2 }
+thl_leader_trait_theurgist_3 = {
+	replace_traits = { thl_leader_trait_theurgist_2 }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -654,11 +654,11 @@ leader_trait_theurgist_3 = {
 	}
 }
 
-leader_trait_snake_bless = {
+thl_leader_trait_snake_bless = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
-		ICON = "GFX_leader_trait_snake_bless"
+		ICON = "GFX_thl_leader_trait_snake_bless"
 		RARITY = veteran
 		COUNCIL = no
 		TIER = 1
@@ -687,19 +687,19 @@ leader_trait_snake_bless = {
 	}
 	leader_class = { scientist commander official }
 	leader_potential_add = {
-		has_trait = leader_trait_miracle
+		has_trait = thl_leader_trait_miracle
 	}
 	selectable_weight = {
 		weight = 1000
 	}
 }
 
-leader_trait_snake_bless_2 = {
-	replace_traits = { leader_trait_snake_bless }
+thl_leader_trait_snake_bless_2 = {
+	replace_traits = { thl_leader_trait_snake_bless }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
-		ICON = "GFX_leader_trait_snake_bless"
+		ICON = "GFX_thl_leader_trait_snake_bless"
 		RARITY = veteran
 		COUNCIL = no
 		TIER = 2
@@ -732,12 +732,12 @@ leader_trait_snake_bless_2 = {
 	}
 }
 
-leader_trait_snake_bless_3 = {
-	replace_traits = { leader_trait_snake_bless_2 }
+thl_leader_trait_snake_bless_3 = {
+	replace_traits = { thl_leader_trait_snake_bless_2 }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
-		ICON = "GFX_leader_trait_snake_bless"
+		ICON = "GFX_thl_leader_trait_snake_bless"
 		RARITY = veteran
 		COUNCIL = no
 		TIER = 3
@@ -770,11 +770,11 @@ leader_trait_snake_bless_3 = {
 	}
 }
 
-leader_trait_frog_bless = {
+thl_leader_trait_frog_bless = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
-		ICON = "GFX_leader_trait_frog_bless"
+		ICON = "GFX_thl_leader_trait_frog_bless"
 		RARITY = veteran
 		COUNCIL = no
 		TIER = 1
@@ -803,19 +803,19 @@ leader_trait_frog_bless = {
 	}
 	leader_class = { scientist commander official }
 	leader_potential_add = {
-		has_trait = leader_trait_miracle
+		has_trait = thl_leader_trait_miracle
 	}
 	selectable_weight = {
 		weight = 1000
 	}
 }
 
-leader_trait_frog_bless_2 = {
-	replace_traits = { leader_trait_frog_bless }
+thl_leader_trait_frog_bless_2 = {
+	replace_traits = { thl_leader_trait_frog_bless }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
-		ICON = "GFX_leader_trait_frog_bless"
+		ICON = "GFX_thl_leader_trait_frog_bless"
 		RARITY = veteran
 		COUNCIL = no
 		TIER = 2
@@ -848,12 +848,12 @@ leader_trait_frog_bless_2 = {
 	}
 }
 
-leader_trait_frog_bless_3 = {
-	replace_traits = { leader_trait_frog_bless_2 }
+thl_leader_trait_frog_bless_3 = {
+	replace_traits = { thl_leader_trait_frog_bless_2 }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
-		ICON = "GFX_leader_trait_frog_bless"
+		ICON = "GFX_thl_leader_trait_frog_bless"
 		RARITY = veteran
 		COUNCIL = no
 		TIER = 3
@@ -886,7 +886,7 @@ leader_trait_frog_bless_3 = {
 	}
 }
 
-leader_trait_ice = {
+thl_leader_trait_ice = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -913,11 +913,11 @@ leader_trait_ice = {
 		change_background_job = none
 	}
 	immortal_leaders = yes
-	custom_tooltip_with_modifiers = leader_trait_ice_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_ice_effect
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_kongfu = {
+thl_leader_trait_kongfu = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -953,7 +953,7 @@ leader_trait_kongfu = {
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_fly = {
+thl_leader_trait_fly = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -989,7 +989,7 @@ leader_trait_fly = {
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_fake_technocracy = {
+thl_leader_trait_fake_technocracy = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -1013,7 +1013,7 @@ leader_trait_fake_technocracy = {
 	}
 }
 
-leader_trait_invincible = {
+thl_leader_trait_invincible = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -1035,7 +1035,7 @@ leader_trait_invincible = {
 	custom_tooltip_with_modifiers = leader_trait_invincible_effect
 }
 
-leader_trait_like_cloud_and_water = {
+thl_leader_trait_like_cloud_and_water = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -1053,10 +1053,10 @@ leader_trait_like_cloud_and_water = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_like_cloud_and_water_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_like_cloud_and_water_effect
 }
 
-leader_trait_tracker = {
+thl_leader_trait_tracker = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -1076,7 +1076,7 @@ leader_trait_tracker = {
 	}
 }
 
-leader_exorcism_roud = {
+thl_leader_exorcism_roud = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -1094,8 +1094,8 @@ leader_exorcism_roud = {
 	}
 }
 
-leader_exorcism_roud_2 = {
-	replace_traits = { "leader_exorcism_roud" }
+thl_leader_exorcism_roud_2 = {
+	replace_traits = { "thl_leader_exorcism_roud" }
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -1113,8 +1113,8 @@ leader_exorcism_roud_2 = {
 	}
 }
 
-leader_exorcism_roud_3 = {
-	replace_traits = { "leader_exorcism_roud_2" }
+thl_leader_exorcism_roud_3 = {
+	replace_traits = { "thl_leader_exorcism_roud_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -1133,7 +1133,7 @@ leader_exorcism_roud_3 = {
 	}
 }
 
-leader_trait_magic = {
+thl_leader_trait_magic = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -1162,7 +1162,7 @@ leader_trait_magic = {
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_like_storm_and_wave = {
+thl_leader_trait_like_storm_and_wave = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -1181,10 +1181,10 @@ leader_trait_like_storm_and_wave = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_like_storm_and_wave_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_like_storm_and_wave_effect
 }
 
-leader_trait_master_sacker = {
+thl_leader_trait_master_sacker = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -1205,9 +1205,9 @@ leader_trait_master_sacker = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_master_sacker_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_master_sacker_effect
 }
-leader_trait_personal_relationship_genius= {
+thl_leader_trait_personal_relationship_genius= {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -1228,7 +1228,7 @@ leader_trait_personal_relationship_genius= {
 		weight = 0
 	}
 }
-leader_trait_iron_ass = {
+thl_leader_trait_iron_ass = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -1247,9 +1247,9 @@ leader_trait_iron_ass = {
 	}
 }
 
-leader_trait_iron_ass_2 = {
+thl_leader_trait_iron_ass_2 = {
 	replace_traits = {
-		leader_trait_iron_ass
+		thl_leader_trait_iron_ass
 	}
 	inline_script = {
 		script = trait/icon
@@ -1269,9 +1269,9 @@ leader_trait_iron_ass_2 = {
 	}
 }
 
-leader_trait_iron_ass_3 = {
+thl_leader_trait_iron_ass_3 = {
 	replace_traits = {
-		leader_trait_iron_ass_2
+		thl_leader_trait_iron_ass_2
 	}
 	inline_script = {
 		script = trait/icon
@@ -1291,7 +1291,7 @@ leader_trait_iron_ass_3 = {
 	}
 }
 
-leader_trait_magician = {
+thl_leader_trait_magician = {
 	inline_script = {
 		script = trait/icon_psionic
 		CLASS = leader
@@ -1379,7 +1379,7 @@ leader_trait_magician = {
 	notify_on_gained = no
 }
 
-leader_trait_great_magician = {
+thl_leader_trait_great_magician = {
 	inline_script = {
 		script = trait/icon_psionic
 		CLASS = leader
@@ -1471,7 +1471,7 @@ leader_trait_great_magician = {
 	notify_on_gained = no
 }
 
-leader_trait_wave_length = {
+thl_leader_trait_wave_length = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -1486,7 +1486,7 @@ leader_trait_wave_length = {
 		leader_commanders_thl_mana_produces_add = 1
 		mult = trigger:has_skill
 	}
-	custom_tooltip_with_modifiers = leader_trait_wave_length_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_wave_length_effect
 	fleet_modifier = {
 		ship_evasion_add = 30
 		weapon_type_energy_weapon_damage_mult = 0.3
@@ -1519,7 +1519,7 @@ leader_trait_wave_length = {
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_penglai_medicine = {
+thl_leader_trait_penglai_medicine = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -1551,7 +1551,7 @@ leader_trait_penglai_medicine = {
 	}
 }
 
-leader_trait_prosperity_and_decline = {
+thl_leader_trait_prosperity_and_decline = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -1570,13 +1570,13 @@ leader_trait_prosperity_and_decline = {
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
-	custom_tooltip_with_modifiers = leader_trait_prosperity_and_decline_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_prosperity_and_decline_effect
 	selectable_weight = {
 		weight = 0
 	}
 }
 
-leader_trait_moon_war_veteran = {
+thl_leader_trait_moon_war_veteran = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -1600,7 +1600,7 @@ leader_trait_moon_war_veteran = {
 	}
 }
 
-leader_trait_kendo = {
+thl_leader_trait_kendo = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -1615,7 +1615,7 @@ leader_trait_kendo = {
 		leader_commanders_thl_mana_produces_add = 1
 		mult = trigger:has_skill
 	}
-	custom_tooltip_with_modifiers = leader_trait_kendo_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_kendo_effect
 	self_modifier = {
 		planet_combat_width_add = -2
 	}
@@ -1665,7 +1665,7 @@ leader_trait_wholehearted = {
 	custom_tooltip_with_modifiers = leader_trait_wholehearted_effect
 }
 
-leader_trait_gardener = {
+thl_leader_trait_gardener = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -1713,7 +1713,7 @@ leader_trait_gardener = {
 	}
 }
 
-leader_trait_time = {
+thl_leader_trait_time = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1727,7 +1727,7 @@ leader_trait_time = {
 		leader_commanders_thl_mana_produces_add = 1
 		mult = trigger:has_skill
 	}
-	custom_tooltip_with_modifiers = leader_trait_time_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_time_effect
 	self_modifier = {
 		leader_lifespan_mult = 1
 	}
@@ -1758,7 +1758,7 @@ leader_trait_time = {
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_year_round = {
+thl_leader_trait_year_round = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1802,7 +1802,7 @@ leader_trait_year_round = {
 	}
 }
 
-leader_trait_border_merry = {
+thl_leader_trait_border_merry = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -1826,7 +1826,7 @@ leader_trait_border_merry = {
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_star_located = {
+thl_leader_trait_star_located = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -1849,7 +1849,7 @@ leader_trait_star_located = {
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_hifuu = {
+thl_leader_trait_hifuu = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -1871,7 +1871,7 @@ leader_trait_hifuu = {
 	}
 }
 
-leader_trait_century_of_science = {
+thl_leader_trait_century_of_science = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -1896,7 +1896,7 @@ leader_trait_century_of_science = {
 	}
 }
 
-leader_trait_relativistic_psychiatry = {
+thl_leader_trait_relativistic_psychiatry = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -1923,8 +1923,8 @@ leader_trait_relativistic_psychiatry = {
 	}
 }
 
-leader_trait_relativistic_psychiatry_2 = {
-	replace_traits = { "leader_trait_relativistic_psychiatry" }
+thl_leader_trait_relativistic_psychiatry_2 = {
+	replace_traits = { "thl_leader_trait_relativistic_psychiatry" }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -1951,8 +1951,8 @@ leader_trait_relativistic_psychiatry_2 = {
 	}
 }
 
-leader_trait_relativistic_psychiatry_3 = {
-	replace_traits = { "leader_trait_relativistic_psychiatry_2" }
+thl_leader_trait_relativistic_psychiatry_3 = {
+	replace_traits = { "thl_leader_trait_relativistic_psychiatry_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -1979,7 +1979,7 @@ leader_trait_relativistic_psychiatry_3 = {
 	}
 }
 
-leader_trait_super_unified_physics = {
+thl_leader_trait_super_unified_physics = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -2006,8 +2006,8 @@ leader_trait_super_unified_physics = {
 	}
 }
 
-leader_trait_super_unified_physics_2 = {
-	replace_traits = { "leader_trait_super_unified_physics" }
+thl_leader_trait_super_unified_physics_2 = {
+	replace_traits = { "thl_leader_trait_super_unified_physics" }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -2034,8 +2034,8 @@ leader_trait_super_unified_physics_2 = {
 	}
 }
 
-leader_trait_super_unified_physics_3 = {
-	replace_traits = { "leader_trait_super_unified_physics_2" }
+thl_leader_trait_super_unified_physics_3 = {
+	replace_traits = { "thl_leader_trait_super_unified_physics_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -2062,7 +2062,7 @@ leader_trait_super_unified_physics_3 = {
 	}
 }
 
-leader_trait_subconscious = {
+thl_leader_trait_subconscious = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -2084,14 +2084,14 @@ leader_trait_subconscious = {
 	on_gained_effect = {
 		change_background_job = none
 	}
-	custom_tooltip_with_modifiers = leader_trait_subconscious_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_subconscious_effect
 	leader_class = { commander }
 	selectable_weight = 0
 	immortal_leaders = yes
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_mind_reader = {
+thl_leader_trait_mind_reader = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -2128,7 +2128,7 @@ leader_trait_mind_reader = {
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_subterran_manager = {
+thl_leader_trait_subterran_manager = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2153,13 +2153,13 @@ leader_trait_subterran_manager = {
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
-	custom_tooltip_with_modifiers = leader_trait_subterran_manager_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_subterran_manager_effect
 	selectable_weight = {
 		weight = 0
 	}
 }
 
-leader_trait_satori_pets = {
+thl_leader_trait_satori_pets = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2176,13 +2176,13 @@ leader_trait_satori_pets = {
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
-	custom_tooltip_with_modifiers = leader_trait_satori_pets_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_satori_pets_effect
 	selectable_weight = {
 		weight = 0
 	}
 }
 
-leader_trait_detective = {
+thl_leader_trait_detective = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2202,7 +2202,7 @@ leader_trait_detective = {
 	}
 }
 
-leader_trait_wind = {
+thl_leader_trait_wind = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -2229,10 +2229,10 @@ leader_trait_wind = {
 	immortal_leaders = yes
 	selectable_weight = 0
 	background_icon = GFX_leader_background_destiny_1
-	custom_tooltip_with_modifiers = leader_trait_wind_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_wind_effect
 }
 
-leader_trait_information_war = {
+thl_leader_trait_information_war = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -2259,7 +2259,7 @@ leader_trait_information_war = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_information_war_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_information_war_effect
 }
 
 #leader_trait_quick_reaction_force = {
@@ -2286,7 +2286,7 @@ leader_trait_information_war = {
 #	}
 #}
 
-leader_trait_trial = {
+thl_leader_trait_trial = {
 	leader_trait_type = destiny
 	
 	inline_script = {
@@ -2302,7 +2302,7 @@ leader_trait_trial = {
 		leader_officials_thl_mana_produces_add = 1
 		mult = trigger:has_skill
 	}
-	custom_tooltip_with_modifiers = leader_trait_trial_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_trial_effect
 	councilor_modifier = {
 		country_edict_fund_add = 100
 		edicts_upkeep_mult = -0.25
@@ -2320,7 +2320,7 @@ leader_trait_trial = {
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_mirror = {
+thl_leader_trait_mirror = {
 	
 	inline_script = {
 		script = trait/icon
@@ -2330,7 +2330,7 @@ leader_trait_mirror = {
 		COUNCIL = yes
 		TIER = none
 	}
-	custom_tooltip_with_modifiers = leader_trait_mirror_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_mirror_effect
 	councilor_modifier = {
 		planet_stability_add = 5
 		piracy_suppression_mult = 0.65
@@ -2347,7 +2347,7 @@ leader_trait_mirror = {
 	}
 }
 
-leader_trait_sermon = {
+thl_leader_trait_sermon = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2377,7 +2377,7 @@ leader_trait_sermon = {
 	}
 }
 
-leader_trait_death_deal = {
+thl_thl_leader_trait_death_deal = {
 	
 	inline_script = {
 		script = trait/icon
@@ -2387,7 +2387,7 @@ leader_trait_death_deal = {
 		COUNCIL = yes
 		TIER = none
 	}
-	custom_tooltip_with_modifiers = leader_trait_death_deal_effect
+	custom_tooltip_with_modifiers = thl_thl_leader_trait_death_deal_effect
 	leader_trait_type = veteran
 	leader_class = { official }
 	selectable_weight = {
@@ -2395,7 +2395,7 @@ leader_trait_death_deal = {
 	}
 }
 
-leader_trait_death_dealer = {
+thl_thl_leader_trait_death_dealer = {
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -2414,7 +2414,7 @@ leader_trait_death_dealer = {
 	}
 }
 
-leader_trait_distance = {
+thl_leader_trait_distance = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -2444,10 +2444,10 @@ leader_trait_distance = {
 	immortal_leaders = yes
 	selectable_weight = 0
 	background_icon = GFX_leader_background_destiny_1
-	custom_tooltip_with_modifiers = leader_trait_distance_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_distance_effect
 }
 
-leader_trait_price_of_life = {
+thl_leader_trait_price_of_life = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -2464,10 +2464,10 @@ leader_trait_price_of_life = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_price_of_life_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_price_of_life_effect
 }
 
-leader_trait_cost_for_work = {
+thl_leader_trait_cost_for_work = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -2493,7 +2493,7 @@ leader_trait_cost_for_work = {
 	}
 }
 
-leader_trait_destiny_manipulation = {
+thl_leader_trait_destiny_manipulation = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -2521,11 +2521,11 @@ leader_trait_destiny_manipulation = {
 	leader_class = { commander }
 	selectable_weight = 0
 	immortal_leaders = yes
-	custom_tooltip_with_modifiers = leader_trait_destiny_manipulation_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_destiny_manipulation_effect
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_blood_magic = {
+thl_leader_trait_blood_magic = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -2544,10 +2544,10 @@ leader_trait_blood_magic = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_blood_magic_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_blood_magic_effect
 }
 
-leader_trait_bloody_charm = {
+thl_leader_trait_bloody_charm = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -2570,7 +2570,7 @@ leader_trait_bloody_charm = {
 	}
 }
 
-leader_trait_gungnir = {
+thl_leader_trait_gungnir = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -2584,14 +2584,14 @@ leader_trait_gungnir = {
 		t_slot_weapon_damage_mult = 0.66
 		x_slot_weapon_damage_mult = 0.33
 	}
-	custom_tooltip_with_modifiers = leader_trait_gungnir_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_gungnir_effect
 	leader_class = { commander }
 	selectable_weight = {
 		weight = 0
 	}
 }
 
-leader_trait_regeneration = {
+thl_leader_trait_regeneration = {
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -2604,10 +2604,10 @@ leader_trait_regeneration = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_regeneration_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_regeneration_effect
 }
 
-leader_trait_regeneration_2 = {
+thl_leader_trait_regeneration_2 = {
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -2620,10 +2620,10 @@ leader_trait_regeneration_2 = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_regeneration_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_regeneration_effect
 }
 
-leader_trait_regeneration_3 = {
+thl_leader_trait_regeneration_3 = {
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -2636,10 +2636,10 @@ leader_trait_regeneration_3 = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_regeneration_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_regeneration_effect
 }
 
-leader_trait_injured = {
+thl_leader_trait_injured = {
 	inline_script = {
 		script = trait/icon_negative
 		ICON = GFX_leader_trait_maimed
@@ -2662,10 +2662,10 @@ leader_trait_injured = {
 		weight = 0
 	}
 	leader_trait_type = negative
-	custom_tooltip_with_modifiers = leader_trait_injured_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_injured_effect
 }
 
-leader_trait_injured_2 = {
+thl_leader_trait_injured_2 = {
 	inline_script = {
 		script = trait/icon_negative
 		ICON = GFX_leader_trait_maimed
@@ -2688,10 +2688,10 @@ leader_trait_injured_2 = {
 		weight = 0
 	}
 	leader_trait_type = negative
-	custom_tooltip_with_modifiers = leader_trait_injured_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_injured_effect
 }
 
-leader_trait_injured_3 = {
+thl_leader_trait_injured_3 = {
 	inline_script = {
 		script = trait/icon_negative
 		ICON = GFX_leader_trait_maimed
@@ -2714,10 +2714,10 @@ leader_trait_injured_3 = {
 		weight = 0
 	}
 	leader_trait_type = negative
-	custom_tooltip_with_modifiers = leader_trait_injured_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_injured_effect
 }
 
-leader_trait_elements = {
+thl_leader_trait_elements = {
 	leader_trait_type = destiny
 	
 	inline_script = {
@@ -2757,11 +2757,11 @@ leader_trait_elements = {
 	leader_class = { scientist }
 	selectable_weight = 0
 	immortal_leaders = yes
-	custom_tooltip_with_modifiers = leader_trait_elements_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_elements_effect
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_knowledge = {
+thl_leader_trait_knowledge = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -2788,10 +2788,10 @@ leader_trait_knowledge = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_knowledge_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_knowledge_effect
 }
 
-leader_trait_summon_devils = {
+thl_leader_trait_summon_devils = {
 	leader_trait_type = veteran
 	
 	inline_script = {
@@ -2806,7 +2806,7 @@ leader_trait_summon_devils = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_summon_devils_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_summon_devils_effect
 }
 
 leader_trait_sick = {
@@ -2828,7 +2828,7 @@ leader_trait_sick = {
 	leader_trait_type = negative
 }
 
-leader_trait_dolls = {
+thl_leader_trait_dolls = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -2857,11 +2857,11 @@ leader_trait_dolls = {
 	leader_class = { official }
 	selectable_weight = 0
 	immortal_leaders = yes
-	custom_tooltip_with_modifiers = leader_trait_dolls_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_dolls_effect
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_puppet_show = {
+thl_leader_trait_puppet_show = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -2883,7 +2883,7 @@ leader_trait_puppet_show = {
 	}
 }
 
-leader_trait_death = {
+thl_leader_trait_death = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -2898,7 +2898,7 @@ leader_trait_death = {
 		leader_officials_thl_mana_produces_add = 1
 		mult = trigger:has_skill
 	}
-	custom_tooltip_with_modifiers = leader_trait_death_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_death_effect
 	planet_modifier = {
 		planet_spirit_jobs_produces_mult = 0.4
 		spirit_empire_size_mult = -0.5
@@ -2918,7 +2918,7 @@ leader_trait_death = {
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_sakura = {
+thl_leader_trait_sakura = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2927,7 +2927,7 @@ leader_trait_sakura = {
 		COUNCIL = no
 		TIER = none
 	}
-	custom_tooltip_with_modifiers = leader_trait_sakura_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	modifier = {
 	}
 	leader_trait_type = veteran
@@ -2937,7 +2937,7 @@ leader_trait_sakura = {
 	}
 }
 
-leader_trait_sakura_1 = {
+thl_leader_trait_sakura_1 = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2946,7 +2946,7 @@ leader_trait_sakura_1 = {
 		COUNCIL = yes
 		TIER = none
 	}
-	custom_tooltip_with_modifiers = leader_trait_sakura_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
 		planet_spirit_jobs_produces_mult = 0.05
 		spirit_amenities_usage_mult = -0.05
@@ -2959,7 +2959,7 @@ leader_trait_sakura_1 = {
 }
 
 
-leader_trait_sakura_3 = {
+thl_leader_trait_sakura_3 = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2968,7 +2968,7 @@ leader_trait_sakura_3 = {
 		COUNCIL = yes
 		TIER = none
 	}
-	custom_tooltip_with_modifiers = leader_trait_sakura_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
 		planet_spirit_jobs_produces_mult = 0.15
 		spirit_amenities_usage_mult = -0.15
@@ -2981,7 +2981,7 @@ leader_trait_sakura_3 = {
 }
 
 
-leader_trait_sakura_5 = {
+thl_leader_trait_sakura_5 = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2990,7 +2990,7 @@ leader_trait_sakura_5 = {
 		COUNCIL = yes
 		TIER = none
 	}
-	custom_tooltip_with_modifiers = leader_trait_sakura_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
 		planet_spirit_jobs_produces_mult = 0.25
 		spirit_amenities_usage_mult = -0.25
@@ -3002,7 +3002,7 @@ leader_trait_sakura_5 = {
 	}
 }
 
-leader_trait_sakura_8 = {
+thl_leader_trait_sakura_8 = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -3011,7 +3011,7 @@ leader_trait_sakura_8 = {
 		COUNCIL = yes
 		TIER = none
 	}
-	custom_tooltip_with_modifiers = leader_trait_sakura_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
 		planet_spirit_jobs_produces_mult = 0.4
 		spirit_amenities_usage_mult = -0.4
@@ -3023,7 +3023,7 @@ leader_trait_sakura_8 = {
 	}
 }
 
-leader_trait_dance = {
+thl_leader_trait_dance = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -3059,7 +3059,7 @@ leader_trait_dance = {
 	}
 }
 
-leader_trait_yuyuko_eater = {
+thl_leader_trait_yuyuko_eater = {
 	inline_script = {
 		script = trait/icon_negative
 		ICON = GFX_leader_trait_eater_chosen
@@ -3078,7 +3078,7 @@ leader_trait_yuyuko_eater = {
 	leader_trait_type = negative
 }
 
-leader_trait_flower = {
+thl_leader_trait_flower = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -3109,11 +3109,11 @@ leader_trait_flower = {
 	leader_class = { official }
 	selectable_weight = 0
 	immortal_leaders = yes
-	custom_tooltip_with_modifiers = leader_trait_flower_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_flower_effect
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_incarnation_of_nature = {
+thl_leader_trait_incarnation_of_nature = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -3158,10 +3158,10 @@ leader_trait_incarnation_of_nature = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_incarnation_of_nature_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_incarnation_of_nature_effect
 }
 
-leader_trait_sleeping_terror = {
+thl_leader_trait_sleeping_terror = {
 	leader_trait_type = veteran
 	
 	inline_script = {
@@ -3185,10 +3185,10 @@ leader_trait_sleeping_terror = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_sleeping_terror_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_sleeping_terror_effect
 }
 
-leader_trait_flower_commander = {
+thl_leader_trait_flower_commander = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -3215,10 +3215,10 @@ leader_trait_flower_commander = {
 	}
 	immortal_leaders = yes
 	background_icon = GFX_leader_background_destiny_1
-	custom_tooltip_with_modifiers = leader_trait_flower_commander_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_flower_commander_effect
 }
 
-leader_trait_incarnation_of_nature_commander = {
+thl_leader_trait_incarnation_of_nature_commander = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -3239,7 +3239,7 @@ leader_trait_incarnation_of_nature_commander = {
 	}
 }
 
-leader_trait_sleeping_terror_commander = {
+thl_leader_trait_sleeping_terror_commander = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -3259,10 +3259,10 @@ leader_trait_sleeping_terror_commander = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_sleeping_terror_commander_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_sleeping_terror_commander_effect
 }
 
-leader_trait_words = {
+thl_leader_trait_words = {
 	leader_trait_type = destiny
 	
 	inline_script = {
@@ -3289,11 +3289,11 @@ leader_trait_words = {
 	}
 	leader_class = { scientist }
 	selectable_weight = 0
-	custom_tooltip_with_modifiers = leader_trait_words_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_words_effect
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_books = {
+thl_leader_trait_books = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -3330,10 +3330,10 @@ leader_trait_books = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip = leader_trait_books_effect
+	custom_tooltip = thl_leader_trait_books_effect
 }
 
-leader_trait_memory = {
+thl_leader_trait_memory = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -3357,7 +3357,7 @@ leader_trait_memory = {
 	}
 	triggered_self_modifier = {
 		potential = {
-			has_trait = leader_trait_cyborg_life
+			has_trait = thl_leader_trait_cyborg_life
 		}
 		leader_scientists_society_research_produces_add = 10
 		leader_scientists_engineering_research_produces_add = 10
@@ -3365,7 +3365,7 @@ leader_trait_memory = {
 	}
 	triggered_self_modifier = {
 		potential = {
-			has_trait = leader_trait_synth_life
+			has_trait = thl_leader_trait_synth_life
 		}
 		leader_scientists_physics_research_produces_add = 10
 		leader_scientists_engineering_research_produces_add = 10
@@ -3373,7 +3373,7 @@ leader_trait_memory = {
 	}
 	triggered_self_modifier = {
 		potential = {
-			has_trait = leader_trait_gene_life
+			has_trait = thl_leader_trait_gene_life
 		}
 		leader_scientists_physics_research_produces_add = 10
 		leader_scientists_society_research_produces_add = 10
@@ -3396,11 +3396,11 @@ leader_trait_memory = {
 	}
 	leader_class = { scientist }
 	selectable_weight = 0
-	custom_tooltip_with_modifiers = leader_trait_memory_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_memory_effect
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_the_ninth_savage = {
+thl_leader_trait_the_ninth_savage = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -3425,10 +3425,10 @@ leader_trait_the_ninth_savage = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_the_ninth_savage_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_the_ninth_savage_effect
 }
 
-leader_trait_bridge_of_gensokyo = {
+thl_leader_trait_bridge_of_gensokyo = {
 	leader_trait_type = veteran
 	
 	inline_script = {
@@ -3450,7 +3450,7 @@ leader_trait_bridge_of_gensokyo = {
 	}
 }
 
-leader_trait_speculative_fiction = {
+thl_leader_trait_speculative_fiction = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -3461,7 +3461,7 @@ leader_trait_speculative_fiction = {
 		TIER = none
 	}
 	planet_modifier = {
-		job_culture_worker_per_crime = 0.05
+		job_culture_worker_per_crime = 0.06
 	}
 	sector_modifier = {
 		job_culture_worker_per_crime = 0.03
@@ -3472,7 +3472,7 @@ leader_trait_speculative_fiction = {
 	}
 }
 
-leader_trait_short_life = {
+thl_leader_trait_short_life = {
 	leader_trait_type = negative
 	inline_script = {
 		script = trait/icon_negative
@@ -3490,7 +3490,7 @@ leader_trait_short_life = {
 	}
 }
 
-leader_trait_longer_life = {
+thl_leader_trait_longer_life = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -3509,7 +3509,7 @@ leader_trait_longer_life = {
 	}
 }
 
-leader_trait_cyborg_life = {
+thl_leader_trait_cyborg_life = {
 	
 	inline_script = {
 		script = trait/icon
@@ -3540,7 +3540,7 @@ leader_trait_cyborg_life = {
 	immortal_leaders = yes
 }
 
-leader_trait_synth_life = {
+thl_leader_trait_synth_life = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -3569,7 +3569,7 @@ leader_trait_synth_life = {
 	immortal_leaders = yes
 }
 
-leader_trait_gene_life = {
+thl_leader_trait_gene_life = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -3596,7 +3596,7 @@ leader_trait_gene_life = {
 	immortal_leaders = yes
 }
 
-leader_trait_corpse_travel = {
+thl_leader_trait_corpse_travel = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -3621,11 +3621,11 @@ leader_trait_corpse_travel = {
 	}
 	leader_class = { official }
 	selectable_weight = 0
-	custom_tooltip_with_modifiers = leader_trait_corpse_travel_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_corpse_travel_effect
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_corpse_manipulation = {
+thl_leader_trait_corpse_manipulation = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -3652,10 +3652,10 @@ leader_trait_corpse_manipulation = {
 		weight = 0
 	}
 	immortal_leaders = yes
-	custom_tooltip_with_modifiers = leader_trait_corpse_manipulation_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_corpse_manipulation_effect
 }
 
-leader_trait_nuclear = {
+thl_leader_trait_nuclear = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -3720,11 +3720,11 @@ leader_trait_nuclear = {
 	leader_class = { commander }
 	selectable_weight = 0
 	immortal_leaders = yes
-	custom_tooltip_with_modifiers = leader_trait_nuclear_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_nuclear_effect
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_fusion_energy = {
+thl_leader_trait_fusion_energy = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -3745,10 +3745,10 @@ leader_trait_fusion_energy = {
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_fusion_energy_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_fusion_energy_effect
 }
 
-leader_trait_bird_brain = {
+thl_leader_trait_bird_brain = {
 	inline_script = {
 		script = trait/icon_negative
 		ICON = GFX_leader_trait_erudite
@@ -3778,7 +3778,7 @@ leader_trait_bird_brain = {
 	leader_trait_type = negative
 }
 
-leader_trait_artifitial_sol = {
+thl_leader_trait_artifitial_sol = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -3795,7 +3795,7 @@ leader_trait_artifitial_sol = {
 	}
 }
 
-leader_trait_utsuho_sequela = {
+thl_leader_trait_utsuho_sequela = {
 	inline_script = {
 		script = trait/icon_negative
 		CLASS = commander
@@ -3813,7 +3813,7 @@ leader_trait_utsuho_sequela = {
 	leader_trait_type = negative
 }
 
-leader_trait_deeper_scarlet_dream = {
+thl_leader_trait_deeper_scarlet_dream = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -3833,7 +3833,7 @@ leader_trait_deeper_scarlet_dream = {
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_nihility_scarlet_dream = {
+thl_leader_trait_nihility_scarlet_dream = {
 	inline_script = {
 		script = trait/icon_negative
 		CLASS = commander
@@ -3850,7 +3850,7 @@ leader_trait_nihility_scarlet_dream = {
 	leader_class = { commander }
 	selectable_weight = 0
 }
-leader_trait_body_and_spirit = {
+thl_leader_trait_body_and_spirit = {
 	inline_script = {
 		script = trait/icon_psionic
 		CLASS = commander
@@ -3879,7 +3879,7 @@ leader_trait_body_and_spirit = {
 	immortal_leaders = yes
 }
 
-leader_trait_the_incorruptible = {
+thl_leader_trait_the_incorruptible = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -3912,7 +3912,7 @@ leader_trait_the_incorruptible = {
 	immortal_leaders = yes
 }
 
-leader_trait_water = {
+thl_leader_trait_water = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -3970,11 +3970,11 @@ leader_trait_water = {
 	}
 	leader_class = { scientist }
 	selectable_weight = 0
-	custom_tooltip_with_modifiers = leader_trait_water_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_water_effect
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_super_youkai_slug = {
+thl_leader_trait_super_youkai_slug = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -3993,12 +3993,12 @@ leader_trait_super_youkai_slug = {
 	leader_class = { scientist }
 	selectable_weight = 1000
 	leader_potential_add = {
-		has_trait = leader_trait_water
+		has_trait = thl_leader_trait_water
 	}
 }
 
-leader_trait_super_youkai_slug_2 = {
-	replace_traits = { leader_trait_super_youkai_slug }
+thl_leader_trait_super_youkai_slug_2 = {
+	replace_traits = { thl_leader_trait_super_youkai_slug }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -4016,7 +4016,7 @@ leader_trait_super_youkai_slug_2 = {
 	}
 	leader_class = { scientist }
 	selectable_weight = 1000
-	custom_tooltip_with_modifiers = leader_trait_super_youkai_slug_effect_tier_2
+	custom_tooltip_with_modifiers = thl_leader_trait_super_youkai_slug_effect_tier_2
 	on_gained_effect = {
 		owner = {
 			set_variable = {
@@ -4027,8 +4027,8 @@ leader_trait_super_youkai_slug_2 = {
 	}
 }
 
-leader_trait_super_youkai_slug_3 = {
-	replace_traits = { leader_trait_super_youkai_slug_2 }
+thl_leader_trait_super_youkai_slug_3 = {
+	replace_traits = { thl_leader_trait_super_youkai_slug_2 }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -4046,7 +4046,7 @@ leader_trait_super_youkai_slug_3 = {
 	}
 	leader_class = { scientist }
 	selectable_weight = 1000
-	custom_tooltip_with_modifiers = leader_trait_super_youkai_slug_effect_tier_3
+	custom_tooltip_with_modifiers = thl_leader_trait_super_youkai_slug_effect_tier_3
 	on_gained_effect = {
 		owner = {
 			create_ship_design = { design = "NAME_Water_Dragon_Baby" }
@@ -4055,7 +4055,7 @@ leader_trait_super_youkai_slug_3 = {
 	}
 }
 
-leader_trait_convenience_house = {
+thl_leader_trait_convenience_house = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -4079,12 +4079,12 @@ leader_trait_convenience_house = {
 	leader_class = { scientist }
 	selectable_weight = 1000
 	leader_potential_add = {
-		has_trait = leader_trait_water
+		has_trait = thl_leader_trait_water
 	}
 }
 
-leader_trait_convenience_house_2 = {
-	replace_traits = { leader_trait_convenience_house }
+thl_leader_trait_convenience_house_2 = {
+	replace_traits = { thl_leader_trait_convenience_house }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -4109,8 +4109,8 @@ leader_trait_convenience_house_2 = {
 	selectable_weight = 1000
 }
 
-leader_trait_convenience_house_3 = {
-	replace_traits = { leader_trait_convenience_house_2 }
+thl_leader_trait_convenience_house_3 = {
+	replace_traits = { thl_leader_trait_convenience_house_2 }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -4135,7 +4135,7 @@ leader_trait_convenience_house_3 = {
 	selectable_weight = 1000
 }
 
-leader_trait_engineer_in_water = {
+thl_leader_trait_engineer_in_water = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -4159,12 +4159,12 @@ leader_trait_engineer_in_water = {
 	leader_class = { scientist }
 	selectable_weight = 1000
 	leader_potential_add = {
-		has_trait = leader_trait_water
+		has_trait = thl_leader_trait_water
 	}
 }
 
-leader_trait_engineer_in_water_2 = {
-	replace_traits = { leader_trait_engineer_in_water }
+thl_leader_trait_engineer_in_water_2 = {
+	replace_traits = { thl_leader_trait_engineer_in_water }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -4189,8 +4189,8 @@ leader_trait_engineer_in_water_2 = {
 	selectable_weight = 1000
 }
 
-leader_trait_engineer_in_water_3 = {
-	replace_traits = { leader_trait_engineer_in_water_2 }
+thl_leader_trait_engineer_in_water_3 = {
+	replace_traits = { thl_leader_trait_engineer_in_water_2 }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -4215,7 +4215,7 @@ leader_trait_engineer_in_water_3 = {
 	selectable_weight = 1000
 }
 
-leader_trait_optical_camouflage = {
+thl_leader_trait_optical_camouflage = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -4235,7 +4235,7 @@ leader_trait_optical_camouflage = {
 	selectable_weight = 0
 }
 
-leader_trait_cucumbers = {
+thl_leader_trait_cucumbers = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -4254,7 +4254,7 @@ leader_trait_cucumbers = {
 	selectable_weight = 0
 }
 
-leader_trait_heart_break = {
+thl_leader_trait_heart_break = {
 	inline_script = {
 		script = trait/icon_negative
 		CLASS = leader
@@ -4274,7 +4274,7 @@ leader_trait_heart_break = {
 	selectable_weight = 0
 }
 
-leader_trait_with_satori = {
+thl_leader_trait_with_satori = {
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -4302,7 +4302,7 @@ leader_trait_with_satori = {
 	}
 }
 
-leader_trait_arctic_governing = {
+thl_leader_trait_arctic_governing = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -4345,7 +4345,7 @@ leader_trait_arctic_governing = {
 	custom_tooltip = LEADER_TRAIT_ARCTIC_EFFECT
 }
 
-leader_trait_fall = {
+thl_leader_trait_fall = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -4381,7 +4381,7 @@ leader_trait_fall = {
 	selectable_weight = 0
 	immortal_leaders = yes
 	background_icon = GFX_leader_background_destiny_1
-	custom_tooltip_with_modifiers = leader_trait_fall_tooltip
+	custom_tooltip_with_modifiers = thl_leader_trait_fall_tooltip
 }
 
 leader_trait_harvest = {
@@ -4425,7 +4425,7 @@ leader_trait_harvest = {
 	custom_tooltip_with_modifiers = leader_trait_harvest_tooltip
 }
 
-leader_trait_jinx = {
+thl_leader_trait_jinx = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -4451,10 +4451,10 @@ leader_trait_jinx = {
 	selectable_weight = 0
 	immortal_leaders = yes
 	background_icon = GFX_leader_background_destiny_1
-	custom_tooltip_with_modifiers = leader_trait_jinx_tooltip
+	custom_tooltip_with_modifiers = thl_leader_trait_jinx_tooltip
 }
 
-leader_trait_song = {
+thl_leader_trait_song = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -4486,10 +4486,10 @@ leader_trait_song = {
 	selectable_weight = 0
 	immortal_leaders = yes
 	background_icon = GFX_leader_background_destiny_1
-	custom_tooltip_with_modifiers = leader_trait_song_tooltip
+	custom_tooltip_with_modifiers = thl_leader_trait_song_tooltip
 }
 
-leader_trait_izakaya = {
+thl_leader_trait_izakaya = {
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -4507,16 +4507,16 @@ leader_trait_izakaya = {
 	leader_trait_type = veteran
 	leader_class = { commander }
 	leader_potential_add = {
-		has_trait = leader_trait_song
+		has_trait = thl_leader_trait_song
 	}
 	selectable_weight = {
 		weight = 0
 	}
-	custom_tooltip_with_modifiers = leader_trait_izakaya_tooltip
+	custom_tooltip_with_modifiers = thl_leader_trait_izakaya_tooltip
 }
 
-leader_trait_izakaya_2 = {
-	replace_traits = { leader_trait_izakaya }
+thl_leader_trait_izakaya_2 = {
+	replace_traits = { thl_leader_trait_izakaya }
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -4534,16 +4534,16 @@ leader_trait_izakaya_2 = {
 	leader_trait_type = veteran
 	leader_class = { commander }
 	leader_potential_add = {
-		has_trait = leader_trait_song
+		has_trait = thl_leader_trait_song
 	}
 	selectable_weight = {
 		weight = 1000
 	}
-	custom_tooltip_with_modifiers = leader_trait_izakaya_tooltip
+	custom_tooltip_with_modifiers = thl_leader_trait_izakaya_tooltip
 }
 
-leader_trait_izakaya_3 = {
-	replace_traits = { leader_trait_izakaya_2 }
+thl_leader_trait_izakaya_3 = {
+	replace_traits = { thl_leader_trait_izakaya_2 }
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -4561,15 +4561,15 @@ leader_trait_izakaya_3 = {
 	leader_trait_type = veteran
 	leader_class = { commander }
 	leader_potential_add = {
-		has_trait = leader_trait_song
+		has_trait = thl_leader_trait_song
 	}
 	selectable_weight = {
 		weight = 1000
 	}
-	custom_tooltip_with_modifiers = leader_trait_izakaya_tooltip
+	custom_tooltip_with_modifiers = thl_leader_trait_izakaya_tooltip
 }
 
-leader_trait_youkai_punk = {
+thl_leader_trait_youkai_punk = {
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -4591,15 +4591,15 @@ leader_trait_youkai_punk = {
 	leader_trait_type = veteran
 	leader_class = { commander }
 	leader_potential_add = {
-		has_trait = leader_trait_song
+		has_trait = thl_leader_trait_song
 	}
 	selectable_weight = {
 		weight = 0
 	}
 }
 
-leader_trait_youkai_punk_2 = {
-	replace_traits = { leader_trait_youkai_punk }
+thl_leader_trait_youkai_punk_2 = {
+	replace_traits = { thl_leader_trait_youkai_punk }
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -4621,15 +4621,15 @@ leader_trait_youkai_punk_2 = {
 	leader_trait_type = veteran
 	leader_class = { commander }
 	leader_potential_add = {
-		has_trait = leader_trait_song
+		has_trait = thl_leader_trait_song
 	}
 	selectable_weight = {
 		weight = 1000
 	}
 }
 
-leader_trait_youkai_punk_3 = {
-	replace_traits = { leader_trait_youkai_punk_2 }
+thl_leader_trait_youkai_punk_3 = {
+	replace_traits = { thl_leader_trait_youkai_punk_2 }
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -4651,7 +4651,7 @@ leader_trait_youkai_punk_3 = {
 	leader_trait_type = veteran
 	leader_class = { commander }
 	leader_potential_add = {
-		has_trait = leader_trait_song
+		has_trait = thl_leader_trait_song
 	}
 	selectable_weight = {
 		weight = 1000
@@ -4701,7 +4701,7 @@ leader_trait_sanae_complete = {
 	immortal_leaders = yes
 }
 
-leader_trait_luck = {
+thl_leader_trait_luck = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -4739,7 +4739,7 @@ leader_trait_luck = {
 	immortal_leaders = yes
 }
 
-leader_trait_rabbit_leader = {
+thl_leader_trait_rabbit_leader = {
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -4763,15 +4763,15 @@ leader_trait_rabbit_leader = {
 	leader_trait_type = veteran
 	leader_class = { official }
 	leader_potential_add = {
-		has_trait = leader_trait_luck
+		has_trait = thl_leader_trait_luck
 	}
 	selectable_weight = {
 		weight = 0
 	}
 }
 
-leader_trait_rabbit_leader_2 = {
-	replace_traits = { leader_trait_rabbit_leader }
+thl_leader_trait_rabbit_leader_2 = {
+	replace_traits = { thl_leader_trait_rabbit_leader }
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -4795,15 +4795,15 @@ leader_trait_rabbit_leader_2 = {
 	leader_trait_type = veteran
 	leader_class = { official }
 	leader_potential_add = {
-		has_trait = leader_trait_luck
+		has_trait = thl_leader_trait_luck
 	}
 	selectable_weight = {
 		weight = 1000
 	}
 }
 
-leader_trait_rabbit_leader_3 = {
-	replace_traits = { leader_trait_rabbit_leader_2 }
+thl_leader_trait_rabbit_leader_3 = {
+	replace_traits = { thl_leader_trait_rabbit_leader_2 }
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -4827,14 +4827,14 @@ leader_trait_rabbit_leader_3 = {
 	leader_trait_type = veteran
 	leader_class = { official }
 	leader_potential_add = {
-		has_trait = leader_trait_luck
+		has_trait = thl_leader_trait_luck
 	}
 	selectable_weight = {
 		weight = 1000
 	}
 }
 
-leader_trait_rabbit_spy = {
+thl_leader_trait_rabbit_spy = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -4851,7 +4851,7 @@ leader_trait_rabbit_spy = {
 		op_cat_technology_skill_add = 4
 		spy_network_levels_add = 30
 	}
-	custom_tooltip_with_modifiers = leader_trait_rabbit_spy_tooltip
+	custom_tooltip_with_modifiers = thl_leader_trait_rabbit_spy_tooltip
 	on_gained_effect = {
 		change_background_job = healthcare
 	}
@@ -4861,7 +4861,7 @@ leader_trait_rabbit_spy = {
 	}
 }
 
-leader_trait_excessive_reimu = {
+thl_leader_trait_excessive_reimu = {
 	leader_trait_type = negative
 	inline_script = {
 		script = trait/icon_negative

@@ -12,7 +12,7 @@ country_event = {
         AND = {
             mid_game_years_passed >= 0
             any_owned_leader = {
-                has_trait = leader_trait_nuclear
+                has_trait = thl_leader_trait_nuclear
             }
         }
     }
@@ -80,9 +80,9 @@ situation_event = {
             every_owned_leader = {
                 if = {
                     limit = {
-                        has_trait = leader_trait_nuclear
+                        has_trait = thl_leader_trait_nuclear
                     }
-                    add_trait = leader_trait_utsuho_sequela
+                    add_trait = thl_leader_trait_utsuho_sequela
                 }
             }
         }
@@ -107,9 +107,9 @@ situation_event = {
             every_owned_leader = {
                 if = {
                     limit = {
-                        has_trait = leader_trait_nuclear
+                        has_trait = thl_leader_trait_nuclear
                     }
-                    add_trait = leader_trait_injured_2
+                    add_trait = thl_leader_trait_injured_2
                 }
             }
         }
@@ -314,7 +314,7 @@ situation_event = {
             owner = {
                 OR = {
                     any_owned_leader = {
-                        has_trait =  leader_trait_penglai_medicine
+                        has_trait =  thl_leader_trait_penglai_medicine
                     }
                     has_authority = auth_corporate
                 }
@@ -448,7 +448,7 @@ country_event = {
     picture = GFX_evt_utsuho_reform
     trigger = {
         any_owned_leader = {
-            has_trait = leader_trait_nuclear
+            has_trait = thl_leader_trait_nuclear
         }
         not = { has_country_flag = utsuho_reform_over }
         not = { has_country_flag = utsuho_reform_abort }

@@ -33,7 +33,7 @@ space_dragon_nitori_babies_limit = {
 	show = {
 		is_scope_valid = yes
 		any_owned_leader = {
-			has_trait = leader_trait_super_youkai_slug_3
+			has_trait = thl_leader_trait_super_youkai_slug_3
 		}
 	}
 }
