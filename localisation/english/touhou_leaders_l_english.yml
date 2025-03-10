@@ -436,9 +436,9 @@
 
  thl_leader_trait_fly:0 "在空中飞行程度的能力"
  thl_leader_trait_fly_desc:1 "这位领袖可以不受任何力的束缚，以惊人的机动性指挥其舰队躲避敌人的弹幕，力量的差异对她来说也毫无意义。"
- leader_trait_invincible:0 "操纵灵气程度的能力"
- leader_trait_invincible_desc:1 "这位领袖天生具有强大的灵力，尽管在此方面修行不足，但也能轻易做到很多其他个体做不到的事。"
- leader_trait_invincible_effect:0 "$t$进入己方星球轨道时，可使用星球决议在星球上创建一个§H二重结界§!，提供§G-75%§!轨道轰炸伤害，同时只能存在一个。\n$t$激活§H梦想封印§!轰炸姿态，这个轰炸姿态对陆军伤害极大，且会将星球缓慢转化为§E屏障星球§!。\n$t$允许在法令界面激活§H幻想亚空穴§!，消耗少量$r_astral_threads$在§Y100§!天内允许所有舰队进行§Y跃迁§!。\n$t$允许在法令界面激活§H梦想天生§!，消耗大量消耗$r_astral_threads$将灵梦所在的舰队在§Y100§!天内变为§H无敌状态§!。"
+ thl_leader_trait_invincible:0 "操纵灵气程度的能力"
+ thl_leader_trait_invincible_desc:1 "这位领袖天生具有强大的灵力，尽管在此方面修行不足，但也能轻易做到很多其他个体做不到的事。"
+ thl_leader_trait_invincible_effect:0 "$t$进入己方星球轨道时，可使用星球决议在星球上创建一个§H二重结界§!，提供§G-75%§!轨道轰炸伤害，同时只能存在一个。\n$t$激活§H梦想封印§!轰炸姿态，这个轰炸姿态对陆军伤害极大，且会将星球缓慢转化为§E屏障星球§!。\n$t$允许在法令界面激活§H幻想亚空穴§!，消耗少量$r_astral_threads$在§Y100§!天内允许所有舰队进行§Y跃迁§!。\n$t$允许在法令界面激活§H梦想天生§!，消耗大量消耗$r_astral_threads$将灵梦所在的舰队在§Y100§!天内变为§H无敌状态§!。"
  thl_leader_trait_like_cloud_and_water:0 "行云流水"
  thl_leader_trait_like_cloud_and_water_desc:1 "这位领袖在战斗中总是一副冷静、深藏不露的样子，喜欢利用跟踪武器组成阵型将对手束缚然后再慢慢绞杀。"
  thl_leader_trait_like_cloud_and_water_effect:0 "$t$§I敌方舰队将无法从与该领袖的战斗中逃跑。§!"
@@ -1224,7 +1224,7 @@
  thl_leader_trait_bloody_charm_desc: "这位领袖因其种族特性和强大的力量会引发其他个体不自觉的仰慕。"
  thl_leader_trait_gungnir: "神枪冈格尼尔"
  thl_leader_trait_gungnir_desc: "这位领袖持有的武器据说是北欧神话中奥丁的神枪——冈格尼尔，据说是。"
- thl_leader_trait_gungnir_effect: "解锁§Y必杀「Heart Break」§!法令，立刻对星系内单一目标造成§Y100000§!船体伤害，再次使用需要工程船对神枪进行回收。"
+ thl_leader_trait_gungnir_effect: "解锁§Y必杀「Heart Break」§!法令，立刻对星系内单一目标造成§Y666666§!直接伤害，再次使用需要工程船对神枪进行回收。"
  thl_leader_trait_regeneration: "再生"
  thl_leader_trait_regeneration_desc: "这位领袖拥有强大的再生能力，即使身受致命伤依然可以恢复。"
  thl_leader_trait_regeneration_effect: "遭遇§R致命事故§!时不会死亡，而是积累一级§P伤口§!，每五年§P伤口§!都会§G自然痊愈§!一级，§P伤口§!等级超过该技能等级依旧会导致§R死亡§!，此外，若领袖已经超出预期寿命，其将直接§R死亡§!。"
@@ -1257,13 +1257,13 @@
 
  edict_gungnir: "必杀「Heart Break」（攻击移动目标）"
  edict_gungnir_desc: "将传说中的神器冈格尼尔投出，几乎任何战舰都会被贯穿，但遗憾之处在于一次只有一击，尽量将它用在关键目标上。"
- edict_gungnir_effect: "立刻对星系内生命值最高的敌对战舰造成§Y100000§!船体伤害，舰队中的敌方战舰会受到震慑而在§I30§!天内减少§P50§!%的舰船武器射速。"
+ edict_gungnir_effect: "立刻对星系内生命值最高的敌对战舰造成§Y666666§!直接伤害，舰队中的敌方战舰会受到震慑而在§I30§!天内减少§P50§!%的舰船武器射速。"
  edict_gungnir_fail_text: "需要蕾米莉亚所在星系内有可用目标"
  edict_gungnir_shooted: "我们已经将神枪投出，现在需要用工程船将其回收。"
 
  edict_gungnir_starbase: "必杀「Heart Break」（攻击固定目标）"
  edict_gungnir_starbase_desc: "将传说中的神器冈格尼尔投出，几乎任何要塞都会被贯穿，但遗憾之处在于一次只有一击，尽量将它用在关键目标上。"
- edict_gungnir_starbase_effect: "立刻对星系内生命值最高的敌对空间站造成§Y100000§!船体伤害。"
+ edict_gungnir_starbase_effect: "立刻对星系内生命值最高的敌对空间站造成§Y666666§!直接伤害。"
  edict_gungnir_starbase_fail_text: "需要蕾米莉亚所在星系内有可用目标"
 
  GUNGNIR_SPECIAL_PROJECT:0 "回收冈格尼尔"

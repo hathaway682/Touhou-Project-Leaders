@@ -1059,23 +1059,37 @@ gungnir = {
 							}
 						}
 					}
+					set_ship_flag = gungnir_target
+					create_fleet = {
+						name = "NAME_Gungnir_Fleet"
+						effect = {
+							create_ship = {
+								name = "NAME_Gungnir"
+								design = "NAME_Gungnir"
+								prefix = no
+								upgradable = no
+							}
+							set_event_locked = yes
+							set_location = prev
+							set_owner = root
+							set_fleet_flag = gungnir_fleet
+						}
+					}
+					last_created_fleet = {
+						fleet_event = {
+							id = touhou_paragon_spell.6
+							days = 2
+						}
+					}
+					ship_event = {
+						id = touhou_paragon_spell.9
+						days = 2
+					}
 					create_ambient_object = {
 						type = "red_sun_grow_particle_object"
 						location = this
 						duration = 1
 					}
-					create_ambient_object = {
-						type = "abandoned_ship_2_object"
-						location = this
-					}
-					last_created_ambient_object = {
-						enable_special_project = {
-							name = GUNGNIR_SPECIAL_PROJECT
-							owner = root
-							location = this
-						}
-					}
-					reduce_hp = 100000
 				}
 			}
 		}
@@ -1146,23 +1160,37 @@ gungnir_starbase = {
 							}
 						}
 					}
+					set_ship_flag = gungnir_target
+					create_fleet = {
+						name = "NAME_Gungnir_Fleet"
+						effect = {
+							create_ship = {
+								name = "NAME_Gungnir"
+								design = "NAME_Gungnir"
+								prefix = no
+								upgradable = no
+							}
+							set_event_locked = yes
+							set_location = prev
+							set_owner = root
+							set_fleet_flag = gungnir_fleet
+						}
+					}
+					last_created_fleet = {
+						fleet_event = {
+							id = touhou_paragon_spell.6
+							days = 2
+						}
+					}
+					ship_event = {
+						id = touhou_paragon_spell.9
+						days = 2
+					}
 					create_ambient_object = {
 						type = "red_sun_grow_particle_object"
 						location = this
 						duration = 1
 					}
-					create_ambient_object = {
-						type = "abandoned_starbase_01_object"
-						location = this
-					}
-					last_created_ambient_object = {
-						enable_special_project = {
-							name = GUNGNIR_SPECIAL_PROJECT
-							owner = root
-							location = this
-						}
-					}
-					reduce_hp = 100000
 				}
 			}
 		}

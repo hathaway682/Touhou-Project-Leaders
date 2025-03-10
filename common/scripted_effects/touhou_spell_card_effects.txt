@@ -34,17 +34,31 @@ reimu_spell_card_1_effect = {
                     }
                 }
             }
-            while = {
-                count = 6
-                random_owned_ship = {
-                    reroll_random = yes
-                    set_variable_to_random_value = {
-                        which = reimu_spell_damage
-                        min = 200
-                        max = 1000
+            set_fleet_flag = yume_no_huuin_target
+            create_fleet = {
+                name = "NAME_Yume_no_Huuin_Fleet"
+                effect = {
+                    create_ship = {
+                        name = "NAME_Yume_no_Huuin"
+                        design = "NAME_Yume_no_Huuin"
+                        prefix = no
+                        upgradable = no
                     }
-                    reduce_hp = reimu_spell_damage
+                    set_event_locked = yes
+                    set_location = root
+                    set_owner = from.owner
+                    set_fleet_flag = yume_no_huuin_fleet
                 }
+            }
+            last_created_fleet = {
+                fleet_event = {
+                    id = touhou_paragon_spell.6
+                    days = 2
+                }
+            }
+            fleet_event = {
+                id = touhou_paragon_spell.11
+                days = 2
             }
             add_modifier = {
                 modifier = huuin_modifier
@@ -90,17 +104,31 @@ reimu_spell_card_1_ex_effect = {
                     }
                 }
             }
-            while = {
-                count = 8
-                random_owned_ship = {
-                    reroll_random = yes
-                    set_variable_to_random_value = {
-                        which = reimu_spell_damage
-                        min = 2000
-                        max = 4000
+            set_fleet_flag = yume_no_huuin_target
+            create_fleet = {
+                name = "NAME_Yume_no_Huuin_Fleet"
+                effect = {
+                    create_ship = {
+                        name = "NAME_Yume_no_Huuin_Ex"
+                        design = "NAME_Yume_no_Huuin_Ex"
+                        prefix = no
+                        upgradable = no
                     }
-                    reduce_hp = reimu_spell_damage
+                    set_event_locked = yes
+                    set_location = root
+                    set_owner = from.owner
+                    set_fleet_flag = yume_no_huuin_fleet
                 }
+            }
+            last_created_fleet = {
+                fleet_event = {
+                    id = touhou_paragon_spell.6
+                    days = 2
+                }
+            }
+            fleet_event = {
+                id = touhou_paragon_spell.11
+                days = 2
             }
             add_modifier = {
                 modifier = huuin_modifier

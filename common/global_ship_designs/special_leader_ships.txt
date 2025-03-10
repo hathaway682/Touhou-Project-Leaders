@@ -220,6 +220,14 @@ ship_design = {
 			slot = "LARGE_GUN_08"
 			template = "ARCHAEO_MISSILE"
 		}
+		component = {
+			slot = "LARGE_GUN_09"
+			template = "ARCHAEO_MISSILE"
+		}
+		component = {
+			slot = "LARGE_GUN_10"
+			template = "ARCHAEO_MISSILE"
+		}
 	}
 
 	required_component = "GUARDIAN_DRIVE"

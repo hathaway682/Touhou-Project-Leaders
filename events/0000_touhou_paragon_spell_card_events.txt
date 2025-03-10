@@ -165,12 +165,57 @@ planet_event = {
     }
 }
 
+#冈格尼尔符卡清理
+ship_event = {
+    id = touhou_paragon_spell.9
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        remove_ship_flag = gungnir_target
+    }
+}
+
+ship_event = {
+    id = touhou_paragon_spell.10
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        create_ambient_object = {
+            type = "small_debris_object"
+            location = this
+        }
+        last_created_ambient_object = {
+            enable_special_project = {
+                name = GUNGNIR_SPECIAL_PROJECT
+                owner = root
+                location = this
+            }
+        }
+        every_owned_ship = {
+            delete_ship = this
+        }
+    }
+}
+
+#梦想封印符卡清理
+fleet_event = {
+    id = touhou_paragon_spell.11
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        remove_fleet_flag = yume_no_huuin_target
+    }
+}
+
 #小行星撞击
 planet_event = {
-    id = touhou_paragon_spell.8
-    title = "touhou_paragon_spell.8.name"
+    id = touhou_paragon_spell.80
+    title = "touhou_paragon_spell.80.name"
     desc = {
-        text = touhou_paragon_spell.8.desc
+        text = touhou_paragon_spell.80.desc
     }
     picture = GFX_evt_nuclear_explosion
     show_sound = event_super_explosion

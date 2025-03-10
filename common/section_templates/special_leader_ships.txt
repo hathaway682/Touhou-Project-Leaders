@@ -238,6 +238,16 @@ ship_section_template = {
 		template = "invisible_missile_turret"
 		locatorname = "root"
 	}
+	component_slot = {
+		name = "LARGE_GUN_09"
+		template = "invisible_missile_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_10"
+		template = "invisible_missile_turret"
+		locatorname = "root"
+	}
 }
 
 # Baby Dragon

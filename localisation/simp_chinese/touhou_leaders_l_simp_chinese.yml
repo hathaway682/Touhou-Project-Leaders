@@ -468,9 +468,9 @@
 
  thl_leader_trait_fly:0 "在空中飞行程度的能力"
  thl_leader_trait_fly_desc:1 "这位领袖可以不受任何力的束缚，以惊人的机动性指挥其舰队躲避敌人的弹幕，力量的差异对她来说也毫无意义。"
- leader_trait_invincible:0 "操纵灵气程度的能力"
- leader_trait_invincible_desc:1 "这位领袖天生具有强大的灵力，尽管在此方面修行不足，但也能轻易做到很多其他个体做不到的事。"
- leader_trait_invincible_effect:0 "$t$解锁诸多可用的§r符卡§!。\n$t$激活§H梦想封印§!轰炸姿态，这个轰炸姿态对陆军伤害极大，且会将星球缓慢转化为§E屏障星球§!。"
+ thl_leader_trait_invincible:0 "操纵灵气程度的能力"
+ thl_leader_trait_invincible_desc:1 "这位领袖天生具有强大的灵力，尽管在此方面修行不足，但也能轻易做到很多其他个体做不到的事。"
+ thl_leader_trait_invincible_effect:0 "$t$解锁诸多可用的§r符卡§!。\n$t$激活§H梦想封印§!轰炸姿态，这个轰炸姿态对陆军伤害极大，且会将星球缓慢转化为§E屏障星球§!。"
  thl_leader_trait_like_cloud_and_water:0 "行云流水"
  thl_leader_trait_like_cloud_and_water_desc:1 "这位领袖在战斗中总是一副冷静、深藏不露的样子，喜欢利用跟踪武器组成阵型将对手束缚然后再慢慢绞杀。"
  thl_leader_trait_like_cloud_and_water_effect:0 "$t$§I敌方舰队将无法从与该领袖的战斗中逃跑。§!"

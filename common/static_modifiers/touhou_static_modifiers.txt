@@ -353,12 +353,11 @@ modifier_miracle_6 = {
 }
 
 suika_fleet_bonus = {
-	ship_hull_add = 2500
-	ship_shield_add = 2500
-	ship_shield_regen_add_perc = 25
-	ship_hull_regen_add_static = 25
-	ship_weapon_damage = 0.25
-	ship_fire_rate_mult = 0.25
+	ship_hull_add = 10000
+	ship_shield_add = 10000
+	ship_shield_regen_add_perc = 100
+	ship_hull_regen_add_static = 100
+	ship_weapon_damage = 1
 }
 
 aya_xenophobe = {

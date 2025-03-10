@@ -418,7 +418,7 @@ on_suika_target_planet_reached = {
 
 on_asteroid_target_planet_reached = {
 	events = {
-		touhou_paragon_spell.8
+		touhou_paragon_spell.80
 	}
 }
 

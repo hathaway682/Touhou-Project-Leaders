@@ -245,3 +245,45 @@ ship_design = {
 		}
 	}
 }
+
+ship_design = {
+	name = "NAME_Gungnir"
+	ship_size = spell_card_bullet
+
+	section = {
+		template = "spell_card_bullet_aura"
+		slot = "mid"
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "AURA_GUNGNIR"
+		}
+	}
+}
+
+ship_design = {
+	name = "NAME_Yume_no_Huuin"
+	ship_size = spell_card_bullet
+
+	section = {
+		template = "spell_card_bullet_aura"
+		slot = "mid"
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "AURA_YUME_NO_HUUIN"
+		}
+	}
+}
+
+ship_design = {
+	name = "NAME_Yume_no_Huuin_Ex"
+	ship_size = spell_card_bullet
+
+	section = {
+		template = "spell_card_bullet_aura"
+		slot = "mid"
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "AURA_YUME_NO_HUUIN_EX"
+		}
+	}
+}

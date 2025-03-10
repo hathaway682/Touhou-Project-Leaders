@@ -1570,8 +1570,8 @@
  job_hakurei_miko_effect_desc:1 "£job_hakurei_miko£ $job_hakurei_miko_plural$将 £alloys£ §Y$alloys$§!转化为 £unity£ §Y$unity$§!以及 £mod_planet_stability_add£ §Y$PLANET_STABILITY_TITLE$§!，同时降低 £crime£ §Y$PLANET_CRIME_TITLE$§!并产生 £defense_army£ §Y防御部队§!，拥有$trait_psionic$会增强该岗位的效果。"
  mod_job_hakurei_miko_add:0 "$job_hakurei_miko$岗位"
 
- touhou_paragon_spell.8.name: "小行星撞击[Root.GetName]"
- touhou_paragon_spell.8.desc: "我们没能及时制止往[Root.GetName]方向的巨型小行星撞击，它径直撞上了[Root.GetPlanetHabitat]的表面，剧烈的冲击撕裂了板块，蒸发了海洋，燃烧了大气，仅仅几个小时之后，[From.GetPlanetHabitat]表面就除了熔岩什么都不剩了。"
+ touhou_paragon_spell.80.name: "小行星撞击[Root.GetName]"
+ touhou_paragon_spell.80.desc: "我们没能及时制止往[Root.GetName]方向的巨型小行星撞击，它径直撞上了[Root.GetPlanetHabitat]的表面，剧烈的冲击撕裂了板块，蒸发了海洋，燃烧了大气，仅仅几个小时之后，[From.GetPlanetHabitat]表面就除了熔岩什么都不剩了。"
 
  ###使用者视角事件
  touhou_paragon_spell.101.name: "[From.GetName]的魔法废物倾泻"

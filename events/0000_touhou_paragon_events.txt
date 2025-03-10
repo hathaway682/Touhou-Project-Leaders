@@ -1260,7 +1260,7 @@ country_event = { # 灵梦
 		}
 		last_created_leader = { #7
 			add_trait = subclass_commander_miko
-			add_trait = leader_trait_invincible
+			add_trait = thl_leader_trait_invincible
 			add_trait = thl_leader_trait_like_cloud_and_water
 			add_trait = thl_leader_trait_theurgist
 			add_trait = thl_leader_trait_tracker
