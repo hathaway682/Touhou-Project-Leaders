@@ -55,7 +55,7 @@ utility_component_template = {
 			accuracy = 1
 			damage = {
 				min = 200
-				max = 1200
+				max = 200
 			}
 		}
 
@@ -88,8 +88,8 @@ utility_component_template = {
 		damage_per_day = {
 			accuracy = 1
 			damage = {
-				min = 4000
-				max = 8000
+				min = 1000
+				max = 1000
 			}
 		}
 
