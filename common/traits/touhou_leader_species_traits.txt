@@ -132,9 +132,11 @@ trait_sanae_robot_worker = {
 	}
 	modifier = {
 		planet_building_build_speed_mult = 0.1
-		planet_jobs_worker_produces_mult = 1
-		planet_metallurgists_produces_mult = 0.5
-		planet_artisans_produces_mult = 0.5
+		pop_bonus_workforce_mult = 1 #TODO apply pop_category bonus once implemented
+		pop_foundry_bonus_workforce_mult = 0.50
+		pop_alloy_drone_bonus_workforce_mult = 0.50
+		pop_artisan_bonus_workforce_mult = 0.50
+		pop_artisan_drone_bonus_workforce_mult = 0.50
 		planet_pops_energy_upkeep_mult = 4
 		pop_resettlement_cost_mult = 4
 	}
@@ -164,7 +166,8 @@ trait_thl_doll = {
 	icon = "gfx/interface/icons/traits/trait_robot_domestic_protocols.dds"
 	modifier = {
 		planet_pops_upkeep_mult = -0.5
-		pop_job_amenities_mult = 0.25
+		pop_entertainer_bonus_workforce_mult = 0.25
+		pop_maintenance_drone_bonus_workforce_mult = 0.25
 	}
 
 	opposites = { trait_robot_domestic_protocols }
@@ -181,7 +184,8 @@ trait_thl_doll = {
 				}
 			}
 		}
-		pop_job_amenities_mult = -0.25
+		pop_entertainer_bonus_workforce_mult = -0.25
+		pop_maintenance_drone_bonus_workforce_mult = -0.25
 	}
 
 	triggered_pop_modifier = {
@@ -196,9 +200,7 @@ trait_thl_doll = {
 				}
 			}
 		}
-		planet_jobs_produces_mult = -0.2
-		pop_job_trade_mult = -0.2
-		pop_job_amenities_mult = -0.2
+		pop_bonus_workforce_mult = -0.2
 		multiplier = value:doll_missing_per_maker
 	}
 	triggered_pop_modifier = {
@@ -219,9 +221,7 @@ trait_thl_doll = {
 				}
 			}
 		}
-		planet_jobs_produces_mult = -10
-		pop_job_trade_mult = -10
-		pop_job_amenities_mult = -10
+		pop_bonus_workforce_mult = -10
 	}
 	custom_tooltip_with_modifiers = trait_thl_doll_tooltip
 }
@@ -283,7 +283,7 @@ trait_scarlet_blood = {
 		pop_government_ethic_attraction = 0.50
 		army_morale_damage_mult = 0.5
 		pop_environment_tolerance = 0.2
-		planet_jobs_produces_mult = 0.05
+		pop_bonus_workforce_mult = 0.05
 		leader_lifespan_add = 100
 		planet_pops_upkeep_mult = 0.3
 		pop_growth_speed = -0.15
@@ -339,9 +339,13 @@ trait_kappa_aquatic = {
 		pc_machine_habitability = 0.8
 	}
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.20
-		planet_jobs_consumer_goods_produces_mult = 0.20
-		planet_jobs_engineering_research_produces_mult = 0.20
+		pop_foundry_bonus_workforce_mult = 0.20
+		pop_alloy_drone_bonus_workforce_mult = 0.20
+		pop_artisan_bonus_workforce_mult = 0.20
+		pop_artisan_drone_bonus_workforce_mult = 0.20
+		pop_engineer_bonus_workforce_mult = 0.20
+		pop_brain_drone_engineer_bonus_workforce_mult = 0.20
+		pop_calculator_engineer_bonus_workforce_mult = 0.20
 	}
 	triggered_pop_modifier = {
 		potential = {
@@ -380,10 +384,16 @@ trait_thl_magician = {
 	icon = "gfx/interface/icons/traits/trait_psionic_species.dds"
 
 	modifier = {
-		planet_jobs_specialist_produces_mult = 0.1
-		planet_jobs_engineering_research_produces_mult = 0.1
-		planet_jobs_society_research_produces_mult = 0.1
-		planet_jobs_physics_research_produces_mult = 0.1
+		pop_bonus_workforce_mult = 0.10 #TODO apply pop_category bonus once implemented
+		pop_physicist_bonus_workforce_mult = 0.10
+		pop_biologist_bonus_workforce_mult = 0.10
+		pop_engineer_bonus_workforce_mult = 0.10
+		pop_brain_drone_physicist_bonus_workforce_mult = 0.10
+		pop_brain_drone_biologist_bonus_workforce_mult = 0.10
+		pop_brain_drone_engineer_bonus_workforce_mult = 0.10
+		pop_calculator_physicist_bonus_workforce_mult = 0.10
+		pop_calculator_biologist_bonus_workforce_mult = 0.10
+		pop_calculator_engineer_bonus_workforce_mult = 0.10
 		leader_lifespan_mult = 0.5
 		scientist_skill_levels = 2
 	}
