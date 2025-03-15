@@ -346,8 +346,8 @@
  moriya_chosen_army_desc: "受到守矢信仰感召而主动加入进攻星球一方的灵能者。"
 
  NAME_Cirno:0 "琪露诺"
- crino1:0 "自称最强的妖精，前来寻求冒险，实际上是个笨蛋。"
- crino1_catch_phrase:0 "最强的咱已经迫不及待要大干一场啦！"
+ cirno1:0 "自称最强的妖精，前来寻求冒险，实际上是个笨蛋。"
+ cirno1_catch_phrase:0 "最强的咱已经迫不及待要大干一场啦！"
 
  CLASS_TIER_CIRNO:0 "§r湖上的冰精§!"
 
