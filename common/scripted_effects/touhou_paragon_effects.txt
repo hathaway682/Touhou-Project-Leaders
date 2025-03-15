@@ -379,46 +379,6 @@ clear_confilt_traits = {
 	}
 }
 
-civic_leader_creator = {
-	Root = {
-		create_species = {
-			name = UNKNOWN
-			class = $SPECIES_CLASS$
-			portrait = $LEADER_PORTRAIT$
-			traits = {
-				trait = "trait_enduring"
-			}
-			allow_negative_traits = no
-			effect = {
-				save_event_target_as = leader_species
-			}
-		}
-		create_leader = {
-			class = $CLASS$
-			species = event_target:leader_species
-			name = $NAME$
-			skill = $LEVEL$
-			gender = $GENDER$
-			event_leader = no # Leader is allowed to lead factions and win elections
-			background_ethic = ethic_$ETHIC$
-			skip_background_generation = yes
-			custom_description = $DESC$
-			custom_catch_phrase = $CATCH_PHRASE$
-			immortal = $IMMORTAL$
-			hide_age = $IMMORTAL$ # Right now it will always match immortal
-
-			randomize_traits = no
-			effect = {
-				set_skill = $LEVEL$
-				save_event_target_as = ethic_leader
-				set_leader_flag = renowned_leader
-				set_leader_flag = is_in_recruit_window
-				set_variable = { which = leader_pending_negative_traits_unmodified value = 1 }
-			}
-		}
-	}
-}
-
 add_observation_insight_effect = {
 	# Accepts the following parameters:
 	# VALUE = int, amount of observation insights gained.

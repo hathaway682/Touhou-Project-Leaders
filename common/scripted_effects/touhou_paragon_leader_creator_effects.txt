@@ -1,0 +1,216 @@
+thl_leader_creator_core = {
+	create_species = {
+		name = UNKNOWN
+		class = $SPECIES_CLASS$
+		portrait = $LEADER_PORTRAIT$
+		name_list = $NAME_LIST|random_class$
+		immortal = $IMMORTAL_SPECIES|no$
+		traits = {
+			trait = "trait_enduring"
+		}
+		allow_negative_traits = no
+		effect = {
+			save_event_target_as = leader_species
+		}
+	}
+	create_leader = {
+		class = $CLASS$
+		species = event_target:leader_species
+		name = $NAME$
+		skill = $LEVEL$
+		gender = $GENDER$
+		event_leader = no # Leader is allowed to lead factions and win elections
+		background_ethic = ethic_$ETHIC$
+		skip_background_generation = yes
+		custom_description = $DESC$
+		custom_catch_phrase = $CATCH_PHRASE$
+		immortal = $IMMORTAL$
+		hide_age = $HIDEAGE|IMMORTAL$ # Matches HIDEAGE, Fallbacks on IMMORTAL
+
+		randomize_traits = no
+		effect = {
+			set_skill = $LEVEL$
+			save_event_target_as = ethic_leader
+			set_leader_flag = renowned_leader
+			set_leader_flag = is_in_recruit_window
+			set_variable = { which = leader_pending_negative_traits_unmodified value = 1 }
+		}
+	}
+	last_created_leader = {
+		add_$TRAIT_GROUP$_traits = yes
+	}
+}
+
+thl_ethic_leader_creator = {
+	create_country = {
+		name = "NAME_leader_country"
+		type = faction
+		auto_delete = yes
+		flag = {
+			icon = {
+				category = "special"
+				file = "unknown.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "00_solid.dds"
+			}
+			colors = {
+				"red"
+				"red"
+				"null"
+				"null"
+			}
+		}
+		effect = {
+			save_event_target_as = leader_country
+		}
+	}
+	event_target:leader_country = {
+		create_$LEADER$_leader = yes
+	}
+	event_target:ethic_leader = {
+		set_owner = root
+		# This is a hack to make the leader not be added to player country.
+		# We must call ethic_leader_hire on the hire event
+		# We must call ethic_leader_kill on the dismiss event
+		exile_leader_as = ethic_leader_exile
+	}
+}
+
+civic_leader_creator = {
+	Root = {
+		create_species = {
+			name = UNKNOWN
+			class = $SPECIES_CLASS$
+			portrait = $LEADER_PORTRAIT$
+			traits = {
+				trait = "trait_enduring"
+			}
+			allow_negative_traits = no
+			effect = {
+				save_event_target_as = leader_species
+			}
+		}
+		create_leader = {
+			class = $CLASS$
+			species = event_target:leader_species
+			name = $NAME$
+			skill = $LEVEL$
+			gender = $GENDER$
+			event_leader = no # Leader is allowed to lead factions and win elections
+			background_ethic = ethic_$ETHIC$
+			skip_background_generation = yes
+			custom_description = $DESC$
+			custom_catch_phrase = $CATCH_PHRASE$
+			immortal = $IMMORTAL$
+			hide_age = $HIDEAGE|IMMORTAL$ # Right now it will always match immortal
+
+			randomize_traits = no
+			effect = {
+				set_skill = $LEVEL$
+				save_event_target_as = ethic_leader
+				set_leader_flag = renowned_leader
+				set_leader_flag = is_in_recruit_window
+				set_variable = { which = leader_pending_negative_traits_unmodified value = 1 }
+			}
+		}
+	}
+}
+
+create_tenshi_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x121
+		CLASS = commander
+		NAME = NAME_Tenshi
+		LEVEL = 6
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = egalitarian
+		DESC = tenshi1
+		CATCH_PHRASE = tenshi1_catch_phrase
+		TRAIT_GROUP = tenshi
+	}
+}
+
+add_tenshi_traits = {
+	add_trait = subclass_commander_general
+	add_trait = leader_trait_fortress_cracker
+	add_trait = thl_leader_trait_crimson_sword
+	add_trait = leader_trait_unyielding_2
+	add_trait = leader_trait_hardy_2
+	add_trait = leader_trait_commanding_presence
+	add_trait = leader_trait_lethargic
+	add_trait = leader_trait_volatile
+	add_trait = thl_leader_trait_earthquake
+	set_leader_flag = touhou_leader
+	set_leader_flag = legendary_leader
+	set_leader_flag = tenshi_leader
+	set_age = 17
+}
+
+create_suika_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x98
+		CLASS = commander
+		NAME = NAME_Suika
+		LEVEL = 6
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = xenophile
+		DESC = suika1
+		CATCH_PHRASE = suika1_catch_phrase
+		TRAIT_GROUP = suika
+	}
+}
+
+add_suika_traits = {
+	add_trait = subclass_commander_lord
+	add_trait = thl_leader_trait_oni_power
+	add_trait = leader_trait_trickster
+	add_trait = leader_trait_touhou_cultural_focus_2
+	add_trait = leader_trait_dreaded
+	add_trait = leader_trait_venerated
+	add_trait = leader_trait_profligate
+	add_trait = thl_leader_trait_regeneration_2
+	add_trait = thl_leader_trait_density
+	set_leader_flag = touhou_leader
+	set_leader_flag = legendary_leader
+	set_leader_flag = suika_leader
+	set_age = 17
+}
+
+create_sanae_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x72
+		CLASS = commander
+		NAME = NAME_Sanae
+		LEVEL = 5
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = spiritualist
+		DESC = sanae1
+		CATCH_PHRASE = sanae1_catch_phrase
+		TRAIT_GROUP = sanae
+	}
+}
+
+add_sanae_traits = {
+	add_trait = subclass_commander_miko
+	add_trait = thl_leader_trait_common_sense_killer
+	add_trait = thl_leader_trait_theurgist
+	add_trait = thl_leader_trait_snake_bless
+	add_trait = thl_leader_trait_frog_bless
+	add_trait = leader_trait_shroud_preacher
+	add_trait = leader_trait_crusader
+	add_trait = leader_trait_reckless_2
+	add_trait = thl_leader_trait_regeneration
+	add_trait = thl_leader_trait_miracle
+	set_leader_flag = touhou_leader
+	set_leader_flag = legendary_leader
+	set_leader_flag = sanae_leader
+	set_age = 17
+}

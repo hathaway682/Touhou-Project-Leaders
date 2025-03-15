@@ -635,32 +635,8 @@ country_event = { # 天子
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = { 
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x121 
-			CLASS = commander
-			NAME = NAME_Tenshi
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = egalitarian
-			DESC = tenshi1
-			CATCH_PHRASE = tenshi1_catch_phrase
-		}
-		last_created_leader = { #7
-			add_trait = subclass_commander_general
-			add_trait = leader_trait_fortress_cracker
-			add_trait = thl_leader_trait_crimson_sword
-			add_trait = leader_trait_unyielding_2
-			add_trait = leader_trait_hardy_2
-			add_trait = leader_trait_commanding_presence
-			add_trait = leader_trait_lethargic
-			add_trait = leader_trait_volatile
-			add_trait = thl_leader_trait_earthquake
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = tenshi_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = tenshi
 		}
 	}
 
@@ -743,32 +719,8 @@ country_event = { # 萃香
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = { 
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x98 
-			CLASS = commander
-			NAME = NAME_Suika
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = xenophile
-			DESC = suika1
-			CATCH_PHRASE = suika1_catch_phrase
-		}
-		last_created_leader = { #7
-			add_trait = subclass_commander_lord
-			add_trait = thl_leader_trait_oni_power
-			add_trait = leader_trait_trickster
-			add_trait = leader_trait_touhou_cultural_focus_2
-			add_trait = leader_trait_dreaded
-			add_trait = leader_trait_venerated
-			add_trait = leader_trait_profligate
-			add_trait = thl_leader_trait_regeneration_2
-			add_trait = thl_leader_trait_density
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = suika_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = suika
 		}
 	}
 
@@ -861,33 +813,8 @@ country_event = { # 早苗
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x72 
-			CLASS = commander
-			NAME = NAME_Sanae
-			LEVEL = 5
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = spiritualist
-			DESC = sanae1
-			CATCH_PHRASE = sanae1_catch_phrase
-		}
-		last_created_leader = { #6
-			add_trait = subclass_commander_miko
-			add_trait = thl_leader_trait_common_sense_killer
-			add_trait = thl_leader_trait_theurgist
-			add_trait = thl_leader_trait_snake_bless
-			add_trait = thl_leader_trait_frog_bless
-			add_trait = leader_trait_shroud_preacher
-			add_trait = leader_trait_crusader
-			add_trait = leader_trait_reckless_2
-			add_trait = thl_leader_trait_regeneration
-			add_trait = thl_leader_trait_miracle
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = sanae_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = sanae
 		}
 	}
 

@@ -73,34 +73,8 @@ country_event = {
 						design = NAME_Scholarium_Science
 					}
 					set_location = root.capital_star
-					civic_leader_creator = {
-						SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-						LEADER_PORTRAIT = x72
-						CLASS = commander
-						NAME = NAME_Sanae
-						LEVEL = 5
-						GENDER = female
-						IMMORTAL = no
-						ETHIC = spiritualist
-						DESC = sanae1
-						CATCH_PHRASE = sanae1_catch_phrase
-					}
-					last_created_leader = { #6
-						add_trait = subclass_commander_miko
-						add_trait = thl_leader_trait_common_sense_killer
-						add_trait = thl_leader_trait_theurgist
-						add_trait = thl_leader_trait_snake_bless
-						add_trait = thl_leader_trait_frog_bless
-						add_trait = leader_trait_shroud_preacher
-						add_trait = leader_trait_crusader_3
-						add_trait = leader_trait_gullible_2
-						add_trait = leader_trait_reckless_2
-						add_trait = thl_leader_trait_regeneration
-						add_trait = thl_leader_trait_miracle
-						set_leader_flag = touhou_leader
-						set_leader_flag = legendary_leader
-						set_leader_flag = sanae_leader
-						set_age = 17
+					root = {
+						create_sanae_leader = yes
 					}
 					assign_leader = last_created_leader
 				}
