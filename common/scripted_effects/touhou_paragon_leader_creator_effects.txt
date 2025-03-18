@@ -69,12 +69,70 @@ thl_ethic_leader_creator = {
 	event_target:leader_country = {
 		create_$LEADER$_leader = yes
 	}
+}
+
+thl_ethic_leader_hire_effect = {
+	random_owned_planet = {
+		limit = {
+			is_variable_set = paragon_memory_vault
+		}
+		change_variable = {
+			which = paragon_memory_vault
+			value = 1
+		}
+	}
+
+	lower_leader_chance = yes
+	set_country_flag = spawning_renowned_leader
+
 	event_target:ethic_leader = {
 		set_owner = root
-		# This is a hack to make the leader not be added to player country.
-		# We must call ethic_leader_hire on the hire event
-		# We must call ethic_leader_kill on the dismiss event
-		exile_leader_as = ethic_leader_exile
+	}
+
+	last_created_leader = {
+		save_global_event_target_as = $GLOBAL_EVENT_TARGET$
+		set_leader_flag = $GLOBAL_EVENT_TARGET$
+		set_leader_flag = renowned_leader
+	}
+
+	remove_country_flag = spawning_renowned_leader
+
+	create_message = {
+		type = MESSAGE_RECRUITED_LEADER
+		localization =  MESSAGE_RECRUITED_LEADER_DESC
+		days = @toast_message_days
+		target = event_target:ethic_leader
+		variable = {
+			type = name
+			localization = LEADER
+			scope = event_target:ethic_leader
+		}
+		variable = {
+			key = "border"
+			value = "GFX_border_veteran"
+		}
+	}
+
+	event_target:$GLOBAL_EVENT_TARGET$ = {
+		leader_event = { id = focus.46 } # Empire Focus
+	}
+}
+
+thl_ethic_leader_kill_effect = {
+	event_target:ethic_leader = {
+		kill_leader = { show_notification = no }
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = paragon_chance_negative
+				value > 0
+			}
+		}
+		change_variable = {
+			which = paragon_chance_negative
+			value = -1
+		}
 	}
 }
 
@@ -829,6 +887,42 @@ add_yuka_traits = {
 	set_age = 728
 }
 
+create_yuka_commander_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x119
+		CLASS = official
+		NAME = NAME_Yuka
+		LEVEL = 10
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = militarist
+		DESC = yuka1
+		CATCH_PHRASE = yuka1_catch_phrase
+		TRAIT_GROUP = yuka
+	}
+}
+
+add_yuka_commander_traits = {
+	add_trait = subclass_commander_admiral
+	add_trait = leader_trait_demolisher_destiny
+	add_trait = leader_trait_legendary_foe_hammer
+	add_trait = leader_trait_legendary_commanding_presence
+	add_trait = leader_trait_legendary_gunboat_diplomacy
+	add_trait = leader_trait_aggressive_2
+	add_trait = leader_trait_demolisher_3
+	add_trait = leader_trait_intimidator_3
+	add_trait = leader_trait_wrecker_3
+	add_trait = leader_trait_artillerist_3
+	add_trait = leader_trait_reckless_2
+	add_trait = leader_trait_tyrannical_2
+	add_trait = leader_trait_legendary_harsh_ruler
+	add_trait = thl_leader_trait_flower_commander
+	add_trait = thl_leader_trait_incarnation_of_nature_commander
+	add_trait = thl_leader_trait_sleeping_terror_commander
+	set_age = 728
+}
+
 create_kosuzu_leader = {
 	thl_leader_creator_core = {
 		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
@@ -884,6 +978,130 @@ add_akyuu_traits = {
 	add_trait = thl_leader_trait_bridge_of_gensokyo
 	add_trait = thl_leader_trait_speculative_fiction
 	add_trait = thl_leader_trait_short_life
+	set_age = 12
+}
+
+create_akyuu_cyborg_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x53
+		CLASS = scientist
+		NAME = NAME_Akyuu
+		LEVEL = 6
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = xenophile
+		DESC = akyuu1
+		CATCH_PHRASE = akyuu1_catch_phrase
+		TRAIT_GROUP = akyuu_cyborg
+	}
+}
+
+add_akyuu_cyborg_traits = {
+	add_trait = subclass_scientist_councilor
+	add_trait = leader_trait_xeno_cataloger
+	add_trait = leader_trait_society_focus
+	add_trait = leader_trait_science_communicator_3
+	add_trait = thl_leader_trait_memory
+	add_trait = thl_leader_trait_the_ninth_savage
+	add_trait = thl_leader_trait_bridge_of_gensokyo
+	add_trait = thl_leader_trait_speculative_fiction
+	add_trait = thl_leader_trait_cyborg_life
+	add_trait = leader_trait_expertise_industry
+	set_age = 12
+}
+
+create_akyuu_synth_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x53
+		CLASS = scientist
+		NAME = NAME_Akyuu
+		LEVEL = 6
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = xenophile
+		DESC = akyuu1
+		CATCH_PHRASE = akyuu1_catch_phrase
+		TRAIT_GROUP = akyuu_synth
+	}
+}
+
+add_akyuu_synth_traits = {
+	add_trait = subclass_scientist_councilor
+	add_trait = leader_trait_xeno_cataloger
+	add_trait = leader_trait_society_focus
+	add_trait = leader_trait_science_communicator_3
+	add_trait = thl_leader_trait_memory
+	add_trait = thl_leader_trait_the_ninth_savage
+	add_trait = thl_leader_trait_bridge_of_gensokyo
+	add_trait = thl_leader_trait_speculative_fiction
+	add_trait = thl_leader_trait_synth_life
+	add_trait = leader_trait_expertise_computing
+	set_age = 12
+}
+
+create_akyuu_gene_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x53
+		CLASS = scientist
+		NAME = NAME_Akyuu
+		LEVEL = 6
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = xenophile
+		DESC = akyuu1
+		CATCH_PHRASE = akyuu1_catch_phrase
+		TRAIT_GROUP = akyuu_gene
+	}
+}
+
+add_akyuu_gene_traits = {
+	add_trait = subclass_scientist_councilor
+	add_trait = leader_trait_xeno_cataloger
+	add_trait = leader_trait_society_focus
+	add_trait = leader_trait_science_communicator_3
+	add_trait = thl_leader_trait_memory
+	add_trait = thl_leader_trait_the_ninth_savage
+	add_trait = thl_leader_trait_bridge_of_gensokyo
+	add_trait = thl_leader_trait_speculative_fiction
+	add_trait = thl_leader_trait_gene_life
+	add_trait = leader_trait_expertise_biology
+	set_age = 12
+}
+
+create_akyuu_chosen_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x53
+		CLASS = scientist
+		NAME = NAME_Akyuu
+		LEVEL = 6
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = xenophile
+		DESC = akyuu1
+		CATCH_PHRASE = akyuu1_catch_phrase
+		TRAIT_GROUP = akyuu_chosen
+	}
+}
+
+add_akyuu_chosen_traits = {
+	add_trait = subclass_scientist_councilor
+	add_trait = leader_trait_xeno_cataloger
+	add_trait = leader_trait_society_focus
+	add_trait = leader_trait_science_communicator_3
+	add_trait = thl_leader_trait_memory
+	add_trait = thl_leader_trait_the_ninth_savage
+	add_trait = thl_leader_trait_bridge_of_gensokyo
+	add_trait = thl_leader_trait_speculative_fiction
+	add_trait = leader_trait_whisperers_chosen
+	add_trait = trait_ruler_deep_connections_3
+	add_trait = leader_trait_reformer_3
+	add_trait = leader_trait_politician_2
+	add_trait = leader_trait_bureaucrat_2
+	add_trait = leader_trait_expertise_psionics
 	set_age = 12
 }
 
@@ -1019,7 +1237,7 @@ create_minoriko_leader = {
 
 add_minoriko_traits = {
 	add_trait = subclass_official_governor
-	add_trait = leader_trait_harvest
+	add_trait = thl_leader_trait_harvest
 	add_trait = leader_trait_utopian_idealist
 	add_trait = trait_ruler_fertility_preacher
 	add_trait = thl_leader_trait_regeneration_2

@@ -4,27 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7784210-dd34-44ca-b26b-8f8bd35035ab" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/common/message_types/thl_message_types.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_magic_academy.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_magician.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/message/message_pop_magic_transed.dds" afterDir="false" />
+    <list default="true" id="6c1b2c56-2c3a-490e-98e6-f8614253608a" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/armies/touhou_leader_armies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/armies/touhou_leader_armies.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/buildings/touhou_leader_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/touhou_leader_buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/event_chains/touhou_event_chains.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/event_chains/touhou_event_chains.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/message_types/iwoi_message_types.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/on_actions/touhou_on_actions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/on_actions/touhou_on_actions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pop_jobs/thl_religion_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/pop_jobs/thl_religion_jobs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pop_jobs/touhou_leader_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/pop_jobs/touhou_leader_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/button_effects/touhou_button_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/button_effects/touhou_button_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/edicts/touhou_edicts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/edicts/touhou_edicts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/policies/touhou_policies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/policies/touhou_policies.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/script_values/script_values_touhou_leaders.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/script_values/script_values_touhou_leaders.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/scripted_effects/touhou_paragon_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/touhou_paragon_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/touhou_paragon_leader_creator_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/touhou_paragon_leader_creator_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_paragon.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_paragon.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_spells.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_spells.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/scripted_triggers/touhou_scripted_triggers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_triggers/touhou_scripted_triggers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/static_modifiers/touhou_static_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/static_modifiers/touhou_static_modifiers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/traits/touhou_leader_species_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/touhou_leader_species_traits.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_common_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_common_events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_effect_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_effect_events.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/touhou_leaders.gfx" beforeDir="false" afterPath="$PROJECT_DIR$/interface/touhou_leaders.gfx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_l_simp_chinese.yml" afterDir="false" />
     </list>
@@ -40,48 +35,35 @@
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2absayBNGM6A8zLUAaaunwN72bm" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2u7NMV2BF0WklFHc1emYq6D6pTE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Documents/Paradox Interactive/Stellaris/mod/touhou_leaders/common/scripted_effects",
-    "settings.editor.selected.configurable": "preferences.updates"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Documents/Paradox Interactive/Stellaris/mod/touhou_leaders/common/scripted_effects&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Documents\Paradox Interactive\Stellaris\mod\touhou_leaders\common\scripted_effects" />
-      <recent name="D:\Documents\Paradox Interactive\Stellaris\mod\touhou_leaders\common\scripted_loc" />
-      <recent name="D:\Documents\Paradox Interactive\Stellaris\mod\touhou_leaders\events" />
-      <recent name="D:\Documents\Paradox Interactive\Stellaris\mod\touhou_leaders\localisation\simp_chinese" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\DELL\AppData\Roaming\Subversion</configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
-      <changelist id="e7784210-dd34-44ca-b26b-8f8bd35035ab" name="更改" comment="" />
-      <created>1704598680366</created>
+      <changelist id="6c1b2c56-2c3a-490e-98e6-f8614253608a" name="更改" comment="" />
+      <created>1741595609517</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1704598680366</updated>
+      <updated>1741595609517</updated>
     </task>
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

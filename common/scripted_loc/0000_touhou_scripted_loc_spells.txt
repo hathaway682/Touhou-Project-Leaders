@@ -447,7 +447,7 @@ defined_text = {
 					value = 36
 				}
 				any_owned_leader = {
-					has_trait = leader_trait_harvest
+					has_trait = thl_leader_trait_harvest
 				}
 			}
 		}

@@ -115,7 +115,7 @@ war_doctrine = {
 food_policy = {
     potential = {
         any_owned_leader = {
-            has_trait = leader_trait_harvest
+            has_trait = thl_leader_trait_harvest
         }
     }
 
@@ -168,7 +168,7 @@ food_policy = {
             custom_tooltip = {
                 text = level_3_aki
                 any_owned_leader = {
-                    has_trait = leader_trait_harvest
+                    has_trait = thl_leader_trait_harvest
                     has_skill >= 3
                 }
             }
@@ -194,7 +194,7 @@ food_policy = {
             custom_tooltip = {
                 text = level_6_aki
                 any_owned_leader = {
-                    has_trait = leader_trait_harvest
+                    has_trait = thl_leader_trait_harvest
                     has_skill >= 6
                 }
             }
@@ -220,7 +220,7 @@ food_policy = {
             custom_tooltip = {
                 text = level_10_aki
                 any_owned_leader = {
-                    has_trait = leader_trait_harvest
+                    has_trait = thl_leader_trait_harvest
                     has_skill >= 10
                 }
             }

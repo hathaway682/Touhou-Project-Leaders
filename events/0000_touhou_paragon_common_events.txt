@@ -2584,38 +2584,7 @@ country_event = { #Crisis
 					show_notification = no
 				}
 			}
-			civic_leader_creator = {
-				SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-				LEADER_PORTRAIT = x119
-				CLASS = commander
-				NAME = NAME_Yuka
-				LEVEL = 10
-				GENDER = female
-				IMMORTAL = no
-				ETHIC = militarist
-				DESC = yuka1
-				CATCH_PHRASE = yuka1_catch_phrase
-			}
-			last_created_leader = { #18
-				add_trait = subclass_commander_admiral
-				add_trait = leader_trait_demolisher_destiny
-				add_trait = leader_trait_legendary_foe_hammer
-				add_trait = leader_trait_legendary_commanding_presence
-				add_trait = leader_trait_legendary_gunboat_diplomacy
-				add_trait = leader_trait_aggressive_2
-				add_trait = leader_trait_demolisher_3
-				add_trait = leader_trait_intimidator_3
-				add_trait = leader_trait_wrecker_3
-				add_trait = leader_trait_artillerist_3
-				add_trait = leader_trait_artillery_specialization
-				add_trait = leader_trait_reckless_2
-				add_trait = leader_trait_tyrannical_2
-				add_trait = leader_trait_legendary_harsh_ruler
-				add_trait = thl_leader_trait_flower_commander
-				add_trait = thl_leader_trait_incarnation_of_nature_commander
-				add_trait = thl_leader_trait_sleeping_terror_commander
-				set_age = 17
-			}
+			create_yuka_commander_leader = yes
 		}
 	}
 }
@@ -2667,37 +2636,7 @@ country_event = { #Crisis
 					show_notification = no
 				}
 			}
-			civic_leader_creator = {
-				SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-				LEADER_PORTRAIT = x119
-				CLASS = commander
-				NAME = NAME_Yuka
-				LEVEL = 10
-				GENDER = female
-				IMMORTAL = no
-				ETHIC = militarist
-				DESC = yuka1
-				CATCH_PHRASE = yuka1_catch_phrase
-			}
-			last_created_leader = { #18
-				add_trait = subclass_commander_admiral
-				add_trait = leader_trait_demolisher_destiny
-				add_trait = leader_trait_legendary_foe_hammer
-				add_trait = leader_trait_legendary_commanding_presence
-				add_trait = leader_trait_legendary_gunboat_diplomacy
-				add_trait = leader_trait_aggressive_2
-				add_trait = leader_trait_demolisher_3
-				add_trait = leader_trait_intimidator_3
-				add_trait = leader_trait_wrecker_3
-				add_trait = leader_trait_artillerist_3
-				add_trait = leader_trait_reckless_2
-				add_trait = leader_trait_tyrannical_2
-				add_trait = leader_trait_legendary_harsh_ruler
-				add_trait = thl_leader_trait_flower_commander
-				add_trait = thl_leader_trait_incarnation_of_nature_commander
-				add_trait = thl_leader_trait_sleeping_terror_commander
-				set_age = 17
-			}
+			create_yuka_commander_leader = yes
 		}
 	}
 }
