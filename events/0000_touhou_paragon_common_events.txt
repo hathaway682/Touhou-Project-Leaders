@@ -2328,7 +2328,7 @@ leader_event = {
 				limit = {
 					exists = event_target:sakura_event_victim
 				}
-				create_pop = {
+				create_pop_group = {
 					species = sakura_event_victim
 				}
 				last_created_pop = {
@@ -3975,7 +3975,7 @@ country_event = {
 				}
 				while = {
 					count = 2
-					create_pop = {
+					create_pop_group = {
 						species = event_target:rabbit_species
 					}
 				}

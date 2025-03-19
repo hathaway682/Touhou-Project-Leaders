@@ -4561,7 +4561,7 @@ planet_event = {
                         save_event_target_as = ghost_target
                     }
                     save_event_target_as = target_planet
-                    create_pop = { species = event_target:dead_pop_species }
+                    create_pop_group = { species = event_target:dead_pop_species }
                 }
                 else_if = {
                     limit = {
@@ -4590,7 +4590,7 @@ planet_event = {
                                 }
                             }
                             save_event_target_as = target_planet
-                            create_pop = { species = event_target:dead_pop_species }
+                            create_pop_group = { species = event_target:dead_pop_species }
                         }
                     }
                 }
@@ -4609,7 +4609,7 @@ planet_event = {
                             save_event_target_as = ghost_target
                         }
                         save_event_target_as = target_planet
-                        create_pop = { species = event_target:dead_pop_species }
+                        create_pop_group = { species = event_target:dead_pop_species }
                     }
                 }
                 last_created_pop = {
@@ -4792,7 +4792,7 @@ planet_event = {
                         save_event_target_as = ghost_target
                     }
                     save_event_target_as = target_planet
-                    create_pop = { species = event_target:dead_pop_species }
+                    create_pop_group = { species = event_target:dead_pop_species }
                 }
                 else_if = {
                     limit = {
@@ -4821,7 +4821,7 @@ planet_event = {
                                 }
                             }
                             save_event_target_as = target_planet
-                            create_pop = { species = event_target:dead_pop_species }
+                            create_pop_group = { species = event_target:dead_pop_species }
                         }
                     }
                 }
@@ -4840,7 +4840,7 @@ planet_event = {
                             save_event_target_as = ghost_target
                         }
                         save_event_target_as = target_planet
-                        create_pop = { species = event_target:dead_pop_species }
+                        create_pop_group = { species = event_target:dead_pop_species }
                     }
                 }
                 last_created_pop = {
@@ -5091,7 +5091,7 @@ planet_event = {
             1 = {
                 while = {
                     count = 3
-                    create_pop = {
+                    create_pop_group = {
                         species = last_created_species
                         ethos = random
                     }
@@ -5103,7 +5103,7 @@ planet_event = {
             1 = {
                 while = {
                     count = 4
-                    create_pop = {
+                    create_pop_group = {
                         species = last_created_species
                         ethos = random
                     }
@@ -5115,7 +5115,7 @@ planet_event = {
             1 = {
                 while = {
                     count = 5
-                    create_pop = {
+                    create_pop_group = {
                         species = last_created_species
                         ethos = random
                     }
@@ -5127,7 +5127,7 @@ planet_event = {
             1 = {
                 while = {
                     count = 6
-                    create_pop = {
+                    create_pop_group = {
                         species = last_created_species
                         ethos = random
                     }
@@ -5255,7 +5255,7 @@ planet_event = {
             1 = {
                 while = {
                     count = 3
-                    create_pop = {
+                    create_pop_group = {
                         species = last_created_species
                         ethos = random
                     }
@@ -5267,7 +5267,7 @@ planet_event = {
             1 = {
                 while = {
                     count = 4
-                    create_pop = {
+                    create_pop_group = {
                         species = last_created_species
                         ethos = random
                     }
@@ -5279,7 +5279,7 @@ planet_event = {
             1 = {
                 while = {
                     count = 5
-                    create_pop = {
+                    create_pop_group = {
                         species = last_created_species
                         ethos = random
                     }
@@ -5291,7 +5291,7 @@ planet_event = {
             1 = {
                 while = {
                     count = 6
-                    create_pop = {
+                    create_pop_group = {
                         species = last_created_species
                         ethos = random
                     }
@@ -5694,7 +5694,7 @@ planet_event = { #Braiiiins
         fromfrom = {
             make_pop_zombie = yes
         }
-        create_pop = {
+        create_pop_group = {
             species = fromfrom.species
         }
         last_created_pop = {
@@ -5774,7 +5774,7 @@ planet_event = {
                     save_event_target_as = ghost_target
                 }
                 save_event_target_as = target_planet
-                create_pop = { species = event_target:dead_pop_species }
+                create_pop_group = { species = event_target:dead_pop_species }
                 last_created_pop = {
                     clear_confilt_traits = yes
                     modify_species = {
@@ -5803,7 +5803,7 @@ planet_event = {
                         has_trait = thl_leader_trait_corpse_travel
                     }
                 }
-                create_pop = { species = event_target:dead_pop_species }
+                create_pop_group = { species = event_target:dead_pop_species }
                 last_created_pop = {
                     make_pop_zombie = yes
                 }
@@ -5899,7 +5899,7 @@ planet_event = {
                     save_event_target_as = ghost_target
                 }
                 save_event_target_as = target_planet
-                create_pop = { species = event_target:dead_pop_species }
+                create_pop_group = { species = event_target:dead_pop_species }
                 last_created_pop = {
                     clear_confilt_traits = yes
                     modify_species = {
@@ -5928,7 +5928,7 @@ planet_event = {
                         has_trait = thl_leader_trait_corpse_travel
                     }
                 }
-                create_pop = { species = event_target:dead_pop_species }
+                create_pop_group = { species = event_target:dead_pop_species }
                 last_created_pop = {
                     make_pop_zombie = yes
                 }
@@ -10264,7 +10264,7 @@ planet_event = {
         }
         while = {
             count = 3
-            create_pop = {
+            create_pop_group = {
                 species = last_created_species
             }
         }

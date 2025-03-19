@@ -6,22 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6c1b2c56-2c3a-490e-98e6-f8614253608a" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/buildings/touhou_leader_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/touhou_leader_buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/button_effects/touhou_button_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/button_effects/touhou_button_effects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/edicts/touhou_edicts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/edicts/touhou_edicts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/policies/touhou_policies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/policies/touhou_policies.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/script_values/script_values_touhou_leaders.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/script_values/script_values_touhou_leaders.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_effects/touhou_paragon_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/touhou_paragon_effects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_effects/touhou_paragon_leader_creator_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/touhou_paragon_leader_creator_effects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_paragon.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_paragon.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_spells.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_loc/0000_touhou_scripted_loc_spells.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_triggers/touhou_scripted_triggers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_triggers/touhou_scripted_triggers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/decisions/touhou_decisions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/decisions/touhou_decisions.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_common_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_common_events.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_effect_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_effect_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_enclave_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_enclave_events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_spell_card_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_spell_card_events.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,16 +29,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Documents/Paradox Interactive/Stellaris/mod/touhou_leaders/common/scripted_effects&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "4.0-beta",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Documents/Paradox Interactive/Stellaris/mod/touhou_leaders/common/scripted_effects",
+    "settings.editor.selected.configurable": "preferences.updates"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Documents\Paradox Interactive\Stellaris\mod\touhou_leaders\common\scripted_effects" />

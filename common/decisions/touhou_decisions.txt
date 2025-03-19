@@ -1044,7 +1044,7 @@ decision_summon_devils = {
 			}
 			while = {
 				count = 4
-				create_pop = {
+				create_pop_group = {
 					species = event_target:demon_species
 				}
 			}
@@ -1139,7 +1139,7 @@ decision_summon_devils_large = {
 			}
 			while = {
 				count = 10
-				create_pop = {
+				create_pop_group = {
 					species = event_target:demon_species
 				}
 			}
@@ -1229,7 +1229,7 @@ decision_summon_spirit = {
 			}
 			while = {
 				count = 2
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -1257,7 +1257,7 @@ decision_summon_spirit = {
 			}
 			while = {
 				count = 2
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -1285,7 +1285,7 @@ decision_summon_spirit = {
 			}
 			while = {
 				count = 2
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -1375,7 +1375,7 @@ decision_summon_spirit_large = {
 			}
 			while = {
 				count = 4
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -1403,7 +1403,7 @@ decision_summon_spirit_large = {
 			}
 			while = {
 				count = 4
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -1431,7 +1431,7 @@ decision_summon_spirit_large = {
 			}
 			while = {
 				count = 4
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -1459,7 +1459,7 @@ decision_summon_spirit_large = {
 			}
 			while = {
 				count = 4
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}

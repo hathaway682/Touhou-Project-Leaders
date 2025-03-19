@@ -319,7 +319,7 @@ country_event = {
         capital_scope = {
             while = {
                 count = 3
-                create_pop = {
+                create_pop_group = {
                     species = event_target:kappa_enclave_species
                 }
             }
@@ -719,7 +719,7 @@ country_event = {
             mult = kappa_enclave_cost
         }
         capital_scope = {
-            create_pop = {
+            create_pop_group = {
                 species = event_target:kappa_enclave_robot_species
             }
         }
@@ -879,7 +879,7 @@ country_event = {
             mult = kappa_enclave_cost
         }
         capital_scope = {
-            create_pop = {
+            create_pop_group = {
                 species = event_target:kappa_enclave_robot_species
             }
             hidden_effect = {

@@ -2264,7 +2264,7 @@ planet_event = {
             }
             while = {
                 count = pop_growth_number
-                create_pop = {
+                create_pop_group = {
                     species = event_target:pop_growth_target
                 }
             }
@@ -2283,7 +2283,7 @@ planet_event = {
                     species_two = event_target:pop_growth_target_2
                     country = root.owner
                 }
-                create_pop = {
+                create_pop_group = {
                     species = last_created_species
                 }
             }
