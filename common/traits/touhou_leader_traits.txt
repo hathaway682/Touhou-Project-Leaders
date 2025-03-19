@@ -1390,6 +1390,7 @@ thl_leader_trait_great_magician = {
 	}
 	self_modifier = {
 		leaders_upkeep_mult = -0.9
+		leader_lifespan_add = 777
 	}
 	# Any Class - Ruler
 	triggered_councilor_modifier = {
@@ -1465,7 +1466,7 @@ thl_leader_trait_great_magician = {
 		planet_jobs_physics_research_produces_mult = 0.10
 	}
 	leader_class = { commander official scientist }
-	immortal_leaders = yes
+	immortal_leaders = yesgreat
 	initial = no
 	randomized = no
 	notify_on_gained = no
@@ -2809,7 +2810,7 @@ thl_leader_trait_summon_devils = {
 	custom_tooltip_with_modifiers = thl_leader_trait_summon_devils_effect
 }
 
-leader_trait_sick = {
+thl_leader_trait_sick = {
 	inline_script = {
 		script = trait/icon_negative
 		ICON = GFX_leader_trait_slipshod
@@ -2893,6 +2894,7 @@ thl_leader_trait_death = {
 		COUNCIL = no
 		TIER = none
 	}
+	immortal_leaders = yes
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_officials_thl_mana_produces_add = 1
@@ -3088,6 +3090,7 @@ thl_leader_trait_flower = {
 		COUNCIL = yes
 		TIER = none
 	}
+	immortal_leaders = yes
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_officials_thl_mana_produces_add = 1
@@ -4384,7 +4387,7 @@ thl_leader_trait_fall = {
 	custom_tooltip_with_modifiers = thl_leader_trait_fall_tooltip
 }
 
-leader_trait_harvest = {
+thl_leader_trait_harvest = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -4422,7 +4425,7 @@ leader_trait_harvest = {
 	selectable_weight = 0
 	immortal_leaders = yes
 	background_icon = GFX_leader_background_destiny_1
-	custom_tooltip_with_modifiers = leader_trait_harvest_tooltip
+	custom_tooltip_with_modifiers = thl_leader_trait_harvest_tooltip
 }
 
 thl_leader_trait_jinx = {
@@ -4716,6 +4719,7 @@ thl_leader_trait_luck = {
 		leader_scientists_thl_mana_produces_add = 1
 		mult = trigger:has_skill
 	}
+
 	planet_modifier = {
 		pop_happiness = 0.10
 		trade_value_mult = 0.66

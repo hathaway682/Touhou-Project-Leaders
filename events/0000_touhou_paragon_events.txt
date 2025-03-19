@@ -635,32 +635,8 @@ country_event = { # 天子
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = { 
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x121 
-			CLASS = commander
-			NAME = NAME_Tenshi
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = egalitarian
-			DESC = tenshi1
-			CATCH_PHRASE = tenshi1_catch_phrase
-		}
-		last_created_leader = { #7
-			add_trait = subclass_commander_general
-			add_trait = leader_trait_fortress_cracker
-			add_trait = thl_leader_trait_crimson_sword
-			add_trait = leader_trait_unyielding_2
-			add_trait = leader_trait_hardy_2
-			add_trait = leader_trait_commanding_presence
-			add_trait = leader_trait_lethargic
-			add_trait = leader_trait_volatile
-			add_trait = thl_leader_trait_earthquake
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = tenshi_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = tenshi
 		}
 	}
 
@@ -674,7 +650,7 @@ country_event = { # 天子
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = tenshi # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_tenshi
 		}
 	}
@@ -718,7 +694,7 @@ country_event = { # 天子
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40100.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_tenshi
 			}
 			last_created_leader = {
@@ -743,32 +719,8 @@ country_event = { # 萃香
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = { 
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x98 
-			CLASS = commander
-			NAME = NAME_Suika
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = xenophile
-			DESC = suika1
-			CATCH_PHRASE = suika1_catch_phrase
-		}
-		last_created_leader = { #7
-			add_trait = subclass_commander_lord
-			add_trait = thl_leader_trait_oni_power
-			add_trait = leader_trait_trickster
-			add_trait = leader_trait_touhou_cultural_focus_2
-			add_trait = leader_trait_dreaded
-			add_trait = leader_trait_venerated
-			add_trait = leader_trait_profligate
-			add_trait = thl_leader_trait_regeneration_2
-			add_trait = thl_leader_trait_density
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = suika_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = suika
 		}
 	}
 
@@ -782,7 +734,7 @@ country_event = { # 萃香
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = suika # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_suika
 		}
 	}
@@ -836,7 +788,7 @@ country_event = { # 萃香
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40200.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_suika
 			}
 			last_created_leader = {
@@ -861,33 +813,8 @@ country_event = { # 早苗
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x72 
-			CLASS = commander
-			NAME = NAME_Sanae
-			LEVEL = 5
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = spiritualist
-			DESC = sanae1
-			CATCH_PHRASE = sanae1_catch_phrase
-		}
-		last_created_leader = { #6
-			add_trait = subclass_commander_miko
-			add_trait = thl_leader_trait_common_sense_killer
-			add_trait = thl_leader_trait_theurgist
-			add_trait = thl_leader_trait_snake_bless
-			add_trait = thl_leader_trait_frog_bless
-			add_trait = leader_trait_shroud_preacher
-			add_trait = leader_trait_crusader
-			add_trait = leader_trait_reckless_2
-			add_trait = thl_leader_trait_regeneration
-			add_trait = thl_leader_trait_miracle
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = sanae_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = sanae
 		}
 	}
 
@@ -901,7 +828,7 @@ country_event = { # 早苗
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = sanae # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_sanae
 		}
 	}
@@ -987,7 +914,7 @@ country_event = { # 早苗
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40300.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_sanae
 			}
 			last_created_leader = {
@@ -1025,30 +952,8 @@ country_event = { # 琪露诺
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x117 
-			CLASS = commander
-			NAME = NAME_Cirno
-			LEVEL = 2
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = militarist
-			DESC = crino1
-			CATCH_PHRASE = crino1_catch_phrase
-		}
-		last_created_leader = { #4
-			add_trait = subclass_commander_admiral
-			add_trait = leader_trait_guerilla_tactics
-			add_trait = leader_trait_wrecker_3
-			add_trait = leader_trait_reckless_2
-			add_trait = thl_leader_trait_bird_brain
-			add_trait = thl_leader_trait_regeneration_3
-			add_trait = thl_leader_trait_ice
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = crino_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = cirno
 		}
 	}
 
@@ -1062,7 +967,7 @@ country_event = { # 琪露诺
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = crino # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_crino
 		}
 	}
@@ -1096,7 +1001,7 @@ country_event = { # 琪露诺
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40400.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_crino
 			}
 			last_created_leader = {
@@ -1125,33 +1030,8 @@ country_event = { # 美铃
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x89
-			CLASS = commander
-			NAME = NAME_Meiling
-			LEVEL = 3
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = militarist
-			DESC = meiling1
-			CATCH_PHRASE = meiling1_catch_phrase
-		}
-		last_created_leader = { #4
-			add_trait = subclass_commander_general
-			add_trait = leader_trait_survivalist
-			add_trait = leader_trait_home_guard
-			add_trait = leader_trait_warden
-			add_trait = leader_trait_reinforcer
-			add_trait = leader_trait_guardian
-			add_trait = leader_trait_lethargic_2
-			add_trait = leader_trait_disorganized
-			add_trait = thl_leader_trait_regeneration
-			add_trait = thl_leader_trait_kongfu
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = meiling_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = meiling
 		}
 	}
 
@@ -1165,7 +1045,7 @@ country_event = { # 美铃
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = meiling # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_meiling
 		}
 	}
@@ -1221,7 +1101,7 @@ country_event = { # 美铃
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40500.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_meiling
 			}
 			last_created_leader = {
@@ -1246,34 +1126,8 @@ country_event = { # 灵梦
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x1 
-			CLASS = commander
-			NAME = NAME_Reimu
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = egalitarian
-			DESC = reimu1
-			CATCH_PHRASE = reimu1_catch_phrase
-		}
-		last_created_leader = { #7
-			add_trait = subclass_commander_miko
-			add_trait = thl_leader_trait_invincible
-			add_trait = thl_leader_trait_like_cloud_and_water
-			add_trait = thl_leader_trait_theurgist
-			add_trait = thl_leader_trait_tracker
-			add_trait = thl_leader_exorcism_roud
-			add_trait = leader_trait_rocketry_specialization
-			add_trait = leader_trait_gifted_2
-			add_trait = thl_leader_trait_excessive_reimu
-			add_trait = thl_leader_trait_regeneration
-			add_trait = thl_leader_trait_fly
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = reimu_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = reimu
 		}
 	}
 
@@ -1287,7 +1141,7 @@ country_event = { # 灵梦
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = reimu # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_reimu
 		}
 	}
@@ -1331,7 +1185,7 @@ country_event = { # 灵梦
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40600.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_reimu
 			}
 			last_created_leader = {
@@ -1369,36 +1223,8 @@ country_event = { # 魔理沙
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x2 
-			CLASS = commander
-			NAME = NAME_Marisa
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = militarist
-			DESC = marisa1
-			CATCH_PHRASE = marisa1_catch_phrase
-		}
-		last_created_leader = { #7
-			add_trait = subclass_commander_admiral
-			add_trait = thl_leader_trait_like_storm_and_wave
-			add_trait = thl_leader_trait_master_sacker
-			add_trait = thl_leader_trait_personal_relationship_genius
-			add_trait = leader_trait_reverse_engineer
-			add_trait = leader_trait_industrial_espionage_3
-			add_trait = leader_trait_artillery_specialization
-			add_trait = thl_leader_trait_iron_ass
-			add_trait = leader_trait_slipshod
-			add_trait = leader_trait_embezzler_2
-			add_trait = thl_leader_trait_regeneration
-			add_trait = thl_leader_trait_magician
-			add_trait = thl_leader_trait_magic
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = marisa_leader
-			set_age = 16
+		thl_ethic_leader_creator = {
+			LEADER = marisa
 		}
 	}
 
@@ -1412,7 +1238,7 @@ country_event = { # 魔理沙
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = marisa # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_marisa
 		}
 	}
@@ -1456,7 +1282,7 @@ country_event = { # 魔理沙
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40700.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_marisa
 			}
 			last_created_leader = {
@@ -1482,36 +1308,8 @@ country_event = { # 铃仙
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x6 
-			CLASS = commander
-			NAME = NAME_Reisen
-			LEVEL = 5
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = pacifist
-			DESC = reisen1
-			CATCH_PHRASE = reisen1_catch_phrase
-		}
-		last_created_leader = { #7
-			add_trait = subclass_commander_servant
-			add_trait = thl_leader_trait_penglai_medicine
-			add_trait = thl_leader_trait_prosperity_and_decline
-			add_trait = thl_leader_trait_moon_war_veteran
-			add_trait = leader_trait_academia_recruiter
-			add_trait = leader_trait_restrained_2
-			add_trait = leader_trait_cautious_2
-			add_trait = leader_trait_archaeo_specialization
-			add_trait = leader_trait_passive_2
-			add_trait = leader_trait_reclusive
-			add_trait = leader_trait_melancholic
-			add_trait = thl_leader_trait_regeneration
-			add_trait = thl_leader_trait_wave_length
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = reisen_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = reisen
 		}
 	}
 
@@ -1525,7 +1323,7 @@ country_event = { # 铃仙
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = reisen # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_reisen
 		}
 	}
@@ -1569,7 +1367,7 @@ country_event = { # 铃仙
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40800.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_reisen
 			}
 			last_created_leader = {
@@ -1594,33 +1392,8 @@ country_event = { # 妖梦
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x150 
-			CLASS = commander
-			NAME = NAME_Youmu
-			LEVEL = 5
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = xenophile
-			DESC = youmu1
-			CATCH_PHRASE = youmu1_catch_phrase
-		}
-		last_created_leader = { #7
-			add_trait = subclass_commander_servant
-			add_trait = leader_trait_wholehearted
-			add_trait = thl_leader_trait_gardener
-			add_trait = leader_trait_bellicose
-			add_trait = leader_trait_heavy_hitter_2
-			add_trait = leader_trait_gale_speed
-			add_trait = leader_trait_passive
-			add_trait = leader_trait_gullible
-			add_trait = thl_leader_trait_regeneration
-			add_trait = thl_leader_trait_kendo
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = youmu_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = youmu
 		}
 	}
 
@@ -1634,7 +1407,7 @@ country_event = { # 妖梦
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = youmu # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_youmu
 		}
 	}
@@ -1678,7 +1451,7 @@ country_event = { # 妖梦
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40900.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_youmu
 			}
 			last_created_leader = {
@@ -1703,31 +1476,8 @@ country_event = { # 咲夜
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x88
-			CLASS = commander
-			NAME = NAME_Sakuya
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = authoritarian
-			DESC = sakuya1
-			CATCH_PHRASE = sakuya1_catch_phrase
-		}
-		last_created_leader = { #7
-			add_trait = subclass_commander_servant
-			add_trait = thl_leader_trait_year_round
-			add_trait = leader_trait_arbiter
-			add_trait = leader_trait_touhou_pop_focused_3
-			add_trait = leader_trait_iron_fist
-			add_trait = leader_trait_sadistic
-			add_trait = thl_leader_trait_regeneration
-			add_trait = thl_leader_trait_time
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = sakuya_leader
-			set_age = 20
+		thl_ethic_leader_creator = {
+			LEADER = sakuya
 		}
 	}
 
@@ -1741,7 +1491,7 @@ country_event = { # 咲夜
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = sakuya # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_sakuya
 		}
 	}
@@ -1785,7 +1535,7 @@ country_event = { # 咲夜
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41000.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_sakuya
 			}
 			last_created_leader = {
@@ -1811,33 +1561,8 @@ country_event = { # 梅莉
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x48 
-			CLASS = scientist
-			NAME = NAME_Merry
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = xenophile
-			DESC = merry1
-			CATCH_PHRASE = merry1_catch_phrase
-		}
-		last_created_leader = { #8
-			add_trait = subclass_scientist_councilor
-			add_trait = thl_leader_trait_hifuu
-			add_trait = thl_leader_trait_century_of_science
-			add_trait = leader_trait_truth_seeker
-			add_trait = thl_leader_trait_relativistic_psychiatry
-			add_trait = leader_trait_academic_astral_rift_expert_3
-			add_trait = leader_trait_roamer
-			add_trait = leader_trait_gifted_2
-			add_trait = leader_trait_opinionated_2
-			add_trait = thl_leader_trait_border_merry
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = merry_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = merry
 		}
 	}
 
@@ -1851,7 +1576,7 @@ country_event = { # 梅莉
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = merry # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_merry
 		}
 	}
@@ -1895,7 +1620,7 @@ country_event = { # 梅莉
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41100.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_merry
 			}
 			last_created_leader = {
@@ -1925,33 +1650,8 @@ country_event = { # 莲子
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x49 
-			CLASS = scientist
-			NAME = NAME_Renko
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = materialist
-			DESC = renko1
-			CATCH_PHRASE = renko1_catch_phrase
-		}
-		last_created_leader = { #8
-			add_trait = subclass_scientist_explorer
-			add_trait = thl_leader_trait_hifuu
-			add_trait = thl_leader_trait_century_of_science
-			add_trait = thl_leader_trait_super_unified_physics
-			add_trait = leader_trait_midas_touch
-			add_trait = leader_trait_academic_astral_rift_expert_2
-			add_trait = leader_trait_science_communicator
-			add_trait = leader_trait_archaeologist
-			add_trait = leader_trait_opinionated
-			add_trait = thl_leader_trait_star_located
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = renko_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = renko
 		}
 	}
 
@@ -1965,7 +1665,7 @@ country_event = { # 莲子
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = renko # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_renko
 		}
 	}
@@ -2009,7 +1709,7 @@ country_event = { # 莲子
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41200.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_renko
 			}
 			last_created_leader = {
@@ -2034,33 +1734,8 @@ country_event = { # 觉
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x81
-			CLASS = official
-			NAME = NAME_Satori
-			LEVEL = 4
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = xenophile
-			DESC = satori1
-			CATCH_PHRASE = satori1_catch_phrase
-		}
-		last_created_leader = { #5
-			add_trait = subclass_official_economy_councilor
-			add_trait = thl_leader_trait_subterran_manager
-			add_trait = thl_leader_trait_satori_pets
-			add_trait = thl_leader_trait_detective
-			add_trait = leader_trait_supreme_organizer
-			add_trait = leader_trait_emotional_support_pet
-			add_trait = leader_trait_procrastinator
-			add_trait = leader_trait_irenic
-			add_trait = thl_leader_trait_regeneration
-			add_trait = thl_leader_trait_mind_reader
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = satori_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = satori
 		}
 	}
 
@@ -2074,7 +1749,7 @@ country_event = { # 觉
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = satori # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_satori
 		}
 	}
@@ -2186,7 +1861,7 @@ country_event = { # 觉
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41300.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_satori
 			}
 			last_created_leader = {
@@ -2211,33 +1886,8 @@ country_event = { # 恋恋
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x82 
-			CLASS = commander
-			NAME = NAME_Koishi
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = gestalt_consciousness
-			DESC = koishi1
-			CATCH_PHRASE = koishi1_catch_phrase
-		}
-		last_created_leader = { #8
-			add_trait = subclass_commander_admiral
-			add_trait = leader_trait_fanatic
-			add_trait = leader_trait_annihilator_3
-			add_trait = leader_trait_wrecker_3
-			add_trait = leader_trait_skirmisher_2
-			add_trait = leader_trait_volatile_2
-			add_trait = leader_trait_passive_2
-			add_trait = leader_trait_emotional_support_pet
-			add_trait = thl_leader_trait_regeneration
-			add_trait = thl_leader_trait_subconscious
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = koishi_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = koishi
 		}
 	}
 
@@ -2251,7 +1901,7 @@ country_event = { # 恋恋
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = koishi # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_koishi
 		}
 	}
@@ -2295,7 +1945,7 @@ country_event = { # 恋恋
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41400.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_koishi
 			}
 			last_created_leader = {
@@ -2320,34 +1970,8 @@ country_event = { # 文
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x105
-			CLASS = official
-			NAME = NAME_Aya
-			LEVEL = 4
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = egalitarian
-			DESC = aya1
-			CATCH_PHRASE = aya1_catch_phrase
-		}
-		last_created_leader = { #5
-			add_trait = subclass_official_diplomacy_councilor
-			add_trait = leader_trait_master_diplomat
-			add_trait = thl_leader_trait_information_war
-			add_trait = leader_trait_ambassador_bully
-			add_trait = leader_trait_ambassador_ear_to_the_ground
-			add_trait = leader_trait_ambassador_favor_maker
-			add_trait = leader_trait_ambassador_whisper_networks
-			add_trait = leader_trait_lavish_lifestyle
-			add_trait = leader_trait_gullible_2
-			add_trait = thl_leader_trait_regeneration
-			add_trait = thl_leader_trait_wind
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = aya_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = aya
 		}
 	}
 
@@ -2361,7 +1985,7 @@ country_event = { # 文
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = aya # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_aya
 		}
 	}
@@ -2405,7 +2029,7 @@ country_event = { # 文
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41500.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_aya
 			}
 			last_created_leader = {
@@ -2430,32 +2054,8 @@ country_event = { # 四季
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x110
-			CLASS = official
-			NAME = NAME_Shikieiki
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = authoritarian
-			DESC = shikieiki1
-			CATCH_PHRASE = shikieiki1_catch_phrase
-		}
-		last_created_leader = { #7
-			add_trait = subclass_official_economy_councilor
-			add_trait = thl_leader_trait_mirror
-			add_trait = thl_leader_trait_sermon
-			add_trait = thl_thl_leader_trait_death_deal
-			add_trait = leader_trait_master_bureaucrat
-			add_trait = leader_trait_righteous_2
-			add_trait = leader_trait_bureaucratic
-			add_trait = thl_leader_trait_regeneration
-			add_trait = thl_leader_trait_trial
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = shikieiki_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = shikieiki
 		}
 	}
 
@@ -2469,7 +2069,7 @@ country_event = { # 四季
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = shikieiki # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_shikieiki
 		}
 	}
@@ -2513,7 +2113,7 @@ country_event = { # 四季
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41600.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_shikieiki
 			}
 			last_created_leader = {
@@ -2538,32 +2138,8 @@ country_event = { # 小町
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x108
-			CLASS = commander
-			NAME = NAME_Onoduka
-			LEVEL = 5
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = materialist
-			DESC = onoduka1
-			CATCH_PHRASE = onoduka1_catch_phrase
-		}
-		last_created_leader = { #6
-			add_trait = subclass_commander_admiral
-			add_trait = thl_leader_trait_price_of_life
-			add_trait = thl_leader_trait_cost_for_work
-			add_trait = leader_trait_destiny_engineer
-			add_trait = trait_ruler_deep_connections
-			add_trait = leader_trait_corsair_2
-			add_trait = thl_leader_trait_distance
-			add_trait = thl_leader_trait_regeneration
-			add_trait = leader_trait_lethargic_2
-			set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
-			set_leader_flag = onoduka_leader
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = onoduka
 		}
 	}
 
@@ -2577,7 +2153,7 @@ country_event = { # 小町
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = onoduka # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_onoduka
 		}
 	}
@@ -2621,7 +2197,7 @@ country_event = { # 小町
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41700.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_onoduka
 			}
 			last_created_leader = {
@@ -2646,30 +2222,8 @@ country_event = { # 帕秋莉
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x91
-			CLASS = scientist
-			NAME = NAME_Patchouli
-			LEVEL = 4
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = materialist
-			DESC = patchouli1
-			CATCH_PHRASE = patchouli1_catch_phrase
-		}
-		last_created_leader = { #5
-			add_trait = subclass_scientist_councilor
-			add_trait = leader_trait_great_researcher
-			add_trait = leader_trait_science_communicator_3
-			add_trait = thl_leader_trait_elements
-			add_trait = thl_leader_trait_knowledge
-			add_trait = thl_leader_trait_summon_devils
-			add_trait = thl_leader_trait_regeneration
-			add_trait = leader_trait_neurotic_2
-			add_trait = thl_leader_trait_great_magician
-			add_trait = leader_trait_sick
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = patchouli
 		}
 	}
 
@@ -2683,7 +2237,7 @@ country_event = { # 帕秋莉
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = patchouli # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_patchouli
 		}
 	}
@@ -2727,7 +2281,7 @@ country_event = { # 帕秋莉
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41800.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_patchouli
 			}
 			last_created_leader = {
@@ -2754,30 +2308,8 @@ country_event = { # 蕾米
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x63
-			CLASS = commander
-			NAME = NAME_Remilia
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = authoritarian
-			DESC = remilia1
-			CATCH_PHRASE = remilia1_catch_phrase
-		}
-		last_created_leader = { #7
-			add_trait = subclass_commander_lord
-			add_trait = thl_leader_trait_blood_magic
-			add_trait = thl_leader_trait_bloody_charm
-			add_trait = thl_leader_trait_gungnir
-			add_trait = leader_trait_supreme_admiral
-			add_trait = leader_trait_carrier_specialization
-			add_trait = leader_trait_legendary_gunboat_diplomacy
-			add_trait = leader_trait_volatile
-			add_trait = thl_leader_trait_regeneration_2
-			add_trait = thl_leader_trait_destiny_manipulation
-			set_age = 500
+		thl_ethic_leader_creator = {
+			LEADER = remilia
 		}
 	}
 
@@ -2791,7 +2323,7 @@ country_event = { # 蕾米
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = remilia # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_remilia
 		}
 	}
@@ -2930,7 +2462,7 @@ country_event = { # 蕾米
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41900.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_remilia
 			}
 		}
@@ -2950,30 +2482,8 @@ country_event = { # 爱丽丝
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x10
-			CLASS = official
-			NAME = NAME_Alice
-			LEVEL = 3
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = materialist
-			DESC = alice1
-			CATCH_PHRASE = alice1_catch_phrase
-		}
-		last_created_leader = { #6
-			add_trait = subclass_official_governor
-			add_trait = leader_trait_automation_champion
-			add_trait = leader_trait_intellectual
-			add_trait = leader_trait_industrial_focus
-			add_trait = leader_trait_assembler
-			add_trait = thl_leader_trait_dolls
-			add_trait = thl_leader_trait_puppet_show
-			add_trait = thl_leader_trait_regeneration
-			add_trait = thl_leader_trait_great_magician
-			add_trait = leader_trait_intolerant
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = alice
 		}
 		if = {
 			limit = {
@@ -3023,7 +2533,7 @@ country_event = { # 爱丽丝
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = alice # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_alice
 		}
 	}
@@ -3078,7 +2588,7 @@ country_event = { # 爱丽丝
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42000.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_alice
 			}
 			create_species = {
@@ -3118,30 +2628,8 @@ country_event = { # 幽幽子
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x16
-			CLASS = official
-			NAME = NAME_Yuyuko
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = spiritualist
-			DESC = yuyuko1
-			CATCH_PHRASE = yuyuko1_catch_phrase
-		}
-		last_created_leader = { #7
-			add_trait = subclass_official_economy_councilor
-			add_trait = leader_trait_efficient
-			add_trait = leader_trait_legendary_scientific_diplomacy
-			add_trait = trait_ruler_charismatic_2
-			add_trait = leader_trait_cultural_focus
-			add_trait = thl_leader_trait_death
-			add_trait = thl_leader_trait_sakura
-			add_trait = thl_leader_trait_dance
-			add_trait = thl_leader_trait_regeneration_2
-			add_trait = thl_leader_trait_yuyuko_eater
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = yuyuko
 		}
 	}
 
@@ -3155,7 +2643,7 @@ country_event = { # 幽幽子
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = yuyuko # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_yuyuko
 		}
 	}
@@ -3199,7 +2687,7 @@ country_event = { # 幽幽子
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42100.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_yuyuko
 			}
 		}
@@ -3219,31 +2707,8 @@ country_event = { # 幽香
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x119
-			CLASS = official
-			NAME = NAME_Yuka
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = militarist
-			DESC = yuka1
-			CATCH_PHRASE = yuka1_catch_phrase
-		}
-		last_created_leader = { #7
-			add_trait = subclass_official_governor
-			add_trait = leader_trait_arbiter
-			add_trait = leader_trait_farming_focus
-			add_trait = leader_trait_agrarian_upbringing_2
-			add_trait = leader_trait_naturalist_3
-			add_trait = thl_leader_trait_flower
-			add_trait = thl_leader_trait_incarnation_of_nature
-			add_trait = thl_leader_trait_sleeping_terror
-			add_trait = thl_leader_trait_regeneration_2
-			add_trait = leader_trait_sadistic_2
-			add_trait = leader_trait_tyrannical_2
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = yuka
 		}
 	}
 
@@ -3257,7 +2722,7 @@ country_event = { # 幽香
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = yuka # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_yuka
 		}
 	}
@@ -3301,7 +2766,7 @@ country_event = { # 幽香
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42200.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_yuka
 			}
 		}
@@ -3321,29 +2786,8 @@ country_event = { # 小铃
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x54
-			CLASS = scientist
-			NAME = NAME_Kosuzu
-			LEVEL = 4
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = materialist
-			DESC = kosuzu1
-			CATCH_PHRASE = kosuzu1_catch_phrase
-		}
-		last_created_leader = { #5
-			add_trait = subclass_scientist_scholar
-			add_trait = leader_trait_collective_wisdom
-			add_trait = leader_trait_science_communicator
-			add_trait = leader_trait_meticulous_2
-			add_trait = leader_trait_archaeologist
-			add_trait = leader_trait_paranoid
-			add_trait = leader_trait_embezzler_2
-			add_trait = thl_leader_trait_words
-			add_trait = thl_leader_trait_books
-			set_age = 11
+		thl_ethic_leader_creator = {
+			LEADER = kosuzu
 		}
 	}
 
@@ -3357,7 +2801,7 @@ country_event = { # 小铃
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = kosuzu # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_kosuzu
 		}
 	}
@@ -3401,7 +2845,7 @@ country_event = { # 小铃
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42300.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_kosuzu
 			}
 		}
@@ -3421,29 +2865,8 @@ country_event = { # 阿求
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x53
-			CLASS = scientist
-			NAME = NAME_Akyuu
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = xenophile
-			DESC = akyuu1
-			CATCH_PHRASE = akyuu1_catch_phrase
-		}
-		last_created_leader = { #9
-			add_trait = subclass_scientist_councilor
-			add_trait = leader_trait_xeno_cataloger
-			add_trait = leader_trait_society_focus
-			add_trait = leader_trait_science_communicator_3
-			add_trait = thl_leader_trait_memory
-			add_trait = thl_leader_trait_the_ninth_savage
-			add_trait = thl_leader_trait_bridge_of_gensokyo
-			add_trait = thl_leader_trait_speculative_fiction
-			add_trait = thl_leader_trait_short_life
-			set_age = 12
+		thl_ethic_leader_creator = {
+			LEADER = akyuu
 		}
 	}
 
@@ -3457,7 +2880,7 @@ country_event = { # 阿求
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = akyuu # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_akyuu
 		}
 	}
@@ -3501,7 +2924,7 @@ country_event = { # 阿求
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42400.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_akyuu
 			}
 		}
@@ -3521,29 +2944,8 @@ country_event = { # 阿燐
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x112
-			CLASS = official
-			NAME = NAME_Rin
-			LEVEL = 5
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = xenophile
-			DESC = rin1
-			CATCH_PHRASE = rin1_catch_phrase
-		}
-		last_created_leader = { #8
-			add_trait = subclass_official_governor
-			add_trait = leader_trait_expert_survivalist
-			add_trait = leader_trait_distribution_lines_2
-			add_trait = leader_trait_enlister
-			add_trait = leader_trait_generator_focus_3
-			add_trait = thl_leader_trait_corpse_travel
-			add_trait = thl_leader_trait_corpse_manipulation
-			add_trait = leader_trait_polluter
-			add_trait = thl_leader_trait_regeneration
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = rin
 		}
 	}
 
@@ -3557,7 +2959,7 @@ country_event = { # 阿燐
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = rin # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_rin
 		}
 	}
@@ -3615,7 +3017,7 @@ country_event = { # 阿燐
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42500.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_rin
 			}
 		}
@@ -3635,30 +3037,8 @@ country_event = { # 阿空
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x77
-			CLASS = commander
-			NAME = NAME_Utsuho
-			LEVEL = 6
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = militarist
-			DESC = utsuho1
-			CATCH_PHRASE = utsuho1_catch_phrase
-		}
-		last_created_leader = { #7
-			add_trait = subclass_commander_admiral
-			add_trait = leader_trait_master_gunner
-			add_trait = leader_trait_legendary_foe_hammer
-			add_trait = leader_trait_annihilator_2
-			add_trait = leader_trait_demolisher_3
-			add_trait = leader_trait_legendary_dreamlike
-			add_trait = thl_leader_trait_nuclear
-			add_trait = thl_leader_trait_fusion_energy
-			add_trait = thl_leader_trait_bird_brain
-			add_trait = thl_leader_trait_regeneration
-			set_age = 17
+		thl_ethic_leader_creator = {
+			LEADER = utsuho
 		}
 	}
 
@@ -3672,7 +3052,7 @@ country_event = { # 阿空
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = utsuho # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_utsuho
 		}
 	}
@@ -3716,7 +3096,7 @@ country_event = { # 阿空
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42600.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_utsuho
 			}
 			country_event = { id = touhou_paragon_situation.42670 days=3600}
@@ -3737,29 +3117,8 @@ country_event = { # 荷取
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x125
-			CLASS = scientist
-			NAME = NAME_Nitori
-			LEVEL = 3
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = materialist
-			DESC = nitori1
-			CATCH_PHRASE =  nitori1_catch_phrase
-		}
-		last_created_leader = { #4
-			add_trait = subclass_scientist_governor
-			add_trait = thl_leader_trait_water
-			add_trait = leader_trait_robotist
-			add_trait = thl_leader_trait_super_youkai_slug
-			add_trait = thl_leader_trait_convenience_house
-			add_trait = thl_leader_trait_engineer_in_water
-			add_trait = thl_leader_trait_optical_camouflage
-			add_trait = thl_leader_trait_regeneration
-			add_trait = leader_trait_insider_trading_2
-			add_trait = leader_trait_passive
+		thl_ethic_leader_creator = {
+			LEADER = nitori
 		}
 	}
 
@@ -3773,7 +3132,7 @@ country_event = { # 荷取
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = nitori # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_nitori
 		}
 	}
@@ -3817,7 +3176,7 @@ country_event = { # 荷取
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42700.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_nitori
 			}
 		}
@@ -3837,25 +3196,8 @@ country_event = { # 静叶
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x73
-			CLASS = scientist
-			NAME = NAME_Sizuha
-			LEVEL = 1
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = pacifist
-			DESC = sizuha1
-			CATCH_PHRASE =  sizuha1_catch_phrase
-		}
-		last_created_leader = { #2
-			add_trait = subclass_scientist_explorer
-			add_trait = thl_leader_trait_fall
-			add_trait = leader_trait_surveyor
-			add_trait = leader_trait_prospector
-			add_trait = thl_leader_trait_regeneration_2
-			add_trait = leader_trait_paranoid
+		thl_ethic_leader_creator = {
+			LEADER = sizuha
 		}
 	}
 
@@ -3869,7 +3211,7 @@ country_event = { # 静叶
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = sizuha # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_sizuha
 		}
 	}
@@ -3908,7 +3250,7 @@ country_event = { # 静叶
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42800.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_sizuha
 			}
 		}
@@ -3928,25 +3270,8 @@ country_event = { # 穰子
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x74
-			CLASS = official
-			NAME = NAME_Minoriko
-			LEVEL = 1
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = pacifist
-			DESC = minoriko1
-			CATCH_PHRASE =  minoriko1_catch_phrase
-		}
-		last_created_leader = { #2
-			add_trait = subclass_official_governor
-			add_trait = leader_trait_harvest
-			add_trait = leader_trait_utopian_idealist
-			add_trait = trait_ruler_fertility_preacher
-			add_trait = thl_leader_trait_regeneration_2
-			add_trait = leader_trait_profligate
+		thl_ethic_leader_creator = {
+			LEADER = minoriko
 		}
 	}
 
@@ -3960,7 +3285,7 @@ country_event = { # 穰子
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = minoriko # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_minoriko
 		}
 	}
@@ -3999,7 +3324,7 @@ country_event = { # 穰子
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42900.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_minoriko
 			}
 		}
@@ -4019,25 +3344,8 @@ country_event = { # 雏
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x107
-			CLASS = commander
-			NAME = NAME_Hina
-			LEVEL = 2
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = xenophile
-			DESC = hina1
-			CATCH_PHRASE =  hina1_catch_phrase
-		}
-		last_created_leader = { #3
-			add_trait = subclass_commander_governor
-			add_trait = thl_leader_trait_jinx
-			add_trait = leader_trait_mediator
-			add_trait = leader_trait_restrained
-			add_trait = leader_trait_dreaded
-			add_trait = leader_trait_uninspiring
+		thl_ethic_leader_creator = {
+			LEADER = hina
 		}
 	}
 
@@ -4051,7 +3359,7 @@ country_event = { # 雏
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = hina # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_hina
 		}
 	}
@@ -4095,7 +3403,7 @@ country_event = { # 雏
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.43000.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_hina
 			}
 			set_variable = {
@@ -4106,7 +3414,7 @@ country_event = { # 雏
 	}
 }
 
-country_event = { # 雏
+country_event = { # 米斯蒂娅
 	id = touhou_paragon.43100
 	title = "touhou_paragon.43100.name"
 	desc = "touhou_paragon.43100.desc"
@@ -4119,25 +3427,8 @@ country_event = { # 雏
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x3
-			CLASS = commander
-			NAME = NAME_Mystia
-			LEVEL = 2
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = xenophile
-			DESC = mystia1
-			CATCH_PHRASE =  mystia1_catch_phrase
-		}
-		last_created_leader = { #2
-			add_trait = subclass_commander_governor
-			add_trait = thl_leader_trait_song
-			add_trait = leader_trait_bellicose
-			add_trait = thl_leader_trait_izakaya
-			add_trait = thl_leader_trait_youkai_punk
-			add_trait = leader_trait_micromanager #鸟之目
+		thl_ethic_leader_creator = {
+			LEADER = mystia
 		}
 	}
 
@@ -4151,7 +3442,7 @@ country_event = { # 雏
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = mystia # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_mystia
 		}
 		country_event = {
@@ -4198,14 +3489,14 @@ country_event = { # 雏
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.43100.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_mystia
 			}
 		}
 	}
 }
 
-country_event = { # 雏
+country_event = { # 帝
 	id = touhou_paragon.43200
 	title = "touhou_paragon.43200.name"
 	desc = "touhou_paragon.43200.desc"
@@ -4218,28 +3509,8 @@ country_event = { # 雏
 	notification_event_icon = "GFX_message_touhou_leaders"
 
 	immediate = {
-		ethic_leader_creator = {
-			SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-			LEADER_PORTRAIT = x9
-			CLASS = official
-			NAME = NAME_Tewi
-			LEVEL = 4
-			GENDER = female
-			IMMORTAL = no
-			ETHIC = xenophile
-			DESC = tewi1
-			CATCH_PHRASE =  tewi1_catch_phrase
-		}
-		last_created_leader = { #5
-			add_trait = subclass_official_governor
-			add_trait = leader_trait_totalitarian
-			add_trait = thl_leader_trait_luck
-			add_trait = thl_leader_trait_rabbit_leader
-			add_trait = thl_leader_trait_rabbit_spy
-			add_trait = leader_trait_consul_general
-			add_trait = leader_trait_trade_focus
-			add_trait = leader_trait_embezzler
-			add_trait = leader_trait_insider_trading
+		thl_ethic_leader_creator = {
+			LEADER = tewi
 		}
 	}
 
@@ -4253,7 +3524,7 @@ country_event = { # 雏
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = tewi # Put this leader back into the pool, so player could still get him
-			ethic_leader_kill_effect = yes
+			thl_ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_tewi
 		}
 	}
@@ -4297,7 +3568,7 @@ country_event = { # 雏
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.43200.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_tewi
 			}
 		}
