@@ -1287,7 +1287,7 @@ country_event = { # 魔理沙
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = marisa_leader
 				set_leader_flag = touhou_event_leader
 			}

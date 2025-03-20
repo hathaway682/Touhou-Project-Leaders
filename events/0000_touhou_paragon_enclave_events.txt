@@ -1641,6 +1641,10 @@ country_event = {
         add_resource = { energy = -100000 }
         country_event = { id = touhou_paragon.40600 }
     }
+    option = {
+        name = touhou_paragon_enclave.40605.e
+        default_hide_option = yes
+    }
     after = {
         remove_country_flag = touhou_flag_in_diplo_with_saisen_box
     }
