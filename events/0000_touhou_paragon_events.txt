@@ -229,7 +229,7 @@ country_event = { # Randomizing chance to get an ethic leader, with a grace fact
 					any_owned_starbase = { has_starbase_building = recruitment_office }
 				}
 				country_event = {
-					id = touhou_paragon.40001 days = 1 random = 360
+					id = touhou_paragon.40001
 				}
 			}
 			0 = {
