@@ -3709,7 +3709,25 @@ country_event = {
                 has_trait = thl_leader_trait_memory
                 has_trait = thl_leader_trait_time
             }
-            has_touhou_leader_trait = yes
+            OR = {
+                NOR = {
+                    has_trait = thl_leader_trait_regeneration
+                    has_trait = thl_leader_trait_regeneration_2
+                    has_trait = thl_leader_trait_regeneration_3
+                }
+                AND = {
+                    has_trait = thl_leader_trait_regeneration
+                    has_trait = thl_leader_trait_injured
+                }
+                AND = {
+                    has_trait = thl_leader_trait_regeneration_2
+                    has_trait = thl_leader_trait_injured_2
+                }
+                AND = {
+                    has_trait = thl_leader_trait_regeneration_3
+                    has_trait = thl_leader_trait_injured_3
+                }
+            }
         }
     }
 
@@ -3728,8 +3746,8 @@ country_event = {
         }
         custom_tooltip = deal_and_revive
         hidden_effect = {
-            From = {
-                respawn_touhou_leader = yes
+            clone_leader = {
+                target = From
             }
             last_created_leader = {
                 add_trait = thl_thl_leader_trait_death_dealer
@@ -3813,8 +3831,9 @@ country_event = {
         }
     }
     immediate = {
-        From = {
-            respawn_touhou_leader = yes
+        clone_leader = {
+            target = From
+            skip_background_generation = yes
         }
         last_created_leader = {
             if = {
@@ -5629,8 +5648,9 @@ country_event = {
         }
     }
     immediate = {
-        From = {
-            respawn_touhou_leader = yes
+        clone_leader = {
+            target = From
+            skip_background_generation = yes
         }
     }
     option = {
@@ -6986,7 +7006,7 @@ country_event = {
                 AND = {
                     exists = leader
                     leader = {
-                        has_trait = thl_leader_trait_harvest
+                        has_trait = leader_trait_harvest
                     }
                 }
             }
@@ -7061,14 +7081,14 @@ planet_event = {
                     AND = {
                         exists = leader
                         leader = {
-                            has_trait = thl_leader_trait_harvest
+                            has_trait = leader_trait_harvest
                         }
                     }
                     sector = {
                         sector_capital = {
                             exists = leader
                             leader = {
-                                has_trait = thl_leader_trait_harvest
+                                has_trait = leader_trait_harvest
                             }
                         }
                     }
@@ -7102,7 +7122,7 @@ planet_event = {
                 limit = {
                     exists = leader
                     leader = {
-                        has_trait = thl_leader_trait_harvest
+                        has_trait = leader_trait_harvest
                     }
                 }
                 owner = {
@@ -7126,7 +7146,7 @@ planet_event = {
                         sector_capital = {
                             exists = leader
                             leader = {
-                                has_trait = thl_leader_trait_harvest
+                                has_trait = leader_trait_harvest
                             }
                         }
                     }
@@ -9991,13 +10011,13 @@ country_event = {
     show_sound = event_planetary_riot
     fire_only_once = yes
     immediate = {
-        # clone_leader = {
-        #     target = From
-        # }
-        # last_created_leader = {
-        #     exile_leader_as = touhou_died_sakuya
-        #     save_global_event_target_as = touhou_dead_sakuya_clone
-        # }
+        clone_leader = {
+            target = From
+        }
+        last_created_leader = {
+            exile_leader_as = touhou_died_sakuya
+            save_global_event_target_as = touhou_dead_sakuya_clone
+        }
         #from = {
         #    save_global_event_target_as = touhou_died_sakuya
         #}
@@ -10102,7 +10122,9 @@ country_event = {
             sr_zro = -1000
         }
         hidden_effect = {
-            create_sakuya_leader = yes
+            clone_leader = {
+                target = event_target:touhou_dead_sakuya_clone
+            }
             last_created_leader = {
                 remove_trait = thl_leader_trait_regeneration
                 add_trait = thl_leader_trait_regeneration_2
@@ -10169,7 +10191,9 @@ country_event = {
         trigger = {
             has_country_flag = touhou_remilia_agree
         }
-        create_sakuya_leader = yes
+        clone_leader = {
+            target = event_target:touhou_dead_sakuya_clone
+        }
         if = {
             limit = {
                 or = {
@@ -10238,7 +10262,9 @@ country_event = {
     show_sound = event_planetary_riot
     option = {
         name = touhou_paragon_effect.41007.a
-        create_sakuya_leader = yes
+        clone_leader = {
+            target = event_target:touhou_dead_sakuya_clone
+        }
         last_created_leader = {
             remove_trait = thl_leader_trait_regeneration
             add_trait = thl_leader_trait_regeneration_2

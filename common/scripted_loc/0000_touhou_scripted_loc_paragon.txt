@@ -210,7 +210,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_trait = thl_leader_trait_harvest
+			has_trait = leader_trait_harvest
 		}
 		localization_key = CLASS_TIER_MINORIKO
 	}
