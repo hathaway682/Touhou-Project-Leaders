@@ -9738,11 +9738,14 @@ ship_event = {
     picture = GFX_evt_utsuho
     show_sound = event_planetary_riot
     immediate = {
-        fleet = { delete_fleet = this }
+        fleet = {
+            set_event_locked = yes
+            save_global_event_target_as = utsuho_locked_fleet
+        }
     }
-    option = {
-        name = touhou_paragon_effect.42683.a
-    }
+    # option = {
+    #     name = touhou_paragon_effect.42683.a
+    # }
     option = {
         name = touhou_paragon_effect.42683.b
         from = {
@@ -9822,8 +9825,9 @@ country_event = {
     picture = GFX_evt_utsuho
     show_sound = event_planetary_riot
     immediate = {
-        random_owned_fleet={
+        event_target:utsuho_locked_fleet = {
             set_leader = touhou_paragon_utsuho_collapsed
+            set_event_locked = no
         }
         set_country_flag = touhou_learder_utsuho_collapse_succeed
     }

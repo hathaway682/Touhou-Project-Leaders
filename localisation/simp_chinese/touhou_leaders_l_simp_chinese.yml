@@ -501,6 +501,9 @@
  decision_rebuild_hakurei_shrine:0 "重建博丽神社"
  decision_rebuild_hakurei_shrine_desc:0 "不管是因为什么原因，我们国家的博丽神社没了！我们必须重建它。"
 
+ bombardment_yume_no_huuin:0 "梦想封印"
+ bombardment_yume_no_huuin_desc:3 "$bombardment_yume_no_huuin$轰炸使用灵梦的封印之力诱导对地武器，对陆军进行精确杀伤。\n—对§Y陆军§!造成§Y巨大§!伤害\n—对§Y星球§!造成§Y中度§!伤害\n—对§Y人口§!造成§Y中度§!伤害\n—§R不会§!轰炸不设防的星球\n-最后一个人口被消灭时，将星球变为§E屏障星球§!"
+
  NAME_Marisa:0 "雾雨魔理沙"
  marisa1:0 "普通的魔法使，在偷窃行为被发现后经谈判加入我们，擅长光与热的魔法。"
  marisa1_catch_phrase:0 "弹幕最重要的是火力DA☆ZE！"
@@ -1802,7 +1805,7 @@
 
  thl_leader_trait_nuclear:0 "操控核聚变程度的能力"
  thl_leader_trait_nuclear_desc:0 "八咫乌所拥有的究极力量，便是创造原子的力量，核聚变。核能，曾经留给未来的究极幻想，这股力量为阿空带来的是究极的火力，但其因力量过强常常难以控制。"
- thl_leader_trait_nuclear_effect:0 "\n$t$接战后每周：\n$tt$舰船武器伤害：§G+30%§!\n$tt$舰船速度：§G+30%§!\n$tt$舰船闪避：§G+30%§!\n$tt$船体：§R-10%§!\n$tt$装甲：§R-10%§!\n$tt$护盾：§R-10%§!\n$t$最多叠加§Y9§!层。\n\n允许使用§H地狱的人造太阳§!法令，消耗大量$r_energy$在战场上召唤§H人造太阳§!，其火力强大但仅能固定于一处，星系内的§Y非人工宜居星球§!会成为§Y废土星球§!，而§Y非宜居星球§!会成为§Y熔融星球§!。\n\n允许使用§H焰星「十凶星」§!法令，消耗大量$r_energy$在§H空§!的舰队中召唤§Y1§!颗§H焰星§!，§H焰星§!可跟随舰队作战但更为脆弱，至多可召唤§Y10§!颗。\n\n允许使用§HAbyss Nova§!法令，消耗巨量$r_energy$和少量$r_dark_matter$引爆§H空§!所在星系的恒星，§P无差别摧毁§!所有§Y星球§!、§Y空间站§!和§Y舰队§!。\n\n允许使用§H地狱极乐熔毁§!轰炸姿态，其拥有极其恐怖的破坏力，会将星球转化为§g废土星球§!甚至§P熔融星球§!。"
+ thl_leader_trait_nuclear_effect:0 "\n$t$接战后每周：\n$tt$舰船武器伤害：§G+30%§!\n$tt$舰船速度：§G+30%§!\n$tt$舰船闪避：§G+30%§!\n$tt$船体：§R-10%§!\n$tt$装甲：§R-10%§!\n$tt$护盾：§R-10%§!\n$t$最多叠加§Y9§!层。\n\n允许使用§H地狱的人造太阳§!法令，消耗大量$r_energy$在战场上召唤§H人造太阳§!，其火力强大但仅能固定于一处。\n\n允许使用§H焰星「十凶星」§!法令，消耗大量$r_energy$在§H空§!的舰队中召唤§Y1§!颗§H焰星§!，§H焰星§!可跟随舰队作战但更为脆弱，至多可召唤§Y10§!颗。\n\n允许使用§HAbyss Nova§!法令，消耗巨量$r_energy$和少量$r_dark_matter$引爆§H空§!所在星系的恒星，§P无差别摧毁§!所有§Y星球§!、§Y空间站§!，并迫使§Y舰队§!进入任务中失踪状态。\n\n允许使用§H地狱极乐熔毁§!轰炸姿态，其拥有极其恐怖的破坏力，会将星球转化为§g废土星球§!甚至§P熔融星球§!。"
  thl_leader_trait_fusion_energy:0 "梦幻般的能源"
  thl_leader_trait_fusion_energy_desc:0 "对阿空操控核聚变能力的研究能够改善我们国家的反应堆的结构，以提高我们战舰及发电厂的效率。"
  thl_leader_trait_fusion_energy_effect:0 "允许使用§H地热「核焰喷涌」§!星球决议在境内星球制造地热裂缝，提供额外的£district£§Y发电区划§!上限。\n允许通过一个议程提前获得£engineering_research£§Y戴森球§!科研选项。"
@@ -1841,7 +1844,7 @@
  mod_planet_technician_physics_research_produces_add:1 "£job_technician£ [GetTechnicianPlural]产出的£physics_research£ $physics_research$"
 
  council_agenda_agenda_dyson_sphere_name: "捕获恒星"
- council_agenda_agenda_dyson_sphere_desc: "我们的核聚变技术目前只是对恒星的模仿，有没有办法真的实现对恒星能量的完全利用呢？"
+ council_agenda_agenda_dyson_sphere_desc: "我们的核聚变技术目前只是对恒星的模仿，有没有办法真的实现对恒星能量的完全利用呢？也许禁锢在灵乌路空体内的八咫乌神可以给我们一些灵感。"
 
  artificial_star:0 "人造太阳"
  artificial_star_plural:0 "人造太阳"
