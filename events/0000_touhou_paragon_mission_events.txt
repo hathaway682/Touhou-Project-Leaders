@@ -913,7 +913,6 @@ country_event = {
 				count >= 50
 			}
 		}
-		trade_income >= 1000
 	}
 	option = {
 		name = touhou_paragon_mission.40314.a
