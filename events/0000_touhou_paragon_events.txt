@@ -310,12 +310,7 @@ country_event = { # ethic leader lottery machine
 				}
 				ethic_leader_hire_event = { LEADER_ID = sakuya EVENT_ID = touhou_paragon.41000 }
 			}
-			0 = { # 梅莉
-				modifier = {
-					add = value:touhou_leader_randomizer|ETHIC|xenophile|ETHIC_NEG|xenophobe|LEADER_ID|merry|
-				}
-				ethic_leader_hire_event = { LEADER_ID = merry EVENT_ID = touhou_paragon.41100 }
-			}
+			#梅莉将会自裂隙招募
 			#莲子将会由推荐事件触发
 			0 = { # 觉
 				modifier = {
@@ -1619,13 +1614,11 @@ country_event = { # 梅莉
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = merry_leader
 			}
 			country_event = {
-				id = touhou_paragon.41101
-				days = 360
-				random = 1080
+				id = touhou_paragon.41200
 			}
 		}
 	}
@@ -1661,6 +1654,16 @@ country_event = { # 莲子
 			remove_global_flag = renko # Put this leader back into the pool, so player could still get him
 			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_renko
+			remove_global_flag = merry
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_border_merry
+				}
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			set_country_flag = dismissed_merry
 		}
 	}
 	option = {
@@ -1708,7 +1711,7 @@ country_event = { # 莲子
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = renko_leader
 			}
 		}
@@ -1860,7 +1863,7 @@ country_event = { # 觉
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = satori_leader
 			}
 		}
@@ -2319,6 +2322,36 @@ country_event = { # 蕾米
 			remove_global_flag = remilia # Put this leader back into the pool, so player could still get him
 			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_remilia
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_kongfu
+				}
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			remove_global_flag = meiling
+			set_country_flag = dismissed_meiling
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_time
+				}
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			remove_global_flag = sakuya
+			set_country_flag = dismissed_sakuya
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_elements
+				}
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			remove_global_flag = patchouli
+			set_country_flag = dismissed_patchouli
 		}
 	}
 	option = {

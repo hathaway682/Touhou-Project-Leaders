@@ -1,0 +1,8 @@
+hifuu_space_station = {
+	name = astral_rift_hifuu_space_station
+	randomized = no
+	event = touhou_paragon.41111
+	on_roll_failed = {
+		standard_astral_rift_on_roll_failed = yes
+	}
+}

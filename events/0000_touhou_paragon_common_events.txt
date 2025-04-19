@@ -616,10 +616,6 @@ country_event = {
 		#因幡帝
 		if = {
 			limit = {
-				NOR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
 				NOT = {
 					has_global_flag = tewi
 				}
@@ -652,6 +648,27 @@ country_event = {
 			}
 			country_event = {
 				id = touhou_paragon.40730
+			}
+		}
+		#梅莉
+		if = {
+			limit = {
+				any_owned_planet = {
+					OR = {
+						has_building = building_astral_siphon_1
+						has_building = building_astral_siphon_2
+						has_building = building_astral_siphon_3
+					}
+				}
+				has_country_flag = can_build_shirne
+				has_technology = tech_rift_sphere
+				NOR = {
+					has_global_flag = merry
+					has_global_flag = renko
+				}
+			}
+			country_event = {
+				id = touhou_paragon.41110
 			}
 		}
 	}
@@ -4867,5 +4884,352 @@ ship_event = {
 		event_target:target_scientist = {
 			add_trait = thl_leader_trait_bird_brain
 		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.41110
+	title = touhou_paragon.41110.name
+	desc = touhou_paragon.41110.desc
+	picture = GFX_evt_astral_rift
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = event_target:hifuu_system
+
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				OR = {
+					has_building = building_astral_siphon_1
+					has_building = building_astral_siphon_2
+					has_building = building_astral_siphon_3
+				}
+			}
+			save_global_event_target_as = hifuu_planet
+			solar_system = {
+				save_global_event_target_as = hifuu_system
+			}
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		event_target:hifuu_system = {
+			spawn_astral_rift = {
+				orbit_angle = 360
+				random_pos = yes
+				id = hifuu_space_station
+				graphics_entity_name = astral_rift_entity
+			}
+		}
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41111
+	title = touhou_paragon.41111.name
+	desc = touhou_paragon.41111.desc
+	picture = GFX_evt_astral_rift_tropical_habitat
+	show_sound = ap_rift_event_30_sentient_trees_planet
+	difficulty = @astral_rift_initial_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41111.a
+		explorer = { astral_thread_small_reward = yes }
+		set_next_astral_rift_event = { id = touhou_paragon.41112 }
+	}
+	option = {
+		name = touhou_paragon.41111.b
+		explorer = { astral_thread_small_reward = yes }
+		set_next_astral_rift_event = { id = touhou_paragon.41113 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41112
+	title = touhou_paragon.41112.name
+	desc = {
+		trigger = {
+			explorer = {
+				owner_main_species = {
+					is_human_species = yes
+				}
+			}
+		}
+		text = touhou_paragon.41112.desc.human
+	}
+	desc = {
+		trigger = {
+			explorer = {
+				owner_main_species = {
+					is_human_species = no
+				}
+			}
+		}
+		text = touhou_paragon.41112.desc
+	}
+	picture = GFX_evt_astral_rift_research_lab
+	show_sound = ap_rift_event_30_sentient_trees_planet
+	difficulty = @astral_rift_initial_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41112.a
+		explorer = {
+			astral_thread_small_reward = yes
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_genome_mapping
+					}
+				}
+				add_tech_progress = {
+					tech = tech_genome_mapping
+					progress = 0.25
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_technology = tech_gene_tailoring
+					}
+				}
+				add_tech_progress = {
+					tech = tech_gene_tailoring
+					progress = 0.25
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_technology = tech_gene_expressions
+					}
+				}
+				add_tech_progress = {
+					tech = tech_gene_expressions
+					progress = 0.25
+				}
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier1researchreward
+					min = @tier1researchmin
+					max = @tier1researchmax
+				}
+			}
+		}
+		set_next_astral_rift_event = { id = touhou_paragon.41114 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41113
+	title = touhou_paragon.41113.name
+	desc = {
+		trigger = {
+			explorer = {
+				owner_main_species = {
+					is_human_species = yes
+				}
+			}
+		}
+		text = touhou_paragon.41113.desc.human
+	}
+	desc = {
+		trigger = {
+			explorer = {
+				owner_main_species = {
+					is_human_species = no
+				}
+			}
+		}
+		text = touhou_paragon.41113.desc
+	}
+	picture = GFX_evt_astral_rift_research_lab
+	show_sound = ap_rift_event_30_sentient_trees_planet
+	difficulty = @astral_rift_initial_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41113.a
+		explorer = {
+			astral_thread_small_reward = yes
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_habitat_1
+					}
+				}
+				add_tech_progress = {
+					tech = tech_habitat_1
+					progress = 0.25
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_technology = tech_habitat_2
+					}
+				}
+				add_tech_progress = {
+					tech = tech_habitat_2
+					progress = 0.25
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_technology = tech_habitat_3
+					}
+				}
+				add_tech_progress = {
+					tech = tech_habitat_3
+					progress = 0.25
+				}
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier1researchreward
+					min = @tier1researchmin
+					max = @tier1researchmax
+				}
+			}
+		}
+		set_next_astral_rift_event = { id = touhou_paragon.41114 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41114
+	title = touhou_paragon.41114.name
+	desc = {
+		trigger = {
+			explorer = {
+				owner_main_species = {
+					is_human_species = yes
+				}
+			}
+		}
+		text = touhou_paragon.41114.desc.human
+	}
+	desc = {
+		trigger = {
+			explorer = {
+				owner_main_species = {
+					is_human_species = no
+				}
+			}
+		}
+		text = touhou_paragon.41114.desc
+	}
+	picture = GFX_evt_astral_rift_research_lab
+	show_sound = ap_rift_event_30_sentient_trees_planet
+	difficulty = @astral_rift_initial_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41114.a
+		explorer = { astral_thread_small_reward = yes }
+		set_next_astral_rift_event = { id = touhou_paragon.41115 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41115
+	title = touhou_paragon.41115.name
+	desc = touhou_paragon.41115.desc
+	picture = GFX_evt_astral_rift_research_lab
+	show_sound = ap_rift_event_30_sentient_trees_planet
+	difficulty = @astral_rift_initial_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41115.a
+		explorer = { astral_thread_small_reward = yes }
+		hidden_effect = {
+			add_stage_modifier = { modifier = astral_rift_difficulty_increase_1 }
+		}
+		set_next_astral_rift_event = { id = touhou_paragon.41116 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41116
+	title = touhou_paragon.41116.name
+	desc = touhou_paragon.41116.desc
+	picture = GFX_evt_astral_rift_research_lab
+	show_sound = ap_rift_event_30_sentient_trees_planet
+	difficulty = @astral_rift_initial_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41116.a
+		explorer = {
+			astral_thread_large_reward = yes
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_morphogenetic_field_mastery
+					}
+				}
+				add_tech_progress = {
+					tech = tech_morphogenetic_field_mastery
+					progress = 0.25
+				}
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier2researchreward
+					min = @tier2researchmin
+					max = @tier2researchmax
+				}
+			}
+			country_event = {
+				id = touhou_paragon.41100
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				spawn_planet = {
+					class = pc_habitat
+					name = "NAME_Bird_Ship_Relic"
+					location = event_target:hifuu_planet
+					orbit_location = yes
+					orbit_distance_offset = 10
+					orbit_angle_offset = 5
+					init_effect = {
+						set_planet_flag = habitat
+						set_planet_flag = habitat_level_1
+						set_planet_entity = {
+							entity = "habitat_phase_01_entity"
+							graphical_culture = humanoid_01
+						}
+						save_event_target_as = pre_sapient_planet
+						create_generic_presapient_species = { UPLIFT_TO = MAM }
+						set_planet_flag = pre_sapient_planet
+						add_deposit = d_hifuu_habitat_research
+						add_deposit = d_dangerous_wildlife_blocker
+						add_deposit = d_dangerous_wildlife_blocker
+						add_deposit = d_dangerous_wildlife_blocker
+						add_deposit = d_dangerous_wildlife_blocker
+						add_deposit = d_dangerous_wildlife_blocker
+						add_deposit = d_dangerous_wildlife_blocker
+					}
+				}
+			}
+		}
+		custom_tooltip = hifuu_station_tooltip
+		finish_astral_rift = yes
 	}
 }
