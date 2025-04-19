@@ -4930,7 +4930,7 @@ astral_rift_event = {
 	id = touhou_paragon.41111
 	title = touhou_paragon.41111.name
 	desc = touhou_paragon.41111.desc
-	picture = GFX_evt_astral_rift_tropical_habitat
+	picture = GFX_evt_hifuu_forest
 	show_sound = ap_rift_event_30_sentient_trees_planet
 	difficulty = @astral_rift_initial_difficulty
 	astral_rift = yes
@@ -4971,7 +4971,7 @@ astral_rift_event = {
 		}
 		text = touhou_paragon.41112.desc
 	}
-	picture = GFX_evt_astral_rift_research_lab
+	picture = GFX_evt_hifuu_machine
 	show_sound = ap_rift_event_30_sentient_trees_planet
 	difficulty = @astral_rift_initial_difficulty
 	astral_rift = yes
@@ -5050,7 +5050,7 @@ astral_rift_event = {
 		}
 		text = touhou_paragon.41113.desc
 	}
-	picture = GFX_evt_astral_rift_research_lab
+	picture = GFX_evt_hifuu_machine
 	show_sound = ap_rift_event_30_sentient_trees_planet
 	difficulty = @astral_rift_initial_difficulty
 	astral_rift = yes
@@ -5129,7 +5129,7 @@ astral_rift_event = {
 		}
 		text = touhou_paragon.41114.desc
 	}
-	picture = GFX_evt_astral_rift_research_lab
+	picture = GFX_evt_hifuu_couple
 	show_sound = ap_rift_event_30_sentient_trees_planet
 	difficulty = @astral_rift_initial_difficulty
 	astral_rift = yes
@@ -5146,7 +5146,7 @@ astral_rift_event = {
 	id = touhou_paragon.41115
 	title = touhou_paragon.41115.name
 	desc = touhou_paragon.41115.desc
-	picture = GFX_evt_astral_rift_research_lab
+	picture = GFX_evt_astral_rift_crystal_3
 	show_sound = ap_rift_event_30_sentient_trees_planet
 	difficulty = @astral_rift_initial_difficulty
 	astral_rift = yes
@@ -5166,7 +5166,7 @@ astral_rift_event = {
 	id = touhou_paragon.41116
 	title = touhou_paragon.41116.name
 	desc = touhou_paragon.41116.desc
-	picture = GFX_evt_astral_rift_research_lab
+	picture = GFX_evt_astral_rift_tropical_habitat
 	show_sound = ap_rift_event_30_sentient_trees_planet
 	difficulty = @astral_rift_initial_difficulty
 	astral_rift = yes
