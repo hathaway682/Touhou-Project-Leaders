@@ -5222,9 +5222,6 @@ astral_rift_event = {
 						add_deposit = d_dangerous_wildlife_blocker
 						add_deposit = d_dangerous_wildlife_blocker
 						add_deposit = d_dangerous_wildlife_blocker
-						add_deposit = d_dangerous_wildlife_blocker
-						add_deposit = d_dangerous_wildlife_blocker
-						add_deposit = d_dangerous_wildlife_blocker
 					}
 				}
 			}
