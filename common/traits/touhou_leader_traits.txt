@@ -2846,7 +2846,7 @@ thl_leader_trait_dolls = {
 	}
 	planet_modifier = {
 		planet_pop_assembly_add = 5
-		doll_control_limit = 20
+		doll_control_limit = 2000
 		planet_doll_jobs_produces_mult = 0.25
 	}
 	sector_modifier = {

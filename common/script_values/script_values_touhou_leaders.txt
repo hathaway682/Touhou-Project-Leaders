@@ -37,7 +37,7 @@ touhou_leader_randomizer = {
 enforcer_job_number = {
 	base = 0
 	complex_trigger_modifier = {
-		trigger = count_owned_pop
+		trigger = count_owned_pop_amount
 		trigger_scope = root
 		parameters = {
 			limit = {
@@ -46,6 +46,7 @@ enforcer_job_number = {
 		}
 		mode = add
 	}
+	divide = 100
 }
 
 price_of_life = {
@@ -101,14 +102,14 @@ doll_missing_per_maker = {
 	base = 0
 	add = modifier:doll_control_limit
 	complex_trigger_modifier = {
-		trigger = count_owned_pop
+		trigger = count_owned_pop_amount
 		parameters = {
 			limit = { has_trait = trait_thl_doll }
 		}
 		mode = subtract
 	}
 	complex_trigger_modifier = {
-		trigger = count_owned_pop
+		trigger = count_owned_pop_amount
 		parameters = {
 			limit = { has_job = dollmaker }
 		}

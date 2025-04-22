@@ -10684,8 +10684,8 @@ country_event = {
             num_pops >= 25
             num_armies >= 2
         }
-        count_owned_pop = {
-            count >= 300
+        count_owned_pop_amount = {
+            count >= 30000
         }
     }
     immediate = {
