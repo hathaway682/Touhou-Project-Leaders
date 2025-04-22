@@ -1077,7 +1077,7 @@ gungnir = {
 					}
 					last_created_fleet = {
 						fleet_event = {
-							id = touhou_paragon_spell.6
+							id = touhou_paragon_spell.10
 							days = 2
 						}
 					}
@@ -1178,7 +1178,7 @@ gungnir_starbase = {
 					}
 					last_created_fleet = {
 						fleet_event = {
-							id = touhou_paragon_spell.6
+							id = touhou_paragon_spell.10
 							days = 2
 						}
 					}
@@ -1650,7 +1650,7 @@ reset_touhou_leader_portrait = {
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = thl_leader_trait_harvest
+				has_trait = leader_trait_harvest
 			}
 			change_leader_portrait = x74
 		}

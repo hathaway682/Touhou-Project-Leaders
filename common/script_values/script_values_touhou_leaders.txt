@@ -255,7 +255,7 @@ touhou_leader_id = {
 	}
 	modifier = {
 		add = 36
-		has_trait = thl_leader_trait_harvest
+		has_trait = leader_trait_harvest
 	}
 	modifier = {
 		add = 37
@@ -321,7 +321,7 @@ leader_num_spell_cards = {
 	}
 	modifier = {
 		add = 2
-		has_trait = thl_leader_trait_harvest
+		has_trait = leader_trait_harvest
 	}
 	modifier = {
 		add = 4

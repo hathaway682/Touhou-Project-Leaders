@@ -280,12 +280,6 @@ country_event = { # ethic leader lottery machine
 				}
 				ethic_leader_hire_event = { LEADER_ID = sanae EVENT_ID = touhou_paragon.40300 }
 			}
-			0 = { # 琪露诺
-				modifier = {
-					add = value:touhou_leader_randomizer|ETHIC|militarist|ETHIC_NEG|pacifist|LEADER_ID|crino|
-				}
-				ethic_leader_hire_event = { LEADER_ID = crino EVENT_ID = touhou_paragon.40400 }
-			}
 			0 = { # 美铃
 				modifier = {
 					add = value:touhou_leader_randomizer|ETHIC|militarist|ETHIC_NEG|egalitarian|LEADER_ID|meiling|
@@ -316,12 +310,7 @@ country_event = { # ethic leader lottery machine
 				}
 				ethic_leader_hire_event = { LEADER_ID = sakuya EVENT_ID = touhou_paragon.41000 }
 			}
-			0 = { # 梅莉
-				modifier = {
-					add = value:touhou_leader_randomizer|ETHIC|xenophile|ETHIC_NEG|xenophobe|LEADER_ID|merry|
-				}
-				ethic_leader_hire_event = { LEADER_ID = merry EVENT_ID = touhou_paragon.41100 }
-			}
+			#梅莉将会自裂隙招募
 			#莲子将会由推荐事件触发
 			0 = { # 觉
 				modifier = {
@@ -650,7 +639,7 @@ country_event = { # 天子
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = tenshi # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_tenshi
 		}
 	}
@@ -694,7 +683,7 @@ country_event = { # 天子
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40100.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_tenshi
 			}
 			last_created_leader = {
@@ -734,7 +723,7 @@ country_event = { # 萃香
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = suika # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_suika
 		}
 	}
@@ -788,7 +777,7 @@ country_event = { # 萃香
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40200.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_suika
 			}
 			last_created_leader = {
@@ -828,7 +817,7 @@ country_event = { # 早苗
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = sanae # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_sanae
 		}
 	}
@@ -914,7 +903,7 @@ country_event = { # 早苗
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40300.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_sanae
 			}
 			last_created_leader = {
@@ -967,7 +956,7 @@ country_event = { # 琪露诺
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = crino # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_crino
 		}
 	}
@@ -1001,7 +990,7 @@ country_event = { # 琪露诺
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40400.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_crino
 			}
 			last_created_leader = {
@@ -1045,7 +1034,7 @@ country_event = { # 美铃
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = meiling # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_meiling
 		}
 	}
@@ -1101,7 +1090,7 @@ country_event = { # 美铃
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40500.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_meiling
 			}
 			last_created_leader = {
@@ -1141,7 +1130,7 @@ country_event = { # 灵梦
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = reimu # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_reimu
 		}
 	}
@@ -1185,7 +1174,7 @@ country_event = { # 灵梦
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40600.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_reimu
 			}
 			last_created_leader = {
@@ -1238,7 +1227,7 @@ country_event = { # 魔理沙
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = marisa # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_marisa
 		}
 	}
@@ -1282,12 +1271,12 @@ country_event = { # 魔理沙
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40700.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_marisa
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = marisa_leader
 				set_leader_flag = touhou_event_leader
 			}
@@ -1323,7 +1312,7 @@ country_event = { # 铃仙
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = reisen # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_reisen
 		}
 	}
@@ -1367,7 +1356,7 @@ country_event = { # 铃仙
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40800.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_reisen
 			}
 			last_created_leader = {
@@ -1407,7 +1396,7 @@ country_event = { # 妖梦
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = youmu # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_youmu
 		}
 	}
@@ -1451,7 +1440,7 @@ country_event = { # 妖梦
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40900.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_youmu
 			}
 			last_created_leader = {
@@ -1491,7 +1480,7 @@ country_event = { # 咲夜
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = sakuya # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_sakuya
 		}
 	}
@@ -1535,7 +1524,7 @@ country_event = { # 咲夜
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41000.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_sakuya
 			}
 			last_created_leader = {
@@ -1576,7 +1565,7 @@ country_event = { # 梅莉
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = merry # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_merry
 		}
 	}
@@ -1620,18 +1609,16 @@ country_event = { # 梅莉
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41100.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_merry
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = merry_leader
 			}
 			country_event = {
-				id = touhou_paragon.41101
-				days = 360
-				random = 1080
+				id = touhou_paragon.41200
 			}
 		}
 	}
@@ -1665,8 +1652,18 @@ country_event = { # 莲子
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = renko # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_renko
+			remove_global_flag = merry
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_border_merry
+				}
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			set_country_flag = dismissed_merry
 		}
 	}
 	option = {
@@ -1709,12 +1706,12 @@ country_event = { # 莲子
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41200.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_renko
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = renko_leader
 			}
 		}
@@ -1749,7 +1746,7 @@ country_event = { # 觉
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = satori # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_satori
 		}
 	}
@@ -1861,12 +1858,12 @@ country_event = { # 觉
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41300.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_satori
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = satori_leader
 			}
 		}
@@ -1901,7 +1898,7 @@ country_event = { # 恋恋
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = koishi # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_koishi
 		}
 	}
@@ -1945,7 +1942,7 @@ country_event = { # 恋恋
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41400.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_koishi
 			}
 			last_created_leader = {
@@ -1985,7 +1982,7 @@ country_event = { # 文
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = aya # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_aya
 		}
 	}
@@ -2029,7 +2026,7 @@ country_event = { # 文
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41500.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_aya
 			}
 			last_created_leader = {
@@ -2069,7 +2066,7 @@ country_event = { # 四季
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = shikieiki # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_shikieiki
 		}
 	}
@@ -2113,7 +2110,7 @@ country_event = { # 四季
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41600.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_shikieiki
 			}
 			last_created_leader = {
@@ -2153,7 +2150,7 @@ country_event = { # 小町
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = onoduka # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_onoduka
 		}
 	}
@@ -2197,7 +2194,7 @@ country_event = { # 小町
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41700.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_onoduka
 			}
 			last_created_leader = {
@@ -2237,7 +2234,7 @@ country_event = { # 帕秋莉
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = patchouli # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_patchouli
 		}
 	}
@@ -2281,7 +2278,7 @@ country_event = { # 帕秋莉
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41800.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_patchouli
 			}
 			last_created_leader = {
@@ -2323,8 +2320,38 @@ country_event = { # 蕾米
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = remilia # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_remilia
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_kongfu
+				}
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			remove_global_flag = meiling
+			set_country_flag = dismissed_meiling
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_time
+				}
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			remove_global_flag = sakuya
+			set_country_flag = dismissed_sakuya
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_elements
+				}
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			remove_global_flag = patchouli
+			set_country_flag = dismissed_patchouli
 		}
 	}
 	option = {
@@ -2462,7 +2489,7 @@ country_event = { # 蕾米
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41900.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_remilia
 			}
 		}
@@ -2533,7 +2560,7 @@ country_event = { # 爱丽丝
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = alice # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_alice
 		}
 	}
@@ -2588,7 +2615,7 @@ country_event = { # 爱丽丝
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42000.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_alice
 			}
 			create_species = {
@@ -2643,7 +2670,7 @@ country_event = { # 幽幽子
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = yuyuko # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_yuyuko
 		}
 	}
@@ -2687,7 +2714,7 @@ country_event = { # 幽幽子
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42100.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_yuyuko
 			}
 		}
@@ -2722,7 +2749,7 @@ country_event = { # 幽香
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = yuka # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_yuka
 		}
 	}
@@ -2766,7 +2793,7 @@ country_event = { # 幽香
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42200.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_yuka
 			}
 		}
@@ -2801,7 +2828,7 @@ country_event = { # 小铃
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = kosuzu # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_kosuzu
 		}
 	}
@@ -2845,7 +2872,7 @@ country_event = { # 小铃
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42300.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_kosuzu
 			}
 		}
@@ -2880,7 +2907,7 @@ country_event = { # 阿求
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = akyuu # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_akyuu
 		}
 	}
@@ -2924,7 +2951,7 @@ country_event = { # 阿求
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42400.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_akyuu
 			}
 		}
@@ -2959,7 +2986,7 @@ country_event = { # 阿燐
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = rin # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_rin
 		}
 	}
@@ -3017,7 +3044,7 @@ country_event = { # 阿燐
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42500.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_rin
 			}
 		}
@@ -3052,7 +3079,7 @@ country_event = { # 阿空
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = utsuho # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_utsuho
 		}
 	}
@@ -3096,7 +3123,7 @@ country_event = { # 阿空
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42600.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_utsuho
 			}
 			country_event = { id = touhou_paragon_situation.42670 days=3600}
@@ -3132,7 +3159,7 @@ country_event = { # 荷取
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = nitori # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_nitori
 		}
 	}
@@ -3176,7 +3203,7 @@ country_event = { # 荷取
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42700.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_nitori
 			}
 		}
@@ -3211,7 +3238,7 @@ country_event = { # 静叶
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = sizuha # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_sizuha
 		}
 	}
@@ -3250,7 +3277,7 @@ country_event = { # 静叶
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42800.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_sizuha
 			}
 		}
@@ -3285,7 +3312,7 @@ country_event = { # 穰子
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = minoriko # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_minoriko
 		}
 	}
@@ -3324,7 +3351,7 @@ country_event = { # 穰子
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42900.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_minoriko
 			}
 		}
@@ -3359,7 +3386,7 @@ country_event = { # 雏
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = hina # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_hina
 		}
 	}
@@ -3403,7 +3430,7 @@ country_event = { # 雏
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.43000.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_hina
 			}
 			set_variable = {
@@ -3442,7 +3469,7 @@ country_event = { # 米斯蒂娅
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = mystia # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_mystia
 		}
 		country_event = {
@@ -3489,7 +3516,7 @@ country_event = { # 米斯蒂娅
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.43100.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_mystia
 			}
 		}
@@ -3524,7 +3551,7 @@ country_event = { # 帝
 		tag = dismiss_leader
 		hidden_effect = {
 			remove_global_flag = tewi # Put this leader back into the pool, so player could still get him
-			thl_ethic_leader_kill_effect = yes
+			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_tewi
 		}
 	}
@@ -3568,7 +3595,7 @@ country_event = { # 帝
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.43200.hire_custom_tooltip
 		hidden_effect = {
-			thl_ethic_leader_hire_effect = {
+			ethic_leader_hire_effect = {
 				GLOBAL_EVENT_TARGET = renowned_tewi
 			}
 		}

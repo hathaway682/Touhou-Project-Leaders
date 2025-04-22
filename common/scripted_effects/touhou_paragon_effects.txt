@@ -223,6 +223,49 @@ random_kill_army_if_oni_defender = {
 	}
 }
 
+ethic_leader_hire_effect = {
+	random_owned_planet = {
+		limit = {
+			is_variable_set = paragon_memory_vault
+		}
+		change_variable = {
+			which = paragon_memory_vault
+			value = 1
+		}
+	}
+
+	lower_leader_chance = yes
+	set_country_flag = spawning_renowned_leader
+
+	clone_leader = {
+		target = event_target:ethic_leader
+		skip_background_generation = yes
+	}
+	last_created_leader = {
+		save_global_event_target_as = $GLOBAL_EVENT_TARGET$
+		set_leader_flag = $GLOBAL_EVENT_TARGET$
+		set_leader_flag = renowned_leader
+	}
+
+	remove_country_flag = spawning_renowned_leader
+
+	create_message = {
+		type = MESSAGE_RECRUITED_LEADER
+		localization =  MESSAGE_RECRUITED_LEADER_DESC
+		days = @toast_message_days
+		target = event_target:ethic_leader
+		variable = {
+			type = name
+			localization = LEADER
+			scope = event_target:ethic_leader
+		}
+		variable = {
+			key = "border"
+			value = "GFX_border_veteran" #TODO Add real rarity frame gfx
+		}
+	}
+}
+
 clear_confilt_traits = {
 	if = {
 		limit = {
@@ -2125,7 +2168,7 @@ create_shrine_point_of_interest = {
 		limit = {
 			NOT = {
 				any_owned_leader = {
-					has_trait = thl_leader_trait_harvest
+					has_trait = leader_trait_harvest
 				}
 			}
 		}
@@ -2356,197 +2399,6 @@ moriya_storm_apply_deposits = {
 					}
 					planet_event = { id = cstorms.8000 }
 				}
-			}
-		}
-	}
-}
-
-respawn_touhou_leader = {
-	switch = {
-		trigger = has_trait
-		thl_leader_trait_earthquake = {
-			owner = {
-				create_tenshi_leader = yes
-			}
-		}
-		thl_leader_trait_density = {
-			owner = {
-				create_suika_leader = yes
-			}
-		}
-		thl_leader_trait_miracle = {
-			owner = {
-				create_sanae_leader = yes
-			}
-		}
-		thl_leader_trait_ice = {
-			owner = {
-				create_cirno_leader = yes
-			}
-		}
-		thl_leader_trait_kongfu = {
-			owner = {
-				create_meiling_leader = yes
-			}
-		}
-		thl_leader_trait_fly = {
-			owner = {
-				create_reimu_leader = yes
-			}
-		}
-		thl_leader_trait_magic = {
-			owner = {
-				create_marisa_leader = yes
-			}
-		}
-		thl_leader_trait_wave_length = {
-			owner = {
-				create_reisen_leader = yes
-			}
-		}
-		thl_leader_trait_kendo = {
-			owner = {
-				create_youmu_leader = yes
-			}
-		}
-		thl_leader_trait_time = {
-			owner = {
-				create_sakuya_leader = yes
-			}
-		}
-		thl_leader_trait_border_merry = {
-			owner = {
-				create_merry_leader = yes
-			}
-		}
-		thl_leader_trait_star_located = {
-			owner = {
-				create_renko_leader = yes
-			}
-		}
-		thl_leader_trait_mind_reader = {
-			owner = {
-				create_satori_leader = yes
-			}
-		}
-		thl_leader_trait_subconscious = {
-			owner = {
-				create_koishi_leader = yes
-			}
-		}
-		thl_leader_trait_wind = {
-			owner = {
-				create_aya_leader = yes
-			}
-		}
-		thl_leader_trait_trial = {
-			owner = {
-				create_shikieiki_leader = yes
-			}
-		}
-		thl_leader_trait_distance = {
-			owner = {
-				create_onoduka_leader = yes
-			}
-		}
-		thl_leader_trait_destiny_manipulation = {
-			owner = {
-				create_remilia_leader = yes
-			}
-		}
-		thl_leader_trait_elements = {
-			owner = {
-				create_patchouli_leader = yes
-			}
-		}
-		thl_leader_trait_dolls = {
-			owner = {
-				create_alice_leader = yes
-			}
-		}
-		thl_leader_trait_death = {
-			owner = {
-				create_yuyuko_leader = yes
-			}
-		}
-		thl_leader_trait_flower = {
-			owner = {
-				create_yuka_leader = yes
-			}
-		}
-		thl_leader_trait_flower_commander = {
-			owner = {
-				create_yuka_commander_leader = yes
-			}
-		}
-		thl_leader_trait_words = {
-			owner = {
-				create_kosuzu_leader = yes
-			}
-		}
-		thl_leader_trait_short_life = {
-			owner = {
-				create_akyuu_leader = yes
-			}
-		}
-		thl_leader_trait_cyborg_life = {
-			owner = {
-				create_akyuu_cyborg_leader = yes
-			}
-		}
-		thl_leader_trait_synth_life = {
-			owner = {
-				create_akyuu_synth_leader = yes
-			}
-		}
-		thl_leader_trait_gene_life = {
-			owner = {
-				create_akyuu_gene_leader = yes
-			}
-		}
-		leader_trait_whisperers_chosen = {
-			owner = {
-				create_akyuu_chosen_leader = yes
-			}
-		}
-		thl_leader_trait_corpse_travel = {
-			owner = {
-				create_rin_leader = yes
-			}
-		}
-		thl_leader_trait_nuclear = {
-			owner = {
-				create_utsuho_leader = yes
-			}
-		}
-		thl_leader_trait_water = {
-			owner = {
-				create_nitori_leader = yes
-			}
-		}
-		thl_leader_trait_fall = {
-			owner = {
-				create_sizuha_leader = yes
-			}
-		}
-		thl_leader_trait_harvest = {
-			owner = {
-				create_minoriko_leader = yes
-			}
-		}
-		thl_leader_trait_jinx = {
-			owner = {
-				create_hina_leader = yes
-			}
-		}
-		thl_leader_trait_song = {
-			owner = {
-				create_mystia_leader = yes
-			}
-		}
-		thl_leader_trait_luck = {
-			owner = {
-				create_tewi_leader = yes
 			}
 		}
 	}
