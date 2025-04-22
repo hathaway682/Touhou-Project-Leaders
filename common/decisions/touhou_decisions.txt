@@ -565,7 +565,7 @@ decision_satori_pet = {
 			is_planet_class = pc_city
 			is_planet_class = pc_hive
 			is_planet_class = pc_machine
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_pre_sapient = yes
 			}
 		}
@@ -1512,7 +1512,7 @@ decision_trans_spirit = {
 				}
 			}
 		}
-		any_owned_pop = {
+		any_owned_pop_group = {
 			NOT = {
 				has_trait = trait_thl_spirit
 			}
@@ -1648,7 +1648,7 @@ decision_assimilate_spirit = {
 				}
 			}
 		}
-		any_owned_pop = {
+		any_owned_pop_group = {
 			NOT = {
 				has_trait = trait_thl_spirit
 			}
@@ -3080,7 +3080,7 @@ decision_rabbit_hole = {
 	}
 
 	allow = {
-		any_owned_pop = {
+		any_owned_pop_group = {
 			has_trait = trait_thl_rabbit
 		}
 		custom_tooltip = {

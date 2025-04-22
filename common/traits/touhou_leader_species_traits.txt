@@ -208,7 +208,7 @@ trait_thl_doll = {
 			NOT = {
 				planet = {
 					OR = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							has_job = dollmaker
 						}
 						AND = {

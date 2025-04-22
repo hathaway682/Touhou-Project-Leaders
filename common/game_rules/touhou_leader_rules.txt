@@ -184,7 +184,7 @@ can_species_be_assembled = {
 							owner = { has_civic = civic_permanent_employment }
 						}
 						AND = {
-							any_owned_pop = {
+							any_owned_pop_group = {
 								has_job = death_chronicler
 							}
 							owner = { has_civic = civic_nether_world }
@@ -463,7 +463,7 @@ should_force_decline_species = {
 			success_text = KILL_CORPSE_BATTERY
 			has_trait = trait_zombie
 			from = {
-				any_owned_pop = {
+				any_owned_pop_group = {
 					is_same_species = root
 					has_job = corpse_battery
 				}

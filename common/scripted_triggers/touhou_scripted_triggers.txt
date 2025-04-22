@@ -412,7 +412,7 @@ THL_trgr_spcs_RULE_doll_assembly = {
 			owner = { has_technology = tech_sapient_dolls }
 		}
 		OR = {
-			any_owned_pop = { has_job = dollmaker }
+			any_owned_pop_group = { has_job = dollmaker }
 			AND = {
 				exists = leader
 				leader = { has_trait = thl_leader_trait_dolls }
@@ -598,7 +598,7 @@ dolls_assembly_trigger = {
 			}
 		}
 		OR = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_job = dollmaker
 			}
 			AND = {

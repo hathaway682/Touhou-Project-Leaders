@@ -92,7 +92,7 @@ building_shrine = {
 		if = {
 			limit = {
 				OR = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						has_trait = trait_humanoid_jinxed
 					}
 					free_amenities < -10

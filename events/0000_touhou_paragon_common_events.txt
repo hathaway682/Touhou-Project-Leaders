@@ -2126,12 +2126,12 @@ leader_event = {
 			}
 			if = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						has_job = researcher
 					}
 					NOT = { has_trait = trait_thl_spirit }
 				}
-				random_owned_pop = {
+				random_owned_pop_group = {
 					limit = {
 						has_job = researcher
 						NOT = { has_trait = trait_thl_spirit }
@@ -2139,21 +2139,21 @@ leader_event = {
 					species = {
 						save_global_event_target_as = sakura_event_victim
 					}
-					kill_pop = yes
+					kill_single_pop = yes
 				}
 			}
 			else_if = {
 				limit = {
 					NOT = { has_trait = trait_thl_spirit }
 				}
-				random_owned_pop = {
+				random_owned_pop_group = {
 					limit = {
 						NOT = { has_trait = trait_thl_spirit }
 					}
 					species = {
 						save_global_event_target_as = sakura_event_victim
 					}
-					kill_pop = yes
+					kill_single_pop = yes
 				}
 			}
 		}

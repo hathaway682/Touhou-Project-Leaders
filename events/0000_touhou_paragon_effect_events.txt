@@ -856,14 +856,14 @@ planet_event = {
                         NOR = {
                             is_planet_class = pc_habitat
                         }
-                        any_owned_pop = {
+                        any_owned_pop_group = {
                             is_enslaved = no
                             is_robotic_species = no
                             NOT = {
                                 is_same_species = owner
                             }
                         }
-                        any_owned_pop = {
+                        any_owned_pop_group = {
                             is_same_species = owner
                             OR = {
                                 has_ethic = ethic_fanatic_xenophobe
@@ -989,7 +989,7 @@ planet_event = {
                         }
                         NOT = { owner = { has_country_flag = bluelotus } }
                         num_pops > 0
-                        any_owned_pop = {
+                        any_owned_pop_group = {
                             OR = {
                                 has_job = miner
                                 has_job = mining_drone
@@ -2278,14 +2278,14 @@ country_event = {
                 has_planet_flag = colony_event
                 is_planet_class = pc_habitat
             }
-            any_owned_pop = {
+            any_owned_pop_group = {
                 is_enslaved = no
                 is_robotic_species = no
                 NOT = {
                     is_same_species = owner
                 }
             }
-            any_owned_pop = {
+            any_owned_pop_group = {
                 is_same_species = owner
                 OR = {
                     has_ethic = ethic_fanatic_xenophobe
@@ -2305,14 +2305,14 @@ country_event = {
                     has_planet_flag = colony_event
                     is_planet_class = pc_habitat
                 }
-                any_owned_pop = {
+                any_owned_pop_group = {
                     is_enslaved = no
                     is_robotic_species = no
                     NOT = {
                         is_same_species = owner
                     }
                 }
-                any_owned_pop = {
+                any_owned_pop_group = {
                     is_same_species = owner
                     OR = {
                         has_ethic = ethic_fanatic_xenophobe
@@ -2940,7 +2940,7 @@ country_event = {
             NOT = { has_closed_borders = root }
             any_owned_planet = {
                 num_pops >= 2
-                any_owned_pop = {
+                any_owned_pop_group = {
                     is_enslaved = no
                     is_being_assimilated = no
                     is_being_purged = no
@@ -2968,7 +2968,7 @@ country_event = {
                 NOT = { has_closed_borders = root }
                 any_owned_planet = {
                     num_pops >= 2
-                    any_owned_pop = {
+                    any_owned_pop_group = {
                         is_enslaved = no
                         is_being_assimilated = no
                         is_being_purged = no
@@ -2980,7 +2980,7 @@ country_event = {
             random_owned_planet = {
                 limit = {
                     num_pops >= 2
-                    any_owned_pop = {
+                    any_owned_pop_group = {
                         is_enslaved = no
                         is_being_assimilated = no
                         is_being_purged = no
@@ -4219,7 +4219,7 @@ country_event = {
                     has_deposit = sakura_tree_8
                 }
             }
-            any_owned_pop = {
+            any_owned_pop_group = {
                 NOT = {
                     has_trait = trait_thl_spirit
                 }
@@ -4714,7 +4714,7 @@ planet_event = {
         NOT = {
             num_pops = 0
         }
-        any_owned_pop = {
+        any_owned_pop_group = {
             is_organic_species = yes
             NOR = {
                 has_trait = trait_zombie
@@ -5669,7 +5669,7 @@ planet_event = { #Braiiiins
             NOT = { has_trait = trait_thl_spirit }
         }
         owner = { has_valid_civic = civic_nether_world }
-        any_owned_pop = {
+        any_owned_pop_group = {
             has_job = death_chronicler
         }
     }
@@ -5864,7 +5864,7 @@ planet_event = {
         NOT = {
             num_pops = 0
         }
-        any_owned_pop = {
+        any_owned_pop_group = {
             is_organic_species = yes
             NOR = {
                 has_trait = trait_zombie

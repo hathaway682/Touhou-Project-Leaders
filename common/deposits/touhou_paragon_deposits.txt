@@ -15,7 +15,7 @@ d_stick_of_repentance = {
 
 	triggered_planet_modifier = {
 		potential = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_job = enforcer
 			}
 		}
