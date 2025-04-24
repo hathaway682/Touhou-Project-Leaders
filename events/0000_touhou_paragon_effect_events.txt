@@ -499,7 +499,7 @@ country_event = {
             }
             while = {
                 count = value:perc_of_planet_pop
-                random_owned_pop = { # Pick a pop
+                random_owned_pop_group =  { # Pick a pop
                     limit = {
                         planet = { is_same_value = ROOT.FROMFROM }
                     }
@@ -2987,7 +2987,7 @@ country_event = {
                         can_live_on_planet = event_target:banquet_planet
                     }
                 }
-                random_owned_pop = {
+                random_owned_pop_group =  {
                     limit = {
                         is_enslaved = no
                         is_being_assimilated = no
@@ -3252,7 +3252,7 @@ planet_event = {
 
     immediate = {
         change_pc = pc_arctic
-        every_owned_pop = {
+        every_owned_pop_group =  {
             limit = {
                 NOT = {
                     ideal_planet_is_cold = yes
@@ -4240,7 +4240,7 @@ country_event = {
                     1 = {
                         while = {
                             count = 3
-                            random_owned_pop = {
+                            random_owned_pop_group =  {
                                 limit = {
                                     NOT = {
                                         has_trait = trait_thl_spirit
@@ -4261,7 +4261,7 @@ country_event = {
                     1 = {
                         while = {
                             count = 6
-                            random_owned_pop = {
+                            random_owned_pop_group =  {
                                 limit = {
                                     NOT = {
                                         has_trait = trait_thl_spirit
@@ -4282,7 +4282,7 @@ country_event = {
                     1 = {
                         while = {
                             count = 12
-                            random_owned_pop = {
+                            random_owned_pop_group =  {
                                 limit = {
                                     NOT = {
                                         has_trait = trait_thl_spirit
@@ -4315,7 +4315,7 @@ country_event = {
                     }
                     while = {
                         count = 3
-                        random_owned_pop = {
+                        random_owned_pop_group =  {
                             limit = {
                                 NOT = {
                                     has_trait = trait_thl_spirit
@@ -4339,7 +4339,7 @@ country_event = {
                     }
                     while = {
                         count = 2
-                        random_owned_pop = {
+                        random_owned_pop_group =  {
                             limit = {
                                 NOT = {
                                     has_trait = trait_thl_spirit
@@ -4358,7 +4358,7 @@ country_event = {
                     }
                 }
                 else = {
-                    random_owned_pop = {
+                    random_owned_pop_group =  {
                         limit = {
                             NOT = {
                                 has_trait = trait_thl_spirit
@@ -4380,7 +4380,7 @@ country_event = {
                 limit = {
                     has_deposit = sakura_tree_1
                 }
-                random_owned_pop = {
+                random_owned_pop_group =  {
                     limit = {
                         NOT = {
                             has_trait = trait_thl_spirit
@@ -4403,7 +4403,7 @@ country_event = {
                 }
                 while = {
                     count = 3
-                    random_owned_pop = {
+                    random_owned_pop_group =  {
                         limit = {
                             NOT = {
                                 has_trait = trait_thl_spirit
@@ -4427,7 +4427,7 @@ country_event = {
                 }
                 while = {
                     count = 5
-                    random_owned_pop = {
+                    random_owned_pop_group =  {
                         limit = {
                             NOT = {
                                 has_trait = trait_thl_spirit
@@ -4451,7 +4451,7 @@ country_event = {
                 }
                 while = {
                     count = 8
-                    random_owned_pop = {
+                    random_owned_pop_group =  {
                         limit = {
                             NOT = {
                                 has_trait = trait_thl_spirit
@@ -4791,7 +4791,7 @@ planet_event = {
                         has_deposit = sakura_tree_8
                     }
                 }
-                random_owned_pop = {
+                random_owned_pop_group =  {
                     species = {
                         save_event_target_as = dead_pop_species
                     }
@@ -5184,7 +5184,7 @@ planet_event = {
                     cooldown = yes
                 }
             }
-            every_owned_pop = {
+            every_owned_pop_group =  {
                 remove_pop_flag = youkai_released
             }
         }
@@ -5215,7 +5215,7 @@ planet_event = {
                     establish_communications_no_message = root.owner
                 }
             }
-            every_owned_pop = {
+            every_owned_pop_group =  {
                 limit = {
                     has_pop_flag = youkai_released
                 }
@@ -5339,7 +5339,7 @@ planet_event = {
                     establish_communications_no_message = root.owner
                 }
             }
-            every_owned_pop = {
+            every_owned_pop_group =  {
                 limit = {
                     has_pop_flag = youkai_released
                 }
@@ -5547,7 +5547,7 @@ country_event = {
                         create_fleet_from_naval_cap = 0.8
                     }
                 }
-                every_owned_pop = {
+                every_owned_pop_group =  {
                     remove_pop_flag = youkai_released
                 }
             }
@@ -5585,7 +5585,7 @@ country_event = {
             }
             FromFrom = {
                 remove_planet_flag = attacked_by_youkai
-                every_owned_pop = {
+                every_owned_pop_group =  {
                     remove_pop_flag = youkai_released
                 }
             }
@@ -5897,7 +5897,7 @@ planet_event = {
     }
 
     immediate = {
-        random_owned_pop = {
+        random_owned_pop_group =  {
             species = {
                 save_event_target_as = dead_pop_species
             }
@@ -6636,7 +6636,7 @@ planet_event = {
                 save_event_target_as = moriya_attacker
             }
         }
-        every_owned_pop = {
+        every_owned_pop_group =  {
             limit = {
                 has_ethic = ethic_spiritualist
             }

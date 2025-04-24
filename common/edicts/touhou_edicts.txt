@@ -860,7 +860,7 @@ bat_swarm = {
 					}
 				}
 				else = {
-					random_owned_pop = {
+					random_owned_pop_group =  {
 						kill_pop = yes
 					}
 				}
@@ -937,7 +937,7 @@ red_fog = {
 					}
 				}
 				else = {
-					random_owned_pop = {
+					random_owned_pop_group =  {
 						kill_pop = yes
 					}
 				}
