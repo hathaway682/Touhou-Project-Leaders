@@ -223,7 +223,7 @@ thl_leader_trait_crimson_sword_2 = {
 	}
 	leader_class = { commander }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -246,7 +246,7 @@ thl_leader_trait_crimson_sword_3 = {
 	}
 	leader_class = { commander }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -494,7 +494,7 @@ thl_leader_trait_theurgist = {
 		has_trait = subclass_commander_miko
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -572,7 +572,7 @@ thl_leader_trait_theurgist_2 = {
 	}
 	leader_class = { scientist commander official }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -650,7 +650,7 @@ thl_leader_trait_theurgist_3 = {
 	}
 	leader_class = { scientist commander official }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -690,7 +690,7 @@ thl_leader_trait_snake_bless = {
 		has_trait = thl_leader_trait_miracle
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -728,7 +728,7 @@ thl_leader_trait_snake_bless_2 = {
 	}
 	leader_class = { scientist commander official }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -766,7 +766,7 @@ thl_leader_trait_snake_bless_3 = {
 	}
 	leader_class = { scientist commander official }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -806,7 +806,7 @@ thl_leader_trait_frog_bless = {
 		has_trait = thl_leader_trait_miracle
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -844,7 +844,7 @@ thl_leader_trait_frog_bless_2 = {
 	}
 	leader_class = { scientist commander official }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -1109,7 +1109,7 @@ thl_leader_exorcism_roud_2 = {
 	}
 	leader_class = { commander }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -1129,7 +1129,7 @@ thl_leader_exorcism_roud_3 = {
 	}
 	leader_class = { commander }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -1265,7 +1265,7 @@ thl_leader_trait_iron_ass_2 = {
 	}
 	leader_class = { commander }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -1287,7 +1287,7 @@ thl_leader_trait_iron_ass_3 = {
 	}
 	leader_class = { commander }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -1948,7 +1948,7 @@ thl_leader_trait_relativistic_psychiatry_2 = {
 	leader_trait_type = veteran
 	leader_class = { scientist }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -1976,7 +1976,7 @@ thl_leader_trait_relativistic_psychiatry_3 = {
 	leader_trait_type = veteran
 	leader_class = { scientist }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -2031,7 +2031,7 @@ thl_leader_trait_super_unified_physics_2 = {
 	leader_trait_type = veteran
 	leader_class = { scientist }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -2059,7 +2059,7 @@ thl_leader_trait_super_unified_physics_3 = {
 	leader_trait_type = veteran
 	leader_class = { scientist }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -3994,7 +3994,7 @@ thl_leader_trait_super_youkai_slug = {
 		weapon_type_strike_craft_speed_mult = 0.25
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 	leader_potential_add = {
 		has_trait = thl_leader_trait_water
 	}
@@ -4018,7 +4018,7 @@ thl_leader_trait_super_youkai_slug_2 = {
 		weapon_type_strike_craft_speed_mult = 0.5
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 	custom_tooltip_with_modifiers = thl_leader_trait_super_youkai_slug_effect_tier_2
 	on_gained_effect = {
 		owner = {
@@ -4048,7 +4048,7 @@ thl_leader_trait_super_youkai_slug_3 = {
 		weapon_type_strike_craft_speed_mult = 1
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 	custom_tooltip_with_modifiers = thl_leader_trait_super_youkai_slug_effect_tier_3
 	on_gained_effect = {
 		owner = {
@@ -4080,7 +4080,7 @@ thl_leader_trait_convenience_house = {
 		planet_traders_engineering_research_produces_add = 0.5
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 	leader_potential_add = {
 		has_trait = thl_leader_trait_water
 	}
@@ -4109,7 +4109,7 @@ thl_leader_trait_convenience_house_2 = {
 		planet_traders_engineering_research_produces_add = 1
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 }
 
 thl_leader_trait_convenience_house_3 = {
@@ -4135,7 +4135,7 @@ thl_leader_trait_convenience_house_3 = {
 		planet_traders_engineering_research_produces_add = 1.5
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 }
 
 thl_leader_trait_engineer_in_water = {
@@ -4160,7 +4160,7 @@ thl_leader_trait_engineer_in_water = {
 		planet_artisans_engineering_research_produces_add = 0.5
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 	leader_potential_add = {
 		has_trait = thl_leader_trait_water
 	}
@@ -4189,7 +4189,7 @@ thl_leader_trait_engineer_in_water_2 = {
 		planet_artisans_engineering_research_produces_add = 1
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 }
 
 thl_leader_trait_engineer_in_water_3 = {
@@ -4215,7 +4215,7 @@ thl_leader_trait_engineer_in_water_3 = {
 		planet_artisans_engineering_research_produces_add = 1.5
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 }
 
 thl_leader_trait_optical_camouflage = {
@@ -4540,7 +4540,7 @@ thl_leader_trait_izakaya_2 = {
 		has_trait = thl_leader_trait_song
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 	custom_tooltip_with_modifiers = thl_leader_trait_izakaya_tooltip
 }
@@ -4567,7 +4567,7 @@ thl_leader_trait_izakaya_3 = {
 		has_trait = thl_leader_trait_song
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 	custom_tooltip_with_modifiers = thl_leader_trait_izakaya_tooltip
 }
@@ -4627,7 +4627,7 @@ thl_leader_trait_youkai_punk_2 = {
 		has_trait = thl_leader_trait_song
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -4657,7 +4657,7 @@ thl_leader_trait_youkai_punk_3 = {
 		has_trait = thl_leader_trait_song
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -4802,7 +4802,7 @@ thl_leader_trait_rabbit_leader_2 = {
 		has_trait = thl_leader_trait_luck
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -4834,7 +4834,7 @@ thl_leader_trait_rabbit_leader_3 = {
 		has_trait = thl_leader_trait_luck
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
