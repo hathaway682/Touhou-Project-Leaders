@@ -1254,7 +1254,7 @@ planet_event = {
         else = {
             if = {
                 limit = {
-                    num_pops > 40
+                    pop_amount > 4000
                 }
                 while = {
                     count = 16
@@ -1265,7 +1265,7 @@ planet_event = {
             }
             else_if = {
                 limit = {
-                    num_pops > 30
+                    pop_amount > 3000
                 }
                 while = {
                     count = 8
@@ -1276,7 +1276,7 @@ planet_event = {
             }
             else_if = {
                 limit = {
-                    num_pops > 20
+                    pop_amount > 2000
                 }
                 while = {
                     count = 4
@@ -2229,7 +2229,7 @@ planet_event = {
         }
         if = {
             limit = {
-                num_pops < 2
+                pop_amount < 200
             }
             set_variable = {
                 which = pop_growth_number
@@ -2238,8 +2238,8 @@ planet_event = {
         }
         else_if = {
             limit = {
-                num_pops > 2
-                num_pops < 6
+                pop_amount > 200
+                pop_amount < 600
             }
             set_variable = {
                 which = pop_growth_number
@@ -2248,7 +2248,7 @@ planet_event = {
         }
         else_if = {
             limit = {
-                num_pops > 6
+                pop_amount > 600
             }
             set_variable = {
                 which = pop_growth_number
@@ -2805,7 +2805,7 @@ planet_event = {
             }
             kill_pop = yes
         }
-        remove_district = district_industrial
+        remove_district = district_city
         add_deposit = d_failing_infrastructure
     }
 }
@@ -2845,21 +2845,21 @@ planet_event = {
         name = UNFORTUNATE
         if = {
             limit = {
-                num_pops < 2
+                pop_amount < 200
             }
             random_owned_pop = { kill_pop = yes }
         }
         else_if = {
             limit = {
-                num_pops > 2
-                num_pops < 6
+                pop_amount > 200
+                pop_amount < 600
             }
             random_owned_pop = { kill_pop = yes }
             random_owned_pop = { kill_pop = yes }
         }
         else_if = {
             limit = {
-                num_pops > 6
+                pop_amount > 600
             }
             random_owned_pop = { kill_pop = yes }
             random_owned_pop = { kill_pop = yes }

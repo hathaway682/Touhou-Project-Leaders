@@ -63,8 +63,8 @@ raiding = {
 			factor = 0
 			exists = from
 			from = {
-				OR = { 
-					num_pops < 2 
+				OR = {
+					pop_amount < 200
 					owner = { NOT = { is_hostile = root.owner } }
 				}
 			}

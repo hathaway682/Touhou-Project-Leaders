@@ -472,7 +472,7 @@ sizuha_spell_card_2_effect = {
             }
             else_if = {
                 limit = {
-                    num_pops > 0
+                    pop_amount > 0
                 }
                 while = {
                     count = 2

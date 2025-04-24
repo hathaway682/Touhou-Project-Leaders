@@ -616,7 +616,7 @@ planet_event = {
                         owner = {
                             NOT = { has_authority = auth_machine_intelligence }
                         }
-                        num_pops > 0
+                        pop_amount > 0
                         OR = {
                             is_planet_class = pc_continental
                             is_planet_class = pc_tropical
@@ -636,7 +636,7 @@ planet_event = {
                     factor = 0
                     NOR = {
                         is_capital = no
-                        num_pops > 0
+                        pop_amount > 0
                         NOR = {
                             has_global_flag = seismic_disturbance_global
                             is_planet_class = pc_nuked
@@ -658,7 +658,7 @@ planet_event = {
                         owner = {
                             NOT = { has_country_flag = FLDrone_country }
                         }
-                        num_pops > 0
+                        pop_amount > 0
                         NOR = {
                             is_planet_class = pc_habitat
                             has_planet_flag = FLDrone_event
@@ -693,7 +693,7 @@ planet_event = {
                             is_planet_class = pc_city
                             is_planet_class = pc_relic
                         }
-                        num_pops > 0
+                        pop_amount > 0
                     }
                 }
             }
@@ -704,7 +704,7 @@ planet_event = {
                     factor = 0
                     NOR = {
                         is_capital = no
-                        num_pops > 0
+                        pop_amount > 0
                         habitable_planet = yes
                         uses_district_set = standard
                         NOR = {
@@ -760,7 +760,7 @@ planet_event = {
                     factor = 0
                     NOR = {
                         is_capital = no
-                        num_pops > 0
+                        pop_amount > 0
                         years_passed < 50
                         NOR = {
                             is_planet_class = pc_habitat
@@ -792,7 +792,7 @@ planet_event = {
                                 has_ethic = ethic_gestalt_consciousness
                             }
                         }
-                        num_pops > 0
+                        pop_amount > 0
                         OR = {
                             is_planet_class = pc_continental
                             is_planet_class = pc_tropical
@@ -811,7 +811,7 @@ planet_event = {
                             has_technology = tech_destroyers
                             NOT = { has_country_flag = colony_submerged_cruiser }
                         }
-                        num_pops > 0
+                        pop_amount > 0
                         OR = {
                             is_planet_class = pc_continental
                             is_planet_class = pc_tropical
@@ -834,7 +834,7 @@ planet_event = {
                                 has_authority = auth_machine_intelligence
                             }
                         }
-                        num_pops > 0
+                        pop_amount > 0
                         NOR = {
                             is_planet_class = pc_ringworld_habitable
                             is_planet_class = pc_shattered_ring_habitable
@@ -852,7 +852,7 @@ planet_event = {
                         owner = {
                             NOT = { has_ethic = ethic_gestalt_consciousness }
                         }
-                        num_pops > 0
+                        pop_amount > 0
                         NOR = {
                             is_planet_class = pc_habitat
                         }
@@ -886,7 +886,7 @@ planet_event = {
                         is_capital = no
                         has_ground_combat = no
                         is_occupied_flag = no
-                        num_pops > 0
+                        pop_amount > 0
                         NOR = {
                             is_planet_class = pc_habitat
                             is_planet_class = pc_ringworld_habitable
@@ -907,7 +907,7 @@ planet_event = {
                     factor = 0
                     NOR = {
                         is_capital = no
-                        num_pops > 0
+                        pop_amount > 0
                         OR = {
                             is_planet_class = pc_continental
                             is_planet_class = pc_ocean
@@ -943,7 +943,7 @@ planet_event = {
                         owner = {
                             NOT = { has_authority = auth_machine_intelligence }
                         }
-                        num_pops > 0
+                        pop_amount > 0
                         OR = {
                             is_planet_class = pc_continental
                             is_planet_class = pc_tropical
@@ -988,7 +988,7 @@ planet_event = {
                             is_planet_class = pc_shattered_ring_habitable
                         }
                         NOT = { owner = { has_country_flag = bluelotus } }
-                        num_pops > 0
+                        pop_amount > 0
                         any_owned_pop_group = {
                             OR = {
                                 has_job = miner
@@ -2939,7 +2939,7 @@ country_event = {
             has_communications = root
             NOT = { has_closed_borders = root }
             any_owned_planet = {
-                num_pops >= 2
+                pop_amount > 100
                 any_owned_pop_group = {
                     is_enslaved = no
                     is_being_assimilated = no
@@ -2967,7 +2967,7 @@ country_event = {
                 has_communications = root
                 NOT = { has_closed_borders = root }
                 any_owned_planet = {
-                    num_pops >= 2
+                    pop_amount > 100
                     any_owned_pop_group = {
                         is_enslaved = no
                         is_being_assimilated = no
@@ -2979,7 +2979,7 @@ country_event = {
             }
             random_owned_planet = {
                 limit = {
-                    num_pops >= 2
+                    pop_amount > 100
                     any_owned_pop_group = {
                         is_enslaved = no
                         is_being_assimilated = no
@@ -4712,7 +4712,7 @@ planet_event = {
 
     trigger = {
         NOT = {
-            num_pops = 0
+            pop_amount = 0
         }
         any_owned_pop_group = {
             is_organic_species = yes
@@ -5862,7 +5862,7 @@ planet_event = {
 
     trigger = {
         NOT = {
-            num_pops = 0
+            pop_amount = 0
         }
         any_owned_pop_group = {
             is_organic_species = yes
@@ -7178,9 +7178,13 @@ planet_event = {
                     which = food_per_pop
                     value = monthly_food
                 }
+                multiply_variable = {
+                    which = food_per_pop
+                    value = 100
+                }
                 divide_variable = {
                     which = food_per_pop
-                    value = trigger:num_pops
+                    value = trigger:pop_amount
                 }
                 remove_modifier = harvest_happiness
                 add_modifier = {
@@ -10681,7 +10685,7 @@ country_event = {
         }
         any_owned_planet = {
             is_colony = yes
-            num_pops >= 25
+            pop_amount > 1005
             num_armies >= 2
         }
         count_owned_pop_amount = {
@@ -10692,7 +10696,7 @@ country_event = {
         random_owned_planet = {
             limit = {
                 is_colony = yes
-                num_pops >= 25
+                pop_amount > 1005
                 num_armies >= 2
             }
             save_global_event_target_as = marisa_alice_regeneration_location

@@ -4087,7 +4087,7 @@ country_event = {
 			random_playable_country = {
 				weights = {
 					base = 0
-					add = trigger:num_pops
+					add = trigger:pop_amount
 					add = trigger:trade_income
 				}
 				limit = {

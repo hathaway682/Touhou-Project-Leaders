@@ -201,8 +201,8 @@ decision_endless_banquet = {
 	resources = {
 		category = decisions
 		cost = {
-			consumer_goods = 250
-			multiplier = trigger:num_pops
+			consumer_goods = 1
+			multiplier = trigger:pop_amount
 		}
 	}
 
