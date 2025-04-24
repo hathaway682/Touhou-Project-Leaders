@@ -24,7 +24,7 @@ planet_telepaths = {
 
 planet_traders = {
 	parent = planet_jobs
-	modifier_category = pop
+	modifier_category = pop_group
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -54,7 +54,7 @@ planet_jobs = {
 		produces
 		upkeep
 	}
-	modifier_category = pop
+	modifier_category = pop_group
 
 	triggered_produces_modifier = {
 		key = planet_jobs_slave
@@ -341,11 +341,11 @@ planet_pop_assemblers = {
 		upkeep
 		produces
 	}
-	modifier_category = pop
+	modifier_category = pop_group
 
 	generate_add_modifiers = {
 		upkeep
 		produces
 	}
-	modifier_category = pop
+	modifier_category = pop_group
 }
