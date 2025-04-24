@@ -515,7 +515,7 @@ touhou_archivist = {
             }
         }
         modifier = {
-            pop_defense_armies_add = 1
+            #pop_defense_armies_add = 1
         }
     }
 
@@ -950,7 +950,7 @@ touhou_bookseller = {
             }
         }
         modifier = {
-            pop_defense_armies_add = 1
+            #pop_defense_armies_add = 1
         }
     }
 
@@ -1487,7 +1487,7 @@ magician = {
     }
 
     pop_modifier = {
-        pop_defense_armies_add = 3
+        #pop_defense_armies_add = 3
     }
 
     triggered_pop_modifier = {
@@ -1501,7 +1501,7 @@ magician = {
             }
         }
         modifier = {
-            pop_defense_armies_add = 2
+            #pop_defense_armies_add = 2
         }
     }
 
