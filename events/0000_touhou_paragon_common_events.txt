@@ -1612,7 +1612,7 @@ country_event = {
 					add_trait = trait_thl_magician
 					add_traits_at_start_of_list = yes
 				}
-				clear_pop_category = yes
+				#clear_pop_category = yes
 				planet = {
 					change_variable = {
 						which = var_necrophaged_pops

@@ -2998,7 +2998,7 @@ country_event = {
                         planet = event_target:banquet_planet
                         pop = this
                     }
-                    clear_pop_category = yes
+                    #clear_pop_category = yes
                 }
             }
         }
@@ -5684,11 +5684,11 @@ planet_event = { #Braiiiins
             }
         }
     }
-    after = {
-        fromfrom = {
-            clear_pop_category = yes #To make sure that the zombie pop does not spawn as a non worker strata
-        }
-    }
+    # after = {
+    #     fromfrom = {
+    #         clear_pop_category = yes #To make sure that the zombie pop does not spawn as a non worker strata
+    #     }
+    # }
 }
 
 planet_event = { #Braiiiins
@@ -5726,11 +5726,11 @@ planet_event = { #Braiiiins
             }
         }
     }
-    after = {
-        fromfrom = {
-            clear_pop_category = yes #To make sure that the zombie pop does not spawn as a non worker strata
-        }
-    }
+    # after = {
+    #     fromfrom = {
+    #         clear_pop_category = yes #To make sure that the zombie pop does not spawn as a non worker strata
+    #     }
+    # }
 }
 
 planet_event = {
