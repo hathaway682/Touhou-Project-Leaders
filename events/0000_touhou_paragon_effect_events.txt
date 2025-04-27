@@ -989,10 +989,14 @@ planet_event = {
                         }
                         NOT = { owner = { has_country_flag = bluelotus } }
                         pop_amount > 0
-                        any_owned_pop_group = {
-                            OR = {
-                                has_job = miner
-                                has_job = mining_drone
+                        OR = {
+                            num_assigned_jobs = {
+                                job = miner
+                                value >= 1
+                            }
+                            num_assigned_jobs = {
+                                job = mining_drone
+                                value >= 1
                             }
                         }
                     }
@@ -5669,8 +5673,9 @@ planet_event = { #Braiiiins
             NOT = { has_trait = trait_thl_spirit }
         }
         owner = { has_valid_civic = civic_nether_world }
-        any_owned_pop_group = {
-            has_job = death_chronicler
+        num_assigned_jobs = {
+            job = death_chronicler
+            value >= 1
         }
     }
 

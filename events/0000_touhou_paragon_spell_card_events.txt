@@ -2720,14 +2720,6 @@ planet_event = {
     option = {
         name = UNFORTUNATE
         random_owned_pop_group =  {
-            limit = {
-                OR = {
-                    has_job = miner
-                    has_job = scrap_miner
-                    has_job = mining_drone
-                    has_job = scrap_miner_drone
-                }
-            }
             kill_pop = yes
         }
         if = {
@@ -2757,12 +2749,6 @@ planet_event = {
     option = {
         name = UNFORTUNATE
         random_owned_pop_group =  {
-            limit = {
-                OR = {
-                    has_job = technician
-                    has_job = technician_drone
-                }
-            }
             kill_pop = yes
         }
         if = {
@@ -2792,17 +2778,6 @@ planet_event = {
     option = {
         name = UNFORTUNATE
         random_owned_pop_group =  {
-            limit = {
-                OR = {
-                    has_job = artisan
-                    has_job = artisan_drone
-                    has_job = artificer
-                    has_job = foundry
-                    has_job = alloy_drone
-                    has_job = catalytic_technician
-                    has_job = catalytic_drone
-                }
-            }
             kill_pop = yes
         }
         remove_district = district_city

@@ -108,15 +108,15 @@ miko = {
 			factor = 0.1
 			can_take_servant_job = yes
 		}
-		modifier = {
-			factor = 0.1
-			has_ethic = ethic_materialist
-			NOT = { has_job = miko }
-		}
-		modifier = {
-			factor = 1.5
-			has_job = miko
-		}
+		# modifier = {
+		# 	factor = 0.1
+		# 	has_ethic = ethic_materialist
+		# 	NOT = { has_job = miko }
+		# }
+		# modifier = {
+		# 	factor = 1.5
+		# 	has_job = miko
+		# }
 		modifier = {
 			factor = 0.1
 			is_enslaved = yes
@@ -227,15 +227,15 @@ moriya_miko = {
 			factor = 0.1
 			can_take_servant_job = yes
 		}
-		modifier = {
-			factor = 0.1
-			has_ethic = ethic_spiritualist
-			NOT = { has_job = moriya_miko }
-		}
-		modifier = {
-			factor = 1.5
-			has_job = moriya_miko
-		}
+		# modifier = {
+		# 	factor = 0.1
+		# 	has_ethic = ethic_spiritualist
+		# 	NOT = { has_job = moriya_miko }
+		# }
+		# modifier = {
+		# 	factor = 1.5
+		# 	has_job = moriya_miko
+		# }
 		modifier = {
 			factor = 0.1
 			is_enslaved = yes
@@ -384,15 +384,15 @@ hakurei_miko = {
 			factor = 0.1
 			can_take_servant_job = yes
 		}
-		modifier = {
-			factor = 0.1
-			has_ethic = ethic_materialist
-			NOT = { has_job = hakurei_miko }
-		}
-		modifier = {
-			factor = 1.5
-			has_job = hakurei_miko
-		}
+		# modifier = {
+		# 	factor = 0.1
+		# 	has_ethic = ethic_materialist
+		# 	NOT = { has_job = hakurei_miko }
+		# }
+		# modifier = {
+		# 	factor = 1.5
+		# 	has_job = hakurei_miko
+		# }
 		modifier = {
 			factor = 0.1
 			is_enslaved = yes

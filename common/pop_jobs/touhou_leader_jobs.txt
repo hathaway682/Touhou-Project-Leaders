@@ -105,10 +105,10 @@ head_researcher = {
             factor = 2
             has_living_standard = { type = living_standard_academic_privilege }
         }
-        modifier = {
-            factor = 5
-            has_job = head_researcher
-        }
+        # modifier = {
+        #     factor = 5
+        #     has_job = head_researcher
+        # }
         modifier = {
             factor = 0.01
             exists = planet
@@ -229,10 +229,10 @@ healthcare = {
             factor = 0.1
             can_take_servant_job = yes
         }
-        modifier = {
-            factor = 1.5
-            has_job = healthcare
-        }
+        # modifier = {
+        #     factor = 1.5
+        #     has_job = healthcare
+        # }
         modifier = {
             factor = 2
             owner = { has_valid_civic = civic_private_healthcare_corporate }
@@ -264,14 +264,14 @@ healthcare = {
             is_enslaved = yes
             has_slavery_type = { type = slavery_indentured }
         }
-        modifier = {
-            factor = 10
-            NOT = { has_job = healthcare }
-            planet = {
-                free_amenities < 0
-                has_available_jobs = healthcare
-            }
-        }
+        # modifier = {
+        #     factor = 10
+        #     NOT = { has_job = healthcare }
+        #     planet = {
+        #         free_amenities < 0
+        #         has_available_jobs = healthcare
+        #     }
+        # }
     }
 }
 
@@ -382,10 +382,10 @@ foundry = {
             is_enslaved = yes
             can_take_servant_job = no
         }
-        modifier = {
-            factor = 5
-            has_job = foundry
-        }
+        # modifier = {
+        #     factor = 5
+        #     has_job = foundry
+        # }
     }
 }
 
@@ -444,10 +444,10 @@ death_chronicler = {
             factor = 0.1
             can_take_servant_job = yes
         }
-        modifier = {
-            factor = 1.5
-            has_job = death_chronicler
-        }
+        # modifier = {
+        #     factor = 1.5
+        #     has_job = death_chronicler
+        # }
     }
 }
 
@@ -535,10 +535,10 @@ touhou_archivist = {
             factor = 0.1
             can_take_servant_job = yes
         }
-        modifier = {
-            factor = 1.5
-            has_job = touhou_archivist
-        }
+        # modifier = {
+        #     factor = 1.5
+        #     has_job = touhou_archivist
+        # }
         modifier = {
             factor = 0.8
             is_enslaved = yes
@@ -844,7 +844,7 @@ grower_drone = {
         mult = value:job_weights_modifier|JOB|agri_drone|RESOURCE|food|
         modifier = {
             factor = 0.9
-            NOT = { has_job = agri_drone }
+            # NOT = { has_job = agri_drone }
             owner = {
                 has_monthly_income = {
                     resource = food
@@ -852,10 +852,10 @@ grower_drone = {
                 }
             }
         }
-        modifier = {
-            factor = 1.2
-            has_job = agri_drone
-        }
+        # modifier = {
+        #     factor = 1.2
+        #     has_job = agri_drone
+        # }
         modifier = {
             factor = 0.9
             owner = {
@@ -975,10 +975,10 @@ touhou_bookseller = {
             factor = 0.1
             can_take_servant_job = yes
         }
-        modifier = {
-            factor = 1.5
-            has_job = touhou_bookseller
-        }
+        # modifier = {
+        #     factor = 1.5
+        #     has_job = touhou_bookseller
+        # }
         modifier = {
             factor = 0.8
             is_enslaved = yes
@@ -1042,10 +1042,10 @@ touhou_historian = {
             factor = 0.1
             can_take_servant_job = yes
         }
-        modifier = {
-            factor = 1.5
-            has_job = touhou_historian
-        }
+        # modifier = {
+        #     factor = 1.5
+        #     has_job = touhou_historian
+        # }
         modifier = {
             factor = 0.8
             is_enslaved = yes
@@ -1261,10 +1261,10 @@ maple_sugar_harvester = {
             factor = 0.1
             can_take_servant_job = yes
         }
-        modifier = {
-            factor = 1.5
-            has_job = maple_sugar_harvester
-        }
+        # modifier = {
+        #     factor = 1.5
+        #     has_job = maple_sugar_harvester
+        # }
         modifier = {
             factor = 0.8
             is_enslaved = yes
@@ -1423,10 +1423,10 @@ izakaya_worker = {
         weight = @specialist_job_weight
         mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
-        modifier = {
-            factor = 5
-            has_job = izakaya_worker
-        }
+        # modifier = {
+        #     factor = 5
+        #     has_job = izakaya_worker
+        # }
         # crisis purge
         modifier = {
             factor = 0.01
@@ -1539,10 +1539,10 @@ magician = {
             factor = 0.1
             can_take_servant_job = yes
         }
-        modifier = {
-            factor = 1.5
-            has_job = magician
-        }
+        # modifier = {
+        #     factor = 1.5
+        #     has_job = magician
+        # }
         modifier = {
             factor = 0.8
             is_enslaved = yes

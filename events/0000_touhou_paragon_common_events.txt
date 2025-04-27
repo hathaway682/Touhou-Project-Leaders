@@ -572,14 +572,15 @@ country_event = {
 					has_global_flag = mystia
 					has_country_flag = dismissed_mystia
 				}
-				count_owned_pop_amount = {
-					limit = {
-						OR = {
-							has_job = entertainer
-							has_job = duelist
-						}
+				OR = {
+					num_assigned_jobs = {
+						job = entertainer
+						value >= 1000
 					}
-					count >= 1000
+					num_assigned_jobs = {
+						job = duelist
+						value >= 1000
+					}
 				}
 				any_owned_planet = {
 					OR = {
@@ -1602,7 +1603,7 @@ country_event = {
 			}
 			every_owned_pop_group =  {
 				limit = {
-					has_job = magician
+					#has_job = magician
 					NOT = {
 						has_trait = trait_thl_magician
 					}
@@ -2127,13 +2128,13 @@ leader_event = {
 			if = {
 				limit = {
 					any_owned_pop_group = {
-						has_job = researcher
+						#has_job = researcher
 					}
 					NOT = { has_trait = trait_thl_spirit }
 				}
 				random_owned_pop_group = {
 					limit = {
-						has_job = researcher
+						#has_job = researcher
 						NOT = { has_trait = trait_thl_spirit }
 					}
 					species = {
