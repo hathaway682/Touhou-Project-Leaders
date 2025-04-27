@@ -514,9 +514,10 @@ country_event = {
                         save_event_target_as = target_planet
                     }
                 }
-                resettle_pop = { # Kidnap pop
-                    pop = event_target:kidnapped_pop
-                    planet = event_target:target_planet
+                resettle_pop_group = { # Kidnap pop
+                    POP_GROUP = event_target:kidnapped_pop
+                    PLANET = event_target:target_planet
+                    AMOUNT = 100
                 }
                 event_target:kidnapped_pop = {
                     set_citizenship_type = {
@@ -2998,9 +2999,10 @@ country_event = {
                         is_being_purged = no
                         can_live_on_planet = event_target:banquet_planet
                     }
-                    resettle_pop = {
-                        planet = event_target:banquet_planet
-                        pop = this
+                    resettle_pop_group = {
+                        PLANET = event_target:banquet_planet
+                        POP = this
+                        AMOUNT = 100
                     }
                     #clear_pop_category = yes
                 }

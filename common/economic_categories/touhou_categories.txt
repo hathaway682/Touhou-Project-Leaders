@@ -24,7 +24,7 @@ planet_telepaths = {
 
 planet_traders = {
 	parent = planet_jobs
-	modifier_category = pop_group
+	modifier_category = pop_job
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -54,18 +54,11 @@ planet_jobs = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_group
 
-	triggered_produces_modifier = {
-		key = planet_jobs_slave
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			is_pop_category = slave
-			has_job_category = worker
-		}
+	generate_add_modifiers = {
+		produces
 	}
+	modifier_category = pop_job
 
 	triggered_produces_modifier = {
 		key = planet_psionic_jobs
@@ -73,7 +66,10 @@ planet_jobs = {
 			mult
 		}
 		trigger = {
-			has_trait = trait_psionic
+			OR = {
+				has_trait = trait_psionic
+				has_trait = trait_latent_psionic
+			}
 		}
 	}
 
@@ -88,12 +84,22 @@ planet_jobs = {
 	}
 
 	triggered_produces_modifier = {
+		key = planet_virtual_jobs
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			has_virtual_species_trait = yes
+		}
+	}
+
+	triggered_produces_modifier = {
 		key = planet_doll_jobs
 		modifier_types = {
 			mult
 		}
 		trigger = {
-			has_trait = trait_thl_doll
+			has_trait = trait_thl_spirit
 		}
 	}
 
@@ -104,223 +110,6 @@ planet_jobs = {
 		}
 		trigger = {
 			has_trait = trait_thl_spirit
-		}
-	}
-
-
-	triggered_produces_modifier = {
-		key = habitat_jobs
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			exists = planet
-			planet = { is_planet_class = pc_habitat }
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = non_artificial_planet_jobs
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			exists = planet
-			planet = { is_artificial = no }
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_jobs_worker
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			OR = {
-				is_pop_category = worker
-				AND = {
-					is_pop_category = slave # Yes, slave should count towards both worker and slave
-					has_job_category = worker
-				}
-				is_pop_category = simple_drone
-			}
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_doll_jobs_worker
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			OR = {
-				is_pop_category = worker
-				AND = {
-					is_pop_category = slave # Yes, slave should count towards both worker and slave
-					has_job_category = worker
-				}
-				is_pop_category = simple_drone
-			}
-			has_trait = trait_thl_doll
-		}
-	}
-
-	triggered_produces_modifier = { #use this one if deliberately excluding worker drones
-		key = planet_jobs_worker_only
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			OR = {
-				is_pop_category = worker
-				AND = {
-					is_pop_category = slave # Yes, slave should count towards both worker and slave
-					has_job_category = worker
-				}
-			}
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_jobs_specialist
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			OR = {
-				is_pop_category = specialist
-				is_pop_category = complex_drone #planet_jobs_complex_drone is preferable for stuff visible during galaxy setup
-				AND = {
-					is_pop_category = slave
-					has_job_category = specialist
-				}
-			}
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_doll_jobs_specialist
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			OR = {
-				is_pop_category = specialist
-				is_pop_category = complex_drone #planet_jobs_complex_drone is preferable for stuff visible during galaxy setup
-				AND = {
-					is_pop_category = slave
-					has_job_category = specialist
-				}
-			}
-			has_trait = trait_thl_doll
-		}
-	}
-
-	triggered_upkeep_modifier = {
-		key = planet_jobs_specialist
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			OR = {
-				is_pop_category = specialist
-				is_pop_category = complex_drone #planet_jobs_complex_drone is preferable for stuff visible during galaxy setup
-				AND = {
-					is_pop_category = slave
-					has_job_category = specialist
-				}
-			}
-		}
-	}
-
-	triggered_produces_modifier = { #use this one if deliberately excluding complex drones
-		key = planet_jobs_specialist_only
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			OR = {
-				is_pop_category = specialist
-				AND = {
-					is_pop_category = slave
-					has_job_category = specialist
-				}
-			}
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_doll_jobs_ruler
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			is_pop_category = ruler
-			has_trait = trait_thl_doll
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_jobs_ruler
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			is_pop_category = ruler
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_jobs_simple_drone
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			is_pop_category = simple_drone
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_jobs_complex_drone
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			is_pop_category = complex_drone
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_jobs_complex_and_simple_drone
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			OR = {
-				is_pop_category = complex_drone
-				is_pop_category = simple_drone
-			}
-
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_jobs_robotic
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			is_robot_pop = yes
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_jobs_organics
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			is_robot_pop = no
 		}
 	}
 
@@ -341,11 +130,11 @@ planet_pop_assemblers = {
 		upkeep
 		produces
 	}
-	modifier_category = pop_group
+	modifier_category = pop_job
 
 	generate_add_modifiers = {
 		upkeep
 		produces
 	}
-	modifier_category = pop_group
+	modifier_category = pop_job
 }

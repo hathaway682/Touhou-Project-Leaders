@@ -29,49 +29,49 @@ doll_control_limit = {
 spirit_empire_size_mult = {
 	icon = mod_species_empire_size_mult
 	good = no
-	category = pop_group
+	category = pop
 	percentage = yes
 }
 
 spirit_amenities_usage_mult = {
 	icon = mod_pop_group_amenities_usage_mult
 	good = no
-	category = pop_group
+	category = pop
 	percentage = yes
 }
 
 spirit_job_amenities_mult = {
 	icon = mod_pop_group_job_amenities_mult
 	good = yes
-	category = pop_group
+	category = pop
 	percentage = yes
 }
 
 planet_rabbit_produces_mult = {
 	icon = mod_planet_jobs_produces_mult
 	good = yes
-	category = pop_group
+	category = pop
 	percentage = yes
 }
 
 rabbit_empire_size_mult = {
 	icon = mod_species_empire_size_mult
 	good = no
-	category = pop_group
+	category = pop
 	percentage = yes
 }
 
 death_pop_group_generation_chance = {
 	icon = mod_country_piracy_risk_mult
 	good = yes
-	category = pop_group
+	category = pop
 	percentage = yes
 }
 
 culture_workers_modifier_mult = {
 	icon = mod_job_culture_worker_add
 	good = yes
-	category = pop_group
+	category = pop
 	percentage = yes
 }
 
