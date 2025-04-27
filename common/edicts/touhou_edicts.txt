@@ -843,7 +843,7 @@ bat_swarm = {
 						limit = {
 							is_unemployed = yes
 						}
-						kill_pop = yes
+						kill_single_pop = yes
 					}
 				}
 				else_if = {
@@ -856,12 +856,12 @@ bat_swarm = {
 						limit = {
 							is_enslaved = yes
 						}
-						kill_pop = yes
+						kill_single_pop = yes
 					}
 				}
 				else = {
 					random_owned_pop_group =  {
-						kill_pop = yes
+						kill_single_pop = yes
 					}
 				}
 			}
@@ -938,7 +938,7 @@ red_fog = {
 				}
 				else = {
 					random_owned_pop_group =  {
-						kill_pop = yes
+						kill_single_pop = yes
 					}
 				}
 			}

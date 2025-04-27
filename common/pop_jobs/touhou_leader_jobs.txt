@@ -505,19 +505,19 @@ touhou_archivist = {
         }
     }
 
-    triggered_pop_modifier = {
-        potential = {
-            planet = {
-                exists = army_leader
-                army_leader = {
-                    has_trait = leader_trait_academia_recruiter
-                }
-            }
-        }
-        modifier = {
-            #pop_defense_armies_add = 1
-        }
-    }
+    # triggered_pop_modifier = {
+    #     potential = {
+    #         planet = {
+    #             exists = army_leader
+    #             army_leader = {
+    #                 has_trait = leader_trait_academia_recruiter
+    #             }
+    #         }
+    #     }
+    #     modifier = {
+    #         pop_defense_armies_add = 1
+    #     }
+    # }
 
     weight = {
         weight = @specialist_job_weight
@@ -595,13 +595,13 @@ dollmaker = {
     triggered_planet_modifier = {
         potential = { owner = { has_technology = tech_automatic_dolls } }
         doll_control_limit = 20
-        planet_doll_jobs_worker_produces_mult = 0.05
+        #planet_doll_jobs_worker_produces_mult = 0.05
     }
 
     triggered_planet_modifier = {
         potential = { owner = { has_technology = tech_sapient_dolls } }
         doll_control_limit = -40
-        planet_doll_jobs_specialist_produces_mult = 0.05
+        #planet_doll_jobs_specialist_produces_mult = 0.05
     }
 
     resources = {
@@ -1061,9 +1061,9 @@ corpse_battery = {
     is_capped_by_modifier = no
     clothes_texture_index = 2
 
-    pop_modifier = {
-        pop_housing_usage_add = -0.5
-    }
+    # pop_modifier = {
+    #     pop_housing_usage_add = -0.5
+    # }
 
     possible_pre_triggers = {
         is_sapient = yes
@@ -1486,24 +1486,24 @@ magician = {
         }
     }
 
-    pop_modifier = {
-        #pop_defense_armies_add = 3
-    }
+    # pop_modifier = {
+    #     pop_defense_armies_add = 3
+    # }
 
-    triggered_pop_modifier = {
-        potential = {
-            exists = planet
-            planet = {
-                exists = leader
-                leader = {
-                    leader_class = commander
-                }
-            }
-        }
-        modifier = {
-            #pop_defense_armies_add = 2
-        }
-    }
+    # triggered_pop_modifier = {
+    #     potential = {
+    #         exists = planet
+    #         planet = {
+    #             exists = leader
+    #             leader = {
+    #                 leader_class = commander
+    #             }
+    #         }
+    #     }
+    #     modifier = {
+    #         pop_defense_armies_add = 2
+    #     }
+    # }
 
     resources = {
         category = planet_researchers
