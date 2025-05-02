@@ -3766,46 +3766,36 @@ country_event = {
     }
 }
 
-pop_event = {
-    id = touhou_paragon_effect.601
-    hide_window = yes
-
-    is_triggered_only = yes
-
-    trigger = {
-        from = {
-            has_orbital_bombardment_stance = raiding_ghost
-        }
-    }
-
-    immediate = {
-        if = {
-            limit = {
-                OR = {
-                    is_organic_species = no
-                    has_trait = trait_hive_mind
-                }
-            }
-            kill_pop = yes
-        }
-        else = {
-            from = {
-                random_fleet_in_orbit = {
-                    limit = {
-                        exists = leader
-                        leader = {
-                            has_trait = thl_leader_trait_price_of_life
-                        }
-                    }
-                }
-            }
-            modify_species = {
-                species = this
-                add_trait = trait_thl_spirit
-            }
-        }
-    }
-}
+# pop_event = {
+#     id = touhou_paragon_effect.601
+#     hide_window = yes
+#
+#     is_triggered_only = yes
+#
+#     trigger = {
+#         from = {
+#             has_orbital_bombardment_stance = raiding_ghost
+#         }
+#     }
+#
+#     immediate = {
+#         if = {
+#             limit = {
+#                 OR = {
+#                     is_organic_species = no
+#                     has_trait = trait_hive_mind
+#                 }
+#             }
+#             kill_pop = yes
+#         }
+#         else = {
+#             modify_species = {
+#                 species = this
+#                 add_trait = trait_thl_spirit
+#             }
+#         }
+#     }
+# }
 
 #再生
 country_event = {
@@ -4201,490 +4191,6 @@ leader_event = {
     }
 }
 
-country_event = {
-    id = touhou_paragon_effect.800
-    hide_window = yes
-
-    is_triggered_only = yes
-
-    trigger = {
-        any_owned_planet = {
-            OR = {
-                AND = {
-                    exists = leader
-                    leader = {
-                        has_trait = thl_leader_trait_death
-                    }
-                }
-                has_modifier = assimilate_spirit
-                OR = {
-                    has_deposit = sakura_tree
-                    has_deposit = sakura_tree_1
-                    has_deposit = sakura_tree_3
-                    has_deposit = sakura_tree_5
-                    has_deposit = sakura_tree_8
-                }
-            }
-            any_owned_pop_group = {
-                NOT = {
-                    has_trait = trait_thl_spirit
-                }
-                NOR = {
-                    is_organic_species = no
-                    has_trait = trait_hive_mind
-                }
-            }
-        }
-    }
-    immediate = {
-        every_owned_planet = {
-            if = {
-                limit = {
-                    has_modifier = assimilate_spirit
-                }
-                random_list = {
-                    1 = {
-                        while = {
-                            count = 3
-                            random_owned_pop_group =  {
-                                limit = {
-                                    NOT = {
-                                        has_trait = trait_thl_spirit
-                                    }
-                                    NOR = {
-                                        is_organic_species = no
-                                        has_trait = trait_hive_mind
-                                    }
-                                }
-                                modify_species = {
-                                    species = this
-                                    add_trait = trait_thl_spirit
-                                    add_traits_at_start_of_list = yes
-                                }
-                            }
-                        }
-                    }
-                    1 = {
-                        while = {
-                            count = 6
-                            random_owned_pop_group =  {
-                                limit = {
-                                    NOT = {
-                                        has_trait = trait_thl_spirit
-                                    }
-                                    NOR = {
-                                        is_organic_species = no
-                                        has_trait = trait_hive_mind
-                                    }
-                                }
-                                modify_species = {
-                                    species = this
-                                    add_trait = trait_thl_spirit
-                                    add_traits_at_start_of_list = yes
-                                }
-                            }
-                        }
-                    }
-                    1 = {
-                        while = {
-                            count = 12
-                            random_owned_pop_group =  {
-                                limit = {
-                                    NOT = {
-                                        has_trait = trait_thl_spirit
-                                    }
-                                    NOR = {
-                                        is_organic_species = no
-                                        has_trait = trait_hive_mind
-                                    }
-                                }
-                                modify_species = {
-                                    species = this
-                                    add_trait = trait_thl_spirit
-                                    add_traits_at_start_of_list = yes
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            if = {
-                limit = {
-                    exists = leader
-                    leader = {
-                        has_trait = thl_leader_trait_death
-                    }
-                }
-                if = {
-                    limit = {
-                        num_organic_pops_per_year > 0.3
-                    }
-                    while = {
-                        count = 3
-                        random_owned_pop_group =  {
-                            limit = {
-                                NOT = {
-                                    has_trait = trait_thl_spirit
-                                }
-                                NOR = {
-                                    is_organic_species = no
-                                    has_trait = trait_hive_mind
-                                }
-                            }
-                            modify_species = {
-                                species = this
-                                add_trait = trait_thl_spirit
-                                add_traits_at_start_of_list = yes
-                            }
-                        }
-                    }
-                }
-                else_if = {
-                    limit = {
-                        num_organic_pops_per_year > 0.2
-                    }
-                    while = {
-                        count = 2
-                        random_owned_pop_group =  {
-                            limit = {
-                                NOT = {
-                                    has_trait = trait_thl_spirit
-                                }
-                                NOR = {
-                                    is_organic_species = no
-                                    has_trait = trait_hive_mind
-                                }
-                            }
-                            modify_species = {
-                                species = this
-                                add_trait = trait_thl_spirit
-                                add_traits_at_start_of_list = yes
-                            }
-                        }
-                    }
-                }
-                else = {
-                    random_owned_pop_group =  {
-                        limit = {
-                            NOT = {
-                                has_trait = trait_thl_spirit
-                            }
-                            NOR = {
-                                is_organic_species = no
-                                has_trait = trait_hive_mind
-                            }
-                        }
-                        modify_species = {
-                            species = this
-                            add_trait = trait_thl_spirit
-                            add_traits_at_start_of_list = yes
-                        }
-                    }
-                }
-            }
-            if = {
-                limit = {
-                    has_deposit = sakura_tree_1
-                }
-                random_owned_pop_group =  {
-                    limit = {
-                        NOT = {
-                            has_trait = trait_thl_spirit
-                        }
-                        NOR = {
-                            is_organic_species = no
-                            has_trait = trait_hive_mind
-                        }
-                    }
-                    modify_species = {
-                        species = this
-                        add_trait = trait_thl_spirit
-                        add_traits_at_start_of_list = yes
-                    }
-                }
-            }
-            if = {
-                limit = {
-                    has_deposit = sakura_tree_3
-                }
-                while = {
-                    count = 3
-                    random_owned_pop_group =  {
-                        limit = {
-                            NOT = {
-                                has_trait = trait_thl_spirit
-                            }
-                            NOR = {
-                                is_organic_species = no
-                                has_trait = trait_hive_mind
-                            }
-                        }
-                        modify_species = {
-                            species = this
-                            add_trait = trait_thl_spirit
-                            add_traits_at_start_of_list = yes
-                        }
-                    }
-                }
-            }
-            if = {
-                limit = {
-                    has_deposit = sakura_tree_5
-                }
-                while = {
-                    count = 5
-                    random_owned_pop_group =  {
-                        limit = {
-                            NOT = {
-                                has_trait = trait_thl_spirit
-                            }
-                            NOR = {
-                                is_organic_species = no
-                                has_trait = trait_hive_mind
-                            }
-                        }
-                        modify_species = {
-                            species = this
-                            add_trait = trait_thl_spirit
-                            add_traits_at_start_of_list = yes
-                        }
-                    }
-                }
-            }
-            if = {
-                limit = {
-                    has_deposit = sakura_tree_8
-                }
-                while = {
-                    count = 8
-                    random_owned_pop_group =  {
-                        limit = {
-                            NOT = {
-                                has_trait = trait_thl_spirit
-                            }
-                            NOR = {
-                                is_organic_species = no
-                                has_trait = trait_hive_mind
-                            }
-                        }
-                        modify_species = {
-                            species = this
-                            add_trait = trait_thl_spirit
-                            add_traits_at_start_of_list = yes
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-planet_event = {
-    id = touhou_paragon_effect.801
-    is_triggered_only = yes
-    hide_window = yes
-
-    trigger = {
-        FromFrom = {
-            is_organic_species = yes
-            NOR = {
-                has_trait = trait_zombie
-                has_trait = trait_thl_spirit
-                has_trait = trait_hive_mind
-            }
-        }
-        owner = {
-            NOT = {
-                has_origin = origin_necrophage
-            }
-        }
-        From = {
-            NAND = {
-                any_owned_leader = {
-                    is_councilor = yes
-                    has_trait = thl_leader_trait_corpse_travel
-                }
-                any_owned_planet = {
-                    exists = leader
-                    leader = {
-                        has_trait = thl_leader_trait_corpse_travel
-                    }
-                }
-            }
-        }
-        any_galaxy_planet = {
-            OR = {
-                has_deposit = sakura_tree_1
-                has_deposit = sakura_tree_3
-                has_deposit = sakura_tree_5
-                has_deposit = sakura_tree_8
-            }
-        }
-        NOT = {
-            is_planet_class = pc_cosmogenesis_world
-        }
-    }
-
-    immediate = {
-        random_list = {
-            9 = {
-                modifier = {
-                    subtract = 2
-                    any_galaxy_planet = {
-                        has_deposit = sakura_tree_3
-                    }
-                }
-                modifier = {
-                    subtract = 4
-                    any_galaxy_planet = {
-                        has_deposit = sakura_tree_5
-                    }
-                }
-                modifier = {
-                    subtract = 7
-                    any_galaxy_planet = {
-                        has_deposit = sakura_tree_8
-                    }
-                }
-            }
-            1 = {
-                modifier = {
-                    add = 2
-                    any_galaxy_planet = {
-                        has_deposit = sakura_tree_3
-                    }
-                }
-                modifier = {
-                    add = 4
-                    any_galaxy_planet = {
-                        has_deposit = sakura_tree_5
-                    }
-                }
-                modifier = {
-                    add = 7
-                    any_galaxy_planet = {
-                        has_deposit = sakura_tree_8
-                    }
-                }
-                FromFrom = {
-                    species = {
-                        save_event_target_as = dead_pop_species
-                    }
-                }
-                save_event_target_as = source_planet
-                if = {
-                    limit = {
-                        OR = {
-                            has_deposit = sakura_tree_1
-                            has_deposit = sakura_tree_3
-                            has_deposit = sakura_tree_5
-                            has_deposit = sakura_tree_8
-                            has_active_building = building_soul_nexus
-                        }
-                    }
-                    owner = {
-                        save_event_target_as = ghost_target
-                    }
-                    save_event_target_as = target_planet
-                    create_pop_group = { species = event_target:dead_pop_species }
-                }
-                else_if = {
-                    limit = {
-                        from = {
-                            any_owned_planet = {
-                                OR = {
-                                    has_deposit = sakura_tree_1
-                                    has_deposit = sakura_tree_3
-                                    has_deposit = sakura_tree_5
-                                    has_deposit = sakura_tree_8
-                                    has_active_building = building_soul_nexus
-                                }
-                            }
-                        }
-                    }
-                    from = {
-                        save_event_target_as = ghost_target
-                        random_owned_planet = {
-                            limit = {
-                                OR = {
-                                    has_deposit = sakura_tree_1
-                                    has_deposit = sakura_tree_3
-                                    has_deposit = sakura_tree_5
-                                    has_deposit = sakura_tree_8
-                                    has_active_building = building_soul_nexus
-                                }
-                            }
-                            save_event_target_as = target_planet
-                            create_pop_group = { species = event_target:dead_pop_species }
-                        }
-                    }
-                }
-                else = {
-                    random_galaxy_planet = {
-                        limit = {
-                            OR = {
-                                has_deposit = sakura_tree_1
-                                has_deposit = sakura_tree_3
-                                has_deposit = sakura_tree_5
-                                has_deposit = sakura_tree_8
-                                has_active_building = building_soul_nexus
-                            }
-                        }
-                        owner = {
-                            save_event_target_as = ghost_target
-                        }
-                        save_event_target_as = target_planet
-                        create_pop_group = { species = event_target:dead_pop_species }
-                    }
-                }
-                last_created_pop = {
-                    clear_confilt_traits = yes
-                    modify_species = {
-                        species = this
-                        add_trait = trait_thl_spirit
-                        add_traits_at_start_of_list = yes
-                    }
-                    if = {
-                        limit = {
-                            owner = {
-                                is_hive_empire = yes
-                            }
-                        }
-                        modify_species = {
-                            species = this
-                            add_trait = trait_hive_mind
-                            add_traits_at_start_of_list = yes
-                        }
-                    }
-                }
-                event_target:ghost_target = {
-                    create_message = {
-                        type = MESSAGE_POPS_GHOST_ARRIVED
-                        localization = MESSAGE_POPS_GHOST_ARRIVED
-                        days = 30
-                        target = this
-                        variable = {
-                            type = name
-                            localization = PLANET1
-                            scope = event_target:source_planet
-                        }
-                        variable = {
-                            type = name
-                            localization = PLANET2
-                            scope = event_target:target_planet
-                        }
-                        variable = {
-                            type = name
-                            localization = TARGET_SPECIES
-                            scope = event_target:dead_pop_species
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 planet_event = {
     id = touhou_paragon_effect.802
     hide_window = yes
@@ -4705,211 +4211,6 @@ planet_event = {
                 create_army = {
                     type = tree_army
                     owner = root.owner
-                }
-            }
-        }
-    }
-}
-
-planet_event = {
-    id = touhou_paragon_effect.802
-    is_triggered_only = yes
-    hide_window = yes
-
-    trigger = {
-        NOT = {
-            pop_amount = 0
-        }
-        any_owned_pop_group = {
-            is_organic_species = yes
-            NOR = {
-                has_trait = trait_zombie
-                has_trait = trait_thl_spirit
-            }
-        }
-        owner = {
-            NOT = {
-                has_origin = origin_necrophage
-            }
-        }
-        From = {
-            NAND = {
-                any_owned_leader = {
-                    is_councilor = yes
-                    has_trait = thl_leader_trait_corpse_travel
-                }
-                any_owned_planet = {
-                    exists = leader
-                    leader = {
-                        has_trait = thl_leader_trait_corpse_travel
-                    }
-                }
-            }
-        }
-        any_galaxy_planet = {
-            OR = {
-                has_deposit = sakura_tree_1
-                has_deposit = sakura_tree_3
-                has_deposit = sakura_tree_5
-                has_deposit = sakura_tree_8
-            }
-        }
-    }
-
-    immediate = {
-        random_list = {
-            9 = {
-                modifier = {
-                    subtract = 2
-                    any_galaxy_planet = {
-                        has_deposit = sakura_tree_3
-                    }
-                }
-                modifier = {
-                    subtract = 4
-                    any_galaxy_planet = {
-                        has_deposit = sakura_tree_5
-                    }
-                }
-                modifier = {
-                    subtract = 7
-                    any_galaxy_planet = {
-                        has_deposit = sakura_tree_8
-                    }
-                }
-            }
-            1 = {
-                modifier = {
-                    add = 2
-                    any_galaxy_planet = {
-                        has_deposit = sakura_tree_3
-                    }
-                }
-                modifier = {
-                    add = 4
-                    any_galaxy_planet = {
-                        has_deposit = sakura_tree_5
-                    }
-                }
-                modifier = {
-                    add = 7
-                    any_galaxy_planet = {
-                        has_deposit = sakura_tree_8
-                    }
-                }
-                random_owned_pop_group =  {
-                    species = {
-                        save_event_target_as = dead_pop_species
-                    }
-                }
-                save_event_target_as = source_planet
-                if = {
-                    limit = {
-                        OR = {
-                            has_deposit = sakura_tree_1
-                            has_deposit = sakura_tree_3
-                            has_deposit = sakura_tree_5
-                            has_deposit = sakura_tree_8
-                            has_active_building = building_soul_nexus
-                        }
-                    }
-                    owner = {
-                        save_event_target_as = ghost_target
-                    }
-                    save_event_target_as = target_planet
-                    create_pop_group = { species = event_target:dead_pop_species }
-                }
-                else_if = {
-                    limit = {
-                        from = {
-                            any_owned_planet = {
-                                OR = {
-                                    has_deposit = sakura_tree_1
-                                    has_deposit = sakura_tree_3
-                                    has_deposit = sakura_tree_5
-                                    has_deposit = sakura_tree_8
-                                    has_active_building = building_soul_nexus
-                                }
-                            }
-                        }
-                    }
-                    from = {
-                        save_event_target_as = ghost_target
-                        random_owned_planet = {
-                            limit = {
-                                OR = {
-                                    has_deposit = sakura_tree_1
-                                    has_deposit = sakura_tree_3
-                                    has_deposit = sakura_tree_5
-                                    has_deposit = sakura_tree_8
-                                    has_active_building = building_soul_nexus
-                                }
-                            }
-                            save_event_target_as = target_planet
-                            create_pop_group = { species = event_target:dead_pop_species }
-                        }
-                    }
-                }
-                else = {
-                    random_galaxy_planet = {
-                        limit = {
-                            OR = {
-                                has_deposit = sakura_tree_1
-                                has_deposit = sakura_tree_3
-                                has_deposit = sakura_tree_5
-                                has_deposit = sakura_tree_8
-                                has_active_building = building_soul_nexus
-                            }
-                        }
-                        owner = {
-                            save_event_target_as = ghost_target
-                        }
-                        save_event_target_as = target_planet
-                        create_pop_group = { species = event_target:dead_pop_species }
-                    }
-                }
-                last_created_pop = {
-                    clear_confilt_traits = yes
-                    modify_species = {
-                        species = this
-                        add_trait = trait_thl_spirit
-                        add_traits_at_start_of_list = yes
-                    }
-                    if = {
-                        limit = {
-                            owner = {
-                                is_hive_empire = yes
-                            }
-                        }
-                        modify_species = {
-                            species = this
-                            add_trait = trait_hive_mind
-                            add_traits_at_start_of_list = yes
-                        }
-                    }
-                }
-                event_target:ghost_target = {
-                    create_message = {
-                        type = MESSAGE_POPS_GHOST_ARRIVED
-                        localization = MESSAGE_POPS_GHOST_ARRIVED
-                        days = 30
-                        target = this
-                        variable = {
-                            type = name
-                            localization = PLANET1
-                            scope = event_target:source_planet
-                        }
-                        variable = {
-                            type = name
-                            localization = PLANET2
-                            scope = event_target:target_planet
-                        }
-                        variable = {
-                            type = name
-                            localization = TARGET_SPECIES
-                            scope = event_target:dead_pop_species
-                        }
-                    }
                 }
             }
         }
@@ -5120,9 +4421,6 @@ planet_event = {
                         species = last_created_species
                         ethos = random
                     }
-                    last_created_pop = {
-                        set_pop_flag = youkai_released
-                    }
                 }
             }
             1 = {
@@ -5131,9 +4429,6 @@ planet_event = {
                     create_pop_group = {
                         species = last_created_species
                         ethos = random
-                    }
-                    last_created_pop = {
-                        set_pop_flag = youkai_released
                     }
                 }
             }
@@ -5144,9 +4439,6 @@ planet_event = {
                         species = last_created_species
                         ethos = random
                     }
-                    last_created_pop = {
-                        set_pop_flag = youkai_released
-                    }
                 }
             }
             1 = {
@@ -5155,9 +4447,6 @@ planet_event = {
                     create_pop_group = {
                         species = last_created_species
                         ethos = random
-                    }
-                    last_created_pop = {
-                        set_pop_flag = youkai_released
                     }
                 }
             }
@@ -5190,9 +4479,6 @@ planet_event = {
                     cooldown = yes
                 }
             }
-            every_owned_pop_group =  {
-                remove_pop_flag = youkai_released
-            }
         }
     }
     #奴役
@@ -5221,10 +4507,8 @@ planet_event = {
                     establish_communications_no_message = root.owner
                 }
             }
-            every_owned_pop_group =  {
-                limit = {
-                    has_pop_flag = youkai_released
-                }
+            while = {
+                count = 6
                 planet = {
                     create_army = {
                         name = "NAME_Ancient_Youkaies"
@@ -5284,9 +4568,6 @@ planet_event = {
                         species = last_created_species
                         ethos = random
                     }
-                    last_created_pop = {
-                        set_pop_flag = youkai_released
-                    }
                 }
             }
             1 = {
@@ -5295,9 +4576,6 @@ planet_event = {
                     create_pop_group = {
                         species = last_created_species
                         ethos = random
-                    }
-                    last_created_pop = {
-                        set_pop_flag = youkai_released
                     }
                 }
             }
@@ -5308,9 +4586,6 @@ planet_event = {
                         species = last_created_species
                         ethos = random
                     }
-                    last_created_pop = {
-                        set_pop_flag = youkai_released
-                    }
                 }
             }
             1 = {
@@ -5319,9 +4594,6 @@ planet_event = {
                     create_pop_group = {
                         species = last_created_species
                         ethos = random
-                    }
-                    last_created_pop = {
-                        set_pop_flag = youkai_released
                     }
                 }
             }
@@ -5345,10 +4617,8 @@ planet_event = {
                     establish_communications_no_message = root.owner
                 }
             }
-            every_owned_pop_group =  {
-                limit = {
-                    has_pop_flag = youkai_released
-                }
+            while = {
+                count = 6
                 planet = {
                     create_army = {
                         name = "NAME_Ancient_Youkaies"
@@ -5553,9 +4823,6 @@ country_event = {
                         create_fleet_from_naval_cap = 0.8
                     }
                 }
-                every_owned_pop_group =  {
-                    remove_pop_flag = youkai_released
-                }
             }
         }
     }
@@ -5591,9 +4858,6 @@ country_event = {
             }
             FromFrom = {
                 remove_planet_flag = attacked_by_youkai
-                every_owned_pop_group =  {
-                    remove_pop_flag = youkai_released
-                }
             }
         }
     }
@@ -5661,329 +4925,6 @@ country_event = {
     }
     option = {
         NAME = ACKNOWLEDGED
-    }
-}
-
-planet_event = { #Braiiiins
-    id = touhou_paragon_effect.1000
-    is_triggered_only = yes
-    hide_window = yes
-
-    trigger = {
-        fromfrom = {
-            is_organic_species = yes
-            NOT = { has_trait = trait_thl_spirit }
-        }
-        owner = { has_valid_civic = civic_nether_world }
-        num_assigned_jobs = {
-            job = death_chronicler
-            value >= 1
-        }
-    }
-
-    immediate = {
-        fromfrom = {
-            clear_confilt_traits = yes
-            modify_species = {
-                species = this
-                add_trait = trait_thl_spirit
-                add_traits_at_start_of_list = yes
-            }
-        }
-    }
-    # after = {
-    #     fromfrom = {
-    #         clear_pop_category = yes #To make sure that the zombie pop does not spawn as a non worker strata
-    #     }
-    # }
-}
-
-planet_event = { #Braiiiins
-    id = touhou_paragon_effect.1001
-    is_triggered_only = yes
-    hide_window = yes
-
-    trigger = {
-        fromfrom = {
-            is_organic_species = yes
-            NOT = { has_trait = trait_zombie }
-        }
-        OR = {
-            AND = {
-                owner = { has_valid_civic = civic_nether_world_corp }
-                has_building = building_posthumous_employment_center
-            }
-            has_building = building_corpses_disposal_center
-        }
-    }
-
-    immediate = {
-        fromfrom = {
-            make_pop_zombie = yes
-        }
-        create_pop_group = {
-            species = fromfrom.species
-        }
-        last_created_pop = {
-            clear_confilt_traits = yes
-            modify_species = {
-                species = this
-                add_trait = trait_thl_spirit
-                add_traits_at_start_of_list = yes
-            }
-        }
-    }
-    # after = {
-    #     fromfrom = {
-    #         clear_pop_category = yes #To make sure that the zombie pop does not spawn as a non worker strata
-    #     }
-    # }
-}
-
-planet_event = {
-    id = touhou_paragon_effect.1101
-    is_triggered_only = yes
-    hide_window = yes
-
-    trigger = {
-        fromfrom = {
-            is_organic_species = yes
-            NOR = {
-                has_trait = trait_zombie
-                has_trait = trait_thl_spirit
-            }
-        }
-        from = {
-            NOR = {
-                has_origin = origin_necrophage
-                has_civic = civic_fanatic_purifiers
-                has_civic = civic_hive_devouring_swarm
-                has_civic = civic_machine_terminator
-            }
-        }
-        from = {
-            any_owned_leader = {
-                is_councilor = yes
-                has_trait = thl_leader_trait_corpse_travel
-            }
-            any_owned_planet = {
-                exists = leader
-                leader = {
-                    has_trait = thl_leader_trait_corpse_travel
-                }
-            }
-        }
-        NOT = {
-            has_orbital_bombardment_stance = raiding_ghost
-        }
-    }
-
-    immediate = {
-        FromFrom = {
-            species = {
-                save_event_target_as = dead_pop_species
-            }
-        }
-        save_event_target_as = source_planet
-        From = {
-            random_owned_planet = {
-                limit = {
-                    sector = {
-                        any_owned_planet = {
-                            exists = leader
-                            leader = {
-                                has_trait = thl_leader_trait_corpse_travel
-                            }
-                        }
-                    }
-                }
-                owner = {
-                    save_event_target_as = ghost_target
-                }
-                save_event_target_as = target_planet
-                create_pop_group = { species = event_target:dead_pop_species }
-                last_created_pop = {
-                    clear_confilt_traits = yes
-                    modify_species = {
-                        species = this
-                        add_trait = trait_thl_spirit
-                        add_traits_at_start_of_list = yes
-                    }
-                    if = {
-                        limit = {
-                            owner = {
-                                is_hive_empire = yes
-                            }
-                        }
-                        modify_species = {
-                            species = this
-                            add_trait = trait_hive_mind
-                            add_traits_at_start_of_list = yes
-                        }
-                    }
-                }
-            }
-            random_owned_planet = {
-                limit = {
-                    exists = leader
-                    leader = {
-                        has_trait = thl_leader_trait_corpse_travel
-                    }
-                }
-                create_pop_group = { species = event_target:dead_pop_species }
-                last_created_pop = {
-                    make_pop_zombie = yes
-                }
-            }
-        }
-        event_target:ghost_target = {
-            create_message = {
-                type = MESSAGE_POPS_GHOST_ARRIVED
-                localization = MESSAGE_POPS_GHOST_ARRIVED
-                days = 30
-                target = this
-                variable = {
-                    type = name
-                    localization = PLANET1
-                    scope = event_target:source_planet
-                }
-                variable = {
-                    type = name
-                    localization = PLANET2
-                    scope = event_target:target_planet
-                }
-                variable = {
-                    type = name
-                    localization = TARGET_SPECIES
-                    scope = event_target:dead_pop_species
-                }
-            }
-        }
-    }
-}
-
-planet_event = {
-    id = touhou_paragon_effect.1102
-    is_triggered_only = yes
-    hide_window = yes
-
-    trigger = {
-        NOT = {
-            pop_amount = 0
-        }
-        any_owned_pop_group = {
-            is_organic_species = yes
-            NOR = {
-                has_trait = trait_zombie
-                has_trait = trait_thl_spirit
-            }
-        }
-        from = {
-            NOR = {
-                has_origin = origin_necrophage
-                has_civic = civic_fanatic_purifiers
-                has_civic = civic_hive_devouring_swarm
-                has_civic = civic_machine_terminator
-            }
-        }
-        from = {
-            any_owned_leader = {
-                is_councilor = yes
-                has_trait = thl_leader_trait_corpse_travel
-            }
-            any_owned_planet = {
-                exists = leader
-                leader = {
-                    has_trait = thl_leader_trait_corpse_travel
-                }
-            }
-        }
-        NOT = {
-            has_orbital_bombardment_stance = raiding_ghost
-        }
-    }
-
-    immediate = {
-        random_owned_pop_group =  {
-            species = {
-                save_event_target_as = dead_pop_species
-            }
-        }
-        save_event_target_as = source_planet
-        From = {
-            random_owned_planet = {
-                limit = {
-                    sector = {
-                        any_owned_planet = {
-                            exists = leader
-                            leader = {
-                                has_trait = thl_leader_trait_corpse_travel
-                            }
-                        }
-                    }
-                }
-                owner = {
-                    save_event_target_as = ghost_target
-                }
-                save_event_target_as = target_planet
-                create_pop_group = { species = event_target:dead_pop_species }
-                last_created_pop = {
-                    clear_confilt_traits = yes
-                    modify_species = {
-                        species = this
-                        add_trait = trait_thl_spirit
-                        add_traits_at_start_of_list = yes
-                    }
-                    if = {
-                        limit = {
-                            owner = {
-                                is_hive_empire = yes
-                            }
-                        }
-                        modify_species = {
-                            species = this
-                            add_trait = trait_hive_mind
-                            add_traits_at_start_of_list = yes
-                        }
-                    }
-                }
-            }
-            random_owned_planet = {
-                limit = {
-                    exists = leader
-                    leader = {
-                        has_trait = thl_leader_trait_corpse_travel
-                    }
-                }
-                create_pop_group = { species = event_target:dead_pop_species }
-                last_created_pop = {
-                    make_pop_zombie = yes
-                }
-            }
-        }
-        event_target:ghost_target = {
-            create_message = {
-                type = MESSAGE_POPS_GHOST_ARRIVED
-                localization = MESSAGE_POPS_GHOST_ARRIVED
-                days = 30
-                target = this
-                variable = {
-                    type = name
-                    localization = PLANET1
-                    scope = event_target:source_planet
-                }
-                variable = {
-                    type = name
-                    localization = PLANET2
-                    scope = event_target:target_planet
-                }
-                variable = {
-                    type = name
-                    localization = TARGET_SPECIES
-                    scope = event_target:dead_pop_species
-                }
-            }
-        }
     }
 }
 
@@ -6643,59 +5584,7 @@ planet_event = {
                 save_event_target_as = moriya_attacker
             }
         }
-        every_owned_pop_group =  {
-            limit = {
-                has_ethic = ethic_spiritualist
-            }
-            if = {
-                limit = {
-                    has_trait = trait_psionic
-                }
-                planet = {
-                    create_army = {
-                        owner = event_target:moriya_attacker
-                        type = moriya_chosen_army
-                        species = prev.species
-                    }
-                    create_army = {
-                        owner = event_target:moriya_attacker
-                        type = moriya_chosen_army
-                        species = prev.species
-                    }
-                }
-            }
-            else_if = {
-                limit = {
-                    has_trait = trait_latent_psionic
-                }
-                planet = {
-                    create_army = {
-                        owner = event_target:moriya_attacker
-                        type = moriya_chosen_army
-                        species = prev.species
-                    }
-                    create_army = {
-                        owner = event_target:moriya_attacker
-                        type = moriya_army
-                        species = prev.species
-                    }
-                }
-            }
-            else = {
-                planet = {
-                    create_army = {
-                        owner = event_target:moriya_attacker
-                        type = moriya_army
-                        species = prev.species
-                    }
-                    create_army = {
-                        owner = event_target:moriya_attacker
-                        type = moriya_army
-                        species = prev.species
-                    }
-                }
-            }
-        }
+        #TODO:重写早苗召唤军队机制
     }
 }
 
@@ -10909,7 +9798,7 @@ country_event = {
         set_country_flag = marisa_alice_regeneration_complete
         event_target:marisa_alice_regeneration_location = {
             random_pop = {
-                kill_pop = yes
+                kill_single_pop = yes
             }
         }
         add_resource = {
@@ -10957,7 +9846,7 @@ country_event = {
         set_country_flag = marisa_alice_regeneration_complete
         event_target:marisa_alice_regeneration_location = {
             random_pop = {
-                kill_pop = yes
+                kill_single_pop = yes
             }
         }
         add_resource = {

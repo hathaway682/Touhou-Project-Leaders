@@ -269,32 +269,32 @@ pox = {
 	}
 }
 
-raiding_ghost = {
-	trigger = {
-		exists = leader
-		leader = {
-			has_trait = thl_leader_trait_price_of_life
-		}
-	}
-	default = no
-
-	stop_when_armies_dead = no
-	abduct_pops = yes
-
-	planet_damage = 1.0
-	army_damage = 0.5
-
-	kill_pop_chance = {
-		base = 1.0
-	}
-	min_pops_to_kill_pop = 2
-
-	# root = fleet
-	# from = planet
-	ai_weight = {
-		weight = 1000
-	}
-}
+# raiding_ghost = {
+# 	trigger = {
+# 		exists = leader
+# 		leader = {
+# 			has_trait = thl_leader_trait_price_of_life
+# 		}
+# 	}
+# 	default = no
+#
+# 	stop_when_armies_dead = no
+# 	abduct_pops = yes
+#
+# 	planet_damage = 1.0
+# 	army_damage = 0.5
+#
+# 	kill_pop_chance = {
+# 		base = 1.0
+# 	}
+# 	min_pops_to_kill_pop = 2
+#
+# 	# root = fleet
+# 	# from = planet
+# 	ai_weight = {
+# 		weight = 1000
+# 	}
+# }
 
 nuclear = {
 	trigger = {

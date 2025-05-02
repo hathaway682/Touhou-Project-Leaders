@@ -1555,81 +1555,7 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = touhou_paragon.40722
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		any_owned_planet = {
-			num_assigned_jobs = {
-				job = magician
-				value >= 1
-			}
-		}
-	}
-
-	immediate = {
-		every_owned_planet = {
-			limit = {
-				num_assigned_jobs = {
-					job = magician
-					value >= 1
-				}
-			}
-			set_variable = {
-				which = magic_trans_timer_var
-				value = 3600
-			}
-			set_saved_date = {
-				key = magic_trans_timer
-				days_from_present = magic_trans_timer_var
-				expires = magic_trans_timer_var
-			}
-			every_owned_pop_group =  {
-				limit = {
-					#has_job = magician
-					NOT = {
-						has_trait = trait_thl_magician
-					}
-				}
-				modify_species = {
-					species = this
-					add_trait = trait_thl_magician
-					add_traits_at_start_of_list = yes
-				}
-				#clear_pop_category = yes
-				planet = {
-					change_variable = {
-						which = var_necrophaged_pops
-						value = 1
-					}
-				}
-			}
-			create_message = {
-				type = MESSAGE_POPS_MAGIC_TRANSED
-				localization = MESSAGE_POPS_MAGIC_TRANSED
-				days = 30
-				target = this
-				variable = {
-					type = name
-					localization = PLANET
-					scope = this
-				}
-				variable = {
-					type = variable
-					varname = var_necrophaged_pops
-					localization = VALUE
-					scope = this
-				}
-			}
-			set_variable = {
-				which = var_necrophaged_pops
-				value = 0
-			}
-		}
-	}
-}
+#TODO：将魔法使转换改为领袖版
 
 planet_event = {
 	id = touhou_paragon.40723
@@ -2110,38 +2036,6 @@ leader_event = {
 				owner = root.owner
 				location = this
 			}
-			if = {
-				limit = {
-					any_owned_pop_group = {
-						#has_job = researcher
-					}
-					NOT = { has_trait = trait_thl_spirit }
-				}
-				random_owned_pop_group = {
-					limit = {
-						#has_job = researcher
-						NOT = { has_trait = trait_thl_spirit }
-					}
-					species = {
-						save_global_event_target_as = sakura_event_victim
-					}
-					kill_single_pop = yes
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = { has_trait = trait_thl_spirit }
-				}
-				random_owned_pop_group = {
-					limit = {
-						NOT = { has_trait = trait_thl_spirit }
-					}
-					species = {
-						save_global_event_target_as = sakura_event_victim
-					}
-					kill_single_pop = yes
-				}
-			}
 		}
 	}
 }
@@ -2171,23 +2065,6 @@ leader_event = {
 		leader_event = {
 			id = touhou_paragon.42114
 			days = 360
-		}
-		event_target:sakura_planet = {
-			if = {
-				limit = {
-					exists = event_target:sakura_event_victim
-				}
-				create_pop_group = {
-					species = sakura_event_victim
-				}
-				last_created_pop = {
-					modify_species = {
-						species = this
-						add_trait = trait_thl_spirit
-						add_traits_at_start_of_list = yes
-					}
-				}
-			}
 		}
 	}
 }
@@ -2220,18 +2097,6 @@ leader_event = {
 		}
 		event_target:sakura_planet = {
 			add_deposit = sakura_tree
-			random_owned_pop_group =  {
-				limit = {
-					NOT = {
-						has_trait = trait_thl_spirit
-					}
-				}
-				modify_species = {
-					species = this
-					add_trait = trait_thl_spirit
-					add_traits_at_start_of_list = yes
-				}
-			}
 		}
 	}
 }
@@ -2371,18 +2236,6 @@ leader_event = {
 			change_pc = pc_nether
 			remove_deposit = sakura_tree_5
 			add_deposit = sakura_tree_8
-			every_owned_pop_group =  {
-				limit = {
-					NOT = {
-						has_trait = trait_thl_spirit
-					}
-				}
-				modify_species = {
-					species = this
-					add_trait = trait_thl_spirit
-					add_traits_at_start_of_list = yes
-				}
-			}
 		}
 	}
 }
@@ -3345,16 +3198,16 @@ planet_event = {
 			}
 		}
 		name = touhou_paragon.50002.a
-		while = {
-			count = 2
-			random_owned_pop_group =  {
-				modify_species = {
-					add_traits_at_start_of_list = yes
-					add_trait = trait_latent_psionic
-				}
-				pop_change_ethic = ethic_spiritualist
-			}
-		}
+		# while = {
+		# 	count = 2
+		# 	random_owned_pop_group =  {
+		# 		modify_species = {
+		# 			add_traits_at_start_of_list = yes
+		# 			add_trait = trait_latent_psionic
+		# 		}
+		# 		pop_change_ethic = ethic_spiritualist
+		# 	}
+		# }
 		if = {
 			limit = {
 				has_modifier = blessed_by_nameless_god
@@ -3407,15 +3260,15 @@ planet_event = {
 			}
 		}
 		name = touhou_paragon.50002.a.mat
-		while = {
-			count = 2
-			random_owned_pop_group =  {
-				modify_species = {
-					add_traits_at_start_of_list = yes
-					add_trait = trait_latent_psionic
-				}
-			}
-		}
+		# while = {
+		# 	count = 2
+		# 	random_owned_pop_group =  {
+		# 		modify_species = {
+		# 			add_traits_at_start_of_list = yes
+		# 			add_trait = trait_latent_psionic
+		# 		}
+		# 	}
+		# }
 		if = {
 			limit = {
 				has_modifier = blessed_by_nameless_god
@@ -3440,15 +3293,15 @@ planet_event = {
 			}
 		}
 		name = touhou_paragon.50002.a.corp
-		while = {
-			count = 2
-			random_owned_pop_group =  {
-				modify_species = {
-					add_traits_at_start_of_list = yes
-					add_trait = trait_latent_psionic
-				}
-			}
-		}
+		# while = {
+		# 	count = 2
+		# 	random_owned_pop_group =  {
+		# 		modify_species = {
+		# 			add_traits_at_start_of_list = yes
+		# 			add_trait = trait_latent_psionic
+		# 		}
+		# 	}
+		# }
 		if = {
 			limit = {
 				has_modifier = blessed_by_nameless_god
@@ -3883,11 +3736,8 @@ country_event = {
 						save_global_event_target_as = rabbit_species
 					}
 				}
-				while = {
-					count = 2
-					create_pop_group = {
-						species = event_target:rabbit_species
-					}
+				create_pop_group = {
+					species = event_target:rabbit_species
 				}
 			}
 		}

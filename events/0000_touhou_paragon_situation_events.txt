@@ -265,7 +265,7 @@ situation_event = {
         }
         owner = {
             home_planet = {
-                random_owned_pop_group =  { kill_pop = yes }
+                random_owned_pop_group =  { kill_single_pop = yes }
             }
         }
         event_target:utsuho_second_situation = {

@@ -152,18 +152,18 @@ fleet_event = {
 }
 
 #结束净化
-planet_event = {
-    id = touhou_paragon_spell.7
-    hide_window = yes
-    is_triggered_only = yes
-
-    immediate = {
-        every_owned_pop_group =  {
-            remove_pop_flag = event_purge
-            unemploy_pop = yes
-        }
-    }
-}
+# planet_event = {
+#     id = touhou_paragon_spell.7
+#     hide_window = yes
+#     is_triggered_only = yes
+#
+#     immediate = {
+#         every_owned_pop_group =  {
+#             remove_pop_flag = event_purge
+#             unemploy_pop = yes
+#         }
+#     }
+# }
 
 #冈格尼尔符卡清理
 ship_event = {
@@ -793,30 +793,30 @@ planet_event = {
                     }
                 }
             }
-            1 = {
-                modifier = {
-                    factor = 0
-                    owner = {
-                        is_gestalt = yes
-                    }
-                }
-                from = {
-                    country_event = {
-                        id = touhou_paragon_spell.106
-                        scopes = {
-                            from = root
-                        }
-                    }
-                }
-                root = {
-                    planet_event = {
-                        id = touhou_paragon_spell.206
-                        scopes = {
-                            from = from
-                        }
-                    }
-                }
-            }
+            # 1 = {
+            #     modifier = {
+            #         factor = 0
+            #         owner = {
+            #             is_gestalt = yes
+            #         }
+            #     }
+            #     from = {
+            #         country_event = {
+            #             id = touhou_paragon_spell.106
+            #             scopes = {
+            #                 from = root
+            #             }
+            #         }
+            #     }
+            #     root = {
+            #         planet_event = {
+            #             id = touhou_paragon_spell.206
+            #             scopes = {
+            #                 from = from
+            #             }
+            #         }
+            #     }
+            # }
             1 = {
                 modifier = {
                     factor = 0
@@ -1579,71 +1579,71 @@ country_event = {
     }
 }
 
-planet_event = {
-    id = touhou_paragon_spell.206
-    title = "touhou_paragon_spell.201.name"
-    desc = {
-        text = touhou_paragon_spell.206.desc
-    }
-    picture = GFX_evt_nuclear_explosion
-    show_sound = event_super_explosion
-
-    is_triggered_only = yes
-
-    immediate = {
-        every_owned_pop_group =  {
-            if = {
-                limit = {
-                    has_trait = trait_strong
-                }
-                modify_species = {
-                    remove_trait = trait_strong
-                }
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_trait = trait_very_strong
-                    }
-                }
-                modify_species = {
-                    add_trait = trait_very_strong
-                }
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_trait = trait_unruly
-                    }
-                }
-                modify_species = {
-                    add_trait = trait_unruly
-                }
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_trait = trait_quarrelsome
-                    }
-                }
-                modify_species = {
-                    add_trait = trait_quarrelsome
-                }
-            }
-            planet = {
-                create_army = {
-                    type = rebel_army
-                    owner = from
-                    species = prev.species
-                }
-            }
-        }
-    }
-
-    option = {
-        name = touhou_paragon_spell.201.a
-    }
-}
+# planet_event = {
+#     id = touhou_paragon_spell.206
+#     title = "touhou_paragon_spell.201.name"
+#     desc = {
+#         text = touhou_paragon_spell.206.desc
+#     }
+#     picture = GFX_evt_nuclear_explosion
+#     show_sound = event_super_explosion
+#
+#     is_triggered_only = yes
+#
+#     immediate = {
+#         every_owned_pop_group =  {
+#             if = {
+#                 limit = {
+#                     has_trait = trait_strong
+#                 }
+#                 modify_species = {
+#                     remove_trait = trait_strong
+#                 }
+#             }
+#             if = {
+#                 limit = {
+#                     NOT = {
+#                         has_trait = trait_very_strong
+#                     }
+#                 }
+#                 modify_species = {
+#                     add_trait = trait_very_strong
+#                 }
+#             }
+#             if = {
+#                 limit = {
+#                     NOT = {
+#                         has_trait = trait_unruly
+#                     }
+#                 }
+#                 modify_species = {
+#                     add_trait = trait_unruly
+#                 }
+#             }
+#             if = {
+#                 limit = {
+#                     NOT = {
+#                         has_trait = trait_quarrelsome
+#                     }
+#                 }
+#                 modify_species = {
+#                     add_trait = trait_quarrelsome
+#                 }
+#             }
+#             planet = {
+#                 create_army = {
+#                     type = rebel_army
+#                     owner = from
+#                     species = prev.species
+#                 }
+#             }
+#         }
+#     }
+#
+#     option = {
+#         name = touhou_paragon_spell.201.a
+#     }
+# }
 
 country_event = {
     id = touhou_paragon_spell.107
@@ -1728,8 +1728,8 @@ planet_event = {
             day_zero_contact = no
 
             civics = {
-                civic = civic_landed_nobility
-                civic = civic_flat_world_theory
+                civic = civic_secret_of_fire
+                civic = civic_the_wheel
             }
             species = event_target:new_pre_ftl_species
             ethos = random
@@ -1805,6 +1805,53 @@ planet_event = {
     is_triggered_only = yes
 
     immediate = {
+        every_owned_pop_group = {
+            limit = {
+                from.owner = {
+                    has_ascension_perk = ap_archaeoengineers
+                }
+                OR = {
+                    has_trait = trait_mechanical
+                    has_trait = trait_machine_unit
+                }
+            }
+            kill_all_pop = yes
+            from.owner = {
+                if = {
+                    limit = { has_ascension_perk = ap_become_the_crisis }
+                    complete_crisis_objective = crisobj_purge_pops
+                }
+            }
+        }
+        if = {
+            limit = {
+                from.owner = {
+                    has_ascension_perk = ap_archaeoengineers
+                }
+            }
+            planet = {
+                every_planet_army = {
+                    limit = {
+                        OR = {
+                            army_type = occupation_army
+                            army_type = cybrex_warform
+                            army_type = care_defensive_protocols
+                            army_type = gray_army
+                            army_type = robot_uprising_army
+                            army_type = robotic_army
+                            army_type = machine_assault_1
+                            army_type = machine_assault_2
+                            army_type = machine_assault_3
+                            army_type = robotic_defense_army
+                            army_type = machine_defense
+                            army_type = robotic_occupation_army
+                            army_type = machine_occupation_army
+                        }
+                    }
+                    remove_army = yes
+                }
+            }
+        }
         while = {
             limit = {
                 any_owned_pop_group = {
@@ -1815,7 +1862,7 @@ planet_event = {
                     is_sapient = yes
                 }
             }
-            random_owned_pop_group =  {
+            weighted_random_owned_pop_group = {
                 limit = {
                     NOR = {
                         has_trait = trait_mechanical
@@ -1826,7 +1873,7 @@ planet_event = {
                 species = { save_event_target_as = species_target }
                 create_devolved_species = yes
             }
-            every_owned_pop_group =  {
+            every_owned_pop_group = {
                 limit = {
                     NOR = {
                         has_trait = trait_mechanical
@@ -1839,21 +1886,21 @@ planet_event = {
             }
         }
 
-        random_owned_pop_group =  {
+        weighted_random_owned_pop_group = {
             change_species = event_target:species_target
         }
         random_list = {
             33 = {}
             33 = {
-                random_owned_pop_group =  {
+                weighted_random_owned_pop_group = {
                     change_species = event_target:species_target
                 }
             }
             33 = {
-                random_owned_pop_group =  {
+                weighted_random_owned_pop_group = {
                     change_species = event_target:species_target
                 }
-                random_owned_pop_group =  {
+                weighted_random_owned_pop_group = {
                     change_species = event_target:species_target
                 }
             }
@@ -1915,9 +1962,25 @@ planet_event = {
         }
         else_if = {
             limit = {
+                is_planet_class = pc_cosmogenesis_world
+            }
+            spawn_lathe_neutron_effect = yes
+        }
+        else_if = {
+            limit = {
                 is_planet_class = pc_ringworld_habitable
             }
             spawn_ringworld_neutron_effect = yes
+        }
+        if = {
+            limit = {
+                OR = {
+                    is_planet_class = pc_habitat
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_cosmogenesis_world
+                }
+            }
+            # nothing
         }
         else = {
             change_pc = this
@@ -2050,17 +2113,32 @@ planet_event = {
     is_triggered_only = yes
 
     immediate = {
-        every_owned_pop_group =  {
+        every_owned_pop_group = {
             limit = {
-                NOT = { has_trait = trait_aquatic }
+                NOR = {
+                    has_trait = trait_aquatic
+                    has_trait = trait_robot_aquatic
+                }
             }
-            kill_pop = yes
+            kill_all_pop = yes
             from.owner = {
                 if = {
                     limit = { has_ascension_perk = ap_become_the_crisis }
                     complete_crisis_objective = crisobj_purge_pops
                 }
             }
+        }
+        if = {
+            limit = { #were there any Aquatic pops? If so, the ownership needs to be flipped
+                any_owned_pop_group = {
+                    is_scope_valid = yes
+                    exists = this
+                }
+                owner = {
+                    NOT = { is_same_value = from.owner }
+                }
+            }
+            set_owner = from.owner
         }
         if = {
             limit = {
@@ -2125,19 +2203,11 @@ planet_event = {
     is_triggered_only = yes
 
     immediate = {
-        every_owned_pop_group =  {
+        every_owned_pop_group = {
             limit = {
-                OR = {
-                    has_trait = trait_mechanical
-                    has_trait = trait_machine_unit
-                    has_trait = trait_hive_mind
-                    has_living_standard = { # Bio-trophies die without care
-                        country = root.owner
-                        type = living_standard_organic_trophy
-                    }
-                }
+                has_any_ethic = no
             }
-            kill_pop = yes
+            kill_all_pop = yes
             from.owner = {
                 if = {
                     limit = { has_ascension_perk = ap_become_the_crisis }
@@ -2145,19 +2215,15 @@ planet_event = {
                 }
             }
         }
-        every_owned_pop_group =  {
+        every_owned_pop_group = {
             limit = {
-                NOR = {
-                    has_trait = trait_mechanical
-                    has_trait = trait_machine_unit
-                    has_trait = trait_hive_mind
-                    has_living_standard = {
-                        country = root.owner
-                        type = living_standard_organic_trophy
-                    }
-                }
+                has_any_ethic = yes
             }
-            pop_change_ethic = ethic_spiritualist
+            pop_group_transfer_ethic = {
+                POP_GROUP = this
+                ETHOS = ethic_spiritualist
+                PERCENTAGE = 1 # 100%
+            }
         }
         # Special graphics for Habitats and Ring Worlds
         if = {
@@ -2165,6 +2231,12 @@ planet_event = {
                 is_planet_class = pc_habitat
             }
             spawn_habitat_divine_effect = yes
+        }
+        else_if = {
+            limit = {
+                is_planet_class = pc_cosmogenesis_world
+            }
+            spawn_lathe_divine_effect = yes
         }
         else_if = {
             limit = {
@@ -2177,6 +2249,7 @@ planet_event = {
                 OR = {
                     is_planet_class = pc_habitat
                     is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_cosmogenesis_world
                 }
             }
             # nothing
@@ -2255,39 +2328,16 @@ planet_event = {
                 value = 4
             }
         }
-        if = {
-            limit = {
-                num_species = 1
-            }
-            random_owned_pop_group =  {
-                save_event_target_as = pop_growth_target
-            }
-            while = {
-                count = pop_growth_number
-                create_pop_group = {
-                    species = event_target:pop_growth_target
-                }
+        random_owned_pop_group =  {
+            save_event_target_as = pop_growth_target
+        }
+        while = {
+            count = pop_growth_number
+            create_pop_group = {
+                species = event_target:pop_growth_target
             }
         }
-        else = {
-            while = {
-                count = pop_growth_number
-                random_owned_pop_group =  {
-                    save_event_target_as = pop_growth_target_1
-                }
-                random_owned_pop_group =  {
-                    save_event_target_as = pop_growth_target_2
-                }
-                create_half_species = {
-                    species_one = event_target:pop_growth_target_1
-                    species_two = event_target:pop_growth_target_2
-                    country = root.owner
-                }
-                create_pop_group = {
-                    species = last_created_species
-                }
-            }
-        }
+
     }
 
     option = {
@@ -2749,7 +2799,7 @@ planet_event = {
     option = {
         name = UNFORTUNATE
         random_owned_pop_group =  {
-            kill_pop = yes
+            kill_single_pop = yes
         }
         if = {
             limit = {
@@ -2778,7 +2828,7 @@ planet_event = {
     option = {
         name = UNFORTUNATE
         random_owned_pop_group =  {
-            kill_pop = yes
+            kill_single_pop = yes
         }
         remove_district = district_city
         add_deposit = d_failing_infrastructure
@@ -2799,7 +2849,7 @@ planet_event = {
     option = {
         name = UNFORTUNATE
         random_owned_pop_group =  {
-            kill_pop = yes
+            kill_single_pop = yes
         }
         ruin_building = random_no_capital
     }
@@ -2822,24 +2872,24 @@ planet_event = {
             limit = {
                 pop_amount < 200
             }
-            random_owned_pop_group =  { kill_pop = yes }
+            random_owned_pop_group =  { kill_single_pop = yes }
         }
         else_if = {
             limit = {
                 pop_amount > 200
                 pop_amount < 600
             }
-            random_owned_pop_group =  { kill_pop = yes }
-            random_owned_pop_group =  { kill_pop = yes }
+            random_owned_pop_group =  { kill_single_pop = yes }
+            random_owned_pop_group =  { kill_single_pop = yes }
         }
         else_if = {
             limit = {
                 pop_amount > 600
             }
-            random_owned_pop_group =  { kill_pop = yes }
-            random_owned_pop_group =  { kill_pop = yes }
-            random_owned_pop_group =  { kill_pop = yes }
-            random_owned_pop_group =  { kill_pop = yes }
+            random_owned_pop_group =  { kill_single_pop = yes }
+            random_owned_pop_group =  { kill_single_pop = yes }
+            random_owned_pop_group =  { kill_single_pop = yes }
+            random_owned_pop_group =  { kill_single_pop = yes }
         }
     }
 }
