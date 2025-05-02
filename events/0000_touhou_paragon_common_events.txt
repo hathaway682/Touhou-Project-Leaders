@@ -136,22 +136,7 @@ country_event = {
 				}
 			}
 			create_youmu_leader = yes
-			capital_scope = {
-				while = {
-					count = 10
-					random_owned_pop_group =  {
-						limit = {
-							NOT = {
-								has_trait = trait_thl_spirit
-							}
-						}
-						modify_species = {
-							add_trait = trait_thl_spirit
-							add_traits_at_start_of_list = yes
-						}
-					}
-				}
-			}
+			#TODO：添加部分灵体人口
 			set_global_flag = youmu
 		}
 		if = {

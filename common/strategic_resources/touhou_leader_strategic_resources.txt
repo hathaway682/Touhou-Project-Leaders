@@ -15,3 +15,12 @@ thl_bomb = {
 		weight = 1
 	}
 }
+
+thl_spirit = {
+	tradable = no
+	category = other
+
+	ai_weight = {
+		weight = 1
+	}
+}
