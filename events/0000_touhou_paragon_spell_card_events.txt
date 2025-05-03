@@ -456,7 +456,7 @@ planet_event = {
             }
         }
         every_owned_pop_group =  {
-            kill_pop = yes
+            kill_all_pop = yes
         }
         if = {
             limit = {
@@ -1141,7 +1141,7 @@ planet_event = {
 
     immediate = {
         every_owned_pop_group =  {
-            kill_pop = yes
+            kill_all_pop = yes
         }
         if = {
             limit = {
@@ -1230,7 +1230,7 @@ planet_event = {
                 is_artificial = yes
             }
             every_owned_pop_group =  {
-                kill_pop = yes
+                kill_all_pop = yes
             }
             remove_all_buildings = yes
             remove_all_districts = yes
@@ -1259,7 +1259,7 @@ planet_event = {
                 while = {
                     count = 16
                     random_owned_pop_group =  {
-                        kill_pop = yes
+                        kill_single_pop = yes
                     }
                 }
             }
@@ -1270,7 +1270,7 @@ planet_event = {
                 while = {
                     count = 8
                     random_owned_pop_group =  {
-                        kill_pop = yes
+                        kill_single_pop = yes
                     }
                 }
             }
@@ -1281,7 +1281,7 @@ planet_event = {
                 while = {
                     count = 4
                     random_owned_pop_group =  {
-                        kill_pop = yes
+                        kill_single_pop = yes
                     }
                 }
             }
@@ -1289,7 +1289,7 @@ planet_event = {
                 while = {
                     count = 2
                     random_owned_pop_group =  {
-                        kill_pop = yes
+                        kill_single_pop = yes
                     }
                 }
             }
@@ -1376,13 +1376,7 @@ planet_event = {
             random_list = {
                 9 = {}
                 1 = {
-                    planet = {
-                        create_army = {
-                            type = mutant_army
-                            owner = from
-                        }
-                    }
-                    kill_pop = yes
+                    kill_single_pop = yes
                 }
             }
         }
@@ -1464,13 +1458,7 @@ planet_event = {
             random_list = {
                 9 = {}
                 1 = {
-                    planet = {
-                        create_army = {
-                            type = mutant_army
-                            owner = last_created_country
-                        }
-                    }
-                    kill_pop = yes
+                    kill_single_pop = yes
                 }
             }
         }
@@ -1530,13 +1518,7 @@ planet_event = {
             random_list = {
                 9 = {}
                 1 = {
-                    planet = {
-                        create_army = {
-                            type = mutant_army
-                            owner = root.owner
-                        }
-                    }
-                    kill_pop = yes
+                    kill_single_pop = yes
                 }
             }
         }
@@ -2755,7 +2737,7 @@ planet_event = {
     option = {
         name = UNFORTUNATE
         random_owned_pop_group =  {
-            kill_pop = yes
+            kill_single_pop = yes
         }
         if = {
             limit = {
