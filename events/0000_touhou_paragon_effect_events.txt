@@ -5576,7 +5576,7 @@ planet_event = {
                 save_event_target_as = moriya_attacker
             }
         }
-        #TODO:重写早苗召唤军队机制
+        #TODO：重写早苗召唤军队机制
     }
 }
 

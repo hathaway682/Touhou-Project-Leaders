@@ -1729,7 +1729,7 @@ building_ranger_lodge = {
 	}
 }
 
-#TODO:重新制作夜雀食堂
+#TODO：重新制作夜雀食堂
 
 ###魔法学院
 building_magic_academy = {

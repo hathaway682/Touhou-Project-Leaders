@@ -831,7 +831,7 @@ bat_swarm = {
 	effect = {
 		custom_tooltip = edict_bat_swarm_effect
 		hidden_effect = {
-			#TODO：更新血魔法
+			#TODO：更新血魔法的献祭机制
 			while = {
 				count = 2
 				random_owned_pop_group =  {

@@ -829,16 +829,16 @@ grower_drone = {
         planet_amenities_add = 500
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_gestalt = no
-            }
-        }
-        trade_value_add = 2
-        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-    }
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = {
+    #             is_gestalt = no
+    #         }
+    #     }
+    #     trade_value_add = 2
+    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    # }
 
     weight = {
         weight = @simple_drone_job_weight
