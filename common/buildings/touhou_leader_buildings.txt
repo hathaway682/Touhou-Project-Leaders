@@ -1069,99 +1069,6 @@ building_doll_assembly_complex = {
 	is_essential = yes
 }
 
-# building_soul_nexus = {
-# 	base_buildtime = @b3_time
-# 	empire_limit = 1
-# 	can_demolish = yes
-# 	icon = building_master_archive
-#
-# 	category = research
-#
-# 	potential = {
-# 		owner = {
-# 			any_owned_leader = {
-# 				has_trait = thl_leader_trait_sakura
-# 			}
-# 		}
-# 	}
-#
-# 	allow = {
-# 		owner = {
-# 			any_owned_planet = {
-# 				OR = {
-# 					has_deposit = sakura_tree_1
-# 					has_deposit = sakura_tree_3
-# 					has_deposit = sakura_tree_5
-# 					has_deposit = sakura_tree_8
-# 				}
-# 			}
-# 		}
-# 	}
-#
-# 	allow = {
-# 		has_upgraded_capital = yes
-# 	}
-#
-# 	triggered_planet_modifier = {
-# 		potential = {
-# 			owner = {
-# 				any_owned_planet = {
-# 					has_deposit = sakura_tree_1
-# 				}
-# 			}
-# 		}
-# 		death_pop_generation_chance = 0.1
-# 	}
-#
-# 	triggered_planet_modifier = {
-# 		potential = {
-# 			owner = {
-# 				any_owned_planet = {
-# 					has_deposit = sakura_tree_3
-# 				}
-# 			}
-# 		}
-# 		death_pop_generation_chance = 0.3
-# 	}
-#
-# 	triggered_planet_modifier = {
-# 		potential = {
-# 			owner = {
-# 				any_owned_planet = {
-# 					has_deposit = sakura_tree_5
-# 				}
-# 			}
-# 		}
-# 		death_pop_generation_chance = 0.5
-# 	}
-#
-# 	triggered_planet_modifier = {
-# 		potential = {
-# 			owner = {
-# 				any_owned_planet = {
-# 					has_deposit = sakura_tree_8
-# 				}
-# 			}
-# 		}
-# 		death_pop_generation_chance = 0.8
-# 	}
-#
-# 	resources = {
-# 		category = planet_buildings
-# 		cost = {
-# 			minerals = @b3_minerals
-# 			rare_crystals = @b3_rare_cost
-# 		}
-# 		upkeep = {
-# 			energy = @b3_upkeep
-# 			rare_crystals = @b3_rare_upkeep
-# 		}
-# 	}
-#
-# 	upgrades = {
-# 	}
-# }
-
 building_suzunaan = {
 	base_buildtime = @b3_time
 	base_cap_amount = 1
@@ -1426,68 +1333,7 @@ building_posthumous_employment_center = {
 # Galactic Paragons Origin Unique Buildings
 #####################
 
-building_paragon_origin_academy = {
-	base_buildtime = 3600
-	base_cap_amount = 1
-	empire_limit = 1
-	can_demolish = yes
-	can_be_ruined = yes
-	can_be_disabled = yes
-	destroy_trigger = {
-		exists = owner
-		owner = {
-			NOT = { has_country_flag = legendary_leader_resigned_academy }
-		}
-	}
-
-	category = research
-
-	potential = {
-		custom_tooltip = {
-			text = EMPIRE_UNIQUE_BUILDING
-			owner = { has_country_flag = legendary_leader_resigned_academy }
-		}
-		exists = planet
-		planet = { is_capital = yes }
-	}
-
-	allow = {
-		has_upgraded_capital = yes
-	}
-
-	country_modifier = {
-		country_leader_cap_add = 1
-	}
-	triggered_country_modifier = {
-		planet_jobs_produces_mult = 0.01
-		mult = owner.paragon_origin_academy_governor
-	}
-	triggered_country_modifier = {
-		all_technology_research_speed = 0.01
-		mult = owner.paragon_origin_academy_scientist
-	}
-	triggered_country_modifier = {
-		ship_fire_rate_mult = 0.01
-		mult = owner.paragon_origin_academy_admiral
-	}
-	triggered_country_modifier = {
-		army_health = 0.01
-		mult = owner.paragon_origin_academy_general
-	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 2500
-		}
-		upkeep = {
-			energy = 10
-			unity = 30
-		}
-	}
-
-	is_essential = yes
-}
+#TODO：被移除的领导人学院
 
 #####################
 # Galactic Paragons Buildings
@@ -1515,7 +1361,6 @@ building_paragon_memory_vaults = {
 				OR = {
 					has_civic = civic_memory_vault
 					has_civic = civic_memory_vault_corporate
-					has_country_flag = touhou_flag_flavor_book_club_memory_vaults
 				}
 			}
 		}
@@ -1575,26 +1420,26 @@ building_paragon_memory_vaults = {
 			unity = 5
 			multiplier = planet.paragon_memory_vault
 		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_civic = civic_memory_vault_corporate }
+				planet = { is_variable_set = paragon_memory_vault }
+			}
+			trade = 10
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_civic = civic_memory_vault_corporate }
+				planet = { is_variable_set = paragon_memory_vault }
+			}
+			trade = 10
+			multiplier = planet.paragon_memory_vault
+		}
 		upkeep = {
 			energy = @b2_upkeep
 		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_memory_vault_corporate }
-		}
-		trade_value_add = 10
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_memory_vault_corporate }
-			planet = { is_variable_set = paragon_memory_vault }
-		}
-		trade_value_add = 10
-		mult = planet.paragon_memory_vault
 	}
 
 	triggered_country_modifier = {
@@ -1605,7 +1450,6 @@ building_paragon_memory_vaults = {
 					has_civic = civic_memory_vault
 					has_civic = civic_memory_vault_machine
 					has_civic = civic_memory_vault_hive
-					has_country_flag = touhou_flag_flavor_book_club_memory_vaults
 				}
 			}
 		}
@@ -1619,7 +1463,6 @@ building_paragon_memory_vaults = {
 					has_civic = civic_memory_vault
 					has_civic = civic_memory_vault_machine
 					has_civic = civic_memory_vault_hive
-					has_country_flag = touhou_flag_flavor_book_club_memory_vaults
 				}
 			}
 			planet = { is_variable_set = paragon_memory_vault }
@@ -1648,7 +1491,6 @@ building_paragon_memory_vaults = {
 #Sanctuary of Repose
 building_galactic_memorial_1 = {
 	base_buildtime = @b1_time
-	base_cap_amount = 1
 	category = unity
 
 	potential = {
@@ -1665,6 +1507,18 @@ building_galactic_memorial_1 = {
 			has_modifier = slave_colony
 			owner = {
 				is_memorialist_empire = no
+			}
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = need_unity_zone
+			planet = {
+				num_zones = {
+					type = zone_unity
+					value > 0
+				}
 			}
 		}
 	}
@@ -1695,42 +1549,17 @@ building_galactic_memorial_1 = {
 		planet_jobs_unity_produces_mult = 0.05
 	}
 
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = @building_static_jobs
+	}
+
 	triggered_desc = {
 		text = building_autochthon_monument_effect
 	}
 
 	prerequisites = {
 		"tech_cultural_heritage"
-	}
-
-	#Jobs
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		job_death_chronicler_add = @b1_jobs
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = "job_death_chronicler_effect_desc"
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		job_chronicle_drone_add = @b1_jobs
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = "job_chronicle_drone_effect_desc"
 	}
 
 	#Tomb/Relic worlds
@@ -1757,10 +1586,6 @@ building_galactic_memorial_1 = {
 		planet_crime_no_happiness_add = -20
 	}
 
-	upgrades = {
-		building_galactic_memorial_2
-	}
-
 	show_tech_unlock_if = {
 		is_memorialist_empire = yes
 	}
@@ -1776,10 +1601,7 @@ building_ranger_lodge = {
 		NOT = {	has_modifier = slave_colony	}
 		owner = {
 			is_regular_empire = yes
-			or = {
-				has_valid_civic = civic_environmentalist
-				has_country_flag = touhou_flag_flavor_book_club_ranger_lodge
-			}
+			has_valid_civic = civic_environmentalist
 		}
 		NOR = {
 			is_planet_class = pc_city
@@ -1807,12 +1629,7 @@ building_ranger_lodge = {
 		OR = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
-			owner = {
-				NOR = {
-					has_valid_civic = civic_environmentalist
-					has_country_flag = touhou_flag_flavor_book_club_ranger_lodge
-				}
-			}
+			owner = { NOT = { has_valid_civic = civic_environmentalist } }
 			is_planet_class = pc_city
 			is_planet_class = pc_hive
 			is_planet_class = pc_machine
@@ -1844,7 +1661,7 @@ building_ranger_lodge = {
 	}
 
 	planet_modifier = {
-		job_ranger_add = 1 # 1 Ranger no matter what
+		job_biologist_add = 100 # 100 Rangers no matter what
 		deposit_blockers_natural_unity_produces_add = 2
 	}
 
@@ -1852,7 +1669,7 @@ building_ranger_lodge = {
 		potential = {
 			always = yes
 		}
-		job_ranger_add = 1 # +1 Ranger per natural blocker
+		job_biologist_add = 100 # +100 Rangers per natural blocker
 		mult = value:natural_blocker_count
 	}
 
@@ -1860,7 +1677,7 @@ building_ranger_lodge = {
 		potential = {
 			owner_has_resolution = { RES = resolution_ecology_paradise_initiative }
 		}
-		job_ranger_add = 1 # +1 Ranger per natural blocker if GalCom approves
+		job_biologist_add = 100 # +100 Rangers per natural blocker if GalCom approves
 		mult = value:natural_blocker_count
 	}
 
@@ -1872,12 +1689,12 @@ building_ranger_lodge = {
 
 	triggered_planet_modifier = {
 		potential = { owner_has_resolution = { RES = resolution_ecology_environmental_control_board } }
-		deposit_blockers_natural_unity_produces_add = 1
+		deposit_blockers_natural_unity_produces_add = 2
 	}
 
 	triggered_planet_modifier = {
 		potential = { owner_has_resolution = { RES = resolution_ecology_paradise_initiative } }
-		deposit_blockers_natural_unity_produces_add = 1
+		deposit_blockers_natural_unity_produces_add = 3
 	}
 
 	resources = {
@@ -1888,6 +1705,10 @@ building_ranger_lodge = {
 		upkeep = {
 			energy = @b1_upkeep
 		}
+	}
+
+	triggered_desc = {
+		text = biologist_is_ranger_tt
 	}
 
 	triggered_desc = {
