@@ -91,12 +91,13 @@ building_shrine = {
 		}
 		if = {
 			limit = {
-				OR = {
-					any_owned_pop_group = {
-						has_trait = trait_humanoid_jinxed
-					}
-					free_amenities < -10
-				}
+				#TODO：修改特质识别
+				# OR = {
+				# 	any_owned_pop_group = {
+				# 		has_trait = trait_humanoid_jinxed
+				# 	}
+				# }
+				free_amenities < -10
 				owner = {
 					NOT = {
 						any_owned_leader = {

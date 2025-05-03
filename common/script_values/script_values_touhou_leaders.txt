@@ -47,55 +47,6 @@ enforcer_job_number = {
 	divide = 100
 }
 
-price_of_life = {
-	base = 1
-	complex_trigger_modifier = {
-		trigger = check_modifier_value
-		potential = {
-			is_pop_category = ruler
-		}
-		trigger_scope = root
-		parameters = {
-			modifier = pop_cat_ruler_political_power
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = check_modifier_value
-		potential = {
-			is_pop_category = specialist
-		}
-		trigger_scope = root
-		parameters = {
-			modifier = pop_cat_specialist_political_power
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = check_modifier_value
-		potential = {
-			is_pop_category = worker
-		}
-		trigger_scope = root
-		parameters = {
-			modifier = pop_cat_worker_political_power
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		potential = {
-			is_pop_category = slave
-		}
-		trigger = check_modifier_value
-		trigger_scope = root
-		parameters = {
-			modifier = pop_cat_slave_political_power
-		}
-		mode = add
-	}
-	mult = value:scripted_modifier_mult|MODIFIER|pop_political_power|
-}
-
 doll_missing_per_maker = {
 	base = 0
 	add = modifier:doll_control_limit

@@ -64,7 +64,7 @@ rabbit_empire_size_mult = {
 death_pop_group_generation_chance = {
 	icon = mod_country_piracy_risk_mult
 	good = yes
-	category = pop
+	category = planet
 	percentage = yes
 }
 

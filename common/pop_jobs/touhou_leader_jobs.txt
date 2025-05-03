@@ -169,14 +169,15 @@ healthcare = {
         planet_amenities_add = 2
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { has_valid_civic = civic_private_healthcare_corporate }
-        }
-        trade_value_add = 4
-        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    }
+    #TODO：更新贸易额
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_valid_civic = civic_private_healthcare_corporate }
+    #     }
+    #     trade_value_add = 4
+    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    # }
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -185,14 +186,14 @@ healthcare = {
         planet_amenities_add = 2
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { has_valid_civic = civic_penglai_medcine_corp }
-        }
-        trade_value_add = 4
-        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    }
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_valid_civic = civic_penglai_medcine_corp }
+    #     }
+    #     trade_value_add = 4
+    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    # }
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -208,13 +209,13 @@ healthcare = {
         planet_amenities_add = 1
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
-    triggered_planet_modifier = {
-        potential = {
-            planet = { has_planet_flag = has_private_clinics }
-        }
-        trade_value_add = 2
-        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    }
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         planet = { has_planet_flag = has_private_clinics }
+    #     }
+    #     trade_value_add = 2
+    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    # }
 
 
     weight = {
@@ -362,18 +363,18 @@ foundry = {
             alloys = @requisitorium_alloys_overlord
         }
     }
-    triggered_planet_modifier = {
-        potential = {
-            planet = {
-                owner = {
-                    has_country_flag = touhou_flag_sanae_enigmatic_alloys
-                    has_tradition = tr_virtuality_finish
-                }
-            }
-        }
-        trade_value_add = 2
-        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    }
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         planet = {
+    #             owner = {
+    #                 has_country_flag = touhou_flag_sanae_enigmatic_alloys
+    #                 has_tradition = tr_virtuality_finish
+    #             }
+    #         }
+    #     }
+    #     trade_value_add = 2
+    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    # }
     weight = {
         weight = @specialist_job_weight # Fairly important job
         mult = value:job_weights_modifier|JOB|foundry|RESOURCE|alloys|
@@ -1156,22 +1157,22 @@ angler = {
         }
     }
 
-    triggered_planet_modifier = {
-        potential = {
-            always = yes
-        }
-        trade_value_add = 2
-        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    }
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         always = yes
+    #     }
+    #     trade_value_add = 2
+    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    # }
 
-    triggered_planet_modifier = {
-        potential = {
-            has_councilor = { COUNCILOR = "councilor_corporate_anglers" }
-        }
-
-        trade_value_add = @councilor_corporate_anglers_angler_trade_value_bonus
-        mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_corporate_anglers|
-    }
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         has_councilor = { COUNCILOR = "councilor_corporate_anglers" }
+    #     }
+    #
+    #     trade_value_add = @councilor_corporate_anglers_angler_trade_value_bonus
+    #     mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_corporate_anglers|
+    # }
 
     triggered_planet_modifier = {
         potential = {
@@ -1185,7 +1186,7 @@ angler = {
     weight = {
         weight = @worker_job_weight
         mult = value:job_weights_modifier|JOB|angler|RESOURCE|food|
-        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
+        # mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
         modifier = {
             factor = 1.1
             owner = { has_valid_civic = civic_agrarian_idyll }
@@ -1299,13 +1300,13 @@ izakaya_worker = {
         }
     }
 
-    triggered_planet_modifier = {
-        potential = {
-            always = yes
-        }
-        trade_value_add = 5
-        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    }
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         always = yes
+    #     }
+    #     trade_value_add = 5
+    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    # }
 
     triggered_planet_modifier = {
         potential = {
@@ -1315,30 +1316,30 @@ izakaya_worker = {
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
 
-    triggered_planet_modifier = {
-        potential = {
-            OR = {
-                AND = {
-                    exists = owner
-                    owner = {
-                        any_owned_leader = {
-                            has_trait = thl_leader_trait_izakaya_2
-                        }
-                    }
-                }
-                AND = {
-                    exists = planet.branch_office_owner
-                    planet.branch_office_owner = {
-                        any_owned_leader = {
-                            has_trait = thl_leader_trait_izakaya_2
-                        }
-                    }
-                }
-            }
-        }
-        trade_value_add = 5
-        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    }
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         OR = {
+    #             AND = {
+    #                 exists = owner
+    #                 owner = {
+    #                     any_owned_leader = {
+    #                         has_trait = thl_leader_trait_izakaya_2
+    #                     }
+    #                 }
+    #             }
+    #             AND = {
+    #                 exists = planet.branch_office_owner
+    #                 planet.branch_office_owner = {
+    #                     any_owned_leader = {
+    #                         has_trait = thl_leader_trait_izakaya_2
+    #                     }
+    #                 }
+    #             }
+    #         }
+    #     }
+    #     trade_value_add = 5
+    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    # }
 
     triggered_planet_modifier = {
         potential = {
@@ -1365,30 +1366,30 @@ izakaya_worker = {
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
 
-    triggered_planet_modifier = {
-        potential = {
-            OR = {
-                AND = {
-                    exists = owner
-                    owner = {
-                        any_owned_leader = {
-                            has_trait = thl_leader_trait_izakaya_3
-                        }
-                    }
-                }
-                AND = {
-                    exists = planet.branch_office_owner
-                    planet.branch_office_owner = {
-                        any_owned_leader = {
-                            has_trait = thl_leader_trait_izakaya_3
-                        }
-                    }
-                }
-            }
-        }
-        trade_value_add = 10
-        mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    }
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         OR = {
+    #             AND = {
+    #                 exists = owner
+    #                 owner = {
+    #                     any_owned_leader = {
+    #                         has_trait = thl_leader_trait_izakaya_3
+    #                     }
+    #                 }
+    #             }
+    #             AND = {
+    #                 exists = planet.branch_office_owner
+    #                 planet.branch_office_owner = {
+    #                     any_owned_leader = {
+    #                         has_trait = thl_leader_trait_izakaya_3
+    #                     }
+    #                 }
+    #             }
+    #         }
+    #     }
+    #     trade_value_add = 10
+    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+    # }
 
     triggered_planet_modifier = {
         potential = {
@@ -1422,8 +1423,8 @@ izakaya_worker = {
     weight = {
         weight = @specialist_job_weight
         mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
-        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
-        # modifier = {
+        # mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
+        # # modifier = {
         #     factor = 5
         #     has_job = izakaya_worker
         # }
