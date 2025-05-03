@@ -747,8 +747,6 @@ building_sun_catalyst = {
 
 	triggered_planet_modifier = {
 		planet_administrators_unity_produces_add = 1
-		planet_managers_unity_produces_add = 1
-		planet_priests_unity_produces_add = 1
 	}
 }
 
@@ -953,9 +951,9 @@ building_doll_assembly_plant = {
 					exists = assembling_species
 					assembling_species = { is_organic_species = yes }
 					exists = owner
-					owner = {
-						NOT = { has_policy_flag = roboticist_output_build_cyborgs }
-					}
+					# owner = {
+					# 	NOT = { has_policy_flag = roboticist_output_build_cyborgs }
+					# }
 				}
 			}
 		}
@@ -1060,9 +1058,9 @@ building_doll_assembly_complex = {
 					exists = assembling_species
 					assembling_species = { is_organic_species = yes }
 					exists = owner
-					owner = {
-						NOT = { has_policy_flag = roboticist_output_build_cyborgs }
-					}
+					# owner = {
+					# 	NOT = { has_policy_flag = roboticist_output_build_cyborgs }
+					# }
 				}
 			}
 		}
@@ -1071,98 +1069,98 @@ building_doll_assembly_complex = {
 	is_essential = yes
 }
 
-building_soul_nexus = {
-	base_buildtime = @b3_time
-	empire_limit = 1
-	can_demolish = yes
-	icon = building_master_archive
-
-	category = research
-
-	potential = {
-		owner = {
-			any_owned_leader = {
-				has_trait = thl_leader_trait_sakura
-			}
-		}
-	}
-
-	allow = {
-		owner = {
-			any_owned_planet = {
-				OR = {
-					has_deposit = sakura_tree_1
-					has_deposit = sakura_tree_3
-					has_deposit = sakura_tree_5
-					has_deposit = sakura_tree_8
-				}
-			}
-		}
-	}
-
-	allow = {
-		has_upgraded_capital = yes
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				any_owned_planet = {
-					has_deposit = sakura_tree_1
-				}
-			}
-		}
-		death_pop_generation_chance = 0.1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				any_owned_planet = {
-					has_deposit = sakura_tree_3
-				}
-			}
-		}
-		death_pop_generation_chance = 0.3
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				any_owned_planet = {
-					has_deposit = sakura_tree_5
-				}
-			}
-		}
-		death_pop_generation_chance = 0.5
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				any_owned_planet = {
-					has_deposit = sakura_tree_8
-				}
-			}
-		}
-		death_pop_generation_chance = 0.8
-	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
-			rare_crystals = @b3_rare_cost
-		}
-		upkeep = {
-			energy = @b3_upkeep
-			rare_crystals = @b3_rare_upkeep
-		}
-	}
-
-	upgrades = {
-	}
-}
+# building_soul_nexus = {
+# 	base_buildtime = @b3_time
+# 	empire_limit = 1
+# 	can_demolish = yes
+# 	icon = building_master_archive
+#
+# 	category = research
+#
+# 	potential = {
+# 		owner = {
+# 			any_owned_leader = {
+# 				has_trait = thl_leader_trait_sakura
+# 			}
+# 		}
+# 	}
+#
+# 	allow = {
+# 		owner = {
+# 			any_owned_planet = {
+# 				OR = {
+# 					has_deposit = sakura_tree_1
+# 					has_deposit = sakura_tree_3
+# 					has_deposit = sakura_tree_5
+# 					has_deposit = sakura_tree_8
+# 				}
+# 			}
+# 		}
+# 	}
+#
+# 	allow = {
+# 		has_upgraded_capital = yes
+# 	}
+#
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			owner = {
+# 				any_owned_planet = {
+# 					has_deposit = sakura_tree_1
+# 				}
+# 			}
+# 		}
+# 		death_pop_generation_chance = 0.1
+# 	}
+#
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			owner = {
+# 				any_owned_planet = {
+# 					has_deposit = sakura_tree_3
+# 				}
+# 			}
+# 		}
+# 		death_pop_generation_chance = 0.3
+# 	}
+#
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			owner = {
+# 				any_owned_planet = {
+# 					has_deposit = sakura_tree_5
+# 				}
+# 			}
+# 		}
+# 		death_pop_generation_chance = 0.5
+# 	}
+#
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			owner = {
+# 				any_owned_planet = {
+# 					has_deposit = sakura_tree_8
+# 				}
+# 			}
+# 		}
+# 		death_pop_generation_chance = 0.8
+# 	}
+#
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = @b3_minerals
+# 			rare_crystals = @b3_rare_cost
+# 		}
+# 		upkeep = {
+# 			energy = @b3_upkeep
+# 			rare_crystals = @b3_rare_upkeep
+# 		}
+# 	}
+#
+# 	upgrades = {
+# 	}
+# }
 
 building_suzunaan = {
 	base_buildtime = @b3_time

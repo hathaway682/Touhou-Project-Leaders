@@ -1296,21 +1296,6 @@ planet_event = {
             ruin_building = random_no_capital
             ruin_building = random_no_capital
             ruin_building = random_no_capital
-            remove_district = district_farming
-            remove_district = district_farming_uncapped
-            remove_district = district_mining
-            remove_district = district_mining_uncapped
-            remove_district = district_generator
-            remove_district = district_generator_uncapped
-            remove_district = district_city
-            remove_district = district_industrial
-            remove_district = district_arcology_civilian_industry
-            remove_district = district_arcology_administrative
-            remove_district = district_arcology_arms_industry
-            remove_district = district_arcology_housing
-            remove_district = district_arcology_leisure
-            remove_district = district_arcology_organic_housing
-            remove_district = district_arcology_religious
             add_blocker = {
                 type = d_infestation_marisa
             }
@@ -2728,7 +2713,7 @@ planet_event = {
                 modifier = {
                     factor = 0
                     NOT = {
-                        has_district = district_industrial
+                        has_district = district_city
                     }
                 }
                 planet_event = {

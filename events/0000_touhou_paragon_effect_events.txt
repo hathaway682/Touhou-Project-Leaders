@@ -3266,7 +3266,7 @@ planet_event = {
             }
             random_list = {
                 2 = {}
-                1 = { kill_pop = yes }
+                1 = { kill_single_pop = yes }
             }
         }
         from = {
@@ -4419,7 +4419,6 @@ planet_event = {
                     count = 3
                     create_pop_group = {
                         species = last_created_species
-                        ethos = random
                     }
                 }
             }
@@ -4428,7 +4427,6 @@ planet_event = {
                     count = 4
                     create_pop_group = {
                         species = last_created_species
-                        ethos = random
                     }
                 }
             }
@@ -4437,7 +4435,6 @@ planet_event = {
                     count = 5
                     create_pop_group = {
                         species = last_created_species
-                        ethos = random
                     }
                 }
             }
@@ -4446,7 +4443,6 @@ planet_event = {
                     count = 6
                     create_pop_group = {
                         species = last_created_species
-                        ethos = random
                     }
                 }
             }
@@ -4566,7 +4562,6 @@ planet_event = {
                     count = 3
                     create_pop_group = {
                         species = last_created_species
-                        ethos = random
                     }
                 }
             }
@@ -4575,7 +4570,6 @@ planet_event = {
                     count = 4
                     create_pop_group = {
                         species = last_created_species
-                        ethos = random
                     }
                 }
             }
@@ -4584,7 +4578,6 @@ planet_event = {
                     count = 5
                     create_pop_group = {
                         species = last_created_species
-                        ethos = random
                     }
                 }
             }
@@ -4593,7 +4586,6 @@ planet_event = {
                     count = 6
                     create_pop_group = {
                         species = last_created_species
-                        ethos = random
                     }
                 }
             }
@@ -9219,17 +9211,17 @@ country_event = {
         any_owned_leader = {
             has_trait =   thl_leader_trait_flower
         }
-        any_owned_planet = {
-            has_district = district_garden
-        }
+        # any_owned_planet = {
+        #     has_district = district_garden
+        # }
     }
     option = {
         name = touhou_paragon_effect.40101.a
         random_owned_planet = {
-            limit = {
-                has_district = district_garden
-            }
-            remove_district = district_garden
+            # limit = {
+            #     has_district = district_garden
+            # }
+            # remove_district = district_garden
             if = {
                 limit = {
                     has_planet_flag = unstable
