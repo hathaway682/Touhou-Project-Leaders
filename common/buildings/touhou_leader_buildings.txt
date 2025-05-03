@@ -91,7 +91,7 @@ building_shrine = {
 		}
 		if = {
 			limit = {
-				free_amenities < -10
+				free_amenities < -1000
 				owner = {
 					NOT = {
 						any_owned_leader = {
@@ -186,7 +186,7 @@ building_moriya_shrine = {
 	}
 
 	planet_modifier = {
-		job_moriya_miko_add = 2
+		job_moriya_miko_add = 200
 	}
 
 	triggered_country_modifier = {
@@ -297,7 +297,7 @@ holding_building_moriya_shrine = {
 	}
 
 	planet_modifier = {
-		job_moriya_miko_add = 2
+		job_moriya_miko_add = 200
 	}
 
 	resources = {
@@ -406,7 +406,7 @@ building_hakurei_shrine = {
 	}
 
 	planet_modifier = {
-		job_hakurei_miko_add = 2
+		job_hakurei_miko_add = 200
 	}
 
 	triggered_country_modifier = {
@@ -488,7 +488,7 @@ building_assembler_mk2 = {
 		potential = {
 			owner = { has_country_flag = kappa_enclave_mk2_already}
 		}
-		job_roboticist_add = 1
+		job_roboticist_add = 100
 	}
 
 	prerequisites = { tech_sanae_robot_worker }
@@ -811,7 +811,7 @@ building_great_library = {
 		has_major_upgraded_capital = yes
 	}
 	planet_modifier = {
-		job_touhou_archivist_add = 10
+		job_touhou_archivist_add = 1000
 	}
 
 	resources = {
@@ -915,7 +915,7 @@ building_doll_assembly_plant = {
 	}
 
 	planet_modifier = {
-		job_dollmaker_add = 1
+		job_dollmaker_add = 100
 	}
 
 	resources = {
@@ -1016,7 +1016,7 @@ building_doll_assembly_complex = {
 	}
 
 	planet_modifier = {
-		job_dollmaker_add = 2
+		job_dollmaker_add = 200
 	}
 
 	resources = {
@@ -1094,7 +1094,7 @@ building_suzunaan = {
 		potential = {
 			always = yes
 		}
-		job_touhou_bookseller_add = 1
+		job_touhou_bookseller_add = 100
 		mult = owner.bookstore_size
 	}
 
@@ -1144,7 +1144,7 @@ building_national_historial_archive = {
 		potential = {
 			always = yes
 		}
-		job_touhou_historian_add = 0.02
+		job_touhou_historian_add = 1
 		mult = owner.trigger:empire_size
 	}
 
@@ -1207,8 +1207,8 @@ building_corpses_disposal_center = {
 
 	planet_modifier = {
 		planet_pop_assembly_organic_add = 2
-		planet_amenities_add = 5
-		job_technician_add = 2
+		planet_amenities_add = 500
+		job_technician_add = 200
 	}
 
 	resources = {
@@ -1293,7 +1293,7 @@ building_posthumous_employment_center = {
 	}
 
 	planet_modifier = {
-		job_reassigner_add = 1
+		job_reassigner_add = 100
 	}
 
 	resources = {
@@ -1762,7 +1762,7 @@ building_magic_academy = {
 	}
 
 	planet_modifier = {
-		job_magician_add = 3
+		job_magician_add = 300
 	}
 
 	resources = {

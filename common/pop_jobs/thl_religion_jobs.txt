@@ -53,7 +53,7 @@ miko = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 4
+		planet_amenities_add = 400
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -189,7 +189,7 @@ moriya_miko = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 4
+		planet_amenities_add = 400
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 

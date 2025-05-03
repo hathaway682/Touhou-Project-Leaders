@@ -36,7 +36,7 @@ d_hakurei_shrine = {
 	potential = { always = no }
 
 	planet_modifier = {
-		job_hakurei_miko_add = 2
+		job_hakurei_miko_add = 200
 		planet_jobs_energy_produces_mult = 0.1
 		planet_jobs_unity_produces_mult = 0.1
 		trade_value_mult = 0.1
@@ -53,7 +53,7 @@ d_hakurei_shrine_large = {
 	potential = { always = no }
 
 	planet_modifier = {
-		job_hakurei_miko_add = 4
+		job_hakurei_miko_add = 400
 		planet_jobs_energy_produces_mult = 0.25
 		planet_jobs_unity_produces_mult = 0.25
 		trade_value_mult = 0.25
@@ -71,7 +71,7 @@ d_hakurei_shrine_imperial = {
 	potential = { always = no }
 
 	planet_modifier = {
-		job_hakurei_miko_add = 6
+		job_hakurei_miko_add = 600
 		planet_jobs_energy_produces_mult = 0.5
 		planet_jobs_unity_produces_mult = 0.5
 		trade_value_mult = 0.5
@@ -97,8 +97,8 @@ d_hakurei_shrine_psionic = {
 	potential = { always = no }
 
 	triggered_planet_modifier = {
-		job_telepath_add = 3
-		job_hakurei_miko_add = 3
+		job_telepath_add = 300
+		job_hakurei_miko_add = 300
 		planet_jobs_physics_research_produces_mult = 0.25
 		planet_jobs_society_research_produces_mult = 0.25
 		planet_jobs_engineering_research_produces_mult = 0.25
@@ -222,7 +222,7 @@ d_maple_forest = {
 
 	planet_modifier = {
 		planet_max_districts_add = -1
-		job_maple_sugar_harvester_add = 2
+		job_maple_sugar_harvester_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -297,7 +297,7 @@ d_hifuu_habitat_research = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_add = 2
+			job_researcher_add = 200
 		}
 	}
 
@@ -307,7 +307,7 @@ d_hifuu_habitat_research = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_add = 2
+			job_brain_drone_add = 200
 		}
 	}
 
@@ -317,7 +317,7 @@ d_hifuu_habitat_research = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculator_add = 2
+			job_calculator_add = 200
 		}
 	}
 }

@@ -482,11 +482,11 @@ thl_leader_trait_theurgist = {
 		category_psionics_research_speed_mult = 0.10
 	}
 	planet_modifier = {
-		job_miko_add = 2
+		job_miko_add = 200
 		planet_priests_unity_produces_add = 1
 	}
 	sector_modifier = {
-		job_miko_add = 1
+		job_miko_add = 100
 		planet_priests_unity_produces_add = 0.5
 	}
 	leader_class = { scientist commander official }
@@ -563,11 +563,11 @@ thl_leader_trait_theurgist_2 = {
 		category_psionics_research_speed_mult = 0.20
 	}
 	planet_modifier = {
-		job_miko_add = 4
+		job_miko_add = 400
 		planet_priests_unity_produces_add = 2
 	}
 	sector_modifier = {
-		job_miko_add = 2
+		job_miko_add = 200
 		planet_priests_unity_produces_add = 1
 	}
 	leader_class = { scientist commander official }
@@ -641,11 +641,11 @@ thl_leader_trait_theurgist_3 = {
 		category_psionics_research_speed_mult = 0.30
 	}
 	planet_modifier = {
-		job_miko_add = 6
+		job_miko_add = 600
 		planet_priests_unity_produces_add = 3
 	}
 	sector_modifier = {
-		job_miko_add = 3
+		job_miko_add = 300
 		planet_priests_unity_produces_add = 1.5
 	}
 	leader_class = { scientist commander official }
@@ -1679,7 +1679,7 @@ thl_leader_trait_gardener = {
 		potential = {
 			trait_is_gestalt_check = no
 		}
-		job_death_chronicler_add = 4
+		job_death_chronicler_add = 400
 		planet_jobs_unity_produces_mult = 0.3
 		planet_jobs_food_produces_mult = 0.1
 	}
@@ -1687,7 +1687,7 @@ thl_leader_trait_gardener = {
 		potential = {
 			trait_is_gestalt_check = no
 		}
-		job_death_chronicler_add = 2
+		job_death_chronicler_add = 200
 		planet_jobs_unity_produces_mult = 0.15
 		planet_jobs_food_produces_mult = 0.05
 	}
@@ -1695,7 +1695,7 @@ thl_leader_trait_gardener = {
 		potential = {
 			trait_is_gestalt_check = yes
 		}
-		job_chronicle_drone_add = 4
+		job_chronicle_drone_add = 400
 		planet_jobs_unity_produces_mult = 0.3
 		planet_jobs_food_produces_mult = 0.1
 	}
@@ -1703,7 +1703,7 @@ thl_leader_trait_gardener = {
 		potential = {
 			trait_is_gestalt_check = yes
 		}
-		job_chronicle_drone_add = 2
+		job_chronicle_drone_add = 200
 		planet_jobs_unity_produces_mult = 0.15
 		planet_jobs_food_produces_mult = 0.05
 	}
@@ -1794,7 +1794,7 @@ thl_leader_trait_year_round = {
 		AMOUNT = 3
 	}
 	planet_modifier = {
-		planet_amenities_add = 20
+		planet_amenities_add = 2000
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
@@ -2774,13 +2774,13 @@ thl_leader_trait_knowledge = {
 	}
 	
 	planet_modifier = {
-		job_touhou_archivist_add = 4
+		job_touhou_archivist_add = 400
 		planet_jobs_specialist_produces_mult = 0.1
 		planet_researchers_produces_mult = 0.3
 		planet_researchers_upkeep_mult = -0.2
 	}
 	sector_modifier = {
-		job_touhou_archivist_add = 2
+		job_touhou_archivist_add = 200
 		planet_jobs_specialist_produces_mult = 0.05
 		planet_researchers_produces_mult = 0.15
 		planet_researchers_upkeep_mult = -0.1
@@ -3038,7 +3038,7 @@ thl_leader_trait_dance = {
 		potential = {
 			trait_is_gestalt_check = no
 		}
-		job_death_chronicler_add = 2
+		job_death_chronicler_add = 200
 		planet_jobs_unity_produces_mult = 0.15
 		planet_spirit_jobs_unity_produces_mult = 0.25
 		pop_job_amenities_mult = 0.15
@@ -3048,7 +3048,7 @@ thl_leader_trait_dance = {
 		potential = {
 			trait_is_gestalt_check = yes
 		}
-		job_chronicle_drone_add = 2
+		job_chronicle_drone_add = 200
 		planet_jobs_unity_produces_mult = 0.15
 		planet_spirit_jobs_unity_produces_mult = 0.25
 		pop_job_amenities_mult = 0.15
@@ -4502,10 +4502,10 @@ thl_leader_trait_izakaya = {
 		TIER = 1
 	}
 	planet_modifier = {
-		job_izakaya_worker_add = 2
+		job_izakaya_worker_add = 200
 	}
 	sector_modifier = {
-		job_izakaya_worker_add = 1
+		job_izakaya_worker_add = 100
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
@@ -4529,10 +4529,10 @@ thl_leader_trait_izakaya_2 = {
 		TIER = 2
 	}
 	planet_modifier = {
-		job_izakaya_worker_add = 4
+		job_izakaya_worker_add = 400
 	}
 	sector_modifier = {
-		job_izakaya_worker_add = 2
+		job_izakaya_worker_add = 200
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
@@ -4556,10 +4556,10 @@ thl_leader_trait_izakaya_3 = {
 		TIER = 3
 	}
 	planet_modifier = {
-		job_izakaya_worker_add = 6
+		job_izakaya_worker_add = 600
 	}
 	sector_modifier = {
-		job_izakaya_worker_add = 3
+		job_izakaya_worker_add = 300
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }

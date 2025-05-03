@@ -87,7 +87,7 @@ head_researcher = {
         potential = {
             always = yes
         }
-        planet_amenities_add = 3
+        planet_amenities_add = 300
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
 
@@ -158,7 +158,7 @@ healthcare = {
                 NOT = { has_valid_civic = civic_dystopian_society }
             }
         }
-        planet_amenities_add = 5
+        planet_amenities_add = 500
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     triggered_planet_modifier = {
@@ -166,7 +166,7 @@ healthcare = {
             exists = owner
             owner = { has_valid_civic = civic_private_healthcare_corporate }
         }
-        planet_amenities_add = 2
+        planet_amenities_add = 200
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     #TODO：更新贸易额
@@ -183,7 +183,7 @@ healthcare = {
             exists = owner
             owner = { has_valid_civic = civic_penglai_medcine_corp }
         }
-        planet_amenities_add = 2
+        planet_amenities_add = 200
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     # triggered_planet_modifier = {
@@ -199,14 +199,14 @@ healthcare = {
             exists = owner
             owner = { has_valid_civic = civic_penglai_medcine }
         }
-        planet_amenities_add = 5
+        planet_amenities_add = 500
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     triggered_planet_modifier = {
         potential = {
             planet = { has_planet_flag = has_private_clinics }
         }
-        planet_amenities_add = 1
+        planet_amenities_add = 100
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     # triggered_planet_modifier = {
@@ -696,7 +696,7 @@ grower = {
     }
 
     triggered_planet_modifier = {
-        planet_amenities_add = 5
+        planet_amenities_add = 500
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
 
@@ -826,7 +826,7 @@ grower_drone = {
     }
 
     triggered_planet_modifier = {
-        planet_amenities_add = 5
+        planet_amenities_add = 500
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
     triggered_planet_modifier = {
@@ -1179,7 +1179,7 @@ angler = {
             exists = owner
             owner = { has_valid_civic = civic_agrarian_idyll }
         }
-        planet_amenities_add = 2
+        planet_amenities_add = 200
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
 
@@ -1241,7 +1241,7 @@ maple_sugar_harvester = {
         potential = {
             always = yes
         }
-        planet_amenities_add = 5
+        planet_amenities_add = 500
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
 
@@ -1312,7 +1312,7 @@ izakaya_worker = {
         potential = {
             always = yes
         }
-        planet_amenities_add = 5
+        planet_amenities_add = 500
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
 
@@ -1362,7 +1362,7 @@ izakaya_worker = {
                 }
             }
         }
-        planet_amenities_add = 5
+        planet_amenities_add = 500
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
 
@@ -1412,7 +1412,7 @@ izakaya_worker = {
                 }
             }
         }
-        planet_amenities_add = 10
+        planet_amenities_add = 1000
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
 
