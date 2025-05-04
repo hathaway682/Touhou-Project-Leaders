@@ -2902,14 +2902,16 @@ thl_leader_trait_death = {
 	}
 	custom_tooltip_with_modifiers = thl_leader_trait_death_effect
 	planet_modifier = {
-		planet_spirit_jobs_produces_mult = 0.4
-		spirit_empire_size_mult = -0.5
-		spirit_amenities_usage_mult = -0.2
+		pop_category_civilians_thl_spirit_produces_add = 0.5
+		pop_category_workers_thl_spirit_produces_add = 0.5
+		pop_category_specialists_thl_spirit_produces_add = 0.5
+		pop_category_rulers_thl_spirit_produces_add = 0.5
 	}
 	sector_modifier = {
-		planet_spirit_jobs_produces_mult = 0.2
-		spirit_empire_size_mult = -0.25
-		spirit_amenities_usage_mult = -0.1
+		pop_category_civilians_thl_spirit_produces_add = 0.25
+		pop_category_workers_thl_spirit_produces_add = 0.25
+		pop_category_specialists_thl_spirit_produces_add = 0.25
+		pop_category_rulers_thl_spirit_produces_add = 0.25
 	}
 	on_gained_effect = {
 		change_background_job = ghost_lead
@@ -2951,7 +2953,9 @@ thl_leader_trait_sakura_1 = {
 	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
 		planet_spirit_jobs_produces_mult = 0.05
+		spirit_empire_size_mult = -0.05
 		spirit_amenities_usage_mult = -0.05
+		planet_pop_assembly_organic_add = 1
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
@@ -2973,7 +2977,9 @@ thl_leader_trait_sakura_3 = {
 	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
 		planet_spirit_jobs_produces_mult = 0.15
+		spirit_empire_size_mult = -0.15
 		spirit_amenities_usage_mult = -0.15
+		planet_pop_assembly_organic_add = 3
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
@@ -2995,7 +3001,9 @@ thl_leader_trait_sakura_5 = {
 	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
 		planet_spirit_jobs_produces_mult = 0.25
+		spirit_empire_size_mult = -0.25
 		spirit_amenities_usage_mult = -0.25
+		planet_pop_assembly_organic_add = 5
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
@@ -3016,7 +3024,9 @@ thl_leader_trait_sakura_8 = {
 	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
 		planet_spirit_jobs_produces_mult = 0.4
+		spirit_empire_size_mult = -0.4
 		spirit_amenities_usage_mult = -0.4
+		planet_pop_assembly_organic_add = 8
 	}
 	leader_trait_type = veteran
 	leader_class = { official }

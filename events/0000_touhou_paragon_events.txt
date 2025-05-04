@@ -310,8 +310,7 @@ country_event = { # ethic leader lottery machine
 				}
 				ethic_leader_hire_event = { LEADER_ID = sakuya EVENT_ID = touhou_paragon.41000 }
 			}
-			#梅莉将会自裂隙招募
-			#莲子将会由推荐事件触发
+			#梅莉莲子将会自裂隙招募
 			0 = { # 觉
 				modifier = {
 					add = value:touhou_leader_randomizer|ETHIC|xenophile|ETHIC_NEG|xenophobe|LEADER_ID|satori|
@@ -597,12 +596,12 @@ country_event = { # ethic leader lottery machine
 				}
 				ethic_leader_hire_event = { LEADER_ID = utsuho EVENT_ID = touhou_paragon.42600 }
 			}
-			0 = { # 荷取，目前通过飞地招募
-				#modifier = {
-				#	add = value:touhou_leader_randomizer|ETHIC|materialist|ETHIC_NEG|spiritualist|LEADER_ID|nitori|
-				#}
-				ethic_leader_hire_event = { LEADER_ID = nitori EVENT_ID = touhou_paragon.42700 }
-			}
+			# 0 = { # 荷取，目前通过飞地招募
+			# 	modifier = {
+			# 		add = value:touhou_leader_randomizer|ETHIC|materialist|ETHIC_NEG|spiritualist|LEADER_ID|nitori|
+			# 	}
+			# 	ethic_leader_hire_event = { LEADER_ID = nitori EVENT_ID = touhou_paragon.42700 }
+			# }
 		}
 	}
 }

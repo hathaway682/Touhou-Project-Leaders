@@ -1721,7 +1721,7 @@
  thl_leader_trait_corpse_travel_effect:0 "被击败的有机体星神兽有机会被复活。\n\n当在战争中击杀敌国£pop£§Y人口§!时：\n该人口的肉体会成为一个§Y僵尸£pop£人口§!并被运输至§H燐§!所在的星球，其灵魂会成为一个§Y怨灵£pop£人口§!并前往§H燐§!所管理星区的随机星球。"
  thl_leader_trait_corpse_manipulation:0 "死灰复燃"
  thl_leader_trait_corpse_manipulation_desc:0 "阿燐捕捉和操纵尸体和怨灵的能力可以轻易将大批大批的死者拉起来战斗或工作，亦可以把生者毫无破绽的扮成死者。"
- thl_leader_trait_corpse_manipulation_effect:0 "§H所在星区§!能够建造£building£§Y尸体处理中心§!，这一建筑会利用星球上死去的尸体组装§Y僵尸§!及§Y怨灵§!£pop£人口，同时会将星球的防御部队替换为§Y地狱不死军§!，比通常的§Y不死军§!更加强大。\n存在£building£§Y尸体处理中心§!时，失业的§Y僵尸§!£pop£人口会被§P化学处理§!以产生$r_energy$，导致其人口下降。\n可以在§H所在星球§!或有£building£§Y尸体处理中心§!的星球招募§Y地狱不死军§!。"
+ thl_leader_trait_corpse_manipulation_effect:0 "§H所在星区§!能够建造£building£§Y尸体处理中心§!，这一建筑会利用星球上死去的尸体组装§Y僵尸§!及§Y怨灵§!£pop£人口，同时会将星球的防御部队替换为§Y地狱不死军§!，比通常的§Y不死军§!更加强大。\n可以在§H所在星球§!或有£building£§Y尸体处理中心§!的星球招募§Y地狱不死军§!。"
  hell_undead:0 "地狱不死军"
  hell_undead_plural:0 "地狱不死军"
  hell_undead_desc:0 "结合了复苏僵尸的无畏和耐性、怨灵的灵活机动与心理战、伪装成死者的生者的战斗技巧与指挥能力，这支部队确实称得上是地狱风格的混编部队。"
