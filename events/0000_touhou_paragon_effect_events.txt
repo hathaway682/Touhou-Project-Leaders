@@ -3859,6 +3859,7 @@ country_event = {
     }
 }
 
+#TODO：恢复灵魂掠夺轰炸
 # pop_event = {
 #     id = touhou_paragon_effect.601
 #     hide_window = yes

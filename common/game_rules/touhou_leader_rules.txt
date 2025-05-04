@@ -386,3 +386,5 @@ should_count_towards_leader_cap = {
 		}
 	}
 }
+
+#TODO：将烧尸体发电改为决议
