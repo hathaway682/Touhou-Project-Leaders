@@ -1387,7 +1387,7 @@ decision_transplant_sakura_tree = {
 	resources = {
 		category = decisions
 		cost = {
-			thl_spirit = 500
+			thl_spirit = 100
 		}
 	}
 
