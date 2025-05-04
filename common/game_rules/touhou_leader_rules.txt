@@ -69,18 +69,6 @@ can_species_be_assembled = {
 				has_trait = trait_hive_mind
 			}
 			else_if = {
-				limit = { has_trait = trait_thl_spirit }
-				root = {
-					OR = {
-						has_deposit = sakura_tree_1
-						has_deposit = sakura_tree_3
-						has_deposit = sakura_tree_5
-						has_deposit = sakura_tree_8
-						has_building = building_sakura_tree
-					}
-				}
-			}
-			else_if = {
 				limit = { has_budding_trait = yes }
 				root = {
 					any_owned_species = { is_exact_same_species = prevprev }
@@ -123,6 +111,18 @@ can_species_be_assembled = {
 						}
 						has_planet_flag = can_organic_assemble_flag #for mod compatibility
 					}
+				}
+			}
+		}
+		AND = {
+			has_trait = trait_thl_spirit
+			root = {
+				OR = {
+					has_deposit = sakura_tree_1
+					has_deposit = sakura_tree_3
+					has_deposit = sakura_tree_5
+					has_deposit = sakura_tree_8
+					has_deposit = sakura_tree_branch
 				}
 			}
 		}

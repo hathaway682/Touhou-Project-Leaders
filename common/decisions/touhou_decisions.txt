@@ -1208,16 +1208,11 @@ decision_summon_spirit = {
 
 	potential = {
 		owner = {
-			any_owned_leader = {
-				has_trait = thl_leader_trait_summon_devils
-			}
+			has_country_flag = door_of_nether_avaliable
 		}
 	}
 
 	allow = {
-		owner = {
-			has_country_flag = door_of_nether_avaliable
-		}
 		OR = {
 			AND = {
 				exists = owner
@@ -1302,16 +1297,11 @@ decision_summon_spirit_large = {
 
 	potential = {
 		owner = {
-			any_owned_leader = {
-				has_trait = thl_leader_trait_summon_devils
-			}
+			has_country_flag = door_of_nether_avaliable
 		}
 	}
 
 	allow = {
-		owner = {
-			has_country_flag = door_of_nether_avaliable
-		}
 		OR = {
 			AND = {
 				exists = owner
@@ -1384,6 +1374,98 @@ decision_summon_spirit_large = {
 
 	ai_weight = {
 		weight = 0
+	}
+}
+
+decision_transplant_sakura_tree = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = sakura_tree
+
+	enactment_time = 180
+
+	resources = {
+		category = decisions
+		cost = {
+			thl_spirit = 500
+		}
+	}
+
+	potential = {
+		owner = {
+			has_country_flag = sakura_tree_branch_avaliable
+		}
+		NOR = {
+			has_deposit = sakura_tree
+			has_deposit = sakura_tree_1
+			has_deposit = sakura_tree_3
+			has_deposit = sakura_tree_5
+			has_deposit = sakura_tree_8
+			has_deposit = sakura_tree_branch
+		}
+	}
+
+	allow = {
+		OR = {
+			is_cold = yes
+			owner = {
+				has_country_flag = door_of_nether_avaliable
+			}
+		}
+	}
+
+	effect = {
+		add_deposit = sakura_tree_branch
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+decision_nether_world = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = sakura_tree
+
+	enactment_time = 3600
+
+	resources = {
+		category = decisions
+		cost = {
+			thl_spirit = 1000
+		}
+	}
+
+	potential = {
+		owner = {
+			has_country_flag = nether_world_avaliable
+		}
+	}
+
+	allow = {
+		has_deposit = sakura_tree_branch
+	}
+
+	effect = {
+		change_pc = pc_nether
+		custom_tooltip = decision_nether_world_tooltip
+		hidden_effect = {
+			every_owned_pop_group = {
+				limit = {
+					is_being_purged = no
+					species = {
+						is_robotic = no
+						is_livestock = no
+					}
+				}
+				change_species = event_target:ghost_species
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
 	}
 }
 

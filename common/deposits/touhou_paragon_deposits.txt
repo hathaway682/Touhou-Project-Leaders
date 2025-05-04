@@ -119,6 +119,19 @@ sakura_tree = {
 	potential = { always = no }
 }
 
+sakura_tree_branch = {
+	is_for_colonizable = yes
+	icon = "d_sakura_tree"
+	triggered_planet_modifier = {
+		planet_spirit_jobs_produces_mult = 0.1
+		spirit_empire_size_mult = -0.1
+		spirit_amenities_usage_mult = -0.1
+		planet_pop_assembly_organic_add = 2
+	}
+
+	potential = { always = no }
+}
+
 sakura_tree_1 = {
 	is_for_colonizable = yes
 	icon = "d_sakura_tree"
