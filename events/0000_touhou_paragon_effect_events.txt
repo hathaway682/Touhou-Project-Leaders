@@ -532,6 +532,99 @@ country_event = {
 
 namespace = touhou_paragon_effect
 
+# On destroying enemy ship.
+country_event = {
+    id = touhou_paragon_effect.1005
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        FROMFROM = { # Winning ship.
+            if = {
+                limit = { exists = fleet.leader }
+                fleet.leader = {
+                    # Crusader / Crusader II
+                    if = {
+                        limit = {
+                            has_trait_tier1or2or3 = {
+                                TRAIT = leader_trait_crusader
+                            }
+                            ROOT.FROM = { # Owner of losing ship.
+                                is_default_or_fallen = yes
+                            }
+                        }
+
+                        ROOT = {
+                            if = {
+                                limit = { PREV = { has_trait = thl_leader_trait_kendo } }
+                                add_resource = {
+                                    thl_spirit = 10
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+# On army killed in combat.
+# This = owner
+# From = army
+# FromFrom = opponent
+# FromFromFrom = planet
+country_event = {
+    id = touhou_paragon_effect.1040
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        FROMFROMFROM = { # Planet where ground combat is taking place.
+
+            # Check if dead army is a defensive army.
+            if = {
+                limit = {
+                    any_ground_combat_defender = {
+                        is_same_value = ROOT.FROM
+                    }
+                }
+
+                # Check if attacking army has general with Crusader trait.
+                random_ground_combat_attacker = {
+                    limit = {
+                        exists = leader
+                        leader = {
+                            has_trait = thl_leader_trait_kendo
+                        }
+                    }
+                    leader = {
+                        save_event_target_as = attacking_general
+                    }
+                }
+            }
+        }
+
+        # If attacking army has a leader with Crusader trait, award Unity.
+        if = {
+            limit = { exists = event_target:attacking_general }
+            FROMFROM = {
+                if = {
+                    limit = {
+                        event_target:attacking_general = {
+                            has_trait = thl_leader_trait_kendo
+                        }
+                    }
+                    add_resource = {
+                        thl_spirit = 100
+                    }
+                }
+            }
+        }
+    }
+}
+
 planet_event = {
     id = touhou_paragon_effect.1
     hide_window = yes

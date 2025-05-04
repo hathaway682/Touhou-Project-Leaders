@@ -1972,8 +1972,7 @@ leader_event = {
 		name = touhou_paragon.42110.a
 		leader_event = {
 			id = touhou_paragon.42111
-			days = 1080
-			random = 360
+			days = 900
 		}
 	}
 }
@@ -2000,10 +1999,43 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42111.a
+		remove_trait = thl_leader_trait_sakura
+		add_trait = thl_leader_trait_sakura_1
 		leader_event = {
 			id = touhou_paragon.42112
-			days = 30
-			random = 330
+			days = 900
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = event_target:demon_species
+				}
+			}
+			create_species = {
+				name = "NAME_Thl_Ghost"
+				plural = "NAME_Thl_Ghost_pl"
+				class = MAM
+				namelist = random_class
+				portrait = "ghost"
+				traits = {
+					trait = "trait_pc_nether_preference"
+					trait = "trait_thl_spirit"
+					trait = "trait_psionic"
+					trait = "trait_weak"
+					trait = "trait_traditional"
+					trait = "trait_charismatic"
+				}
+			}
+			last_created_species = {
+				save_global_event_target_as = ghost_species
+			}
+		}
+		create_pop_group = {
+			species = event_target:ghost_species
+		}
+		event_target:sakura_planet = {
+			remove_deposit = sakura_tree
+			add_deposit = sakura_tree_1
 		}
 	}
 }
@@ -2030,12 +2062,20 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42112.a
+		custom_tooltip = touhou_paragon.42112.tooltip
+		remove_trait = thl_leader_trait_sakura_1
+		add_trait = thl_leader_trait_sakura_3
+		leader_event = {
+			id = touhou_paragon.42113
+			days = 900
+		}
 		event_target:sakura_planet = {
-			enable_special_project = {
-				name = SAKURA_SPECIAL_PROJECT
-				owner = root.owner
-				location = this
-			}
+			change_pc = pc_tundra
+			remove_deposit = sakura_tree_1
+			add_deposit = sakura_tree_3
+		}
+		owner = {
+			set_country_flag = sakura_tree_branch_avaliable
 		}
 	}
 }
@@ -2062,9 +2102,20 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42113.a
+		custom_tooltip = touhou_paragon.42113.tooltip
+		remove_trait = thl_leader_trait_sakura_3
+		add_trait = thl_leader_trait_sakura_5
 		leader_event = {
 			id = touhou_paragon.42114
-			days = 360
+			days = 900
+		}
+		event_target:sakura_planet = {
+			change_pc = pc_arctic
+			remove_deposit = sakura_tree_3
+			add_deposit = sakura_tree_5
+		}
+		owner = {
+			set_country_flag = door_of_nether_avaliable
 		}
 	}
 }
@@ -2091,145 +2142,7 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42114.a
-		leader_event = {
-			id = touhou_paragon.42115
-			days = 3600
-		}
-		event_target:sakura_planet = {
-			add_deposit = sakura_tree
-		}
-	}
-}
-
-leader_event = {
-	id = touhou_paragon.42115
-	title = touhou_paragon.42115.name
-	desc = touhou_paragon.42115.desc
-	picture = GFX_evt_sakura_tree
-	show_sound = event_default
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	event_window_type = leader_story
-	event_picture_background = "GFX_leader_recruitment_bg_renowned"
-
-	picture_event_data = {
-		portrait = root
-	}
-
-	trigger = {
-		exists = owner
-	}
-
-	option = {
-		name = touhou_paragon.42115.a
-		remove_trait = thl_leader_trait_sakura
-		add_trait = thl_leader_trait_sakura_1
-		leader_event = {
-			id = touhou_paragon.42116
-			days = 3600
-		}
-		event_target:sakura_planet = {
-			remove_deposit = sakura_tree
-			add_deposit = sakura_tree_1
-		}
-	}
-}
-
-leader_event = {
-	id = touhou_paragon.42116
-	title = touhou_paragon.42116.name
-	desc = touhou_paragon.42116.desc
-	picture = GFX_evt_sakura_tree
-	show_sound = event_default
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	event_window_type = leader_story
-	event_picture_background = "GFX_leader_recruitment_bg_renowned"
-
-	picture_event_data = {
-		portrait = root
-	}
-
-	trigger = {
-		exists = owner
-	}
-
-	option = {
-		name = touhou_paragon.42116.a
-		remove_trait = thl_leader_trait_sakura_1
-		add_trait = thl_leader_trait_sakura_3
-		leader_event = {
-			id = touhou_paragon.42117
-			days = 3600
-		}
-		event_target:sakura_planet = {
-			change_pc = pc_tundra
-			remove_deposit = sakura_tree_1
-			add_deposit = sakura_tree_3
-		}
-	}
-}
-
-leader_event = {
-	id = touhou_paragon.42117
-	title = touhou_paragon.42117.name
-	desc = touhou_paragon.42117.desc
-	picture = GFX_evt_sakura_tree
-	show_sound = event_default
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	event_window_type = leader_story
-	event_picture_background = "GFX_leader_recruitment_bg_renowned"
-
-	picture_event_data = {
-		portrait = root
-	}
-
-	trigger = {
-		exists = owner
-	}
-
-	option = {
-		name = touhou_paragon.42117.a
-		remove_trait = thl_leader_trait_sakura_3
-		add_trait = thl_leader_trait_sakura_5
-		leader_event = {
-			id = touhou_paragon.42118
-			days = 3600
-		}
-		event_target:sakura_planet = {
-			change_pc = pc_arctic
-			remove_deposit = sakura_tree_3
-			add_deposit = sakura_tree_5
-		}
-	}
-}
-
-leader_event = {
-	id = touhou_paragon.42118
-	title = touhou_paragon.42118.name
-	desc = touhou_paragon.42118.desc
-	picture = GFX_evt_sakura_tree
-	show_sound = event_default
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	event_window_type = leader_story
-	event_picture_background = "GFX_leader_recruitment_bg_renowned"
-
-	picture_event_data = {
-		portrait = root
-	}
-
-	trigger = {
-		exists = owner
-	}
-
-	option = {
-		name = touhou_paragon.42118.a
+		custom_tooltip = touhou_paragon.42114.tooltip
 		remove_trait = thl_leader_trait_sakura_5
 		add_trait = thl_leader_trait_sakura_8
 		event_target:sakura_planet = {
@@ -2358,6 +2271,8 @@ country_event = { #Crisis
 		name = touhou_paragon.42202.a
 		response_text = touhou_paragon.42202.a.response
 		custom_tooltip =  touhou_paragon.yuka.tt
+		add_research_option = tech_master_spark
+		add_research_option = tech_final_spark
 		hidden_effect = {
 			set_country_flag = yuka_become_admiral
 			random_owned_leader = {
