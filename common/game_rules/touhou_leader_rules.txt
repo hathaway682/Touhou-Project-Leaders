@@ -121,22 +121,9 @@ can_species_be_assembled = {
 							has_building = building_posthumous_employment_center
 							owner = { has_civic = civic_permanent_employment }
 						}
-						AND = {
-							num_assigned_jobs = {
-								job = death_chronicler
-								value >= 1
-							}
-							owner = { has_civic = civic_nether_world }
-						}
 						has_planet_flag = can_organic_assemble_flag #for mod compatibility
 					}
 				}
-			}
-			OR = {
-				NOT = {
-					has_trait = trait_thl_spirit
-				}
-				dolls_assembly_trigger = yes
 			}
 		}
 	}

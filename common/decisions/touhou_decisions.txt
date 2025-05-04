@@ -1008,12 +1008,12 @@ decision_summon_devils = {
 	resources = {
 		category = decisions
 		cost = {
-			astral_threads = 500
+			astral_threads = 1000
 		}
 	}
 
 	effect = {
-		custom_tooltip = demon_refugees_tooltip
+		custom_tooltip = small_demon_refugees_tooltip
 		hidden_effect = {
 			if = {
 				limit = {
@@ -1042,11 +1042,9 @@ decision_summon_devils = {
 					save_global_event_target_as = demon_species
 				}
 			}
-			while = {
-				count = 4
-				create_pop_group = {
-					species = event_target:demon_species
-				}
+			create_pop_group = {
+				species = event_target:demon_species
+				size = 666
 			}
 		}
 	}
@@ -1103,7 +1101,7 @@ decision_summon_devils_large = {
 	resources = {
 		category = decisions
 		cost = {
-			astral_threads = 1000
+			astral_threads = 6000
 		}
 	}
 
@@ -1137,11 +1135,9 @@ decision_summon_devils_large = {
 					save_global_event_target_as = demon_species
 				}
 			}
-			while = {
-				count = 10
-				create_pop_group = {
-					species = event_target:demon_species
-				}
+			create_pop_group = {
+				species = event_target:demon_species
+				size = 6666
 			}
 		}
 	}
@@ -1194,6 +1190,194 @@ decision_sakura_tree = {
 				leader_event = {
 					id = touhou_paragon.42110
 				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_summon_spirit = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 180
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_summon_devils
+			}
+		}
+	}
+
+	allow = {
+		owner = {
+			has_country_flag = door_of_nether_avaliable
+		}
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_death
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_death
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_death
+					}
+				}
+			}
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			sr_zro = 100
+		}
+	}
+
+	effect = {
+		custom_tooltip = small_demon_refugees_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:demon_species
+					}
+				}
+				create_species = {
+					name = "NAME_Thl_Ghost"
+					plural = "NAME_Thl_Ghost_pl"
+					class = MAM
+					namelist = random_class
+					portrait = "ghost"
+					traits = {
+						trait = "trait_pc_nether_preference"
+						trait = "trait_thl_spirit"
+						trait = "trait_psionic"
+						trait = "trait_weak"
+						trait = "trait_traditional"
+						trait = "trait_charismatic"
+					}
+				}
+				last_created_species = {
+					save_global_event_target_as = demon_species
+				}
+			}
+			create_pop_group = {
+				species = event_target:demon_species
+				size = 1000
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_summon_spirit_large = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 300
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_summon_devils
+			}
+		}
+	}
+
+	allow = {
+		owner = {
+			has_country_flag = door_of_nether_avaliable
+		}
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_death
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_death
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_death
+					}
+				}
+			}
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			sr_zro = 400
+		}
+	}
+
+	effect = {
+		custom_tooltip = large_spirit_refugees_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:demon_species
+					}
+				}
+				create_species = {
+					name = "NAME_Thl_Ghost"
+					plural = "NAME_Thl_Ghost_pl"
+					class = MAM
+					namelist = random_class
+					portrait = "ghost"
+					traits = {
+						trait = "trait_pc_nether_preference"
+						trait = "trait_thl_spirit"
+						trait = "trait_psionic"
+						trait = "trait_weak"
+						trait = "trait_traditional"
+						trait = "trait_charismatic"
+					}
+				}
+				last_created_species = {
+					save_global_event_target_as = demon_species
+				}
+			}
+			create_pop_group = {
+				species = event_target:demon_species
+				size = 4444
 			}
 		}
 	}

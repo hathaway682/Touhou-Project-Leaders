@@ -1974,6 +1974,9 @@ leader_event = {
 			id = touhou_paragon.42111
 			days = 900
 		}
+		event_target:sakura_planet = {
+			add_deposit = sakura_tree
+		}
 	}
 }
 
@@ -2030,10 +2033,10 @@ leader_event = {
 				save_global_event_target_as = ghost_species
 			}
 		}
-		create_pop_group = {
-			species = event_target:ghost_species
-		}
 		event_target:sakura_planet = {
+			create_pop_group = {
+				species = event_target:ghost_species
+			}
 			remove_deposit = sakura_tree
 			add_deposit = sakura_tree_1
 		}
