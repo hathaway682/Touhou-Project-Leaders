@@ -168,16 +168,15 @@ country_event = {
 		has_point_of_interest = {
 			poi = touhou_sanae_mission_chain_tech.1
 		}
-		#TODO：检测机器人人口
-		# count_owned_pop_amount = {
-		# 	limit = {
-		# 		OR = {
-		# 			has_trait = trait_machine_unit
-		# 			has_trait = trait_mechanical
-		# 		}
-		# 	}
-		# 	count >= 1000
-		# }
+		count_owned_pop_amount = {
+			limit = {
+				OR = {
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
+			}
+			count >= 1000
+		}
 	}
 	option = {
 		name = touhou_paragon_mission.40304.a
