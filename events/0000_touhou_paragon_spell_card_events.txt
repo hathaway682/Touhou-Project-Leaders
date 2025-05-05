@@ -1345,7 +1345,7 @@ country_event = {
     }
 }
 
-#TODO：修复变种人刷兵（也许没必要这么做）
+#TODO：修复变种人刷兵（低优先级）
 planet_event = {
     id = touhou_paragon_spell.203
     title = "touhou_paragon_spell.201.name"
@@ -1547,7 +1547,7 @@ country_event = {
     }
 }
 
-#TODO：修复这个事件（也许没必要这么做）
+#TODO：修复这个事件（低优先级）
 # planet_event = {
 #     id = touhou_paragon_spell.206
 #     title = "touhou_paragon_spell.201.name"
@@ -2796,7 +2796,7 @@ planet_event = {
 
     option = {
         name = UNFORTUNATE
-        #TODO：根据工作区域杀死人口
+        #TODO：根据工作区域杀死人口（低优先级）
         random_owned_pop_group =  {
             kill_single_pop = yes
         }

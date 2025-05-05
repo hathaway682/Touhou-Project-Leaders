@@ -125,59 +125,43 @@ head_researcher = {
 
 healthcare = {
     category = specialist
-    condition_string = SPECIALIST_JOB_TRIGGER
-    building_icon = building_clinic
-    clothes_texture_index = 3
-
-    possible_pre_triggers = {
-        has_owner = yes
-        is_being_purged = no
-        is_being_assimilated = no
-        is_sapient = yes
+    swappable_data = {
+        default = {
+            condition_string = SPECIALIST_JOB_TRIGGER
+            building_icon = building_medical_2
+        }
+        # Mutagenic Spa Attendant
+        swap_type = {
+            trigger = {
+                healthcare_is_mutagenic_trigger = yes
+            }
+            name = bath_attendant
+            desc = bath_attendant
+            icon = bath_attendant
+            building_icon = building_toxic_bath
+            condition_string = SPECIALIST_JOB_TRIGGER
+            weight = 5
+        }
     }
 
     possible_precalc = can_fill_specialist_job
-
-    planet_modifier = {
-        pop_growth_speed = 0.05
-        planet_pop_assembly_organic_mult = 0.05
-        pop_environment_tolerance = 0.025
-    }
 
     resources = {
         category = planet_doctors
         upkeep = {
             consumer_goods = 1
         }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { has_valid_civic = civic_penglai_medcine_corp }
+            }
+            trade = 4
+        }
     }
 
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                NOT = { has_valid_civic = civic_dystopian_society }
-            }
-        }
-        planet_amenities_add = 500
-        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { has_valid_civic = civic_private_healthcare_corporate }
-        }
-        planet_amenities_add = 200
-        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-    }
-    #TODO：更新贸易额
-    # triggered_planet_modifier = {
-    #     potential = {
-    #         exists = owner
-    #         owner = { has_valid_civic = civic_private_healthcare_corporate }
-    #     }
-    #     trade_value_add = 4
-    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    # }
+    inline_script = "output/healthcare_triggered_modifiers"
+
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -186,14 +170,6 @@ healthcare = {
         planet_amenities_add = 200
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
-    # triggered_planet_modifier = {
-    #     potential = {
-    #         exists = owner
-    #         owner = { has_valid_civic = civic_penglai_medcine_corp }
-    #     }
-    #     trade_value_add = 4
-    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    # }
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -202,20 +178,38 @@ healthcare = {
         planet_amenities_add = 500
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
-    triggered_planet_modifier = {
-        potential = {
-            planet = { has_planet_flag = has_private_clinics }
+
+    weight = {
+        weight = @high_prio_specialist_job_weight
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = { has_trait = trait_mechanical }
         }
-        planet_amenities_add = 100
-        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 2
+            owner = { has_valid_civic = civic_private_healthcare_corporate }
+        }
+        modifier = {
+            factor = 1.5
+            planet = {
+                has_branch_office = yes
+                branch_office_owner = {
+                    has_valid_civic = civic_private_healthcare_corporate
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_enslaved = yes
+            has_slavery_type = { type = slavery_indentured }
+        }
     }
-    # triggered_planet_modifier = {
-    #     potential = {
-    #         planet = { has_planet_flag = has_private_clinics }
-    #     }
-    #     trade_value_add = 2
-    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    # }
 
 
     weight = {
@@ -278,9 +272,22 @@ healthcare = {
 
 foundry = {
     category = specialist
-    condition_string = SPECIALIST_JOB_TRIGGER
-    building_icon = building_foundry_1
-    clothes_texture_index = 3
+
+    swappable_data = {
+        default = {
+            condition_string = SPECIALIST_JOB_TRIGGER
+            building_icon = building_foundry_1
+        }
+        # Catalytic Swap
+        swap_type = {
+            trigger = {
+                industrial_jobs_are_catalytic_trigger = yes
+            }
+            name = catalytic_technician
+            desc = job_catalytic_technician_desc
+            weight = 5
+        }
+    }
 
     possible_pre_triggers = {
         has_owner = yes
@@ -301,8 +308,23 @@ foundry = {
         produces = {
             alloys = 3
         }
+        produces = {
+            trigger = {
+                industrial_jobs_are_catalytic_trigger = yes
+            }
+            alloys = 0.75
+        }
         upkeep = {
+            trigger = {
+                industrial_jobs_are_catalytic_trigger = no
+            }
             minerals = 6
+        }
+        upkeep = {
+            trigger = {
+                industrial_jobs_are_catalytic_trigger = yes
+            }
+            food = 9
         }
         produces = {
             trigger = {
@@ -311,6 +333,25 @@ foundry = {
                 }
             }
             alloys = @requisitorium_alloys_reduction
+        }
+        upkeep = {
+            trigger = {
+                industrial_jobs_are_catalytic_trigger = no
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            minerals = 2
+        }
+        upkeep = {
+            trigger = {
+                industrial_jobs_are_catalytic_trigger = yes
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                    has_building = building_ministry_production
+                }
+            }
+            food = 3
         }
         produces = {
             trigger = {
@@ -341,15 +382,9 @@ foundry = {
             }
             alloys = 0.5
             engineering_research = 1
+            trade = 2
         }
-        upkeep = {
-            trigger = {
-                planet = {
-                    has_planet_flag = has_material_requisitorium
-                }
-            }
-            minerals = 2
-        }
+        inline_script = "output/foundry_output"
     }
 
     overlord_resources = {
@@ -363,18 +398,7 @@ foundry = {
             alloys = @requisitorium_alloys_overlord
         }
     }
-    # triggered_planet_modifier = {
-    #     potential = {
-    #         planet = {
-    #             owner = {
-    #                 has_country_flag = touhou_flag_sanae_enigmatic_alloys
-    #                 has_tradition = tr_virtuality_finish
-    #             }
-    #         }
-    #     }
-    #     trade_value_add = 2
-    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    # }
+
     weight = {
         weight = @specialist_job_weight # Fairly important job
         mult = value:job_weights_modifier|JOB|foundry|RESOURCE|alloys|
@@ -383,10 +407,10 @@ foundry = {
             is_enslaved = yes
             can_take_servant_job = no
         }
-        # modifier = {
-        #     factor = 5
-        #     has_job = foundry
-        # }
+        modifier = {
+            factor = 5
+            has_trait = trait_cyborg_creed_of_construction
+        }
     }
 }
 
@@ -653,8 +677,9 @@ grower = {
     resources = {
         category = planet_farmers
         produces = {
-            food = 3
-            consumer_goods = 3
+            food = 4
+            consumer_goods = 2
+            trade = 2
         }
         produces = {
             trigger = {
@@ -790,8 +815,9 @@ grower_drone = {
     resources = {
         category = planet_farmers
         produces = {
-            food = 3
-            energy = 3
+            food = 4
+            consumer_goods = 4
+            trade = 2
         }
         produces = {
             trigger = {
@@ -829,16 +855,6 @@ grower_drone = {
         planet_amenities_add = 500
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
-    # triggered_planet_modifier = {
-    #     potential = {
-    #         exists = owner
-    #         owner = {
-    #             is_gestalt = no
-    #         }
-    #     }
-    #     trade_value_add = 2
-    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-    # }
 
     weight = {
         weight = @simple_drone_job_weight
@@ -1103,9 +1119,12 @@ touhou_historian = {
 
 angler = {
     category = worker
-    condition_string = WORKER_JOB_TRIGGER
-    building_icon = building_food_processing_facility
-    clothes_texture_index = 2
+    swappable_data = {
+        default = {
+            condition_string = WORKER_JOB_TRIGGER
+            building_icon = building_food_processing_facility
+        }
+    }
 
     possible_pre_triggers = {
         has_owner = yes
@@ -1119,11 +1138,12 @@ angler = {
         hidden_trigger = { exists = owner }
         owner = {
             is_gestalt = no
+            #is_anglers_empire = yes
         }
     }
 
     resources = {
-        category = planet_farmers
+        category = planet_anglers
         produces = {
             food = 8
         }
@@ -1137,11 +1157,22 @@ angler = {
         }
         produces = {
             trigger = {
+                has_councilor = { COUNCILOR = "councilor_machine_anglers" }
+            }
+
+            food = @councilor_machine_anglers_angler_food_bonus
+            mult = value:councilor_level|TYPE|councilor_machine_anglers|
+        }
+        produces = {
+            trigger = {
                 planet = {
                     has_planet_flag = has_produce_requisitorium
                 }
             }
             food = @requisitorium_food_reduction
+        }
+        produces = {
+            trade = 2
         }
     }
 
@@ -1157,23 +1188,6 @@ angler = {
         }
     }
 
-    # triggered_planet_modifier = {
-    #     potential = {
-    #         always = yes
-    #     }
-    #     trade_value_add = 2
-    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    # }
-
-    # triggered_planet_modifier = {
-    #     potential = {
-    #         has_councilor = { COUNCILOR = "councilor_corporate_anglers" }
-    #     }
-    #
-    #     trade_value_add = @councilor_corporate_anglers_angler_trade_value_bonus
-    #     mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_corporate_anglers|
-    # }
-
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -1185,8 +1199,7 @@ angler = {
 
     weight = {
         weight = @worker_job_weight
-        mult = value:job_weights_modifier|JOB|angler|RESOURCE|food|
-        # mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
+        mult = value:job_weights_multiple_resources_modifier|JOB|angler|RESOURCE1|food|WEIGHT1|0.8|RESOURCE2|trade|WEIGHT2|0.2|
         modifier = {
             factor = 1.1
             owner = { has_valid_civic = civic_agrarian_idyll }
@@ -1206,6 +1219,8 @@ angler = {
             can_take_servant_job = yes
         }
     }
+
+    inline_script = "jobs/automodding_priority_food"
 }
 
 maple_sugar_harvester = {
@@ -1298,15 +1313,56 @@ izakaya_worker = {
         upkeep = {
             food = 6
         }
+        produces = {
+            trade = 5
+        }
+        produces = {
+            trigger = {
+                OR = {
+                    AND = {
+                        exists = owner
+                        owner = {
+                            any_owned_leader = {
+                                has_trait = thl_leader_trait_izakaya_2
+                            }
+                        }
+                    }
+                    AND = {
+                        exists = planet.branch_office_owner
+                        planet.branch_office_owner = {
+                            any_owned_leader = {
+                                has_trait = thl_leader_trait_izakaya_2
+                            }
+                        }
+                    }
+                }
+            }
+            trade = 5
+        }
+        produces = {
+            trigger = {
+                OR = {
+                    AND = {
+                        exists = owner
+                        owner = {
+                            any_owned_leader = {
+                                has_trait = thl_leader_trait_izakaya_2
+                            }
+                        }
+                    }
+                    AND = {
+                        exists = planet.branch_office_owner
+                        planet.branch_office_owner = {
+                            any_owned_leader = {
+                                has_trait = thl_leader_trait_izakaya_2
+                            }
+                        }
+                    }
+                }
+            }
+            trade = 10
+        }
     }
-
-    # triggered_planet_modifier = {
-    #     potential = {
-    #         always = yes
-    #     }
-    #     trade_value_add = 5
-    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    # }
 
     triggered_planet_modifier = {
         potential = {
@@ -1315,31 +1371,6 @@ izakaya_worker = {
         planet_amenities_add = 500
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
-
-    # triggered_planet_modifier = {
-    #     potential = {
-    #         OR = {
-    #             AND = {
-    #                 exists = owner
-    #                 owner = {
-    #                     any_owned_leader = {
-    #                         has_trait = thl_leader_trait_izakaya_2
-    #                     }
-    #                 }
-    #             }
-    #             AND = {
-    #                 exists = planet.branch_office_owner
-    #                 planet.branch_office_owner = {
-    #                     any_owned_leader = {
-    #                         has_trait = thl_leader_trait_izakaya_2
-    #                     }
-    #                 }
-    #             }
-    #         }
-    #     }
-    #     trade_value_add = 5
-    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    # }
 
     triggered_planet_modifier = {
         potential = {
@@ -1365,31 +1396,6 @@ izakaya_worker = {
         planet_amenities_add = 500
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
-
-    # triggered_planet_modifier = {
-    #     potential = {
-    #         OR = {
-    #             AND = {
-    #                 exists = owner
-    #                 owner = {
-    #                     any_owned_leader = {
-    #                         has_trait = thl_leader_trait_izakaya_3
-    #                     }
-    #                 }
-    #             }
-    #             AND = {
-    #                 exists = planet.branch_office_owner
-    #                 planet.branch_office_owner = {
-    #                     any_owned_leader = {
-    #                         has_trait = thl_leader_trait_izakaya_3
-    #                     }
-    #                 }
-    #             }
-    #         }
-    #     }
-    #     trade_value_add = 10
-    #     mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-    # }
 
     triggered_planet_modifier = {
         potential = {
@@ -1423,7 +1429,7 @@ izakaya_worker = {
     weight = {
         weight = @specialist_job_weight
         mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
-        # mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
+        mult = value:job_weights_modifier|JOB|izakaya_worker|RESOURCE|trade|
         # # modifier = {
         #     factor = 5
         #     has_job = izakaya_worker
