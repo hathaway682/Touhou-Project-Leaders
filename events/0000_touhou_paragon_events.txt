@@ -18,7 +18,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_paragon_dlc = yes
+		#has_paragon_dlc = yes
 		is_country_type = default
 		exists = from
 		from = {
@@ -27,6 +27,15 @@ country_event = {
 			leader_years_of_service >= 2
 			NOT = {
 				has_leader_flag = leader_death_events_blocked
+			}
+			NAND = {
+				species = { has_trait = trait_spare_organs }
+				NOT = {
+					has_trait = trait_leader_second_chanced
+				}
+			}
+			NOT = {
+				leader_backup_clone_can_activate = yes
 			}
 			or = {
 				has_skill >= 4
@@ -52,7 +61,6 @@ country_event = {
 					has_trait = thl_leader_trait_regeneration_3
 					has_trait = thl_leader_trait_injured_3
 				}
-				leader_age > value:death_age
 			}
 		}
 	}
@@ -214,7 +222,7 @@ country_event = { # Randomizing chance to get an ethic leader, with a grace fact
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_paragon_dlc = yes
+		#has_paragon_dlc = yes
 		is_ai = no
 		is_homicidal = no
 		has_technology = tech_xeno_linguistics

@@ -453,7 +453,7 @@ thl_leader_trait_theurgist = {
 	}
 	triggered_modifier = {
 		potential = {
-			has_astral_planes_dlc = yes
+			#has_astral_planes_dlc = yes
 			is_ruler = no
 			leader_class = scientist
 		}
@@ -534,7 +534,7 @@ thl_leader_trait_theurgist_2 = {
 	}
 	triggered_modifier = {
 		potential = {
-			has_astral_planes_dlc = yes
+			#has_astral_planes_dlc = yes
 			is_ruler = no
 			leader_class = scientist
 		}
@@ -612,7 +612,7 @@ thl_leader_trait_theurgist_3 = {
 	}
 	triggered_modifier = {
 		potential = {
-			has_astral_planes_dlc = yes
+			#has_astral_planes_dlc = yes
 			is_ruler = no
 			leader_class = scientist
 		}
@@ -1337,7 +1337,7 @@ thl_leader_trait_magician = {
 	}
 	triggered_modifier = {
 		potential = {
-			has_astral_planes_dlc = yes
+			#has_astral_planes_dlc = yes
 			is_ruler = no
 			leader_class = scientist
 		}
@@ -1429,7 +1429,7 @@ thl_leader_trait_great_magician = {
 	}
 	triggered_modifier = {
 		potential = {
-			has_astral_planes_dlc = yes
+			#has_astral_planes_dlc = yes
 			is_ruler = no
 			leader_class = scientist
 		}

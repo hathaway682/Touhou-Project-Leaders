@@ -510,7 +510,7 @@ add_observation_insight_effect = {
 				}
 				has_country_flag = pending_insight_tech
 			}
-			has_first_contact_dlc = yes
+			#hhas_first_contact_dlc = yes
 		}
 		if = {
 			limit = {

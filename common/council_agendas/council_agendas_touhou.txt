@@ -8,7 +8,7 @@ agenda_recruit_talent = {
 		}
 	}
 	potential = {
-		has_paragon_dlc = yes
+		#has_paragon_dlc = yes
 		is_ai = no
 	}
 	modifier = {
@@ -53,7 +53,7 @@ agenda_sanae_ascension = {
 		}
 	}
 	potential = {
-		has_paragon_dlc = yes
+		#has_paragon_dlc = yes
 		is_ai = no
 		has_country_flag = touhou_flag_sanae_ascension
 	}

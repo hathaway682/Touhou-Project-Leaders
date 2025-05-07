@@ -614,3 +614,33 @@ dolls_assembly_trigger = {
 		}
 	}
 }
+
+thl_is_regeneration_leader = {
+	OR = {
+		has_trait = thl_leader_trait_regeneration
+		has_trait = thl_leader_trait_regeneration_2
+		has_trait = thl_leader_trait_regeneration_3
+	}
+	NAND = {
+		has_trait = thl_leader_trait_regeneration
+		has_trait = thl_leader_trait_injured
+	}
+	NAND = {
+		has_trait = thl_leader_trait_regeneration_2
+		has_trait = thl_leader_trait_injured_2
+	}
+	NAND = {
+		has_trait = thl_leader_trait_regeneration_3
+		has_trait = thl_leader_trait_injured_3
+	}
+}
+
+thl_is_immortal_akyuu = {
+	has_trait = thl_leader_trait_memory
+	OR = {
+		has_trait = thl_leader_trait_cyborg_life
+		has_trait = thl_leader_trait_synth_life
+		has_trait = thl_leader_trait_gene_life
+		has_trait = leader_trait_composer_chosen
+	}
+}

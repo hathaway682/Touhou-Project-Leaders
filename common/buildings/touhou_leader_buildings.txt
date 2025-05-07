@@ -35,7 +35,7 @@ building_shrine = {
 
 	upgrades = {
 		building_moriya_shrine
-		building_hakurei_shrine
+		#building_hakurei_shrine
 	}
 
 	planet_modifier = {
@@ -91,7 +91,13 @@ building_shrine = {
 		}
 		if = {
 			limit = {
-				free_amenities < -1000
+				OR = {
+					free_amenities < -100
+					any_owned_pop_group = {
+						pop_group_has_trait = trait_humanoid_jinxed
+					}
+				}
+
 				owner = {
 					NOT = {
 						any_owned_leader = {

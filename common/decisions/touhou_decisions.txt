@@ -1254,7 +1254,7 @@ decision_summon_spirit = {
 			if = {
 				limit = {
 					NOT = {
-						exists = event_target:demon_species
+						exists = event_target:ghost_species
 					}
 				}
 				create_species = {
@@ -1273,11 +1273,11 @@ decision_summon_spirit = {
 					}
 				}
 				last_created_species = {
-					save_global_event_target_as = demon_species
+					save_global_event_target_as = ghost_species
 				}
 			}
 			create_pop_group = {
-				species = event_target:demon_species
+				species = event_target:ghost_species
 				size = 1000
 			}
 		}
@@ -1343,7 +1343,7 @@ decision_summon_spirit_large = {
 			if = {
 				limit = {
 					NOT = {
-						exists = event_target:demon_species
+						exists = event_target:ghost_species
 					}
 				}
 				create_species = {
@@ -1362,11 +1362,11 @@ decision_summon_spirit_large = {
 					}
 				}
 				last_created_species = {
-					save_global_event_target_as = demon_species
+					save_global_event_target_as = ghost_species
 				}
 			}
 			create_pop_group = {
-				species = event_target:demon_species
+				species = event_target:ghost_species
 				size = 4444
 			}
 		}

@@ -88,7 +88,7 @@ guiTypes = {
         containerWindowType = {
             name = "EVENT_DIPLO"
             position = { x = -2000 y = -5000 }
-            #size = { width = 563 height = 220 }
+            size = { width = 563 height = 220 }
             moveable = no
 
             instantTextBoxType = {
@@ -141,7 +141,7 @@ guiTypes = {
             buttonText = "touhou_mana_value"
             buttonFont = malgun_goth_24
             position = { x = 15 y = 36 }
-            #size = { width = 274 height = 38 }
+            size = { width = 274 height = 38 }
             format = left
             vertical_alignment = center
             alwaysTransparent = yes
@@ -154,7 +154,7 @@ guiTypes = {
             buttonText = "touhou_cards_value"
             buttonFont = malgun_goth_24
             position = { x = 180 y = 36 }
-            #size = { width = 274 height = 38 }
+            size = { width = 274 height = 38 }
             format = left
             vertical_alignment = center
             alwaysTransparent = yes
@@ -167,7 +167,7 @@ guiTypes = {
             buttonText = "touhou_cards_value_hina"
             buttonFont = malgun_goth_24
             position = { x = 180 y = 36 }
-            #size = { width = 274 height = 38 }
+            size = { width = 274 height = 38 }
             format = left
             vertical_alignment = center
             alwaysTransparent = yes
@@ -178,7 +178,7 @@ guiTypes = {
             name = "touhou_select_char_left"
             quadTextureSprite = "GFX_button_left"
             position = { x = 10 y = 76 }
-            #size = { width = 38 height = 38 }
+            size = { width = 38 height = 38 }
             effect = touhou_subtract_char_id_effect
             orientation = upper_left
         }
@@ -187,7 +187,7 @@ guiTypes = {
             name = "touhou_select_char_right"
             quadTextureSprite = "GFX_button_right"
             position = { x = -42 y = 76 }
-            #size = { width = 38 height = 38 }
+            size = { width = 38 height = 38 }
             effect = touhou_add_char_id_effect
             orientation = upper_right
         }
@@ -198,7 +198,7 @@ guiTypes = {
             buttonText = "touhou_selected_char"
             buttonFont = "malgun_goth_24"
             position = { x = 48 y = 76 }
-            #size = { width = 274 height = 38 }
+            size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
             alwaysTransparent = yes
@@ -209,7 +209,7 @@ guiTypes = {
             name = "touhou_select_spell_left"
             quadTextureSprite = "GFX_button_left"
             position = { x = 10 y = 120 }
-            #size = { width = 38 height = 38 }
+            size = { width = 38 height = 38 }
             effect = touhou_subtract_card_id_effect
             orientation = upper_left
         }
@@ -218,7 +218,7 @@ guiTypes = {
             name = "touhou_select_spell_right"
             quadTextureSprite = "GFX_button_right"
             position = { x = -42 y = 120 }
-            #size = { width = 38 height = 38 }
+            size = { width = 38 height = 38 }
             effect = touhou_add_card_id_effect
             orientation = upper_right
         }
@@ -227,7 +227,7 @@ guiTypes = {
             name = "touhou_select_spell_ex_charge"
             quadTextureSprite = "GFX_button_upgrade_ascension_tier"
             position = { x = 10 y = 164 }
-            #size = { width = 38 height = 38 }
+            size = { width = 38 height = 38 }
             effect = touhou_ex_charge_effect
             orientation = upper_left
         }
@@ -236,7 +236,7 @@ guiTypes = {
             name = "touhou_select_spell_ex_charge_selected"
             quadTextureSprite = "GFX_button_upgrade_ascension_tier_selected"
             position = { x = 10 y = 164 }
-            #size = { width = 38 height = 38 }
+            size = { width = 38 height = 38 }
             effect = touhou_ex_charge_cancel_effect
             orientation = upper_left
         }
@@ -245,7 +245,7 @@ guiTypes = {
             name = "touhou_select_char_trace"
             quadTextureSprite = "GFX_button_track_project"
             position = { x = 50 y = 164 }
-            #size = { width = 38 height = 38 }
+            size = { width = 38 height = 38 }
             effect = touhou_trace_select_effect
             orientation = upper_left
         }
@@ -257,7 +257,7 @@ guiTypes = {
             buttonText = "spell_card_reimu_group"
             buttonFont = "malgun_goth_24"
             position = { x = 48 y = 120 }
-            #size = { width = 274 height = 38 }
+            size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_reimu_spell_card_text
@@ -269,7 +269,7 @@ guiTypes = {
             position = { x = -192 y = 154 }
             buttonText = "spell_card_reimu_requirement"
             buttonFont = "malgun_goth_24"
-            #size = { width = 116 height = 38 }
+            size = { width = 116 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_reimu_spell_card_effect
@@ -283,7 +283,7 @@ guiTypes = {
             buttonText = "spell_card_marisa_group"
             buttonFont = "malgun_goth_24"
             position = { x = 48 y = 120 }
-            #size = { width = 274 height = 38 }
+            size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_marisa_spell_card_text
@@ -295,7 +295,7 @@ guiTypes = {
             position = { x = -192 y = 154 }
             buttonText = "spell_card_marisa_requirement"
             buttonFont = "malgun_goth_24"
-            #size = { width = 116 height = 38 }
+            size = { width = 116 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_marisa_spell_card_effect
@@ -310,7 +310,7 @@ guiTypes = {
             buttonText = "spell_card_sizuha_group"
             buttonFont = "malgun_goth_24"
             position = { x = 48 y = 120 }
-            #size = { width = 274 height = 38 }
+            size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_sizuha_spell_card_text
@@ -322,7 +322,7 @@ guiTypes = {
             position = { x = -192 y = 154 }
             buttonText = "spell_card_sizuha_requirement"
             buttonFont = "malgun_goth_24"
-            #size = { width = 116 height = 38 }
+            size = { width = 116 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_sizuha_spell_card_effect
@@ -336,7 +336,7 @@ guiTypes = {
             buttonText = "spell_card_minoriko_group"
             buttonFont = "malgun_goth_24"
             position = { x = 48 y = 120 }
-            #size = { width = 274 height = 38 }
+            size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_minoriko_spell_card_text
@@ -348,7 +348,7 @@ guiTypes = {
             position = { x = -192 y = 154 }
             buttonText = "spell_card_minoriko_requirement"
             buttonFont = "malgun_goth_24"
-            #size = { width = 116 height = 38 }
+            size = { width = 116 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_minoriko_spell_card_effect
@@ -362,7 +362,7 @@ guiTypes = {
             buttonText = "spell_card_hina_group"
             buttonFont = "malgun_goth_24"
             position = { x = 48 y = 120 }
-            #size = { width = 274 height = 38 }
+            size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_hina_spell_card_text
@@ -374,7 +374,7 @@ guiTypes = {
             position = { x = -192 y = 154 }
             buttonText = "spell_card_hina_requirement"
             buttonFont = "malgun_goth_24"
-            #size = { width = 116 height = 38 }
+            size = { width = 116 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_hina_spell_card_effect
@@ -388,7 +388,7 @@ guiTypes = {
             buttonText = "spell_card_koishi_group"
             buttonFont = "malgun_goth_24"
             position = { x = 48 y = 120 }
-            #size = { width = 274 height = 38 }
+            size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_koishi_spell_card_text
@@ -400,7 +400,7 @@ guiTypes = {
             position = { x = -192 y = 154 }
             buttonText = "spell_card_koishi_requirement"
             buttonFont = "malgun_goth_24"
-            #size = { width = 116 height = 38 }
+            size = { width = 116 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_koishi_spell_card_effect
@@ -414,7 +414,7 @@ guiTypes = {
             buttonText = "spell_card_none_group"
             buttonFont = "malgun_goth_24"
             position = { x = 48 y = 120 }
-            #size = { width = 274 height = 38 }
+            size = { width = 274 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_none_spell_card_text
@@ -426,7 +426,7 @@ guiTypes = {
             position = { x = -192 y = 154 }
             buttonText = "spell_card_none_requirement"
             buttonFont = "malgun_goth_24"
-            #size = { width = 116 height = 38 }
+            size = { width = 116 height = 38 }
             format = center
             vertical_alignment = center
             effect = touhou_none_spell_card_text
@@ -439,7 +439,7 @@ guiTypes = {
             buttonText = "touhou_target_text"
             buttonFont = malgun_goth_24
             position = { x = 15 y = 204 }
-            #size = { width = 274 height = 38 }
+            size = { width = 274 height = 38 }
             format = left
             vertical_alignment = center
             alwaysTransparent = yes

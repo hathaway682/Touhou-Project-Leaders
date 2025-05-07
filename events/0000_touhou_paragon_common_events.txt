@@ -136,7 +136,35 @@ country_event = {
 				}
 			}
 			create_youmu_leader = yes
-			#TODO：添加部分灵体人口
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:ghost_species
+					}
+				}
+				create_species = {
+					name = "NAME_Thl_Ghost"
+					plural = "NAME_Thl_Ghost_pl"
+					class = MAM
+					namelist = random_class
+					portrait = "ghost"
+					traits = {
+						trait = "trait_pc_nether_preference"
+						trait = "trait_thl_spirit"
+						trait = "trait_psionic"
+						trait = "trait_weak"
+						trait = "trait_traditional"
+						trait = "trait_charismatic"
+					}
+				}
+				last_created_species = {
+					save_global_event_target_as = ghost_species
+				}
+			}
+			create_pop_group = {
+				species = event_target:ghost_species
+				size = 400
+			}
 			set_global_flag = youmu
 		}
 		if = {
@@ -162,11 +190,12 @@ country_event = {
 			capital_scope = {
 				if = {
 					limit = {
-						NOT = {
-							has_building = building_clinic
+						NOR = {
+							has_building = building_medical_1
+							has_building = building_medical_2
 						}
 					}
-					add_building = building_clinic
+					add_building = building_medical_2
 				}
 			}
 			set_global_flag = reisen
@@ -400,7 +429,7 @@ country_event = {
 	hide_window = yes
 
 	trigger = {
-		has_paragon_dlc = yes
+		#has_paragon_dlc = yes
 	}
 
 	immediate = {
@@ -2011,7 +2040,7 @@ leader_event = {
 		if = {
 			limit = {
 				NOT = {
-					exists = event_target:demon_species
+					exists = event_target:ghost_species
 				}
 			}
 			create_species = {
@@ -2479,7 +2508,12 @@ leader_event = {
 	desc = {
 		trigger = {
 			owner = {
-				has_tradition = tr_genetics_finish
+				OR = {
+					has_tradition = tr_genetics_finish
+					has_tradition = tr_mutation_finish
+					has_tradition = tr_purity_finish
+					has_tradition = tr_cloning_finish
+				}
 			}
 		}
 		text = touhou_paragon.42411.gene
