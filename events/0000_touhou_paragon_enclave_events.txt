@@ -1080,11 +1080,11 @@ country_event = {
         random_playable_country = {
             limit = {
                 is_ai = no
-                any_owned_planet = {
+                any_planet_within_border = {
                     is_wet = yes
                 }
             }
-            random_owned_planet = {
+            random_planet_within_border = {
                 limit = {
                     is_wet = yes
                 }
