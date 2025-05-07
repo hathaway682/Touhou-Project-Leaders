@@ -1079,21 +1079,14 @@ country_event = {
         # find new location
         random_playable_country = {
             limit = {
+                is_ai = no
                 any_owned_planet = {
-                    OR = {
-                        is_planet_class = pc_ocean
-                        is_planet_class = pc_continental
-                        is_planet_class = pc_tropical
-                    }
+                    is_wet = yes
                 }
             }
             random_owned_planet = {
                 limit = {
-                    OR = {
-                        is_planet_class = pc_ocean
-                        is_planet_class = pc_continental
-                        is_planet_class = pc_tropical
-                    }
+                    is_wet = yes
                 }
                 save_event_target_as = kappa_enclave_new_system_planet
                 solar_system = {
