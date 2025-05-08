@@ -718,15 +718,51 @@ leader_event = {
 	}
 	option = {
 		name = touhou_paragon.40310.b
-		aset_leader_flag = touhou_flag_sanae_robotist_councilor_update
+		set_leader_flag = touhou_flag_sanae_robotist_councilor_update
 		owner = {
 			add_research_option = tech_sanae_robot_strike_craft
 		}
 	}
 	option = {
 		name = touhou_paragon.40310.c
-		set_leader_flag = touhou_flag_sanae_robotist_councilor_update #add_trait = thl_leader_trait_robotist_sanae
+		set_leader_flag = touhou_flag_sanae_robotist_councilor_update
 		owner = {
+			add_research_option = tech_sanae_robot_worker
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value > 50000
+				}
+				resource_stockpile_compare = {
+					resource = volatile_motes
+					value > 5000
+				}
+				resource_stockpile_compare = {
+					resource = exotic_gases
+					value > 5000
+				}
+				resource_stockpile_compare = {
+					resource = rare_crystals
+					value > 5000
+				}
+			}
+		}
+		name = touhou_paragon.40310.d
+		custom_tooltip = touhou_paragon.40310.d.tooltip
+		set_leader_flag = touhou_flag_sanae_robotist_councilor_update
+		owner = {
+			add_resource = {
+				alloys = -50000
+				volatile_motes = -5000
+				exotic_gases = -5000
+				rare_crystals = -5000
+			}
+			add_research_option = tech_sanae_robot_army
+			add_research_option = tech_sanae_robot_strike_craft
 			add_research_option = tech_sanae_robot_worker
 		}
 	}

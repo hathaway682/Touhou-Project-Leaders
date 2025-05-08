@@ -244,15 +244,21 @@ on_pop_abducted = {
 	}
 }
 
-# A pop has finished assembling
-# This = Planet scope
-# From = Country
-# FromFrom = Pop
-on_pop_assembled = {
+# # A pop has finished assembling
+# # This = Planet scope
+# # From = Country
+# # FromFrom = Pop
+# on_pop_assembled = {
+# 	events = {
+# 		#touhou_paragon_effect.35 #更大，更大，更大！
+# 		# touhou_paragon_effect.1000
+# 		# touhou_paragon_effect.1001
+# 	}
+# }
+
+on_colony_yearly_pulse = {
 	events = {
-		touhou_paragon_effect.35 #更大，更大，更大！
-		# touhou_paragon_effect.1000
-		# touhou_paragon_effect.1001
+		touhou_paragon_effect.35
 	}
 }
 

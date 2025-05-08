@@ -720,7 +720,7 @@ country_event = {
         }
         capital_scope = {
             create_pop_group = {
-                species = event_target:kappa_enclave_robot_species
+                species = event_target:sanae_robot_worker_species
             }
         }
         event_target:kappa_enclave_country = {
@@ -880,14 +880,8 @@ country_event = {
         }
         capital_scope = {
             create_pop_group = {
-                species = event_target:kappa_enclave_robot_species
-            }
-            hidden_effect = {
-                last_created_pop = {
-                    modify_species = {
-                        add_trait = trait_sanae_robot_worker
-                    }
-                }
+                species = event_target:sanae_robot_worker_species
+                size = 1
             }
         }
         event_target:kappa_enclave_country = {
