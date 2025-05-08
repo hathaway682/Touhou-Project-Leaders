@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e7784210-dd34-44ca-b26b-8f8bd35035ab" name="更改" comment="更改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/anomalies/anomaly_touhou_leader.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/anomalies/anomaly_touhou_leader.txt" afterDir="false" />
@@ -47,6 +48,12 @@
       <change beforePath="$PROJECT_DIR$/localisation/english/touhou_leaders_l_english.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/english/touhou_leaders_l_english.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_l_simp_chinese.yml" afterDir="false" />
+=======
+    <list default="true" id="e7784210-dd34-44ca-b26b-8f8bd35035ab" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pop_jobs/touhou_leader_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/pop_jobs/touhou_leader_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_spell_card_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_spell_card_events.txt" afterDir="false" />
+>>>>>>> 62744bb9a580d10dab58536307dca22617bba611
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +93,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+<<<<<<< HEAD
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/hamburgvenn/IdeaProjects/untitled/src/Touhou-Project-Leaders&quot;,
@@ -96,6 +104,12 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+    &quot;git-widget-placeholder&quot;: &quot;4.0-beta&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Documents/Paradox Interactive/Stellaris/mod/touhou_leaders/common/scripted_effects&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;
+>>>>>>> 62744bb9a580d10dab58536307dca22617bba611
   }
 }</component>
   <component name="RecentsManager">

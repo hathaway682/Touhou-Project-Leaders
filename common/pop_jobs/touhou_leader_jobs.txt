@@ -376,20 +376,99 @@ dollmaker = {
     }
 
     planet_modifier = {
-        doll_control_limit = 20
-        planet_pop_assembly_add = 2
+        doll_control_limit = 2000
     }
 
     triggered_planet_modifier = {
         potential = { owner = { has_technology = tech_automatic_dolls } }
+<<<<<<< HEAD
         doll_control_limit = 20
+=======
+        doll_control_limit = 2000
+>>>>>>> 62744bb9a580d10dab58536307dca22617bba611
         #planet_doll_jobs_worker_produces_mult = 0.05
     }
 
     triggered_planet_modifier = {
         potential = { owner = { has_technology = tech_sapient_dolls } }
+<<<<<<< HEAD
         doll_control_limit = -40
         #planet_doll_jobs_specialist_produces_mult = 0.05
+=======
+        doll_control_limit = 1000
+        #planet_doll_jobs_specialist_produces_mult = 0.05
+    }
+
+    # Add growth from 0 to 25 depending on 'clone_pops_missing_per_vat'.
+    triggered_planet_modifier = {
+        potential = {
+            check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 22 }
+        }
+        planet_pop_assembly_add = 25
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 22
+        LOWER_LIMIT = 20
+        GROWTH = 22
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 20
+        LOWER_LIMIT = 18
+        GROWTH = 20
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 18
+        LOWER_LIMIT = 16
+        GROWTH = 17
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 16
+        LOWER_LIMIT = 14
+        GROWTH = 15
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 14
+        LOWER_LIMIT = 12
+        GROWTH = 12
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 12
+        LOWER_LIMIT = 10
+        GROWTH = 10
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 10
+        LOWER_LIMIT = 8
+        GROWTH = 7
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 8
+        LOWER_LIMIT = 6
+        GROWTH = 5
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            check_variable_arithmetic = { which = value:doll_missing_per_maker value <= 6 }
+        }
+        planet_pop_assembly_add = 2
+>>>>>>> 62744bb9a580d10dab58536307dca22617bba611
     }
 
     resources = {
@@ -881,6 +960,7 @@ touhou_historian = {
             has_slavery_type = { type = slavery_indentured }
         }
     }
+<<<<<<< HEAD
 
     promotion = {
         time = @standard_promotion_time
@@ -938,6 +1018,19 @@ touhou_historian = {
 #         weight = @special_job_weight
 #     }
 # }
+=======
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = specialist
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+>>>>>>> 62744bb9a580d10dab58536307dca22617bba611
 
 angler = {
     category = worker

@@ -53,12 +53,6 @@ can_species_be_assembled = {
 					NOT = { has_country_flag = synth_assembly_stopped }
 				}
 			}
-			OR = {
-				NOT = {
-					has_trait = trait_thl_doll
-				}
-				dolls_assembly_trigger = yes
-			}
 		}
 		AND = {
 			is_organic_species = yes
@@ -116,6 +110,15 @@ can_species_be_assembled = {
 		}
 		AND = {
 			has_trait = trait_thl_spirit
+<<<<<<< HEAD
+=======
+			if = {
+				limit = {
+					root.owner = { is_hive_empire = yes }
+				}
+				has_trait = trait_hive_mind
+			}
+>>>>>>> 62744bb9a580d10dab58536307dca22617bba611
 			root = {
 				OR = {
 					has_deposit = sakura_tree_1
@@ -127,6 +130,7 @@ can_species_be_assembled = {
 			}
 		}
 	}
+	dolls_assembly_trigger = yes
 	has_population_control = {
 		type = no
 		country = root.owner

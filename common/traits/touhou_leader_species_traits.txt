@@ -168,11 +168,14 @@ trait_thl_doll = {
 
 	opposites = { trait_robot_domestic_protocols }
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
-			check_variable_arithmetic = {
-				which = value:doll_missing_per_maker
-				value > 0
+			exists = planet
+			planet = {
+				check_variable_arithmetic = {
+					which = value:doll_missing_per_maker
+					value < 0
+				}
 			}
 			owner = {
 				NOT = {
@@ -184,11 +187,14 @@ trait_thl_doll = {
 		pop_maintenance_drone_bonus_workforce_mult = -0.25
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
-			check_variable_arithmetic = {
-				which = value:doll_missing_per_maker
-				value > 0
+			exists = planet
+			planet = {
+				check_variable_arithmetic = {
+					which = value:doll_missing_per_maker
+					value < 0
+				}
 			}
 			owner = {
 				NOT = {
@@ -196,11 +202,16 @@ trait_thl_doll = {
 				}
 			}
 		}
+<<<<<<< HEAD
 		pop_bonus_workforce_mult = -0.2
+=======
+		pop_bonus_workforce_mult = 0.04
+>>>>>>> 62744bb9a580d10dab58536307dca22617bba611
 		multiplier = value:doll_missing_per_maker
 	}
 	triggered_pop_modifier = {
 		potential = {
+<<<<<<< HEAD
 			NOT = {
 				planet = {
 					OR = {
@@ -215,6 +226,12 @@ trait_thl_doll = {
 							}
 						}
 					}
+=======
+			planet = {
+				num_assigned_jobs = {
+					job = dollmaker
+					value = 0
+>>>>>>> 62744bb9a580d10dab58536307dca22617bba611
 				}
 			}
 		}

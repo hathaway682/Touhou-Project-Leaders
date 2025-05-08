@@ -215,7 +215,7 @@ councilor_hifuu = {
 		science_ship_survey_speed = 0.15
 		ship_anomaly_research_speed_mult = 0.1
 		ship_archaeological_site_excavation_speed_mult = 0.05
-		ship_ftl_jumpdrive_range_mult = 0.03
+		ship_ftl_jumpdrive_range_mult = 0.05
 		category_psionics_draw_chance_mult = 0.05
 	}
 }
