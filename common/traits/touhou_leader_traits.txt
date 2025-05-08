@@ -343,14 +343,12 @@ thl_leader_trait_miracle = {
 		multiplier = trigger:has_base_skill
 	}
 	planet_modifier = {
-		pop_happiness = 0.20
-		planet_amenities_mult = 0.20
-		planet_immigration_pull_add = 100
+		pop_happiness = 0.1
+		planet_amenities_mult = 0.1
 	}
 	sector_modifier = {
-		pop_happiness = 0.10
-		planet_amenities_mult = 0.10
-		planet_immigration_pull_add = 50
+		pop_happiness = 0.05
+		planet_amenities_mult = 0.05
 	}
 	leader_class = { commander }
 	selectable_weight = {
@@ -411,7 +409,7 @@ thl_leader_trait_common_sense_killer = {
 	}
 	councilor_modifier = {
 		category_psionics_draw_chance_mult = 1
-		num_tech_alternatives_add = 3
+		num_tech_alternatives_add = 1
 		scientist_exp_gain = 0.14
 	}
 	leader_class = { commander }

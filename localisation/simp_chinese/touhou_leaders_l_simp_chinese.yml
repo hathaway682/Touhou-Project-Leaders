@@ -241,7 +241,7 @@
  thl_leader_trait_miracle_desc:1 "这位领袖可以通过特定的仪式引发低概率事件。"
  thl_leader_trait_common_sense_killer:0 "常识抹杀者"
  thl_leader_trait_common_sense_killer_desc:1 "这位领袖并不为常识所束缚。"
- thl_leader_trait_common_sense_killer_effect:0 "将§Y唯心主义§!与§Y唯物主义§!之间的好感减成反转为加成。\n完成科技研发时，获得等于§Y3§!个月产出的$r_unity$。"
+ thl_leader_trait_common_sense_killer_effect:0 "将§Y唯心主义§!与§Y唯物主义§!之间的好感减成反转为加成。\n完成科技研发时，获得等于§Y1§!个月产出的$r_unity$。"
  thl_leader_trait_robotist_sanae:0 "巨型机器狂热者"
  thl_leader_trait_robotist_sanae_desc:1 "这位领袖会不计代价的把机器人造的更大，更强，更华丽。"
  thl_leader_trait_theurgist:0 "通神者"

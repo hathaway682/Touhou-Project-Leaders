@@ -234,16 +234,18 @@ ethic_leader_hire_effect = {
 		}
 	}
 
-	lower_leader_chance = yes
+	#lower_leader_chance = yes
 	set_country_flag = spawning_renowned_leader
-
-	clone_leader = {
-		target = event_target:ethic_leader
-		skip_background_generation = yes
+	event_target:ethic_leader = {
+		set_owner = root
 	}
+	# clone_leader = {
+	# 	target = event_target:ethic_leader
+	# 	skip_background_generation = yes
+	# }
 	last_created_leader = {
-		save_global_event_target_as = $GLOBAL_EVENT_TARGET$
-		set_leader_flag = $GLOBAL_EVENT_TARGET$
+		save_global_event_target_as = $LEADER$
+		set_leader_flag = $LEADER$
 		set_leader_flag = renowned_leader
 	}
 
@@ -263,6 +265,9 @@ ethic_leader_hire_effect = {
 			key = "border"
 			value = "GFX_border_veteran" #TODO Add real rarity frame gfx
 		}
+	}
+	event_target:$LEADER$ = {
+		leader_event = { id = focus.46 } # Empire Focus
 	}
 }
 

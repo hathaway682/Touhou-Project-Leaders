@@ -951,7 +951,6 @@ touhou_historian = {
             has_slavery_type = { type = slavery_indentured }
         }
     }
-
     promotion = {
         time = @standard_promotion_time
         effect = {
@@ -962,7 +961,6 @@ touhou_historian = {
         }
     }
 }
-
 angler = {
     category = worker
     swappable_data = {
