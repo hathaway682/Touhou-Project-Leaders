@@ -406,72 +406,60 @@ will_leader_survive = {
 
 # this = leader
 can_leader_get_council_trait = {
-	OR = {
-		has_touhou_leader_trait = yes
-		# See 03_scripted_triggers_paragon.txt
-		can_leader_get_council_trait_trigger = yes
-	}
+	has_touhou_leader_trait = no
+	# See 03_scripted_triggers_paragon.txt
+	can_leader_get_council_trait_trigger = yes
 }
 
 # this = leader
 can_leader_get_normal_trait = {
-	OR = {
-		has_touhou_leader_trait = yes
-		NOR = {
-			AND = {
-				exists = owner
-				owner = { is_gestalt = yes }
-				OR = {
-					is_councilor = yes
-					has_leader_flag = restored_node
-				}
+	has_touhou_leader_trait = no
+	NOR = {
+		AND = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			OR = {
+				is_councilor = yes
+				has_leader_flag = restored_node
 			}
-			AND = {
-				has_global_flag = game_started
-				is_ruler = yes
-				exists = owner
-				owner = {
-					is_autocracy = yes
-				}
-				NOT = { has_leader_flag = ignore_autocracy_ruler_trait_restriction }
-			}
-			is_heir = yes
 		}
+		AND = {
+			has_global_flag = game_started
+			is_ruler = yes
+			exists = owner
+			owner = {
+				is_autocracy = yes
+			}
+			NOT = { has_leader_flag = ignore_autocracy_ruler_trait_restriction }
+		}
+		is_heir = yes
 	}
 }
 
 # this = leader
 can_leader_get_subclass_trait = {
-	OR = {
-		has_touhou_leader_trait = yes
-		AND = {
-			NAND = {
-				exists = owner
-				owner = { is_gestalt = yes }
-				OR = {
-					is_councilor = yes
-					has_leader_flag = restored_node
-				}
-			}
-			has_any_subclass = no
+	has_touhou_leader_trait = no
+	NAND = {
+		exists = owner
+		owner = { is_gestalt = yes }
+		OR = {
+			is_councilor = yes
+			has_leader_flag = restored_node
 		}
 	}
+	has_any_subclass = no
 }
 
 # this = leader
 can_leader_get_destiny_trait = {
-	OR = {
-		has_touhou_leader_trait = yes
-		AND = {
-			NAND = {
-				exists = owner
-				owner = { is_gestalt = yes }
-			}
-			exists = owner
-			owner = {
-				is_crisis_faction = no
-			}
-		}
+	has_touhou_leader_trait = no
+	NAND = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	exists = owner
+	owner = {
+		is_crisis_faction = no
 	}
 }
 
