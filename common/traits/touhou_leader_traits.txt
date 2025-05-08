@@ -489,6 +489,7 @@ thl_leader_trait_theurgist = {
 		job_miko_add = 100
 		planet_priests_unity_produces_add = 0.5
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	leader_potential_add = {
 		has_trait = subclass_commander_miko
@@ -570,6 +571,7 @@ thl_leader_trait_theurgist_2 = {
 		job_miko_add = 200
 		planet_priests_unity_produces_add = 1
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	selectable_weight = {
 		weight = 100000
@@ -648,6 +650,7 @@ thl_leader_trait_theurgist_3 = {
 		job_miko_add = 300
 		planet_priests_unity_produces_add = 1.5
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	selectable_weight = {
 		weight = 100000
@@ -685,6 +688,7 @@ thl_leader_trait_snake_bless = {
 		planet_jobs_energy_produces_mult = 0.05
 		planet_jobs_food_produces_mult = 0.05
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	leader_potential_add = {
 		has_trait = thl_leader_trait_miracle
@@ -726,6 +730,7 @@ thl_leader_trait_snake_bless_2 = {
 		planet_jobs_energy_produces_mult = 0.1
 		planet_jobs_food_produces_mult = 0.1
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	selectable_weight = {
 		weight = 100000
@@ -764,6 +769,7 @@ thl_leader_trait_snake_bless_3 = {
 		planet_jobs_energy_produces_mult = 0.15
 		planet_jobs_food_produces_mult = 0.15
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	selectable_weight = {
 		weight = 100000
@@ -801,6 +807,7 @@ thl_leader_trait_frog_bless = {
 		planet_jobs_minerals_produces_mult = 0.05
 		planet_jobs_food_produces_mult = 0.05
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	leader_potential_add = {
 		has_trait = thl_leader_trait_miracle
@@ -842,6 +849,7 @@ thl_leader_trait_frog_bless_2 = {
 		planet_jobs_minerals_produces_mult = 0.1
 		planet_jobs_food_produces_mult = 0.1
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	selectable_weight = {
 		weight = 100000
@@ -880,6 +888,7 @@ thl_leader_trait_frog_bless_3 = {
 		planet_jobs_minerals_produces_mult = 0.15
 		planet_jobs_food_produces_mult = 0.15
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	selectable_weight = {
 		weight = 0
