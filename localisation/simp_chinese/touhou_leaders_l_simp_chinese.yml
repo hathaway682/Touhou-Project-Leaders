@@ -236,7 +236,7 @@
  touhou_paragon.40300.hire_custom_tooltip:0 "§Y$NAME_Sanae$§!作为一名§H领袖§!加入了我们的帝国。"
 
  thl_leader_trait_miracle:0 "引发奇迹程度的能力"
- thl_leader_trait_miracle_effect:0 "\n将§Y官僚§!建筑替换为§Y寺庙§!，允许在国内建造£building£ §Y守矢分社§!，通过星球决议，£building£§Y守矢分社§!可以在吸引/排斥。不干预风暴之间切换。\n允许使用§Y灰色奇术§!法令，以消耗凝聚力为代价在国内生成一个随机的§Y异常现象§!或触发一个稀有的§Y殖民地事件§!。\n允许科研船操纵恒星系内的一颗恒星来制造一场§Y宇宙风暴§!，等同于§Y星系天气控制§!飞升的效果。\n\n$SECTOR_EFFECTS_TXT$：\n$t$可以在所管辖星系使用特殊的§c奇迹§!决议。\n\n$FLEET_EFFECTS_TXT$：\n$t$太空战斗开始时：\n$tt$将§B穿透现实§!以为星系内所有友方舰队提供§Y60§!天的随机§G战斗优势§!。\n\n$ARMY_EFFECTS_TXT$：\n$t$地面战斗开始时：\n$tt$星球上每§Y50§!个£pop£§Y唯心主义人口§!都会产生一队§Y守矢狂热者§!部队加入战斗，若该人口拥有§M灵能§!，将会产生更强的§Y守矢神选者§!。"
+ thl_leader_trait_miracle_effect:0 "\n将§Y官僚§!建筑替换为§Y寺庙§!，允许在国内建造£building£ §Y守矢分社§!，通过星球决议，£building£§Y守矢分社§!可以在吸引/排斥。不干预风暴之间切换。\n允许使用§Y灰色奇术§!法令，以消耗£unity£凝聚力为代价在国内生成一个随机的§Y异常现象§!或触发一个稀有的§Y殖民地事件§!。\n允许科研船操纵恒星系内的一颗恒星来制造一场§Y宇宙风暴§!，等同于§Y星系天气控制§!飞升的效果。\n\n$EMPIRE_EFFECTS_TXT$：\n$t$可使用特殊的§c奇迹§!决议，以£unity£凝聚力为代价提供星球增益。\n\n$FLEET_EFFECTS_TXT$：\n$t$太空战斗开始时：\n$tt$将§B穿透现实§!以为星系内所有友方舰队提供§Y60§!天的随机§G战斗优势§!。\n\n$ARMY_EFFECTS_TXT$：\n$t$地面战斗开始时：\n$tt$星球上每§Y50§!个£pop£§Y唯心主义人口§!都会产生一队§Y守矢狂热者§!部队加入战斗，若该人口拥有§M灵能§!，将会产生更强的§Y守矢神选者§!。"
  #$t$勘测宜居星球时：\n$tt$为此宜居星球增加一个随机的§Y星球修正§!或§Y稀有星球特征§!。
  thl_leader_trait_miracle_desc:1 "这位领袖可以通过特定的仪式引发低概率事件。"
  thl_leader_trait_common_sense_killer:0 "常识抹杀者"
@@ -301,22 +301,22 @@
  decision_moriya_storm_cancel_tooltip: "£building£§Y守矢分社§!不再吸引或排斥§Y宇宙风暴§!。"
 
  decision_miracle_1:0 "守护商业繁荣"
- decision_miracle_1_desc:0 "通过§c东风谷早苗的奇迹§!促进当地$r_trade_value$的增长。"
+ decision_miracle_1_desc:0 "通过§c东风谷早苗的奇迹§!促进当地$trade_value$贸易额的增长。"
 
  decision_miracle_2:0 "客星辉煌之夜"
- decision_miracle_2_desc:0 "通过§c东风谷早苗的奇迹§!产生照亮夜晚的客星，增加$r_amenities$和£happiness£§Y幸福度§!。"
+ decision_miracle_2_desc:0 "通过§c东风谷早苗的奇迹§!产生照亮夜晚的客星，增加$amenity$和£happiness£§Y幸福度§!。"
 
  decision_miracle_3:0 "海水分开之日"
- decision_miracle_3_desc:0 "通过§c东风谷早苗的奇迹§!分开海水，制造提高£mod_planet_immigration_pull_mult£§Y移民吸引力§!的奇观，并提供额外的£job_angler£§Y渔夫§!岗位。"
+ decision_miracle_3_desc:0 "通过§c东风谷早苗的奇迹§!分开海水，在一颗拥有农业区划的潮湿星球上建设§c水产养殖§!区域特化，并提供额外的£job_angler£§Y渔夫§!岗位。\n\n如果不因国策解锁§c水产养殖§!区域特化，则当本修正消失时将会拆除§c水产养殖§!区域特化。"
 
- mod_job_angler_per_pop: "每$VALUE$个人口提供§G+1§!个$job_angler$岗位"
- mod_job_angler_per_pop_short: "\n每$VALUE$£pop£§G+1§!£mod_job_angler_add£ "
+ # mod_job_angler_per_pop: "每$VALUE$个人口提供§G+1§!个$job_angler$岗位"
+ # mod_job_angler_per_pop_short: "\n每$VALUE$£pop£§G+1§!£mod_job_angler_add£ "
 
  decision_miracle_4:0 "弘安的神风"
- decision_miracle_4_desc:0 "通过§c东风谷早苗的奇迹§!使大气活动变得更猛烈，增加$r_energy$产出和£mod_army_defense_damage_mult£§Y防御部队伤害§!。"
+ decision_miracle_4_desc:0 "通过§c东风谷早苗的奇迹§!使大气活动变得更猛烈，增加$r_energy$产出和£mod_army_defense_damage_mult£§Y防御部队伤害§!。\n\n本符卡部署所需时间更快。"
 
  decision_miracle_5:0 "五谷丰穰米之浴"
- decision_miracle_5_desc:0 "通过§c东风谷早苗的奇迹§!提高当地$r_food$产出和£mod_pop_growth_speed£§Y人口增长速度§!。"
+ decision_miracle_5_desc:0 "通过§c东风谷早苗的奇迹§!提高当地$r_food$产出和£mod_pop_growth_speed_reduction£§Y人口增长速度§!。"
 
  decision_miracle_6:0 "神秘果"
  decision_miracle_6_desc:0 "通过§c东风谷早苗的奇迹§!在当地生成一种神奇的水果，£job_farmer£§Y农夫§!将会产出$r_consumer_goods$。"

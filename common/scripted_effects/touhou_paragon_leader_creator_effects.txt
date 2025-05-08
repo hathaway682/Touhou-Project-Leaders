@@ -171,6 +171,7 @@ create_suika_leader = {
 
 add_suika_traits = {
 	add_trait = subclass_commander_lord
+	add_trait = subclass_commander_general
 	add_trait = thl_leader_trait_oni_power
 	add_trait = leader_trait_trickster
 	add_trait = leader_trait_touhou_cultural_focus_2
@@ -203,12 +204,14 @@ create_sanae_leader = {
 
 add_sanae_traits = {
 	add_trait = subclass_commander_miko
+	add_trait = subclass_commander_admiral
 	add_trait = thl_leader_trait_common_sense_killer
 	add_trait = thl_leader_trait_theurgist
-	add_trait = thl_leader_trait_snake_bless
-	add_trait = thl_leader_trait_frog_bless
+	#add_trait = thl_leader_trait_snake_bless
+	#add_trait = thl_leader_trait_frog_bless 这两个特质现在是6级后的可选特质
 	add_trait = thl_leader_trait_robotist_sanae
-	#add_trait = leader_trait_shroud_preacher
+	add_trait = leader_trait_gullible
+	add_trait = leader_trait_unyielding
 	add_trait = leader_trait_crusader
 	add_trait = leader_trait_reckless_2
 	add_trait = thl_leader_trait_regeneration
@@ -300,6 +303,7 @@ create_reimu_leader = {
 
 add_reimu_traits = {
 	add_trait = subclass_commander_miko
+	add_trait = subclass_commander_admiral
 	add_trait = thl_leader_trait_invincible
 	add_trait = thl_leader_trait_like_cloud_and_water
 	add_trait = thl_leader_trait_theurgist
@@ -370,6 +374,7 @@ create_reisen_leader = {
 
 add_reisen_traits = {
 	add_trait = subclass_commander_servant
+	add_trait = subclass_commander_admiral
 	add_trait = thl_leader_trait_penglai_medicine
 	add_trait = thl_leader_trait_prosperity_and_decline
 	add_trait = thl_leader_trait_moon_war_veteran
@@ -406,6 +411,7 @@ create_youmu_leader = {
 
 add_youmu_traits = {
 	add_trait = subclass_commander_servant
+	add_trait = subclass_commander_admiral
 	add_trait = leader_trait_wholehearted
 	add_trait = thl_leader_trait_gardener
 	add_trait = leader_trait_bellicose
@@ -439,6 +445,7 @@ create_sakuya_leader = {
 
 add_sakuya_traits = {
 	add_trait = subclass_commander_servant
+	add_trait = subclass_commander_admiral
 	add_trait = thl_leader_trait_year_round
 	add_trait = leader_trait_arbiter
 	add_trait = leader_trait_touhou_pop_focused_3
@@ -730,6 +737,7 @@ create_remilia_leader = {
 
 add_remilia_traits = {
 	add_trait = subclass_commander_lord
+	add_trait = subclass_commander_admiral
 	add_trait = thl_leader_trait_blood_magic
 	add_trait = thl_leader_trait_bloody_charm
 	add_trait = thl_leader_trait_gungnir

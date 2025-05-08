@@ -109,3 +109,60 @@ zone_rw_garden = {
 		zone_building_slots_add = 3
 	}
 }
+
+zone_anglers = {
+	icon = GFX_job_angler
+	base_buildtime = @zone_buildtime
+
+	potential = { # planet scope
+		OR = {
+			AND = {
+				exists = owner
+				owner = { is_anglers_empire = yes }
+			}
+			has_modifier = modifier_miracle_3
+		}
+		is_wet = yes
+	}
+
+	unlock = { # planet scope
+		OR = {
+			AND = {
+				exists = owner
+				owner = { is_anglers_empire = yes }
+			}
+			has_modifier = modifier_miracle_3
+		}
+		is_wet = yes
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	inline_script = {
+		script = jobs/zone_farmers_add
+		AMOUNT = @scaling_district_1_job
+	}
+
+	included_building_sets = {
+		farming
+		hydroponics
+		automation
+		fallen_empire_farming
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_anglers_triggered_desc
+	}
+}

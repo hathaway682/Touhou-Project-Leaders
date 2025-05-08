@@ -680,7 +680,7 @@ thl_leader_trait_snake_bless = {
 		CLASS = scientist
 		ICON = "GFX_thl_leader_trait_snake_bless"
 		RARITY = veteran
-		COUNCIL = no
+		COUNCIL = yes
 		TIER = 1
 	}
 	fleet_modifier = {
@@ -693,22 +693,29 @@ thl_leader_trait_snake_bless = {
 		army_attack_health_mult = 0.15
 		army_attack_morale_mult = 0.15
 	}
-	planet_modifier = {
-		physicist_jobs_bonus_workforce_mult = 0.1
-		planet_jobs_alloys_produces_mult = 0.1
-		planet_jobs_energy_produces_mult = 0.1
-		planet_jobs_food_produces_mult = 0.1
-	}
-	sector_modifier = {
-		physicist_jobs_bonus_workforce_mult = 0.05
+	# planet_modifier = {
+	# 	physicist_jobs_bonus_workforce_mult = 0.1
+	# 	planet_jobs_alloys_produces_mult = 0.1
+	# 	planet_jobs_energy_produces_mult = 0.1
+	# 	planet_jobs_food_produces_mult = 0.1
+	# }
+	# sector_modifier = {
+	# 	physicist_jobs_bonus_workforce_mult = 0.05
+	# 	planet_jobs_alloys_produces_mult = 0.05
+	# 	planet_jobs_energy_produces_mult = 0.05
+	# 	planet_jobs_food_produces_mult = 0.05
+	# }
+	councilor_modifier = {
 		planet_jobs_alloys_produces_mult = 0.05
 		planet_jobs_energy_produces_mult = 0.05
 		planet_jobs_food_produces_mult = 0.05
+		physics_tech_cost_mult = -0.033
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	leader_potential_add = {
 		has_trait = thl_leader_trait_miracle
+		has_total_skill >= 6
 	}
 	selectable_weight = {
 		weight = 100000
@@ -722,7 +729,7 @@ thl_leader_trait_snake_bless_2 = {
 		CLASS = scientist
 		ICON = "GFX_thl_leader_trait_snake_bless"
 		RARITY = veteran
-		COUNCIL = no
+		COUNCIL = yes
 		TIER = 2
 	}
 	fleet_modifier = {
@@ -735,17 +742,23 @@ thl_leader_trait_snake_bless_2 = {
 		army_attack_health_mult = 0.3
 		army_attack_morale_mult = 0.3
 	}
-	planet_modifier = {
-		physicist_jobs_bonus_workforce_mult = 0.2
-		planet_jobs_alloys_produces_mult = 0.2
-		planet_jobs_energy_produces_mult = 0.2
-		planet_jobs_food_produces_mult = 0.2
-	}
-	sector_modifier = {
-		physicist_jobs_bonus_workforce_mult = 0.1
+	# planet_modifier = {
+	# 	physicist_jobs_bonus_workforce_mult = 0.2
+	# 	planet_jobs_alloys_produces_mult = 0.2
+	# 	planet_jobs_energy_produces_mult = 0.2
+	# 	planet_jobs_food_produces_mult = 0.2
+	# }
+	# sector_modifier = {
+	# 	physicist_jobs_bonus_workforce_mult = 0.1
+	# 	planet_jobs_alloys_produces_mult = 0.1
+	# 	planet_jobs_energy_produces_mult = 0.1
+	# 	planet_jobs_food_produces_mult = 0.1
+	# }
+	councilor_modifier = {
 		planet_jobs_alloys_produces_mult = 0.1
 		planet_jobs_energy_produces_mult = 0.1
 		planet_jobs_food_produces_mult = 0.1
+		physics_tech_cost_mult = -0.066
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
@@ -761,7 +774,7 @@ thl_leader_trait_snake_bless_3 = {
 		CLASS = scientist
 		ICON = "GFX_thl_leader_trait_snake_bless"
 		RARITY = veteran
-		COUNCIL = no
+		COUNCIL = yes
 		TIER = 3
 	}
 	fleet_modifier = {
@@ -774,17 +787,23 @@ thl_leader_trait_snake_bless_3 = {
 		army_attack_health_mult = 0.5
 		army_attack_morale_mult = 0.5
 	}
-	planet_modifier = {
-		physicist_jobs_bonus_workforce_mult = 0.3
-		planet_jobs_alloys_produces_mult = 0.3
-		planet_jobs_energy_produces_mult = 0.3
-		planet_jobs_food_produces_mult = 0.3
-	}
-	sector_modifier = {
-		physicist_jobs_bonus_workforce_mult = 0.15
+	# planet_modifier = {
+	# 	physicist_jobs_bonus_workforce_mult = 0.3
+	# 	planet_jobs_alloys_produces_mult = 0.3
+	# 	planet_jobs_energy_produces_mult = 0.3
+	# 	planet_jobs_food_produces_mult = 0.3
+	# }
+	# sector_modifier = {
+	# 	physicist_jobs_bonus_workforce_mult = 0.15
+	# 	planet_jobs_alloys_produces_mult = 0.15
+	# 	planet_jobs_energy_produces_mult = 0.15
+	# 	planet_jobs_food_produces_mult = 0.15
+	# }
+	councilor_modifier = {
 		planet_jobs_alloys_produces_mult = 0.15
 		planet_jobs_energy_produces_mult = 0.15
 		planet_jobs_food_produces_mult = 0.15
+		physics_tech_cost_mult = -0.1
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
@@ -799,7 +818,7 @@ thl_leader_trait_frog_bless = {
 		CLASS = scientist
 		ICON = "GFX_thl_leader_trait_frog_bless"
 		RARITY = veteran
-		COUNCIL = no
+		COUNCIL = yes
 		TIER = 1
 	}
 	fleet_modifier = {
@@ -812,22 +831,29 @@ thl_leader_trait_frog_bless = {
 		army_defense_health_mult = 0.15
 		army_defense_morale_mult = 0.15
 	}
-	planet_modifier = {
-		planet_priests_engineering_research_produces_add = 2
-		planet_jobs_consumer_goods_produces_mult = 0.1
-		planet_jobs_minerals_produces_mult = 0.1
-		planet_jobs_food_produces_mult = 0.1
-	}
-	sector_modifier = {
-		planet_priests_engineering_research_produces_add = 1
+	# planet_modifier = {
+	# 	planet_priests_engineering_research_produces_add = 2
+	# 	planet_jobs_consumer_goods_produces_mult = 0.1
+	# 	planet_jobs_minerals_produces_mult = 0.1
+	# 	planet_jobs_food_produces_mult = 0.1
+	# }
+	# sector_modifier = {
+	# 	planet_priests_engineering_research_produces_add = 1
+	# 	planet_jobs_consumer_goods_produces_mult = 0.05
+	# 	planet_jobs_minerals_produces_mult = 0.05
+	# 	planet_jobs_food_produces_mult = 0.05
+	# }
+	councilor_modifier = {
 		planet_jobs_consumer_goods_produces_mult = 0.05
 		planet_jobs_minerals_produces_mult = 0.05
 		planet_jobs_food_produces_mult = 0.05
+		engineering_tech_cost_mult = -0.033
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	leader_potential_add = {
 		has_trait = thl_leader_trait_miracle
+		has_total_skill >= 6
 	}
 	selectable_weight = {
 		weight = 100000
@@ -841,7 +867,7 @@ thl_leader_trait_frog_bless_2 = {
 		CLASS = scientist
 		ICON = "GFX_thl_leader_trait_frog_bless"
 		RARITY = veteran
-		COUNCIL = no
+		COUNCIL = yes
 		TIER = 2
 	}
 	fleet_modifier = {
@@ -854,17 +880,23 @@ thl_leader_trait_frog_bless_2 = {
 		army_defense_health_mult = 0.3
 		army_defense_morale_mult = 0.3
 	}
-	planet_modifier = {
-		planet_priests_engineering_research_produces_add = 4
-		planet_jobs_consumer_goods_produces_mult = 0.2
-		planet_jobs_minerals_produces_mult = 0.2
-		planet_jobs_food_produces_mult = 0.2
-	}
-	sector_modifier = {
-		planet_priests_engineering_research_produces_add = 2
+	# planet_modifier = {
+	# 	planet_priests_engineering_research_produces_add = 4
+	# 	planet_jobs_consumer_goods_produces_mult = 0.2
+	# 	planet_jobs_minerals_produces_mult = 0.2
+	# 	planet_jobs_food_produces_mult = 0.2
+	# }
+	# sector_modifier = {
+	# 	planet_priests_engineering_research_produces_add = 2
+	# 	planet_jobs_consumer_goods_produces_mult = 0.1
+	# 	planet_jobs_minerals_produces_mult = 0.1
+	# 	planet_jobs_food_produces_mult = 0.1
+	# }
+	councilor_modifier = {
 		planet_jobs_consumer_goods_produces_mult = 0.1
 		planet_jobs_minerals_produces_mult = 0.1
 		planet_jobs_food_produces_mult = 0.1
+		engineering_tech_cost_mult = -0.066
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
@@ -880,7 +912,7 @@ thl_leader_trait_frog_bless_3 = {
 		CLASS = scientist
 		ICON = "GFX_thl_leader_trait_frog_bless"
 		RARITY = veteran
-		COUNCIL = no
+		COUNCIL = yes
 		TIER = 3
 	}
 	fleet_modifier = {
@@ -893,17 +925,23 @@ thl_leader_trait_frog_bless_3 = {
 		army_defense_health_mult = 0.5
 		army_defense_morale_mult = 0.5
 	}
-	planet_modifier = {
-		planet_priests_engineering_research_produces_add = 6
-		planet_jobs_consumer_goods_produces_mult = 0.3
-		planet_jobs_minerals_produces_mult = 0.3
-		planet_jobs_food_produces_mult = 0.3
-	}
-	sector_modifier = {
-		planet_priests_engineering_research_produces_add = 3
+	# planet_modifier = {
+	# 	planet_priests_engineering_research_produces_add = 6
+	# 	planet_jobs_consumer_goods_produces_mult = 0.3
+	# 	planet_jobs_minerals_produces_mult = 0.3
+	# 	planet_jobs_food_produces_mult = 0.3
+	# }
+	# sector_modifier = {
+	# 	planet_priests_engineering_research_produces_add = 3
+	# 	planet_jobs_consumer_goods_produces_mult = 0.15
+	# 	planet_jobs_minerals_produces_mult = 0.15
+	# 	planet_jobs_food_produces_mult = 0.15
+	# }
+	councilor_modifier = {
 		planet_jobs_consumer_goods_produces_mult = 0.15
 		planet_jobs_minerals_produces_mult = 0.15
 		planet_jobs_food_produces_mult = 0.15
+		engineering_tech_cost_mult = -0.1
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }

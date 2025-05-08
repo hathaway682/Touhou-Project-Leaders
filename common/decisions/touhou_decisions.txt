@@ -1758,7 +1758,7 @@ decision_miracle_1 = {
 	sound = event_psionic_01
 	icon = decision_miracle_1
 
-	enactment_time = 300
+	enactment_time = 150
 
 	potential = {
 		owner = {
@@ -1769,29 +1769,11 @@ decision_miracle_1 = {
 	}
 
 	allow = {
-		OR = {
-			AND = {
-				exists = owner
-				owner = {
-					any_owned_leader = {
-						has_trait = thl_leader_trait_miracle
-						is_councilor = yes
-					}
-				}
-			}
-			AND = {
-				exists = leader
-				leader = {
-					has_trait = thl_leader_trait_miracle
-				}
-			}
-			sector = {
-				sector_capital = {
-					exists = leader
-					leader = {
-						has_trait = thl_leader_trait_miracle
-					}
-				}
+		exists = owner
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_miracle
+				is_councilor = yes
 			}
 		}
 		NOT = {
@@ -1817,6 +1799,23 @@ decision_miracle_1 = {
 		if = {
 			limit = {
 				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
 			}
 			remove_modifier = modifier_miracle_3
 		}
@@ -1854,7 +1853,7 @@ decision_miracle_2 = {
 	sound = event_psionic_01
 	icon = decision_miracle_2
 
-	enactment_time = 300
+	enactment_time = 150
 
 	potential = {
 		owner = {
@@ -1899,7 +1898,7 @@ decision_miracle_2 = {
 	resources = {
 		category = decisions
 		cost = {
-			unity = 6000
+			unity = 1000
 		}
 	}
 
@@ -1913,6 +1912,23 @@ decision_miracle_2 = {
 		if = {
 			limit = {
 				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
 			}
 			remove_modifier = modifier_miracle_3
 		}
@@ -1950,7 +1966,7 @@ decision_miracle_3 = {
 	sound = event_psionic_01
 	icon = decision_miracle_3
 
-	enactment_time = 300
+	enactment_time = 150
 
 	potential = {
 		owner = {
@@ -1989,6 +2005,7 @@ decision_miracle_3 = {
 		NOT = {
 			has_modifier = modifier_miracle_3
 		}
+		is_wet = yes
 	}
 
 
@@ -2034,6 +2051,18 @@ decision_miracle_3 = {
 			modifier = modifier_miracle_3
 			days = -1
 		}
+		if = {
+			limit = {
+				has_district = district_farming
+				is_wet = yes
+			}
+			add_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+				replace = yes
+			}
+		}
 	}
 
 	ai_weight = {
@@ -2046,7 +2075,7 @@ decision_miracle_4 = {
 	sound = event_psionic_01
 	icon = decision_miracle_4
 
-	enactment_time = 300
+	enactment_time = 30
 
 	potential = {
 		owner = {
@@ -2111,6 +2140,23 @@ decision_miracle_4 = {
 		if = {
 			limit = {
 				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
 			}
 			remove_modifier = modifier_miracle_3
 		}
@@ -2142,7 +2188,7 @@ decision_miracle_5 = {
 	sound = event_psionic_01
 	icon = decision_miracle_5
 
-	enactment_time = 300
+	enactment_time = 150
 
 	potential = {
 		owner = {
@@ -2207,6 +2253,23 @@ decision_miracle_5 = {
 		if = {
 			limit = {
 				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
 			}
 			remove_modifier = modifier_miracle_3
 		}
@@ -2238,7 +2301,7 @@ decision_miracle_6 = {
 	sound = event_psionic_01
 	icon = decision_miracle_6
 
-	enactment_time = 300
+	enactment_time = 150
 
 	potential = {
 		owner = {
@@ -2303,6 +2366,23 @@ decision_miracle_6 = {
 		if = {
 			limit = {
 				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
 			}
 			remove_modifier = modifier_miracle_3
 		}
