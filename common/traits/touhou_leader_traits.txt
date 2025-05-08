@@ -1673,6 +1673,12 @@ leader_trait_wholehearted = {
 	army_modifier = {
 		army_experience_gain_mult = 1
 	}
+	sector_modifier = {
+		spirit_workforce_mult = 0.2
+	}
+	planet_modifier = {
+		spirit_workforce_mult = 0.1
+	}
 	leader_trait_type = veteran
 	leader_class = { commander }
 	selectable_weight = {
@@ -1694,7 +1700,6 @@ thl_leader_trait_gardener = {
 		potential = {
 			trait_is_gestalt_check = no
 		}
-		job_death_chronicler_add = 400
 		planet_jobs_unity_produces_mult = 0.3
 		planet_jobs_food_produces_mult = 0.1
 	}
@@ -1702,7 +1707,6 @@ thl_leader_trait_gardener = {
 		potential = {
 			trait_is_gestalt_check = no
 		}
-		job_death_chronicler_add = 200
 		planet_jobs_unity_produces_mult = 0.15
 		planet_jobs_food_produces_mult = 0.05
 	}
@@ -1710,7 +1714,6 @@ thl_leader_trait_gardener = {
 		potential = {
 			trait_is_gestalt_check = yes
 		}
-		job_chronicle_drone_add = 400
 		planet_jobs_unity_produces_mult = 0.3
 		planet_jobs_food_produces_mult = 0.1
 	}
@@ -1718,7 +1721,6 @@ thl_leader_trait_gardener = {
 		potential = {
 			trait_is_gestalt_check = yes
 		}
-		job_chronicle_drone_add = 200
 		planet_jobs_unity_produces_mult = 0.15
 		planet_jobs_food_produces_mult = 0.05
 	}
@@ -2860,11 +2862,13 @@ thl_leader_trait_dolls = {
 	}
 	planet_modifier = {
 		job_dollmaker_add = 200
-		planet_doll_jobs_produces_mult = 0.5
+		doll_workforce_mult_ = 0.2
+		doll_empire_size_mult = -0.5
 	}
 	sector_modifier = {
 		job_dollmaker_add = 100
-		planet_doll_jobs_produces_mult = 0.25
+		doll_workforce_mult = 0.1
+		doll_empire_size_mult = -0.25
 	}
 	on_gained_effect = {
 		change_background_job = magician
@@ -2888,7 +2892,7 @@ thl_leader_trait_puppet_show = {
 	}
 	councilor_modifier = {
 		pop_job_amenities_mult = 0.25
-		planet_culture_workers_engineering_research_produces_add = 1
+		planet_entertainers_engineering_research_produces_add = 1
 		planet_entertainers_unity_produces_add = 1
 		pop_happiness = 0.05
 	}
@@ -2966,7 +2970,7 @@ thl_leader_trait_sakura_1 = {
 	}
 	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
-		planet_spirit_jobs_produces_mult = 0.05
+		spirit_workforce_mult = 0.05
 		spirit_empire_size_mult = -0.05
 		spirit_amenities_usage_mult = -0.05
 		planet_pop_assembly_organic_add = 1
@@ -2990,7 +2994,7 @@ thl_leader_trait_sakura_3 = {
 	}
 	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
-		planet_spirit_jobs_produces_mult = 0.15
+		spirit_workforce_mult = 0.15
 		spirit_empire_size_mult = -0.15
 		spirit_amenities_usage_mult = -0.15
 		planet_pop_assembly_organic_add = 3
@@ -3014,7 +3018,7 @@ thl_leader_trait_sakura_5 = {
 	}
 	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
-		planet_spirit_jobs_produces_mult = 0.25
+		spirit_workforce_mult = 0.25
 		spirit_empire_size_mult = -0.25
 		spirit_amenities_usage_mult = -0.25
 		planet_pop_assembly_organic_add = 5
@@ -3037,7 +3041,7 @@ thl_leader_trait_sakura_8 = {
 	}
 	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
-		planet_spirit_jobs_produces_mult = 0.4
+		spirit_workforce_mult = 0.4
 		spirit_empire_size_mult = -0.4
 		spirit_amenities_usage_mult = -0.4
 		planet_pop_assembly_organic_add = 8
@@ -3064,7 +3068,6 @@ thl_leader_trait_dance = {
 		}
 		job_death_chronicler_add = 200
 		planet_jobs_unity_produces_mult = 0.15
-		planet_spirit_jobs_unity_produces_mult = 0.25
 		pop_job_amenities_mult = 0.15
 		spirit_job_amenities_mult = 0.25
 	}
@@ -3074,7 +3077,6 @@ thl_leader_trait_dance = {
 		}
 		job_chronicle_drone_add = 200
 		planet_jobs_unity_produces_mult = 0.15
-		planet_spirit_jobs_unity_produces_mult = 0.25
 		pop_job_amenities_mult = 0.15
 		spirit_job_amenities_mult = 0.25
 	}
@@ -4776,13 +4778,13 @@ thl_leader_trait_rabbit_leader = {
 		TIER = 1
 	}
 	planet_modifier = {
-		planet_rabbit_produces_mult = 0.2
+		rabbit_workforce_mult = 0.1
 		rabbit_empire_size_mult = -0.2
 		pop_growth_speed = 0.1
 		pop_housing_usage_mult = -0.1
 	}
 	sector_modifier = {
-		planet_rabbit_produces_mult = 0.1
+		rabbit_workforce_mult = 0.05
 		rabbit_empire_size_mult = -0.1
 		pop_growth_speed = 0.05
 		pop_housing_usage_mult = -0.05
@@ -4808,13 +4810,13 @@ thl_leader_trait_rabbit_leader_2 = {
 		TIER = 2
 	}
 	planet_modifier = {
-		planet_rabbit_produces_mult = 0.4
+		rabbit_workforce_mult = 0.2
 		rabbit_empire_size_mult = -0.4
 		logistic_growth_mult = 0.2
 		pop_housing_usage_mult = -0.2
 	}
 	sector_modifier = {
-		planet_rabbit_produces_mult = 0.2
+		rabbit_workforce_mult = 0.1
 		rabbit_empire_size_mult = -0.2
 		logistic_growth_mult = 0.1
 		pop_housing_usage_mult = -0.1
@@ -4840,13 +4842,13 @@ thl_leader_trait_rabbit_leader_3 = {
 		TIER = 3
 	}
 	planet_modifier = {
-		planet_rabbit_produces_mult = 0.6
+		rabbit_workforce_mult = 0.3
 		rabbit_empire_size_mult = -0.6
 		logistic_growth_mult = 0.3
 		pop_housing_usage_mult = -0.3
 	}
 	sector_modifier = {
-		planet_rabbit_produces_mult = 0.3
+		rabbit_workforce_mult = 0.15
 		rabbit_empire_size_mult = -0.3
 		logistic_growth_mult = 0.15
 		pop_housing_usage_mult = -0.15

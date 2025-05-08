@@ -20,10 +20,31 @@
 	# 	Possible values: all, pop_group, ship, station, fleet, country, army, leader, planet, component, pop_group_faction (currently unused, do not use), deposit,
 	# 		megastructure, habitability, starbase, economic_unit, system, trade, federation, espionage
 
+doll_workforce_mult = {
+	icon = mod_pop_workforce_mult
+	good = yes
+	category = pop
+	percentage = yes
+}
+
+doll_empire_size_mult = {
+	icon = mod_species_empire_size_mult
+	good = no
+	category = pop
+	percentage = yes
+}
+
 doll_control_limit = {
 	icon = mod_doll_control_limit
 	good = yes
 	category = planet
+}
+
+spirit_workforce_mult = {
+	icon = mod_pop_workforce_mult
+	good = yes
+	category = pop
+	percentage = yes
 }
 
 spirit_empire_size_mult = {
@@ -47,8 +68,8 @@ spirit_job_amenities_mult = {
 	percentage = yes
 }
 
-planet_rabbit_produces_mult = {
-	icon = mod_planet_jobs_produces_mult
+rabbit_workforce_mult = {
+	icon = mod_pop_workforce_mult
 	good = yes
 	category = pop
 	percentage = yes
