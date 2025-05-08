@@ -309,14 +309,14 @@
  decision_miracle_3:0 "海水分开之日"
  decision_miracle_3_desc:0 "通过§c东风谷早苗的奇迹§!分开海水，在一颗拥有农业区划的潮湿星球上建设§c水产养殖§!区域特化，并提供额外的£job_angler£§Y渔夫§!岗位。\n\n如果不因国策解锁§c水产养殖§!区域特化，则当本修正消失时将会拆除§c水产养殖§!区域特化。"
 
- mod_job_angler_per_pop: "每$VALUE$个人口提供§G+1§!个$job_angler$岗位"
- mod_job_angler_per_pop_short: "\n每$VALUE$£pop£§G+1§!£mod_job_angler_add£ "
+ # mod_job_angler_per_pop: "每$VALUE$个人口提供§G+1§!个$job_angler$岗位"
+ # mod_job_angler_per_pop_short: "\n每$VALUE$£pop£§G+1§!£mod_job_angler_add£ "
 
  decision_miracle_4:0 "弘安的神风"
- decision_miracle_4_desc:0 "通过§c东风谷早苗的奇迹§!使大气活动变得更猛烈，增加$r_energy$产出和£mod_army_defense_damage_mult£§Y防御部队伤害§!。"
+ decision_miracle_4_desc:0 "通过§c东风谷早苗的奇迹§!使大气活动变得更猛烈，增加$r_energy$产出和£mod_army_defense_damage_mult£§Y防御部队伤害§!。\n\n本符卡部署所需时间更快。"
 
  decision_miracle_5:0 "五谷丰穰米之浴"
- decision_miracle_5_desc:0 "通过§c东风谷早苗的奇迹§!提高当地$r_food$产出和£mod_pop_growth_speed£§Y人口增长速度§!。"
+ decision_miracle_5_desc:0 "通过§c东风谷早苗的奇迹§!提高当地$r_food$产出和£mod_pop_growth_speed_reduction£§Y人口增长速度§!。"
 
  decision_miracle_6:0 "神秘果"
  decision_miracle_6_desc:0 "通过§c东风谷早苗的奇迹§!在当地生成一种神奇的水果，£job_farmer£§Y农夫§!将会产出$r_consumer_goods$。"
