@@ -250,6 +250,7 @@
  thl_leader_trait_snake_bless_desc:1 "这位领袖可以使用来自乾之神八坂神奈子的神力，呼风唤雨，追踪妖魔。"
  thl_leader_trait_frog_bless:0 "坤神加护"
  thl_leader_trait_frog_bless_desc:1 "这位领袖可以使用来自坤之神洩矢诹访子的神力，改变地形，抵抗敌人。"
+ mod_pop_miko_bonus_workforce_mult: "[miko.GetNamePlural]的岗位效率"
  #leader_trait_moriya_preacher:0 "守矢布道者"
  #leader_trait_moriya_preacher_desc:1 "这位领袖为我们的国家带来了结合古代泛灵论和现代科学的独特信仰。"
  #leader_trait_moriya_preacher_effect:0 ""
@@ -2139,6 +2140,7 @@
  mod_job_izakaya_worker_add:0 "$job_izakaya_worker$岗位"
  mod_job_izakaya_worker_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_izakaya_worker$岗位"
  mod_job_izakaya_worker_per_pop_short:0 "\n每$VALUE$ £pop£ §G+1§! £mod_job_izakaya_worker_add£ "
+ mod_pop_izakaya_worker_bonus_workforce_mult: "[izakaya_worker.GetNamePlural]的岗位效率"
 
  NAME_Tewi:0 "因幡帝"
  tewi1:0 "自称来自迷途竹林，是竹林中野生的兔子与妖怪兔的领袖，一个巧言令色的欺诈师和恶作剧爱好者，据说能带给见到她的人以幸运。"
@@ -2171,7 +2173,7 @@
  thl_leader_trait_rabbit_spy: "狡兔三窟"
  thl_leader_trait_rabbit_spy_desc: "对于狡诈而富有商业头脑的因幡帝，情报不过是又一种可以交易的商品。她手下的兔子非常乐意为她搜集情报，以换取更多的利益。"
  thl_leader_trait_rabbit_spy_tooltip: "可以在§Y法令§!中，向因幡帝购买其他国家的§Y情报§!，商品中偶尔还会包含§r意外惊喜§!。"
- mod_planet_rabbit_produces_mult:0 "兔子人口产出的资源"
+ mod_rabbit_workforce_mult:0 "兔子人口产出的资源"
  mod_rabbit_empire_size_mult:0 "兔子人口产生的帝国规模"
 
  edict_rabbit_spy_touhou:0 "小兔子的情报专列"

@@ -123,7 +123,7 @@ sakura_tree_branch = {
 	is_for_colonizable = yes
 	icon = "d_sakura_tree"
 	triggered_planet_modifier = {
-		planet_spirit_jobs_produces_mult = 0.1
+		spirit_workforce_mult = 0.1
 		spirit_empire_size_mult = -0.1
 		spirit_amenities_usage_mult = -0.1
 		planet_pop_assembly_organic_add = 2
@@ -139,7 +139,7 @@ sakura_tree_1 = {
 	potential = { always = no }
 
 	triggered_planet_modifier = {
-		planet_spirit_jobs_produces_mult = 0.05
+		spirit_workforce_mult = 0.05
 		spirit_empire_size_mult = -0.05
 		spirit_amenities_usage_mult = -0.05
 		planet_pop_assembly_organic_add = 1
@@ -153,7 +153,7 @@ sakura_tree_3 = {
 	potential = { always = no }
 
 	triggered_planet_modifier = {
-		planet_spirit_jobs_produces_mult = 0.15
+		spirit_workforce_mult = 0.15
 		spirit_empire_size_mult = -0.15
 		spirit_amenities_usage_mult = -0.15
 		planet_pop_assembly_organic_add = 3
@@ -167,7 +167,7 @@ sakura_tree_5 = {
 	potential = { always = no }
 
 	triggered_planet_modifier = {
-		planet_spirit_jobs_produces_mult = 0.25
+		spirit_workforce_mult = 0.25
 		spirit_empire_size_mult = -0.25
 		spirit_amenities_usage_mult = -0.25
 		planet_pop_assembly_organic_add = 5
@@ -181,7 +181,7 @@ sakura_tree_8 = {
 	potential = { always = no }
 
 	triggered_planet_modifier = {
-		planet_spirit_jobs_produces_mult = 0.4
+		spirit_workforce_mult = 0.4
 		spirit_empire_size_mult = -0.4
 		spirit_amenities_usage_mult = -0.4
 		planet_pop_assembly_organic_add = 8

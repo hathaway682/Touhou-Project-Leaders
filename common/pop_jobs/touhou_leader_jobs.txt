@@ -1569,7 +1569,7 @@ miko = {
         }
         upkeep = {
             trigger = {
-                moriya_faith_trigger = no
+                moriya_faith_trigger = yes
             }
             consumer_goods = 1
         }
