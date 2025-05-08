@@ -120,7 +120,10 @@ country_event = {
 		has_point_of_interest = {
 			poi = touhou_sanae_mission_chain_mil.1
 		}
-		used_naval_capacity_percent >= 0.85
+		OR = {
+			used_naval_capacity_percent >= 0.85
+			max_naval_capacity >= 3000
+		}
 		#check_variable_arithmetic = {
 		#	which = used_naval_capacity_integer
 		#	divide = max_naval_capacity
@@ -134,8 +137,7 @@ country_event = {
 				limit = {
 					has_trait = thl_leader_trait_miracle
 				}
-				add_trait = leader_trait_fleet_logistician
-				add_trait = leader_trait_armada_logistician_3
+				add_trait = leader_trait_touhou_fleet_logistician
 			}
 		}
 		add_event_chain_counter = {
@@ -168,14 +170,31 @@ country_event = {
 		has_point_of_interest = {
 			poi = touhou_sanae_mission_chain_tech.1
 		}
-		count_owned_pop_amount = {
-			limit = {
-				OR = {
-					has_trait = trait_machine_unit
-					has_trait = trait_mechanical
+		OR = {
+			AND = {
+				NOR = {
+					has_ethic = "ethic_gestalt_consciousness"
+					is_individual_machine = yes
+				}
+				count_owned_pop_amount = {
+					limit = {
+						has_trait = trait_mechanical
+					}
+					count >= 1000
 				}
 			}
-			count >= 1000
+			AND = {
+				OR = {
+					has_ethic = "ethic_gestalt_consciousness"
+					is_individual_machine = yes
+				}
+				count_owned_pop_amount = {
+					limit = {
+						has_trait = trait_machine_unit
+					}
+					count >= 7500
+				}
+			}
 		}
 	}
 	option = {
@@ -184,20 +203,62 @@ country_event = {
 			modifier = modifier_sanae_mission_tech_1
 		}
 		if = {
-			limit = { has_technology = tech_droid_workers }
+			limit = {
+				NOR = {
+					has_ethic = "ethic_gestalt_consciousness"
+					is_individual_machine = yes
+				}
+				has_technology = tech_droid_workers
+			}
 			add_monthly_resource_mult = {
 				resource = engineering_research
 				value = @tier2researchreward
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
-			else = {
+			else_if = {
+				limit = {
+					NOR = {
+						has_ethic = "ethic_gestalt_consciousness"
+						is_individual_machine = yes
+					}
+					NOT = {has_technology = tech_droid_workers}
+				}
 				add_tech_progress = {
 					tech = tech_droid_workers
 					progress = 0.25
 				}
 			}
+			else_if = {
+				limit = {
+					OR = {
+						has_ethic = "ethic_gestalt_consciousness"
+						is_individual_machine = yes
+					}
+					has_technology = tech_robomodding_m
+				}
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier2researchreward
+					min = @tier2researchmin
+					max = @tier2researchmax
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_ethic = "ethic_gestalt_consciousness"
+						is_individual_machine = yes
+					}
+					NOT = { has_technology = tech_robomodding_m}
+				}
+				add_tech_progress = {
+					tech = tech_robomodding_m
+					progress = 0.25
+				}
+			}
 		}
+
 		add_event_chain_counter = {
 			event_chain = "touhou_sanae_mission_chain"
 			counter = "touhou_sanae_mission_counter"
@@ -239,7 +300,7 @@ country_event = {
 				limit = {
 					has_trait = thl_leader_trait_miracle
 				}
-				add_trait = leader_trait_touhou_architectural_interest_2
+				add_trait = trait_ruler_touhou_architectural_sense
 			}
 		}
 		add_resource = {

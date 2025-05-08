@@ -541,6 +541,76 @@ leader_trait_touhou_architectural_interest_2 = {
 	}
 }
 
+trait_ruler_touhou_architectural_sense = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_architectural_interest"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			owner = {
+				OR = {
+					has_civic = civic_moriya_shinto
+					has_civic = civic_moriya_shinto_corp
+				}
+			}
+		}
+		planet_structures_upkeep_mult = -0.1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			NOT = {
+				owner = {
+					OR = {
+						has_civic = civic_moriya_shinto
+						has_civic = civic_moriya_shinto_corp
+					}
+				}
+			}
+		}
+		planet_structures_rare_crystals_upkeep_mult = -0.1
+	}
+	councilor_modifier = {
+		planet_structures_cost_mult = -0.1
+		planet_building_build_speed_mult = 0.1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	leader_trait_type = veteran
+	leader_class = { commander official }
+}
+
+leader_trait_touhou_fleet_logistician = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_fleet_logistician"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = none
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			always = yes
+		}
+		ship_orbit_upkeep_mult = -0.025
+		mult = trigger:has_total_skill
+	}
+	custom_tooltip_with_modifiers = leader_trait_tactical_algorithms_tt
+	leader_class = { commander }
+	initial = no
+	randomized = no
+	leader_potential_add = {
+		always = no
+	}
+	leader_trait_type = veteran
+}
+
 ###################
 leader_trait_touhou_trade_focus = {
 	inline_script = {
