@@ -1727,7 +1727,7 @@ country_event = { # 莲子
 }
 
 country_event = { # 觉
-	id = touhou_paragon.41300
+		id = touhou_paragon.41300
 	title = "touhou_paragon.41300.name"
 	desc = "touhou_paragon.41300.desc"
 	show_sound = event_psionic
