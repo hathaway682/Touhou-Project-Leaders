@@ -55,13 +55,6 @@ doll_missing_per_maker = {
 		parameters = {
 			limit = { has_trait = trait_thl_doll }
 		}
-		potential = {
-			owner = {
-				NOT = {
-					has_technology = tech_sapient_dolls
-				}
-			}
-		}
 		mode = subtract
 	}
 	complex_trigger_modifier = {

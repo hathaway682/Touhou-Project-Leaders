@@ -607,7 +607,11 @@ dolls_assembly_trigger = {
 			AND = {
 				has_trait = trait_thl_doll
 				root = {
-					check_variable_arithmetic = { which = value:doll_missing_per_maker value > 0 }
+					OR = {
+						check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 0 }
+						has_technology = tech_sapient_dolls
+					}
+
 				}
 			}
 			AND = {
@@ -615,7 +619,12 @@ dolls_assembly_trigger = {
 					has_trait = trait_thl_doll
 				}
 				root = {
-					check_variable_arithmetic = { which = value:doll_missing_per_maker value <= 0 }
+					AND = {
+						check_variable_arithmetic = { which = value:doll_missing_per_maker value < 0 }
+						NOT = {
+							has_technology = tech_sapient_dolls
+						}
+					}
 				}
 			}
 		}
