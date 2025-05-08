@@ -963,121 +963,121 @@ touhou_historian = {
         }
     }
 }
-angler = {
-    category = worker
-    swappable_data = {
-        default = {
-            condition_string = WORKER_JOB_TRIGGER
-            building_icon = building_food_processing_facility
-        }
-    }
-
-    possible_pre_triggers = {
-        has_owner = yes
-        is_being_purged = no
-        is_being_assimilated = no
-        is_sapient = yes
-    }
-
-    possible_precalc = can_fill_worker_job
-    possible = {
-        hidden_trigger = { exists = owner }
-        owner = {
-            is_gestalt = no
-            #is_anglers_empire = yes
-        }
-    }
-
-    resources = {
-        category = planet_anglers
-        produces = {
-            food = 8
-        }
-        produces = {
-            trigger = {
-                has_councilor = { COUNCILOR = "councilor_anglers" }
-            }
-
-            food = @councilor_anglers_angler_food_bonus
-            mult = value:councilor_level|TYPE|councilor_anglers|
-        }
-        produces = {
-            trigger = {
-                has_councilor = { COUNCILOR = "councilor_machine_anglers" }
-            }
-
-            food = @councilor_machine_anglers_angler_food_bonus
-            mult = value:councilor_level|TYPE|councilor_machine_anglers|
-        }
-        produces = {
-            trigger = {
-                planet = {
-                    has_planet_flag = has_produce_requisitorium
-                }
-            }
-            food = @requisitorium_food_reduction
-        }
-        produces = {
-            trade = 2
-        }
-    }
-
-    overlord_resources = {
-        category = planet_requisitioned_food
-        produces = {
-            trigger = {
-                planet = {
-                    has_planet_flag = has_produce_requisitorium
-                }
-            }
-            food = @requisitorium_food_overlord
-        }
-    }
-
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { has_valid_civic = civic_agrarian_idyll }
-        }
-        planet_amenities_add = 200
-        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-    }
-
-    weight = {
-        weight = @worker_job_weight
-        mult = value:job_weights_multiple_resources_modifier|JOB|angler|RESOURCE1|food|WEIGHT1|0.8|RESOURCE2|trade|WEIGHT2|0.2|
-        modifier = {
-            factor = 1.1
-            owner = { has_valid_civic = civic_agrarian_idyll }
-        }
-        modifier = {
-            factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
-            owner = { has_valid_civic = civic_agrarian_idyll }
-        }
-        modifier = {
-            factor = 10
-            is_enslaved = yes
-            can_take_servant_job = no
-            NOT = { has_slavery_type = { type = slavery_indentured } }
-        }
-        modifier = {
-            factor = 0.25
-            can_take_servant_job = yes
-        }
-    }
-
-    inline_script = "jobs/automodding_priority_food"
-
-    promotion = {
-        time = @standard_promotion_time
-        effect = {
-            pop_amount_change_category = {
-                CATEGORY = worker
-                AMOUNT = local_pop_amount
-            }
-        }
-    }
-}
+# angler = {
+#     category = worker
+#     swappable_data = {
+#         default = {
+#             condition_string = WORKER_JOB_TRIGGER
+#             building_icon = building_food_processing_facility
+#         }
+#     }
+#
+#     possible_pre_triggers = {
+#         has_owner = yes
+#         is_being_purged = no
+#         is_being_assimilated = no
+#         is_sapient = yes
+#     }
+#
+#     possible_precalc = can_fill_worker_job
+#     possible = {
+#         hidden_trigger = { exists = owner }
+#         owner = {
+#             is_gestalt = no
+#             #is_anglers_empire = yes
+#         }
+#     }
+#
+#     resources = {
+#         category = planet_anglers
+#         produces = {
+#             food = 8
+#         }
+#         produces = {
+#             trigger = {
+#                 has_councilor = { COUNCILOR = "councilor_anglers" }
+#             }
+#
+#             food = @councilor_anglers_angler_food_bonus
+#             mult = value:councilor_level|TYPE|councilor_anglers|
+#         }
+#         produces = {
+#             trigger = {
+#                 has_councilor = { COUNCILOR = "councilor_machine_anglers" }
+#             }
+#
+#             food = @councilor_machine_anglers_angler_food_bonus
+#             mult = value:councilor_level|TYPE|councilor_machine_anglers|
+#         }
+#         produces = {
+#             trigger = {
+#                 planet = {
+#                     has_planet_flag = has_produce_requisitorium
+#                 }
+#             }
+#             food = @requisitorium_food_reduction
+#         }
+#         produces = {
+#             trade = 2
+#         }
+#     }
+#
+#     overlord_resources = {
+#         category = planet_requisitioned_food
+#         produces = {
+#             trigger = {
+#                 planet = {
+#                     has_planet_flag = has_produce_requisitorium
+#                 }
+#             }
+#             food = @requisitorium_food_overlord
+#         }
+#     }
+#
+#     triggered_planet_modifier = {
+#         potential = {
+#             exists = owner
+#             owner = { has_valid_civic = civic_agrarian_idyll }
+#         }
+#         planet_amenities_add = 200
+#         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+#     }
+#
+#     weight = {
+#         weight = @worker_job_weight
+#         mult = value:job_weights_multiple_resources_modifier|JOB|angler|RESOURCE1|food|WEIGHT1|0.8|RESOURCE2|trade|WEIGHT2|0.2|
+#         modifier = {
+#             factor = 1.1
+#             owner = { has_valid_civic = civic_agrarian_idyll }
+#         }
+#         modifier = {
+#             factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+#             owner = { has_valid_civic = civic_agrarian_idyll }
+#         }
+#         modifier = {
+#             factor = 10
+#             is_enslaved = yes
+#             can_take_servant_job = no
+#             NOT = { has_slavery_type = { type = slavery_indentured } }
+#         }
+#         modifier = {
+#             factor = 0.25
+#             can_take_servant_job = yes
+#         }
+#     }
+#
+#     inline_script = "jobs/automodding_priority_food"
+#
+#     promotion = {
+#         time = @standard_promotion_time
+#         effect = {
+#             pop_amount_change_category = {
+#                 CATEGORY = worker
+#                 AMOUNT = local_pop_amount
+#             }
+#         }
+#     }
+# }
 
 maple_sugar_harvester = {
     category = specialist

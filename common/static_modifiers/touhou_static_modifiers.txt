@@ -314,14 +314,15 @@ suika_level_army_buff = {
 modifier_miracle_1 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_consecrated_worlds.dds"
 	icon_frame = 1
-	trade_value_mult = 0.33
+	trader_jobs_bonus_workforce_mult = 0.05
+	planet_jobs_trade_produces_mult = 0.1
 }
 
 modifier_miracle_2 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_consecrated_worlds.dds"
 	icon_frame = 1
-	planet_amenities_mult = 0.2
-	pop_happiness = 0.2
+	planet_amenities_mult = 0.1
+	pop_happiness = 0.1
 }
 
 modifier_miracle_3 = {
@@ -329,7 +330,7 @@ modifier_miracle_3 = {
 	icon_frame = 1
 	planet_immigration_pull_mult = 1
 	pop_growth_from_immigration = 0.25
-	job_angler_per_pop = 0.1
+	job_angler_per_pop = 0.02
 }
 
 modifier_miracle_4 = {
