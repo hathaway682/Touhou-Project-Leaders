@@ -21,7 +21,7 @@ trait_thl_spirit = {
 		"trait_rapid_breeders"
 		"trait_plantoid_budding"
 		"trait_lithoid_budding"
-		"trait_advanced_budding"
+		#"trait_advanced_budding"
 		"trait_vat_grown"
 		"trait_tiyanki"
 		"trait_clone_soldier_fertile"
@@ -38,7 +38,7 @@ trait_thl_spirit = {
 		planet_pops_upkeep_mult = -2
 		pop_housing_usage_add = -0.5
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			OR = {
 				planet = {
@@ -67,7 +67,7 @@ trait_thl_spirit = {
 		species_empire_size_mult = 1
 		multiplier = modifier:spirit_empire_size_mult
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			OR = {
 				planet = {
@@ -96,7 +96,7 @@ trait_thl_spirit = {
 		pop_amenities_usage_mult = -1
 		multiplier = modifier:spirit_amenities_usage_mult
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			owner = {
 				any_owned_leader = {
@@ -105,7 +105,8 @@ trait_thl_spirit = {
 				}
 			}
 		}
-		pop_job_amenities_mult = 1
+		entertainer_jobs_bonus_workforce_mult = 1
+		pop_maintenance_drone_bonus_workforce_mult = 1
 		multiplier = modifier:spirit_job_amenities_mult
 	}
 }
@@ -127,14 +128,9 @@ trait_sanae_robot_worker = {
 		always = no
 	}
 	modifier = {
-		planet_building_build_speed_mult = 0.1
-		pop_bonus_workforce_mult = 1 #TODO apply pop_category bonus once implemented
-		pop_foundry_bonus_workforce_mult = 0.50
-		pop_alloy_drone_bonus_workforce_mult = 0.50
-		pop_artisan_bonus_workforce_mult = 0.50
-		pop_artisan_drone_bonus_workforce_mult = 0.50
-		planet_pops_energy_upkeep_mult = 4
-		pop_resettlement_cost_mult = 4
+		pop_workforce_add = 9 #测试一下效果
+		planet_pops_energy_upkeep_mult = 9
+		pop_resettlement_cost_mult = 9
 	}
 	slave_cost = {
 		energy = 2000
@@ -205,7 +201,7 @@ trait_thl_doll = {
 		pop_bonus_workforce_mult = 0.04
 		multiplier = value:doll_missing_per_maker
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			planet = {
 				num_assigned_jobs = {
@@ -280,7 +276,6 @@ trait_scarlet_blood = {
 		pop_bonus_workforce_mult = 0.05
 		leader_lifespan_add = 100
 		planet_pops_upkeep_mult = 0.3
-		pop_growth_speed = -0.15
 	}
 	slave_cost = {
 		energy = 1000
@@ -310,7 +305,7 @@ trait_kappa_aquatic = {
 		weight = 0
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = {
@@ -341,7 +336,7 @@ trait_kappa_aquatic = {
 		pop_brain_drone_engineer_bonus_workforce_mult = 0.20
 		pop_calculator_engineer_bonus_workforce_mult = 0.20
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			is_enslaved = yes
 		}
@@ -411,13 +406,14 @@ trait_thl_rabbit = {
 	opposites = { trait_slow_breeders trait_rapid_breeders trait_fertile  }
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
-		pop_growth_speed = 0.5
-		pop_housing_usage_mult = -0.15
+		logistic_growth_mult = 0.6
+		pop_housing_usage_mult = -0.2
+		pop_happiness = 0.20
 	}
 	planet_modifier = {
 		pop_happiness = 0.01
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			owner = {
 				any_owned_leader = {
@@ -428,7 +424,7 @@ trait_thl_rabbit = {
 		planet_jobs_produces_mult = 1
 		multiplier = modifier:planet_rabbit_produces_mult
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			owner = {
 				any_owned_leader = {

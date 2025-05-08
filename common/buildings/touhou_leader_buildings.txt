@@ -192,7 +192,7 @@ building_moriya_shrine = {
 	}
 
 	planet_modifier = {
-		job_moriya_miko_add = 200
+		job_miko_add = 200
 	}
 
 	triggered_country_modifier = {
@@ -303,7 +303,7 @@ holding_building_moriya_shrine = {
 	}
 
 	planet_modifier = {
-		job_moriya_miko_add = 200
+		job_miko_add = 200
 	}
 
 	resources = {
@@ -412,7 +412,7 @@ building_hakurei_shrine = {
 	}
 
 	planet_modifier = {
-		job_hakurei_miko_add = 200
+		job_miko_add = 200
 	}
 
 	triggered_country_modifier = {

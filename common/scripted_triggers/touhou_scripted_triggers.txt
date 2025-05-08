@@ -660,3 +660,111 @@ thl_is_immortal_akyuu = {
 		has_trait = leader_trait_composer_chosen
 	}
 }
+
+hakurei_faith_trigger = {
+	OR = {
+		#优先级最高：星球总督
+		AND = {
+			planet = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_fly
+				}
+			}
+		}
+		#优先级第二：星区总督
+		AND = {
+			sector_capital = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_fly
+				}
+			}
+			planet = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+				}
+			}
+		}
+		#优先级第三：信仰国策
+		AND = {
+			OR = {
+				has_valid_civic = civic_hakurei_shinto
+				has_valid_civic = civic_hakurei_shinto_corp
+			}
+			sector_capital = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_fly
+					}
+				}
+			}
+			planet = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+				}
+			}
+		}
+	}
+}
+
+moriya_faith_trigger = {
+	OR = {
+		#优先级最高：星球总督
+		AND = {
+			planet = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_miracle
+				}
+			}
+		}
+		#优先级第二：星区总督
+		AND = {
+			sector_capital = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_miracle
+				}
+			}
+			planet = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_fly
+					}
+				}
+			}
+		}
+		#优先级第三：信仰国策
+		AND = {
+			OR = {
+				has_valid_civic = civic_moriya_shinto
+				has_valid_civic = civic_moriya_shinto_corp
+			}
+			sector_capital = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_fly
+					}
+				}
+			}
+			planet = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_fly
+					}
+				}
+			}
+		}
+	}
+}

@@ -57,71 +57,9 @@ planet_jobs = {
 
 	generate_add_modifiers = {
 		produces
+		upkeep
 	}
 	modifier_category = pop_job
-
-	triggered_produces_modifier = {
-		key = planet_psionic_jobs
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			OR = {
-				has_trait = trait_psionic
-				has_trait = trait_latent_psionic
-			}
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_cyborg_jobs
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			has_trait = trait_cybernetic
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_virtual_jobs
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			has_virtual_species_trait = yes
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_doll_jobs
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			has_trait = trait_thl_spirit
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_spirit_jobs
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			has_trait = trait_thl_spirit
-		}
-	}
-
-	triggered_produces_modifier = {
-		key = planet_zombie_jobs
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			has_trait = trait_zombie
-		}
-	}
 }
 
 planet_pop_assemblers = {
