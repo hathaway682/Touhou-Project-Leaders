@@ -207,6 +207,7 @@ add_sanae_traits = {
 	add_trait = thl_leader_trait_theurgist
 	add_trait = thl_leader_trait_snake_bless
 	add_trait = thl_leader_trait_frog_bless
+	add_trait = thl_leader_trait_robotist_sanae
 	#add_trait = leader_trait_shroud_preacher
 	add_trait = leader_trait_crusader
 	add_trait = leader_trait_reckless_2

@@ -711,21 +711,21 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.40310.a
-		add_trait = thl_leader_trait_robotist_sanae
+		set_leader_flag = touhou_flag_sanae_robotist_councilor_update
 		owner = {
 			add_research_option = tech_sanae_robot_army
 		}
 	}
 	option = {
 		name = touhou_paragon.40310.b
-		add_trait = thl_leader_trait_robotist_sanae
+		aset_leader_flag = touhou_flag_sanae_robotist_councilor_update
 		owner = {
 			add_research_option = tech_sanae_robot_strike_craft
 		}
 	}
 	option = {
 		name = touhou_paragon.40310.c
-		add_trait = thl_leader_trait_robotist_sanae
+		set_leader_flag = touhou_flag_sanae_robotist_councilor_update #add_trait = thl_leader_trait_robotist_sanae
 		owner = {
 			add_research_option = tech_sanae_robot_worker
 		}

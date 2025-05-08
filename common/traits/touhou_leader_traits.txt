@@ -127,7 +127,13 @@ subclass_commander_miko = {
 		job_miko_add = 50
 		multiplier = trigger:has_base_skill
 	}
-
+	triggered_councilor_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_miko_bonus_workforce_mult = 0.03
+		multiplier = trigger:has_base_skill
+	}
 	ai_weight = {
 		modifier = {
 			is_councilor = yes
@@ -373,19 +379,31 @@ thl_leader_trait_robotist_sanae = {
 		CLASS = scientist
 		ICON = "GFX_leader_trait_robotist"
 		RARITY = paragon
-		COUNCIL = no
+		COUNCIL = yes
 		TIER = none
 	}
-	planet_modifier = {
-		planet_jobs_robotic_produces_mult = 0.4
-		planet_pop_assemblers_upkeep_mult = 0.4
-		planet_pops_robotics_upkeep_mult = 0.4
+	councilor_modifier = {
+		planet_pop_assembly_mult = 0.1
+		planet_pop_assemblers_engineering_research_produces_add = 1
+		planet_pops_robotics_upkeep_mult = 0.1
 	}
-	sector_modifier = {
-		planet_jobs_robotic_produces_mult = 0.2
-		planet_pop_assemblers_upkeep_mult = 0.2
-		planet_pops_robotics_upkeep_mult = 0.2
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = touhou_flag_sanae_robotist_councilor_update
+			leader_class = commander
+		}
+		planet_pops_robotics_upkeep_mult = -0.2
 	}
+	# planet_modifier = {
+	# 	planet_jobs_robotic_produces_mult = 0.4
+	# 	planet_pop_assemblers_upkeep_mult = 0.4
+	# 	planet_pops_robotics_upkeep_mult = 0.4
+	# }
+	# sector_modifier = {
+	# 	planet_jobs_robotic_produces_mult = 0.2
+	# 	planet_pop_assemblers_upkeep_mult = 0.2
+	# 	planet_pops_robotics_upkeep_mult = 0.2
+	# }
 	triggered_army_modifier = {
 		potential = {
 			has_leader_flag = touhou_flag_sanae_robotist_update
@@ -677,13 +695,13 @@ thl_leader_trait_snake_bless = {
 		army_attack_morale_mult = 0.15
 	}
 	planet_modifier = {
-		planet_priests_physics_research_produces_add = 2
+		physicist_jobs_bonus_workforce_mult = 0.1
 		planet_jobs_alloys_produces_mult = 0.1
 		planet_jobs_energy_produces_mult = 0.1
 		planet_jobs_food_produces_mult = 0.1
 	}
 	sector_modifier = {
-		planet_priests_physics_research_produces_add = 1
+		physicist_jobs_bonus_workforce_mult = 0.05
 		planet_jobs_alloys_produces_mult = 0.05
 		planet_jobs_energy_produces_mult = 0.05
 		planet_jobs_food_produces_mult = 0.05
@@ -719,13 +737,13 @@ thl_leader_trait_snake_bless_2 = {
 		army_attack_morale_mult = 0.3
 	}
 	planet_modifier = {
-		planet_priests_physics_research_produces_add = 4
+		physicist_jobs_bonus_workforce_mult = 0.2
 		planet_jobs_alloys_produces_mult = 0.2
 		planet_jobs_energy_produces_mult = 0.2
 		planet_jobs_food_produces_mult = 0.2
 	}
 	sector_modifier = {
-		planet_priests_physics_research_produces_add = 2
+		physicist_jobs_bonus_workforce_mult = 0.1
 		planet_jobs_alloys_produces_mult = 0.1
 		planet_jobs_energy_produces_mult = 0.1
 		planet_jobs_food_produces_mult = 0.1
@@ -758,13 +776,13 @@ thl_leader_trait_snake_bless_3 = {
 		army_attack_morale_mult = 0.5
 	}
 	planet_modifier = {
-		planet_priests_physics_research_produces_add = 6
+		physicist_jobs_bonus_workforce_mult = 0.3
 		planet_jobs_alloys_produces_mult = 0.3
 		planet_jobs_energy_produces_mult = 0.3
 		planet_jobs_food_produces_mult = 0.3
 	}
 	sector_modifier = {
-		planet_priests_physics_research_produces_add = 3
+		physicist_jobs_bonus_workforce_mult = 0.15
 		planet_jobs_alloys_produces_mult = 0.15
 		planet_jobs_energy_produces_mult = 0.15
 		planet_jobs_food_produces_mult = 0.15
