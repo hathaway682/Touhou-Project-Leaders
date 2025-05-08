@@ -1008,7 +1008,7 @@ decision_summon_devils = {
 	resources = {
 		category = decisions
 		cost = {
-			astral_threads = 1000
+			astral_threads = 100
 		}
 	}
 
@@ -1101,7 +1101,7 @@ decision_summon_devils_large = {
 	resources = {
 		category = decisions
 		cost = {
-			astral_threads = 6000
+			astral_threads = 600
 		}
 	}
 
@@ -1244,12 +1244,12 @@ decision_summon_spirit = {
 	resources = {
 		category = decisions
 		cost = {
-			sr_zro = 100
+			thl_spirit = 1000
 		}
 	}
 
 	effect = {
-		custom_tooltip = small_demon_refugees_tooltip
+		custom_tooltip = small_spirit_refugees_tooltip
 		hidden_effect = {
 			if = {
 				limit = {
@@ -1333,7 +1333,7 @@ decision_summon_spirit_large = {
 	resources = {
 		category = decisions
 		cost = {
-			sr_zro = 400
+			thl_spirit = 4000
 		}
 	}
 

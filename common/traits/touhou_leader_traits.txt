@@ -2880,7 +2880,7 @@ thl_leader_trait_dolls = {
 	}
 	planet_modifier = {
 		job_dollmaker_add = 200
-		doll_workforce_mult_ = 0.2
+		doll_workforce_mult = 0.2
 		doll_empire_size_mult = -0.5
 	}
 	sector_modifier = {

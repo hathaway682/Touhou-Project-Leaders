@@ -460,6 +460,12 @@ dollmaker = {
     triggered_planet_modifier = {
         potential = {
             check_variable_arithmetic = { which = value:doll_missing_per_maker value <= 6 }
+            OR = {
+                check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 0 }
+                owner = {
+                    has_technology = tech_sapient_dolls
+                }
+            }
         }
         planet_pop_assembly_add = 2
     }

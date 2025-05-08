@@ -1,7 +1,7 @@
 triggered_planet_modifier = {
     potential = {
-        check_variable = { which = clone_pops_missing_per_vat value <= $UPPER_LIMIT$ }
-        check_variable = { which = clone_pops_missing_per_vat value > $LOWER_LIMIT$ }
+        check_variable_arithmetic = { which = value:doll_missing_per_maker value <= $UPPER_LIMIT$ }
+        check_variable_arithmetic = { which = value:doll_missing_per_maker value > $LOWER_LIMIT$ }
     }
     planet_pop_assembly_add = $GROWTH$
 }

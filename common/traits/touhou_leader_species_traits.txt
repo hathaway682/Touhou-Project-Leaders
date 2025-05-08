@@ -93,7 +93,7 @@ trait_thl_spirit = {
 				}
 			}
 		}
-		pop_amenities_usage_mult = -1
+		pop_amenities_usage_mult = 1
 		multiplier = modifier:spirit_amenities_usage_mult
 	}
 	triggered_pop_group_modifier = {
