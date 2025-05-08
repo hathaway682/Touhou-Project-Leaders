@@ -604,11 +604,6 @@ dolls_assembly_trigger = {
 			is_robotic = yes
 		}
 		OR = {
-<<<<<<< HEAD
-			num_assigned_jobs = {
-				job = dollmaker
-				value >= 1
-=======
 			AND = {
 				has_trait = trait_thl_doll
 				root = {
@@ -618,7 +613,6 @@ dolls_assembly_trigger = {
 					}
 
 				}
->>>>>>> 62744bb9a580d10dab58536307dca22617bba611
 			}
 			AND = {
 				NOT = {
