@@ -406,4 +406,9 @@ spriteTypes = {
 	# 	texturefile = "gfx/interface/icons/leaders/leaders_large.dds"
 	# 	noOfFrames = 6
 	# }
+
+	spriteType = {
+		name = "GFX_zone_garden"
+		texturefile = "gfx/interface/icons/zones/zone_garden.dds"
+	}
 }

@@ -3,80 +3,6 @@
 #If rules here evaluate to true, there might still be other rules that make the action unavailable.
 #If a rule here evaluates to false the action will become unavailable
 
-#This rule is a condition for bombarding planets
-#Root = fleet, potential attacker
-#From = planet, potential target
-can_orbital_bombard = {
-	exists = FROM.OWNER
-	NOT = {
-		any_controlled_ship = {
-			is_ship_size = colossus
-		}
-	}
-	OR = {
-		AND = {
-			ROOT.CONTROLLER = {
-				NOT = { has_communications = FROM.OWNER }
-			}
-			FROM.OWNER = {
-				NOT = { is_country_type = primitive }
-			}
-		}
-		AND = {
-			ROOT.CONTROLLER = {
-				NOR = {
-					has_policy_flag = interference_not_allowed
-					has_policy_flag = interference_subtle
-				}
-			}
-			FROM.OWNER = { is_country_type = primitive }
-		}
-		ROOT.CONTROLLER = { is_at_war_with = FROM.CONTROLLER }
-		FROM = { is_planet_class = pc_infested }
-		FROM.CONTROLLER = {
-			OR = {
-				is_country_type = swarm
-				is_country_type = ai_empire
-				is_country_type = cybrex_empire
-				AND = {
-					is_country_type = awakened_marauders
-					ROOT.CONTROLLER = { is_hostile = prev }
-				}
-			}
-		}
-		ROOT.CONTROLLER = {
-			OR = {
-				is_country_type = extradimensional
-				is_country_type = extradimensional_2
-				is_country_type = extradimensional_3
-				is_country_type = swarm
-				is_country_type = ai_empire
-				is_country_type = cybrex_empire
-				is_country_type = dormant_marauders
-				is_country_type = marauder_raiders
-				is_country_type = ruined_marauders
-				is_country_type = debt_collectors
-				is_country_type = gray_goo
-				is_country_type = vol
-				is_country_type = koishi_berserk_fleet
-				AND = {
-					is_country_type = awakened_marauders
-					FROM.CONTROLLER = { is_hostile = prev }
-				}
-			}
-		}
-		AND = {
-			from.controller = {
-				is_country_type = faction
-				NOT = { is_same_value = ROOT.CONTROLLER }
-			}
-			from.owner = {
-				is_same_value = ROOT.CONTROLLER
-			}
-		}
-	}
-}
-
 system_blocks_sensors = {
 	OR = {
 		is_inside_nebula = yes
@@ -183,14 +109,20 @@ can_species_be_assembled = {
 							has_building = building_posthumous_employment_center
 							owner = { has_civic = civic_permanent_employment }
 						}
-						AND = {
-							any_owned_pop = {
-								has_job = death_chronicler
-							}
-							owner = { has_civic = civic_nether_world }
-						}
 						has_planet_flag = can_organic_assemble_flag #for mod compatibility
 					}
+				}
+			}
+		}
+		AND = {
+			has_trait = trait_thl_spirit
+			root = {
+				OR = {
+					has_deposit = sakura_tree_1
+					has_deposit = sakura_tree_3
+					has_deposit = sakura_tree_5
+					has_deposit = sakura_tree_8
+					has_deposit = sakura_tree_branch
 				}
 			}
 		}
@@ -243,7 +175,7 @@ can_fill_ruler_job = {
 				}
 				AND = {
 					has_trait = trait_thl_doll
-					owner = { has_technology = tech_doll_leaders }
+					owner = { has_technology = tech_sapient_dolls }
 					owner = { has_policy_flag = ai_full_rights }
 				}
 			}
@@ -421,57 +353,6 @@ can_terraform_planet = {
 	}
 }
 
-###烧尸体发电
-should_force_decline_species = {
-	OR = {
-		# Infertile Clone Army pops should decline if in Country that can't have Vats, or there is a Vat shortage.
-		custom_tooltip = {
-			success_text = CLONE_ARMY_FORCE_DECLINE
-			exists = this
-			OR = {
-				has_trait = trait_clone_soldier_infertile
-				has_trait = trait_clone_soldier_infertile_full_potential
-			}
-			from = {
-				OR = {
-					# Check if country is unable to build Vats for this species.
-					AND = {
-						exists = owner
-						owner = {
-							OR = {
-								NOR = {
-									has_origin = origin_clone_army
-									has_origin = origin_clone_guard ###兼容星海帝皇
-								}
-								has_country_flag = clone_army_fertility_unlocked			# Can't have Vats anymore.
-								NOT = { owner_main_species = { is_same_species = root } }	# Our Vats can't build this species.
-							}
-						}
-					}
-					# Vats check out, but are there more pops than Vats support?
-					check_variable = { which = clone_pops_missing value < 0 }
-				}
-			}
-		}
-		# This slowly kills off the Syntheic Fertility Species
-		custom_tooltip = {
-			success_text = PATHOGENIC_GENES_FORCE_DECLINE
-			exists = this
-			has_trait = trait_pathogenic_genes
-		}
-		custom_tooltip = {
-			success_text = KILL_CORPSE_BATTERY
-			has_trait = trait_zombie
-			from = {
-				any_owned_pop = {
-					is_same_species = root
-					has_job = corpse_battery
-				}
-			}
-		}
-	}
-}
-
 can_country_initiate_storm = {
 	OR = {
 		has_ascension_perk = ap_weather_control
@@ -505,3 +386,22 @@ should_count_towards_leader_cap = {
 		}
 	}
 }
+
+#新版关于领袖复活的判断
+# Used to call the Second Chance toast when a leader dies, still need to clone it and actually have the leader survive
+# This = leader
+will_leader_survive = {
+	exists = owner
+	OR = {
+		# Spare Organs trait
+		AND = {
+			species = { has_trait = trait_spare_organs }
+			NOT = { has_trait = trait_leader_second_chanced }
+		}
+		leader_backup_clone_can_activate = yes
+		thl_is_regeneration_leader = yes
+		thl_is_immortal_akyuu = yes
+	}
+}
+
+#TODO：将烧尸体发电改为决议

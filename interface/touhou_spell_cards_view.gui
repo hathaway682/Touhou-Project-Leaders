@@ -88,7 +88,7 @@ guiTypes = {
         containerWindowType = {
             name = "EVENT_DIPLO"
             position = { x = -2000 y = -5000 }
-            #size = { width = 563 height = 220 }
+            size = { width = 563 height = 220 }
             moveable = no
 
             instantTextBoxType = {

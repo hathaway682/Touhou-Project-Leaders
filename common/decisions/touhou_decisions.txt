@@ -201,8 +201,8 @@ decision_endless_banquet = {
 	resources = {
 		category = decisions
 		cost = {
-			consumer_goods = 250
-			multiplier = trigger:num_pops
+			consumer_goods = 1
+			multiplier = trigger:pop_amount
 		}
 	}
 
@@ -565,7 +565,7 @@ decision_satori_pet = {
 			is_planet_class = pc_city
 			is_planet_class = pc_hive
 			is_planet_class = pc_machine
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_pre_sapient = yes
 			}
 		}
@@ -1008,12 +1008,12 @@ decision_summon_devils = {
 	resources = {
 		category = decisions
 		cost = {
-			astral_threads = 500
+			astral_threads = 1000
 		}
 	}
 
 	effect = {
-		custom_tooltip = demon_refugees_tooltip
+		custom_tooltip = small_demon_refugees_tooltip
 		hidden_effect = {
 			if = {
 				limit = {
@@ -1042,11 +1042,9 @@ decision_summon_devils = {
 					save_global_event_target_as = demon_species
 				}
 			}
-			while = {
-				count = 4
-				create_pop = {
-					species = event_target:demon_species
-				}
+			create_pop_group = {
+				species = event_target:demon_species
+				size = 666
 			}
 		}
 	}
@@ -1103,7 +1101,7 @@ decision_summon_devils_large = {
 	resources = {
 		category = decisions
 		cost = {
-			astral_threads = 1000
+			astral_threads = 6000
 		}
 	}
 
@@ -1137,539 +1135,10 @@ decision_summon_devils_large = {
 					save_global_event_target_as = demon_species
 				}
 			}
-			while = {
-				count = 10
-				create_pop = {
-					species = event_target:demon_species
-				}
+			create_pop_group = {
+				species = event_target:demon_species
+				size = 6666
 			}
-		}
-	}
-
-	ai_weight = {
-		weight = 0
-	}
-}
-
-decision_summon_spirit = {
-	owned_planets_only = yes
-	sound = event_psionic_01
-	icon = decision_wormhole
-
-	enactment_time = 180
-
-	potential = {
-		owner = {
-			any_owned_leader = {
-				has_trait = thl_leader_trait_death
-			}
-		}
-	}
-
-	allow = {
-		OR = {
-			AND = {
-				exists = owner
-				owner = {
-					any_owned_leader = {
-						has_trait = thl_leader_trait_death
-						is_councilor = yes
-					}
-				}
-			}
-			AND = {
-				exists = leader
-				leader = {
-					has_trait = thl_leader_trait_death
-				}
-			}
-			sector = {
-				sector_capital = {
-					exists = leader
-					leader = {
-						has_trait = thl_leader_trait_death
-					}
-				}
-			}
-		}
-	}
-
-
-	resources = {
-		category = decisions
-		cost = {
-			unity = 5000
-		}
-	}
-
-	effect = {
-		custom_tooltip = spirit_refugees_tooltip
-		hidden_effect = {
-			create_species = {
-				name = random
-				class = random_non_machine
-				portrait = random
-				traits = random
-				homeworld = root
-			}
-			modify_species = {
-				species = last_created_species
-				add_trait = trait_thl_spirit
-			}
-			if = {
-				limit = {
-					owner = {
-						is_hive_empire = yes
-					}
-				}
-				modify_species = {
-					species = last_created_species
-					add_trait = trait_hive_mind
-				}
-			}
-			while = {
-				count = 2
-				create_pop = {
-					species = last_created_species
-				}
-			}
-			create_species = {
-				name = random
-				class = random_non_machine
-				portrait = random
-				traits = random
-				homeworld = root
-			}
-			modify_species = {
-				species = last_created_species
-				add_trait = trait_thl_spirit
-			}
-			if = {
-				limit = {
-					owner = {
-						is_hive_empire = yes
-					}
-				}
-				modify_species = {
-					species = last_created_species
-					add_trait = trait_hive_mind
-				}
-			}
-			while = {
-				count = 2
-				create_pop = {
-					species = last_created_species
-				}
-			}
-			create_species = {
-				name = random
-				class = random_non_machine
-				portrait = random
-				traits = random
-				homeworld = root
-			}
-			modify_species = {
-				species = last_created_species
-				add_trait = trait_thl_spirit
-			}
-			if = {
-				limit = {
-					owner = {
-						is_hive_empire = yes
-					}
-				}
-				modify_species = {
-					species = last_created_species
-					add_trait = trait_hive_mind
-				}
-			}
-			while = {
-				count = 2
-				create_pop = {
-					species = last_created_species
-				}
-			}
-		}
-	}
-
-	ai_weight = {
-		weight = 0
-	}
-}
-
-decision_summon_spirit_large = {
-	owned_planets_only = yes
-	sound = event_psionic_01
-	icon = decision_wormhole
-
-	enactment_time = 360
-
-	potential = {
-		owner = {
-			any_owned_leader = {
-				has_trait = thl_leader_trait_death
-			}
-		}
-	}
-
-	allow = {
-		OR = {
-			AND = {
-				exists = owner
-				owner = {
-					any_owned_leader = {
-						has_trait = thl_leader_trait_death
-						is_councilor = yes
-					}
-				}
-			}
-			AND = {
-				exists = leader
-				leader = {
-					has_trait = thl_leader_trait_death
-				}
-			}
-			sector = {
-				sector_capital = {
-					exists = leader
-					leader = {
-						has_trait = thl_leader_trait_death
-					}
-				}
-			}
-		}
-	}
-
-
-	resources = {
-		category = decisions
-		cost = {
-			unity = 10000
-		}
-	}
-
-	effect = {
-		custom_tooltip = large_spirit_refugees_tooltip
-		hidden_effect = {
-			create_species = {
-				name = random
-				class = random_non_machine
-				portrait = random
-				traits = random
-				homeworld = root
-			}
-			modify_species = {
-				species = last_created_species
-				add_trait = trait_thl_spirit
-			}
-			if = {
-				limit = {
-					owner = {
-						is_hive_empire = yes
-					}
-				}
-				modify_species = {
-					species = last_created_species
-					add_trait = trait_hive_mind
-				}
-			}
-			while = {
-				count = 4
-				create_pop = {
-					species = last_created_species
-				}
-			}
-			create_species = {
-				name = random
-				class = random_non_machine
-				portrait = random
-				traits = random
-				homeworld = root
-			}
-			modify_species = {
-				species = last_created_species
-				add_trait = trait_thl_spirit
-			}
-			if = {
-				limit = {
-					owner = {
-						is_hive_empire = yes
-					}
-				}
-				modify_species = {
-					species = last_created_species
-					add_trait = trait_hive_mind
-				}
-			}
-			while = {
-				count = 4
-				create_pop = {
-					species = last_created_species
-				}
-			}
-			create_species = {
-				name = random
-				class = random_non_machine
-				portrait = random
-				traits = random
-				homeworld = root
-			}
-			modify_species = {
-				species = last_created_species
-				add_trait = trait_thl_spirit
-			}
-			if = {
-				limit = {
-					owner = {
-						is_hive_empire = yes
-					}
-				}
-				modify_species = {
-					species = last_created_species
-					add_trait = trait_hive_mind
-				}
-			}
-			while = {
-				count = 4
-				create_pop = {
-					species = last_created_species
-				}
-			}
-			create_species = {
-				name = random
-				class = random_non_machine
-				portrait = random
-				traits = random
-				homeworld = root
-			}
-			modify_species = {
-				species = last_created_species
-				add_trait = trait_thl_spirit
-			}
-			if = {
-				limit = {
-					owner = {
-						is_hive_empire = yes
-					}
-				}
-				modify_species = {
-					species = last_created_species
-					add_trait = trait_hive_mind
-				}
-			}
-			while = {
-				count = 4
-				create_pop = {
-					species = last_created_species
-				}
-			}
-		}
-	}
-
-	ai_weight = {
-		weight = 0
-	}
-}
-
-decision_trans_spirit = {
-	owned_planets_only = yes
-	sound = event_psionic_01
-	icon = decision_psi_inoculate_pops
-
-	enactment_time = 180
-
-	potential = {
-		owner = {
-			any_owned_leader = {
-				has_trait = thl_leader_trait_death
-			}
-		}
-	}
-
-	allow = {
-		OR = {
-			AND = {
-				exists = owner
-				owner = {
-					any_owned_leader = {
-						has_trait = thl_leader_trait_death
-						is_councilor = yes
-					}
-				}
-			}
-			AND = {
-				exists = leader
-				leader = {
-					has_trait = thl_leader_trait_death
-				}
-			}
-			sector = {
-				sector_capital = {
-					exists = leader
-					leader = {
-						has_trait = thl_leader_trait_death
-					}
-				}
-			}
-		}
-		any_owned_pop = {
-			NOT = {
-				has_trait = trait_thl_spirit
-			}
-			NOR = {
-				is_organic_species = no
-				has_trait = trait_hive_mind
-			}
-		}
-	}
-
-
-	resources = {
-		category = decisions
-		cost = {
-			unity = 3000
-		}
-	}
-
-	effect = {
-		custom_tooltip = decision_trans_spirit_tooltip
-		hidden_effect = {
-			random_list = {
-				1 = {
-					while = {
-						count = 3
-						random_owned_pop = {
-							limit = {
-								NOT = {
-									has_trait = trait_thl_spirit
-								}
-								NOR = {
-									is_organic_species = no
-									has_trait = trait_hive_mind
-								}
-							}
-							modify_species = {
-								species = this
-								add_trait = trait_thl_spirit
-								add_traits_at_start_of_list = yes
-							}
-						}
-					}
-				}
-				1 = {
-					while = {
-						count = 6
-						random_owned_pop = {
-							limit = {
-								NOT = {
-									has_trait = trait_thl_spirit
-								}
-								NOR = {
-									is_organic_species = no
-									has_trait = trait_hive_mind
-								}
-							}
-							modify_species = {
-								species = this
-								add_trait = trait_thl_spirit
-								add_traits_at_start_of_list = yes
-							}
-						}
-					}
-				}
-				1 = {
-					while = {
-						count = 12
-						random_owned_pop = {
-							limit = {
-								NOT = {
-									has_trait = trait_thl_spirit
-								}
-								NOR = {
-									is_organic_species = no
-									has_trait = trait_hive_mind
-								}
-							}
-							modify_species = {
-								species = this
-								add_trait = trait_thl_spirit
-								add_traits_at_start_of_list = yes
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	ai_weight = {
-		weight = 0
-	}
-}
-
-decision_assimilate_spirit = {
-	owned_planets_only = yes
-	sound = event_psionic_01
-	icon = decision_psi_inoculate_pops
-
-	enactment_time = 300
-
-	potential = {
-		owner = {
-			any_owned_leader = {
-				has_trait = thl_leader_trait_death
-			}
-		}
-	}
-
-	allow = {
-		OR = {
-			AND = {
-				exists = owner
-				owner = {
-					any_owned_leader = {
-						has_trait = thl_leader_trait_death
-						is_councilor = yes
-					}
-				}
-			}
-			AND = {
-				exists = leader
-				leader = {
-					has_trait = thl_leader_trait_death
-				}
-			}
-			sector = {
-				sector_capital = {
-					exists = leader
-					leader = {
-						has_trait = thl_leader_trait_death
-					}
-				}
-			}
-		}
-		any_owned_pop = {
-			NOT = {
-				has_trait = trait_thl_spirit
-			}
-		}
-		NOT = {
-			has_modifier = assimilate_spirit
-		}
-	}
-
-
-	resources = {
-		category = decisions
-		cost = {
-			unity = 6000
-		}
-	}
-
-	effect = {
-		add_modifier = {
-			modifier = assimilate_spirit
-			days = -1
 		}
 	}
 
@@ -1727,6 +1196,276 @@ decision_sakura_tree = {
 
 	ai_weight = {
 		weight = 0
+	}
+}
+
+decision_summon_spirit = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 180
+
+	potential = {
+		owner = {
+			has_country_flag = door_of_nether_avaliable
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_death
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_death
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_death
+					}
+				}
+			}
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			sr_zro = 100
+		}
+	}
+
+	effect = {
+		custom_tooltip = small_demon_refugees_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:ghost_species
+					}
+				}
+				create_species = {
+					name = "NAME_Thl_Ghost"
+					plural = "NAME_Thl_Ghost_pl"
+					class = MAM
+					namelist = random_class
+					portrait = "ghost"
+					traits = {
+						trait = "trait_pc_nether_preference"
+						trait = "trait_thl_spirit"
+						trait = "trait_psionic"
+						trait = "trait_weak"
+						trait = "trait_traditional"
+						trait = "trait_charismatic"
+					}
+				}
+				last_created_species = {
+					save_global_event_target_as = ghost_species
+				}
+			}
+			create_pop_group = {
+				species = event_target:ghost_species
+				size = 1000
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_summon_spirit_large = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 300
+
+	potential = {
+		owner = {
+			has_country_flag = door_of_nether_avaliable
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_death
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_death
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_death
+					}
+				}
+			}
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			sr_zro = 400
+		}
+	}
+
+	effect = {
+		custom_tooltip = large_spirit_refugees_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:ghost_species
+					}
+				}
+				create_species = {
+					name = "NAME_Thl_Ghost"
+					plural = "NAME_Thl_Ghost_pl"
+					class = MAM
+					namelist = random_class
+					portrait = "ghost"
+					traits = {
+						trait = "trait_pc_nether_preference"
+						trait = "trait_thl_spirit"
+						trait = "trait_psionic"
+						trait = "trait_weak"
+						trait = "trait_traditional"
+						trait = "trait_charismatic"
+					}
+				}
+				last_created_species = {
+					save_global_event_target_as = ghost_species
+				}
+			}
+			create_pop_group = {
+				species = event_target:ghost_species
+				size = 4444
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_transplant_sakura_tree = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = sakura_tree
+
+	enactment_time = 180
+
+	resources = {
+		category = decisions
+		cost = {
+			thl_spirit = 100
+		}
+	}
+
+	potential = {
+		owner = {
+			has_country_flag = sakura_tree_branch_avaliable
+		}
+		NOR = {
+			has_deposit = sakura_tree
+			has_deposit = sakura_tree_1
+			has_deposit = sakura_tree_3
+			has_deposit = sakura_tree_5
+			has_deposit = sakura_tree_8
+			has_deposit = sakura_tree_branch
+		}
+	}
+
+	allow = {
+		OR = {
+			is_cold = yes
+			owner = {
+				has_country_flag = door_of_nether_avaliable
+			}
+		}
+	}
+
+	effect = {
+		add_deposit = sakura_tree_branch
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+decision_nether_world = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = sakura_tree
+
+	enactment_time = 3600
+
+	resources = {
+		category = decisions
+		cost = {
+			thl_spirit = 1000
+		}
+	}
+
+	potential = {
+		owner = {
+			has_country_flag = nether_world_avaliable
+		}
+	}
+
+	allow = {
+		has_deposit = sakura_tree_branch
+	}
+
+	effect = {
+		change_pc = pc_nether
+		custom_tooltip = decision_nether_world_tooltip
+		hidden_effect = {
+			every_owned_pop_group = {
+				limit = {
+					is_being_purged = no
+					species = {
+						is_robotic = no
+						is_livestock = no
+					}
+				}
+				change_species = event_target:ghost_species
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
 	}
 }
 
@@ -3080,7 +2819,7 @@ decision_rabbit_hole = {
 	}
 
 	allow = {
-		any_owned_pop = {
+		any_owned_pop_group = {
 			has_trait = trait_thl_rabbit
 		}
 		custom_tooltip = {

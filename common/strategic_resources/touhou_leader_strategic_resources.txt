@@ -15,3 +15,17 @@ thl_bomb = {
 		weight = 1
 	}
 }
+
+thl_spirit = {
+	tradable = no
+	category = other
+	max = 15000
+
+	visibility_prerequisite = { always = yes }
+
+	culling_conversion_value = 1
+
+	ai_weight = {
+		weight = 1
+	}
+}

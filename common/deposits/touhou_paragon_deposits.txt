@@ -15,8 +15,9 @@ d_stick_of_repentance = {
 
 	triggered_planet_modifier = {
 		potential = {
-			any_owned_pop = {
-				has_job = enforcer
+			num_assigned_jobs = {
+				job = enforcer
+				value >= 1
 			}
 		}
 		planet_stability_add = 4
@@ -35,11 +36,11 @@ d_hakurei_shrine = {
 	potential = { always = no }
 
 	planet_modifier = {
-		job_hakurei_miko_add = 2
+		job_hakurei_miko_add = 200
 		planet_jobs_energy_produces_mult = 0.1
 		planet_jobs_unity_produces_mult = 0.1
 		trade_value_mult = 0.1
-		pop_defense_armies_add = 1
+		#pop_defense_armies_add = 1
 	}
 }
 
@@ -52,12 +53,12 @@ d_hakurei_shrine_large = {
 	potential = { always = no }
 
 	planet_modifier = {
-		job_hakurei_miko_add = 4
+		job_hakurei_miko_add = 400
 		planet_jobs_energy_produces_mult = 0.25
 		planet_jobs_unity_produces_mult = 0.25
 		trade_value_mult = 0.25
 		planet_immigration_pull_add = 50
-		pop_defense_armies_add = 1
+		#pop_defense_armies_add = 1
 	}
 }
 
@@ -70,13 +71,13 @@ d_hakurei_shrine_imperial = {
 	potential = { always = no }
 
 	planet_modifier = {
-		job_hakurei_miko_add = 6
+		job_hakurei_miko_add = 600
 		planet_jobs_energy_produces_mult = 0.5
 		planet_jobs_unity_produces_mult = 0.5
 		trade_value_mult = 0.5
 		planet_immigration_pull_add = 100
 		pop_happiness = 0.1
-		pop_defense_armies_add = 1
+		#pop_defense_armies_add = 1
 	}
 
 	country_modifier = {
@@ -96,14 +97,14 @@ d_hakurei_shrine_psionic = {
 	potential = { always = no }
 
 	triggered_planet_modifier = {
-		job_telepath_add = 3
-		job_hakurei_miko_add = 3
+		job_telepath_add = 300
+		job_hakurei_miko_add = 300
 		planet_jobs_physics_research_produces_mult = 0.25
 		planet_jobs_society_research_produces_mult = 0.25
 		planet_jobs_engineering_research_produces_mult = 0.25
 		planet_jobs_unity_produces_mult = 0.25
 		trade_value_mult = 0.15
-		pop_defense_armies_add = 1
+		#pop_defense_armies_add = 1
 	}
 
 	country_modifier = {
@@ -118,6 +119,19 @@ sakura_tree = {
 	potential = { always = no }
 }
 
+sakura_tree_branch = {
+	is_for_colonizable = yes
+	icon = "d_sakura_tree"
+	triggered_planet_modifier = {
+		planet_spirit_jobs_produces_mult = 0.1
+		spirit_empire_size_mult = -0.1
+		spirit_amenities_usage_mult = -0.1
+		planet_pop_assembly_organic_add = 2
+	}
+
+	potential = { always = no }
+}
+
 sakura_tree_1 = {
 	is_for_colonizable = yes
 	icon = "d_sakura_tree"
@@ -128,7 +142,7 @@ sakura_tree_1 = {
 		planet_spirit_jobs_produces_mult = 0.05
 		spirit_empire_size_mult = -0.05
 		spirit_amenities_usage_mult = -0.05
-		death_pop_generation_chance = 0.1
+		planet_pop_assembly_organic_add = 1
 	}
 }
 
@@ -142,7 +156,7 @@ sakura_tree_3 = {
 		planet_spirit_jobs_produces_mult = 0.15
 		spirit_empire_size_mult = -0.15
 		spirit_amenities_usage_mult = -0.15
-		death_pop_generation_chance = 0.3
+		planet_pop_assembly_organic_add = 3
 	}
 }
 
@@ -156,7 +170,7 @@ sakura_tree_5 = {
 		planet_spirit_jobs_produces_mult = 0.25
 		spirit_empire_size_mult = -0.25
 		spirit_amenities_usage_mult = -0.25
-		death_pop_generation_chance = 0.5
+		planet_pop_assembly_organic_add = 5
 	}
 }
 
@@ -170,7 +184,7 @@ sakura_tree_8 = {
 		planet_spirit_jobs_produces_mult = 0.4
 		spirit_empire_size_mult = -0.4
 		spirit_amenities_usage_mult = -0.4
-		death_pop_generation_chance = 0.8
+		planet_pop_assembly_organic_add = 8
 	}
 }
 
@@ -221,7 +235,7 @@ d_maple_forest = {
 
 	planet_modifier = {
 		planet_max_districts_add = -1
-		job_maple_sugar_harvester_add = 2
+		job_maple_sugar_harvester_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -296,7 +310,7 @@ d_hifuu_habitat_research = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_add = 2
+			job_researcher_add = 200
 		}
 	}
 
@@ -306,7 +320,7 @@ d_hifuu_habitat_research = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_add = 2
+			job_brain_drone_add = 200
 		}
 	}
 
@@ -316,7 +330,7 @@ d_hifuu_habitat_research = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculator_add = 2
+			job_calculator_add = 200
 		}
 	}
 }

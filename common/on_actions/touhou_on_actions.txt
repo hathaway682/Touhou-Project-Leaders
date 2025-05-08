@@ -51,7 +51,6 @@ on_monthly_pulse_country = {
 	events = {
 		touhou_paragon_effect.101 #宴会
 		touhou_paragon_effect.102 #宴会
-		touhou_paragon_effect.800
 		touhou_paragon.42201
 		touhou_paragon.42202
 		touhou_paragon_mission.40301
@@ -252,8 +251,8 @@ on_pop_abducted = {
 on_pop_assembled = {
 	events = {
 		touhou_paragon_effect.35 #更大，更大，更大！
-		touhou_paragon_effect.1000
-		touhou_paragon_effect.1001
+		# touhou_paragon_effect.1000
+		# touhou_paragon_effect.1001
 	}
 }
 
@@ -275,25 +274,25 @@ on_five_year_pulse_country = {
 	}
 }
 
-on_pop_purged = {
-	events = {
-		touhou_paragon_effect.801
-	}
-}
+# on_pop_purged = {
+# 	events = {
+# 		touhou_paragon_effect.801
+# 	}
+# }
+#
+# on_pop_declined = {
+# 	events = {
+# 		touhou_paragon_effect.801
+# 	}
+# }
 
-on_pop_declined = {
-	events = {
-		touhou_paragon_effect.801
-	}
-}
 
-
-on_pop_bombed_to_death = {
-	events = {
-		touhou_paragon_effect.802
-		touhou_paragon_effect.1102
-	}
-}
+#on_pop_bombed_to_death = {
+#events = {
+		#touhou_paragon_effect.802
+		#touhou_paragon_effect.1102
+#}
+#}
 
 # This = Fleet ( science vessel )
 # From = Archaeological Site

@@ -1,0 +1,99 @@
+zone_garden = {
+	icon = GFX_zone_garden
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		if = {
+			limit = {
+				exists = owner
+				owner = { is_anglers_empire = yes }
+			}
+			is_wet = no
+		}
+		else = {
+			exists = owner
+			owner = { is_wilderness_empire = no }
+		}
+	}
+
+	unlock = { # planet scope
+		if = {
+			limit = {
+				exists = owner
+				owner = { is_anglers_empire = yes }
+			}
+			is_wet = no
+		}
+		else = {
+			exists = owner
+			owner = { is_wilderness_empire = no }
+		}
+	}
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	inline_script = {
+		script = jobs/zone_growers_add
+		AMOUNT = @scaling_district_1_job
+	}
+
+	included_building_sets = {
+		farming
+		hydroponics
+		automation
+		fallen_empire_farming
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_food_triggered_desc
+	}
+
+	convert_to = {
+		zone_rw_garden
+	}
+}
+
+zone_rw_garden = {
+	icon = GFX_zone_garden
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		always = yes
+	}
+
+	unlock = { # planet scope
+		always = yes
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	included_building_sets = {
+		farming
+		hydroponics
+		automation
+		fallen_empire_farming
+	}
+
+	inline_script = {
+		script = jobs/zone_growers_add
+		AMOUNT = @scaling_district_1_job
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+}

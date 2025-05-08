@@ -19,7 +19,7 @@ subclass_commander_lord = {
 		}
 		planet_jobs_ruler_produces_mult = 0.02
 		planet_jobs_specialist_produces_mult = 0.02
-		multiplier = trigger:has_skill
+		multiplier = trigger:has_base_skill
 	}
 	triggered_sector_modifier = {
 		potential = {
@@ -27,7 +27,7 @@ subclass_commander_lord = {
 		}
 		planet_jobs_ruler_produces_mult = 0.01
 		planet_jobs_specialist_produces_mult = 0.01
-		multiplier = trigger:has_skill
+		multiplier = trigger:has_base_skill
 	}
 	ai_weight = {
 		modifier = {
@@ -63,7 +63,7 @@ subclass_commander_servant = {
 		}
 		planet_jobs_ruler_produces_mult = 0.04
 		planet_jobs_specialist_produces_mult = 0.04
-		multiplier = trigger:has_skill
+		multiplier = trigger:has_base_skill
 	}
 	triggered_sector_modifier = {
 		potential = {
@@ -71,7 +71,7 @@ subclass_commander_servant = {
 		}
 		planet_jobs_ruler_produces_mult = 0.02
 		planet_jobs_specialist_produces_mult = 0.02
-		multiplier = trigger:has_skill
+		multiplier = trigger:has_base_skill
 	}
 	ai_weight = {
 		modifier = {
@@ -112,7 +112,7 @@ subclass_commander_miko = {
 		}
 		planet_jobs_ruler_produces_mult = 0.02
 		planet_jobs_specialist_produces_mult = 0.02
-		multiplier = trigger:has_skill
+		multiplier = trigger:has_base_skill
 	}
 	triggered_sector_modifier = {
 		potential = {
@@ -120,7 +120,7 @@ subclass_commander_miko = {
 		}
 		planet_jobs_ruler_produces_mult = 0.01
 		planet_jobs_specialist_produces_mult = 0.01
-		multiplier = trigger:has_skill
+		multiplier = trigger:has_base_skill
 	}
 
 	ai_weight = {
@@ -156,7 +156,7 @@ thl_leader_trait_earthquake = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	planet_modifier = {
 		planet_structures_cost_mult = -0.20
@@ -199,6 +199,7 @@ thl_leader_trait_crimson_sword = {
 
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
 		weight = 0
 	}
@@ -222,8 +223,9 @@ thl_leader_trait_crimson_sword_2 = {
 		army_morale = 0.5
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -245,8 +247,9 @@ thl_leader_trait_crimson_sword_3 = {
 		army_morale = 0.75
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -263,7 +266,7 @@ thl_leader_trait_density = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	planet_modifier = {
 		planet_stability_add = 10
@@ -332,12 +335,12 @@ thl_leader_trait_miracle = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_astral_threads_produces_add = 1
-		multiplier = trigger:has_skill
+		multiplier = trigger:has_base_skill
 	}
 	planet_modifier = {
 		pop_happiness = 0.20
@@ -453,7 +456,7 @@ thl_leader_trait_theurgist = {
 	}
 	triggered_modifier = {
 		potential = {
-			has_astral_planes_dlc = yes
+			#has_astral_planes_dlc = yes
 			is_ruler = no
 			leader_class = scientist
 		}
@@ -482,19 +485,20 @@ thl_leader_trait_theurgist = {
 		category_psionics_research_speed_mult = 0.10
 	}
 	planet_modifier = {
-		job_miko_add = 2
+		job_miko_add = 200
 		planet_priests_unity_produces_add = 1
 	}
 	sector_modifier = {
-		job_miko_add = 1
+		job_miko_add = 100
 		planet_priests_unity_produces_add = 0.5
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	leader_potential_add = {
 		has_trait = subclass_commander_miko
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -534,7 +538,7 @@ thl_leader_trait_theurgist_2 = {
 	}
 	triggered_modifier = {
 		potential = {
-			has_astral_planes_dlc = yes
+			#has_astral_planes_dlc = yes
 			is_ruler = no
 			leader_class = scientist
 		}
@@ -563,16 +567,17 @@ thl_leader_trait_theurgist_2 = {
 		category_psionics_research_speed_mult = 0.20
 	}
 	planet_modifier = {
-		job_miko_add = 4
+		job_miko_add = 400
 		planet_priests_unity_produces_add = 2
 	}
 	sector_modifier = {
-		job_miko_add = 2
+		job_miko_add = 200
 		planet_priests_unity_produces_add = 1
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -612,7 +617,7 @@ thl_leader_trait_theurgist_3 = {
 	}
 	triggered_modifier = {
 		potential = {
-			has_astral_planes_dlc = yes
+			#has_astral_planes_dlc = yes
 			is_ruler = no
 			leader_class = scientist
 		}
@@ -641,16 +646,17 @@ thl_leader_trait_theurgist_3 = {
 		category_psionics_research_speed_mult = 0.30
 	}
 	planet_modifier = {
-		job_miko_add = 6
+		job_miko_add = 600
 		planet_priests_unity_produces_add = 3
 	}
 	sector_modifier = {
-		job_miko_add = 3
+		job_miko_add = 300
 		planet_priests_unity_produces_add = 1.5
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -685,12 +691,13 @@ thl_leader_trait_snake_bless = {
 		planet_jobs_energy_produces_mult = 0.05
 		planet_jobs_food_produces_mult = 0.05
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	leader_potential_add = {
 		has_trait = thl_leader_trait_miracle
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -726,9 +733,10 @@ thl_leader_trait_snake_bless_2 = {
 		planet_jobs_energy_produces_mult = 0.1
 		planet_jobs_food_produces_mult = 0.1
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -764,9 +772,10 @@ thl_leader_trait_snake_bless_3 = {
 		planet_jobs_energy_produces_mult = 0.15
 		planet_jobs_food_produces_mult = 0.15
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -801,12 +810,13 @@ thl_leader_trait_frog_bless = {
 		planet_jobs_minerals_produces_mult = 0.05
 		planet_jobs_food_produces_mult = 0.05
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	leader_potential_add = {
 		has_trait = thl_leader_trait_miracle
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -842,9 +852,10 @@ thl_leader_trait_frog_bless_2 = {
 		planet_jobs_minerals_produces_mult = 0.1
 		planet_jobs_food_produces_mult = 0.1
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -880,6 +891,7 @@ thl_leader_trait_frog_bless_3 = {
 		planet_jobs_minerals_produces_mult = 0.15
 		planet_jobs_food_produces_mult = 0.15
 	}
+	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	selectable_weight = {
 		weight = 0
@@ -899,7 +911,7 @@ thl_leader_trait_ice = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	fleet_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = 0.3
@@ -930,7 +942,7 @@ thl_leader_trait_kongfu = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	army_modifier = {
 		army_damage_taken_mult = -0.5
@@ -966,7 +978,7 @@ thl_leader_trait_fly = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	fleet_modifier = {
 		storm_ship_hull_breaker_mult = -1
@@ -1081,7 +1093,7 @@ thl_leader_exorcism_roud = {
 		script = trait/icon
 		CLASS = commander
 		ICON = GFX_leader_trait_legendary_militarist_bad
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = no
 		TIER = 1
 	}
@@ -1089,6 +1101,7 @@ thl_leader_exorcism_roud = {
 		ship_weapon_range_mult = 0.15
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
 		weight = 0
 	}
@@ -1100,7 +1113,7 @@ thl_leader_exorcism_roud_2 = {
 		script = trait/icon
 		CLASS = commander
 		ICON = GFX_leader_trait_legendary_militarist_bad
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = no
 		TIER = 2
 	}
@@ -1108,8 +1121,9 @@ thl_leader_exorcism_roud_2 = {
 		ship_weapon_range_mult = 0.3
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -1119,7 +1133,7 @@ thl_leader_exorcism_roud_3 = {
 		script = trait/icon
 		CLASS = commander
 		ICON = GFX_leader_trait_legendary_militarist_bad
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = no
 		TIER = 3
 	}
@@ -1128,8 +1142,9 @@ thl_leader_exorcism_roud_3 = {
 		ship_evasion_mult = -0.05
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -1146,7 +1161,7 @@ thl_leader_trait_magic = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	fleet_modifier = {
 		weapon_type_energy_weapon_damage_mult = 0.5
@@ -1233,7 +1248,7 @@ thl_leader_trait_iron_ass = {
 		script = trait/icon
 		CLASS = commander
 		ICON = GFX_leader_trait_unyielding
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = no
 		TIER = 1
 	}
@@ -1242,6 +1257,7 @@ thl_leader_trait_iron_ass = {
 		ship_armor_mult = 0.1
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
 		weight = 0
 	}
@@ -1255,7 +1271,7 @@ thl_leader_trait_iron_ass_2 = {
 		script = trait/icon
 		CLASS = commander
 		ICON = GFX_leader_trait_unyielding
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = no
 		TIER = 2
 	}
@@ -1264,8 +1280,9 @@ thl_leader_trait_iron_ass_2 = {
 		ship_armor_mult = 0.25
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -1277,7 +1294,7 @@ thl_leader_trait_iron_ass_3 = {
 		script = trait/icon
 		CLASS = commander
 		ICON = GFX_leader_trait_unyielding
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = no
 		TIER = 3
 	}
@@ -1286,8 +1303,9 @@ thl_leader_trait_iron_ass_3 = {
 		ship_armor_mult = 0.5
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -1337,7 +1355,7 @@ thl_leader_trait_magician = {
 	}
 	triggered_modifier = {
 		potential = {
-			has_astral_planes_dlc = yes
+			#has_astral_planes_dlc = yes
 			is_ruler = no
 			leader_class = scientist
 		}
@@ -1429,7 +1447,7 @@ thl_leader_trait_great_magician = {
 	}
 	triggered_modifier = {
 		potential = {
-			has_astral_planes_dlc = yes
+			#has_astral_planes_dlc = yes
 			is_ruler = no
 			leader_class = scientist
 		}
@@ -1485,7 +1503,7 @@ thl_leader_trait_wave_length = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	custom_tooltip_with_modifiers = thl_leader_trait_wave_length_effect
 	fleet_modifier = {
@@ -1614,7 +1632,7 @@ thl_leader_trait_kendo = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	custom_tooltip_with_modifiers = thl_leader_trait_kendo_effect
 	self_modifier = {
@@ -1679,7 +1697,7 @@ thl_leader_trait_gardener = {
 		potential = {
 			trait_is_gestalt_check = no
 		}
-		job_death_chronicler_add = 4
+		job_death_chronicler_add = 400
 		planet_jobs_unity_produces_mult = 0.3
 		planet_jobs_food_produces_mult = 0.1
 	}
@@ -1687,7 +1705,7 @@ thl_leader_trait_gardener = {
 		potential = {
 			trait_is_gestalt_check = no
 		}
-		job_death_chronicler_add = 2
+		job_death_chronicler_add = 200
 		planet_jobs_unity_produces_mult = 0.15
 		planet_jobs_food_produces_mult = 0.05
 	}
@@ -1695,7 +1713,7 @@ thl_leader_trait_gardener = {
 		potential = {
 			trait_is_gestalt_check = yes
 		}
-		job_chronicle_drone_add = 4
+		job_chronicle_drone_add = 400
 		planet_jobs_unity_produces_mult = 0.3
 		planet_jobs_food_produces_mult = 0.1
 	}
@@ -1703,7 +1721,7 @@ thl_leader_trait_gardener = {
 		potential = {
 			trait_is_gestalt_check = yes
 		}
-		job_chronicle_drone_add = 2
+		job_chronicle_drone_add = 200
 		planet_jobs_unity_produces_mult = 0.15
 		planet_jobs_food_produces_mult = 0.05
 	}
@@ -1726,7 +1744,7 @@ thl_leader_trait_time = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	custom_tooltip_with_modifiers = thl_leader_trait_time_effect
 	self_modifier = {
@@ -1794,7 +1812,7 @@ thl_leader_trait_year_round = {
 		AMOUNT = 3
 	}
 	planet_modifier = {
-		planet_amenities_add = 20
+		planet_amenities_add = 2000
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
@@ -1888,7 +1906,7 @@ thl_leader_trait_century_of_science = {
 		leader_scientists_physics_research_produces_add = 3
 		leader_scientists_society_research_produces_add = 3
 		leader_scientists_engineering_research_produces_add = 3
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist }
@@ -1948,7 +1966,7 @@ thl_leader_trait_relativistic_psychiatry_2 = {
 	leader_trait_type = veteran
 	leader_class = { scientist }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -1976,7 +1994,7 @@ thl_leader_trait_relativistic_psychiatry_3 = {
 	leader_trait_type = veteran
 	leader_class = { scientist }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -2031,7 +2049,7 @@ thl_leader_trait_super_unified_physics_2 = {
 	leader_trait_type = veteran
 	leader_class = { scientist }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -2059,7 +2077,7 @@ thl_leader_trait_super_unified_physics_3 = {
 	leader_trait_type = veteran
 	leader_class = { scientist }
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -2076,7 +2094,7 @@ thl_leader_trait_subconscious = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	fleet_modifier = {
 		ship_evasion_add = 514
@@ -2105,7 +2123,7 @@ thl_leader_trait_mind_reader = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_officials_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	councilor_modifier = {
 		planet_stability_add = 10
@@ -2216,7 +2234,7 @@ thl_leader_trait_wind = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_officials_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	leader_class = { official }
 	councilor_modifier = {
@@ -2301,7 +2319,7 @@ thl_leader_trait_trial = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_officials_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	custom_tooltip_with_modifiers = thl_leader_trait_trial_effect
 	councilor_modifier = {
@@ -2428,7 +2446,7 @@ thl_leader_trait_distance = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	leader_class = { commander }
 	fleet_modifier = {
@@ -2507,7 +2525,7 @@ thl_leader_trait_destiny_manipulation = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	councilor_modifier = {
 		country_ruler_influence_produces_add = 1
@@ -2732,7 +2750,7 @@ thl_leader_trait_elements = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_scientists_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -2741,7 +2759,7 @@ thl_leader_trait_elements = {
 		leader_scientists_volatile_motes_produces_add = 1
 		leader_scientists_exotic_gases_produces_add = 1
 		leader_scientists_rare_crystals_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	councilor_modifier = {
 		category_particles_research_speed_mult = 0.25
@@ -2774,13 +2792,13 @@ thl_leader_trait_knowledge = {
 	}
 	
 	planet_modifier = {
-		job_touhou_archivist_add = 4
+		job_touhou_archivist_add = 400
 		planet_jobs_specialist_produces_mult = 0.1
 		planet_researchers_produces_mult = 0.3
 		planet_researchers_upkeep_mult = -0.2
 	}
 	sector_modifier = {
-		job_touhou_archivist_add = 2
+		job_touhou_archivist_add = 200
 		planet_jobs_specialist_produces_mult = 0.05
 		planet_researchers_produces_mult = 0.15
 		planet_researchers_upkeep_mult = -0.1
@@ -2842,11 +2860,11 @@ thl_leader_trait_dolls = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_officials_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	planet_modifier = {
 		planet_pop_assembly_add = 5
-		doll_control_limit = 20
+		doll_control_limit = 2000
 		planet_doll_jobs_produces_mult = 0.25
 	}
 	sector_modifier = {
@@ -2898,18 +2916,20 @@ thl_leader_trait_death = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_officials_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	custom_tooltip_with_modifiers = thl_leader_trait_death_effect
 	planet_modifier = {
-		planet_spirit_jobs_produces_mult = 0.4
-		spirit_empire_size_mult = -0.5
-		spirit_amenities_usage_mult = -0.2
+		pop_category_civilians_thl_spirit_produces_add = 0.5
+		pop_category_workers_thl_spirit_produces_add = 0.5
+		pop_category_specialists_thl_spirit_produces_add = 0.5
+		pop_category_rulers_thl_spirit_produces_add = 0.5
 	}
 	sector_modifier = {
-		planet_spirit_jobs_produces_mult = 0.2
-		spirit_empire_size_mult = -0.25
-		spirit_amenities_usage_mult = -0.1
+		pop_category_civilians_thl_spirit_produces_add = 0.25
+		pop_category_workers_thl_spirit_produces_add = 0.25
+		pop_category_specialists_thl_spirit_produces_add = 0.25
+		pop_category_rulers_thl_spirit_produces_add = 0.25
 	}
 	on_gained_effect = {
 		change_background_job = ghost_lead
@@ -2951,7 +2971,9 @@ thl_leader_trait_sakura_1 = {
 	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
 		planet_spirit_jobs_produces_mult = 0.05
+		spirit_empire_size_mult = -0.05
 		spirit_amenities_usage_mult = -0.05
+		planet_pop_assembly_organic_add = 1
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
@@ -2973,7 +2995,9 @@ thl_leader_trait_sakura_3 = {
 	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
 		planet_spirit_jobs_produces_mult = 0.15
+		spirit_empire_size_mult = -0.15
 		spirit_amenities_usage_mult = -0.15
+		planet_pop_assembly_organic_add = 3
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
@@ -2995,7 +3019,9 @@ thl_leader_trait_sakura_5 = {
 	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
 		planet_spirit_jobs_produces_mult = 0.25
+		spirit_empire_size_mult = -0.25
 		spirit_amenities_usage_mult = -0.25
+		planet_pop_assembly_organic_add = 5
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
@@ -3016,7 +3042,9 @@ thl_leader_trait_sakura_8 = {
 	custom_tooltip_with_modifiers = thl_leader_trait_sakura_effect
 	planet_modifier = {
 		planet_spirit_jobs_produces_mult = 0.4
+		spirit_empire_size_mult = -0.4
 		spirit_amenities_usage_mult = -0.4
+		planet_pop_assembly_organic_add = 8
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
@@ -3038,7 +3066,7 @@ thl_leader_trait_dance = {
 		potential = {
 			trait_is_gestalt_check = no
 		}
-		job_death_chronicler_add = 2
+		job_death_chronicler_add = 200
 		planet_jobs_unity_produces_mult = 0.15
 		planet_spirit_jobs_unity_produces_mult = 0.25
 		pop_job_amenities_mult = 0.15
@@ -3048,7 +3076,7 @@ thl_leader_trait_dance = {
 		potential = {
 			trait_is_gestalt_check = yes
 		}
-		job_chronicle_drone_add = 2
+		job_chronicle_drone_add = 200
 		planet_jobs_unity_produces_mult = 0.15
 		planet_spirit_jobs_unity_produces_mult = 0.25
 		pop_job_amenities_mult = 0.15
@@ -3094,17 +3122,15 @@ thl_leader_trait_flower = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_officials_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	councilor_modifier = {
 		planet_jobs_food_produces_mult = 0.5
-		pop_job_amenities_mult = 0.15
-		pop_job_trade_mult = 0.15
-		deposit_blockers_natural_physics_research_produces_add = 4
-		deposit_blockers_natural_society_research_produces_add = 4
-		deposit_blockers_natural_engineering_research_produces_add = 4
+		pop_job_amenities_mult = 0.25
+		deposit_blockers_natural_physics_research_produces_add = 10
+		deposit_blockers_natural_society_research_produces_add = 10
+		deposit_blockers_natural_engineering_research_produces_add = 10
 		pop_environment_tolerance = 0.1
-		non_artificial_planet_jobs_produces_mult = 0.1
 	}
 	on_gained_effect = {
 		change_background_job = farmer
@@ -3131,15 +3157,16 @@ thl_leader_trait_incarnation_of_nature = {
 		terraform_speed_mult = 4
 		pop_amenities_usage_organic_mult = -0.5
 		biological_pop_happiness = 0.5
-		planet_jobs_organics_produces_mult = 0.3
-		planet_max_districts_add = -1
+		district_farming_max = 2
+		planet_non_artificial_max_districts_add = 2
 	}
 	sector_modifier = {
 		terraforming_cost_mult = -0.5
 		terraform_speed_mult = 2
 		pop_amenities_usage_organic_mult = -0.25
 		biological_pop_happiness = 0.25
-		planet_jobs_organics_produces_mult = 0.15
+		district_farming_max = 1
+		planet_non_artificial_max_districts_add = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -3155,7 +3182,7 @@ thl_leader_trait_incarnation_of_nature = {
 				is_ideal = yes
 			}
 		}
-		planet_jobs_organics_produces_mult = 0.2
+		planet_jobs_produces_mult = 0.1
 	}
 	leader_class = { official }
 	selectable_weight = {
@@ -3204,7 +3231,7 @@ thl_leader_trait_flower_commander = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commanders_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	fleet_modifier = {
 		weapon_type_energy_weapon_damage_mult = 1
@@ -3356,7 +3383,7 @@ thl_leader_trait_memory = {
 		}
 		leader_scientists_unity_produces_add = 10
 		leader_scientists_society_research_produces_add = 10
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -3364,7 +3391,7 @@ thl_leader_trait_memory = {
 		}
 		leader_scientists_society_research_produces_add = 10
 		leader_scientists_engineering_research_produces_add = 10
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -3372,7 +3399,7 @@ thl_leader_trait_memory = {
 		}
 		leader_scientists_physics_research_produces_add = 10
 		leader_scientists_engineering_research_produces_add = 10
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -3380,7 +3407,7 @@ thl_leader_trait_memory = {
 		}
 		leader_scientists_physics_research_produces_add = 10
 		leader_scientists_society_research_produces_add = 10
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	modifier = {
 		ship_anomaly_research_speed_mult = 0.15
@@ -3422,7 +3449,7 @@ thl_leader_trait_the_ninth_savage = {
 		planet_jobs_physics_research_produces_mult = 0.03
 		planet_jobs_society_research_produces_mult = 0.03
 		planet_jobs_engineering_research_produces_mult = 0.03
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	leader_class = { scientist }
 	selectable_weight = {
@@ -3504,7 +3531,7 @@ thl_leader_trait_longer_life = {
 	}
 	
 	self_modifier = {
-		leader_lifespan_add = 20
+		leader_lifespan_add = 50
 	}
 	leader_class = { commander scientist official }
 	selectable_weight = {
@@ -3612,7 +3639,7 @@ thl_leader_trait_corpse_travel = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_officials_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	councilor_modifier = {
 		country_resettlement_cost_mult = -1
@@ -3671,7 +3698,7 @@ thl_leader_trait_nuclear = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_commander_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	fleet_modifier = {
 		weapon_type_explosive_weapon_damage_mult = 1
@@ -3682,7 +3709,7 @@ thl_leader_trait_nuclear = {
 	}
 	triggered_self_modifier = {
 		potential = {
-			has_skill = 6
+			has_base_skill = 6
 		}
 		modifier = {
 			leader_commanders_energy_produces_add = 40
@@ -3690,7 +3717,7 @@ thl_leader_trait_nuclear = {
 	}
 	triggered_self_modifier = {
 		potential = {
-			has_skill = 7
+			has_base_skill = 7
 		}
 		modifier = {
 			leader_commanders_energy_produces_add = 90
@@ -3698,7 +3725,7 @@ thl_leader_trait_nuclear = {
 	}
 	triggered_self_modifier = {
 		potential = {
-			has_skill = 8
+			has_base_skill = 8
 		}
 		modifier = {
 			leader_commanders_energy_produces_add = 160
@@ -3706,7 +3733,7 @@ thl_leader_trait_nuclear = {
 	}
 	triggered_self_modifier = {
 		potential = {
-			has_skill = 9
+			has_base_skill = 9
 		}
 		modifier = {
 			leader_commanders_energy_produces_add = 250
@@ -3714,7 +3741,7 @@ thl_leader_trait_nuclear = {
 	}
 	triggered_self_modifier = {
 		potential = {
-			has_skill >= 10
+			has_base_skill >= 10
 		}
 		modifier = {
 			leader_commanders_energy_produces_add = 360
@@ -3928,7 +3955,7 @@ thl_leader_trait_water = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_scientists_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -3994,7 +4021,7 @@ thl_leader_trait_super_youkai_slug = {
 		weapon_type_strike_craft_speed_mult = 0.25
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 	leader_potential_add = {
 		has_trait = thl_leader_trait_water
 	}
@@ -4018,7 +4045,7 @@ thl_leader_trait_super_youkai_slug_2 = {
 		weapon_type_strike_craft_speed_mult = 0.5
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 	custom_tooltip_with_modifiers = thl_leader_trait_super_youkai_slug_effect_tier_2
 	on_gained_effect = {
 		owner = {
@@ -4048,7 +4075,7 @@ thl_leader_trait_super_youkai_slug_3 = {
 		weapon_type_strike_craft_speed_mult = 1
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 	custom_tooltip_with_modifiers = thl_leader_trait_super_youkai_slug_effect_tier_3
 	on_gained_effect = {
 		owner = {
@@ -4080,7 +4107,7 @@ thl_leader_trait_convenience_house = {
 		planet_traders_engineering_research_produces_add = 0.5
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 	leader_potential_add = {
 		has_trait = thl_leader_trait_water
 	}
@@ -4109,7 +4136,7 @@ thl_leader_trait_convenience_house_2 = {
 		planet_traders_engineering_research_produces_add = 1
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 }
 
 thl_leader_trait_convenience_house_3 = {
@@ -4135,7 +4162,7 @@ thl_leader_trait_convenience_house_3 = {
 		planet_traders_engineering_research_produces_add = 1.5
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 }
 
 thl_leader_trait_engineer_in_water = {
@@ -4160,7 +4187,7 @@ thl_leader_trait_engineer_in_water = {
 		planet_artisans_engineering_research_produces_add = 0.5
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 	leader_potential_add = {
 		has_trait = thl_leader_trait_water
 	}
@@ -4189,7 +4216,7 @@ thl_leader_trait_engineer_in_water_2 = {
 		planet_artisans_engineering_research_produces_add = 1
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 }
 
 thl_leader_trait_engineer_in_water_3 = {
@@ -4215,7 +4242,7 @@ thl_leader_trait_engineer_in_water_3 = {
 		planet_artisans_engineering_research_produces_add = 1.5
 	}
 	leader_class = { scientist }
-	selectable_weight = 1000
+	selectable_weight = 100000
 }
 
 thl_leader_trait_optical_camouflage = {
@@ -4361,7 +4388,7 @@ thl_leader_trait_fall = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_scientists_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	modifier = {
 		ship_archaeological_site_clues_add = 2
@@ -4373,8 +4400,8 @@ thl_leader_trait_fall = {
 		planet_jobs_upkeep_mult = -0.1
 	}
 	sector_modifier = {
-		deposit_blockers_natural_unity_produces_add = 4
-		deposit_blockers_natural_society_research_produces_add = 4
+		deposit_blockers_natural_unity_produces_add = 5
+		deposit_blockers_natural_society_research_produces_add = 5
 		planet_jobs_upkeep_mult = -0.05
 	}
 	on_gained_effect = {
@@ -4400,7 +4427,7 @@ leader_trait_harvest = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_officials_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	galcom_modifier = {
 		diplo_weight_pops_mult = 0.25
@@ -4441,7 +4468,7 @@ thl_leader_trait_jinx = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_scientists_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	councilor_modifier = {
 		negative_traits_country = 1
@@ -4470,7 +4497,7 @@ thl_leader_trait_song = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_scientists_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	fleet_modifier = {
 		ship_evasion_add = 10
@@ -4502,10 +4529,10 @@ thl_leader_trait_izakaya = {
 		TIER = 1
 	}
 	planet_modifier = {
-		job_izakaya_worker_add = 2
+		job_izakaya_worker_add = 200
 	}
 	sector_modifier = {
-		job_izakaya_worker_add = 1
+		job_izakaya_worker_add = 100
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
@@ -4529,10 +4556,10 @@ thl_leader_trait_izakaya_2 = {
 		TIER = 2
 	}
 	planet_modifier = {
-		job_izakaya_worker_add = 4
+		job_izakaya_worker_add = 400
 	}
 	sector_modifier = {
-		job_izakaya_worker_add = 2
+		job_izakaya_worker_add = 200
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
@@ -4540,7 +4567,7 @@ thl_leader_trait_izakaya_2 = {
 		has_trait = thl_leader_trait_song
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 	custom_tooltip_with_modifiers = thl_leader_trait_izakaya_tooltip
 }
@@ -4556,10 +4583,10 @@ thl_leader_trait_izakaya_3 = {
 		TIER = 3
 	}
 	planet_modifier = {
-		job_izakaya_worker_add = 6
+		job_izakaya_worker_add = 600
 	}
 	sector_modifier = {
-		job_izakaya_worker_add = 3
+		job_izakaya_worker_add = 300
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
@@ -4567,7 +4594,7 @@ thl_leader_trait_izakaya_3 = {
 		has_trait = thl_leader_trait_song
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 	custom_tooltip_with_modifiers = thl_leader_trait_izakaya_tooltip
 }
@@ -4627,7 +4654,7 @@ thl_leader_trait_youkai_punk_2 = {
 		has_trait = thl_leader_trait_song
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -4657,7 +4684,7 @@ thl_leader_trait_youkai_punk_3 = {
 		has_trait = thl_leader_trait_song
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -4717,7 +4744,7 @@ thl_leader_trait_luck = {
 	triggered_self_modifier = {
 		potential = { always = yes }
 		leader_scientists_thl_mana_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 
 	planet_modifier = {
@@ -4802,7 +4829,7 @@ thl_leader_trait_rabbit_leader_2 = {
 		has_trait = thl_leader_trait_luck
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 
@@ -4834,7 +4861,7 @@ thl_leader_trait_rabbit_leader_3 = {
 		has_trait = thl_leader_trait_luck
 	}
 	selectable_weight = {
-		weight = 1000
+		weight = 100000
 	}
 }
 

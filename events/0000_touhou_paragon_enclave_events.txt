@@ -229,7 +229,7 @@ country_event = {
         # Set costs based on population
         if = {
             limit = {
-                num_pops < 61
+                pop_amount <= 6000
             }
             set_variable = {
                 which = kappa_enclave_cost
@@ -238,8 +238,8 @@ country_event = {
         }
         else_if = {
             limit = {
-                num_pops > 60
-                num_pops < 121
+                pop_amount > 6000
+                pop_amount <= 12000
             }
             set_variable = {
                 which = kappa_enclave_cost
@@ -248,8 +248,8 @@ country_event = {
         }
         else_if = {
             limit = {
-                num_pops > 120
-                num_pops < 181
+                pop_amount > 12000
+                pop_amount <= 18000
             }
             set_variable = {
                 which = kappa_enclave_cost
@@ -258,8 +258,8 @@ country_event = {
         }
         else_if = {
             limit = {
-                num_pops > 180
-                num_pops < 241
+                pop_amount > 18000
+                pop_amount <= 24000
             }
             set_variable = {
                 which = kappa_enclave_cost
@@ -319,7 +319,7 @@ country_event = {
         capital_scope = {
             while = {
                 count = 3
-                create_pop = {
+                create_pop_group = {
                     species = event_target:kappa_enclave_species
                 }
             }
@@ -719,7 +719,7 @@ country_event = {
             mult = kappa_enclave_cost
         }
         capital_scope = {
-            create_pop = {
+            create_pop_group = {
                 species = event_target:kappa_enclave_robot_species
             }
         }
@@ -879,7 +879,7 @@ country_event = {
             mult = kappa_enclave_cost
         }
         capital_scope = {
-            create_pop = {
+            create_pop_group = {
                 species = event_target:kappa_enclave_robot_species
             }
             hidden_effect = {
@@ -1073,34 +1073,72 @@ country_event = {
                 has_communications = root
                 NOT = { is_same_value = root.from }
             }
-            country_event = { id = touhou_paragon_enclave.382 } # notification for others
+            country_event = { id = touhou_paragon_enclave.382 days = 1 } # notification for others
         }
 
         # find new location
-        random_playable_country = {
+        if = {
             limit = {
-                any_owned_planet = {
-                    OR = {
-                        is_planet_class = pc_ocean
-                        is_planet_class = pc_continental
-                        is_planet_class = pc_tropical
+                any_playable_country = {
+                    is_ai = no
+                    any_planet_within_border = {
+                        is_wet = yes
                     }
+                    is_homicidal = no
                 }
             }
-            random_owned_planet = {
+            random_playable_country = {
                 limit = {
-                    OR = {
-                        is_planet_class = pc_ocean
-                        is_planet_class = pc_continental
-                        is_planet_class = pc_tropical
+                    is_ai = no
+                    any_planet_within_border = {
+                        is_wet = yes
+                    }
+                    is_homicidal = no
+                }
+                random_planet_within_border = {
+                    limit = {
+                        is_wet = yes
+                    }
+                    save_event_target_as = kappa_enclave_new_system_planet
+                    solar_system = {
+                        save_global_event_target_as = kappa_enclave_new_system
                     }
                 }
-                save_event_target_as = kappa_enclave_new_system_planet
-                solar_system = {
-                    save_global_event_target_as = kappa_enclave_new_system
+                country_event = { id = touhou_paragon_enclave.383 days = 60 }
+            }
+        }
+        else_if = {
+            limit = {
+                any_playable_country = {
+                    is_ai = yes
+                    any_planet_within_border = {
+                        is_wet = yes
+                    }
+                    is_homicidal = no
                 }
             }
-            country_event = { id = touhou_paragon_enclave.383 days = 60 }
+            random_playable_country = {
+                limit = {
+                    is_ai = no
+                    any_planet_within_border = {
+                        is_wet = yes
+                    }
+                    is_homicidal = no
+                }
+                random_planet_within_border = {
+                    limit = {
+                        is_wet = yes
+                    }
+                    save_event_target_as = kappa_enclave_new_system_planet
+                    solar_system = {
+                        save_global_event_target_as = kappa_enclave_new_system
+                    }
+                }
+                country_event = { id = touhou_paragon_enclave.383 days = 60 }
+            }
+        }
+        else = {
+            set_global_flag = kappa_enclave_destoryed
         }
     }
 }
@@ -1144,7 +1182,20 @@ country_event = {
 country_event = {
     id = touhou_paragon_enclave.382
     title = leviathans.141
-    desc = touhou_paragon_enclave.382.desc
+    desc = {
+        trigger = {
+            NOT = {
+                has_global_flag = kappa_enclave_destoryed
+            }
+        }
+        text = touhou_paragon_enclave.382.desc.saved
+    }
+    desc = {
+        trigger = {
+            has_global_flag = kappa_enclave_destoryed
+        }
+        text = touhou_paragon_enclave.382.desc.destoryed
+    }
     picture = GFX_evt_space_debris
     location = event_target:old_kappa_enclave_system
     show_sound = event_ship_bridge
@@ -1214,35 +1265,100 @@ country_event = {
         response_text = touhou_paragon_enclave.383.b.reply
         hidden_effect = { # find other empire
             set_country_flag = kappa_reestablishment_rejected
-            random_playable_country = {
+            if = {
                 limit = {
-                    any_owned_planet = {
-                        OR = {
-                            is_planet_class = pc_ocean
-                            is_planet_class = pc_continental
-                            is_planet_class = pc_tropical
+                    any_playable_country = {
+                        is_ai = no
+                        any_planet_within_border = {
+                            is_wet = yes
+                        }
+                        is_homicidal = no
+                        NOT = {
+                            has_country_flag = kappa_reestablishment_rejected
                         }
                     }
-                    not = { has_country_flag = kappa_reestablishment_rejected }
                 }
-                random_owned_planet = {
+                random_playable_country = {
                     limit = {
-                        OR = {
-                            is_planet_class = pc_ocean
-                            is_planet_class = pc_continental
-                            is_planet_class = pc_tropical
+                        is_ai = no
+                        any_planet_within_border = {
+                            is_wet = yes
+                        }
+                        is_homicidal = no
+                        NOT = {
+                            has_country_flag = kappa_reestablishment_rejected
                         }
                     }
-                    save_event_target_as = kappa_enclave_new_system_planet
-                    solar_system = {
-                        save_global_event_target_as = kappa_enclave_new_system
+                    random_planet_within_border = {
+                        limit = {
+                            is_wet = yes
+                        }
+                        save_event_target_as = kappa_enclave_new_system_planet
+                        solar_system = {
+                            save_global_event_target_as = kappa_enclave_new_system
+                        }
+                    }
+                    country_event = { id = touhou_paragon_enclave.383 days = 60 }
+                }
+            }
+            else_if = {
+                limit = {
+                    any_playable_country = {
+                        is_ai = yes
+                        any_planet_within_border = {
+                            is_wet = yes
+                        }
+                        is_homicidal = no
+                        NOT = {
+                            has_country_flag = kappa_reestablishment_rejected
+                        }
                     }
                 }
-                country_event = { id = touhou_paragon_enclave.383 days = 60 }
+                random_playable_country = {
+                    limit = {
+                        is_ai = no
+                        any_planet_within_border = {
+                            is_wet = yes
+                        }
+                        is_homicidal = no
+                        NOT = {
+                            has_country_flag = kappa_reestablishment_rejected
+                        }
+                    }
+                    random_planet_within_border = {
+                        limit = {
+                            is_wet = yes
+                        }
+                        save_event_target_as = kappa_enclave_new_system_planet
+                        solar_system = {
+                            save_global_event_target_as = kappa_enclave_new_system
+                        }
+                    }
+                    country_event = { id = touhou_paragon_enclave.383 days = 60 }
+                }
+            }
+            else = {
+                set_global_flag = kappa_enclave_destoryed
             }
         }
         ai_chance = {
-            factor = 1
+            factor = 0
+            modifier = {
+                add = 50
+                has_ethic = ethic_authoritarian
+            }
+            modifier = {
+                add = 100
+                has_ethic = ethic_fanatic_authoritarian
+            }
+            modifier = {
+                add = 100
+                has_ethic = ethic_xenophobe
+            }
+            modifier = {
+                add = 200
+                has_ethic = ethic_fanatic_xenophobe
+            }
         }
     }
 }
