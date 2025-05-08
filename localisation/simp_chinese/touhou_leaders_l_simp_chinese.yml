@@ -301,13 +301,13 @@
  decision_moriya_storm_cancel_tooltip: "£building£§Y守矢分社§!不再吸引或排斥§Y宇宙风暴§!。"
 
  decision_miracle_1:0 "守护商业繁荣"
- decision_miracle_1_desc:0 "通过§c东风谷早苗的奇迹§!促进当地$r_trade_value$的增长。"
+ decision_miracle_1_desc:0 "通过§c东风谷早苗的奇迹§!促进当地$trade_value$贸易额的增长。"
 
  decision_miracle_2:0 "客星辉煌之夜"
- decision_miracle_2_desc:0 "通过§c东风谷早苗的奇迹§!产生照亮夜晚的客星，增加$r_amenities$和£happiness£§Y幸福度§!。"
+ decision_miracle_2_desc:0 "通过§c东风谷早苗的奇迹§!产生照亮夜晚的客星，增加$amenity$和£happiness£§Y幸福度§!。"
 
  decision_miracle_3:0 "海水分开之日"
- decision_miracle_3_desc:0 "通过§c东风谷早苗的奇迹§!分开海水，制造提高£mod_planet_immigration_pull_mult£§Y移民吸引力§!的奇观，并提供额外的£job_angler£§Y渔夫§!岗位。"
+ decision_miracle_3_desc:0 "通过§c东风谷早苗的奇迹§!分开海水，在一颗拥有农业区划的潮湿星球上建设§c水产养殖§!区域特化，并提供额外的£job_angler£§Y渔夫§!岗位。\n\n如果不因国策解锁§c水产养殖§!区域特化，则当本修正消失时将会拆除§c水产养殖§!区域特化。"
 
  mod_job_angler_per_pop: "每$VALUE$个人口提供§G+1§!个$job_angler$岗位"
  mod_job_angler_per_pop_short: "\n每$VALUE$£pop£§G+1§!£mod_job_angler_add£ "

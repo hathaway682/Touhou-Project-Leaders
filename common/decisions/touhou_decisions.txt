@@ -1799,6 +1799,23 @@ decision_miracle_1 = {
 		if = {
 			limit = {
 				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
 			}
 			remove_modifier = modifier_miracle_3
 		}
@@ -1895,6 +1912,23 @@ decision_miracle_2 = {
 		if = {
 			limit = {
 				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
 			}
 			remove_modifier = modifier_miracle_3
 		}
@@ -1971,6 +2005,7 @@ decision_miracle_3 = {
 		NOT = {
 			has_modifier = modifier_miracle_3
 		}
+		is_wet = yes
 	}
 
 
@@ -2019,10 +2054,12 @@ decision_miracle_3 = {
 		if = {
 			limit = {
 				has_district = district_farming
+				is_wet = yes
 			}
 			add_zone = {
 				district = district_farming
 				zone = zone_anglers
+				zone_slot = slot_food
 				replace = yes
 			}
 		}
@@ -2103,6 +2140,23 @@ decision_miracle_4 = {
 		if = {
 			limit = {
 				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
 			}
 			remove_modifier = modifier_miracle_3
 		}
@@ -2199,6 +2253,23 @@ decision_miracle_5 = {
 		if = {
 			limit = {
 				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
 			}
 			remove_modifier = modifier_miracle_3
 		}
@@ -2295,6 +2366,23 @@ decision_miracle_6 = {
 		if = {
 			limit = {
 				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
 			}
 			remove_modifier = modifier_miracle_3
 		}

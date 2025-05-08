@@ -120,7 +120,7 @@ zone_anglers = {
 				exists = owner
 				owner = { is_anglers_empire = yes }
 			}
-			has_planet_modifier = modifier_miracle_3
+			has_modifier = modifier_miracle_3
 		}
 		is_wet = yes
 	}
@@ -131,7 +131,7 @@ zone_anglers = {
 				exists = owner
 				owner = { is_anglers_empire = yes }
 			}
-			has_planet_modifier = modifier_miracle_3
+			has_modifier = modifier_miracle_3
 		}
 		is_wet = yes
 	}
