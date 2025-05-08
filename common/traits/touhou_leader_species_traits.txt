@@ -33,8 +33,7 @@ trait_thl_spirit = {
 	infertile = yes
 	icon = "gfx/interface/icons/traits/trait_zombie.dds"
 	modifier = {
-		planet_jobs_food_produces_mult = -0.5
-		planet_jobs_minerals_produces_mult = -0.5
+		worker_and_simple_drone_cat_bonus_workforce_mult = -0.5
 		planet_pops_upkeep_mult = -2
 		pop_housing_usage_add = -0.5
 	}
@@ -385,13 +384,7 @@ trait_kappa_aquatic = {
 		pc_machine_habitability = 0.8
 	}
 	modifier = {
-		pop_foundry_bonus_workforce_mult = 0.20
-		pop_alloy_drone_bonus_workforce_mult = 0.20
-		pop_artisan_bonus_workforce_mult = 0.20
-		pop_artisan_drone_bonus_workforce_mult = 0.20
-		pop_engineer_bonus_workforce_mult = 0.20
-		pop_brain_drone_engineer_bonus_workforce_mult = 0.20
-		pop_calculator_engineer_bonus_workforce_mult = 0.20
+		specialist_and_complex_drone_cat_bonus_workforce_mult = 0.20
 	}
 	triggered_pop_group_modifier = {
 		potential = {
