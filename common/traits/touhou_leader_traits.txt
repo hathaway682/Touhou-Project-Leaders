@@ -199,6 +199,7 @@ thl_leader_trait_crimson_sword = {
 
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
 		weight = 0
 	}
@@ -222,6 +223,7 @@ thl_leader_trait_crimson_sword_2 = {
 		army_morale = 0.5
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
 		weight = 100000
 	}
@@ -245,6 +247,7 @@ thl_leader_trait_crimson_sword_3 = {
 		army_morale = 0.75
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
 		weight = 100000
 	}
@@ -1090,7 +1093,7 @@ thl_leader_exorcism_roud = {
 		script = trait/icon
 		CLASS = commander
 		ICON = GFX_leader_trait_legendary_militarist_bad
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = no
 		TIER = 1
 	}
@@ -1098,6 +1101,7 @@ thl_leader_exorcism_roud = {
 		ship_weapon_range_mult = 0.15
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
 		weight = 0
 	}
@@ -1109,7 +1113,7 @@ thl_leader_exorcism_roud_2 = {
 		script = trait/icon
 		CLASS = commander
 		ICON = GFX_leader_trait_legendary_militarist_bad
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = no
 		TIER = 2
 	}
@@ -1117,6 +1121,7 @@ thl_leader_exorcism_roud_2 = {
 		ship_weapon_range_mult = 0.3
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
 		weight = 100000
 	}
@@ -1128,7 +1133,7 @@ thl_leader_exorcism_roud_3 = {
 		script = trait/icon
 		CLASS = commander
 		ICON = GFX_leader_trait_legendary_militarist_bad
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = no
 		TIER = 3
 	}
@@ -1137,6 +1142,7 @@ thl_leader_exorcism_roud_3 = {
 		ship_evasion_mult = -0.05
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
 		weight = 100000
 	}
@@ -1242,7 +1248,7 @@ thl_leader_trait_iron_ass = {
 		script = trait/icon
 		CLASS = commander
 		ICON = GFX_leader_trait_unyielding
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = no
 		TIER = 1
 	}
@@ -1251,6 +1257,7 @@ thl_leader_trait_iron_ass = {
 		ship_armor_mult = 0.1
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
 		weight = 0
 	}
@@ -1264,7 +1271,7 @@ thl_leader_trait_iron_ass_2 = {
 		script = trait/icon
 		CLASS = commander
 		ICON = GFX_leader_trait_unyielding
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = no
 		TIER = 2
 	}
@@ -1273,6 +1280,7 @@ thl_leader_trait_iron_ass_2 = {
 		ship_armor_mult = 0.25
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
 		weight = 100000
 	}
@@ -1286,7 +1294,7 @@ thl_leader_trait_iron_ass_3 = {
 		script = trait/icon
 		CLASS = commander
 		ICON = GFX_leader_trait_unyielding
-		RARITY = common
+		RARITY = veteran
 		COUNCIL = no
 		TIER = 3
 	}
@@ -1295,6 +1303,7 @@ thl_leader_trait_iron_ass_3 = {
 		ship_armor_mult = 0.5
 	}
 	leader_class = { commander }
+	leader_trait_type = veteran
 	selectable_weight = {
 		weight = 100000
 	}
