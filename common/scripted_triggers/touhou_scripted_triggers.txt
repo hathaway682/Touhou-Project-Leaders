@@ -593,22 +593,29 @@ did_not_select_spell_leader = {
 }
 
 dolls_assembly_trigger = {
-	root = {
-		OR = {
-			check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 0 }
-			owner = {
-				has_technology = tech_sapient_dolls
+	if = {
+		limit = {
+			root = {
+				num_assigned_jobs = {
+					job = dollmaker
+					value >= 1
+				}
 			}
+			is_robotic = yes
 		}
 		OR = {
-			num_assigned_jobs = {
-				job = dollmaker
-				value >= 1
+			AND = {
+				has_trait = trait_thl_doll
+				root = {
+					check_variable_arithmetic = { which = value:doll_missing_per_maker value > 0 }
+				}
 			}
 			AND = {
-				exists = leader
-				leader = {
-					has_trait = thl_leader_trait_dolls
+				NOT = {
+					has_trait = trait_thl_doll
+				}
+				root = {
+					check_variable_arithmetic = { which = value:doll_missing_per_maker value <= 0 }
 				}
 			}
 		}

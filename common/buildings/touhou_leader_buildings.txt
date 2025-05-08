@@ -848,6 +848,11 @@ building_doll_assembly_plant = {
 
 	category = pop_assembly
 
+	building_sets = {
+		government
+		urban
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -971,6 +976,11 @@ building_doll_assembly_complex = {
 	can_build = no
 
 	category = pop_assembly
+
+	building_sets = {
+		government
+		urban
+	}
 
 	potential = {
 		exists = owner
