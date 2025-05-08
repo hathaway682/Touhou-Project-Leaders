@@ -381,20 +381,12 @@ dollmaker = {
 
     triggered_planet_modifier = {
         potential = { owner = { has_technology = tech_automatic_dolls } }
-<<<<<<< HEAD
-        doll_control_limit = 20
-=======
         doll_control_limit = 2000
->>>>>>> 62744bb9a580d10dab58536307dca22617bba611
         #planet_doll_jobs_worker_produces_mult = 0.05
     }
 
     triggered_planet_modifier = {
         potential = { owner = { has_technology = tech_sapient_dolls } }
-<<<<<<< HEAD
-        doll_control_limit = -40
-        #planet_doll_jobs_specialist_produces_mult = 0.05
-=======
         doll_control_limit = 1000
         #planet_doll_jobs_specialist_produces_mult = 0.05
     }
@@ -468,7 +460,6 @@ dollmaker = {
             check_variable_arithmetic = { which = value:doll_missing_per_maker value <= 6 }
         }
         planet_pop_assembly_add = 2
->>>>>>> 62744bb9a580d10dab58536307dca22617bba611
     }
 
     resources = {
@@ -960,8 +951,6 @@ touhou_historian = {
             has_slavery_type = { type = slavery_indentured }
         }
     }
-<<<<<<< HEAD
-
     promotion = {
         time = @standard_promotion_time
         effect = {
@@ -972,66 +961,6 @@ touhou_historian = {
         }
     }
 }
-
-#烧尸体发电
-# corpse_battery = {
-#     icon = organic_battery
-#     category = worker
-#     is_capped_by_modifier = no
-#     clothes_texture_index = 2
-#
-#     # pop_modifier = {
-#     #     pop_housing_usage_add = -0.5
-#     # }
-#
-#     possible_pre_triggers = {
-#         is_sapient = yes
-#     }
-#
-#     possible = {
-#         has_trait = trait_zombie
-#         planet = {
-#             has_building = building_corpses_disposal_center
-#         }
-#     }
-#
-#     resources = {
-#         category = planet_jobs
-#         produces = {
-#             energy = 4
-#         }
-#         produces = {
-#             trigger = {
-#                 planet = { has_active_building = building_energy_grid }
-#             }
-#             energy = 1
-#         }
-#         produces = {
-#             trigger = {
-#                 planet = { has_active_building = building_energy_nexus }
-#             }
-#             energy = 2
-#         }
-#     }
-#
-#     weight = {
-#         weight = @special_job_weight
-#     }
-# }
-=======
-
-    promotion = {
-        time = @standard_promotion_time
-        effect = {
-            pop_amount_change_category = {
-                CATEGORY = specialist
-                AMOUNT = local_pop_amount
-            }
-        }
-    }
-}
->>>>>>> 62744bb9a580d10dab58536307dca22617bba611
-
 angler = {
     category = worker
     swappable_data = {

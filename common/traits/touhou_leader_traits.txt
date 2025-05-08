@@ -2861,14 +2861,8 @@ thl_leader_trait_dolls = {
 		mult = trigger:has_base_skill
 	}
 	planet_modifier = {
-<<<<<<< HEAD
-		planet_pop_assembly_add = 5
-		doll_control_limit = 2000
-		planet_doll_jobs_produces_mult = 0.25
-=======
 		job_dollmaker_add = 200
 		planet_doll_jobs_produces_mult = 0.5
->>>>>>> 62744bb9a580d10dab58536307dca22617bba611
 	}
 	sector_modifier = {
 		job_dollmaker_add = 100

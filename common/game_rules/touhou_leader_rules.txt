@@ -110,15 +110,12 @@ can_species_be_assembled = {
 		}
 		AND = {
 			has_trait = trait_thl_spirit
-<<<<<<< HEAD
-=======
 			if = {
 				limit = {
 					root.owner = { is_hive_empire = yes }
 				}
 				has_trait = trait_hive_mind
 			}
->>>>>>> 62744bb9a580d10dab58536307dca22617bba611
 			root = {
 				OR = {
 					has_deposit = sakura_tree_1
