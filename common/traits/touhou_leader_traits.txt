@@ -55,7 +55,7 @@ subclass_commander_servant = {
 	}
 	custom_tooltip_with_modifiers = governor_subclass_tt
 	army_modifier = {
-		army_health = 0.5
+		army_health = 0.25
 	}
 	triggered_planet_modifier = {
 		potential = {
