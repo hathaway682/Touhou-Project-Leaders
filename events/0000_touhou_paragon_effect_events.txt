@@ -2675,19 +2675,59 @@ planet_event = {
     hide_window = yes
     trigger = {
         has_building = building_assembler_mk2
-        fromfrom = {
-            or = {
-                has_trait = trait_mechanical
-                has_trait = trait_machine_unit
-            }
-        }
     }
 
     immediate = {
-        FromFrom = {
-            modify_species = {
-                add_trait = trait_sanae_robot_worker
-                add_traits_at_start_of_list = yes
+        if = {
+            limit = {
+                NOT = {
+                    exists = event_target:sanae_robot_worker_species
+                }
+            }
+            create_species = {
+                name = "NAME_Sanae_Robot_Worker"
+                plural = "NAME_Sanae_Robot_Worker"
+                class = ROBOT
+                portrait = default_robot
+                namelist = "AI"
+                traits = {
+                    ideal_planet_class = root
+                    trait = trait_mechanical
+                    trait = trait_sanae_robot_worker
+                    trait = trait_robot_history_warbot #没有意义
+                    trait = trait_robot_integrated_weaponry #但很酷
+                    trait = trait_auto_mod_robotic
+                }
+                effect = {
+                    save_global_event_target_as = sanae_robot_worker_species
+                }
+            }
+        }
+        if = {
+            limit = {
+                any_owned_pop_group = { 
+                    has_trait = trait_sanae_robot_worker
+                }
+            }
+            ordered_owned_pop_group = {
+                position = 0
+                order_by = trigger:pop_group_size
+                inverse = yes
+                limit = {
+                    has_trait = trait_sanae_robot_worker
+                }
+                add_pop_amount = 1
+            }
+        }
+        else = {
+            create_pop_group = {
+                species = event_target:sanae_robot_worker_species
+                size = 1
+                effect = {
+                    modify_species = {
+                        ideal_planet_class = root
+                    }
+                }
             }
         }
     }

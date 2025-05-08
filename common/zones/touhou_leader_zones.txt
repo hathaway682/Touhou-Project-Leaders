@@ -2,30 +2,26 @@ zone_garden = {
 	icon = GFX_zone_garden
 	base_buildtime = @zone_buildtime
 	potential = { # planet scope
-		if = {
-			limit = {
-				exists = owner
-				owner = { is_anglers_empire = yes }
+		exists = owner
+		owner = {
+			any_owned_leader = {
+				OR = {
+					has_trait = thl_leader_trait_flower
+					has_trait = thl_leader_trait_flower_commander
+				}
 			}
-			is_wet = no
-		}
-		else = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
 		}
 	}
 
 	unlock = { # planet scope
-		if = {
-			limit = {
-				exists = owner
-				owner = { is_anglers_empire = yes }
+		exists = owner
+		owner = {
+			any_owned_leader = {
+				OR = {
+					has_trait = thl_leader_trait_flower
+					has_trait = thl_leader_trait_flower_commander
+				}
 			}
-			is_wet = no
-		}
-		else = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
 		}
 	}
 	resources = {
@@ -67,11 +63,27 @@ zone_rw_garden = {
 	icon = GFX_zone_garden
 	base_buildtime = @zone_buildtime
 	potential = { # planet scope
-		always = yes
+		exists = owner
+		owner = {
+			any_owned_leader = {
+				OR = {
+					has_trait = thl_leader_trait_flower
+					has_trait = thl_leader_trait_flower_commander
+				}
+			}
+		}
 	}
 
 	unlock = { # planet scope
-		always = yes
+		exists = owner
+		owner = {
+			any_owned_leader = {
+				OR = {
+					has_trait = thl_leader_trait_flower
+					has_trait = thl_leader_trait_flower_commander
+				}
+			}
+		}
 	}
 
 	resources = {

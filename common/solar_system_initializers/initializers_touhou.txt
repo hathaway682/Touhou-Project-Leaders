@@ -190,17 +190,21 @@ kappa_enclave_init = {
 					}
 					set_leader = last_created_leader
 					create_species = {
-						name = "NAME_Primitive_Robot"
-						plural = "NAME_Primitive_Robots"
+						name = "NAME_Sanae_Robot_Worker"
+						plural = "NAME_Sanae_Robot_Worker"
 						class = ROBOT
 						portrait = "default_robot"
-						namelist = "PRT1"
+						namelist = "AI"
 						traits = {
-							trait = "trait_mechanical"
-							trait = "trait_wet_planet_preference"
+							trait = trait_mechanical
+							trait = trait_wet_planet_preference
+							trait = trait_sanae_robot_worker
+							trait = trait_robot_history_warbot
+							trait = trait_robot_integrated_weaponry
+							trait = trait_auto_mod_robotic
 						}
 						effect = {
-							save_global_event_target_as = kappa_enclave_robot_species
+							save_global_event_target_as = sanae_robot_worker_species
 						}
 					}
 				}

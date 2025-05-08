@@ -462,7 +462,7 @@ building_assembler_mk2 = {
 	base_cap_amount = 1
 	icon = building_wrecking_yards
 
-	category = pop_assembly
+	category = pop_group_assembly
 
 	allow = {
 		has_major_upgraded_capital = yes
@@ -846,7 +846,7 @@ building_doll_assembly_plant = {
 	base_buildtime = @b1_time
 	base_cap_amount = 1
 
-	category = pop_assembly
+	category = pop_group_assembly
 
 	building_sets = {
 		government
@@ -975,7 +975,7 @@ building_doll_assembly_complex = {
 	base_buildtime = @b3_time
 	can_build = no
 
-	category = pop_assembly
+	category = pop_group_assembly
 
 	building_sets = {
 		government
@@ -1183,7 +1183,7 @@ building_national_historial_archive = {
 building_corpses_disposal_center = {
 	base_buildtime = @b1_time
 
-	category = pop_assembly
+	category = pop_group_assembly
 
 	base_cap_amount = 1
 
@@ -1258,7 +1258,7 @@ building_posthumous_employment_center = {
 	base_buildtime = @b1_time
 	base_cap_amount = 1
 
-	category = pop_assembly
+	category = pop_group_assembly
 
 	potential = {
 		exists = owner

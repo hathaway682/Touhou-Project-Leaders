@@ -2633,6 +2633,7 @@ country_event = { # 爱丽丝
 				namelist = this
 				portrait = "doll"
 				traits = {
+					ideal_planet_class = root.capital_scope
 					trait = "trait_mechanical"
 					trait = "trait_thl_doll"
 				}
@@ -2641,9 +2642,11 @@ country_event = { # 爱丽丝
 					set_species_flag = doll_species@root
 				}
 			}
-			create_pop_group = {
-				species = last_created_species
-				size = 1
+			capital_scope = {
+				create_pop_group = {
+					species = last_created_species
+					size = 1
+				}
 			}
 			set_built_species = last_created_species
 			set_variable = {

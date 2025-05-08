@@ -23,14 +23,14 @@
 doll_workforce_mult = {
 	icon = mod_pop_workforce_mult
 	good = yes
-	category = pop
+	category = pop_group
 	percentage = yes
 }
 
 doll_empire_size_mult = {
 	icon = mod_species_empire_size_mult
 	good = no
-	category = pop
+	category = pop_group
 	percentage = yes
 }
 
@@ -43,42 +43,42 @@ doll_control_limit = {
 spirit_workforce_mult = {
 	icon = mod_pop_workforce_mult
 	good = yes
-	category = pop
+	category = pop_group
 	percentage = yes
 }
 
 spirit_empire_size_mult = {
 	icon = mod_species_empire_size_mult
 	good = no
-	category = pop
+	category = pop_group
 	percentage = yes
 }
 
 spirit_amenities_usage_mult = {
 	icon = mod_pop_group_amenities_usage_mult
 	good = no
-	category = pop
+	category = pop_group
 	percentage = yes
 }
 
 spirit_job_amenities_mult = {
 	icon = mod_pop_group_job_amenities_mult
 	good = yes
-	category = pop
+	category = pop_group
 	percentage = yes
 }
 
 rabbit_workforce_mult = {
 	icon = mod_pop_workforce_mult
 	good = yes
-	category = pop
+	category = pop_group
 	percentage = yes
 }
 
 rabbit_empire_size_mult = {
 	icon = mod_species_empire_size_mult
 	good = no
-	category = pop
+	category = pop_group
 	percentage = yes
 }
 
@@ -92,7 +92,7 @@ death_pop_group_generation_chance = {
 culture_workers_modifier_mult = {
 	icon = mod_job_culture_worker_add
 	good = yes
-	category = pop
+	category = pop_group
 	percentage = yes
 }
 

@@ -398,6 +398,8 @@
  touhou_paragon.40310.a:0 "§H对地压制型§!，大体积就是力量！"
  touhou_paragon.40310.b:0 "§H对空突击型§!，太空战才是未来！"
  touhou_paragon.40310.c:0 "§H民用工程型§!，生产力高于一切！"
+ touhou_paragon.40310.d:0 "就不能全都要吗？"
+ touhou_paragon.40310.d.tooltip: "§R这回，她要多少，朕给多少！§!"
  mod_planet_pops_energy_upkeep_mult:0 "岗位能量币维护费"
  tech_sanae_robot_army: "非想天则MK2-对地压制型"
  tech_sanae_robot_army_desc: "我们用金属铸造活动的火山，将其打造为喷薄欲出的武库，再为其加装擎天的巨足。"
@@ -405,6 +407,7 @@
  tech_sanae_robot_strike_craft_desc: "机动的轨迹需如游蛇般自然且诡谲，因风的信使需如它自身一样柔和而暴烈。"
  tech_sanae_robot_worker: "非想天则MK2-民用工程型"
  tech_sanae_robot_worker_desc: "诸神最早的权能便是在锻炉中塑造这个世界，我们也要有我们的锻炉。"
+ NAME_Sanae_Robot_Worker: "非想天则"
 
  sanae_warform: "非想天则MK2战术平台"
  sanae_warform_plural: "非想天则MK2战术平台"
@@ -413,7 +416,7 @@
  STRIKE_CRAFT_SANAE_desc: "若一般的舰载机是准备伺机亮出牙齿的小蛇，MK2便是以压倒性的力量和灵活绞杀对手的巨蟒。"
  building_assembler_mk2: "超巨型组装平台"
  building_assembler_mk2_desc: "在原有的机器组装厂附近开辟的巨大广场，在其上我们建造那些泰坦。"
- add_mk2_trait_for_new_robot: "为新组装的机器人添加§Y非想天则MK2机器人§!特质，提供巨幅§G生产加成§!和§G建造速度§!，但需要§P五倍§!的成本维护和强制迁移。"
+ add_mk2_trait_for_new_robot: "每年组装一个具有极高劳动力加成，但维护费和强制迁移花费极高的非想天则MK2机器人"
  trait_sanae_robot_worker: "非想天则MK2机器人"
  trait_sanae_robot_worker_desc: "这一机器人口体积宏伟有如上古泰坦，咆哮着以锻炉与割镰之力重塑世界。"
 
