@@ -711,7 +711,7 @@ civic_penglai_medcine_corp = {
 
 civic_hifuu = {
 	playable = {
-		has_first_contact_dlc = yes
+		#has_first_contact_dlc = yes
 	}
 
 	description = "civic_hifuu_effects"

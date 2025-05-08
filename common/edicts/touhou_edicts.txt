@@ -831,38 +831,11 @@ bat_swarm = {
 	effect = {
 		custom_tooltip = edict_bat_swarm_effect
 		hidden_effect = {
+			#TODO：更新血魔法的献祭机制
 			while = {
 				count = 2
-				if = {
-					limit = {
-						any_owned_pop = {
-							is_unemployed = yes
-						}
-					}
-					random_owned_pop = {
-						limit = {
-							is_unemployed = yes
-						}
-						kill_pop = yes
-					}
-				}
-				else_if = {
-					limit = {
-						any_owned_pop = {
-							is_enslaved = yes
-						}
-					}
-					random_owned_pop = {
-						limit = {
-							is_enslaved = yes
-						}
-						kill_pop = yes
-					}
-				}
-				else = {
-					random_owned_pop = {
-						kill_pop = yes
-					}
+				random_owned_pop_group =  {
+					kill_single_pop = yes
 				}
 			}
 			save_global_event_target_as = bat_swarm_owner
@@ -910,36 +883,8 @@ red_fog = {
 		hidden_effect = {
 			while = {
 				count = 5
-				if = {
-					limit = {
-						any_owned_pop = {
-							is_unemployed = yes
-						}
-					}
-					random_owned_pop = {
-						limit = {
-							is_unemployed = yes
-						}
-						kill_pop = yes
-					}
-				}
-				else_if = {
-					limit = {
-						any_owned_pop = {
-							is_enslaved = yes
-						}
-					}
-					random_owned_pop = {
-						limit = {
-							is_enslaved = yes
-						}
-						kill_pop = yes
-					}
-				}
-				else = {
-					random_owned_pop = {
-						kill_pop = yes
-					}
+				random_owned_pop_group =  {
+					kill_single_pop = yes
 				}
 			}
 			owner = {
@@ -1077,7 +1022,7 @@ gungnir = {
 					}
 					last_created_fleet = {
 						fleet_event = {
-							id = touhou_paragon_spell.6
+							id = touhou_paragon_spell.10
 							days = 2
 						}
 					}
@@ -1178,7 +1123,7 @@ gungnir_starbase = {
 					}
 					last_created_fleet = {
 						fleet_event = {
-							id = touhou_paragon_spell.6
+							id = touhou_paragon_spell.10
 							days = 2
 						}
 					}

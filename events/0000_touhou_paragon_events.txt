@@ -18,7 +18,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_paragon_dlc = yes
+		#has_paragon_dlc = yes
 		is_country_type = default
 		exists = from
 		from = {
@@ -28,8 +28,18 @@ country_event = {
 			NOT = {
 				has_leader_flag = leader_death_events_blocked
 			}
+			NAND = {
+				species = { has_trait = trait_spare_organs }
+				NOT = {
+					has_trait = trait_leader_second_chanced
+				}
+			}
+			NOT = {
+				leader_backup_clone_can_activate = yes
+			}
 			or = {
-				has_skill >= 4
+				has_total_skill >= 4
+				#has_skill >= 4
 				is_ruler = yes
 				has_leader_flag = renowned_leader
 				has_leader_flag = legendary_leader
@@ -52,7 +62,6 @@ country_event = {
 					has_trait = thl_leader_trait_regeneration_3
 					has_trait = thl_leader_trait_injured_3
 				}
-				leader_age > value:death_age
 			}
 		}
 	}
@@ -95,19 +104,19 @@ country_event = {
 				# Increase chance for leaders of higher level
 				modifier = {
 					add = 10
-					from = { has_skill >= 4 }
+					from = { has_base_skill >= 4 } #has_skill >= 4 }
 				}
 				modifier = {
 					add = 20
-					from = { has_skill >= 6 }
+					from = { has_base_skill >= 6 } #has_skill >= 6 }
 				}
 				modifier = {
 					add = 30
-					from = { has_skill >= 8 }
+					from = { has_base_skill >= 8 } #has_skill >= 8 }
 				}
 				modifier = {
 					add = 40
-					from = { has_skill >= 10 }
+					from = { has_base_skill >= 10 } #has_skill >= 10 }
 				}
 
 				# Increase chance for leaders that have served the country for a long time
@@ -214,7 +223,7 @@ country_event = { # Randomizing chance to get an ethic leader, with a grace fact
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_paragon_dlc = yes
+		#has_paragon_dlc = yes
 		is_ai = no
 		is_homicidal = no
 		has_technology = tech_xeno_linguistics
@@ -280,12 +289,6 @@ country_event = { # ethic leader lottery machine
 				}
 				ethic_leader_hire_event = { LEADER_ID = sanae EVENT_ID = touhou_paragon.40300 }
 			}
-			0 = { # 琪露诺
-				modifier = {
-					add = value:touhou_leader_randomizer|ETHIC|militarist|ETHIC_NEG|pacifist|LEADER_ID|crino|
-				}
-				ethic_leader_hire_event = { LEADER_ID = crino EVENT_ID = touhou_paragon.40400 }
-			}
 			0 = { # 美铃
 				modifier = {
 					add = value:touhou_leader_randomizer|ETHIC|militarist|ETHIC_NEG|egalitarian|LEADER_ID|meiling|
@@ -316,13 +319,7 @@ country_event = { # ethic leader lottery machine
 				}
 				ethic_leader_hire_event = { LEADER_ID = sakuya EVENT_ID = touhou_paragon.41000 }
 			}
-			0 = { # 梅莉
-				modifier = {
-					add = value:touhou_leader_randomizer|ETHIC|xenophile|ETHIC_NEG|xenophobe|LEADER_ID|merry|
-				}
-				ethic_leader_hire_event = { LEADER_ID = merry EVENT_ID = touhou_paragon.41100 }
-			}
-			#莲子将会由推荐事件触发
+			#梅莉莲子将会自裂隙招募
 			0 = { # 觉
 				modifier = {
 					add = value:touhou_leader_randomizer|ETHIC|xenophile|ETHIC_NEG|xenophobe|LEADER_ID|satori|
@@ -608,12 +605,12 @@ country_event = { # ethic leader lottery machine
 				}
 				ethic_leader_hire_event = { LEADER_ID = utsuho EVENT_ID = touhou_paragon.42600 }
 			}
-			0 = { # 荷取，目前通过飞地招募
-				#modifier = {
-				#	add = value:touhou_leader_randomizer|ETHIC|materialist|ETHIC_NEG|spiritualist|LEADER_ID|nitori|
-				#}
-				ethic_leader_hire_event = { LEADER_ID = nitori EVENT_ID = touhou_paragon.42700 }
-			}
+			# 0 = { # 荷取，目前通过飞地招募
+			# 	modifier = {
+			# 		add = value:touhou_leader_randomizer|ETHIC|materialist|ETHIC_NEG|spiritualist|LEADER_ID|nitori|
+			# 	}
+			# 	ethic_leader_hire_event = { LEADER_ID = nitori EVENT_ID = touhou_paragon.42700 }
+			# }
 		}
 	}
 }
@@ -630,7 +627,7 @@ country_event = { # 天子
 	is_triggered_only = yes
 	
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -695,7 +692,7 @@ country_event = { # 天子
 		custom_tooltip = touhou_paragon.40100.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_tenshi
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_tenshi
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
@@ -714,7 +711,7 @@ country_event = { # 萃香
 	is_triggered_only = yes
 	
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -789,7 +786,7 @@ country_event = { # 萃香
 		custom_tooltip = touhou_paragon.40200.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_suika
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_suika
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
@@ -808,7 +805,7 @@ country_event = { # 早苗
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	##auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -915,11 +912,11 @@ country_event = { # 早苗
 		custom_tooltip = touhou_paragon.40300.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_sanae
+				LEADER = ethic_leader
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = sanae_leader
 				set_leader_flag = touhou_event_leader
 			}
@@ -946,7 +943,7 @@ country_event = { # 琪露诺
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
@@ -1002,7 +999,7 @@ country_event = { # 琪露诺
 		custom_tooltip = touhou_paragon.40400.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_crino
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_crino
 			}
 			last_created_leader = {
 				last_created_leader = {
@@ -1025,7 +1022,7 @@ country_event = { # 美铃
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -1102,7 +1099,7 @@ country_event = { # 美铃
 		custom_tooltip = touhou_paragon.40500.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_meiling
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_meiling
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
@@ -1121,7 +1118,7 @@ country_event = { # 灵梦
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -1186,7 +1183,7 @@ country_event = { # 灵梦
 		custom_tooltip = touhou_paragon.40600.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_reimu
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_reimu
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
@@ -1218,7 +1215,7 @@ country_event = { # 魔理沙
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -1283,11 +1280,11 @@ country_event = { # 魔理沙
 		custom_tooltip = touhou_paragon.40700.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_marisa
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_marisa
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = marisa_leader
 				set_leader_flag = touhou_event_leader
 			}
@@ -1303,7 +1300,7 @@ country_event = { # 铃仙
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -1368,7 +1365,7 @@ country_event = { # 铃仙
 		custom_tooltip = touhou_paragon.40800.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_reisen
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_reisen
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
@@ -1387,7 +1384,7 @@ country_event = { # 妖梦
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -1452,7 +1449,7 @@ country_event = { # 妖梦
 		custom_tooltip = touhou_paragon.40900.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_youmu
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_youmu
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
@@ -1471,7 +1468,7 @@ country_event = { # 咲夜
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -1536,7 +1533,7 @@ country_event = { # 咲夜
 		custom_tooltip = touhou_paragon.41000.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_sakuya
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_sakuya
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
@@ -1556,7 +1553,7 @@ country_event = { # 梅莉
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -1621,17 +1618,15 @@ country_event = { # 梅莉
 		custom_tooltip = touhou_paragon.41100.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_merry
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_merry
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = merry_leader
 			}
 			country_event = {
-				id = touhou_paragon.41101
-				days = 360
-				random = 1080
+				id = touhou_paragon.41200
 			}
 		}
 	}
@@ -1645,7 +1640,7 @@ country_event = { # 莲子
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -1667,6 +1662,16 @@ country_event = { # 莲子
 			remove_global_flag = renko # Put this leader back into the pool, so player could still get him
 			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_renko
+			remove_global_flag = merry
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_border_merry
+				}
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			set_country_flag = dismissed_merry
 		}
 	}
 	option = {
@@ -1714,7 +1719,7 @@ country_event = { # 莲子
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = renko_leader
 			}
 		}
@@ -1729,7 +1734,7 @@ country_event = { # 觉
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -1862,11 +1867,11 @@ country_event = { # 觉
 		custom_tooltip = touhou_paragon.41300.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_satori
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_satori
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
+				set_leader_flag = legendary_leader
 				set_leader_flag = satori_leader
 			}
 		}
@@ -1881,7 +1886,7 @@ country_event = { # 恋恋
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -1946,7 +1951,7 @@ country_event = { # 恋恋
 		custom_tooltip = touhou_paragon.41400.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_koishi
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_koishi
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
@@ -1965,7 +1970,7 @@ country_event = { # 文
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -2030,7 +2035,7 @@ country_event = { # 文
 		custom_tooltip = touhou_paragon.41500.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_aya
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_aya
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
@@ -2049,7 +2054,7 @@ country_event = { # 四季
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -2114,7 +2119,7 @@ country_event = { # 四季
 		custom_tooltip = touhou_paragon.41600.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_shikieiki
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_shikieiki
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
@@ -2133,7 +2138,7 @@ country_event = { # 小町
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -2198,7 +2203,7 @@ country_event = { # 小町
 		custom_tooltip = touhou_paragon.41700.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_onoduka
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_onoduka
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader
@@ -2217,7 +2222,7 @@ country_event = { # 帕秋莉
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -2282,7 +2287,7 @@ country_event = { # 帕秋莉
 		custom_tooltip = touhou_paragon.41800.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_patchouli
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_patchouli
 			}
 			last_created_leader = {
 				leader_event = {
@@ -2303,7 +2308,7 @@ country_event = { # 蕾米
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -2325,6 +2330,36 @@ country_event = { # 蕾米
 			remove_global_flag = remilia # Put this leader back into the pool, so player could still get him
 			ethic_leader_kill_effect = yes
 			set_country_flag = dismissed_remilia
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_kongfu
+				}
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			remove_global_flag = meiling
+			set_country_flag = dismissed_meiling
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_time
+				}
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			remove_global_flag = sakuya
+			set_country_flag = dismissed_sakuya
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_elements
+				}
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			remove_global_flag = patchouli
+			set_country_flag = dismissed_patchouli
 		}
 	}
 	option = {
@@ -2463,7 +2498,7 @@ country_event = { # 蕾米
 		custom_tooltip = touhou_paragon.41900.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_remilia
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_remilia
 			}
 		}
 	}
@@ -2477,7 +2512,7 @@ country_event = { # 爱丽丝
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -2589,7 +2624,7 @@ country_event = { # 爱丽丝
 		custom_tooltip = touhou_paragon.42000.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_alice
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_alice
 			}
 			create_species = {
 				name = "DOLL"
@@ -2623,7 +2658,7 @@ country_event = { # 幽幽子
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -2688,7 +2723,7 @@ country_event = { # 幽幽子
 		custom_tooltip = touhou_paragon.42100.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_yuyuko
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_yuyuko
 			}
 		}
 	}
@@ -2702,7 +2737,7 @@ country_event = { # 幽香
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -2767,7 +2802,7 @@ country_event = { # 幽香
 		custom_tooltip = touhou_paragon.42200.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_yuka
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_yuka
 			}
 		}
 	}
@@ -2781,7 +2816,7 @@ country_event = { # 小铃
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -2846,7 +2881,7 @@ country_event = { # 小铃
 		custom_tooltip = touhou_paragon.42300.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_kosuzu
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_kosuzu
 			}
 		}
 	}
@@ -2860,7 +2895,7 @@ country_event = { # 阿求
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -2925,7 +2960,7 @@ country_event = { # 阿求
 		custom_tooltip = touhou_paragon.42400.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_akyuu
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_akyuu
 			}
 		}
 	}
@@ -2939,7 +2974,7 @@ country_event = { # 阿燐
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -3018,7 +3053,7 @@ country_event = { # 阿燐
 		custom_tooltip = touhou_paragon.42500.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_rin
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_rin
 			}
 		}
 	}
@@ -3032,7 +3067,7 @@ country_event = { # 阿空
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -3097,7 +3132,7 @@ country_event = { # 阿空
 		custom_tooltip = touhou_paragon.42600.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_utsuho
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_utsuho
 			}
 			country_event = { id = touhou_paragon_situation.42670 days=3600}
 		}
@@ -3112,7 +3147,7 @@ country_event = { # 荷取
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -3177,7 +3212,7 @@ country_event = { # 荷取
 		custom_tooltip = touhou_paragon.42700.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_nitori
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_nitori
 			}
 		}
 	}
@@ -3191,7 +3226,7 @@ country_event = { # 静叶
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -3251,7 +3286,7 @@ country_event = { # 静叶
 		custom_tooltip = touhou_paragon.42800.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_sizuha
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_sizuha
 			}
 		}
 	}
@@ -3265,7 +3300,7 @@ country_event = { # 穰子
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -3325,8 +3360,9 @@ country_event = { # 穰子
 		custom_tooltip = touhou_paragon.42900.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_minoriko
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_minoriko
 			}
+			hire_event_leader_effect
 		}
 	}
 }
@@ -3339,7 +3375,7 @@ country_event = { # 雏
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -3404,7 +3440,7 @@ country_event = { # 雏
 		custom_tooltip = touhou_paragon.43000.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_hina
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_hina
 			}
 			set_variable = {
 				which = jinx_stockpile
@@ -3422,7 +3458,7 @@ country_event = { # 米斯蒂娅
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -3490,7 +3526,7 @@ country_event = { # 米斯蒂娅
 		custom_tooltip = touhou_paragon.43100.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_mystia
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_mystia
 			}
 		}
 	}
@@ -3504,7 +3540,7 @@ country_event = { # 帝
 	is_triggered_only = yes
 
 	picture = GFX_leader_recruitment_bg_renowned
-	auto_opens = no
+	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
@@ -3569,7 +3605,7 @@ country_event = { # 帝
 		custom_tooltip = touhou_paragon.43200.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_tewi
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_tewi
 			}
 		}
 	}

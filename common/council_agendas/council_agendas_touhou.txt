@@ -2,10 +2,13 @@ agenda_recruit_talent = {
 	agenda_cost = 3500
 	agenda_cooldown = 1800
 	allow = {
-		has_technology = tech_xeno_linguistics
+		OR = {
+			has_technology = tech_xeno_linguistics
+			has_technology = tech_autonomous_agents
+		}
 	}
 	potential = {
-		has_paragon_dlc = yes
+		#has_paragon_dlc = yes
 		is_ai = no
 	}
 	modifier = {
@@ -50,7 +53,7 @@ agenda_sanae_ascension = {
 		}
 	}
 	potential = {
-		has_paragon_dlc = yes
+		#has_paragon_dlc = yes
 		is_ai = no
 		has_country_flag = touhou_flag_sanae_ascension
 	}

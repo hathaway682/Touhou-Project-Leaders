@@ -195,6 +195,13 @@ demon10 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/model
 	doll8 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/doll/doll8.dds"}
 	doll9 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/doll/doll9.dds"}
 
+	ghost1 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/ghost/ghost1.dds"}
+	ghost2 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/ghost/ghost2.dds"}
+	ghost3 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/ghost/ghost3.dds"}
+	ghost4 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/ghost/ghost4.dds"}
+	ghost5 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/ghost/ghost5.dds"}
+	ghost6 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/ghost/ghost6.dds"}
+
 }
 portrait_groups = {
 	demon = {
@@ -474,6 +481,76 @@ portrait_groups = {
 					tpop14
 					tpop15
 					tpop16
+				}
+			}
+		}
+	}
+	
+	ghost = {
+		default = ghost1
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					ghost1
+					ghost2
+					ghost3
+					ghost4
+					ghost5
+					ghost6
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				portraits = {
+					ghost1
+					ghost2
+					ghost3
+					ghost4
+					ghost5
+					ghost6
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				portraits = {
+					ghost1
+					ghost2
+					ghost3
+					ghost4
+					ghost5
+					ghost6
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					ghost1
+					ghost2
+					ghost3
+					ghost4
+					ghost5
+					ghost6
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					ghost1
+					ghost2
+					ghost3
+					ghost4
+					ghost5
+					ghost6
 				}
 			}
 		}
