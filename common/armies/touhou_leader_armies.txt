@@ -589,5 +589,8 @@ magician_defense_army = {
 			job = magician
 			value >= 1
 		}
+		from = {
+			has_trait = trait_thl_magician
+		}
 	}
 }
