@@ -82,7 +82,7 @@ special_project = {
 special_project = {
 	key = "AKYUU_SPECIAL_PROJECT_NO_ASC"
 	cost = {
-		base = 5000
+		base = 100 #这总不至于研究不出来了
 	}
 	tech_department = society_technology
 	picture = GFX_evt_genetic_modification

@@ -1632,7 +1632,191 @@ building_ranger_lodge = {
 	}
 }
 
-#TODO：重新制作夜雀食堂
+building_izakaya_1 = {
+	base_buildtime = @b1_time
+	category = amenity
+
+	building_sets = {
+		government
+		urban
+		entertainment
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				OR = {
+					has_trait = thl_leader_trait_izakaya
+					has_trait = thl_leader_trait_izakaya_2
+					has_trait = thl_leader_trait_izakaya_3
+				}
+			}
+		}
+	}
+
+	allow = {
+		owner = {
+			any_owned_leader = {
+				OR = {
+					has_trait = thl_leader_trait_izakaya
+					has_trait = thl_leader_trait_izakaya_2
+					has_trait = thl_leader_trait_izakaya_3
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_holo_theatres
+	}
+
+	planet_modifier = {
+		job_izakaya_worker_add = 200
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			food = @b1_upkeep
+		}
+	}
+
+	triggered_desc = {
+		text = job_izakaya_worker_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		job_izakaya_worker_add = 200
+	}
+
+	upgrades = {
+		building_izakaya_2
+	}
+}
+
+building_izakaya_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = amenity
+
+	building_sets = {
+		government
+		urban
+		entertainment
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				OR = {
+					has_trait = thl_leader_trait_izakaya_2
+					has_trait = thl_leader_trait_izakaya_3
+				}
+			}
+		}
+	}
+
+	allow = {
+		owner = {
+			any_owned_leader = {
+				OR = {
+					has_trait = thl_leader_trait_izakaya_2
+					has_trait = thl_leader_trait_izakaya_3
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	planet_modifier = {
+		job_izakaya_worker_add = 400
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			food = @b2_upkeep
+		}
+	}
+
+	upgrades = {
+		building_izakaya_3
+	}
+}
+
+building_izakaya_3 = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = amenity
+
+	building_sets = {
+		government
+		urban
+		entertainment
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_izakaya_3
+			}
+		}
+	}
+
+	allow = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_izakaya_3
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	planet_modifier = {
+		job_izakaya_worker_add = 600
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			food = @b3_upkeep
+		}
+	}
+}
 
 ###魔法学院
 building_magic_academy = {
@@ -1685,3 +1869,4 @@ building_magic_academy = {
 	is_essential = yes
 }
 
+#花田建筑序列
