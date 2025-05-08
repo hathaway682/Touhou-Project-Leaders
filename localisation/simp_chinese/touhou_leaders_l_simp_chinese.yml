@@ -250,6 +250,7 @@
  thl_leader_trait_snake_bless_desc:1 "这位领袖可以使用来自乾之神八坂神奈子的神力，呼风唤雨，追踪妖魔。"
  thl_leader_trait_frog_bless:0 "坤神加护"
  thl_leader_trait_frog_bless_desc:1 "这位领袖可以使用来自坤之神洩矢诹访子的神力，改变地形，抵抗敌人。"
+ mod_pop_miko_bonus_workforce_mult: "[miko.GetNamePlural]的岗位效率"
  #leader_trait_moriya_preacher:0 "守矢布道者"
  #leader_trait_moriya_preacher_desc:1 "这位领袖为我们的国家带来了结合古代泛灵论和现代科学的独特信仰。"
  #leader_trait_moriya_preacher_effect:0 ""
@@ -2139,6 +2140,7 @@
  mod_job_izakaya_worker_add:0 "$job_izakaya_worker$岗位"
  mod_job_izakaya_worker_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_izakaya_worker$岗位"
  mod_job_izakaya_worker_per_pop_short:0 "\n每$VALUE$ £pop£ §G+1§! £mod_job_izakaya_worker_add£ "
+ mod_pop_izakaya_worker_bonus_workforce_mult: "[izakaya_worker.GetNamePlural]的岗位效率"
 
  NAME_Tewi:0 "因幡帝"
  tewi1:0 "自称来自迷途竹林，是竹林中野生的兔子与妖怪兔的领袖，一个巧言令色的欺诈师和恶作剧爱好者，据说能带给见到她的人以幸运。"

@@ -55,22 +55,23 @@ subclass_commander_servant = {
 	}
 	custom_tooltip_with_modifiers = governor_subclass_tt
 	army_modifier = {
-		army_morale = 0.1
+		army_health = 0.1
+		army_defense_damage_mult = 0.2 #从者应该擅长守家吧
 	}
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
 		}
-		planet_jobs_ruler_produces_mult = 0.04
-		planet_jobs_specialist_produces_mult = 0.04
+		planet_jobs_ruler_produces_mult = 0.02
+		planet_jobs_specialist_produces_mult = 0.02
 		multiplier = trigger:has_base_skill
 	}
 	triggered_sector_modifier = {
 		potential = {
 			always = yes
 		}
-		planet_jobs_ruler_produces_mult = 0.02
-		planet_jobs_specialist_produces_mult = 0.02
+		planet_jobs_ruler_produces_mult = 0.01
+		planet_jobs_specialist_produces_mult = 0.01
 		multiplier = trigger:has_base_skill
 	}
 	ai_weight = {
@@ -104,22 +105,26 @@ subclass_commander_miko = {
 		ship_tracking_add = 5
 	}
 	army_modifier = {
-		army_morale_damage_mult = 0.1
+		army_damage_taken_mult = -0.1 #我士兵会躲弹幕怎么了
 	}
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
 		}
-		planet_jobs_ruler_produces_mult = 0.02
-		planet_jobs_specialist_produces_mult = 0.02
+		#planet_jobs_ruler_produces_mult = 0.02 #先注释掉吧
+		#planet_jobs_specialist_produces_mult = 0.02
+		job_soldier_or_warrior_add = -100
+		job_miko_add = 100
 		multiplier = trigger:has_base_skill
 	}
 	triggered_sector_modifier = {
 		potential = {
 			always = yes
 		}
-		planet_jobs_ruler_produces_mult = 0.01
-		planet_jobs_specialist_produces_mult = 0.01
+		#planet_jobs_ruler_produces_mult = 0.01
+		#planet_jobs_specialist_produces_mult = 0.01
+		job_soldier_or_warrior_add = -50
+		job_miko_add = 50
 		multiplier = trigger:has_base_skill
 	}
 
@@ -483,12 +488,10 @@ thl_leader_trait_theurgist = {
 		category_psionics_research_speed_mult = 0.10
 	}
 	planet_modifier = {
-		job_miko_add = 200
-		planet_priests_unity_produces_add = 1
+		pop_miko_bonus_workforce_mult = 0.1
 	}
 	sector_modifier = {
-		job_miko_add = 100
-		planet_priests_unity_produces_add = 0.5
+		pop_miko_bonus_workforce_mult = 0.05
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
@@ -565,12 +568,10 @@ thl_leader_trait_theurgist_2 = {
 		category_psionics_research_speed_mult = 0.20
 	}
 	planet_modifier = {
-		job_miko_add = 400
-		planet_priests_unity_produces_add = 2
+		pop_miko_bonus_workforce_mult = 0.2
 	}
 	sector_modifier = {
-		job_miko_add = 200
-		planet_priests_unity_produces_add = 1
+		pop_miko_bonus_workforce_mult = 0.1
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
@@ -644,12 +645,10 @@ thl_leader_trait_theurgist_3 = {
 		category_psionics_research_speed_mult = 0.30
 	}
 	planet_modifier = {
-		job_miko_add = 600
-		planet_priests_unity_produces_add = 3
+		pop_miko_bonus_workforce_mult = 0.3
 	}
 	sector_modifier = {
-		job_miko_add = 300
-		planet_priests_unity_produces_add = 1.5
+		pop_miko_bonus_workforce_mult = 0.15
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
@@ -1042,7 +1041,7 @@ thl_leader_trait_invincible = {
 	}
 	selectable_weight = 0
 	background_icon = GFX_leader_background_destiny_1
-	custom_tooltip_with_modifiers = leader_trait_invincible_effect
+	custom_tooltip_with_modifiers = thl_leader_trait_invincible_effect
 }
 
 thl_leader_trait_like_cloud_and_water = {
@@ -1406,7 +1405,7 @@ thl_leader_trait_great_magician = {
 	}
 	self_modifier = {
 		leaders_upkeep_mult = -0.9
-		leader_lifespan_add = 777
+		#leader_lifespan_add = 777
 	}
 	# Any Class - Ruler
 	triggered_councilor_modifier = {
@@ -1550,16 +1549,16 @@ thl_leader_trait_penglai_medicine = {
 		planet_doctors_society_research_produces_add = 6
 		planet_doctors_physics_research_produces_add = 2
 		planet_doctors_engineering_research_produces_add = 2
-		biological_pop_growth_speed = 0.3
-		biological_pop_happiness = -0.1
+		logistic_growth_mult = 0.3
+		pop_happiness = -0.1
 	}
 	sector_modifier = {
 		job_healthcare_per_pop = 0.05
 		planet_doctors_society_research_produces_add = 4
 		planet_doctors_physics_research_produces_add = 1
 		planet_doctors_engineering_research_produces_add = 1
-		biological_pop_growth_speed = 0.15
-		biological_pop_happiness = -0.05
+		logistic_growth_mult = 0.15
+		pop_happiness = -0.05
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
@@ -2323,9 +2322,8 @@ thl_leader_trait_trial = {
 	councilor_modifier = {
 		country_edict_fund_add = 100
 		edicts_upkeep_mult = -0.25
-		edicts_cost_mult= -0.25
-		planet_enforcers_unity_produces_add = 4
-		planet_administrators_unity_produces_add = 2
+		edicts_cost_mult = -0.25
+		enforcer_jobs_bonus_workforce_mult = 0.25
 	}
 	
 	on_gained_effect = {
@@ -3154,7 +3152,7 @@ thl_leader_trait_incarnation_of_nature = {
 		terraforming_cost_mult = -1
 		terraform_speed_mult = 4
 		pop_amenities_usage_organic_mult = -0.5
-		biological_pop_happiness = 0.5
+		pop_happiness = 0.5
 		district_farming_max = 2
 		planet_non_artificial_max_districts_add = 2
 	}
@@ -3162,7 +3160,7 @@ thl_leader_trait_incarnation_of_nature = {
 		terraforming_cost_mult = -0.5
 		terraform_speed_mult = 2
 		pop_amenities_usage_organic_mult = -0.25
-		biological_pop_happiness = 0.25
+		pop_happiness = 0.25
 		district_farming_max = 1
 		planet_non_artificial_max_districts_add = 1
 	}
@@ -3349,10 +3347,10 @@ thl_leader_trait_books = {
 		text = leader_trait_archaeologist_tooltip
 	}
 	planet_modifier = {
-		planet_researchers_minor_artifacts_produces_add = 0.2
+		planet_biologists_minor_artifacts_produces_add = 0.2
 	}
 	sector_modifier = {
-		planet_researchers_minor_artifacts_produces_add = 0.1
+		planet_biologists_minor_artifacts_produces_add = 0.1
 	}
 	leader_class = { scientist }
 	selectable_weight = {
@@ -3412,12 +3410,12 @@ thl_leader_trait_memory = {
 		ship_archaeological_site_excavation_speed_mult = 0.3
 	}
 	planet_modifier = {
-		planet_researchers_society_research_produces_add = 3
-		planet_culture_workers_society_research_produces_add = 3
+		planet_biologists_society_research_produces_add = 3
+		planet_biologists_society_research_produces_add = 3
 	}
 	sector_modifier = {
-		planet_researchers_society_research_produces_add = 1
-		planet_culture_workers_society_research_produces_add = 1
+		planet_biologists_society_research_produces_add = 1
+		planet_biologists_society_research_produces_add = 1
 	}
 	on_gained_effect = {
 		change_background_job = culture_worker
@@ -3556,12 +3554,12 @@ thl_leader_trait_cyborg_life = {
 	planet_modifier = {
 		planet_pops_cyborgs_upkeep_mult = -0.3
 		planet_pop_assemblers_engineering_research_produces_add = 4
-		planet_cyborg_jobs_engineering_research_produces_mult = 0.2
+		planet_jobs_engineering_research_produces_mult = 0.2
 	}
 	planet_modifier = {
 		planet_pops_cyborgs_upkeep_mult = -0.15
 		planet_pop_assemblers_engineering_research_produces_add = 2
-		planet_cyborg_jobs_engineering_research_produces_mult = 0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
 	}
 	leader_class = { scientist }
 	selectable_weight = 0
@@ -3583,14 +3581,14 @@ thl_leader_trait_synth_life = {
 		AMOUNT = 50
 	}
 	planet_modifier = {
-		planet_jobs_robotic_physics_research_produces_mult = 0.1
-		planet_jobs_robotic_society_research_produces_mult = 0.1
-		planet_jobs_robotic_engineering_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
 	}
 	sector_modifier = {
-		planet_jobs_robotic_physics_research_produces_mult = 0.05
-		planet_jobs_robotic_society_research_produces_mult = 0.05
-		planet_jobs_robotic_engineering_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
 	}
 	leader_class = { scientist }
 	selectable_weight = 0
@@ -4254,7 +4252,7 @@ thl_leader_trait_optical_camouflage = {
 		TIER = none
 	}
 	modifier = {
-		ship_cloaking_strength_add = 5
+		ship_cloaking_strength_add = 10
 	}
 	councilor_modifier = {
 		ship_cloaking_strength_add = 1
@@ -4527,10 +4525,10 @@ thl_leader_trait_izakaya = {
 		TIER = 1
 	}
 	planet_modifier = {
-		job_izakaya_worker_add = 200
+		pop_izakaya_worker_bonus_workforce_mult = 0.1
 	}
 	sector_modifier = {
-		job_izakaya_worker_add = 100
+		pop_izakaya_worker_bonus_workforce_mult = 0.05
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
@@ -4554,10 +4552,10 @@ thl_leader_trait_izakaya_2 = {
 		TIER = 2
 	}
 	planet_modifier = {
-		job_izakaya_worker_add = 400
+		pop_izakaya_worker_bonus_workforce_mult = 0.2
 	}
 	sector_modifier = {
-		job_izakaya_worker_add = 200
+		pop_izakaya_worker_bonus_workforce_mult = 0.1
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
@@ -4581,10 +4579,10 @@ thl_leader_trait_izakaya_3 = {
 		TIER = 3
 	}
 	planet_modifier = {
-		job_izakaya_worker_add = 600
+		pop_izakaya_worker_bonus_workforce_mult = 0.3
 	}
 	sector_modifier = {
-		job_izakaya_worker_add = 300
+		pop_izakaya_worker_bonus_workforce_mult = 0.15
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
@@ -4747,11 +4745,11 @@ thl_leader_trait_luck = {
 
 	planet_modifier = {
 		pop_happiness = 0.10
-		trade_value_mult = 0.66
+		planet_jobs_trade_produces_mult = 0.66
 	}
 	sector_modifier = {
 		pop_happiness = 0.05
-		trade_value_mult = 0.33
+		planet_jobs_trade_produces_mult = 0.33
 	}
 	federation_modifier = {
 		federation_experience_add = 1
@@ -4812,13 +4810,13 @@ thl_leader_trait_rabbit_leader_2 = {
 	planet_modifier = {
 		planet_rabbit_produces_mult = 0.4
 		rabbit_empire_size_mult = -0.4
-		pop_growth_speed = 0.2
+		logistic_growth_mult = 0.2
 		pop_housing_usage_mult = -0.2
 	}
 	sector_modifier = {
 		planet_rabbit_produces_mult = 0.2
 		rabbit_empire_size_mult = -0.2
-		pop_growth_speed = 0.1
+		logistic_growth_mult = 0.1
 		pop_housing_usage_mult = -0.1
 	}
 	leader_trait_type = veteran
@@ -4844,13 +4842,13 @@ thl_leader_trait_rabbit_leader_3 = {
 	planet_modifier = {
 		planet_rabbit_produces_mult = 0.6
 		rabbit_empire_size_mult = -0.6
-		pop_growth_speed = 0.3
+		logistic_growth_mult = 0.3
 		pop_housing_usage_mult = -0.3
 	}
 	sector_modifier = {
 		planet_rabbit_produces_mult = 0.3
 		rabbit_empire_size_mult = -0.3
-		pop_growth_speed = 0.15
+		logistic_growth_mult = 0.15
 		pop_housing_usage_mult = -0.15
 	}
 	leader_trait_type = veteran

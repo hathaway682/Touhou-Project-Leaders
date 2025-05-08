@@ -1498,7 +1498,7 @@ miko = {
     }
 
     resources = {
-        category = planet_priests
+        category = planet_bureaucrats
         produces = {
             unity = 4
         }
@@ -1569,7 +1569,7 @@ miko = {
         }
         upkeep = {
             trigger = {
-                moriya_faith_trigger = no
+                moriya_faith_trigger = yes
             }
             consumer_goods = 1
         }
