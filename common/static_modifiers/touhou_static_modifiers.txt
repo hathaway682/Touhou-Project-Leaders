@@ -239,11 +239,7 @@ yuka_terror = {
 
 nuclear_attack_bonus = {
 	ship_weapon_damage = 0.3
-	ship_speed_mult = 0.3
-	ship_evasion_mult = 0.3
-	ship_hull_mult = -0.1
-	ship_armor_mult = -0.1
-	ship_shield_mult = -0.1
+	ship_damage_reduction_add = -0.1
 }
 
 weather_debuff_1 = {

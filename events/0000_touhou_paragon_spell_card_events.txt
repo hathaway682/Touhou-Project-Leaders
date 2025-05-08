@@ -2881,7 +2881,7 @@ country_event = {
             owner = {
                 set_variable = {
                     which = jinx_max
-                    value = prev.trigger:has_skill
+                    value = prev.trigger:has_base_skill
                 }
             }
         }

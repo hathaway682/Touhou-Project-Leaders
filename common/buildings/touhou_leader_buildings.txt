@@ -1343,7 +1343,7 @@ building_posthumous_employment_center = {
 # Galactic Paragons Origin Unique Buildings
 #####################
 
-#TODO：被移除的领导人学院
+#注：建筑已被移除（反正我没在原版看到这个建筑）
 
 #####################
 # Galactic Paragons Buildings
@@ -1831,7 +1831,7 @@ building_izakaya_3 = {
 ###魔法学院
 building_magic_academy = {
 	base_buildtime = @b1_time
-	base_cap_amount = 1
+	empire_limit = 1
 
 	category = unity
 
@@ -1859,16 +1859,16 @@ building_magic_academy = {
 	}
 
 	planet_modifier = {
-		job_magician_add = 300
+		job_magician_add = 1000
 	}
 
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @b1_minerals
+			minerals = 1000
 		}
 		upkeep = {
-			energy = @b1_upkeep
+			energy = 10
 		}
 	}
 

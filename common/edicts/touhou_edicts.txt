@@ -446,7 +446,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 2
+											has_base_skill >= 2
 										}
 									}
 								}
@@ -465,7 +465,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 3
+											has_base_skill >= 3
 										}
 									}
 								}
@@ -484,7 +484,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 4
+											has_base_skill >= 4
 										}
 									}
 								}
@@ -503,7 +503,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 5
+											has_base_skill >= 5
 										}
 									}
 								}
@@ -522,7 +522,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 6
+											has_base_skill >= 6
 										}
 									}
 								}
@@ -541,7 +541,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 7
+											has_base_skill >= 7
 										}
 									}
 								}
@@ -560,7 +560,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 8
+											has_base_skill >= 8
 										}
 									}
 								}
@@ -579,7 +579,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 9
+											has_base_skill >= 9
 										}
 									}
 								}
@@ -598,7 +598,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 10
+											has_base_skill >= 10
 										}
 									}
 								}
@@ -637,7 +637,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 2
+											has_base_skill >= 2
 										}
 									}
 								}
@@ -656,7 +656,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 3
+											has_base_skill >= 3
 										}
 									}
 								}
@@ -675,7 +675,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 4
+											has_base_skill >= 4
 										}
 									}
 								}
@@ -694,7 +694,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 5
+											has_base_skill >= 5
 										}
 									}
 								}
@@ -713,7 +713,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 6
+											has_base_skill >= 6
 										}
 									}
 								}
@@ -732,7 +732,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 7
+											has_base_skill >= 7
 										}
 									}
 								}
@@ -751,7 +751,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 8
+											has_base_skill >= 8
 										}
 									}
 								}
@@ -770,7 +770,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 9
+											has_base_skill >= 9
 										}
 									}
 								}
@@ -789,7 +789,7 @@ time_kill = {
 									root = {
 										any_owned_leader = {
 											has_trait = thl_leader_trait_time
-											has_skill >= 10
+											has_base_skill >= 10
 										}
 									}
 								}
@@ -831,7 +831,7 @@ bat_swarm = {
 	effect = {
 		custom_tooltip = edict_bat_swarm_effect
 		hidden_effect = {
-			#TODO：更新血魔法的献祭机制
+			#TODO：更新血魔法的献祭机制（血液更新）
 			while = {
 				count = 2
 				random_owned_pop_group =  {

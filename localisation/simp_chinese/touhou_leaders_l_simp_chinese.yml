@@ -236,7 +236,7 @@
  touhou_paragon.40300.hire_custom_tooltip:0 "§Y$NAME_Sanae$§!作为一名§H领袖§!加入了我们的帝国。"
 
  thl_leader_trait_miracle:0 "引发奇迹程度的能力"
- thl_leader_trait_miracle_effect:0 "\n将§Y官僚§!建筑替换为§Y寺庙§!，允许在国内建造£building£ §Y守矢分社§!，通过星球决议，£building£§Y守矢分社§!可以在吸引/排斥。不干预风暴之间切换。\n允许使用§Y灰色奇术§!法令，以消耗凝聚力为代价在国内生成一个随机的§Y异常现象§!或触发一个稀有的§Y殖民地事件§!。\n允许科研船操纵恒星系内的一颗恒星来制造一场§Y宇宙风暴§!，等同于§Y星系天气控制§!飞升的效果。\n\n$SECTOR_EFFECTS_TXT$：\n$t$可以在所管辖星系使用特殊的§c奇迹§!决议。\n\n$FLEET_EFFECTS_TXT$：\n$t$太空战斗开始时：\n$tt$将§B穿透现实§!以为星系内所有友方舰队提供§Y60§!天的随机§G战斗优势§!。\n\n$ARMY_EFFECTS_TXT$：\n$t$地面战斗开始时：\n$tt$星球上每个£pop£§Y唯心主义人口§!都会产生§Y2§!队§Y守矢狂热者§!部队加入战斗，若该人口拥有§M灵能§!，将会产生更强的§Y守矢神选者§!。"
+ thl_leader_trait_miracle_effect:0 "\n将§Y官僚§!建筑替换为§Y寺庙§!，允许在国内建造£building£ §Y守矢分社§!，通过星球决议，£building£§Y守矢分社§!可以在吸引/排斥。不干预风暴之间切换。\n允许使用§Y灰色奇术§!法令，以消耗凝聚力为代价在国内生成一个随机的§Y异常现象§!或触发一个稀有的§Y殖民地事件§!。\n允许科研船操纵恒星系内的一颗恒星来制造一场§Y宇宙风暴§!，等同于§Y星系天气控制§!飞升的效果。\n\n$SECTOR_EFFECTS_TXT$：\n$t$可以在所管辖星系使用特殊的§c奇迹§!决议。\n\n$FLEET_EFFECTS_TXT$：\n$t$太空战斗开始时：\n$tt$将§B穿透现实§!以为星系内所有友方舰队提供§Y60§!天的随机§G战斗优势§!。\n\n$ARMY_EFFECTS_TXT$：\n$t$地面战斗开始时：\n$tt$星球上每§Y50§!个£pop£§Y唯心主义人口§!都会产生一队§Y守矢狂热者§!部队加入战斗，若该人口拥有§M灵能§!，将会产生更强的§Y守矢神选者§!。"
  #$t$勘测宜居星球时：\n$tt$为此宜居星球增加一个随机的§Y星球修正§!或§Y稀有星球特征§!。
  thl_leader_trait_miracle_desc:1 "这位领袖可以通过特定的仪式引发低概率事件。"
  thl_leader_trait_common_sense_killer:0 "常识抹杀者"
@@ -1791,10 +1791,10 @@
 
  thl_leader_trait_corpse_travel:0 "带走尸体程度的能力"
  thl_leader_trait_corpse_travel_desc:0 "阿燐推着的车是猫车。你问她在运什么？你一定会想要是不问的话就好了。"
- thl_leader_trait_corpse_travel_effect:0 "被击败的有机体星神兽有机会被复活。\n\n当在战争中击杀敌国£pop£§Y人口§!时：\n该人口的肉体会成为一个§Y僵尸£pop£人口§!并被运输至§H燐§!所在的星球，其灵魂会成为一个§Y怨灵£pop£人口§!并前往§H燐§!所管理星区的随机星球。"
+ thl_leader_trait_corpse_travel_effect:0 "被击败的有机体星神兽有机会被复活。"
  thl_leader_trait_corpse_manipulation:0 "死灰复燃"
  thl_leader_trait_corpse_manipulation_desc:0 "阿燐捕捉和操纵尸体和怨灵的能力可以轻易将大批大批的死者拉起来战斗或工作，亦可以把生者毫无破绽的扮成死者。"
- thl_leader_trait_corpse_manipulation_effect:0 "§H所在星区§!能够建造£building£§Y尸体处理中心§!，这一建筑会利用星球上死去的尸体组装§Y僵尸§!及§Y怨灵§!£pop£人口，同时会将星球的防御部队替换为§Y地狱不死军§!，比通常的§Y不死军§!更加强大。\n存在£building£§Y尸体处理中心§!时，失业的§Y僵尸§!£pop£人口会被§P化学处理§!以产生$r_energy$，导致其人口下降。\n可以在§H所在星球§!或有£building£§Y尸体处理中心§!的星球招募§Y地狱不死军§!。"
+ thl_leader_trait_corpse_manipulation_effect:0 "§H所在星区§!能够建造£building£§Y尸体处理中心§!，这一建筑会利用星球上死去的尸体组装§Y僵尸§!及§Y怨灵§!£pop£人口，同时会将星球的防御部队替换为§Y地狱不死军§!，比通常的§Y不死军§!更加强大。\n存在£building£§Y尸体处理中心§!时，失业的§Y僵尸§!£pop£人口可以进行§P化学处理§!以产生$r_energy$。\n可以在§H所在星球§!或有£building£§Y尸体处理中心§!的星球招募§Y地狱不死军§!。"
  hell_undead:0 "地狱不死军"
  hell_undead_plural:0 "地狱不死军"
  hell_undead_desc:0 "结合了复苏僵尸的无畏和耐性、怨灵的灵活机动与心理战、伪装成死者的生者的战斗技巧与指挥能力，这支部队确实称得上是地狱风格的混编部队。"
@@ -1805,11 +1805,9 @@
  building_corpses_disposal_center:0 "尸体处理中心"
  building_corpses_disposal_center_desc:0 "专属一对一猫车接送服务，一个真正让您死得其所的地方。"
 
- job_corpse_battery:0 "尸体电池"
- job_corpse_battery_plural:0 "尸体电池"
- job_corpse_battery_desc: "他们死后仍然在为我们的国家发光发热。"
-
- KILL_CORPSE_BATTERY:0 "§Y尸体电池正在被利用发电§!"
+ decision_burn_zombies: "尸体发电"
+ decision_burn_zombies_desc: "僵尸躯体僵硬，不能灵活就业，以至于一部分僵尸只能烂在大街上。是时候让他们中的一部分为国家发光发热了。"
+ decision_burn_zombies_tooltip: "星球上规模§H最小§!的僵尸£pop£§I人口组§!会被立刻全部杀死，并产出数值相当于其规模§Y30§!倍的$r_energy$。"
 
  mod_planet_zombie_jobs_produces_mult:0 "僵尸人口产出"
 
@@ -1840,7 +1838,7 @@
 
  thl_leader_trait_nuclear:0 "操控核聚变程度的能力"
  thl_leader_trait_nuclear_desc:0 "八咫乌所拥有的究极力量，便是创造原子的力量，核聚变。核能，曾经留给未来的究极幻想，这股力量为阿空带来的是究极的火力，但其因力量过强常常难以控制。"
- thl_leader_trait_nuclear_effect:0 "\n$t$接战后每周：\n$tt$舰船武器伤害：§G+30%§!\n$tt$舰船速度：§G+30%§!\n$tt$舰船闪避：§G+30%§!\n$tt$船体：§R-10%§!\n$tt$装甲：§R-10%§!\n$tt$护盾：§R-10%§!\n$t$最多叠加§Y9§!层。\n\n允许使用§H地狱的人造太阳§!法令，消耗大量$r_energy$在战场上召唤§H人造太阳§!，其火力强大但仅能固定于一处。\n\n允许使用§H焰星「十凶星」§!法令，消耗大量$r_energy$在§H空§!的舰队中召唤§Y1§!颗§H焰星§!，§H焰星§!可跟随舰队作战但更为脆弱，至多可召唤§Y10§!颗。\n\n允许使用§HAbyss Nova§!法令，消耗巨量$r_energy$和少量$r_dark_matter$引爆§H空§!所在星系的恒星，§P无差别摧毁§!所有§Y星球§!、§Y空间站§!，并迫使§Y舰队§!进入任务中失踪状态。\n\n允许使用§H地狱极乐熔毁§!轰炸姿态，其拥有极其恐怖的破坏力，会将星球转化为§g废土星球§!甚至§P熔融星球§!。"
+ thl_leader_trait_nuclear_effect:0 "\n$t$接战后每周：\n$tt$舰船武器伤害：§G+30%§!\n$tt$所受伤害：§R+10%§!\n\n允许使用§H地狱的人造太阳§!法令，消耗大量$r_energy$在战场上召唤§H人造太阳§!，其火力强大但仅能固定于一处。\n\n允许使用§H焰星「十凶星」§!法令，消耗大量$r_energy$在§H空§!的舰队中召唤§Y1§!颗§H焰星§!，§H焰星§!可跟随舰队作战但更为脆弱，至多可召唤§Y10§!颗。\n\n允许使用§HAbyss Nova§!法令，消耗巨量$r_energy$和少量$r_dark_matter$引爆§H空§!所在星系的恒星，§P无差别摧毁§!所有§Y星球§!、§Y空间站§!，并迫使§Y舰队§!进入任务中失踪状态。\n\n允许使用§H地狱极乐熔毁§!轰炸姿态，其拥有极其恐怖的破坏力，会将星球转化为§g废土星球§!甚至§P熔融星球§!。"
  thl_leader_trait_fusion_energy:0 "梦幻般的能源"
  thl_leader_trait_fusion_energy_desc:0 "对阿空操控核聚变能力的研究能够改善我们国家的反应堆的结构，以提高我们战舰及发电厂的效率。"
  thl_leader_trait_fusion_energy_effect:0 "允许使用§H地热「核焰喷涌」§!星球决议在境内星球制造地热裂缝，提供额外的£district£§Y发电区划§!上限。\n允许通过一个议程提前获得£engineering_research£§Y戴森球§!科研选项。"

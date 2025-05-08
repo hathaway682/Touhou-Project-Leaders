@@ -309,7 +309,7 @@ should_count_towards_leader_cap = {
 		has_touhou_leader_trait = yes
 		AND = {
 			has_trait_tier1or2 = { TRAIT = leader_trait_eager }
-			has_skill < 4
+			has_base_skill < 4
 		}
 	}
 }
@@ -376,7 +376,7 @@ should_count_towards_leader_cap = {
 		has_trait = leader_trait_rift_warped
 		AND = {
 			has_trait_tier1or2 = { TRAIT = leader_trait_eager }
-			has_skill < 4
+			has_base_skill < 4
 		}
 		AND = {
 			is_ruler = yes
@@ -404,5 +404,3 @@ will_leader_survive = {
 		thl_is_immortal_akyuu = yes
 	}
 }
-
-#TODO：将烧尸体发电改为决议

@@ -200,7 +200,7 @@ kappa_enclave_init = {
 							trait = trait_wet_planet_preference
 							trait = trait_sanae_robot_worker
 							trait = trait_robot_history_warbot
-							trait = trait_robot_integrated_weaponry
+							#trait = trait_robot_integrated_weaponry
 							trait = trait_auto_mod_robotic
 						}
 						effect = {

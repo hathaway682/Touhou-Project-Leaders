@@ -31,7 +31,7 @@ strike_craft_component_template = {
 	accuracy = 1.00
 	tracking = 1.00
 
-	health = 150
+	health = 200
 	armor = 200
 	shield = 200
 	evasion = 0.95
@@ -271,7 +271,7 @@ weapon_component_template = {
 	icon_frame = 1
 
 	firing_arc = 25.0
-	use_ship_kill_target = no
+	use_ship_main_target = no
 
 	prerequisites = { "tech_master_spark" }
 	component_set = "MASTER_SPARK"
@@ -309,6 +309,9 @@ weapon_component_template = {
 	target_weights = {
 		titan = 3
 		battleship = 2
+		stinger_stage_1 = 1.5
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	ai_weight = {
@@ -329,7 +332,7 @@ weapon_component_template = {
 	icon_frame = 1
 
 	firing_arc = 360.0
-	use_ship_kill_target = no
+	use_ship_main_target = no
 	hidden = yes
 
 	projectile_gfx = "Masterspark_projectile"
@@ -347,14 +350,17 @@ weapon_component_template = {
 
 	windup = { min = 160.0 max = 200.0 }
 
-	range = 500
+	range = 1000
 
 	accuracy = 0.95
 	tracking = 0.25
 
 	target_weights = {
-		titan = 3
-		battleship = 2
+		titan = 9
+		battleship = 4
+		stinger_stage_1 = 2.25
+		stinger_stage_2 = 4
+		stinger_stage_3 = 4
 	}
 
 	ai_weight = {
@@ -375,7 +381,7 @@ weapon_component_template = {
 	icon_frame = 1
 
 	firing_arc = 25.0
-	use_ship_kill_target = no
+	use_ship_main_target = no
 
 	tags = { weapon_type_energy weapon_role_artillery t_slot }
 
@@ -412,6 +418,9 @@ weapon_component_template = {
 	target_weights = {
 		titan = 3
 		battleship = 2
+		stinger_stage_1 = 1.5
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	ai_weight = {
@@ -432,7 +441,7 @@ weapon_component_template = {
 	icon_frame = 1
 
 	firing_arc = 360.0
-	use_ship_kill_target = no
+	use_ship_main_target = no
 	hidden = yes
 
 	tags = { weapon_type_energy weapon_role_artillery t_slot }
@@ -448,14 +457,17 @@ weapon_component_template = {
 
 	windup = { min = 280.0 max = 320.0 }
 
-	range = 500
+	range = 1000
 
 	accuracy = 0.95
 	tracking = 0.25
 
 	target_weights = {
-		titan = 3
-		battleship = 2
+		titan = 9
+		battleship = 4
+		stinger_stage_1 = 2.25
+		stinger_stage_2 = 4
+		stinger_stage_3 = 4
 	}
 
 	ai_weight = {
@@ -525,7 +537,7 @@ weapon_component_template = {
 	icon_frame = 1
 
 	firing_arc = 10.0
-	use_ship_kill_target = no
+	use_ship_main_target = no
 
 	hidden = yes
 	projectile_gfx = "Masterspark_projectile"

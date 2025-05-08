@@ -1,7 +1,6 @@
 @base_cost = 300
 @city_cost = 500
 
-#TODO：将区划改成区域
 # district_garden = {
 # 	base_buildtime = 240
 # 	icon = district_farming

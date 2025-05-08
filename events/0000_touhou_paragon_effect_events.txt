@@ -2694,8 +2694,8 @@ planet_event = {
                     ideal_planet_class = root
                     trait = trait_mechanical
                     trait = trait_sanae_robot_worker
-                    trait = trait_robot_history_warbot #没有意义
-                    trait = trait_robot_integrated_weaponry #但很酷
+                    trait = trait_robot_history_warbot #没有意义，但很酷
+                    #trait = trait_robot_integrated_weaponry 这个会加执法者权重，还是不搞了
                     trait = trait_auto_mod_robotic
                 }
                 effect = {
@@ -3876,12 +3876,12 @@ country_event = {
             resource_stockpile_compare = {
                 resource = energy
                 value >= 2000
-                mult = From.trigger:has_skill
+                mult = From.trigger:has_base_skill
             }
         }
         add_resource = {
             energy = -2000
-            mult = From.trigger:has_skill
+            mult = From.trigger:has_base_skill
         }
         custom_tooltip = deal_and_revive
         hidden_effect = {
@@ -3899,7 +3899,7 @@ country_event = {
     }
 }
 
-#TODO：恢复灵魂掠夺轰炸
+#TODO：恢复灵魂掠夺轰炸（灵魂更新）
 # pop_event = {
 #     id = touhou_paragon_effect.601
 #     hide_window = yes
@@ -4286,7 +4286,7 @@ leader_event = {
                 leader_trait_surveyor = { add_trait = leader_trait_surveyor }
                 leader_trait_repair_crew = { add_trait = leader_trait_repair_crew }
                 leader_trait_robotist = { add_trait = leader_trait_robotist }
-                thl_leader_trait_knowledge_for_the_masses = { add_trait = thl_leader_trait_knowledge_for_the_masses }
+                # thl_leader_trait_knowledge_for_the_masses = { add_trait = thl_leader_trait_knowledge_for_the_masses }
             }
         }
     }
@@ -5318,17 +5318,9 @@ fleet_event = {
             limit = {
                 is_in_combat = yes
             }
-            if = {
-                limit = {
-                    check_variable = {
-                        which = nuclear_battle_buff
-                        value < 9
-                    }
-                }
-                change_variable = {
-                    which = nuclear_battle_buff
-                    value = 1
-                }
+            change_variable = {
+                which = nuclear_battle_buff
+                value = 1
             }
             remove_modifier = nuclear_attack_bonus
             add_modifier = {
@@ -5710,7 +5702,82 @@ planet_event = {
                 save_event_target_as = moriya_attacker
             }
         }
-        #TODO：重写早苗召唤军队机制
+        #狂热
+        export_trigger_value_to_variable = {
+            trigger = count_owned_pop_amount
+            parameters = {
+                limit = {
+                    OR = {
+                        pop_group_has_ethic = ethic_fanatic_spiritualist
+                        pop_group_has_ethic = ethic_spiritualist
+                    }
+                    NOR = {
+                        has_trait = trait_latent_psionic
+                        has_trait = trait_psionic
+                    }
+                }
+            }
+            variable = moriya_army_var
+        }
+        divide_variable = {
+            which = moriya_army_var
+            value = 50
+        }
+        ceiling_variable = moriya_army_var
+        while = {
+            count = moriya_army_var
+            weighted_random_owned_pop_group = {
+                limit = {
+                    is_enslaved = yes
+                }
+                save_event_target_as = moriya_army_pop
+            }
+            create_army = {
+                name = random
+                owner = FROM
+                species = event_target:moriya_army_pop
+                type = "moriya_army"
+            }
+        }
+        clear_variable = moriya_army_var
+        #神选
+        export_trigger_value_to_variable = {
+            trigger = count_owned_pop_amount
+            parameters = {
+                limit = {
+                    OR = {
+                        pop_group_has_ethic = ethic_fanatic_spiritualist
+                        pop_group_has_ethic = ethic_spiritualist
+                    }
+                    OR = {
+                        has_trait = trait_latent_psionic
+                        has_trait = trait_psionic
+                    }
+                }
+            }
+            variable = moriya_chosen_army_var
+        }
+        divide_variable = {
+            which = moriya_chosen_army_var
+            value = 50
+        }
+        ceiling_variable = moriya_chosen_army_var
+        while = {
+            count = moriya_chosen_army_var
+            weighted_random_owned_pop_group = {
+                limit = {
+                    is_enslaved = yes
+                }
+                save_event_target_as = moriya_chosen_army_pop
+            }
+            create_army = {
+                name = random
+                owner = FROM
+                species = event_target:moriya_chosen_army_pop
+                type = "moriya_chosen_army"
+            }
+        }
+        clear_variable = moriya_chosen_army_var
     }
 }
 
@@ -7241,7 +7308,7 @@ country_event = {
         add_resource = { 
             influence = 250
         }
-        add_resource = { 
+        add_resource = {
             influence = 500
         }
     }

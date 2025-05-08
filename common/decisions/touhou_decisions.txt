@@ -2403,7 +2403,7 @@ decision_suika_transform_fog = {
 							assign_leader = prev
 							add_modifier = {
 								modifier = suika_fleet_bonus
-								multiplier = prev.trigger:has_skill
+								multiplier = prev.trigger:has_base_skill
 							}
 						}
 					}
@@ -2605,7 +2605,7 @@ decision_suika_transform_giant_to_fog = {
 							assign_leader = prev
 							add_modifier = {
 								modifier = suika_fleet_bonus
-								multiplier = prev.trigger:has_skill
+								multiplier = prev.trigger:has_base_skill
 							}
 						}
 					}
@@ -2866,4 +2866,64 @@ decision_rabbit_hole = {
 	ai_weight = {
 		weight = 0
 	}
+}
+
+decision_burn_zombies = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = descision_progenitor_empty
+
+	potential = {
+		has_building = building_corpses_disposal_center
+	}
+
+	allow = {
+		any_owned_pop_group = {
+			pop_group_has_trait = trait_zombie
+			OR = {
+				is_pop_category = civilian
+				is_unemployed = yes
+			}
+		}
+	}
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_burn_zombies_tooltip
+		hidden_effect = {
+			ordered_owned_pop_group = {
+				limit = {
+					pop_group_has_trait = trait_zombie
+					OR = {
+						is_pop_category = civilian
+						is_unemployed = yes
+					}
+				}
+				position = 0
+				order_by = trigger:pop_group_size
+				inverse = yes
+				export_trigger_value_to_variable = {
+					trigger = pop_group_size
+					variable = pop_energy
+				}
+				multiply_variable = {
+					which = pop_energy
+					value = 30
+				}
+				from = {
+					add_resource = {
+						energy = 1
+						multiplier = prev.pop_energy
+					}
+				}
+				clear_variable = pop_energy
+				kill_all_pop = yes
+			}
+		}
+	}
+
+	enactment_time = 1
 }

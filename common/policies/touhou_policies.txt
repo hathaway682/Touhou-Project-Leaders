@@ -169,7 +169,7 @@ food_policy = {
                 text = level_3_aki
                 any_owned_leader = {
                     has_trait = leader_trait_harvest
-                    has_skill >= 3
+                    has_base_skill >= 3
                 }
             }
         }
@@ -195,7 +195,7 @@ food_policy = {
                 text = level_6_aki
                 any_owned_leader = {
                     has_trait = leader_trait_harvest
-                    has_skill >= 6
+                    has_base_skill >= 6
                 }
             }
         }
@@ -221,7 +221,7 @@ food_policy = {
                 text = level_10_aki
                 any_owned_leader = {
                     has_trait = leader_trait_harvest
-                    has_skill >= 10
+                    has_base_skill >= 10
                 }
             }
         }

@@ -595,7 +595,7 @@ country_event = {
 		count_owned_leader = {
 			limit = {
 				is_councilor = yes
-				has_skill >= 8
+				has_base_skill >= 8
 			}
 			count >= 5
 		}

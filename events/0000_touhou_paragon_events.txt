@@ -39,7 +39,7 @@ country_event = {
 			}
 			or = {
 				has_total_skill >= 4
-				#has_skill >= 4
+				#has_base_skill >= 4
 				is_ruler = yes
 				has_leader_flag = renowned_leader
 				has_leader_flag = legendary_leader
@@ -104,19 +104,19 @@ country_event = {
 				# Increase chance for leaders of higher level
 				modifier = {
 					add = 10
-					from = { has_base_skill >= 4 } #has_skill >= 4 }
+					from = { has_base_skill >= 4 } #has_base_skill >= 4 }
 				}
 				modifier = {
 					add = 20
-					from = { has_base_skill >= 6 } #has_skill >= 6 }
+					from = { has_base_skill >= 6 } #has_base_skill >= 6 }
 				}
 				modifier = {
 					add = 30
-					from = { has_base_skill >= 8 } #has_skill >= 8 }
+					from = { has_base_skill >= 8 } #has_base_skill >= 8 }
 				}
 				modifier = {
 					add = 40
-					from = { has_base_skill >= 10 } #has_skill >= 10 }
+					from = { has_base_skill >= 10 } #has_base_skill >= 10 }
 				}
 
 				# Increase chance for leaders that have served the country for a long time
@@ -2643,21 +2643,15 @@ country_event = { # 爱丽丝
 				}
 			}
 			capital_scope = {
+				add_building = building_doll_assembly_plant
 				create_pop_group = {
 					species = last_created_species
 					size = 1
 				}
-			}
-			set_built_species = last_created_species
-			set_variable = {
-				which = test
-				value = value:doll_missing_per_maker
+				set_built_species = last_created_species
 			}
 		}
 		add_research_option = tech_magic_dolls
-		capital_scope = {
-			add_building = building_doll_assembly_plant
-		}
 	}
 }
 

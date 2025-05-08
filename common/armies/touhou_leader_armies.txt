@@ -546,19 +546,15 @@ magician_army = {
 		category = armies
 
 		cost = {
-			astral_threads = 15
 			minerals = 600
 		}
 		upkeep = {
 			energy = 5
-			astral_threads = 0.5
 		}
 	}
 
 	potential = {
-		from = {
-			has_trait = trait_thl_magician
-		}
+		has_building = building_magic_academy
 	}
 }
 

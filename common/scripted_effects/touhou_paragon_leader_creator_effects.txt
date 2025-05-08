@@ -1080,31 +1080,6 @@ add_mystia_traits = {
 	add_trait = leader_trait_micromanager
 }
 
-create_mystia_leader = {
-	thl_leader_creator_core = {
-		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-		LEADER_PORTRAIT = x3
-		CLASS = commander
-		NAME = NAME_Mystia
-		LEVEL = 2
-		GENDER = female
-		IMMORTAL = no
-		ETHIC = xenophile
-		DESC = mystia1
-		CATCH_PHRASE =  mystia1_catch_phrase
-		TRAIT_GROUP = mystia
-	}
-}
-
-add_mystia_traits = {
-	add_trait = subclass_commander_governor
-	add_trait = thl_leader_trait_song
-	add_trait = leader_trait_bellicose
-	add_trait = thl_leader_trait_izakaya
-	add_trait = thl_leader_trait_youkai_punk
-	add_trait = leader_trait_micromanager
-}
-
 create_tewi_leader = {
 	thl_leader_creator_core = {
 		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4

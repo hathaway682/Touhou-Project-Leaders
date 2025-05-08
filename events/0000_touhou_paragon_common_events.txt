@@ -1607,7 +1607,7 @@ country_event = {
 		from = {
 			exists = owner
 			has_trait = thl_leader_trait_magic
-			has_skill >= 10
+			has_base_skill >= 10
 		}
 	}
 
@@ -1620,22 +1620,68 @@ country_event = {
 	}
 }
 
-#TODO：将魔法使转换改为领袖版
+country_event = {
+	id = touhou_paragon.40722
+	hide_window = yes
+	is_triggered_only = yes
 
-planet_event = {
+	trigger = {
+		any_owned_planet = {
+			has_building = building_magic_academy
+		}
+	}
+
+	immediate = {
+		random_owned_leader = {
+			limit = {
+				is_event_leader = no
+				NOR = {
+					has_trait = thl_leader_trait_magician
+					has_trait = thl_leader_trait_great_magician
+				}
+			}
+			save_event_target_as = magician_leader
+			add_trait = thl_leader_trait_magician
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = ingore_magician_event
+				}
+			}
+			country_event = {
+				id = touhou_paragon.40725
+			}
+		}
+	}
+}
+
+country_event = {
 	id = touhou_paragon.40723
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		from.species = {
-			has_trait = trait_thl_magician
+		any_owned_planet = {
+			has_building = building_magic_academy
+		}
+		from = {
+			is_event_leader = no
+			NOR = {
+				has_trait = thl_leader_trait_magician
+				has_trait = thl_leader_trait_great_magician
+			}
 		}
 	}
 
 	immediate = {
 		from = {
-			add_trait = thl_leader_trait_magician
+			random_list = {
+				80 = {}
+				20 = {
+					add_trait = thl_leader_trait_magician
+				}
+			}
 		}
 	}
 }
@@ -1651,14 +1697,69 @@ country_event = {
 				has_trait = thl_leader_trait_magic
 			}
 			has_trait = thl_leader_trait_magician
-			has_skill >= 10
+			has_base_skill >= 10
 		}
 	}
 
 	immediate = {
 		from = {
+			save_event_target_as = magician_leader
 			remove_trait = thl_leader_trait_magician
 			add_trait = thl_leader_trait_great_magician
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = ingore_great_magician_event
+				}
+			}
+			country_event = {
+				id = touhou_paragon.40726
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40725
+	title = touhou_paragon.40725.name
+	desc = touhou_paragon.40725.desc
+	picture = GFX_evt_marisa_immortal
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		custom_tooltip = touhou_paragon.40725.tooltip
+	}
+
+	option = {
+		name = touhou_paragon.40725.ingore
+		custom_tooltip = touhou_paragon.40725.tooltip
+		hidden_effect = {
+			set_country_flag = ingore_magician_event
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40726
+	title = touhou_paragon.40726.name
+	desc = touhou_paragon.40726.desc
+	picture = GFX_evt_marisa_immortal
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		custom_tooltip = touhou_paragon.40726.tooltip
+	}
+
+	option = {
+		name = touhou_paragon.40725.ingore
+		custom_tooltip = touhou_paragon.40726.tooltip
+		hidden_effect = {
+			set_country_flag = ingore_great_magician_event
 		}
 	}
 }
