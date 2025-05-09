@@ -96,6 +96,7 @@ country_event = {
 			amount = 1
 		}
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_adm.1
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_adm.2
@@ -103,6 +104,7 @@ country_event = {
 				desc = "touhou_sanae_mission_chain_adm_2_desc"
 				event_chain = "touhou_sanae_mission_chain"
 			}
+
 		}
 	}
 }
@@ -122,7 +124,7 @@ country_event = {
 		}
 		OR = {
 			used_naval_capacity_percent >= 0.85
-			max_naval_capacity >= 3000
+			max_naval_capacity >= 2000
 		}
 		#check_variable_arithmetic = {
 		#	which = used_naval_capacity_integer
@@ -146,6 +148,7 @@ country_event = {
 			amount = 1
 		}
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_mil.1
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_mil.2
@@ -216,55 +219,55 @@ country_event = {
 				min = @tier2researchmin
 				max = @tier2researchmax
 			}
-			else_if = {
-				limit = {
-					NOR = {
-						has_ethic = "ethic_gestalt_consciousness"
-						is_individual_machine = yes
-					}
-					NOT = {has_technology = tech_droid_workers}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_ethic = "ethic_gestalt_consciousness"
+					is_individual_machine = yes
 				}
-				add_tech_progress = {
-					tech = tech_droid_workers
-					progress = 0.25
-				}
+				NOT = { has_technology = tech_droid_workers }
 			}
-			else_if = {
-				limit = {
-					OR = {
-						has_ethic = "ethic_gestalt_consciousness"
-						is_individual_machine = yes
-					}
-					has_technology = tech_robomodding_m
-				}
-				add_monthly_resource_mult = {
-					resource = engineering_research
-					value = @tier2researchreward
-					min = @tier2researchmin
-					max = @tier2researchmax
-				}
-			}
-			else_if = {
-				limit = {
-					OR = {
-						has_ethic = "ethic_gestalt_consciousness"
-						is_individual_machine = yes
-					}
-					NOT = { has_technology = tech_robomodding_m}
-				}
-				add_tech_progress = {
-					tech = tech_robomodding_m
-					progress = 0.25
-				}
+			add_tech_progress = {
+				tech = tech_droid_workers
+				progress = 0.25
 			}
 		}
-
+		else_if = {
+			limit = {
+				OR = {
+					has_ethic = "ethic_gestalt_consciousness"
+					is_individual_machine = yes
+				}
+				has_technology = tech_robomodding_m
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_ethic = "ethic_gestalt_consciousness"
+					is_individual_machine = yes
+				}
+				NOT = { has_technology = tech_robomodding_m }
+			}
+			add_tech_progress = {
+				tech = tech_robomodding_m
+				progress = 0.25
+			}
+		}
 		add_event_chain_counter = {
 			event_chain = "touhou_sanae_mission_chain"
 			counter = "touhou_sanae_mission_counter"
 			amount = 1
 		}
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_tech.1
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_tech.2
@@ -310,6 +313,7 @@ country_event = {
 			amount = 1
 		}
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_faith.1
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_faith.2
@@ -368,6 +372,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_adm.2
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_adm.3
@@ -399,7 +404,7 @@ country_event = {
 			}
 			any_spynetwork = {
 				owner = { is_same_value = root }
-				is_spynetwork_level > 60
+				is_spynetwork_level > 10
 			}
 			num_defensive_pacts >= 3
 		}
@@ -446,6 +451,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_mil.2
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_mil.3
@@ -499,6 +505,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_tech.2
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_tech.3
@@ -543,6 +550,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_faith.2
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_faith.3
@@ -626,6 +634,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_faith.2
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_faith.3
@@ -694,6 +703,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_adm.3
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_adm.4
@@ -845,6 +855,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_mil.3
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_mil.4
@@ -882,6 +893,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_tech.3
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_tech.4
@@ -943,6 +955,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_faith.3
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_faith.4
@@ -993,6 +1006,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_adm.4
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_adm.5
@@ -1085,6 +1099,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_mil.4
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_mil.5
@@ -1144,6 +1159,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_tech.4
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_tech.5
@@ -1201,6 +1217,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_faith.4
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_faith.5
@@ -1378,6 +1395,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_adm.5
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_adm.finish
@@ -1523,6 +1541,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_mil.5
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_mil.finish
@@ -1667,6 +1686,7 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_tech.5
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_tech.finish
@@ -2011,6 +2031,7 @@ country_event = {
 
 	after = {
 		hidden_effect = {
+			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_faith.5
 			create_point_of_interest = {
 				id = touhou_sanae_mission_chain_faith.finish
@@ -2046,11 +2067,35 @@ country_event = {
 		has_point_of_interest = {
 			poi = touhou_sanae_mission_chain_faith.finish
 		}
+		any_owned_leader = {
+			OR = {
+				has_trait = thl_leader_trait_snake_bless
+				has_trait = thl_leader_trait_snake_bless_2
+				has_trait = thl_leader_trait_snake_bless_3
+			}
+			OR = {
+				has_trait = thl_leader_trait_frog_bless
+				has_trait = thl_leader_trait_frog_bless_2
+				has_trait = thl_leader_trait_frog_bless_3
+			}
+		}
 	}
 	option = {
 		name = touhou_paragon_mission.40325.a
 		every_owned_leader = {
-			limit = { has_trait = thl_leader_trait_miracle }
+			limit = {
+				has_trait = thl_leader_trait_miracle
+				OR = {
+					has_trait = thl_leader_trait_snake_bless
+					has_trait = thl_leader_trait_snake_bless_2
+					has_trait = thl_leader_trait_snake_bless_3
+				}
+				OR = {
+					has_trait = thl_leader_trait_frog_bless
+					has_trait = thl_leader_trait_frog_bless_2
+					has_trait = thl_leader_trait_frog_bless_3
+				}
+			}
 			if = {
 				limit = {
 					has_trait = thl_leader_trait_snake_bless
@@ -2087,7 +2132,8 @@ country_event = {
 				}
 				remove_trait = thl_leader_trait_frog_bless_3
 			}
-			add_trait = leader_trait_sanae_complete
+			remove_trait = thl_leader_trait_sanae_phase4
+			add_trait = thl_leader_trait_sanae_complete
 			if = {
 				limit = {
 					has_trait = thl_leader_trait_regeneration

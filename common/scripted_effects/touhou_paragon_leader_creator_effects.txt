@@ -216,6 +216,7 @@ add_sanae_traits = {
 	add_trait = leader_trait_reckless_2
 	add_trait = thl_leader_trait_regeneration
 	add_trait = thl_leader_trait_miracle
+	add_trait = thl_leader_trait_sanae_phase0
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = sanae_leader

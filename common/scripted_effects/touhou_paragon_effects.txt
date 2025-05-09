@@ -2388,3 +2388,320 @@ moriya_storm_apply_deposits = {
 		}
 	}
 }
+
+update_sanae_phase_trait = {
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_adm.1
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.1
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_mil.1
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.1
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_tech.1
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.1
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_faith.1
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.1
+						}
+					}
+				}
+			}
+		}
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_miracle
+			}
+			remove_trait = thl_leader_trait_sanae_phase0
+			add_trait = thl_leader_trait_sanae_phase1
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_sanae_phase1
+			}
+			OR = {
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_adm.2
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.2
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_mil.2
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.2
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_tech.2
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.2
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_faith.2
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.2
+						}
+					}
+				}
+			}
+		}
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_miracle
+			}
+			add_trait = thl_leader_trait_sanae_phase2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_sanae_phase2
+			}
+			OR = {
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_adm.3
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.3
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_mil.3
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.3
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_tech.3
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.3
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_faith.3
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.3
+						}
+					}
+				}
+			}
+		}
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_miracle
+			}
+			add_trait = thl_leader_trait_sanae_phase3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_sanae_phase3
+			}
+			OR = {
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_adm.4
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.4
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_mil.4
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.4
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_tech.4
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.4
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_faith.4
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.4
+						}
+					}
+				}
+			}
+		}
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_miracle
+			}
+			add_trait = thl_leader_trait_sanae_phase4
+		}
+	}
+}

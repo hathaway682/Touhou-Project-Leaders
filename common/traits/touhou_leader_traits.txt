@@ -432,7 +432,7 @@ thl_leader_trait_common_sense_killer = {
 	councilor_modifier = {
 		category_psionics_draw_chance_mult = 1
 		num_tech_alternatives_add = 1
-		scientist_exp_gain = 0.14
+		#scientist_exp_gain = 0.14
 	}
 	leader_class = { commander }
 	selectable_weight = {
@@ -4746,9 +4746,36 @@ thl_leader_trait_youkai_punk_3 = {
 	}
 }
 
-thl_leader_trait_sanae_phase1 = {
+thl_leader_trait_sanae_phase0 = {
 	inline_script = {
-		script = trait/icon_psionic
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_insightful"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = {
+			always = yes
+		}
+		leader_lifespan_add = 1
+		species_leader_exp_gain = 0.01
+		leader_trait_selection_options_add = 1
+	}
+	custom_tooltip_with_modifiers = thl_leader_trait_sanae_phase_tooltip
+	leader_class = { commander }
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+thl_leader_trait_sanae_phase1 = {
+	on_gained_effect = {
+		remove_trait = thl_leader_trait_sanae_phase0
+	}
+	inline_script = {
+		script = trait/icon
 		CLASS = leader
 		ICON = "GFX_leader_trait_insightful"
 		RARITY = common
@@ -4759,10 +4786,11 @@ thl_leader_trait_sanae_phase1 = {
 		potential = {
 			always = yes
 		}
-		leader_lifespan_add = 14
-		species_leader_exp_gain = 0.14
+		leader_lifespan_add = 6
+		species_leader_exp_gain = 0.06
 		leader_trait_selection_options_add = 1
 	}
+	custom_tooltip_with_modifiers = thl_leader_trait_sanae_phase_tooltip
 	leader_class = { commander }
 	selectable_weight = {
 		weight = 0
@@ -4771,7 +4799,7 @@ thl_leader_trait_sanae_phase1 = {
 
 thl_leader_trait_sanae_phase2 = {
 	inline_script = {
-		script = trait/icon_psionic
+		script = trait/icon
 		CLASS = leader
 		ICON = "GFX_leader_trait_insightful"
 		RARITY = common
@@ -4785,10 +4813,11 @@ thl_leader_trait_sanae_phase2 = {
 		potential = {
 			always = yes
 		}
-		leader_lifespan_add = 28
-		species_leader_exp_gain = 0.28
+		leader_lifespan_add = 18
+		species_leader_exp_gain = 0.18
 		leader_trait_selection_options_add = 1
 	}
+	custom_tooltip_with_modifiers = thl_leader_trait_sanae_phase_tooltip
 	leader_class = { commander }
 	selectable_weight = {
 		weight = 0
@@ -4800,7 +4829,7 @@ thl_leader_trait_sanae_phase3 = {
 		remove_trait = thl_leader_trait_sanae_phase2
 	}
 	inline_script = {
-		script = trait/icon_psionic
+		script = trait/icon
 		CLASS = leader
 		ICON = "GFX_leader_trait_insightful"
 		RARITY = common
@@ -4811,10 +4840,11 @@ thl_leader_trait_sanae_phase3 = {
 		potential = {
 			always = yes
 		}
-		leader_lifespan_add = 42
-		species_leader_exp_gain = 0.42
+		leader_lifespan_add = 40
+		species_leader_exp_gain = 0.40
 		leader_trait_selection_options_add = 1
 	}
+	custom_tooltip_with_modifiers = thl_leader_trait_sanae_phase_tooltip
 	leader_class = { commander }
 	selectable_weight = {
 		weight = 0
@@ -4837,10 +4867,11 @@ thl_leader_trait_sanae_phase4 = {
 		potential = {
 			always = yes
 		}
-		leader_lifespan_add = 57
-		species_leader_exp_gain = 0.57
+		leader_lifespan_add = 75
+		species_leader_exp_gain = 0.75
 		leader_trait_selection_options_add = 1
 	}
+	custom_tooltip_with_modifiers = thl_leader_trait_sanae_phase_tooltip
 	leader_class = { commander }
 	selectable_weight = {
 		weight = 0
@@ -4851,6 +4882,7 @@ thl_leader_trait_sanae_complete = {
 	on_gained_effect = {
 		remove_trait = thl_leader_trait_sanae_phase4
 	}
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon_psionic
 		CLASS = leader
@@ -4888,8 +4920,8 @@ thl_leader_trait_sanae_complete = {
 		potential = {
 			always = yes
 		}
-		leader_lifespan_add = 71.4285
-		species_leader_exp_gain = 0.714285
+		leader_lifespan_add = 126
+		species_leader_exp_gain = 1.26
 		leader_trait_selection_options_add = 1
 	}
 	leader_class = { commander }
