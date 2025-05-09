@@ -248,8 +248,8 @@ pox = {
 		modifier = {
 			factor = 0
 			OR = {
-				pop_has_trait = trait_machine_unit
-				pop_has_trait = trait_mechanical
+				pop_group_has_trait = trait_machine_unit
+				pop_group_has_trait = trait_mechanical
 			}
 		}
 	}
@@ -358,8 +358,8 @@ wither = {
 		modifier = {
 			factor = 0
 			OR = {
-				pop_has_trait = trait_machine_unit
-				pop_has_trait = trait_mechanical
+				pop_group_has_trait = trait_machine_unit
+				pop_group_has_trait = trait_mechanical
 			}
 		}
 	}

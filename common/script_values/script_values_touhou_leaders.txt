@@ -91,13 +91,6 @@ tree_army_value = {
 		}
 		mode = add
 	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_garden
-		}
-		mode = add
-	}
 }
 
 death_age = {
@@ -128,10 +121,11 @@ touhou_leader_lower_chance = {
 	mult = paragon_chance_negative
 }
 
-touhou_building_moriya_shrine_counter = {
-	base = 0
-	mult = value:b
-}
+#这啥？
+# touhou_building_moriya_shrine_counter = {
+# 	base = 0
+# 	mult = value:b
+# }
 
 touhou_leader_id = {
 	base = 0
