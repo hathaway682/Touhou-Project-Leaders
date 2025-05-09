@@ -2643,13 +2643,12 @@ country_event = { # 爱丽丝
 				}
 			}
 			capital_scope = {
-				add_building = building_doll_assembly_plant
 				create_pop_group = {
 					species = last_created_species
 					size = 1
 				}
-				set_built_species = last_created_species
 			}
+			set_built_species = last_created_species
 		}
 		add_research_option = tech_magic_dolls
 	}
