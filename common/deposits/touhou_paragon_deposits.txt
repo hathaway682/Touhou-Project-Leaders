@@ -310,7 +310,7 @@ d_hifuu_habitat_research = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_add = 200
+			job_biologist_add = 200
 		}
 	}
 
@@ -320,7 +320,7 @@ d_hifuu_habitat_research = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_add = 200
+			job_brain_drone_biologist_add = 200
 		}
 	}
 
@@ -330,7 +330,7 @@ d_hifuu_habitat_research = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculator_add = 200
+			job_calculator_biologist_add = 200
 		}
 	}
 }

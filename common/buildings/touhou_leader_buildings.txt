@@ -241,10 +241,12 @@ building_moriya_shrine = {
 	}
 
 	triggered_planet_modifier = {
-		planet_researchers_unity_produces_add = 2
-		planet_priests_physics_research_produces_add = 2
-		planet_priests_society_research_produces_add = 2
-		planet_priests_engineering_research_produces_add = 2
+		planet_physicists_unity_produces_add = 2
+		planet_engineer_unity_produces_add = 2
+		planet_biologist_unity_produces_add = 2
+		planet_bureaucrats_physics_research_produces_add = 2
+		planet_bureaucrats_society_research_produces_add = 2
+		planet_bureaucrats_engineering_research_produces_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -345,10 +347,12 @@ holding_building_moriya_shrine = {
 	}
 
 	triggered_planet_modifier = {
-		planet_researchers_unity_produces_add = 2
-		planet_priests_physics_research_produces_add = 2
-		planet_priests_society_research_produces_add = 2
-		planet_priests_engineering_research_produces_add = 2
+		planet_physicists_unity_produces_add = 2
+		planet_engineer_unity_produces_add = 2
+		planet_biologist_unity_produces_add = 2
+		planet_bureaucrats_physics_research_produces_add = 2
+		planet_bureaucrats_society_research_produces_add = 2
+		planet_bureaucrats_engineering_research_produces_add = 2
 	}
 
 	triggered_desc = {
@@ -583,8 +587,8 @@ building_water_catalyst = {
 	}
 
 	triggered_planet_modifier = {
-		planet_artisans_consumer_goods_produces_add = 3
-		planet_artisans_minerals_upkeep_add = 3
+		planet_artisans_consumer_goods_produces_add = 4
+		planet_artisans_minerals_upkeep_add = 4
 	}
 }
 
@@ -665,7 +669,7 @@ building_metel_catalyst = {
 
 	triggered_planet_modifier = {
 		planet_metallurgists_alloys_produces_add = 2
-		planet_metallurgists_minerals_upkeep_add = 3
+		planet_metallurgists_minerals_upkeep_add = 4
 	}
 }
 
@@ -746,7 +750,7 @@ building_sun_catalyst = {
 	}
 
 	triggered_planet_modifier = {
-		planet_administrators_unity_produces_add = 1
+		planet_bureaucrats_unity_produces_add = 2
 	}
 }
 
@@ -786,9 +790,9 @@ building_luna_catalyst = {
 	}
 
 	triggered_planet_modifier = {
-		planet_researchers_physics_research_produces_add = 1
-		planet_researchers_society_research_produces_add = 1
-		planet_researchers_engineering_research_produces_add = 1
+		planet_physicist_physics_research_produces_add = 2
+		planet_researchers_society_research_produces_add = 2
+		planet_researchers_engineering_research_produces_add = 2
 	}
 }
 
@@ -1222,9 +1226,13 @@ building_corpses_disposal_center = {
 	}
 
 	planet_modifier = {
-		planet_pop_assembly_organic_add = 2
+		fake_pop_growth_mod = 2
 		planet_amenities_add = 500
 		job_technician_add = 200
+	}
+
+	planet_pop_group_modifier = {
+		bonus_pop_growth = 2
 	}
 
 	resources = {

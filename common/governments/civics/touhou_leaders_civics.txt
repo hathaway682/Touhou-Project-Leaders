@@ -76,7 +76,6 @@ civic_hakurei_shinto = {
 		base = 0
 	}
 	modifier = {
-		planet_priests_upkeep_mult = -0.15
 		ship_fire_rate_mult = 0.15
 		army_damage_mult = 0.15
 	}
@@ -86,7 +85,7 @@ civic_hakurei_shinto = {
 			is_spiritualist = yes
 		}
 		modifier = {
-			planet_priests_unity_produces_add = 1
+			planet_bureaucrats_unity_produces_add = 1
 		}
 	}
 }
@@ -151,7 +150,7 @@ civic_hakurei_shinto_corp = {
 			is_spiritualist = yes
 		}
 		modifier = {
-			planet_priests_unity_produces_add = 1
+			planet_bureaucrats_unity_produces_add = 1
 		}
 	}
 }
@@ -199,7 +198,6 @@ civic_moriya_shinto = {
 		base = 0
 	}
 	modifier = {
-		planet_priests_produces_mult = 0.15
 		all_technology_research_speed = 0.1
 		planet_building_build_speed_mult = 0.25
 	}
@@ -209,7 +207,7 @@ civic_moriya_shinto = {
 			is_spiritualist = yes
 		}
 		modifier = {
-			planet_priests_unity_produces_add = 1
+			planet_bureaucrats_unity_produces_add = 1
 		}
 	}
 }
@@ -264,7 +262,6 @@ civic_moriya_shinto_corp = {
 		base = 0
 	}
 	modifier = {
-		planet_priests_produces_mult = 0.15
 		all_technology_research_speed = 0.1
 		planet_building_build_speed_mult = 0.25
 	}
@@ -274,7 +271,7 @@ civic_moriya_shinto_corp = {
 			is_spiritualist = yes
 		}
 		modifier = {
-			planet_priests_unity_produces_add = 1
+			planet_bureaucrats_unity_produces_add = 1 = 1
 		}
 	}
 }

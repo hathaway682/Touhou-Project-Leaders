@@ -835,23 +835,10 @@ touhou_bookseller = {
         }
     }
 
-    triggered_pop_modifier = {
-        potential = {
-            planet = {
-                exists = army_leader
-                army_leader = {
-                    has_trait = leader_trait_academia_recruiter
-                }
-            }
-        }
-        modifier = {
-            #pop_defense_armies_add = 1
-        }
-    }
-
     planet_modifier = {
-        planet_researchers_energy_produces_add = 0.2
-        planet_researchers_produces_mult = 0.02
+        planet_physicist_produces_mult = 0.01
+        planet_engineer_produces_mult = 0.01
+        planet_biologist_produces_mult = 0.01
     }
 
     weight = {
@@ -928,9 +915,7 @@ touhou_historian = {
     }
 
     country_modifier = {
-        planet_administrators_produces_mult = 0.1
-        planet_culture_workers_produces_mult = 0.1
-        culture_workers_modifier_mult = 0.1
+        planet_civilians_unity_produces_add = 0.5
     }
 
     weight = {
