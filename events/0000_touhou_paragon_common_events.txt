@@ -656,7 +656,7 @@ country_event = {
 		#魔理沙
 		if = {
 			limit = {
-				num_owned_relics >= 1
+				has_megastructure = grand_archive_0
 				NOT = {
 					has_global_flag = marisa
 				}
@@ -1774,7 +1774,7 @@ country_event = {
 	fire_only_once = yes
 	location = capital_scope
 	trigger = {
-		num_owned_relics >= 1
+		has_megastructure = grand_archive_0
 	}
 
 	option = {
@@ -1840,11 +1840,175 @@ country_event = {
 	fire_only_once = yes
 	location = capital_scope
 
+	immediate = {
+		random_owned_megastructure = {
+			limit = {
+				is_megastructure_type = grand_archive_0
+			}
+			save_event_target_as = target_grand_archive
+		}
+	}
+
 	option = {
 		name = touhou_paragon.40732.a
+		create_country = {
+			name = "NAME_Marisa_Task_Beast_Country"
+			type = faction
+			flag = {
+				icon = {
+					category = "zoological"
+					file = "flag_zoological_1.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors={
+					"black"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				save_global_event_target_as = marisa_task_beast_country
+			}
+		}
+		create_fleet = {
+			NAME = "NAME_Marisa_Task_Beast"
+			effect = {
+				set_owner = event_target:marisa_task_beast_country
+				#可汗大点兵
+				#我怎么不记得我得博物馆有这么多东西
+				create_ship = {
+					name = ""
+					design = "NAME_Tiyanki_Ox_Clonable"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Tiyanki_Cow"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Tiyanki_Bull"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Tiyanki_Hatchling"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Tiyanki_Calf"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Large_Crystal_Entity_Blue"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Medium_Crystal_Entity_Blue"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Small_Crystal_Entity_Blue"
+				}
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Large_Crystal_Entity_Green"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Medium_Crystal_Entity_Green"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Small_Crystal_Entity_Green"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Large_Crystal_Entity_Yellow"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Medium_Crystal_Entity_Yellow"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Small_Crystal_Entity_Yellow"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Large_Crystal_Entity_Red"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Medium_Crystal_Entity_Red"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Small_Crystal_Entity_Red"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Large_Space_Organism_Teal"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Small_Space_Organism_Teal"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Large_Space_Organism_Orange"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Small_Space_Organism_Orange"
+				# }
+				create_ship = {
+					name = ""
+					design = "NAME_Large_Space_Organism_Zebra"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Small_Space_Organism_Zebra"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Voidworms_Nymph"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Voidworms_Juvenile"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Voidworms_Mature"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Cutholoids_Hatchling"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Cutholoids_Juvenile"
+				}
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Cutholoids"
+				# }
+				set_location = {
+					target = event_target:target_grand_archive
+					distance = 20
+					angle = 0
+				}
+				set_fleet_stance = aggressive
+				set_aggro_range_measure_from = self
+				set_aggro_range = 0
+			}
+		}
 		enable_special_project = {
 			name = MARISA_SPECIAL_PROJECT
-			location = root.capital_scope
+			location = event_target:target_grand_archive
 			owner = root
 		}
 	}

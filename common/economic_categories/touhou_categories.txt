@@ -8,6 +8,7 @@ planet_doctors = {
 		produces
 		upkeep
 	}
+	modifier_category = pop_job
 }
 
 planet_telepaths = {
@@ -20,11 +21,11 @@ planet_telepaths = {
 		produces
 		upkeep
 	}
+	modifier_category = pop_job
 }
 
 planet_traders = {
 	parent = planet_jobs
-	modifier_category = pop_group_job
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -33,6 +34,7 @@ planet_traders = {
 		produces
 		upkeep
 	}
+	modifier_category = pop_job
 }
 
 planet_culture_workers = {
@@ -45,21 +47,20 @@ planet_culture_workers = {
 		produces
 		upkeep
 	}
+	modifier_category = pop_job
 }
 
 planet_jobs = {
 	parent = planets
-
 	generate_mult_modifiers = {
 		produces
 		upkeep
 	}
-
 	generate_add_modifiers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_group_job
+	modifier_category = pop_job
 }
 
 planet_jobs_worker = {
@@ -68,12 +69,11 @@ planet_jobs_worker = {
 		produces
 		upkeep
 	}
-
 	generate_add_modifiers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_group_job
+	modifier_category = pop_job
 
 	triggered_produces_modifier = {
 		key = planet_jobs_simple_drone
@@ -95,12 +95,11 @@ planet_jobs_specialist = {
 		produces
 		upkeep
 	}
-
 	generate_add_modifiers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_group_job
+	modifier_category = pop_job
 
 	triggered_produces_modifier = {
 		key = planet_jobs_complex_drone
@@ -122,12 +121,11 @@ planet_jobs_ruler = {
 		produces
 		upkeep
 	}
-
 	generate_add_modifiers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_group_job
+	modifier_category = pop_job
 }
 
 planet_pop_assemblers = {
@@ -136,11 +134,9 @@ planet_pop_assemblers = {
 		upkeep
 		produces
 	}
-	modifier_category = pop_group_job
-
 	generate_add_modifiers = {
 		upkeep
 		produces
 	}
-	modifier_category = pop_group_job
+	modifier_category = pop_job
 }
