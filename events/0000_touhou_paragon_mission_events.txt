@@ -495,7 +495,7 @@ country_event = {
 				limit = {
 					has_trait = thl_leader_trait_miracle
 				}
-				add_trait = leader_trait_adaptable_2
+				add_trait = leader_trait_adaptable
 			}
 		}
 	}
@@ -905,7 +905,7 @@ country_event = {
 			poi = touhou_sanae_mission_chain_faith.3
 		}
 		num_ascension_perks >= 4
-		pop_percentage = {
+		pop_amount_percentage = {
 			limit = {
 				or = {
 					has_ethic = ethic_spiritualist
@@ -966,7 +966,7 @@ country_event = {
 			poi = touhou_sanae_mission_chain_adm.4
 		}
 		OR = {
-			num_owned_active_gateways >= 5
+			num_owned_active_gateways >= 10 #没有贸易额需求了，那上点强度吧
 			count_owned_megastructure = {
 				limit = {
 					is_same_value = AOW_MEGA_advanced_hyperlane_controller

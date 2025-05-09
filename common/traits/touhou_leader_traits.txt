@@ -1604,7 +1604,7 @@ thl_leader_trait_penglai_medicine = {
 	}
 	planet_modifier = {
 		job_healthcare_per_pop = 0.1
-		planet_doctors_society_research_produces_add = 6
+		planet_doctors_society_research_produces_add = 8
 		planet_doctors_physics_research_produces_add = 2
 		planet_doctors_engineering_research_produces_add = 2
 		logistic_growth_mult = 0.3
@@ -1635,12 +1635,12 @@ thl_leader_trait_prosperity_and_decline = {
 		TIER = none
 	}
 	councilor_modifier = {
-		country_society_tech_research_speed = 0.15
-		category_biology_research_speed_mult = 0.15
-		biological_species_trait_picks_add = 2
-		biological_species_trait_points_add = 1
-		leader_lifespan_add = 40
-		biological_pop_happiness = -0.05
+		society_tech_cost_mult = -0.10
+		category_biology_research_speed_mult = 0.5
+		BIOLOGICAL_species_trait_picks_add = 2
+		BIOLOGICAL_species_trait_points_add = 2
+		leader_lifespan_mult = 0.5
+		BIOLOGICAL_pop_happiness = -0.05
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
@@ -1662,7 +1662,7 @@ thl_leader_trait_moon_war_veteran = {
 	leader_trait_type = veteran
 	
 	councilor_modifier = {
-		army_disengage_chance_mult = 0.85
+		army_disengage_chance_mult = 1
 		op_cat_military_skill_add = 4
 		op_cat_subterfuge_skill_add = 4
 		op_cat_sabotage_skill_add = 4
@@ -1700,12 +1700,12 @@ thl_leader_trait_kendo = {
 		s_slot_weapon_damage_mult = 0.8
 		m_slot_weapon_fire_rate_mult = 0.4
 		m_slot_weapon_damage_mult = 0.4
-		ship_speed_reduction = -8 #幻想乡最速！
+		ship_speed_reduction = -0.8 #幻想乡最速！
 	}
 	army_modifier = {
 		army_damage_taken_mult = 1
 		army_damage_mult = 1
-		army_morale = 2
+		army_morale = 3
 		army_morale_damage_mult = 3
 	}
 	on_gained_effect = {

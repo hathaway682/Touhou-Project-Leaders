@@ -255,6 +255,10 @@
  #leader_trait_moriya_preacher_desc:1 "这位领袖为我们的国家带来了结合古代泛灵论和现代科学的独特信仰。"
  #leader_trait_moriya_preacher_effect:0 ""
 
+ mod_planet_physicists_unity_produces_add: "每$pop_group_unit$$job_physicist_plural_with_icon$产出的$unity_with_icon$"
+ mod_planet_engineers_unity_produces_add: "每$pop_group_unit$$job_engineer_plural_with_icon$产出的$unity_with_icon$"
+ mod_planet_biologists_unity_produces_add: "每$pop_group_unit$$job_biologist_plural_with_icon$产出的$unity_with_icon$"
+
  triggered_opinion_of_spiritualist_turned:0 "常识抹杀者"
  TOUHOU_MESSAGE_KEY_SANAE_CRUSADE:0 "守矢圣战"
  casus_belli_cb_moriya_crusade:0 "守矢圣战"
