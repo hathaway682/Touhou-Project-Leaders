@@ -598,7 +598,6 @@ civic_nether_world_corp = {
 	modifier = {
 		leaders_upkeep_mult = -0.5
 		pop_amenities_usage_organic_mult = -0.25
-		biological_pop_growth_speed_reduction = 0.05
 	}
 }
 

@@ -2188,6 +2188,7 @@ thl_leader_trait_mind_reader = {
 		planet_crime_add = -25
 		pop_happiness = -0.05
 		add_base_country_intel = 40
+		first_contact_clues_add = 4
 		intel_decryption_add = 2
 		intel_encryption_add = 4
 		country_trust_growth = -0.5
@@ -2269,7 +2270,6 @@ thl_leader_trait_detective = {
 		TIER = none
 	}
 	planet_modifier = {
-		planet_stability_add = 5
 		planet_crime_mult = -1
 	}
 	leader_trait_type = veteran
@@ -3292,6 +3292,9 @@ thl_leader_trait_flower_commander = {
 	}
 	fleet_modifier = {
 		weapon_type_energy_weapon_damage_mult = 1
+		x_slot_weapon_fire_rate_mult = 1
+		t_slot_weapon_fire_rate_mult = 1
+		l_slot_weapon_fire_rate_mult = 1
 	}
 	on_gained_effect = {
 		change_background_job = farmer
@@ -3364,12 +3367,11 @@ thl_leader_trait_words = {
 		species_leader_exp_gain = 0.5
 	}
 	councilor_modifier = {
-		first_contact_clues_add = 4
-		country_trust_cap_add = 100
-		ship_archaeological_site_clues_add = 2
-		category_archaeostudies_research_speed_mult = 0.25
-		intel_encryption_add = 2
-		spy_network_levels_add = 30
+		first_contact_speed_mult = 2
+		ship_archaeological_site_excavation_speed_mult = 2
+		country_trust_growth = 2
+		spy_network_daily_value_mult = 2
+		category_archaeostudies_research_speed_mult = 2
 	}
 	on_gained_effect = {
 		change_background_job = culture_worker
@@ -3391,7 +3393,7 @@ thl_leader_trait_books = {
 		TIER = none
 	}
 	modifier = {
-		ship_archaeological_site_excavation_speed_mult = 0.5
+		ship_archaeological_site_clues_add = 6
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -3471,12 +3473,12 @@ thl_leader_trait_memory = {
 		ship_archaeological_site_excavation_speed_mult = 0.3
 	}
 	planet_modifier = {
-		planet_biologists_society_research_produces_add = 3
-		planet_biologists_society_research_produces_add = 3
+		planet_bureaucrats_unity_produces_add = 4
+		planet_biologists_society_research_produces_add = 4
 	}
 	sector_modifier = {
-		planet_biologists_society_research_produces_add = 1
-		planet_biologists_society_research_produces_add = 1
+		planet_bureaucrats_unity_produces_add = 2
+		planet_biologists_society_research_produces_add = 2
 	}
 	on_gained_effect = {
 		change_background_job = culture_worker
@@ -3501,11 +3503,11 @@ thl_leader_trait_the_ninth_savage = {
 		potential = {
 			always = yes
 		}
-		scientist_exp_gain = 0.06
+		scientist_exp_gain = 0.1
 		ship_archaeological_site_clues_add = 1
-		planet_jobs_physics_research_produces_mult = 0.03
-		planet_jobs_society_research_produces_mult = 0.03
-		planet_jobs_engineering_research_produces_mult = 0.03
+		physics_tech_cost_mult = -0.01
+		society_tech_cost_mult = -0.01
+		engineering_tech_cost_mult = -0.01
 		mult = trigger:has_base_skill
 	}
 	leader_class = { scientist }
@@ -3527,9 +3529,9 @@ thl_leader_trait_bridge_of_gensokyo = {
 		TIER = none
 	}
 	councilor_modifier = {
-		country_trust_growth = 0.25
 		country_trust_cap_add = 100
-		diplo_weight_pops_mult = 0.4
+		first_contact_clues_add = 5
+		diplo_weight_pops_mult = 0.2
 	}
 	leader_class = { scientist }
 	selectable_weight = {
@@ -4151,13 +4153,13 @@ thl_leader_trait_convenience_house = {
 		TIER = 1
 	}
 	planet_modifier = {
-		pop_lifestyle_trade_value_mult = 0.1
+		pop_lifestyle_planet_jobs_trade_produces_mult = 0.1
 		pop_amenities_usage_mult = -0.1
 		planet_pops_upkeep_mult = -0.1
 		planet_traders_engineering_research_produces_add = 1
 	}
 	sector_modifier = {
-		pop_lifestyle_trade_value_mult = 0.05
+		pop_lifestyle_planet_jobs_trade_produces_mult = 0.05
 		pop_amenities_usage_mult = -0.05
 		planet_pops_upkeep_mult = -0.05
 		planet_traders_engineering_research_produces_add = 0.5
@@ -4180,13 +4182,13 @@ thl_leader_trait_convenience_house_2 = {
 		TIER = 2
 	}
 	planet_modifier = {
-		pop_lifestyle_trade_value_mult = 0.25
+		pop_lifestyle_planet_jobs_trade_produces_mult = 0.25
 		pop_amenities_usage_mult = -0.25
 		planet_pops_upkeep_mult = -0.25
 		planet_traders_engineering_research_produces_add = 2
 	}
 	sector_modifier = {
-		pop_lifestyle_trade_value_mult = 0.125
+		pop_lifestyle_planet_jobs_trade_produces_mult = 0.125
 		pop_amenities_usage_mult = -0.125
 		planet_pops_upkeep_mult = -0.125
 		planet_traders_engineering_research_produces_add = 1
@@ -4206,13 +4208,13 @@ thl_leader_trait_convenience_house_3 = {
 		TIER = 3
 	}
 	planet_modifier = {
-		pop_lifestyle_trade_value_mult = 0.5
+		pop_lifestyle_planet_jobs_trade_produces_mult = 0.5
 		pop_amenities_usage_mult = -0.5
 		planet_pops_upkeep_mult = -0.5
 		planet_traders_engineering_research_produces_add = 3
 	}
 	sector_modifier = {
-		pop_lifestyle_trade_value_mult = 0.25
+		pop_lifestyle_planet_jobs_trade_produces_mult = 0.25
 		pop_amenities_usage_mult = -0.25
 		planet_pops_upkeep_mult = -0.25
 		planet_traders_engineering_research_produces_add = 1.5
@@ -4493,12 +4495,12 @@ leader_trait_harvest = {
 	}
 	planet_modifier = {
 		planet_jobs_food_produces_mult = 0.33
-		pop_growth_speed = 0.1
+		logistic_growth_mult = 0.1
 		planet_jobs_produces_mult = 0.1
 	}
 	sector_modifier = {
 		planet_jobs_food_produces_mult = 0.15
-		pop_growth_speed = 0.05
+		logistic_growth_mult = 0.05
 		planet_jobs_produces_mult = 0.05
 	}
 	on_gained_effect = {
@@ -4948,13 +4950,13 @@ thl_leader_trait_rabbit_leader = {
 	planet_modifier = {
 		rabbit_workforce_mult = 0.1
 		rabbit_empire_size_mult = -0.2
-		pop_growth_speed = 0.1
+		logistic_growth_mult = 0.1
 		pop_housing_usage_mult = -0.1
 	}
 	sector_modifier = {
 		rabbit_workforce_mult = 0.05
 		rabbit_empire_size_mult = -0.1
-		pop_growth_speed = 0.05
+		logistic_growth_mult = 0.05
 		pop_housing_usage_mult = -0.05
 	}
 	leader_trait_type = veteran

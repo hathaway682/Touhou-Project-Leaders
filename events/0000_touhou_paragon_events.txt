@@ -1715,7 +1715,7 @@ country_event = { # 莲子
 		custom_tooltip = touhou_paragon.41200.hire_custom_tooltip
 		hidden_effect = {
 			ethic_leader_hire_effect = {
-				GLOBAL_EVENT_TARGET = renowned_renko
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_renko
 			}
 			last_created_leader = {
 				set_leader_flag = touhou_leader

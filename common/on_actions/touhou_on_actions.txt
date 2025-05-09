@@ -63,7 +63,6 @@ on_monthly_pulse_country = {
 		touhou_paragon_effect.40701
 		touhou_paragon_effect.40702
 		touhou_paragon_spell.10000
-		touhou_paragon.43101 #小碎骨招募判定
 	}
 }
 
@@ -235,12 +234,6 @@ on_leader_death = {
 		touhou_paragon_effect.600
 		touhou_paragon_effect.700
 		touhou_paragon_effect.41001
-	}
-}
-
-on_pop_abducted = {
-	events = {
-		touhou_paragon_effect.601
 	}
 }
 
@@ -442,25 +435,5 @@ on_leader_level_up = {
 	events = {
 		touhou_paragon.40721
 		touhou_paragon.40724# Update Gestalt node portraits.
-	}
-}
-
-# A pop has finished purging
-# This = Planet scope
-# From = Country
-# FromFrom = Pop
-on_pop_purged = {
-	events = {
-		touhou_paragon.40323
-	}
-}
-
-# A pop has finished declining (while not being purged)
-# This = Planet scope
-# From = Country
-# FromFrom = Pop
-on_pop_declined = {
-	events = {
-		touhou_paragon.40323
 	}
 }

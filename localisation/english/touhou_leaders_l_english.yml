@@ -301,7 +301,7 @@
  decision_miracle_4_desc:0 "通过§c东风谷早苗的奇迹§!使大气活动变得更猛烈，增加$r_energy$产出和£mod_army_defense_damage_mult£§Y防御部队伤害§!。"
 
  decision_miracle_5:0 "五谷丰穰米之浴"
- decision_miracle_5_desc:0 "通过§c东风谷早苗的奇迹§!提高当地$r_food$产出和£mod_pop_growth_speed£§Y人口增长速度§!。"
+ decision_miracle_5_desc:0 "通过§c东风谷早苗的奇迹§!提高当地$r_food$产出和£mod_logistic_growth_mult£§Y人口增长速度§!。"
 
  decision_miracle_6:0 "神秘果"
  decision_miracle_6_desc:0 "通过§c东风谷早苗的奇迹§!在当地生成一种神奇的水果，£job_farmer£§Y农夫§!将会产出$r_consumer_goods$。"
@@ -1374,6 +1374,8 @@
  building_doll_assembly_complex_desc:0 "通过先进的流水线技术，这座工厂不断生产着大批的人偶。"
 
  mod_doll_control_limit:0 "人偶控制上限"
+ mod_doll_workforce_mult: "人偶人口劳动力效率"
+ mod_doll_empire_size_mult: "人偶人口产生的帝国规模"
 
  NAME_Yuyuko:0 "西行寺幽幽子"
  yuyuko1:0 "冥界的主人，原居住于冥界中心的白玉楼，自称被香味和友人指引来此，但似乎实际的目的是使樱花树“西行妖”的枝干开花。"
@@ -1422,8 +1424,7 @@
  building_soul_nexus: "通向黄泉的诱蛾灯"
  building_soul_nexus_desc: "这座建筑发出诡异的光，吸引着星系间的亡者。"
 
- mod_planet_spirit_jobs_produces_mult: "灵体人口£job£岗位生产的资源"
- mod_planet_spirit_jobs_unity_produces_mult: "灵体人口£job£岗位生产的£unity£ 凝聚力"
+ mod_spirit_workforce_mult: "灵体人口劳动力效率"
  mod_spirit_empire_size_mult: "灵体人口产生的帝国规模"
  mod_spirit_amenities_usage_mult: "灵体人口舒适度使用"
  mod_spirit_job_amenities_mult: "灵体人口£job£岗位产出的£amenities£舒适度"

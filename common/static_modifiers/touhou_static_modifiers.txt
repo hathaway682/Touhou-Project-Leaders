@@ -14,8 +14,7 @@ modifier_endless_banquet = {
 	pop_happiness = 2
 	planet_pops_food_upkeep_mult = 1
 	planet_pops_consumer_goods_upkeep_mult = 4
-	planet_immigration_pull_add = 1000
-	pop_growth_from_immigration = 1
+	planet_resettlement_unemployed_destination_mult = 10.0
 	icon = "gfx/interface/icons/planet_modifiers/pm_alien_propaganda.dds"
 	icon_frame = 1
 }
@@ -576,7 +575,7 @@ modifier_sanae_mission_adm_5_synth_queen = {
 }
 
 modifier_sanae_mission_tech_5_s_composer = {
-	pop_growth_speed = 0.05
+	logistic_growth_mult = 0.05
 	leader_lifespan_add = 5
 }
 modifier_sanae_mission_tech_5_s_instrument = {
@@ -590,7 +589,7 @@ modifier_sanae_mission_tech_5_s_whisperers = {
 	all_technology_research_speed = 0.05
 }
 modifier_sanae_mission_tech_5_m_composer = {
-	pop_growth_speed = 0.10
+	logistic_growth_mult = 0.10
 	leader_lifespan_add = 10
 }
 modifier_sanae_mission_tech_5_m_instrument = {
@@ -604,7 +603,7 @@ modifier_sanae_mission_tech_5_m_whisperers = {
 	all_technology_research_speed = 0.10
 }
 modifier_sanae_mission_tech_5_l_composer = {
-	pop_growth_speed = 0.15
+	logistic_growth_mult = 0.15
 	leader_lifespan_add = 15
 }
 modifier_sanae_mission_tech_5_l_instrument = {
@@ -651,11 +650,10 @@ modifier_kappa_robot = {
 modifier_deformed_mushroom = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_animal_wildlife.dds"
 	icon_frame = 3
-	pop_growth_speed = -1
+	logistic_growth_mult = -1
 	planet_stability_add = -20
 	army_defense_morale_mult = -0.5
-	pop_growth_from_immigration = -1
-	planet_immigration_pull_add = -100
+	planet_resettlement_unemployed_destination_mult = -10
 	planet_jobs_society_research_produces_mult = 0.50
 }
 
@@ -743,7 +741,7 @@ pain_flow_modifier_1 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_burning_settlement.dds"
 	icon_frame = 3
 	pop_happiness = -1
-	planet_emigration_push_add = 100
+	planet_resettlement_unemployed_destination_mult = -10
 }
 
 pain_flow_modifier_2 = {
@@ -788,7 +786,7 @@ modifier_saisen_unity = {
 }
 
 modifier_saisen_growth = {
-	pop_growth_speed = 0.15
+	logistic_growth_mult = 0.15
 	icon = "gfx/interface/icons/planet_modifiers/pm_consecrated_worlds.dds"
 	icon_frame = 1
 }
@@ -892,7 +890,7 @@ modifier_amaterasu_okami = {
 }
 
 modifier_hariti = {
-	pop_growth_speed = 0.2
+	logistic_growth_mult = 0.2
 	planet_pop_assembly_mult = 0.15
 }
 
@@ -901,8 +899,7 @@ modifier_sinatsuhiko_no_mikami = {
 }
 
 modifier_ebisu = {
-	trade_value_mult = 0.33
-	starbase_trade_collection_range_add = 1
+	planet_jobs_trade_produces_mult = 0.33
 	country_trade_fee = -0.10
 }
 

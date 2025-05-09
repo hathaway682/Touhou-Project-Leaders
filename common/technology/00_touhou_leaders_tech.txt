@@ -233,7 +233,6 @@ tech_automatic_dolls = {
 
 	modifier = {
 		custom_tooltip = automatic_dolls_tooltip
-		planet_doll_jobs_produces_mult = 0.15
 	}
 
 	weight_modifier = {
@@ -302,7 +301,6 @@ tech_sapient_dolls = {
 
 	modifier = {
 		custom_tooltip = sapient_dolls_tooltip
-		planet_doll_jobs_produces_mult = 0.15
 	}
 
 	potential = {

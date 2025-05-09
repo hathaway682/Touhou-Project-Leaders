@@ -161,7 +161,7 @@ can_be_destiny_target = {
 		has_trait = leader_trait_surveyor
 		has_trait = leader_trait_repair_crew
 		has_trait = leader_trait_robotist
-		has_trait = thl_leader_trait_knowledge_for_the_masses
+		has_trait = leader_trait_knowledge_for_the_masses
 		has_trait = leader_trait_fanatic
 		has_trait = leader_trait_reverse_engineer
 		has_trait = leader_trait_supreme_admiral
@@ -472,7 +472,7 @@ can_be_leader = {
 	NOT = { has_trait = trait_syncretic_proles }
 	can_think = yes
 	OR = {
-		is_robot_pop = no
+		is_robot_pop_group = no
 		AND = {
 			NOT = { has_trait = trait_thl_doll }
 			root = {

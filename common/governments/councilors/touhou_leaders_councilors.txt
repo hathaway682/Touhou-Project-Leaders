@@ -21,7 +21,7 @@ councilor_hakurei_shinto = {
 	civic = civic_hakurei_shinto
 	modifier = {
 		ship_fire_rate_mult = 0.02
-		trade_value_mult = 0.02
+		planet_jobs_trade_produces_mult = 0.02
 	}
 }
 
@@ -165,7 +165,7 @@ councilor_nether_world_corp = {
 	}
 	civic = civic_nether_world_corp
 	modifier = {
-		planet_spirit_jobs_produces_mult = 0.01
+		spirit_workforce_mult = 0.01
 	}
 }
 
@@ -181,7 +181,7 @@ councilor_penglai_medcine = {
 	civic = civic_penglai_medcine
 	modifier = {
 		leader_lifespan_add = 5
-		pop_growth_speed = 0.01
+		logistic_growth_mult = 0.01
 		pop_environment_tolerance = 0.02
 	}
 }
@@ -198,7 +198,7 @@ councilor_penglai_medcine_corp = {
 	civic = civic_penglai_medcine_corp
 	modifier = {
 		leader_lifespan_add = 5
-		pop_growth_speed = 0.01
+		logistic_growth_mult = 0.01
 		category_biology_research_speed_mult = 0.02
 	}
 }

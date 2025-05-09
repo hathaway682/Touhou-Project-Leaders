@@ -3134,7 +3134,7 @@ country_event = {
                     }
                     resettle_pop_group = {
                         PLANET = event_target:banquet_planet
-                        POP = this
+                        POP_GROUP = this
                         AMOUNT = 100
                     }
                     #clear_pop_category = yes

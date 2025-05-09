@@ -316,7 +316,7 @@
  decision_miracle_4_desc:0 "通过§c东风谷早苗的奇迹§!使大气活动变得更猛烈，增加$r_energy$产出和£mod_army_defense_damage_mult£§Y防御部队伤害§!。\n\n本符卡部署所需时间更快。"
 
  decision_miracle_5:0 "五谷丰穰米之浴"
- decision_miracle_5_desc:0 "通过§c东风谷早苗的奇迹§!提高当地$r_food$产出和£mod_pop_growth_speed_reduction£§Y人口增长速度§!。"
+ decision_miracle_5_desc:0 "通过§c东风谷早苗的奇迹§!提高当地$r_food$产出和£mod_logistic_growth_mult_reduction£§Y人口增长速度§!。"
 
  decision_miracle_6:0 "神秘果"
  decision_miracle_6_desc:0 "通过§c东风谷早苗的奇迹§!在当地生成一种神奇的水果，£job_farmer£§Y农夫§!将会产出$r_consumer_goods$。"
@@ -2116,7 +2116,7 @@
  thl_leader_trait_song_tooltip: "\n接战后的敌方舰队前30天：\n舰船武器射程：§R-50%§!\n命中：§R-50%§!\n闪避：§R-50%§!"
  thl_leader_trait_izakaya:0 "深夜雀食堂"
  thl_leader_trait_izakaya_desc:0 "在取得与我们政府合作的地位之后，米斯蒂娅开始了一系列雄心勃勃的计划以扩大夜雀食堂的商业版图，以主宰全国甚至全银河的小吃市场——据说在此之前，她就将夜雀食堂的分店开遍了幻想乡，甚至远至地底和月球。"
- thl_leader_trait_izakaya_tooltip:0 "\n允许建造£building£§H夜雀食堂§!建筑，将$r_food$转化为$r_unity$、$r_amenities$和$r_trade_value$，并提高£mod_pop_growth_speed£§Y人口增长速度§!和£mod_pop_happiness£§Y人口幸福度§!，如果可以开设§Y企业分部§!，还可以建造£building£§H夜雀食堂§!企业地产。\n\n每次升级该技能，§Y夜雀食堂员工§!的产出都会得到增强。"
+ thl_leader_trait_izakaya_tooltip:0 "\n允许建造£building£§H夜雀食堂§!建筑，将$r_food$转化为$r_unity$、$r_amenities$和$r_trade_value$，并提高£mod_logistic_growth_mult£§Y人口增长速度§!和£mod_pop_happiness£§Y人口幸福度§!，如果可以开设§Y企业分部§!，还可以建造£building£§H夜雀食堂§!企业地产。\n\n每次升级该技能，§Y夜雀食堂员工§!的产出都会得到增强。"
  thl_leader_trait_youkai_punk:0 "妖怪朋克"
  thl_leader_trait_youkai_punk_desc:0 "与传说中对妖怪歌声的刻板印象不同，米斯蒂娅的歌声激烈而吵闹，这一尽情宣泄内心情感的音乐风格深受年轻人的欢迎，并出现了模仿的浪潮以用这一音乐题材表达年轻一代对社会的观点。"
  mod_planet_entertainers_society_research_produces_add:0 "£job_entertainer£$job_entertainer_plural$产出的£society_research£ $society_research$"
@@ -2134,7 +2134,7 @@
  job_izakaya_worker_plural:0 "夜雀食堂员工"
  job_izakaya_worker_icon:0 "£job_izakaya_worker£"
  job_izakaya_worker_desc:0 "夜雀食堂的每名员工都经过专业培训，致力于为客户打造完美的味觉体验。"
- job_izakaya_worker_effect_desc:1 "£job_izakaya_worker£ $job_izakaya_worker_plural$将$r_food$转化为$r_amenities$和$r_trade_value$，并提高£mod_pop_growth_speed£§Y人口增长速度§!。"
+ job_izakaya_worker_effect_desc:1 "£job_izakaya_worker£ $job_izakaya_worker_plural$将$r_food$转化为$r_amenities$和$r_trade_value$，并提高£mod_logistic_growth_mult£§Y人口增长速度§!。"
  mod_job_izakaya_worker_add:0 "$job_izakaya_worker$岗位"
  mod_job_izakaya_worker_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_izakaya_worker$岗位"
  mod_job_izakaya_worker_per_pop_short:0 "\n每$VALUE$ £pop£ §G+1§! £mod_job_izakaya_worker_add£ "
@@ -2171,7 +2171,7 @@
  thl_leader_trait_rabbit_spy: "狡兔三窟"
  thl_leader_trait_rabbit_spy_desc: "对于狡诈而富有商业头脑的因幡帝，情报不过是又一种可以交易的商品。她手下的兔子非常乐意为她搜集情报，以换取更多的利益。"
  thl_leader_trait_rabbit_spy_tooltip: "可以在§Y法令§!中，向因幡帝购买其他国家的§Y情报§!，商品中偶尔还会包含§r意外惊喜§!。"
- mod_rabbit_workforce_mult:0 "兔子人口产出的资源"
+ mod_rabbit_workforce_mult:0 "兔子人口劳动力效率"
  mod_rabbit_empire_size_mult:0 "兔子人口产生的帝国规模"
 
  edict_rabbit_spy_touhou:0 "小兔子的情报专列"

@@ -144,8 +144,9 @@ situation_utsuho_cure = {
 					is_colony = yes
 					is_under_colonization = no
 					OR = {
-						has_building = building_clinic
-						has_building = building_hospital
+						has_building = building_medical_1
+						has_building = building_medical_2
+						has_building = building_medical_3
 					}
 
 				}
