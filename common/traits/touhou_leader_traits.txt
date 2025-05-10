@@ -2250,15 +2250,15 @@ thl_leader_trait_subterran_manager = {
 		habitability_floor_add = 0.5
 		pop_housing_usage_add = -0.5
 		pop_amenities_usage_add = -0.5
-		planet_jobs_minerals_produces_mult = 0.3
-		planet_jobs_energy_produces_mult = 0.3
+		spirit_amenities_usage_mult = -1
+		spirit_empire_size_mult = -1
 	}
 	sector_modifier = {
 		habitability_floor_add = 0.5
 		pop_housing_usage_add = -0.25
 		pop_amenities_usage_add = -0.25
-		planet_jobs_minerals_produces_mult = 0.15
-		planet_jobs_energy_produces_mult = 0.15
+		spirit_amenities_usage_mult = -0.5
+		spirit_empire_size_mult = -0.5
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
@@ -2282,6 +2282,7 @@ thl_leader_trait_satori_pets = {
 		leaders_upkeep_mult = -0.5
 		empire_size_pops_mult = -0.2
 		planet_jobs_worker_produces_mult = 0.05
+		operation_smuggle_pops_difficulty_add = -4 #告诉我，你愿不愿意做觉大人的宠物？
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
@@ -3062,8 +3063,6 @@ thl_leader_trait_sakura_1 = {
 	planet_modifier = {
 		spirit_workforce_mult = 0.05
 		spirit_empire_size_mult = -0.05
-		spirit_amenities_usage_mult = -0.05
-		planet_pop_assembly_organic_add = 1
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
@@ -3086,8 +3085,6 @@ thl_leader_trait_sakura_3 = {
 	planet_modifier = {
 		spirit_workforce_mult = 0.15
 		spirit_empire_size_mult = -0.15
-		spirit_amenities_usage_mult = -0.15
-		planet_pop_assembly_organic_add = 3
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
@@ -3110,8 +3107,6 @@ thl_leader_trait_sakura_5 = {
 	planet_modifier = {
 		spirit_workforce_mult = 0.25
 		spirit_empire_size_mult = -0.25
-		spirit_amenities_usage_mult = -0.25
-		planet_pop_assembly_organic_add = 5
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
@@ -3133,8 +3128,6 @@ thl_leader_trait_sakura_8 = {
 	planet_modifier = {
 		spirit_workforce_mult = 0.4
 		spirit_empire_size_mult = -0.4
-		spirit_amenities_usage_mult = -0.4
-		planet_pop_assembly_organic_add = 8
 	}
 	leader_trait_type = veteran
 	leader_class = { official }

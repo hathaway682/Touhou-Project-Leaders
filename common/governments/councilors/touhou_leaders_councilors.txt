@@ -149,8 +149,7 @@ councilor_nether_world = {
 	}
 	civic = civic_nether_world
 	modifier = {
-		spirit_empire_size_mult = -0.01
-		spirit_amenities_usage_mult = -0.01
+		spirit_empire_size_mult = -0.02
 	}
 }
 
@@ -165,7 +164,7 @@ councilor_nether_world_corp = {
 	}
 	civic = civic_nether_world_corp
 	modifier = {
-		spirit_workforce_mult = 0.01
+		spirit_workforce_mult = 0.02
 	}
 }
 

@@ -812,13 +812,13 @@
 
  thl_leader_trait_mind_reader: "读心程度的能力"
  thl_leader_trait_mind_reader_desc: "这位领袖可以轻松读出别人心中所想乃至他们的记忆。"
- thl_leader_trait_subterran_manager: "地灵殿殿主"
- thl_leader_trait_subterran_manager_desc: "管理灼热地狱遗址的经验使得这位领袖精通地下城市的规划。"
+ thl_leader_trait_subterran_manager: "怨灵也为之惧怯的少女"
+ thl_leader_trait_subterran_manager_desc: "管理灼热地狱遗址的经验使得这位领袖精通地下城市的规划，和对待怨灵的办法。"
  thl_leader_trait_subterran_manager_effect: "解锁§Y地下区划规划§!决议，为觉管理的星球提供额外的 £district£ §Y区划上限§!与§Y可开发资源§!。"
  thl_leader_trait_satori_pets: "觉的动物朋友们"
- thl_leader_trait_satori_pets_desc: "这位领袖十分擅长管理宠物——或者说部下，可以大胆放心的让他们自己行动。"
+ thl_leader_trait_satori_pets_desc: "这位领袖十分擅长管理宠物——或者说部下，可以大胆放心的让他们自己行动，同时也热衷于收集新的宠物。"
  thl_leader_trait_satori_pets_effect: "解锁§Y沟通动物§!决议，可以在星球上立刻发现一种新的§Y未开智动物§!。"
- thl_leader_trait_detective: "犯规侦探觉"
+ thl_leader_trait_detective: "怨灵也为之惧怯的少女"
  thl_leader_trait_detective_desc: "这位领袖会利用自己读心的能力协助侦破案件。"
 
  decision_subterranean_district: "地下区划规划"
@@ -1457,19 +1457,6 @@
  thl_leader_trait_dance_desc: "这位领袖继承了西行歌圣的艺术造诣，并结合了冥界的独特审美和死生观，创造了独属于她一人的歌舞艺术风格。"
  thl_leader_trait_yuyuko_eater: "幽幽子的一盘一口"
  thl_leader_trait_yuyuko_eater_desc: "这位领袖已然逝去，故其食欲永远不会得到满足。"
-
-
-
- # decision_trans_spirit: "无寿之梦"
- # decision_trans_spirit_desc: "死亡是轻柔且无声的，如今她将造访这颗星球。"
- # decision_trans_spirit_tooltip: "随机§Y3-12§!个£pop£人口§!被添加§H灵体§!特质。"
- # decision_assimilate_spirit: "通向无寿国的期票"
- # decision_assimilate_spirit_desc: "这颗星球的居民已被定好了终局。"
- # assimilate_spirit: "通向无寿国的期票"
- # assimilate_spirit_desc: "这颗星球的居民已被定好了终局。"
- # decision_assimilate_spirit_tooltip: "人口将以每§Y10§!年§Y3-12§!个的速度添加§H灵体§!特质。"
-
-
 
  NAME_Yuka:0 "风见幽香"
  yuka1:0 "十分强大与危险的妖怪，与其说是花之妖怪更像是自然的化身。"
