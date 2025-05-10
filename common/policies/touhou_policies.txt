@@ -240,3 +240,95 @@ food_policy = {
     }
 }
 
+foreign_affairs_policy = {
+    potential = {
+        any_owned_leader = {
+            has_trait = thl_leader_trait_miracle
+        }
+        has_country_flag = thl_flag_allow_foreign_affairs
+    }
+    option = {
+        name = "sanae_mission_mil_2_balance"
+
+        modifier = {
+            envoys_add = 1
+        }
+
+        AI_weight = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = "sanae_mission_mil_2_federation"
+
+        valid = {
+            has_federation = yes
+        }
+        modifier = {
+            federation_naval_cap_contribution_mult = 0.50
+            federation_experience_add = 2
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "sanae_mission_mil_2_subjects"
+
+        valid = {
+            count_subject = {
+                count >= 2
+            }
+        }
+
+        modifier = {
+            subject_integration_influence_cost_mult = -0.2
+            divided_patrongage_max_subjects = 1
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "sanae_mission_mil_2_intel"
+
+        valid = {
+            any_spynetwork = {
+                owner = { is_same_value = root }
+                is_spynetwork_level > 60
+            }
+        }
+
+        modifier = {
+            intel_decryption_add = 2
+            intel_gain_speed = 0.25
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "sanae_mission_mil_2_influence"
+
+        valid = {
+            num_defensive_pacts >= 2
+        }
+
+        modifier = {
+            diplomacy_influence_upkeep_mult = -0.25
+            country_trust_growth = 0.20
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+}
