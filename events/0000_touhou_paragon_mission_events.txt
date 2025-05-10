@@ -338,37 +338,58 @@ country_event = {
 		has_point_of_interest = {
 			poi = touhou_sanae_mission_chain_adm.2
 		}
-		has_monthly_income = {
-			resource = alloys
-			value >= 150
+		OR = {
+			country_uses_bio_ships = yes
+			has_monthly_income = {
+				resource = food
+				value >= 600
+			}
+		}
+		OR = {
+			country_uses_bio_ships = no
+			has_monthly_income = {
+				resource = alloys
+				value >= 150
+			}
 		}
 	}
 	option = {
 		name = touhou_paragon_mission.40306.a
-		every_owned_leader = {
-			if = {
-				limit = {
-					has_trait = thl_leader_trait_miracle
+		hidden_effect = {
+			every_owned_leader = {
+				if = {
+					limit = {
+						has_trait = thl_leader_trait_miracle
+					}
+					set_leader_flag = thl_flag_mission_augment_alloy_production
 				}
-				add_trait = leader_trait_scrapper_2
 			}
 		}
 		add_resource = {
-			alloys = 2000
+			alloys = 1000
 		}
+		custom_tooltip = touhou_tooltip_mission_augment_alloy_production
 	}
-	option = {
-		name = touhou_paragon_mission.40306.b
-		force_add_civic = civic_catalytic_processing
-	}
+
 	option = {
 		name = touhou_paragon_mission.40306.c
 		allow = {
-			has_ascension_perk = ap_enigmatic_engineering
+			country_uses_bio_ships = yes
 		}
-		custom_tooltip = SANAE_ENIGMATIC_ALLOYS
-		set_country_flag = touhou_flag_sanae_enigmatic_alloys
-
+		hidden_effect = {
+			every_owned_leader = {
+				if = {
+					limit = {
+						has_trait = thl_leader_trait_miracle
+					}
+					set_leader_flag = thl_flag_mission_augment_alloy_production_food
+				}
+			}
+		}
+		add_resource = {
+			food = 3000
+		}
+		custom_tooltip = touhou_tooltip_mission_augment_alloy_production_food
 	}
 	after = {
 		hidden_effect = {
@@ -409,13 +430,16 @@ country_event = {
 			num_defensive_pacts >= 3
 		}
 	}
+	immediate = {
+		set_country_flag = thl_flag_allow_foreign_affairs
+	}
 	option = {
 		name = touhou_paragon_mission.40307.a
 		allow = { has_federation = yes }
-		add_modifier = {
-			modifier = modifier_sanae_mission_mil_2_envoy
+		set_policy = {
+			policy = foreign_affairs_policy
+			option = sanae_mission_mil_2_federation
 		}
-
 	}
 	option = {
 		name = touhou_paragon_mission.40307.b
@@ -424,8 +448,9 @@ country_event = {
 				count >= 2
 			}
 		}
-		add_modifier = {
-			modifier = modifier_sanae_mission_mil_2_subjects
+		set_policy = {
+			policy = foreign_affairs_policy
+			option = sanae_mission_mil_2_subjects
 		}
 	}
 	option = {
@@ -436,17 +461,19 @@ country_event = {
 				is_spynetwork_level > 60
 			}
 		}
-		add_modifier = {
-			modifier = modifier_sanae_mission_mil_2_intel
+		set_policy = {
+			policy = foreign_affairs_policy
+			option = sanae_mission_mil_2_intel
 		}
 	}
 	option = {
 		name = touhou_paragon_mission.40307.d
 		allow = {
-			num_defensive_pacts >= 3
+			num_defensive_pacts >= 2
 		}
-		add_modifier = {
-			modifier = modifier_sanae_mission_mil_2_influence
+		set_policy = {
+			policy = foreign_affairs_policy
+			option = sanae_mission_mil_2_influence
 		}
 	}
 	after = {
@@ -479,27 +506,33 @@ country_event = {
 		any_owned_planet = {
 			is_colony = yes
 			is_under_colonization = no
-			exists = leader
-			leader = {
-				has_trait = thl_leader_trait_miracle
+			num_assigned_jobs = {
+				job = physicist
+				value >= 500
 			}
 			num_assigned_jobs = {
-				job = researcher
-				value >= 30
+				job = engineer
+				value >= 500
 			}
+			# or = {
+			# 	owner = {
+			# 		is_wilderness_empire = yes
+			# 	}
+			# 	has_building = building_research_efficiency_1
+			# }
 		}
 	}
 	option = {
 		name = touhou_paragon_mission.40308.a
-		add_modifier = {
-			modifier = modifier_sanae_mission_tech_2
-		}
-		every_owned_leader = {
-			if = {
-				limit = {
-					has_trait = thl_leader_trait_miracle
+		custom_tooltip = touhou_tooltip_mission_reduce_physicists_engineers_upkeep
+		hidden_effect = {
+			every_owned_leader = {
+				if = {
+					limit = {
+						has_trait = thl_leader_trait_miracle
+					}
+					set_leader_flag = thl_flag_mission_reduce_physicists_engineers_upkeep
 				}
-				add_trait = leader_trait_adaptable
 			}
 		}
 	}
@@ -533,7 +566,6 @@ country_event = {
 		has_point_of_interest = {
 			poi = touhou_sanae_mission_chain_faith.2
 		}
-		has_modifier = shroud_cooldown
 		has_tradition = tr_psionics_finish
 		any_owned_leader = {
 			has_trait = thl_leader_trait_miracle

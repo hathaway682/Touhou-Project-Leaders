@@ -496,30 +496,31 @@ modifier_sanae_mission_tech_1 = {
 	planet_pops_robotics_upkeep_mult = -0.15
 }
 
-modifier_sanae_mission_mil_2_envoy = {
-	envoys_add = 1
-	federation_naval_cap_contribution_mult = 0.50
-}
+# modifier_sanae_mission_mil_2_envoy = {
+# 	envoys_add = 1
+# 	federation_naval_cap_contribution_mult = 0.50
+# }
+#
+# modifier_sanae_mission_mil_2_subjects = {
+# 	subject_integration_influence_cost_mult = -0.2
+# 	divided_patrongage_max_subjects = 1
+# }
+#
+# modifier_sanae_mission_mil_2_intel = {
+# 	add_base_country_intel = 10
+# 	intel_decryption_add = 1
+# }
+#
+# modifier_sanae_mission_mil_2_influence = {
+# 	diplomacy_influence_upkeep_mult = -0.25
+# 	country_trust_growth = 0.20
+# }
 
-modifier_sanae_mission_mil_2_subjects = {
-	subject_integration_influence_cost_mult = -0.2
-	divided_patrongage_max_subjects = 1
-}
-
-modifier_sanae_mission_mil_2_intel = {
-	add_base_country_intel = 10
-	intel_decryption_add = 1
-}
-
-modifier_sanae_mission_mil_2_influence = {
-	diplomacy_influence_upkeep_mult = -0.25
-	country_trust_growth = 0.20
-}
-
-modifier_sanae_mission_tech_2 = {
-	all_technology_research_speed = 0.01
-	planet_researchers_upkeep_mult = -0.20
-}
+# modifier_sanae_mission_tech_2 = {
+# 	all_technology_research_speed = 0.01
+# 	planet_physicists_consumer_goods_upkeep_add = -0.5
+# 	planet_engineers_consumer_goods_upkeep_add = -0.5
+# }
 
 modifier_sanae_mission_faith_2_psionics = {
 	shroud_delve_cooldown = -0.15
