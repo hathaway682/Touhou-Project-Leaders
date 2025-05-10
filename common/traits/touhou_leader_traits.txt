@@ -360,6 +360,37 @@ thl_leader_trait_miracle = {
 		pop_happiness = 0.05
 		planet_amenities_mult = 0.05
 	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_mission_augment_alloy_production
+			owner = {
+				is_catalytic_empire = no
+			}
+		}
+		planet_metallurgists_alloys_produces_add = 0.3
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_mission_augment_alloy_production
+			owner = {
+				is_catalytic_empire = yes
+			}
+		}
+		planet_metallurgists_alloys_produces_add = 0.375
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_mission_augment_alloy_production_food
+		}
+		planet_metallurgists_food_produces_add = 1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_mission_reduce_physicists_engineers_upkeep
+		}
+		planet_physicists_consumer_goods_upkeep_add = -0.3
+		planet_engineers_consumer_goods_upkeep_add = -0.3
+	}
 	leader_class = { commander }
 	selectable_weight = {
 		weight = 0
