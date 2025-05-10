@@ -74,14 +74,14 @@ weapon_component_template = {
 	prerequisites = { "tech_sanae_mission_mil_nova" }
 	component_set = "NOVA_SANAE"
 	projectile_gfx = "gamma_laser_l"
-	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	tags = { weapon_type_energy l_slot weapon_role_artillery  }
+	ai_tags = { weapon_role_anti_armor gunship weapon_role_artillery}
 	ai_tag_weight = 0
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @l_t6_cost
-			rare_crystals = @l_t6_rare
+			alloys = @l_t7_cost
+			rare_crystals = @l_t7_rare
 		}
 		upkeep = {
 			energy = @l_t6_upkeep_energy
@@ -89,14 +89,14 @@ weapon_component_template = {
 		}
 	}
 
-	power = -114
-	damage = { min = 120 max = 300 }
+	power = -228
+	damage = { min = 126 max = 288 }
 
+	shield_penetration = 0.75
+	armor_penetration = 1.0
 	hull_damage = 1.25
-	armor_damage = 1.75
 
 	windup = { min = 50.0 max = 60.0 }
-
 	range = 120
 
 	accuracy = 0.95

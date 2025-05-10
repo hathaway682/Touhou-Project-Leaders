@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd17c79f-8a05-4c94-b951-f4856ab77cb2" name="更改" comment="">
+    <list default="true" id="0ca43e86-467a-45be-ba42-e63ff901278e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/policies/touhou_policies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/policies/touhou_policies.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/component_templates/touhou_special_weapons.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/component_templates/touhou_special_weapons.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/council_agendas/council_agendas_touhou.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/council_agendas/council_agendas_touhou.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/game_concepts/touhou_concepts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/game_concepts/touhou_concepts.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/static_modifiers/touhou_static_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/static_modifiers/touhou_static_modifiers.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/zones/touhou_leader_zones.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/zones/touhou_leader_zones.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_common_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_common_events.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_mission_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_mission_events.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" afterDir="false" />
     </list>
@@ -20,46 +24,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;hathaway682&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/hathaway682/Touhou-Project-Leaders.git&quot;,
-    &quot;accountId&quot;: &quot;b7b857a1-a6e0-4744-a4e0-17f5660d41ca&quot;
-  }
-}</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2woSHzdW7lXbpc2pTkPtZHofl9x" />
+  <component name="ProjectId" id="2wucPNwSC1x38UrGppQHRshmDaO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -68,15 +53,15 @@
     </attachedChunks>
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="默认任务">
-      <changelist id="bd17c79f-8a05-4c94-b951-f4856ab77cb2" name="更改" comment="" />
-      <created>1746706350715</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ca43e86-467a-45be-ba42-e63ff901278e" name="Changes" comment="" />
+      <created>1746894877380</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1746706350715</updated>
-      <workItem from="1746816276220" duration="1637000" />
-      <workItem from="1746818602698" duration="8878000" />
-      <workItem from="1746827750682" duration="17595000" />
+      <updated>1746894877380</updated>
+      <workItem from="1746894880049" duration="16317000" />
+      <workItem from="1746911811237" duration="182000" />
+      <workItem from="1746912140558" duration="686000" />
     </task>
     <servers />
   </component>

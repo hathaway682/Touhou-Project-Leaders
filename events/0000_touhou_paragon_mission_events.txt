@@ -603,6 +603,9 @@ country_event = {
 				has_tradition = tr_synthetics_finish
 				has_tradition = tr_cybernetics_finish
 				has_tradition = tr_genetics_finish
+				has_tradition = tr_mutation_finish
+				has_tradition = tr_purity_finish
+				has_tradition = tr_cloning_finish
 				has_tradition = tr_modularity_finish
 				has_tradition = tr_nanotech_finish
 				has_tradition = tr_virtuality_finish
@@ -762,130 +765,75 @@ country_event = {
 		has_point_of_interest = {
 			poi = touhou_sanae_mission_chain_mil.3
 		}
-		any_owned_fleet = {
-			leader = {
-				has_trait = thl_leader_trait_miracle
+		any_owned_ship = {
+			ship_uses_battleship_components = yes
+			fleet = {
+				leader = {
+					has_trait = thl_leader_trait_miracle
+					has_leader_flag = touhou_flag_sanae_robotist_councilor_update_industry
+				}
+				fleet_size >= 180
 			}
-			fleet_size >= 180
 		}
-		has_technology = tech_battleships
 	}
 	option = {
 		name = touhou_paragon_mission.40311.a
+		custom_tooltip = touhou_paragon_mission.40311_tooltip.a
+		create_fleet = {
+			name = "NAME_Dreadnought"
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = random
+					design = "NAME_Type_37" # Psi Jump Dreadnought
+					graphical_culture = "npf_01"
+					upgradable = no
+				}
+				set_location = {
+					target = root.capital_scope
+					distance = 0
+					angle = random
+				}
+			}
+		}
 		if = {
 			limit = {
-				nor = {
+				not = {
 					has_technology = tech_titans
+				}
+			}
+			add_research_option = tech_titans
+		}
+		if = {
+			limit = {
+				not = {
 					has_technology = tech_juggernaut
 				}
 			}
-			add_tech_progress = {
-				tech = tech_titans
-				progress = 0.2
-			}
-			add_tech_progress = {
-				tech = tech_juggernaut
-				progress = 0.2
-			}
-			else = {
-				custom_tooltip = touhou_paragon_mission.40311_tooltip.a
-				create_fleet = {
-					name = "NAME_Dreadnought"
-					effect = {
-						set_owner = root
-						create_ship = {
-							name = random
-							design = "NAME_Type_37" # Psi Jump Dreadnought
-							graphical_culture = "npf_01"
-							upgradable = no
-						}
-						set_location = {
-							target = root.capital_scope
-							distance = 0
-							angle = random
-						}
-					}
-				}
-			}
+			add_research_option = tech_juggernaut
 		}
 	}
 	option = {
 		name = touhou_paragon_mission.40311.b
+		trigger = {
+			has_relic = r_war_forge
+		}
+		allow = {
+			has_relic = r_war_forge
+		}
 		custom_tooltip = touhou_paragon_mission.40311_tooltip.b
-		if = {
-			limit = {
-				not = {
-					has_relic = r_war_forge
-				}
-			}
-			set_country_flag = touhou_sanae_mission_allow_cybrexwarform
-		}
-		else = {
-			set_variable = {
-				which = cybrex_count
-				value = 20
-			}
-		}
-	}
-	option = {
-		name = touhou_paragon_mission.40311.c
-		if = {
-			limit = {
-				not = {
-					any_owned_leader = {
-						has_trait = thl_leader_trait_robotist_sanae
-					}
-				}
-			}
-			every_owned_leader = {
-				if = {
-					limit = {
-						has_trait = thl_leader_trait_miracle
-					}
-					leader_event = { id = touhou_paragon.40310 days = 1 random = 3}
-				}
-			}
-			else = {
-				if = {
-					limit = {
-						or = {
-							has_technology = tech_sanae_robot_army
-							has_tech_option = tech_sanae_robot_army
-						}
-					}
-					random_list = {
-						1 = { add_research_option = tech_sanae_robot_strike_craft }
-						1 = { add_research_option = tech_sanae_robot_worker }
-					}
-				}
-				if = {
-					limit = {
-						or = {
-							has_technology = tech_sanae_robot_strike_craft
-							has_tech_option = tech_sanae_robot_strike_craft
-						}
-					}
-					random_list = {
-						1 = { add_research_option = tech_sanae_robot_army }
-						1 = { add_research_option = tech_sanae_robot_worker }
-					}
-				}
-				if = {
-					limit = {
-						or = {
-							has_technology = tech_sanae_robot_worker
-							has_tech_option = tech_sanae_robot_worker
-						}
-					}
-					random_list = {
-						1 = { add_research_option = tech_sanae_robot_strike_craft }
-						1 = { add_research_option = tech_sanae_robot_army }
-					}
-				}
-			}
+		set_variable = {
+			which = cybrex_count
+			value = 20
 		}
 	}
 	after = {
+		random_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_miracle
+			}
+			leader_event = { id = touhou_paragon.40311 }
+		}
 		hidden_effect = {
 			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_mil.3
@@ -971,18 +919,11 @@ country_event = {
 	}
 	option = {
 		name = touhou_paragon_mission.40313.a
-		if = {
+		every_owned_leader = {
 			limit = {
-				has_ascension_perk = ap_one_vision
+				has_trait = thl_leader_trait_miracle
 			}
-			add_modifier = {
-				modifier = modifier_sanae_mission_faith_3_perk
-			}
-			else = {
-				add_modifier = {
-					modifier = modifier_sanae_mission_faith_3_noperk
-				}
-			}
+			set_leader_flag = thl_flag_mission_order_faction
 		}
 	}
 	after = {
@@ -1015,12 +956,24 @@ country_event = {
 			poi = touhou_sanae_mission_chain_adm.4
 		}
 		OR = {
-			num_owned_active_gateways >= 10 #没有贸易额需求了，那上点强度吧
+			num_owned_active_gateways >= 6
 			count_owned_megastructure = {
 				limit = {
-					is_same_value = AOW_MEGA_advanced_hyperlane_controller
+					is_megastructure_type = hyper_relay
 				}
-				count >= 50
+				count >= 30
+			}
+			any_owned_megastructure = {
+				OR = {
+					is_megastructure_type = quantum_catapult_3
+					is_megastructure_type = quantum_catapult_restored
+					is_megastructure_type = quantum_catapult_restored_slingshot
+					is_megastructure_type = quantum_catapult_improved_slingshot
+				}
+			}
+			check_modifier_value = {
+				modifier = ship_ftl_jumpdrive_range_mult
+				value >= 0.5
 			}
 		}
 	}
@@ -1029,6 +982,8 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_sanae_mission_adm_4_eco
 		}
+		custom_tooltip = touhou_paragon_mission.40314.a.tooltip
+		set_country_flag = flash_forge_hyper_relay_activated
 	}
 	option = {
 		name = touhou_paragon_mission.40314.b
@@ -1073,16 +1028,16 @@ country_event = {
 					limit = {
 						army_type = cybrex_warform
 					}
-					count >= 1
+					count >= 3
 				}
 				count_ground_combat_attacker = {
 					limit = {
 						army_type = sanae_warform
 					}
-					count >= 1
+					count >= 3
 				}
 				count_ground_combat_attacker = {
-					count >= 10
+					count >= 20
 				}
 			}
 			any_ground_combat_attacker = {
@@ -1095,39 +1050,12 @@ country_event = {
 	}
 	option = {
 		name = touhou_paragon_mission.40315.a
-		allow = {
-			not = {
-				any_owned_leader = {
-					has_trait = thl_leader_trait_robotist_sanae
-				}
+		random_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_miracle
 			}
+			leader_event = { id = touhou_paragon.40312 }
 		}
-		every_owned_leader = {
-			if = {
-				limit = {
-					has_trait = thl_leader_trait_miracle
-				}
-				add_trait = leader_trait_dreaded_2
-				add_trait = leader_trait_heavy_hitter_2
-			}
-		}
-	}
-	option = {
-		name = touhou_paragon_mission.40315.b
-		allow = {
-			any_owned_leader = {
-				has_trait = thl_leader_trait_robotist_sanae
-			}
-		}
-		every_owned_leader = {
-			if = {
-				limit = {
-					has_trait = thl_leader_trait_miracle
-				}
-				set_leader_flag = touhou_flag_sanae_robotist_update
-			}
-		}
-		custom_tooltip = UPDATE_ROBOSTIST_SANAE
 	}
 	after = {
 		hidden_effect = {
@@ -1158,36 +1086,43 @@ country_event = {
 		has_point_of_interest = {
 			poi = touhou_sanae_mission_chain_tech.4
 		}
-		num_assigned_jobs = {
-			job = head_researcher
-			value >= 10
+		count_owned_planet = {
+			limit = {
+				politician_is_science_director = yes
+			}
+			count >= 6
 		}
 	}
 	option = {
 		name = touhou_paragon_mission.40316.a
-		add_modifier = {
-			modifier = modifier_sanae_mission_tech_4
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_miracle
+			}
+			set_leader_flag = thl_flag_mission_technocracy_update
 		}
-		set_country_flag = touhou_flag_sanae_headresearcher_update
+		custom_tooltip = touhou_paragon_mission.40316.a.tooltip
 	}
 	option = {
 		name = touhou_paragon_mission.40316.b
 		allow = {
-			has_civic = civic_technocracy
 			any_owned_leader = {
 				has_trait = thl_leader_trait_fly
 			}
 		}
-		add_modifier = {
-			modifier = modifier_sanae_mission_tech_4
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_miracle
+			}
+			set_leader_flag = thl_flag_mission_technocracy_update
 		}
-		set_country_flag = touhou_flag_sanae_headresearcher_update
 		every_owned_leader = {
 			limit = {
 				has_trait = thl_leader_trait_fly
 			}
 			add_trait = thl_leader_trait_fake_technocracy
 		}
+		custom_tooltip = touhou_paragon_mission.40316.b.tooltip
 	}
 	after = {
 		hidden_effect = {
@@ -1273,103 +1208,69 @@ country_event = {
 	fire_only_once = yes
 	event_chain = touhou_sanae_mission_chain
 	trigger = {
-		or = {
-			and = {
-				has_point_of_interest = {
-					poi = touhou_sanae_mission_chain_adm.5
-				}
-				calc_true_if = {
-					amount >= 5
-					any_owned_megastructure = {
-						OR = {
-							is_megastructure_type = dyson_sphere_5
-							is_megastructure_type = dyson_sphere_restored
-						}
-					}
-					any_owned_megastructure = {
-						OR = {
-							is_megastructure_type = spy_orb_4
-							is_megastructure_type = spy_orb_restored
-						}
-					}
-					any_owned_megastructure = {
-						OR = {
-							is_megastructure_type = think_tank_3
-							is_megastructure_type = think_tank_4
-							is_megastructure_type = think_tank_restored
-						}
-					}
-					any_owned_megastructure = {
-						OR = {
-							is_megastructure_type = matter_decompressor_4
-							is_megastructure_type = matter_decompressor_restored
-						}
-					}
-					any_owned_megastructure = {
-						OR = {
-							is_megastructure_type = strategic_coordination_center_3
-							is_megastructure_type = strategic_coordination_center_restored
-						}
-					}
-					any_owned_megastructure = {
-						OR = {
-							is_megastructure_type = mega_art_installation_3
-							is_megastructure_type = mega_art_installation_4
-							is_megastructure_type = mega_art_installation_restored
-							is_megastructure_type = mega_art_installation_restored_2
-						}
-					}
-					any_owned_megastructure = {
-						OR = {
-							is_megastructure_type = interstellar_assembly_4
-							is_megastructure_type = interstellar_assembly_restored
-						}
-					}
-					any_owned_megastructure = {
-						OR = {
-							is_megastructure_type = mega_shipyard_3
-							is_megastructure_type = mega_shipyard_restored
-						}
-					}
-					any_owned_megastructure = {
-						OR = {
-							is_megastructure_type = quantum_catapult_3
-							is_megastructure_type = quantum_catapult_restored
-							is_megastructure_type = quantum_catapult_improved_slingshot
-						}
-					}
+		has_point_of_interest = {
+			poi = touhou_sanae_mission_chain_adm.5
+		}
+		calc_true_if = {
+			amount >= 5
+			any_owned_megastructure = {
+				OR = {
+					is_megastructure_type = dyson_sphere_5
+					is_megastructure_type = dyson_sphere_restored
 				}
 			}
-			and = {
-				has_point_of_interest = {
-					poi = touhou_sanae_mission_chain_adm.5
+			any_owned_megastructure = {
+				OR = {
+					is_megastructure_type = spy_orb_4
+					is_megastructure_type = spy_orb_restored
 				}
-				nor = {
-					has_ascension_perk = ap_galactic_wonders_utopia
-					has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+			}
+			any_owned_megastructure = {
+				OR = {
+					is_megastructure_type = think_tank_3
+					is_megastructure_type = think_tank_4
+					is_megastructure_type = think_tank_restored
 				}
-				num_ascension_perks >= 8
+			}
+			any_owned_megastructure = {
+				OR = {
+					is_megastructure_type = matter_decompressor_4
+					is_megastructure_type = matter_decompressor_restored
+				}
+			}
+			any_owned_megastructure = {
+				OR = {
+					is_megastructure_type = strategic_coordination_center_3
+					is_megastructure_type = strategic_coordination_center_restored
+				}
+			}
+			any_owned_megastructure = {
+				OR = {
+					is_megastructure_type = mega_art_installation_3
+					is_megastructure_type = mega_art_installation_4
+					is_megastructure_type = mega_art_installation_restored
+					is_megastructure_type = mega_art_installation_restored_2
+				}
+			}
+			any_owned_megastructure = {
+				OR = {
+					is_megastructure_type = interstellar_assembly_4
+					is_megastructure_type = interstellar_assembly_restored
+				}
+			}
+			any_owned_megastructure = {
+				OR = {
+					is_megastructure_type = mega_shipyard_3
+					is_megastructure_type = mega_shipyard_restored
+				}
 			}
 		}
 	}
 	option = {
-		name = touhou_paragon_mission.40318.a
-		trigger = {
-			nor = {
-				has_ascension_perk = ap_galactic_wonders_utopia
-				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
-			}
-			num_ascension_perks >= 8
-		}
+		name = touhou_paragon_mission.40318.e
 	}
 	option = {
 		name = touhou_paragon_mission.40318.b
-		trigger = {
-			or = {
-				has_ascension_perk = ap_galactic_wonders_utopia
-				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
-			}
-		}
 		allow = {
 			or = {
 				allowed_crisis_type = prethoryn
@@ -1382,12 +1283,6 @@ country_event = {
 	}
 	option = {
 		name = touhou_paragon_mission.40318.c
-		trigger = {
-			or = {
-				has_ascension_perk = ap_galactic_wonders_utopia
-				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
-			}
-		}
 		allow = {
 			or = {
 				allowed_crisis_type = contingency
@@ -1400,12 +1295,6 @@ country_event = {
 	}
 	option = {
 		name = touhou_paragon_mission.40318.d
-		trigger = {
-			or = {
-				has_ascension_perk = ap_galactic_wonders_utopia
-				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
-			}
-		}
 		allow = {
 			or = {
 				allowed_crisis_type = unbidden
@@ -1417,12 +1306,15 @@ country_event = {
 		}
 	}
 	option = {
-		name = touhou_paragon_mission.40318.e
-		trigger = {
+		name = touhou_paragon_mission.40318.f
+		allow = {
 			or = {
-				has_ascension_perk = ap_galactic_wonders_utopia
-				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+				allowed_crisis_type = synth_queen
+				allowed_crisis_type = all
 			}
+		}
+		add_modifier = {
+			modifier = modifier_sanae_mission_adm_5_synth_queen
 		}
 	}
 	after = {
@@ -1435,24 +1327,6 @@ country_event = {
 				desc = "touhou_sanae_mission_finish"
 				event_chain = "touhou_sanae_mission_chain"
 			}
-		}
-	}
-	option = {
-		name = touhou_paragon_mission.40318.e
-		trigger = {
-			or = {
-				has_ascension_perk = ap_galactic_wonders_utopia
-				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
-			}
-		}
-		allow = {
-			or = {
-				allowed_crisis_type = synth_queen
-				allowed_crisis_type = all
-			}
-		}
-		add_modifier = {
-			modifier = modifier_sanae_mission_adm_5_synth_queen
 		}
 	}
 }
@@ -1517,60 +1391,60 @@ country_event = {
 	}
 	option = {
 		name = touhou_paragon_mission.40319.a
-		allow = {
-			check_modifier_value = {
-				modifier = weapon_type_energy_weapon_fire_rate_mult
-				value >= 1.0
-			}
-			check_modifier_value = {
-				modifier = weapon_type_energy_weapon_damage_mult
-				value >= 1.0
-			}
-		}
+		# allow = {
+		# 	check_modifier_value = {
+		# 		modifier = weapon_type_energy_weapon_fire_rate_mult
+		# 		value >= 1.0
+		# 	}
+		# 	check_modifier_value = {
+		# 		modifier = weapon_type_energy_weapon_damage_mult
+		# 		value >= 1.0
+		# 	}
+		# }
 		add_research_option = tech_sanae_mission_mil_nova
 	}
-	option = {
-		name = touhou_paragon_mission.40319.b
-		allow = {
-			check_modifier_value = {
-				modifier = weapon_type_strike_craft_weapon_damage_mult
-				value >= 2.0
-			}
-			check_modifier_value = {
-				modifier = weapon_type_strike_craft_weapon_fire_rate_mult
-				value >= 2.0
-			}
-		}
-		add_research_option = tech_sanae_mission_mil_glidingsnake
-	}
-	option = {
-		name = touhou_paragon_mission.40319.c
-		allow = {
-			check_modifier_value = {
-				modifier = weapon_type_explosive_weapon_damage_mult
-				value >= 1.0
-			}
-			check_modifier_value = {
-				modifier = weapon_type_explosive_weapon_fire_rate_mult
-				value >= 1.0
-			}
-		}
-		add_research_option = tech_sanae_mission_mil_ironwheel
-	}
-	option = {
-		name = touhou_paragon_mission.40319.d
-		allow = {
-			check_modifier_value = {
-				modifier = weapon_type_kinetic_weapon_damage_mult
-				value >= 1.0
-			}
-			check_modifier_value = {
-				modifier = weapon_type_kinetic_weapon_fire_rate_mult
-				value >= 1.0
-			}
-		}
-		add_research_option = tech_sanae_mission_mil_onbashira
-	}
+	# option = {
+	# 	name = touhou_paragon_mission.40319.b
+	# 	allow = {
+	# 		check_modifier_value = {
+	# 			modifier = weapon_type_strike_craft_weapon_damage_mult
+	# 			value >= 2.0
+	# 		}
+	# 		check_modifier_value = {
+	# 			modifier = weapon_type_strike_craft_weapon_fire_rate_mult
+	# 			value >= 2.0
+	# 		}
+	# 	}
+	# 	add_research_option = tech_sanae_mission_mil_glidingsnake
+	# }
+	# option = {
+	# 	name = touhou_paragon_mission.40319.c
+	# 	allow = {
+	# 		check_modifier_value = {
+	# 			modifier = weapon_type_explosive_weapon_damage_mult
+	# 			value >= 1.0
+	# 		}
+	# 		check_modifier_value = {
+	# 			modifier = weapon_type_explosive_weapon_fire_rate_mult
+	# 			value >= 1.0
+	# 		}
+	# 	}
+	# 	add_research_option = tech_sanae_mission_mil_ironwheel
+	# }
+	# option = {
+	# 	name = touhou_paragon_mission.40319.d
+	# 	allow = {
+	# 		check_modifier_value = {
+	# 			modifier = weapon_type_kinetic_weapon_damage_mult
+	# 			value >= 1.0
+	# 		}
+	# 		check_modifier_value = {
+	# 			modifier = weapon_type_kinetic_weapon_fire_rate_mult
+	# 			value >= 1.0
+	# 		}
+	# 	}
+	# 	add_research_option = tech_sanae_mission_mil_onbashira
+	# }
 	after = {
 		hidden_effect = {
 			update_sanae_phase_trait = yes
@@ -2220,5 +2094,61 @@ country_event = {
 		country_event = { id = touhou_paragon_mission.40320 days = 1 random = 30 }
 		country_event = { id = touhou_paragon_mission.40324 days = 1 random = 30 }
 		country_event = { id = touhou_paragon_mission.40325 days = 1 random = 30 }
+		country_event = { id = touhou_paragon_mission.40390 days = 1 random = 30 }
+	}
+}
+
+country_event = {
+	id = touhou_paragon_mission.40390
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_leader = {
+			has_trait = thl_leader_trait_miracle
+			has_leader_flag = thl_flag_mission_order_faction
+		}
+	}
+
+	immediate = {
+		remove_country_flag = thl_egalitarian_leading
+		remove_country_flag = thl_authoritarian_leading
+		remove_country_flag = thl_militarist_leading
+		remove_country_flag = thl_pacifist_leading
+		remove_country_flag = thl_xenophile_leading
+		remove_country_flag = thl_xenophobe_leading
+		remove_country_flag = thl_spiritualist_leading
+		remove_country_flag = thl_materialist_leading
+		ordered_owned_pop_group = {
+			position = 0
+			order_by = trigger:pop_amount
+			switch = {
+				trigger = pop_group_has_ethic
+				ethic_egalitarian = {
+					root = { set_country_flag = thl_egalitarian_leading }
+				}
+				ethic_authoritarian = {
+					root = { set_country_flag = thl_authoritarian_leading }
+				}
+				ethic_militarist = {
+					root = { set_country_flag = thl_militarist_leading }
+				}
+				ethic_pacifist = {
+					root = { set_country_flag = thl_pacifist_leading }
+				}
+				ethic_xenophile = {
+					root = { set_country_flag = thl_xenophile_leading }
+				}
+				ethic_xenophobe = {
+					root = { set_country_flag = thl_xenophobe_leading }
+				}
+				ethic_spiritualist = {
+					root = { set_country_flag = thl_spiritualist_leading }
+				}
+				ethic_materialist = {
+					root = { set_country_flag = thl_materialist_leading }
+				}
+			}
+		}
 	}
 }

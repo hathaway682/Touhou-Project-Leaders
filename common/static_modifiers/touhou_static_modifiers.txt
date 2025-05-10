@@ -543,7 +543,6 @@ modifier_sanae_mission_faith_3_perk = {
 }
 
 modifier_sanae_mission_adm_4_eco = {
-	starbase_trade_collection_range_add = 1
 	megastructure_build_speed_mult = 0.25
 }
 
@@ -552,10 +551,10 @@ modifier_sanae_mission_adm_4_mil = {
 	ship_jumpdrive_cooldown_mult = -0.15
 }
 
-modifier_sanae_mission_tech_4 = {
-	pop_demotion_time_mult = -0.25
-	job_head_researcher_per_pop = 0.05
-}
+# modifier_sanae_mission_tech_4 = {
+# 	pop_demotion_time_mult = -0.25
+# 	job_head_researcher_per_pop = 0.02
+# }
 
 modifier_sanae_mission_adm_5_prethoryn = {
 	country_society_tech_research_speed = 0.5

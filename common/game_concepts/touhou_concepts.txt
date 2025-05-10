@@ -18,3 +18,7 @@ concept_ex_charge = {
 
 concept_huuin = {
 }
+
+concept_thl_mission_ethic_effect = {
+    icon = "gfx/interface/icons/concepts/concept_factions.dds"
+}
