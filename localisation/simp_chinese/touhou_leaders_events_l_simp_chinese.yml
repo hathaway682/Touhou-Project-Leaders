@@ -1504,6 +1504,10 @@
 
  building_shrine: "神社"
  building_shrine_desc: "神社不是神灵建造的，而是信徒建造的。祭祀实际存在的神灵，神灵就会自然寄宿在其中。"
+
+ #博丽神道特供版，除了升级为博丽分社之外其他不变
+ building_hakurei_shrine_0: "神社"
+ building_hakurei_shrine_0_desc: "神社不是神灵建造的，而是信徒建造的。祭祀实际存在的神灵，神灵就会自然寄宿在其中。\n\n话是这么说，但我们自己也不知道这个神社是在祭祀什么，能赚到香火钱就是好神社。"
  building_hakurei_shrine: "博丽分社"
  building_hakurei_shrine_desc: "分社建的越多，香火钱就越多，在意识到我们可以帮她管理分社之后，博丽灵梦就在致力于扩大分社网络。"
 

@@ -11,6 +11,10 @@ building_shrine = {
 
 	potential = {
 		owner = {
+			NOR = {
+				has_civic = civic_hakurei_shinto
+				has_civic = civic_hakurei_shinto_corp
+			}
 			has_country_flag = can_build_shirne
 		}
 		NOT = {
@@ -360,6 +364,151 @@ holding_building_moriya_shrine = {
 	}
 }
 
+#博丽神道国策特供版神社
+building_hakurei_shrine_0 = {
+	base_buildtime = @b1_time
+	icon = building_moriya_shrine
+	base_cap_amount = 1
+
+	category = unity
+
+	potential = {
+		owner = {
+			OR = {
+				has_civic = civic_hakurei_shinto
+				has_civic = civic_hakurei_shinto_corp
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_temple
+		building_heritage_site
+		building_simulation_1
+		building_hive_node
+	}
+
+	upgrades = {
+		#building_moriya_shrine
+		building_hakurei_shrine
+	}
+
+	planet_modifier = {
+		job_miko_add = 200
+	}
+
+	on_built = {
+		if = {
+			limit = {
+				OR = {
+					has_deposit = d_nature_preserve_blocker
+					has_deposit = d_big_nature_preserve_blocker
+					has_deposit = d_dense_jungle
+					has_deposit = d_rugged_woods
+					has_deposit = d_lush_jungle
+					has_deposit = d_migrating_forests
+					has_deposit = d_migrating_forest_reserve
+					has_deposit = d_wandering_forests
+					has_deposit = d_seed_bombing_plantoid_blocker
+				}
+				owner = {
+					NOT = {
+						any_owned_leader = {
+							has_trait = thl_leader_trait_fall
+						}
+					}
+				}
+			}
+			planet_event = {
+				id = touhou_paragon.50003
+			}
+			set_planet_flag = sizuha_planet
+		}
+		if = {
+			limit = {
+				planet_resource_compare = {
+					resource = food
+					type = produces
+					value > 50
+				}
+				owner = {
+					NOT = {
+						any_owned_leader = {
+							has_trait = leader_trait_harvest
+						}
+					}
+				}
+			}
+			planet_event = {
+				id = touhou_paragon.50004
+			}
+			set_planet_flag = minoriko_planet
+		}
+		if = {
+			limit = {
+				OR = {
+					free_amenities < -100
+					any_owned_pop_group = {
+						pop_group_has_trait = trait_humanoid_jinxed
+					}
+				}
+
+				owner = {
+					NOT = {
+						any_owned_leader = {
+							has_trait = thl_leader_trait_jinx
+						}
+					}
+				}
+			}
+			planet_event = {
+				id = touhou_paragon.50005
+			}
+			set_planet_flag = hina_planet
+		}
+		if = {
+			limit = {
+				is_capital = yes
+				NOT = {
+					owner = {
+						has_country_flag = saisen_box_active
+					}
+				}
+			}
+			owner = {
+				country_event = { id = touhou_paragon.40612 days = 365 random = 180 }
+				set_country_flag = saisen_box_active
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+	triggered_desc = {
+		text = job_miko_effect_desc
+	}
+	is_essential = yes
+}
+
 building_hakurei_shrine = {
 	base_buildtime = @b3_time
 	icon = building_hakurei_shrine
@@ -369,13 +518,9 @@ building_hakurei_shrine = {
 
 	potential = {
 		owner = {
-			any_owned_planet = {
-				OR = {
-					has_deposit = d_hakurei_shrine
-					has_deposit = d_hakurei_shrine_large
-					has_deposit = d_hakurei_shrine_imperial
-					has_deposit = d_hakurei_shrine_psionic
-				}
+			OR = {
+				has_civic = civic_hakurei_shinto
+				has_civic = civic_hakurei_shinto_corp
 			}
 		}
 		NOT = {
@@ -395,12 +540,6 @@ building_hakurei_shrine = {
 					}
 				}
 			}
-		}
-		NOR = {
-			has_deposit = d_hakurei_shrine
-			has_deposit = d_hakurei_shrine_large
-			has_deposit = d_hakurei_shrine_imperial
-			has_deposit = d_hakurei_shrine_psionic
 		}
 	}
 
@@ -457,7 +596,7 @@ building_hakurei_shrine = {
 					}
 				}
 			}
-			rare_crystals = @b3_rare_upkeep
+			volatile_motes = @b3_rare_upkeep
 		}
 	}
 	triggered_desc = {
@@ -795,9 +934,9 @@ building_luna_catalyst = {
 	}
 
 	triggered_planet_modifier = {
-		planet_physicist_physics_research_produces_add = 2
-		planet_researchers_society_research_produces_add = 2
-		planet_researchers_engineering_research_produces_add = 2
+		planet_physicists_physics_research_produces_add = 2
+		planet_biologists_society_research_produces_add = 2
+		planet_engineers_engineering_research_produces_add = 2
 	}
 }
 

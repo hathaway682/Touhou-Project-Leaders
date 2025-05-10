@@ -672,7 +672,25 @@ hakurei_faith_trigger = {
 				}
 			}
 		}
-		#优先级第二：星区总督
+		#优先级第二：分社建筑
+		AND = {
+			planet = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+				}
+				OR = {
+					has_building = building_hakurei_shrine
+					has_deposit = d_hakurei_shrine
+					has_deposit = d_hakurei_shrine_large
+					has_deposit = d_hakurei_shrine_imperial
+					has_deposit = d_hakurei_shrine_psionic
+				}
+			}
+		}
+		#优先级第三：星区总督
 		AND = {
 			sector_capital = {
 				exists = leader
@@ -687,9 +705,13 @@ hakurei_faith_trigger = {
 						has_trait = thl_leader_trait_miracle
 					}
 				}
+				NOR = {
+					has_building = building_moriya_shrine
+					has_building = holding_building_moriya_shrine
+				}
 			}
 		}
-		#优先级第三：信仰国策
+		#优先级第四：信仰国策
 		AND = {
 			OR = {
 				has_valid_civic = civic_hakurei_shinto
@@ -710,6 +732,10 @@ hakurei_faith_trigger = {
 						has_trait = thl_leader_trait_miracle
 					}
 				}
+				NOR = {
+					has_building = building_moriya_shrine
+					has_building = holding_building_moriya_shrine
+				}
 			}
 		}
 	}
@@ -726,7 +752,22 @@ moriya_faith_trigger = {
 				}
 			}
 		}
-		#优先级第二：星区总督
+		#优先级第二：分社建筑
+		AND = {
+			planet = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_fly
+					}
+				}
+				OR = {
+					has_building = building_moriya_shrine
+					has_building = holding_building_moriya_shrine
+				}
+			}
+		}
+		#优先级第三：星区总督
 		AND = {
 			sector_capital = {
 				exists = leader
@@ -741,9 +782,16 @@ moriya_faith_trigger = {
 						has_trait = thl_leader_trait_fly
 					}
 				}
+				NOR = {
+					has_building = building_hakurei_shrine
+					has_deposit = d_hakurei_shrine
+					has_deposit = d_hakurei_shrine_large
+					has_deposit = d_hakurei_shrine_imperial
+					has_deposit = d_hakurei_shrine_psionic
+				}
 			}
 		}
-		#优先级第三：信仰国策
+		#优先级第四：信仰国策
 		AND = {
 			OR = {
 				has_valid_civic = civic_moriya_shinto
@@ -763,6 +811,13 @@ moriya_faith_trigger = {
 					leader = {
 						has_trait = thl_leader_trait_fly
 					}
+				}
+				NOR = {
+					has_building = building_hakurei_shrine
+					has_deposit = d_hakurei_shrine
+					has_deposit = d_hakurei_shrine_large
+					has_deposit = d_hakurei_shrine_imperial
+					has_deposit = d_hakurei_shrine_psionic
 				}
 			}
 		}
