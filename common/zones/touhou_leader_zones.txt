@@ -166,3 +166,7 @@ zone_anglers = {
 		text = zone_anglers_triggered_desc
 	}
 }
+
+zone_tomb = {
+	icon = GFX_job_necromancer
+}

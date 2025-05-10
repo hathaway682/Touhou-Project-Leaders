@@ -1097,8 +1097,6 @@
 
  bombardment_raiding_ghost: "八重雾中渡"
  bombardment_raiding_ghost_desc: "$bombardment_raiding_ghost$轰炸敌方人口聚集区，并将亡魂引渡至我方星球强迫其工作。\n- 对§Y陆军§!造成§E轻度§!伤害\n- 对§Y星球§!造成§E轻度§!伤害\n- 将会§Y消灭§!人口同时§Y掠夺§!他们留下的§H灵体§!\n- 将§R不会§!掠夺或消灭最后的人口"
- trait_thl_spirit: "灵体"
- trait_thl_spirit_desc: "这个人口是一群死者留下的一团不定形的气质。"
 
  NAME_Patchouli:0 "帕秋莉·诺蕾姬"
  patchouli1:0 "原居住于红魔馆的大魔法使，红魔馆馆主的友人，受其介绍来担任我们的魔法顾问。"
