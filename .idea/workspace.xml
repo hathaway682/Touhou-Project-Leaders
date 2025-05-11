@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0ca43e86-467a-45be-ba42-e63ff901278e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/game_concepts/touhou_concepts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/game_concepts/touhou_concepts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/zones/touhou_leader_zones.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/zones/touhou_leader_zones.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/touhou_paragon_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/touhou_paragon_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +59,8 @@
       <workItem from="1746914965929" duration="201000" />
       <workItem from="1746915610438" duration="3308000" />
       <workItem from="1746950175386" duration="58000" />
+      <workItem from="1746950526977" duration="807000" />
+      <workItem from="1746960506488" duration="251000" />
     </task>
     <servers />
   </component>
