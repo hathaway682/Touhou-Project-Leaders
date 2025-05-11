@@ -691,7 +691,7 @@ country_event = { # 天子
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40100.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_tenshi
 			}
 			last_created_leader = {
@@ -785,7 +785,7 @@ country_event = { # 萃香
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40200.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_suika
 			}
 			last_created_leader = {
@@ -911,7 +911,7 @@ country_event = { # 早苗
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40300.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader
 			}
 			last_created_leader = {
@@ -998,7 +998,7 @@ country_event = { # 琪露诺
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40400.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_crino
 			}
 			last_created_leader = {
@@ -1098,7 +1098,7 @@ country_event = { # 美铃
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40500.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_meiling
 			}
 			last_created_leader = {
@@ -1182,7 +1182,7 @@ country_event = { # 灵梦
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40600.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_reimu
 			}
 			last_created_leader = {
@@ -1279,7 +1279,7 @@ country_event = { # 魔理沙
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40700.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_marisa
 			}
 			last_created_leader = {
@@ -1364,7 +1364,7 @@ country_event = { # 铃仙
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40800.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_reisen
 			}
 			last_created_leader = {
@@ -1448,7 +1448,7 @@ country_event = { # 妖梦
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.40900.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_youmu
 			}
 			last_created_leader = {
@@ -1532,7 +1532,7 @@ country_event = { # 咲夜
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41000.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_sakuya
 			}
 			last_created_leader = {
@@ -1617,7 +1617,7 @@ country_event = { # 梅莉
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41100.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_merry
 			}
 			last_created_leader = {
@@ -1714,7 +1714,7 @@ country_event = { # 莲子
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41200.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_renko
 			}
 			last_created_leader = {
@@ -1866,7 +1866,7 @@ country_event = { # 觉
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41300.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_satori
 			}
 			last_created_leader = {
@@ -1950,7 +1950,7 @@ country_event = { # 恋恋
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41400.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_koishi
 			}
 			last_created_leader = {
@@ -2034,7 +2034,7 @@ country_event = { # 文
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41500.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_aya
 			}
 			last_created_leader = {
@@ -2118,7 +2118,7 @@ country_event = { # 四季
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41600.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_shikieiki
 			}
 			last_created_leader = {
@@ -2202,7 +2202,7 @@ country_event = { # 小町
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41700.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_onoduka
 			}
 			last_created_leader = {
@@ -2286,7 +2286,7 @@ country_event = { # 帕秋莉
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41800.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_patchouli
 			}
 			last_created_leader = {
@@ -2497,7 +2497,7 @@ country_event = { # 蕾米
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.41900.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_remilia
 			}
 		}
@@ -2623,7 +2623,7 @@ country_event = { # 爱丽丝
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42000.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_alice
 			}
 			create_species = {
@@ -2726,7 +2726,7 @@ country_event = { # 幽幽子
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42100.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_yuyuko
 			}
 		}
@@ -2805,7 +2805,7 @@ country_event = { # 幽香
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42200.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_yuka
 			}
 		}
@@ -2884,7 +2884,7 @@ country_event = { # 小铃
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42300.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_kosuzu
 			}
 		}
@@ -2963,7 +2963,7 @@ country_event = { # 阿求
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42400.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_akyuu
 			}
 		}
@@ -3056,7 +3056,7 @@ country_event = { # 阿燐
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42500.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_rin
 			}
 		}
@@ -3135,7 +3135,7 @@ country_event = { # 阿空
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42600.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_utsuho
 			}
 			country_event = { id = touhou_paragon_situation.42670 days=3600}
@@ -3215,7 +3215,7 @@ country_event = { # 荷取
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42700.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_nitori
 			}
 		}
@@ -3289,7 +3289,7 @@ country_event = { # 静叶
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42800.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_sizuha
 			}
 		}
@@ -3363,7 +3363,7 @@ country_event = { # 穰子
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.42900.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_minoriko
 			}
 			hire_event_leader_effect
@@ -3443,7 +3443,7 @@ country_event = { # 雏
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.43000.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_hina
 			}
 			set_variable = {
@@ -3529,7 +3529,7 @@ country_event = { # 米斯蒂娅
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.43100.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_mystia
 			}
 		}
@@ -3608,7 +3608,7 @@ country_event = { # 帝
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.43200.hire_custom_tooltip
 		hidden_effect = {
-			ethic_leader_hire_effect = {
+			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_tewi
 			}
 		}

@@ -223,7 +223,7 @@ random_kill_army_if_oni_defender = {
 	}
 }
 
-ethic_leader_hire_effect = {
+thl_ethic_leader_hire_effect = {
 	random_owned_planet = {
 		limit = {
 			is_variable_set = paragon_memory_vault
@@ -234,7 +234,7 @@ ethic_leader_hire_effect = {
 		}
 	}
 
-	#lower_leader_chance = yes
+	# lower_leader_chance = yes #招募东方领袖不应该减少原版领袖的频率
 	set_country_flag = spawning_renowned_leader
 	event_target:ethic_leader = {
 		set_owner = root
