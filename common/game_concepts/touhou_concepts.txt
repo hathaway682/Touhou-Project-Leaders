@@ -18,3 +18,9 @@ concept_ex_charge = {
 
 concept_huuin = {
 }
+
+concept_thl_spirit = {
+}
+
+concept_yomi_leaders = {
+}

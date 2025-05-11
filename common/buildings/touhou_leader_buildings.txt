@@ -7,6 +7,10 @@ building_shrine = {
 	icon = building_moriya_shrine
 	base_cap_amount = 1
 
+	building_sets = {
+		origin
+	}
+
 	category = unity
 
 	potential = {
@@ -152,6 +156,10 @@ building_moriya_shrine = {
 	icon = building_moriya_shrine
 	can_build = no
 
+	building_sets = {
+		origin
+	}
+
 	category = unity
 
 	potential = {
@@ -294,6 +302,10 @@ holding_building_moriya_shrine = {
 	base_cap_amount = 1
 	category = unity
 
+	building_sets = {
+		origin
+	}
+
 	potential = {
 		owner.overlord = {
 			OR = {
@@ -369,6 +381,10 @@ building_hakurei_shrine_0 = {
 	base_buildtime = @b1_time
 	icon = building_moriya_shrine
 	base_cap_amount = 1
+
+	building_sets = {
+		origin
+	}
 
 	category = unity
 
@@ -514,6 +530,10 @@ building_hakurei_shrine = {
 	icon = building_hakurei_shrine
 	can_build = no
 
+	building_sets = {
+		origin
+	}
+
 	category = unity
 
 	potential = {
@@ -610,7 +630,12 @@ building_assembler_mk2 = {
 	base_cap_amount = 1
 	icon = building_wrecking_yards
 
-	category = pop_group_assembly
+	building_sets = {
+		government
+		urban
+	}
+
+	category = pop_assembly
 
 	allow = {
 		has_major_upgraded_capital = yes
@@ -655,132 +680,15 @@ building_assembler_mk2 = {
 	}
 }
 
-building_fire_catalyst = {
-	base_buildtime = @b3_time
-	empire_limit = 1
-
-	category = unity
-
-	potential = {
-		owner = {
-			any_owned_leader = {
-				is_councilor = yes
-				has_trait = thl_leader_trait_elements
-			}
-		}
-	}
-
-	allow = {
-		has_upgraded_capital = yes
-	}
-
-	destroy_trigger = {
-		always = no
-	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
-			sr_zro = @b3_rare_cost
-		}
-		upkeep = {
-			energy = @b3_upkeep
-			sr_zro = @b3_rare_upkeep
-		}
-	}
-
-	triggered_planet_modifier = {
-		planet_technician_energy_produces_add = 4
-	}
-}
-
-building_water_catalyst = {
-	base_buildtime = @b3_time
-	empire_limit = 1
-
-	category = unity
-
-	potential = {
-		owner = {
-			any_owned_leader = {
-				is_councilor = yes
-				has_trait = thl_leader_trait_elements
-			}
-		}
-	}
-
-	allow = {
-		has_upgraded_capital = yes
-	}
-
-	destroy_trigger = {
-		always = no
-	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
-			sr_zro = @b3_rare_cost
-		}
-		upkeep = {
-			energy = @b3_upkeep
-			sr_zro = @b3_rare_upkeep
-		}
-	}
-
-	triggered_planet_modifier = {
-		planet_artisans_consumer_goods_produces_add = 4
-		planet_artisans_minerals_upkeep_add = 4
-	}
-}
-
-building_wood_catalyst = {
-	base_buildtime = @b3_time
-	empire_limit = 1
-
-	category = unity
-
-	potential = {
-		owner = {
-			any_owned_leader = {
-				is_councilor = yes
-				has_trait = thl_leader_trait_elements
-			}
-		}
-	}
-
-	allow = {
-		has_upgraded_capital = yes
-	}
-
-	destroy_trigger = {
-		always = no
-	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
-			sr_zro = @b3_rare_cost
-		}
-		upkeep = {
-			energy = @b3_upkeep
-			sr_zro = @b3_rare_upkeep
-		}
-	}
-
-	triggered_planet_modifier = {
-		planet_farmers_food_produces_add = 4
-	}
-}
-
 building_metel_catalyst = {
 	base_buildtime = @b3_time
 	empire_limit = 1
 
-	category = unity
+	building_sets = {
+		foundry
+	}
+
+	category = manufacturing
 
 	potential = {
 		owner = {
@@ -817,11 +725,15 @@ building_metel_catalyst = {
 	}
 }
 
-building_earth_catalyst = {
+building_wood_catalyst = {
 	base_buildtime = @b3_time
 	empire_limit = 1
 
-	category = unity
+	building_sets = {
+		factory
+	}
+
+	category = manufacturing
 
 	potential = {
 		owner = {
@@ -853,7 +765,139 @@ building_earth_catalyst = {
 	}
 
 	triggered_planet_modifier = {
-		planet_miners_minerals_produces_add = 4
+		pop_artisan_bonus_workforce_mult = 0.5
+	}
+}
+
+building_water_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	building_sets = {
+		farming
+	}
+
+	category = resource
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = thl_leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		pop_farmer_bonus_workforce_mult = 0.5
+	}
+}
+
+building_fire_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	building_sets = {
+		generator
+	}
+
+	category = resource
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = thl_leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		pop_technician_bonus_workforce_mult = 0.5
+	}
+}
+
+building_earth_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	category = resource
+
+	building_sets = {
+		mining
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = thl_leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		pop_miner_bonus_workforce_mult = 4
 	}
 }
 
@@ -864,6 +908,10 @@ building_sun_catalyst = {
 
 	category = unity
 
+	building_sets = {
+		unity
+	}
+
 	potential = {
 		owner = {
 			any_owned_leader = {
@@ -894,7 +942,7 @@ building_sun_catalyst = {
 	}
 
 	triggered_planet_modifier = {
-		planet_bureaucrats_unity_produces_add = 2
+		pop_bureaucrat_bonus_workforce_mult = 0.5
 	}
 }
 
@@ -902,7 +950,11 @@ building_luna_catalyst = {
 	base_buildtime = @b3_time
 	empire_limit = 1
 
-	category = unity
+	category = research
+
+	building_sets = {
+		research
+	}
 
 	potential = {
 		owner = {
@@ -934,9 +986,9 @@ building_luna_catalyst = {
 	}
 
 	triggered_planet_modifier = {
-		planet_physicists_physics_research_produces_add = 2
-		planet_biologists_society_research_produces_add = 2
-		planet_engineers_engineering_research_produces_add = 2
+		pop_physicist_bonus_workforce_mult = 0.5
+		pop_biologist_bonus_workforce_mult = 0.5
+		pop_engineer_bonus_workforce_mult = 0.5
 	}
 }
 
@@ -945,6 +997,10 @@ building_great_library = {
 	empire_limit = 1
 	can_demolish = yes
 	icon = building_master_archive
+
+	building_sets = {
+		research
+	}
 
 	category = research
 
@@ -994,11 +1050,11 @@ building_doll_assembly_plant = {
 	base_buildtime = @b1_time
 	base_cap_amount = 1
 
-	category = pop_group_assembly
+	category = pop_assembly
 
 	building_sets = {
-		government
 		urban
+		government
 	}
 
 	potential = {
@@ -1232,7 +1288,11 @@ building_suzunaan = {
 	base_cap_amount = 1
 	icon = building_suzunaan
 
-	category = unity
+	category = research
+
+	building_sets = {
+		research
+	}
 
 	potential = {
 		owner = {
@@ -1284,6 +1344,11 @@ building_national_historial_archive = {
 
 	category = unity
 
+	building_sets = {
+		unity
+		research
+	}
+
 	potential = {
 		owner = {
 			any_owned_leader = {
@@ -1331,7 +1396,12 @@ building_national_historial_archive = {
 building_corpses_disposal_center = {
 	base_buildtime = @b1_time
 
-	category = pop_group_assembly
+	category = pop_assembly
+
+	building_sets = {
+		urban
+		government
+	}
 
 	base_cap_amount = 1
 
@@ -1370,13 +1440,8 @@ building_corpses_disposal_center = {
 	}
 
 	planet_modifier = {
-		fake_pop_growth_mod = 2
 		planet_amenities_add = 500
-		job_technician_add = 200
-	}
-
-	planet_pop_group_modifier = {
-		bonus_pop_growth = 2
+		job_reassigner_add = 200
 	}
 
 	resources = {
@@ -1388,6 +1453,7 @@ building_corpses_disposal_center = {
 		produces = {
 			energy = 10
 			food = 10
+			thl_spirit = 10
 		}
 	}
 
@@ -1410,7 +1476,12 @@ building_posthumous_employment_center = {
 	base_buildtime = @b1_time
 	base_cap_amount = 1
 
-	category = pop_group_assembly
+	category = pop_assembly
+
+	building_sets = {
+		government
+		urban
+	}
 
 	potential = {
 		exists = owner
@@ -1504,12 +1575,19 @@ building_posthumous_employment_center = {
 building_paragon_memory_vaults = {
 	base_buildtime = @b2_time
 	base_cap_amount = 1
-	empire_limit = 1
 	category = unity
 	can_demolish = yes
 	can_be_ruined = yes
 	can_be_disabled = yes
 	is_essential = yes
+
+	empire_limit = 1
+
+	building_sets = {
+		government
+		urban
+		unity
+	}
 	destroy_trigger = {
 		exists = owner
 		owner = {
@@ -1568,6 +1646,17 @@ building_paragon_memory_vaults = {
 		cost = {
 			minerals = @b2_minerals
 		}
+
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_wilderness_empire = yes
+				}
+			}
+			biomass = 200
+		}
+
 		produces = {
 			trigger = {
 				exists = owner
@@ -1631,6 +1720,10 @@ building_paragon_memory_vaults = {
 		}
 		species_leader_exp_gain = 0.01
 		mult = planet.paragon_memory_vault
+	}
+
+	inline_script = {
+		script = buildings/on_all_wilderness_buildings_districts
 	}
 
 	on_built = {
@@ -1802,6 +1895,7 @@ building_izakaya_1 = {
 		government
 		urban
 		entertainment
+		trade
 	}
 
 	potential = {
@@ -1881,6 +1975,7 @@ building_izakaya_2 = {
 		government
 		urban
 		entertainment
+		trade
 	}
 
 	potential = {
@@ -1940,6 +2035,7 @@ building_izakaya_3 = {
 		government
 		urban
 		entertainment
+		trade
 	}
 
 	potential = {
@@ -1986,6 +2082,11 @@ building_magic_academy = {
 	empire_limit = 1
 
 	category = unity
+
+	building_sets = {
+		government
+		urban
+	}
 
 	potential = {
 		owner = {

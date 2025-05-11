@@ -41,6 +41,7 @@ zone_garden = {
 		hydroponics
 		automation
 		fallen_empire_farming
+		flower
 	}
 
 	planet_modifier = {
@@ -169,4 +170,6 @@ zone_anglers = {
 
 zone_tomb = {
 	icon = GFX_job_necromancer
+	base_buildtime = @zone_buildtime
+
 }

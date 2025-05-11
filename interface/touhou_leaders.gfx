@@ -411,4 +411,9 @@ spriteTypes = {
 		name = "GFX_zone_garden"
 		texturefile = "gfx/interface/icons/zones/zone_garden.dds"
 	}
+
+	spriteType = {
+		name = "GFX_job_necromancer"
+		texturefile = "gfx/interface/icons/jobs/job_necromancer.dds"
+	}
 }
