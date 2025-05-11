@@ -1402,7 +1402,7 @@ country_event = {
             owner = {
                 add_resource = {
                     engineering_research = 10000
-                    mult = prev.trigger:has_total_level
+                    mult = prev.trigger:has_base_skill
                 }
             }
         }
@@ -1436,7 +1436,7 @@ country_event = {
             owner = {
                 add_resource = {
                     society_research = 10000
-                    mult = prev.trigger:has_total_level
+                    mult = prev.trigger:has_base_skill
                 }
             }
         }
@@ -1470,7 +1470,7 @@ country_event = {
             owner = {
                 add_resource = {
                     physics_research = 10000
-                    mult = prev.trigger:has_total_level
+                    mult = prev.trigger:has_base_skill
                 }
             }
         }
