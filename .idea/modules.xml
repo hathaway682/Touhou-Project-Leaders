@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/touhou_leaders.iml" filepath="$PROJECT_DIR$/.idea/touhou_leaders.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Touhou-Project-Leaders.iml" filepath="$PROJECT_DIR$/.idea/Touhou-Project-Leaders.iml" />
     </modules>
   </component>
 </project>

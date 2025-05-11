@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ca43e86-467a-45be-ba42-e63ff901278e" name="Changes" comment="">
+    <list default="true" id="ae48a8a7-0549-4536-9dbc-993440ab4695" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/touhou_leaders.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Touhou-Project-Leaders.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_effects/touhou_paragon_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/touhou_paragon_effects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/game_rules/touhou_leader_rules.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/game_rules/touhou_leader_rules.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_effect_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_effect_events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_mission_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_mission_events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,23 +26,25 @@
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2wucPNwSC1x38UrGppQHRshmDaO" />
+  <component name="ProjectId" id="2wwwgDNSivGgousIUCKVbEVgOcl" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -47,20 +54,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0ca43e86-467a-45be-ba42-e63ff901278e" name="Changes" comment="" />
-      <created>1746894877380</created>
+      <changelist id="ae48a8a7-0549-4536-9dbc-993440ab4695" name="Changes" comment="" />
+      <created>1746966054596</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1746894877380</updated>
-      <workItem from="1746894880049" duration="16317000" />
-      <workItem from="1746911811237" duration="182000" />
-      <workItem from="1746912140558" duration="686000" />
-      <workItem from="1746912985502" duration="477000" />
-      <workItem from="1746914965929" duration="201000" />
-      <workItem from="1746915610438" duration="3308000" />
-      <workItem from="1746950175386" duration="58000" />
-      <workItem from="1746950526977" duration="807000" />
-      <workItem from="1746960506488" duration="251000" />
+      <updated>1746966054596</updated>
+      <workItem from="1746966056684" duration="301000" />
+      <workItem from="1746968397462" duration="108000" />
+      <workItem from="1747001045115" duration="1291000" />
     </task>
     <servers />
   </component>
