@@ -44,6 +44,10 @@
    tech_spirit_capture_desc:0 "幽灵拥有巨大的应用潜力，只要我们能对其进行收集利用。"
    tech_spirit_capture_tooltip:0 "解锁资源：['concept_thl_spirit']"
 
+    #妖梦解锁的相关
+    building_nether_garden:0 "冥界花园"
+    building_nether_garden_desc:0 "冥界的花园，种植着各种各样的植物。"
+
    NAME_Thl_Ghost:0 "亡灵"
    NAME_Thl_Ghost_pl:0 "亡灵"
 
