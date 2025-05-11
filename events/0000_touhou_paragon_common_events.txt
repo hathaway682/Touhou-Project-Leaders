@@ -4074,7 +4074,6 @@ country_event = {
 		country_event = {
 			id = touhou_paragon.43212
 			days = 30
-			random = 330
 		}
 		hidden_effect = {
 			event_target:tewi_world = {
@@ -4119,7 +4118,6 @@ country_event = {
 		country_event = {
 			id = touhou_paragon.43213
 			days = 30
-			random = 330
 		}
 		create_point_of_interest = {
 			id = reisen_data

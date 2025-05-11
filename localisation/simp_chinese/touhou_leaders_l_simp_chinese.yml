@@ -1413,6 +1413,8 @@
  building_doll_assembly_complex_desc:0 "通过先进的流水线技术，这座工厂不断生产着大批的人偶。"
 
  mod_doll_control_limit:0 "人偶控制上限"
+ mod_doll_workforce_mult: "人偶人口劳动力效率"
+ mod_doll_empire_size_mult: "人偶人口产生的帝国规模"
 
  NAME_Yuyuko:0 "西行寺幽幽子"
  yuyuko1:0 "冥界的主人，原居住于冥界中心的白玉楼，自称被香味和友人指引来此，但似乎实际的目的是使樱花树“西行妖”的枝干开花。"
@@ -1457,6 +1459,11 @@
  thl_leader_trait_dance_desc: "这位领袖继承了西行歌圣的艺术造诣，并结合了冥界的独特审美和死生观，创造了独属于她一人的歌舞艺术风格。"
  thl_leader_trait_yuyuko_eater: "幽幽子的一盘一口"
  thl_leader_trait_yuyuko_eater_desc: "这位领袖已然逝去，故其食欲永远不会得到满足。"
+
+ mod_spirit_workforce_mult: "灵体人口劳动力效率"
+ mod_spirit_empire_size_mult: "灵体人口产生的帝国规模"
+ mod_spirit_amenities_usage_mult: "灵体人口舒适度使用"
+ mod_spirit_job_amenities_mult: "灵体人口£job£岗位产出的£amenities£舒适度"
 
  NAME_Yuka:0 "风见幽香"
  yuka1:0 "十分强大与危险的妖怪，与其说是花之妖怪更像是自然的化身。"
