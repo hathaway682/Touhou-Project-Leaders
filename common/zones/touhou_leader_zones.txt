@@ -167,6 +167,12 @@ zone_anglers = {
 	}
 }
 
+zone_tomb = {
+	icon = GFX_job_necromancer
+	base_buildtime = @zone_buildtime
+
+}
+
 zone_sanae_religious = {
 	icon = GFX_job_bureaucrat
 	base_buildtime = @zone_buildtime

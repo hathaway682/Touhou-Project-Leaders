@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0ca43e86-467a-45be-ba42-e63ff901278e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/component_templates/touhou_special_weapons.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/component_templates/touhou_special_weapons.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/council_agendas/council_agendas_touhou.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/council_agendas/council_agendas_touhou.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/game_concepts/touhou_concepts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/game_concepts/touhou_concepts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/static_modifiers/touhou_static_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/static_modifiers/touhou_static_modifiers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/touhou_leader_traits.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/zones/touhou_leader_zones.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/zones/touhou_leader_zones.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_common_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_common_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/0000_touhou_paragon_mission_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/0000_touhou_paragon_mission_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/touhou_leaders_events_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +55,10 @@
       <workItem from="1746894880049" duration="16317000" />
       <workItem from="1746911811237" duration="182000" />
       <workItem from="1746912140558" duration="686000" />
+      <workItem from="1746912985502" duration="477000" />
+      <workItem from="1746914965929" duration="201000" />
+      <workItem from="1746915610438" duration="3308000" />
+      <workItem from="1746950175386" duration="58000" />
     </task>
     <servers />
   </component>
