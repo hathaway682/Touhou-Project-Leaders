@@ -125,8 +125,6 @@ sakura_tree_branch = {
 	triggered_planet_modifier = {
 		spirit_workforce_mult = 0.1
 		spirit_empire_size_mult = -0.1
-		spirit_amenities_usage_mult = -0.1
-		planet_pop_assembly_organic_add = 2
 	}
 
 	potential = { always = no }
@@ -141,8 +139,6 @@ sakura_tree_1 = {
 	triggered_planet_modifier = {
 		spirit_workforce_mult = 0.05
 		spirit_empire_size_mult = -0.05
-		spirit_amenities_usage_mult = -0.05
-		planet_pop_assembly_organic_add = 1
 	}
 }
 
@@ -155,8 +151,6 @@ sakura_tree_3 = {
 	triggered_planet_modifier = {
 		spirit_workforce_mult = 0.15
 		spirit_empire_size_mult = -0.15
-		spirit_amenities_usage_mult = -0.15
-		planet_pop_assembly_organic_add = 3
 	}
 }
 
@@ -169,8 +163,6 @@ sakura_tree_5 = {
 	triggered_planet_modifier = {
 		spirit_workforce_mult = 0.25
 		spirit_empire_size_mult = -0.25
-		spirit_amenities_usage_mult = -0.25
-		planet_pop_assembly_organic_add = 5
 	}
 }
 
@@ -183,8 +175,6 @@ sakura_tree_8 = {
 	triggered_planet_modifier = {
 		spirit_workforce_mult = 0.4
 		spirit_empire_size_mult = -0.4
-		spirit_amenities_usage_mult = -0.4
-		planet_pop_assembly_organic_add = 8
 	}
 }
 

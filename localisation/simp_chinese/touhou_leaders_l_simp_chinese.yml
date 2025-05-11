@@ -812,13 +812,13 @@
 
  thl_leader_trait_mind_reader: "读心程度的能力"
  thl_leader_trait_mind_reader_desc: "这位领袖可以轻松读出别人心中所想乃至他们的记忆。"
- thl_leader_trait_subterran_manager: "地灵殿殿主"
- thl_leader_trait_subterran_manager_desc: "管理灼热地狱遗址的经验使得这位领袖精通地下城市的规划。"
+ thl_leader_trait_subterran_manager: "怨灵也为之惧怯的少女"
+ thl_leader_trait_subterran_manager_desc: "管理灼热地狱遗址的经验使得这位领袖精通地下城市的规划，和对待怨灵的办法。"
  thl_leader_trait_subterran_manager_effect: "解锁§Y地下区划规划§!决议，为觉管理的星球提供额外的 £district£ §Y区划上限§!与§Y可开发资源§!。"
  thl_leader_trait_satori_pets: "觉的动物朋友们"
- thl_leader_trait_satori_pets_desc: "这位领袖十分擅长管理宠物——或者说部下，可以大胆放心的让他们自己行动。"
+ thl_leader_trait_satori_pets_desc: "这位领袖十分擅长管理宠物——或者说部下，可以大胆放心的让他们自己行动，同时也热衷于收集新的宠物。"
  thl_leader_trait_satori_pets_effect: "解锁§Y沟通动物§!决议，可以在星球上立刻发现一种新的§Y未开智动物§!。"
- thl_leader_trait_detective: "犯规侦探觉"
+ thl_leader_trait_detective: "怨灵也为之惧怯的少女"
  thl_leader_trait_detective_desc: "这位领袖会利用自己读心的能力协助侦破案件。"
 
  decision_subterranean_district: "地下区划规划"
@@ -1137,8 +1137,6 @@
 
  bombardment_raiding_ghost: "八重雾中渡"
  bombardment_raiding_ghost_desc: "$bombardment_raiding_ghost$轰炸敌方人口聚集区，并将亡魂引渡至我方星球强迫其工作。\n- 对§Y陆军§!造成§E轻度§!伤害\n- 对§Y星球§!造成§E轻度§!伤害\n- 将会§Y消灭§!人口同时§Y掠夺§!他们留下的§H灵体§!\n- 将§R不会§!掠夺或消灭最后的人口"
- trait_thl_spirit: "灵体"
- trait_thl_spirit_desc: "这个人口是一群死者留下的一团不定形的气质。"
 
  NAME_Patchouli:0 "帕秋莉·诺蕾姬"
  patchouli1:0 "原居住于红魔馆的大魔法使，红魔馆馆主的友人，受其介绍来担任我们的魔法顾问。"
@@ -1459,47 +1457,6 @@
  thl_leader_trait_dance_desc: "这位领袖继承了西行歌圣的艺术造诣，并结合了冥界的独特审美和死生观，创造了独属于她一人的歌舞艺术风格。"
  thl_leader_trait_yuyuko_eater: "幽幽子的一盘一口"
  thl_leader_trait_yuyuko_eater_desc: "这位领袖已然逝去，故其食欲永远不会得到满足。"
-
- building_soul_nexus: "通向黄泉的诱蛾灯"
- building_soul_nexus_desc: "这座建筑发出诡异的光，吸引着星系间的亡者。"
-
- mod_planet_spirit_jobs_produces_mult: "灵体人口£job£岗位生产的资源"
- mod_planet_spirit_jobs_unity_produces_mult: "灵体人口£job£岗位生产的£unity£ 凝聚力"
- mod_spirit_empire_size_mult: "灵体人口产生的帝国规模"
- mod_spirit_amenities_usage_mult: "灵体人口舒适度使用"
- mod_spirit_job_amenities_mult: "灵体人口£job£岗位产出的£amenities£舒适度"
-
- decision_transplant_sakura_tree:0 "移栽西行妖分株"
- decision_transplant_sakura_tree_desc:0 "在该星球种植西行妖的分株，允许其组装亡灵人口。"
- decision_nether_world:0 "净土星球改造"
- decision_nether_world_desc:0 "将星球化为无生机的净土，同时也是专属于亡灵的乐土。"
- decision_nether_world_tooltip: "§R所有有机人口均会变为亡灵。§!"
-
- decision_summon_spirit: "黄泉平坂行路"
- decision_summon_spirit_desc: "幽幽子可以从手中形成连通冥界的简易门，将其中的灵放出为我们工作。"
- decision_summon_spirit_large: "幻想乡的黄泉归"
- decision_summon_spirit_large_desc: "在地表打开冥界大门，门内将会源源不断涌出幽灵。"
- small_spirit_refugees_tooltip: "§Y1000$NAME_Thl_Ghost$人口§!将出现在[Root.GetName]上。"
- large_spirit_refugees_tooltip: "§Y4444$NAME_Thl_Ghost$人口§!将出现在[Root.GetName]上。"
-
- # decision_trans_spirit: "无寿之梦"
- # decision_trans_spirit_desc: "死亡是轻柔且无声的，如今她将造访这颗星球。"
- # decision_trans_spirit_tooltip: "随机§Y3-12§!个£pop£人口§!被添加§H灵体§!特质。"
- # decision_assimilate_spirit: "通向无寿国的期票"
- # decision_assimilate_spirit_desc: "这颗星球的居民已被定好了终局。"
- # assimilate_spirit: "通向无寿国的期票"
- # assimilate_spirit_desc: "这颗星球的居民已被定好了终局。"
- # decision_assimilate_spirit_tooltip: "人口将以每§Y10§!年§Y3-12§!个的速度添加§H灵体§!特质。"
-
- pc_nether: "净土星球"
- pc_nether_desc: "这颗冰冷的星球在远距离扫描下检测不到任何生命现象，然而光学观测显示其表面开满了樱花。"
- pc_nether_adj: "净土"
- mod_pc_nether_habitability: "净土星球宜居性"
- trait_pc_nether_preference: "净土星球偏好"
- trait_pc_nether_preference_desc: "厌离秽土，欣求净土。"
-
- MESSAGE_POPS_GHOST_ARRIVED_TITLE:0 "灵体人口转生"
- MESSAGE_POPS_GHOST_ARRIVED:1 "来自$PLANET1|Y$的$TARGET_SPECIES|Y$人口已经在我们的$PLANET2|Y$星球转生。"
 
  NAME_Yuka:0 "风见幽香"
  yuka1:0 "十分强大与危险的妖怪，与其说是花之妖怪更像是自然的化身。"

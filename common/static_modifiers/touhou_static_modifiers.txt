@@ -46,14 +46,7 @@ paragon_reimu_wormhole_key = {
 }
 
 invincible_fleet = {
-	ship_shield_regen_add_perc = 10
-	ship_armor_regen_add_perc = 10
-	ship_hull_regen_add_perc = 10
-	ship_armor_hardening_add = 10
-	ship_shield_hardening_add = 10
-	ship_armor_add = 100000000
-	ship_shield_add = 100000000
-	ship_hull_add = 100000000
+	ship_damage_reduction_mult = -10
 }
 
 battle_with_reisen = {
@@ -124,10 +117,12 @@ za_warudo_cooldown = {
 }
 
 rampage_fleet = {
-	ship_fire_rate_mult = 1
-	ship_weapon_damage = 1
-	ship_armor_penetration_mult = 1
-	ship_shield_penetration_mult = 1
+	ship_fire_rate_mult = 4
+	ship_weapon_damage = 4
+	ship_speed_mult = 1
+	ship_hull_regen_add_perc = 0.1
+	ship_armor_regen_add_perc = 0.1
+	ship_damage_reduction_mult = 0.5
 }
 
 koishi_surprise = {
@@ -174,7 +169,7 @@ mirror_trial = {
 }
 
 distance_buff = {
-	ship_weapon_range_mult = 2.5
+	ship_weapon_range_mult = 3
 }
 
 distance_debuff = {
@@ -751,13 +746,13 @@ pain_flow_modifier_2 = {
 }
 
 broken_amulet_modifier_1 = {
-	ship_armor_hardening_add = -0.25
-	ship_shield_hardening_add = -0.25
+	ship_armor_hardening_add = -0.5
+	ship_shield_hardening_add = -0.5
 }
 
 broken_amulet_modifier_2 = {
-	ship_armor_hardening_add = -0.75
-	ship_shield_hardening_add = -0.75
+	ship_armor_hardening_add = -10
+	ship_shield_hardening_add = -10
 }
 
 sanae_frog_debuff = {
