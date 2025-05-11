@@ -391,6 +391,106 @@ thl_leader_trait_miracle = {
 		planet_physicists_consumer_goods_upkeep_add = -0.3
 		planet_engineers_consumer_goods_upkeep_add = -0.3
 	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_mission_order_faction
+			owner = {
+				has_country_flag = thl_egalitarian_leading
+			}
+		}
+		pop_happiness = 0.1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_mission_order_faction
+			owner = {
+				has_country_flag = thl_militarist_leading
+			}
+		}
+		planet_jobs_alloys_produces_mult = 0.1
+		#foundry_jobs_bonus_workforce_mult = 0.1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_mission_order_faction
+			owner = {
+				has_country_flag = thl_xenophobe_leading
+			}
+		}
+		planet_jobs_unity_produces_mult = 0.1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_mission_order_faction
+			owner = {
+				has_country_flag = thl_pacifist_leading
+			}
+		}
+		planet_jobs_trade_produces_mult = 0.2
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_mission_order_faction
+			owner = {
+				has_country_flag = thl_materialist_leading
+			}
+		}
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_mission_order_faction
+			owner = {
+				has_country_flag = thl_authoritarian_leading
+			}
+		}
+		planet_jobs_upkeep_mult = -0.15
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_mission_order_faction
+			owner = {
+				has_country_flag = thl_authoritarian_leading
+			}
+		}
+		planet_jobs_upkeep_mult = -0.15
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_mission_order_faction
+			owner = {
+				has_country_flag = thl_spiritualist_leading
+			}
+		}
+		pop_housing_usage_mult = -0.1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_mission_order_faction
+			owner = {
+				has_country_flag = thl_xenophile_leading
+			}
+		}
+		pop_environment_tolerance = 0.15
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_mission_technocracy_update
+		}
+		#pop_unemployment_demotion_time_mult = -0.25
+		pop_demotion_time_mult = -0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			from = {
+				politician_is_science_director = yes
+			}
+		}
+		job_politician_per_pop = 0.04
+		pop_politician_bonus_workforce_mult = 0.2
+	}
 	leader_class = { commander }
 	selectable_weight = {
 		weight = 0
@@ -415,14 +515,23 @@ thl_leader_trait_robotist_sanae = {
 	councilor_modifier = {
 		planet_pop_assembly_mult = 0.1
 		planet_pop_assemblers_engineering_research_produces_add = 1
+
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			not = {
+				has_leader_flag = touhou_flag_sanae_robotist_councilor_update_industry
+			}
+			leader_class = commander
+		}
 		planet_pops_robotics_upkeep_mult = 0.1
 	}
 	triggered_councilor_modifier = {
 		potential = {
-			has_leader_flag = touhou_flag_sanae_robotist_councilor_update
+			has_leader_flag = touhou_flag_sanae_robotist_councilor_update_industry
 			leader_class = commander
 		}
-		planet_pops_robotics_upkeep_mult = -0.2
+		planet_pops_robotics_upkeep_mult = -0.1
 	}
 	# planet_modifier = {
 	# 	planet_jobs_robotic_produces_mult = 0.4
@@ -436,7 +545,7 @@ thl_leader_trait_robotist_sanae = {
 	# }
 	triggered_army_modifier = {
 		potential = {
-			has_leader_flag = touhou_flag_sanae_robotist_update
+			has_leader_flag = touhou_flag_sanae_robotist_update_army
 			leader_class = commander
 			is_ruler = no
 		}
@@ -444,7 +553,16 @@ thl_leader_trait_robotist_sanae = {
 		army_collateral_damage_mult = 0.25
 		army_morale_damage_mult = 0.50
 	}
-
+	triggered_fleet_modifier = {
+		potential = {
+			has_leader_flag = touhou_flag_sanae_robotist_update_navy
+			leader_class = commander
+			is_ruler = no
+		}
+		strike_craft_cooldown_mult = -0.25
+		strike_craft_regeneration_mult = 0.5
+		ship_engagement_range_mult = 0.5
+	}
 	leader_class = { commander }
 	background_icon = GFX_leader_background_destiny_1
 	selectable_weight = 0
@@ -1093,12 +1211,23 @@ thl_leader_trait_fake_technocracy = {
 		COUNCIL = no
 		TIER = none
 	}
-	planet_modifier = {
-		job_head_researcher_per_pop = 0.1
-
+	triggered_planet_modifier = {
+		potential = {
+			from = {
+				politician_is_science_director = yes
+			}
+		}
+		job_politician_per_pop = 0.08
+		pop_politician_bonus_workforce_mult = 0.4
 	}
-	sector_modifier = {
-		job_head_researcher_per_pop = 0.05
+	triggered_sector_modifier = {
+		potential = {
+			from = {
+				politician_is_science_director = yes
+			}
+		}
+		job_politician_per_pop = 0.04
+		pop_politician_bonus_workforce_mult = 0.2
 	}
 
 	leader_trait_type = veteran

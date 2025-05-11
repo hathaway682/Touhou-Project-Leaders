@@ -24,3 +24,7 @@ concept_thl_spirit = {
 
 concept_yomi_leaders = {
 }
+
+concept_thl_mission_ethic_effect = {
+    icon = "gfx/interface/icons/concepts/concept_factions.dds"
+}
