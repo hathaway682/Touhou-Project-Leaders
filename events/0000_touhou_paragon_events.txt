@@ -3366,7 +3366,6 @@ country_event = { # 穰子
 			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_minoriko
 			}
-			hire_event_leader_effect
 		}
 	}
 }
@@ -3609,7 +3608,7 @@ country_event = { # 帝
 		custom_tooltip = touhou_paragon.43200.hire_custom_tooltip
 		hidden_effect = {
 			thl_ethic_leader_hire_effect = {
-				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_tewi
+				LEADER = ethic_leader
 			}
 		}
 	}
