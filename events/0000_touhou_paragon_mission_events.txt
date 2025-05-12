@@ -910,7 +910,7 @@ country_event = {
 							has_ethic = ethic_fanatic_materialist
 						}
 					}
-					percentage >= 0.6
+					percentage >= 0.5
 				}
 				is_materialist = yes
 			}
@@ -922,7 +922,7 @@ country_event = {
 							has_ethic = ethic_fanatic_spiritualist
 						}
 					}
-					percentage >= 0.6
+					percentage >= 0.5
 				}
 				is_spiritualist = yes
 			}
