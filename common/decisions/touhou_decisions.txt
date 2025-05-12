@@ -2005,7 +2005,12 @@ decision_miracle_3 = {
 		NOT = {
 			has_modifier = modifier_miracle_3
 		}
-		is_wet = yes
+		OR = {
+			is_wet = yes
+			is_planet_class = pc_gaia
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_hive
+		}
 	}
 
 
