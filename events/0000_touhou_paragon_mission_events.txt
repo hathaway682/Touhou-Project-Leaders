@@ -901,20 +901,39 @@ country_event = {
 			poi = touhou_sanae_mission_chain_faith.3
 		}
 		num_ascension_perks >= 4
-		pop_amount_percentage = {
-			limit = {
-				or = {
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
-					has_ethic = ethic_materialist
-					has_ethic = ethic_fanatic_materialist
+		OR = {
+			AND = {
+				pop_amount_percentage = {
+					limit = {
+						or = {
+							has_ethic = ethic_materialist
+							has_ethic = ethic_fanatic_materialist
+						}
+					}
+					percentage >= 0.5
+				}
+				is_materialist = yes
+			}
+			AND = {
+				pop_amount_percentage = {
+					limit = {
+						or = {
+							has_ethic = ethic_spiritualist
+							has_ethic = ethic_fanatic_spiritualist
+						}
+					}
+					percentage >= 0.5
+				}
+				is_spiritualist = yes
+			}
+			AND = {
+				is_materialist = no
+				is_spiritualist = no
+				has_monthly_income = {
+					resource = unity
+					value >= 2000
 				}
 			}
-			percentage >= 0.5
-		}
-		has_monthly_income = {
-			resource = unity
-			value >= 500
 		}
 	}
 	option = {
@@ -1165,6 +1184,7 @@ country_event = {
 				relative_power = {
 					who = root
 					value >= inferior
+					category = fleet
 				}
 				NOR = {
 					has_civic = civic_moriya_shinto
