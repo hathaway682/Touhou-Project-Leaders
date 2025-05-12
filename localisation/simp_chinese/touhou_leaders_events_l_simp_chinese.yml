@@ -486,7 +486,7 @@
  touhou_sanae_mission_chain_mil_name:0 "军法韬略"
  touhou_sanae_mission_chain_mil_1_desc:0 "八坂神奈子是大和神 “建御名方神”，拥有军神的神格。作为神奈子大人的风祝，我要研习军法韬略！\n\n当前的修行内容：就是要开数量理念！\n任务条件：舰队容量达到上限的85%以上，或海军容量上限达到2000。\n\n任务奖励：早苗会成为杰出的后勤专家！"
  touhou_sanae_mission_chain_tech_name:0 "技术革新"
- touhou_sanae_mission_chain_tech_1_desc:0 "在幻想乡的日子里，守矢带来了很多技术革新，比如索道、机器人、核聚变技术，还有……天气预报。\n\n当前的修行内容：终结者\n任务条件：对于非智械国家，应拥有至少1000个机器人人口；对于智械国家，应拥有至少7500个机器人人口。\n\n任务奖励：机器人特质相关修正，与机器人相关的工业科技选项或£engineering£工程学点数。"
+ touhou_sanae_mission_chain_tech_1_desc:0 "在幻想乡的日子里，守矢带来了很多技术革新，比如索道、机器人、核聚变技术，还有……天气预报。\n\n当前的修行内容：终结者\n任务条件：对于非智械国家，应拥有至少500个机器人人口；对于智械国家，应拥有至少7500个机器人人口。\n\n任务奖励：机器人特质相关修正，与机器人相关的工业科技选项或£engineering£工程学点数。"
  touhou_sanae_mission_chain_faith_name:0 "信仰收集"
  touhou_sanae_mission_chain_faith_1_desc:0 "神的存在是依赖信仰的，这是早苗的本职工作啦！\n\n当前的修行内容：神社开店之日\n任务条件：帝国内至少拥有一座守矢分社。\n\n任务奖励：早苗会成为杰出的城建专家！同时还会获得一定的£rare_crystals£稀有水晶奖励。"
  touhou_sanae_mission_chain_adm_2_desc:0 "在远古时期，诹访子大人通过先进的冶铁技术维持了一个国家的安全和稳定。如今我们强敌环伺，敌人对我们的财富虎视眈眈，我们必须垄断先进的冶金技术保护我们的安全。\n\n当前的修行内容：哈图沙史诗\n任务条件：对于非生物舰船国家，月£alloys£合金产量达到150以上；对于生物舰船国家，月£food£食物产量达到600以上。\n\n任务奖励：[foundry.GetIcon][GetAlloyProducerPlural]将生产额外的£alloys£合金。对于生物舰船国家添加额外选项，[foundry.GetIcon][GetAlloyProducerPlural]将生产额外的£food£食物。"
