@@ -720,8 +720,7 @@ building_metel_catalyst = {
 	}
 
 	triggered_planet_modifier = {
-		planet_metallurgists_alloys_produces_add = 2
-		planet_metallurgists_minerals_upkeep_add = 4
+		pop_metallurgists_bonus_workforce_mult = 0.5
 	}
 }
 
@@ -897,7 +896,7 @@ building_earth_catalyst = {
 	}
 
 	triggered_planet_modifier = {
-		pop_miner_bonus_workforce_mult = 4
+		pop_miner_bonus_workforce_mult = 0.5
 	}
 }
 
