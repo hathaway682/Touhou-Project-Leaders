@@ -293,7 +293,7 @@ country_event = {
 			poi = touhou_sanae_mission_chain_faith.1
 		}
 		any_owned_planet = {
-			has_building = building_moriya_shrine
+			moriya_faith_trigger = yes
 		}
 	}
 	option = {
