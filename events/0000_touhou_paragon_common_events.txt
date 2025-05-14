@@ -2612,7 +2612,7 @@ country_event = { #Crisis
 	}
 
 	picture_event_data = {
-		portrait = x119 #sharpbeak_portrait
+		portrait = x152 #sharpbeak_portrait
 		room = paragon_skrand_room
 	}
 
@@ -2634,7 +2634,7 @@ country_event = { #Crisis
 			}
 			civic_leader_creator = {
 				SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-				LEADER_PORTRAIT = x119
+				LEADER_PORTRAIT = x152
 				CLASS = commander
 				NAME = NAME_Yuka
 				LEVEL = 10
@@ -2650,11 +2650,11 @@ country_event = { #Crisis
 				add_trait = leader_trait_legendary_foe_hammer
 				add_trait = leader_trait_legendary_commanding_presence
 				add_trait = leader_trait_legendary_gunboat_diplomacy
-				add_trait = leader_trait_aggressive_2
-				add_trait = leader_trait_demolisher_3
-				add_trait = leader_trait_intimidator_3
-				add_trait = leader_trait_wrecker_3
-				add_trait = leader_trait_artillerist_3
+				add_trait = leader_trait_aggressive
+				add_trait = leader_trait_demolisher_2
+				add_trait = leader_trait_intimidator_2
+				add_trait = leader_trait_wrecker_2
+				add_trait = leader_trait_artillerist_2
 				add_trait = leader_trait_artillery_specialization
 				add_trait = leader_trait_reckless_2
 				add_trait = leader_trait_tyrannical_2
@@ -2696,7 +2696,7 @@ country_event = { #Crisis
 	}
 
 	picture_event_data = {
-		portrait = x119 #sharpbeak_portrait
+		portrait = x152 #sharpbeak_portrait
 		room = paragon_skrand_room
 	}
 
@@ -2719,7 +2719,7 @@ country_event = { #Crisis
 			}
 			civic_leader_creator = {
 				SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
-				LEADER_PORTRAIT = x119
+				LEADER_PORTRAIT = x152
 				CLASS = commander
 				NAME = NAME_Yuka
 				LEVEL = 10
@@ -2735,11 +2735,11 @@ country_event = { #Crisis
 				add_trait = leader_trait_legendary_foe_hammer
 				add_trait = leader_trait_legendary_commanding_presence
 				add_trait = leader_trait_legendary_gunboat_diplomacy
-				add_trait = leader_trait_aggressive_2
-				add_trait = leader_trait_demolisher_3
-				add_trait = leader_trait_intimidator_3
-				add_trait = leader_trait_wrecker_3
-				add_trait = leader_trait_artillerist_3
+				add_trait = leader_trait_aggressive
+				add_trait = leader_trait_demolisher_2
+				add_trait = leader_trait_intimidator_2
+				add_trait = leader_trait_wrecker_2
+				add_trait = leader_trait_artillerist_2
 				add_trait = leader_trait_reckless_2
 				add_trait = leader_trait_tyrannical_2
 				add_trait = leader_trait_legendary_harsh_ruler

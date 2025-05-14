@@ -149,6 +149,8 @@ x147 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/por
 x148 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img148.dds"}
 x149 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img149.dds"}
 x150 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img150.dds"}
+	x151 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img151.dds"}
+	x152 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img152.dds"}
 
 tpop1 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop1.dds"}
 tpop2 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop2.dds"}
