@@ -589,22 +589,22 @@ country_event = {
 				OR = {
 					num_assigned_jobs = {
 						job = entertainer
-						value >= 1000
+						value >= 400
 					}
 					num_assigned_jobs = {
 						job = duelist
-						value >= 1000
+						value >= 400
 					}
 				}
 				any_owned_planet = {
 					OR = {
 						num_assigned_jobs = {
 							job = entertainer
-							value >= 4
+							value >= 400
 						}
 						num_assigned_jobs = {
 							job = duelist
-							value >= 4
+							value >= 400
 						}
 					}
 				}
@@ -615,11 +615,11 @@ country_event = {
 					OR = {
 						num_assigned_jobs = {
 							job = entertainer
-							value >= 4
+							value >= 400
 						}
 						num_assigned_jobs = {
 							job = duelist
-							value >= 4
+							value >= 400
 						}
 					}
 				}
@@ -3750,7 +3750,7 @@ planet_event = {
 	picture = GFX_evt_mystia_idol
 	show_sound = event_default
 	is_triggered_only = yes
-
+	location = this
 	option = {
 		name = touhou_paragon.43110.a
 		add_modifier = {

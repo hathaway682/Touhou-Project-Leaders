@@ -722,7 +722,7 @@ country_event = {
 	option = {
 		name = touhou_paragon_mission.40310.b
 		allow = {
-			has_ethic = ethic_fanatic_materialist
+			has_ethic = ethic_materialist
 		}
 		add_modifier = {
 			modifier =  modifier_sanae_mission_adm_3
