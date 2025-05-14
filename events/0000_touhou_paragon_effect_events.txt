@@ -8312,14 +8312,11 @@ country_event = {
     desc = touhou_paragon_effect.10018.desc
     picture = GFX_evt_aya_action
     is_triggered_only = yes
-    option = {
+    immediate = {
         event_target:target_country = {
             random_list = {
                 1 = {
-                    add_modifier = {
-                        modifier = aya_morale_1
-                        days = 3600
-                    }
+                    set_country_flag = aya_morale_1
                     modifier = {
                         add = 2
                         NOT = {
@@ -8328,10 +8325,7 @@ country_event = {
                     }
                 }
                 1 = {
-                    add_modifier = {
-                        modifier = aya_morale_2
-                        days = 3600
-                    }
+                    set_country_flag = aya_morale_2
                     modifier = {
                         add = 2
                         mid_game_years_passed > 0
@@ -8341,10 +8335,7 @@ country_event = {
                     }
                 }
                 1 = {
-                    add_modifier = {
-                        modifier = aya_morale_3
-                        days = 3600
-                    }
+                    set_country_flag = aya_morale_3
                     modifier = {
                         add = 2
                         end_game_years_passed > 0
@@ -8352,7 +8343,40 @@ country_event = {
                 }
             }
         }
+    }
+    option = {
+        event_target:target_country = {
+            switch = {
+                trigger = has_country_flag
+                aya_morale_1 = {
+                    add_modifier = {
+                        modifier = aya_morale_1
+                        days = 3600
+                    }
+                }
+                aya_morale_2 = {
+                    add_modifier = {
+                        modifier = aya_morale_2
+                        days = 3600
+                    }
+                }
+                aya_morale_3 = {
+                    add_modifier = {
+                        modifier = aya_morale_3
+                        days = 3600
+                    }
+                }
+            }
+        }
         name = EXCELLENT
+    }
+
+    after = {
+        event_target:target_country = {
+            remove_country_flag = aya_morale_1
+            remove_country_flag = aya_morale_2
+            remove_country_flag = aya_morale_3
+        }
     }
 }
 
@@ -9150,6 +9174,9 @@ country_event = {
         name = touhou_paragon_effect.41001.c
         trigger = {
             has_tradition = tr_genetics_finish
+            has_tradition = tr_mutation_finish
+            has_tradition = tr_purity_finish
+            has_tradition = tr_cloning_finish
         }
         hidden_effect = {
             country_event = { id = touhou_paragon_effect.41006 days = 5 random = 5}

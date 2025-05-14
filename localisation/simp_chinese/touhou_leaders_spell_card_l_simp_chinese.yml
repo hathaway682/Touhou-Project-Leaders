@@ -256,10 +256,12 @@
  spell_card_koishi_4:0 "现在就给你打电话别忘了接哦"
  spell_card_koishi_4_desc:0 "COST：§Y5§!\n目标：任意§Y敌方舰队§!。\n\n来自玛丽小姐都市传说的力量，立刻将恋的舰队传送至目标舰队处，使得对方毫无防备的卷入混战，恋的舰队获得暂时的§G100%§!的§YS槽武器射速§!和§G50%§!的§YM槽武器射速§!增益。"
 
- #spell_card_koishi_4:0 "反应「妖怪测谎机」"
- #spell_card_koishi_4_desc:0 "COST：§Y3§!\n目标：任意在我国有§Y间谍网§!的国家。\n\n能探测出对手一丝一毫的动摇并将其以图表的形式表现的符卡，使用后彻底清除目标国家在我国的§Y间谍网§!。"
- #spell_card_koishi_5:0 "深层「无意识的基因」"
- #spell_card_koishi_5_desc:0 "COST：§Y1§!\n目标：任意§Y国家§!。\n\n能够读取和改写生物演化的记忆的符卡，使用后目标国家主流人口的特质会发生随机的改变。"
+ # spell_card_koishi_4_desc:0 "COST：§Y5§!\n目标：任意§Y舰队/科研船/星球/国家§!。\n\n来自玛丽小姐都市传说的力量，对指定对象的领袖（舰队司令，科研船科学家，星球总督或国家领导人）进行一次刺杀，按照目标领袖等级造成舰队战斗力/科研速度/星球稳定度/国家稳定度的减益，刺杀总督还有立刻诱发星球叛乱的可能性，没有防御手段的领袖会直接死亡，对有再生能力的领袖使用会增加一层疮痍，有其他能力的领袖也存在幸存可能，但减益仍会生效。"
+
+ #spell_card_koishi_5:0 "反应「妖怪测谎机」"
+ #spell_card_koishi_5_desc:0 "COST：§Y3§!\n目标：任意在我国有§Y间谍网§!的国家。\n\n能探测出对手一丝一毫的动摇并将其以图表的形式表现的符卡，使用后彻底清除目标国家在我国的§Y间谍网§!。"
+ #spell_card_koishi_6:0 "深层「无意识的基因」"
+ #spell_card_koishi_6_desc:0 "COST：§Y1§!\n目标：任意§Y国家§!。\n\n能够读取和改写生物演化的记忆的符卡，使用后目标国家主流人口的特质会发生随机的改变。"
 
  spell_card_sizuha_group:0 "[GetSelectedCardSizuha]"
  spell_card_sizuha_tooltip:0 "[GetSelectedCardSizuhaDesc]"
