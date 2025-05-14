@@ -300,7 +300,7 @@ foreign_affairs_policy = {
         valid = {
             any_spynetwork = {
                 owner = { is_same_value = root }
-                is_spynetwork_level > 60
+                is_spynetwork_level > 10
             }
         }
 

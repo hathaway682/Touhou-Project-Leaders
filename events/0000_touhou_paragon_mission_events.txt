@@ -458,7 +458,7 @@ country_event = {
 		allow = {
 			any_spynetwork = {
 				owner = { is_same_value = root }
-				is_spynetwork_level > 60
+				is_spynetwork_level > 10
 			}
 		}
 		set_policy = {

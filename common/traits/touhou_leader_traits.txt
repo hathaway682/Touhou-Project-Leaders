@@ -3658,9 +3658,7 @@ thl_leader_trait_the_ninth_savage = {
 		}
 		scientist_exp_gain = 0.1
 		ship_archaeological_site_clues_add = 1
-		physics_tech_cost_mult = -0.01
 		society_tech_cost_mult = -0.01
-		engineering_tech_cost_mult = -0.01
 		mult = trigger:has_base_skill
 	}
 	leader_class = { scientist }
@@ -3703,10 +3701,10 @@ thl_leader_trait_speculative_fiction = {
 		TIER = none
 	}
 	planet_modifier = {
-		job_culture_worker_per_crime = 0.06
+		job_culture_worker_per_crime = 2
 	}
 	sector_modifier = {
-		job_culture_worker_per_crime = 0.03
+		job_culture_worker_per_crime = 1
 	}
 	leader_class = { scientist }
 	selectable_weight = {
