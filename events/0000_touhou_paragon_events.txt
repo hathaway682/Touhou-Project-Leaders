@@ -2776,8 +2776,19 @@ country_event = { # 幽香
 		is_dialog_only = yes
 	}
 	option = {
+		trigger = {
+			is_wilderness_empire = no
+		}
 		name = touhou_paragon.42200.c
 		response_text = touhou_paragon.42200.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		trigger = {
+			is_wilderness_empire = yes
+		}
+		name = touhou_paragon.42200.c.wild
+		response_text = touhou_paragon.42200.c.wild.response
 		is_dialog_only = yes
 	}
 	option = {

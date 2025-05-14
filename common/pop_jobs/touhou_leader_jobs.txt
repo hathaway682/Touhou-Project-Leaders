@@ -840,9 +840,12 @@ touhou_bookseller = {
     }
 
     planet_modifier = {
-        planet_physicist_produces_mult = 0.01
-        planet_engineer_produces_mult = 0.01
-        planet_biologist_produces_mult = 0.01
+        pop_physicist_bonus_workforce_mult = 0.01
+        pop_biologist_bonus_workforce_mult = 0.01
+        pop_engineer_bonus_workforce_mult = 0.01
+        mod_planet_physicists_energy_produces_add = 1.5
+        mod_planet_engineers_energy_produces_add = 1.5
+        mod_planet_biologists_energy_produces_add = 0.5
     }
 
     weight = {
@@ -919,7 +922,7 @@ touhou_historian = {
     }
 
     country_modifier = {
-        planet_civilians_unity_produces_add = 0.5
+        planet_civilians_unity_produces_add = 1
     }
 
     weight = {

@@ -244,6 +244,8 @@ country_event = {
                     OR = {
                         army_type = illusion
                         army_type = army_suika_splitter
+                        army_type = moriya_army
+                        army_type = moriya_chosen_army
                     }
                 }
                 remove_army = yes
@@ -263,7 +265,7 @@ country_event = {
                             ROOT = {
                                 add_intel = {
                                     who = root.from
-                                    amount = 10
+                                    amount = 15
                                 }
                             }
                         }
@@ -275,7 +277,7 @@ country_event = {
                             ROOT = {
                                 add_intel = {
                                     who = root.from
-                                    amount = 20
+                                    amount = 30
                                 }
                             }
                         }
@@ -287,7 +289,7 @@ country_event = {
                             ROOT = {
                                 add_intel = {
                                     who = root.from
-                                    amount = 30
+                                    amount = 45
                                 }
                             }
                         }
@@ -457,78 +459,6 @@ country_event = {
     }
 }
 
-# On winning a ground battle.
-# (Before controller is switched)
-# This = country, leader attacker
-# From = country, planet owner
-# FromFrom = planet
-country_event = {
-    id = paragon_2.2130
-    hide_window = yes
-    is_triggered_only = yes
-
-    trigger = {
-        FROMFROM = {
-            any_ground_combat_attacker = {
-                exists = leader
-                leader = {
-                    OR = {
-                        has_trait = leader_trait_tzrynn_tithe
-                        has_trait = thl_leader_trait_oni_power
-                    }
-                }
-            }
-        }
-    }
-
-    immediate = {
-        FROMFROM = {
-            every_ground_combat_attacker = {
-                if = {
-                    limit = {
-                        exists = leader
-                        leader = {
-                            OR = {
-                                has_trait = leader_trait_tzrynn_tithe
-                                has_trait = thl_leader_trait_oni_power
-                            }
-                        }
-                    }
-                    leader = { save_event_target_as = attacking_general }
-                }
-            }
-            while = {
-                count = value:perc_of_planet_pop
-                random_owned_pop_group =  { # Pick a pop
-                    limit = {
-                        planet = { is_same_value = ROOT.FROMFROM }
-                    }
-                    save_event_target_as = kidnapped_pop
-                }
-                ROOT = { # Pick a planet
-                    reroll_random = yes
-                    random_owned_planet = {
-                        limit = {
-                            is_colony = yes
-                        }
-                        save_event_target_as = target_planet
-                    }
-                }
-                resettle_pop_group = { # Kidnap pop
-                    POP_GROUP = event_target:kidnapped_pop
-                    PLANET = event_target:target_planet
-                    AMOUNT = 100
-                }
-                event_target:kidnapped_pop = {
-                    set_citizenship_type = {
-                        country = ROOT
-                        type = citizenship_slavery
-                    }
-                }
-            }
-        }
-    }
-}
 
 namespace = touhou_paragon_effect
 

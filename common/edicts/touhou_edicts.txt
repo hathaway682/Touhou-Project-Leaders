@@ -1550,15 +1550,12 @@ reset_touhou_leader_portrait = {
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = thl_leader_trait_flower
+				OR = {
+					has_trait = thl_leader_trait_flower
+					has_trait = thl_leader_trait_flower_commander
+				}
 			}
 			change_leader_portrait = x119
-		}
-		random_owned_leader = {
-			limit = {
-				has_trait = thl_leader_trait_flower_commander
-			}
-			change_leader_portrait = x152
 		}
 		random_owned_leader = {
 			limit = {
