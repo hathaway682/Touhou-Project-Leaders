@@ -220,6 +220,46 @@ touhou_ex_charge_effect = {
 							value = 3
 						}
 					}
+					AND = {
+						check_variable = {
+							which = seleted_char_id
+							value = 37
+						}
+						check_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+					}
+					AND = {
+						check_variable = {
+							which = seleted_char_id
+							value = 37
+						}
+						check_variable = {
+							which = seleted_card_id
+							value = 2
+						}
+					}
+					AND = {
+						check_variable = {
+							which = seleted_char_id
+							value = 37
+						}
+						check_variable = {
+							which = seleted_card_id
+							value = 3
+						}
+					}
+					AND = {
+						check_variable = {
+							which = seleted_char_id
+							value = 37
+						}
+						check_variable = {
+							which = seleted_card_id
+							value = 4
+						}
+					}
 				}
 			}
 		}
