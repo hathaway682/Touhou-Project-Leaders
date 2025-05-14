@@ -1,0 +1,46 @@
+room_selector = {
+	# Script may point to textures in 'gfx\portraits\city_sets\' that end with "_room.dds" while ignoring the file ending, e.g.: "room = machine_room" will find 'machine_room(.dds)'.
+
+	default = "default_room"
+
+	game_setup = {
+		"SATO_leader_room"								= { always = yes }
+		"SATO_leader2_room"								= { always = yes }
+		"SATO_leader3_room"								= { always = yes }
+	}
+
+	ruler = {
+		"SATO_leader_room" = {
+			exists = owner
+			owner = {
+				OR = {
+					has_country_flag = dollsSATO1
+					has_origin = origin_Artificial_Children_1
+					has_origin = origin_Artificial_Children_2
+				}
+			}
+		}
+		"SATO_leader2_room" = {
+			exists = owner
+			owner = {
+				OR = {
+					has_country_flag = dollsSATO1
+					has_origin = origin_Artificial_Children_1
+					has_origin = origin_Artificial_Children_2
+				}
+				has_ascension_perk = ap_cosmogenesis
+			}
+		}
+		"SATO_leader3_room" = {
+			exists = owner
+			owner = {
+				OR = {
+					has_country_flag = dollsSATO1
+					has_origin = origin_Artificial_Children_1
+					has_origin = origin_Artificial_Children_2
+				}
+				has_ascension_perk = ap_become_the_crisis
+			}
+		}
+	}
+}

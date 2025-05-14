@@ -301,7 +301,7 @@
  spell_card_hina_2_ex:0 "疵痕「损坏的护符」"
  spell_card_hina_2_ex_desc:0 "COST：§G6§!\n目标：任意与§H$NAME_Hina$§!处在同一星系且未受同类符卡影响的§Y敌对舰队§!。\n\n令敌方舰队的装甲和护盾出现明显的裂口，§Y装甲硬化§!和§Y护盾硬化§!下降§R1000%§!，持续§Y60§!天。"
  spell_card_hina_3:0 "恶灵「Misfortune's Wheel」"
- spell_card_hina_3_desc:0 "COST：§G4§!\n目标：任意与§H$NAME_Hina$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n产生一个厄运的漩涡，持续§Y180§!天，星系内的敌方舰队的§Y命中§!和§Y闪避§!受其影响会下降§R25%§!，且§H无法撤出战斗§!。"
+ spell_card_hina_3_desc:0 "COST：§G4§!\n目标：任意与§H$NAME_Hina$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n产生一个厄运的漩涡，持续§Y180§!天，星系内的敌方舰队的§Y命中§!和§Y闪避§!受其影响会下降§R25%§!，且§P持续承受伤害§!。"
  spell_card_hina_3_ex:0 "悲运「大钟婆之火」"
  spell_card_hina_3_ex_desc:0 "COST：§G6§!\n目标：任意与§H$NAME_Hina$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n将厄运实体化为火焰的漩涡，持续§Y360§!天，星系内的敌方舰队的§Y命中§!和§Y闪避§!受其影响会下降§R50%§!，§P持续承受伤害§!，且§H无法撤出战斗§!。"
  spell_card_hina_4:0 "创符「Pain Flow」"

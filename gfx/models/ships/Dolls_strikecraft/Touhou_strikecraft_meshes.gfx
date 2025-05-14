@@ -1,0 +1,29 @@
+objectTypes = {
+	pdxmesh = {
+		name = "Shanghai_doll_strikecraft_mesh"
+		file = "gfx/models/ships/Dolls_strikecraft/Shanghai_doll_strikecraft.mesh"
+				animation = { id = "launch"			type = "Shanghai_doll_strikecraft_launch_animation" }
+				animation = { id = "idle"			type = "Shanghai_doll_strikecraft_idle_animation" }
+		scale = 0.7
+	}
+	pdxmesh = {
+		name = "Hourai_doll_strikecraft_mesh"
+		file = "gfx/models/ships/Dolls_strikecraft/Hourai_doll_strikecraft.mesh"
+				animation = { id = "launch"			type = "Hourai_doll_strikecraft_launch_animation" }
+				animation = { id = "idle"			type = "Hourai_doll_strikecraft_idle_animation" }
+		scale = 0.7
+	}
+	pdxmesh = {
+		name = "Yin_Yang_ball_strikecraft_mesh"
+		file = "gfx/models/ships/Dolls_strikecraft/Yin_Yang_ball_strikecraft.mesh"
+				animation = { id = "idle"			type = "Yin_Yang_ball_strikecraft_idle_animation" }
+		scale = 3.5
+	}
+	pdxmesh = {
+		name = "Dolls_fortress_formation_mesh"
+		file = "gfx/models/ships/Dolls_strikecraft/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "idle"			type = "dolls_fortress_formation_idle_animation" }
+		scale = 3.0
+	}
+}
+	

@@ -1,0 +1,676 @@
+objectTypes = {
+	pdxmesh = {
+		name = "SATO2_empty_turret_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/SATO2_empty_turret.mesh"
+		#	animation = { id = "idle"		type = "turret_projectile_large_idle_animation" }
+		#	animation = { id = "attack"		type = "turret_projectile_large_attack_animation" }	
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_1_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.6
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_2_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_2.mesh"
+		scale = 0.4
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_3_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_3.mesh"
+		scale = 0.4
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_4_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_4.mesh"
+		scale = 0.6
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_4_ring_small_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_4_ring.mesh"
+		scale = 0.15
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_4_ring_medium_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_4_ring.mesh"
+		scale = 0.3
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_4_ring_large_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_4_ring.mesh"
+		scale = 0.45
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_5_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_5.mesh"
+		scale = 3.0
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_5_idle_animation" }
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_4_normal_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_4_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_4_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_4_diffuse.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_6_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_6_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_6_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_6_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_7_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_7_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_7_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_7_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_8_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_8_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_8_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_8_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_9_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_9_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_9_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_9_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_10_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_10_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_10_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_10_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_11_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_11_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_11_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_11_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_12_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_12_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_12_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_12_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_13_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_13_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_13_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_13_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_14_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_14_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_14_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_14_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_15_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_15_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_15_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_15_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_16_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_16_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_16_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_16_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_17_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_17_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_17_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_17_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_18_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_18_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_18_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_18_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_19_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_19_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_19_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_19_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_20_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_20_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_20_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_20_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_21_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_21_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_21_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_21_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_22_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_22_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_22_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_22_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_23_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_23_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_23_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_23_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_24_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_24_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_24_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_24_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_25_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_25_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_25_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_25_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_26_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_26_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_26_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_26_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_27_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.2
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_27_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_27_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_27_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_28_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_1.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_28_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_28_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_28_diffuse.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_30_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_3.mesh"
+		scale = 1.0
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_30_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_30_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_30_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_30_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_30_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_31_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_3.mesh"
+		scale = 1.0
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_30_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_30_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_31_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_31_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_31_diffuse.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "Gosho_cart_fan_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/Gosho_cart_fan.mesh"
+		scale = 1.0
+				animation = { id = "idle"			type = "Gosho_cart_fan_idle_animation" }
+				animation = { id = "idle_to_combat_idle"			type = "Gosho_cart_fan_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "Gosho_cart_fan_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "Gosho_cart_fan_combat_idle_animation" }
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+
+	pdxmesh = {
+		name = "fantasia_bullet_ATW_card_1_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_ATW_card.mesh"
+		scale = 3.0
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_ATW_card_1_diffuse.dds"
+			texture_normal = "fantasia_bullet_ATW_card_1_diffuse.dds"
+			texture_specular = "fantasia_bullet_ATW_card_1_diffuse.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "fantasia_bullet_ATW_card_2_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_ATW_card.mesh"
+		scale = 3.0
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_ATW_card_2_diffuse.dds"
+			texture_normal = "fantasia_bullet_ATW_card_2_diffuse.dds"
+			texture_specular = "fantasia_bullet_ATW_card_2_diffuse.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "fantasia_bullet_ATW_card_3_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_ATW_card.mesh"
+		scale = 5.0
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_ATW_card_3_diffuse.dds"
+			texture_normal = "fantasia_bullet_ATW_card_3_diffuse.dds"
+			texture_specular = "fantasia_bullet_ATW_card_3_diffuse.dds"
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_THC1_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_3.mesh"
+		scale = 0.3
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_30_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_30_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_THC1_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_THC1_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_THC1_diffuse.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_THC2_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_2.mesh"
+		scale = 0.8
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				#animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_THC2_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_THC2_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_THC2_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Magic_Circle_THC3_mesh"
+		file = "gfx/models/ships/fantasia_bullet_Magic_Circle/fantasia_bullet_Magic_Circle_3.mesh"
+		scale = 3.0
+				animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "fantasia_bullet_Magic_Circle_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_to_idle_animation" }
+				animation = { id = "combat_idle"			type = "fantasia_bullet_Magic_Circle_combat_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_Magic_Circle_THC3_diffuse.dds"
+			texture_normal = "fantasia_bullet_Magic_Circle_THC3_diffuse.dds"
+			texture_specular = "fantasia_bullet_Magic_Circle_THC3_diffuse.dds"
+		}
+	}
+}
+	

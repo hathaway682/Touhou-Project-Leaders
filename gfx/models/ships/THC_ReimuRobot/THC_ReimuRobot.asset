@@ -1,0 +1,1440 @@
+#idle：位置ループ周期96F
+
+
+
+animation = {
+	name = "THC_Reimu_main_idle_animation"
+	file = "THC_Reimu_main_idle.anim"
+}
+
+
+animation = {
+	name = "THC_Reimu_L_arm_idle_animation"
+	file = "THC_Reimu_L_arm_idle.anim"
+}
+animation = {
+	name = "THC_Reimu_R_arm_idle_animation"
+	file = "THC_Reimu_R_arm_idle.anim"
+}
+
+animation = {
+	name = "THC_Reimu_skirt1_idle_animation"
+	file = "THC_Reimu_skirt1_idle.anim"
+}
+
+animation = {
+	name = "THC_Reimu_skirt2_idle_animation"
+	file = "THC_Reimu_skirt2_idle.anim"
+}
+animation = {
+	name = "THC_Reimu_Harae_stick_idle_animation"
+	file = "THC_Reimu_Harae_stick_idle.anim"
+}
+
+#moving：位置ループ周期96F
+animation = {
+	name = "THC_Reimu_main_moving_animation"
+	file = "THC_Reimu_main_moving.anim"
+}
+
+
+#形態遷移：位置ループ周期96F
+
+animation = {
+	name = "THC_Reimu_main_idle_to_moving_animation"
+	file = "THC_Reimu_main_idle_to_moving.anim"
+}
+animation = {
+	name = "THC_Reimu_main_moving_to_idle_animation"
+	file = "THC_Reimu_main_moving_to_idle.anim"
+}
+
+animation = {
+	name = "THC_Reimu_main_idle_to_combat_idle_animation"
+	file = "THC_Reimu_main_idle_to_combat_idle.anim"
+}
+animation = {
+	name = "THC_Reimu_main_combat_idle_to_idle_animation"
+	file = "THC_Reimu_main_combat_idle_to_idle.anim"
+}
+
+
+animation = {
+	name = "THC_Reimu_main_idle_to_combat_moving_animation"
+	file = "THC_Reimu_main_idle_to_combat_moving.anim"
+}
+animation = {
+	name = "THC_Reimu_main_combat_moving_to_idle_animation"
+	file = "THC_Reimu_main_combat_moving_to_idle.anim"
+}
+
+
+
+animation = {
+	name = "THC_Reimu_main_moving_to_combat_idle_animation"
+	file = "THC_Reimu_main_moving_to_combat_idle.anim"
+}
+
+animation = {
+	name = "THC_Reimu_main_combat_moving_to_idle_animation"
+	file = "THC_Reimu_main_combat_moving_to_idle.anim"
+}
+
+
+animation = {
+	name = "THC_Reimu_main_moving_to_combat_moving_animation"
+	file = "THC_Reimu_main_moving_to_combat_moving.anim"
+}
+
+
+animation = {
+	name = "THC_Reimu_main_combat_moving_to_moving_animation"
+	file = "THC_Reimu_main_combat_moving_to_moving.anim"
+}
+
+animation = {
+	name = "THC_Reimu_main_combat_idle_to_combat_moving_animation"
+	file = "THC_Reimu_main_combat_idle_to_combat_moving.anim"
+}
+
+
+animation = {
+	name = "THC_Reimu_main_combat_moving_to_combat_idle_animation"
+	file = "THC_Reimu_main_combat_moving_to_combat_idle.anim"
+}
+
+
+
+
+
+
+
+#combat：位置ループ周期144F
+
+animation = {
+	name = "THC_Reimu_main_combat_idle_animation"
+	file = "THC_Reimu_main_combat_idle.anim"
+}
+
+animation = {
+	name = "THC_Reimu_main_combat_moving_animation"
+	file = "THC_Reimu_main_combat_moving.anim"
+}
+
+
+
+#戦闘モーション144F
+animation = {
+	name = "THC_Reimu_main_CQB_attack_animation"
+	file = "THC_Reimu_main_CQB_attack.anim"
+}
+animation = {
+	name = "THC_Reimu_R_arm_CQB_attack_animation"
+	file = "THC_Reimu_R_arm_CQB_attack.anim"
+}
+
+animation = {
+	name = "THC_Reimu_Harae_stick_CQB_attack_animation"
+	file = "THC_Reimu_Harae_stick_CQB_attack.anim"
+}
+
+
+####################################
+
+#通常の「幻想を背負う者」
+entity = {
+	name = "Illusion_Guardian_ship_entity"
+	pdxmesh = "Illusion_Guardian_frame_mesh"
+	default_state = "idle"
+	state = { name = "idle"	 }
+	state = { name = "combat_idle" }
+	state = { name = "moving" }
+	state = { name = "combat_moving"  }
+	state = { name = "CQB_attack" state_time = 6 looping = no }
+	state = { name = "death" state_time = 0.1 looping = no }
+}
+
+#スペルカード起動時の「幻想を背負う者」(NPC専用)
+entity = {
+	name = "Illusion_Guardian2_ship_entity"
+	pdxmesh = "Illusion_Guardian_frame_mesh"
+	default_state = "idle"
+	state = { name = "idle"	 }
+	state = { name = "combat_idle" }
+	state = { name = "moving" }
+	state = { name = "combat_moving"  }
+	state = { name = "CQB_attack" state_time = 6 looping = no }
+	state = { name = "death" state_time = 0.1 looping = no }
+}
+
+
+
+
+
+entity = {
+	name = "THC_Reimu_weapon_section_entity"
+	pdxmesh = "THC_Reimu_weapon_section_mesh"
+	get_state_from_parent = yes
+	state = { name = "idle"	 }
+	state = { name = "combat_idle" }
+	state = { name = "moving" }
+	state = { name = "combat_moving"}
+}
+
+
+#注意：モデルの左右が反転していることに注意(正面側から見たボーン名が設定されているため、右半身にL_arm_locatorがある)
+entity = {
+	name = "THC_Reimu_main_entity"
+	pdxmesh = "THC_Reimu_main_mesh"
+	get_state_from_parent = yes
+
+	default_state = "idle"
+
+
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_idle" stop_on_state_change = yes } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "moving" animation = "idle_to_moving"  animation_blend_time = 0 looping = no next_state = "moving"
+
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "moving" animation = "moving"  animation_blend_time = 0 looping = no next_state = "moving"
+
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = { name = "idle" animation = "moving_to_idle" animation_blend_time = 0 looping = no next_state = "idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "combat_idle" animation = "idle_to_combat_idle" animation_blend_time = 0 looping = no  next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+
+	}
+
+	state = { name = "combat_moving" animation = "moving_to_combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = { name = "combat_idle" animation = "combat_idle" animation_blend_time = 0 looping = no  next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+
+	}
+
+	state = { name = "idle" animation = "combat_idle_to_idle" animation_blend_time = 0 looping = no  next_state = "idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"idle_2" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "combat_moving" animation = "idle_to_combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+	}
+
+
+
+	state = { name = "combat_moving" animation = "moving_to_combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+
+	}
+
+	state = { name = "combat_moving" animation = "combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "moving" animation = "combat_moving_to_moving" animation_blend_time = 0 looping = no  next_state = "moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "idle" animation = "combat_moving_to_idle" animation_blend_time = 0 looping = no  next_state = "idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+				"CQB_attack" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+
+	state = { name = "combat_moving" animation = "combat_idle_to_combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+
+
+	state = { name = "combat_idle" animation = "combat_moving_to_combat_idle" animation_blend_time = 0 looping = no  next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+	state = { name = "CQB_attack" animation = "CQB_attack" animation_blend_time = 0 looping = no
+	
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+
+	}
+
+
+	attach = { R_arm_locator = "THC_Reimu_L_arm_entity" }
+	attach = { L_arm_locator = "THC_Reimu_R_arm_entity" }
+	attach = { skirt_locator1 = "THC_Reimu_skirt1_entity" }
+	attach = { skirt_locator2 = "THC_Reimu_skirt2_entity" }
+	attach = { skirt_locator3 = "THC_Reimu_skirt1_entity" }
+	attach = { skirt_locator4 = "THC_Reimu_skirt2_entity" }
+	attach = { skirt_locator5 = "THC_Reimu_skirt1_entity" }
+	attach = { skirt_locator6 = "THC_Reimu_skirt2_entity" }
+	attach = { skirt_locator7 = "THC_Reimu_skirt1_entity" }
+	attach = { skirt_locator8 = "THC_Reimu_skirt2_entity" }
+
+	scale = 4.0
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+entity = {
+	name = "THC_Reimu_L_arm_entity"
+	pdxmesh = "THC_Reimu_L_arm_mesh"
+	get_state_from_parent = yes
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "moving" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "combat_idle" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "combat_moving" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	scale = 4.0
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+entity = {
+	name = "THC_Reimu_R_arm_entity"
+	pdxmesh = "THC_Reimu_R_arm_mesh"
+	get_state_from_parent = yes
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "moving" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "combat_idle" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "combat_moving" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "CQB_attack" animation = "CQB_attack"  animation_blend_time = 0 looping = no
+	}
+
+	attach = { Handweapon_locator = "THC_Reimu_Harae_stick_entity" }
+
+	scale = 4.0
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+
+
+entity = {
+	name = "THC_Reimu_skirt1_entity"
+	pdxmesh = "THC_Reimu_skirt1_mesh"
+	get_state_from_parent = yes
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "moving" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "combat_idle" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "combat_moving" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+
+	scale = 4.0
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+entity = {
+	name = "THC_Reimu_skirt2_entity"
+	pdxmesh = "THC_Reimu_skirt2_mesh"
+	get_state_from_parent = yes
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "moving" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "combat_idle" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "combat_moving" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	scale = 4.0
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+
+entity = {
+	name = "THC_Reimu_Harae_stick_entity"
+	pdxmesh = "THC_Reimu_Harae_stick_mesh"
+	get_state_from_parent = yes
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+		event = { time = 0 node = "effect_locator1"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator2"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator3"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator4"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator5"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator6"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator7"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator8"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator9"particle = "Harae_stick_parts" keep_particle = no}
+	}
+
+	state = { name = "moving" animation = "idle"  animation_blend_time = 0 looping = no next_state = "moving"
+		event = { time = 0 node = "effect_locator1"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator2"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator3"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator4"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator5"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator6"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator7"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator8"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator9"particle = "Harae_stick_parts" keep_particle = no}
+	}
+
+	state = { name = "combat_idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "combat_idle"
+		event = { time = 0 node = "effect_locator1"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator2"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator3"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator4"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator5"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator6"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator7"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator8"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator9"particle = "Harae_stick_parts" keep_particle = no}
+	}
+
+	state = { name = "combat_moving" animation = "idle"  animation_blend_time = 0 looping = no next_state = "combat_moving"
+		event = { time = 0 node = "effect_locator1"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator2"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator3"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator4"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator5"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator6"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator7"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator8"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator9"particle = "Harae_stick_parts" keep_particle = no}
+	}
+
+	state = { name = "CQB_attack" animation = "CQB_attack"  animation_blend_time = 0 looping = no next_state = "CQB_attack"
+		event = { time = 0 node = "effect_locator1"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator2"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator3"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator4"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator5"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator6"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator7"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator8"particle = "Harae_stick_parts" keep_particle = no}
+		event = { time = 0 node = "effect_locator9"particle = "Harae_stick_parts" keep_particle = no}
+	}
+	scale = 1.0
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+########################################################################
+
+
+
+entity = {
+	name = "THC_Reimu_destructioned_entity"
+	pdxmesh = "THC_Reimu_destructioned_mesh"
+
+	default_state = "death"
+	state = { name = "death" state_time = 12 looping = yes }
+}
+
+
+
+
+#######################赤霊夢#################################################
+entity = {
+	name = "THC_ReimuRed_main_entity"
+	pdxmesh = "THC_ReimuRed_main_mesh"
+	get_state_from_parent = yes
+
+	default_state = "idle"
+
+
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_idle" stop_on_state_change = yes } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "moving" animation = "idle_to_moving"  animation_blend_time = 0 looping = no next_state = "moving"
+
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "moving" animation = "moving"  animation_blend_time = 0 looping = no next_state = "moving"
+
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = { name = "idle" animation = "moving_to_idle" animation_blend_time = 0 looping = no next_state = "idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "combat_idle" animation = "idle_to_combat_idle" animation_blend_time = 0 looping = no  next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+
+	}
+
+	state = { name = "combat_moving" animation = "moving_to_combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = { name = "combat_idle" animation = "combat_idle" animation_blend_time = 0 looping = no  next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+
+	}
+
+	state = { name = "idle" animation = "combat_idle_to_idle" animation_blend_time = 0 looping = no  next_state = "idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"idle_2" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "combat_moving" animation = "idle_to_combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+	}
+
+
+
+	state = { name = "combat_moving" animation = "moving_to_combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+
+	}
+
+	state = { name = "combat_moving" animation = "combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "moving" animation = "combat_moving_to_moving" animation_blend_time = 0 looping = no  next_state = "moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "idle" animation = "combat_moving_to_idle" animation_blend_time = 0 looping = no  next_state = "idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+				"CQB_attack" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+
+	state = { name = "combat_moving" animation = "combat_idle_to_combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+
+
+	state = { name = "combat_idle" animation = "combat_moving_to_combat_idle" animation_blend_time = 0 looping = no  next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+	state = { name = "CQB_attack" animation = "CQB_attack" animation_blend_time = 0 looping = no
+	
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_07" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_08" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_09" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+
+	}
+
+
+	attach = { R_arm_locator = "THC_Reimu_L_arm_entity" }
+	attach = { L_arm_locator = "THC_Reimu_R_arm_entity" }
+	attach = { skirt_locator1 = "THC_ReimuRed_skirt1_entity" }
+	attach = { skirt_locator2 = "THC_ReimuRed_skirt2_entity" }
+	attach = { skirt_locator3 = "THC_ReimuRed_skirt1_entity" }
+	attach = { skirt_locator4 = "THC_ReimuRed_skirt2_entity" }
+	attach = { skirt_locator5 = "THC_ReimuRed_skirt1_entity" }
+	attach = { skirt_locator6 = "THC_ReimuRed_skirt2_entity" }
+	attach = { skirt_locator7 = "THC_ReimuRed_skirt1_entity" }
+	attach = { skirt_locator8 = "THC_ReimuRed_skirt2_entity" }
+
+	scale = 4.0
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+
+entity = {
+	name = "THC_ReimuRed_skirt1_entity"
+	pdxmesh = "THC_ReimuRed_skirt1_mesh"
+	get_state_from_parent = yes
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "moving" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "combat_idle" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "combat_moving" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+
+	scale = 4.0
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+entity = {
+	name = "THC_ReimuRed_skirt2_entity"
+	pdxmesh = "THC_ReimuRed_skirt2_mesh"
+	get_state_from_parent = yes
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "moving" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "combat_idle" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	state = { name = "combat_moving" animation = "idle"  animation_blend_time = 0 looping = yes
+	}
+	scale = 4.0
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+
+
+

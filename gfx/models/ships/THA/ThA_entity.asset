@@ -1,0 +1,153 @@
+
+
+####################################
+
+entity = {
+	name = "ThA_wormhole_entity"
+	pdxmesh = "wormhole_rings_mesh"
+	
+	default_state = "start"
+	state = { name = "start" state_time = 5 looping = no next_state = start2
+		event = { time = 0.0 node = "effect_locator" particle = "wormhole_idle_particle"  keep_particle = yes trigger_once = yes }
+		event = { trigger_once = yes sound = { soundeffect = "amb_natural_wormhole" } }
+		event = { trigger_once = yes sound = { soundeffect = "amb_natural_wormhole_thunder" } }
+	}
+	
+	scale = 8.0
+	
+	game_data = {
+		uv_animation_speed   = -0.05
+		uv_animation_direction  = { 0.4 0.4 }
+		bloom_factor = 0.8
+	}
+	
+	attach = { root = "ThA_storm_core_entity" }
+}
+
+entity = {
+	name = "ThA_storm_core_entity"
+	pdxmesh = "ThA_storm_core_mesh"
+	
+	game_data = {
+		bloom_factor			= 1.0
+		uv_animation_speed 		= 0.08
+		uv_animation_direction 	= { -0.2 -1 }
+	}
+}
+
+
+
+####################################
+
+
+
+entity = {
+	name = "ThA_storm_wall_entity"
+	pdxmesh = "ThA_storm_wall_mesh"
+	
+	game_data = {
+		bloom_factor			= 1.0
+		uv_animation_speed 		= 0.02
+		uv_animation_direction 	= { -0.2 -1 }
+	}
+	scale = 1.5
+}
+
+
+
+
+
+entity = {
+	name = "Time_sealing_circle_0_entity"
+	pdxmesh = "Time_sealing_circle_0_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 looping = no next_state = idle
+		event = { trigger_once = yes sound = { soundeffect = "amb_natural_wormhole" } }
+		event = { trigger_once = yes sound = { soundeffect = "amb_natural_wormhole_thunder" } }
+	}
+
+}
+
+entity = {
+	name = "Time_sealing_circle_1_entity"
+	pdxmesh = "Time_sealing_circle_1_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 looping = no next_state = idle
+		event = { trigger_once = yes sound = { soundeffect = "amb_natural_wormhole" } }
+		event = { trigger_once = yes sound = { soundeffect = "amb_natural_wormhole_thunder" } }
+	}
+
+	locator = { name = "wall_1" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "wall_2" position = { 0 0 0 } rotation = { 180 0 180 } }
+	attach = { wall_1 = "ThA_storm_wall_entity" }
+	attach = { wall_2 = "ThA_storm_wall_entity" }
+
+	game_data = {
+		bloom_factor			= 2.5
+	}
+}
+
+entity = {
+	name = "Time_sealing_circle_2_entity"
+	pdxmesh = "Time_sealing_circle_1_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 looping = no next_state = idle
+		event = { trigger_once = yes sound = { soundeffect = "amb_natural_wormhole" } }
+		event = { trigger_once = yes sound = { soundeffect = "amb_natural_wormhole_thunder" } }
+	}
+	attach = { root = "ThA_storm_wall_entity" }
+	game_data = {
+		bloom_factor			= 2.5
+	}
+}
+
+
+
+####################################
+
+
+
+
+entity = {
+	name = "THA_Armed_Time_sealing_circle_ship_entity"
+	pdxmesh = "SATO2_empty_turret_mesh"
+	default_state = "idle"
+	state = { name = "idle"	 }
+	state = { name = "moving" }
+	state = { name = "death" state_time = 6 looping = no }
+}
+
+
+
+entity = {
+	name = "Time_sealing_circle_frame_phase1_entity"
+	pdxmesh = "Time_sealing_circle_frame_mesh"
+
+	get_state_from_parent = yes
+
+	default_state = "idle"
+	state = { name = "idle" 
+	}
+
+	attach = { bullet_locator_7 = "THA_ATW_bullet_1_entity" }
+	attach = { bullet_locator_8 = "THA_ATW_bullet_1_entity" }
+	attach = { bullet_locator_9 = "THA_ATW_bullet_1_entity" }
+	attach = { bullet_locator_10 = "THA_ATW_bullet_1_entity" }
+	attach = { bullet_locator_11 = "THA_ATW_bullet_1_entity" }
+	attach = { bullet_locator_12 = "THA_ATW_bullet_1_entity" }
+	attach = { bullet_locator_13 = "THA_ATW_bullet_1_entity" }
+	attach = { bullet_locator_14 = "THA_ATW_bullet_1_entity" }
+	attach = { bullet_locator_15 = "THA_ATW_bullet_1_entity" }
+	attach = { bullet_locator_16 = "THA_ATW_bullet_1_entity" }
+
+
+
+	
+}
+
+
+
+

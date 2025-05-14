@@ -1,0 +1,102 @@
+objectTypes = {
+	
+	#装甲モード/通常/水着/ブラックナイト/ブラックロベリアス
+	pdxmesh = {
+		name = "Black_Alice_mesh"
+		file = "gfx/models/portraits/Black_Alice/Black_Alice.mesh"
+		animation = { id = "idle1"	type = "Black_Alice_idle1_animation" }
+		animation = { id = "idle2"	type = "Black_Alice_idle2_animation" }
+		animation = { id = "idle3"	type = "Black_Alice_idle3_animation" }
+		animation = { id = "idle4"	type = "Black_Alice_idle4_animation" }
+		animation = { id = "idle5"	type = "Black_Alice_idle5_animation" }
+		animation = { id = "idle6"	type = "Black_Alice_idle6_animation" }
+		animation = { id = "idle7"	type = "Black_Alice_idle7_animation" }
+		animation = { id = "idle8"	type = "Black_Alice_idle8_animation" }
+		animation = { id = "idle9"	type = "Black_Alice_idle9_animation" }
+		animation = { id = "idle10"	type = "Black_Alice_idle10_animation" }
+		animation = { id = "idle11"	type = "Black_Alice_idle11_animation" }
+		animation = { id = "idle12"	type = "Black_Alice_idle12_animation" }
+		animation = { id = "idle13"	type = "Black_Alice_idle13_animation" }
+		animation = { id = "idle14"	type = "Black_Alice_idle14_animation" }
+		animation = { id = "idle15"	type = "Black_Alice_idle15_animation" }
+		animation = { id = "idle16"	type = "Black_Alice_idle16_animation" }
+		animation = { id = "idle17"	type = "Black_Alice_idle17_animation" }
+		animation = { id = "idle18"	type = "Black_Alice_idle18_animation" }
+		animation = { id = "idle19"	type = "Black_Alice_idle19_animation" }
+		animation = { id = "idle20"	type = "Black_Alice_idle20_animation" }
+
+
+		scale = 3.5
+	}
+	pdxmesh = {
+		name = "Black_Alice_Ikaros_mesh"
+		file = "gfx/models/portraits/Black_Alice/Black_Alice_Ikaros.mesh"
+		animation = { id = "idle1"	type = "Black_Alice_Ikaros_idle1_animation" }
+		animation = { id = "idle2"	type = "Black_Alice_Ikaros_idle2_animation" }
+		animation = { id = "idle3"	type = "Black_Alice_Ikaros_idle3_animation" }
+		animation = { id = "idle4"	type = "Black_Alice_Ikaros_idle4_animation" }
+		animation = { id = "idle5"	type = "Black_Alice_Ikaros_idle5_animation" }
+		animation = { id = "idle6"	type = "Black_Alice_Ikaros_idle6_animation" }
+		animation = { id = "idle7"	type = "Black_Alice_Ikaros_idle7_animation" }
+		animation = { id = "idle8"	type = "Black_Alice_Ikaros_idle8_animation" }
+		
+		
+		
+		
+		
+		scale = 3.2
+	}
+	pdxmesh = {
+		name = "Black_Alice_Ikaros_wing_mesh"
+		file = "gfx/models/portraits/Black_Alice/Black_Alice_Ikaros_wing.mesh"
+		animation = { id = "idle"	type = "Black_Alice_Ikaros_wing_idle_animation" }
+		animation = { id = "opening"	type = "Black_Alice_Ikaros_wing_opening_animation" }
+		animation = { id = "opened"	type = "Black_Alice_Ikaros_wing_opened_animation" }
+		animation = { id = "closing"	type = "Black_Alice_Ikaros_wing_closing_animation" }		
+		scale = 3.2
+	}
+	#編集用/ボーン数限界把握用、普段は未使用
+	pdxmesh = {
+		name = "Black_Alice_Ikaros_base_mesh"
+		file = "gfx/models/portraits/Black_Alice/Black_Alice_Ikaros_base.mesh"
+		animation = { id = "idle"	type = "Black_Alice_Ikaros_baseidle_animation" }
+		scale = 1.2
+	}
+	
+	#バニー黒アリス/バニー黒アリス高機動近接型/メイド黒アリス（夢子風）
+	#武装メイド黒アリス（夢子風）/メイド黒アリス（夢月風）/装甲モード-LW/装甲モード-SD
+	pdxmesh = {
+		name = "Black_Alice_Variation2_mesh"
+		file = "gfx/models/portraits/Black_Alice/Black_Alice_Variation2.mesh"
+		animation = { id = "idle1"	type = "Black_Alice_Variation2_idle1_animation" }
+		animation = { id = "idle2"	type = "Black_Alice_Variation2_idle2_animation" }
+		animation = { id = "idle3"	type = "Black_Alice_Variation2_idle3_animation" }
+		animation = { id = "idle4"	type = "Black_Alice_Variation2_idle4_animation" }
+		animation = { id = "idle5"	type = "Black_Alice_Variation2_idle5_animation" }
+		animation = { id = "idle6"	type = "Black_Alice_Variation2_idle6_animation" }
+		animation = { id = "idle7"	type = "Black_Alice_Variation2_idle7_animation" }
+		animation = { id = "idle8"	type = "Black_Alice_Variation2_idle8_animation" }
+		animation = { id = "idle9"	type = "Black_Alice_Variation2_idle9_animation" }
+		animation = { id = "idle10"	type = "Black_Alice_Variation2_idle10_animation" }
+		animation = { id = "idle11"	type = "Black_Alice_Variation2_idle11_animation" }
+		animation = { id = "idle12"	type = "Black_Alice_Variation2_idle12_animation" }
+		animation = { id = "idle13"	type = "Black_Alice_Variation2_idle13_animation" }
+		animation = { id = "idle14"	type = "Black_Alice_Variation2_idle14_animation" }
+		animation = { id = "idle15"	type = "Black_Alice_Variation2_idle15_animation" }
+		animation = { id = "idle16"	type = "Black_Alice_Variation2_idle16_animation" }
+		animation = { id = "idle17"	type = "Black_Alice_Variation2_idle17_animation" }
+		animation = { id = "idle18"	type = "Black_Alice_Variation2_idle18_animation" }
+		animation = { id = "idle19"	type = "Black_Alice_Variation2_idle19_animation" }
+		animation = { id = "idle20"	type = "Black_Alice_Variation2_idle20_animation" }
+		animation = { id = "idle21"	type = "Black_Alice_Variation2_idle21_animation" }
+		animation = { id = "idle22"	type = "Black_Alice_Variation2_idle22_animation" }
+		animation = { id = "idle23"	type = "Black_Alice_Variation2_idle23_animation" }
+		animation = { id = "idle24"	type = "Black_Alice_Variation2_idle24_animation" }
+		animation = { id = "idle25"	type = "Black_Alice_Variation2_idle25_animation" }
+		animation = { id = "idle26"	type = "Black_Alice_Variation2_idle26_animation" }
+
+
+		scale = 3.0
+	}
+	
+}

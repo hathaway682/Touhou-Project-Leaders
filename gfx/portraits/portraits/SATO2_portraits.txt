@@ -1,0 +1,779 @@
+portraits = {
+
+	thstf_Black_alice = {
+		entity = "Black_Alice_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_03"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Black_alice_2 = {
+		entity = "Black_Alice_2_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_07"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Black_alice_3 = {
+		entity = "Black_Alice_3_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_12"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Black_alice_4 = {
+		entity = "Black_Alice_4_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "robot_human_female_greetings_03"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	
+	thstf_Black_alice_5 = {
+		entity = "Black_Alice_5_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_28"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Black_alice_6A = { texturefile = "gfx/models/portraits/Black_Alice/BlackAlice06A.dds" }
+
+	thstf_Black_alice_Ikaros = {
+		entity = "Black_Alice_Ikaros_wing_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_07"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Black_alice_Ikaros_mini = {
+		entity = "Black_Alice_Ikaros_wing_mini_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_07"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Black_alice_Ikaros_armored = {
+		entity = "Black_Alice_Ikaros_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_07"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}	
+	
+	thstf_Black_alice_Black_Alice_Variation2_1 = {
+		entity = "Black_Alice_Variation2_1_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_07"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Black_alice_Black_Alice_Variation2_2 = {
+		entity = "Black_Alice_Variation2_2_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_07"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Black_alice_Black_Alice_Variation2_3 = {
+		entity = "Black_Alice_Variation2_3_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_07"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Black_alice_Black_Alice_Variation2_4 = {
+		entity = "Black_Alice_Variation2_4_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_07"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Black_alice_Black_Alice_Variation2_5 = {
+		entity = "Black_Alice_Variation2_5_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_07"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Black_alice_Black_Alice_Variation2_6 = {
+		entity = "Black_Alice_Variation2_6_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_07"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Black_alice_Black_Alice_Variation2_7 = {
+		entity = "Black_Alice_Variation2_7_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_07"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	
+	
+	
+	
+	thstf_leader_Golyat = {
+		texturefile = "gfx/models/portraits/SATO2/leader_Golyat.dds"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+
+	thstf_Shanghai_Kai = {
+		texturefile = "gfx/models/portraits/SATO2/Shanghai_Kai.dds"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Zero_Hourai = { 
+		texturefile = "gfx/models/portraits/SATO2/Zero_Hourai.dds" 
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Hourai_Forest = { 
+		texturefile = "gfx/models/portraits/SATO2/Hourai_Forest.dds" 
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Shanghai_Forest = { 
+		texturefile = "gfx/models/portraits/SATO2/Shanghai_Forest.dds" 
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Hourai_Forest_Vier = {
+		entity = "Vier-Hourai_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_07"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Shanghai_Forest_Vier = {
+		entity = "Vier-Shanghai_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "human_female_greetings_07"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	
+	thstf_alice_Living = {
+		entity = "Alice_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "cute_molluscoid_starfish_greetings_02"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Reimu_THC = {
+		texturefile = "gfx/models/portraits/SATO2_OTHER/reimu_THC.dds"
+		custom_close_up_position_offset = { x = 50 y = 0 }
+		custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+	thstf_Keine_THA = {
+		texturefile = "gfx/models/portraits/SATO2_OTHER/keine_THA.dds"
+		 custom_close_up_position_offset = { x = 50 y = 0 }
+		 custom_mid_close_up_position_offset = { x = 50 y = 0 }
+	}
+}
+
+
+
+# sd_doll_machine
+portraits = {
+	beru_doll_01 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_01.dds"  }
+	beru_doll_02 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_02.dds"  }
+	beru_doll_03 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_03.dds"  }
+	beru_doll_04 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_04.dds"  }
+	beru_doll_05 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_05.dds"  }
+	beru_doll_06 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_06.dds"  }
+	beru_doll_07 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_07.dds"  }
+	beru_doll_08 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_08.dds"  }
+	beru_doll_09 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_09.dds"  }
+	beru_doll_10 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_10.dds"  }
+	beru_doll_11 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_11.dds"  }
+	beru_doll_12 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_12.dds"  }
+	beru_doll_13 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_13.dds"  }
+	beru_doll_14 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_14.dds"  }
+	beru_doll_15 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_15.dds"  }
+	beru_doll_16 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_16.dds"  }
+	beru_doll_17 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_17.dds"  }
+	beru_doll_18 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_18.dds"  }
+	beru_doll_19 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_19.dds"  }
+	beru_doll_20 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_20.dds"  }
+	beru_doll_21 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_21.dds"  }
+	beru_doll_22 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_22.dds"  }
+	beru_doll_23 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_23.dds"  }
+	beru_doll_24 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_24.dds"  }
+	beru_doll_25 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_25.dds"  }
+	beru_doll_26 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_26.dds"  }
+	beru_doll_27 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_27.dds"  }
+	beru_doll_28 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_28.dds"  }
+	beru_doll_29 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_29.dds"  }
+	beru_doll_30 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_30.dds"  }
+	beru_doll_31 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_31.dds"  }
+	beru_doll_32 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_32.dds"  }
+	beru_doll_33 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_33.dds"  }
+	beru_doll_34 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_34.dds"  }
+	beru_doll_35 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_35.dds"  }
+	beru_doll_36 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_36.dds"  }
+	beru_doll_37 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_37.dds"  }
+	beru_doll_38 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_38.dds"  }
+	beru_doll_39 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_39.dds"  }
+	beru_doll_40 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_40.dds"  }
+	beru_doll_41 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_41.dds"  }
+	beru_doll_42 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_42.dds"  }
+	beru_doll_43 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_43.dds"  }
+	beru_doll_44 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_44.dds"  }
+	beru_doll_45 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_45.dds"  }
+	beru_doll_46 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_46.dds"  }
+	beru_doll_47 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_47.dds"  }
+	beru_doll_48 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_48.dds"  }
+	beru_doll_49 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_49.dds"  }
+	beru_doll_50 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_50.dds"  }
+	beru_doll_51 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_51.dds"  }
+	beru_doll_52 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_52.dds"  }
+	beru_doll_53 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_53.dds"  }
+	beru_doll_54 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_54.dds"  }
+	beru_doll_55 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_55.dds"  }
+	beru_doll_56 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_56.dds"  }
+	beru_doll_57 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_57.dds"  }
+	beru_doll_58 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_58.dds"  }
+	beru_doll_59 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_59.dds"  }
+	beru_doll_60 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_60.dds"  }
+	beru_doll_61 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_61.dds"  }
+	beru_doll_62 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_62.dds"  }
+	beru_doll_63 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_63.dds"  }
+	beru_doll_64 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_64.dds"  }
+	beru_doll_65 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_65.dds"  }
+	beru_doll_66 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_66.dds"  }
+	beru_doll_67 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_67.dds"  }
+	beru_doll_68 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_68.dds"  }
+	beru_doll_69 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_69.dds"  }
+	beru_doll_70 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_70.dds"  }
+	beru_doll_71 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_71.dds"  }
+	beru_doll_72 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_72.dds"  }
+	beru_doll_73 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_73.dds"  }
+	beru_doll_74 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_74.dds"  }
+	beru_doll_75 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_75.dds"  }
+	beru_doll_76 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_76.dds"  }
+	beru_doll_77 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_77.dds"  }
+	beru_doll_78 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_78.dds"  }
+	beru_doll_79 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_79.dds"  }
+	beru_doll_80 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_80.dds"  }
+	beru_doll_81 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_81.dds"  }
+	beru_doll_82 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_82.dds"  }
+	beru_doll_83 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_83.dds"  }
+	beru_doll_84 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_84.dds"  }
+	beru_doll_85 = {	texturefile = "gfx/models/portraits/SATO2/beru_doll_85.dds"  }
+	
+}
+
+portrait_groups = {
+	sd_doll_machine = {
+		#entity = "portrait_mammalian_synthetic_dawn_01_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "robot_mammalian_greetings"entity = "portrait_plantoid_synthetic_dawn_01_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	
+		greeting_sound = "robot_plantoid_greetings"
+		default = beru_doll_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					thstf_Black_alice
+					thstf_Black_alice_2
+					thstf_Black_alice_3
+					thstf_Black_alice_4
+					thstf_Black_alice_5
+					thstf_Black_alice_Ikaros
+					thstf_Black_alice_Ikaros_mini
+					thstf_Black_alice_Ikaros_armored
+					thstf_Black_alice_Black_Alice_Variation2_1
+					thstf_Black_alice_Black_Alice_Variation2_2
+					thstf_Black_alice_Black_Alice_Variation2_3
+					thstf_Black_alice_Black_Alice_Variation2_4
+					thstf_Black_alice_Black_Alice_Variation2_5
+					thstf_Black_alice_Black_Alice_Variation2_6
+					thstf_Black_alice_Black_Alice_Variation2_7
+					thstf_leader_Golyat
+					thstf_Shanghai_Kai
+					thstf_Zero_Hourai
+					thstf_Hourai_Forest
+					thstf_Shanghai_Forest
+					beru_doll_01
+					beru_doll_02
+					beru_doll_03
+					beru_doll_04
+					beru_doll_05
+					beru_doll_06
+					beru_doll_07
+					beru_doll_08
+					beru_doll_09
+					beru_doll_10
+					beru_doll_11
+					beru_doll_12
+					beru_doll_13
+					beru_doll_14
+					beru_doll_15
+					beru_doll_16
+					beru_doll_17
+					beru_doll_18
+					beru_doll_19
+					beru_doll_20
+					beru_doll_21
+					beru_doll_22
+					beru_doll_23
+					beru_doll_24
+					beru_doll_25
+					beru_doll_26
+					beru_doll_27
+					beru_doll_28
+					beru_doll_29
+					beru_doll_30
+					beru_doll_31
+					beru_doll_32
+					beru_doll_33
+					beru_doll_34
+					beru_doll_35
+					beru_doll_36
+					beru_doll_37
+					beru_doll_38
+					beru_doll_39
+					beru_doll_40
+					beru_doll_41
+					beru_doll_42
+					beru_doll_43
+					beru_doll_44
+					beru_doll_45
+					beru_doll_46
+					beru_doll_47
+					beru_doll_48
+					beru_doll_49
+					beru_doll_50
+					beru_doll_51
+					beru_doll_52
+					beru_doll_53
+					beru_doll_54
+					beru_doll_55
+					beru_doll_56
+					beru_doll_57
+					beru_doll_58
+					beru_doll_59
+					beru_doll_60
+					beru_doll_61
+					beru_doll_62
+					beru_doll_63
+					beru_doll_64
+					beru_doll_65
+					beru_doll_66
+					beru_doll_67
+					beru_doll_68
+					beru_doll_69
+					beru_doll_70
+					beru_doll_71
+					beru_doll_72
+					beru_doll_73
+					beru_doll_74
+					beru_doll_75
+					beru_doll_76
+					beru_doll_77
+					beru_doll_78
+					beru_doll_79
+					beru_doll_80
+					beru_doll_81
+					beru_doll_82
+					beru_doll_83
+					beru_doll_84
+					beru_doll_85
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					beru_doll_01
+					beru_doll_02
+					beru_doll_03
+					beru_doll_04
+					beru_doll_05
+					beru_doll_06
+					beru_doll_07
+					beru_doll_08
+					beru_doll_09
+					beru_doll_10
+					beru_doll_11
+					beru_doll_12
+					beru_doll_13
+					beru_doll_14
+					beru_doll_15
+					beru_doll_16
+					beru_doll_17
+					beru_doll_18
+					beru_doll_19
+					beru_doll_20
+					beru_doll_21
+					beru_doll_22
+					beru_doll_23
+					beru_doll_24
+					beru_doll_25
+					beru_doll_26
+					beru_doll_27
+					beru_doll_28
+					beru_doll_29
+					beru_doll_30
+					beru_doll_31
+					beru_doll_32
+					beru_doll_33
+					beru_doll_34
+					beru_doll_35
+					beru_doll_36
+					beru_doll_37
+					beru_doll_38
+					beru_doll_39
+					beru_doll_40
+					beru_doll_41
+					beru_doll_42
+					beru_doll_43
+					beru_doll_44
+					beru_doll_45
+					beru_doll_46
+					beru_doll_47
+					beru_doll_48
+					beru_doll_49
+					beru_doll_50
+					beru_doll_51
+					beru_doll_52
+					beru_doll_53
+					beru_doll_54
+					beru_doll_55
+					beru_doll_56
+					beru_doll_57
+					beru_doll_58
+					beru_doll_59
+					beru_doll_60
+					beru_doll_61
+					beru_doll_62
+					beru_doll_63
+					beru_doll_64
+					beru_doll_65
+					beru_doll_66
+					beru_doll_67
+					beru_doll_68
+					beru_doll_69
+					beru_doll_70
+					beru_doll_71
+					beru_doll_72
+					beru_doll_73
+					beru_doll_74
+					beru_doll_75
+					beru_doll_76
+					beru_doll_77
+					beru_doll_78
+					beru_doll_79
+					beru_doll_80
+					beru_doll_81
+					beru_doll_82
+					beru_doll_83
+					beru_doll_84
+					beru_doll_85
+					thstf_Black_alice_Black_Alice_Variation2_7
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					beru_doll_01
+					beru_doll_02
+					beru_doll_03
+					beru_doll_04
+					beru_doll_05
+					beru_doll_06
+					beru_doll_07
+					beru_doll_08
+					beru_doll_09
+					beru_doll_10
+					beru_doll_11
+					beru_doll_12
+					beru_doll_13
+					beru_doll_14
+					beru_doll_15
+					beru_doll_16
+					beru_doll_17
+					beru_doll_18
+					beru_doll_19
+					beru_doll_20
+					beru_doll_21
+					beru_doll_22
+					beru_doll_23
+					beru_doll_24
+					beru_doll_25
+					beru_doll_26
+					beru_doll_27
+					beru_doll_28
+					beru_doll_29
+					beru_doll_30
+					beru_doll_31
+					beru_doll_32
+					beru_doll_33
+					beru_doll_34
+					beru_doll_35
+					beru_doll_36
+					beru_doll_37
+					beru_doll_38
+					beru_doll_39
+					beru_doll_40
+					beru_doll_41
+					beru_doll_42
+					beru_doll_43
+					beru_doll_44
+					beru_doll_45
+					beru_doll_46
+					beru_doll_47
+					beru_doll_48
+					beru_doll_49
+					beru_doll_50
+					beru_doll_51
+					beru_doll_52
+					beru_doll_53
+					beru_doll_54
+					beru_doll_55
+					beru_doll_56
+					beru_doll_57
+					beru_doll_58
+					beru_doll_59
+					beru_doll_60
+					beru_doll_61
+					beru_doll_62
+					beru_doll_63
+					beru_doll_64
+					beru_doll_65
+					beru_doll_66
+					beru_doll_67
+					beru_doll_68
+					beru_doll_69
+					beru_doll_70
+					beru_doll_71
+					beru_doll_72
+					beru_doll_73
+					beru_doll_74
+					beru_doll_75
+					beru_doll_76
+					beru_doll_77
+					beru_doll_78
+					beru_doll_79
+					beru_doll_80
+					beru_doll_81
+					beru_doll_82
+					beru_doll_83
+					beru_doll_84
+					beru_doll_85
+					thstf_Black_alice_Black_Alice_Variation2_7
+				}
+			}
+		}	
+		
+		#leader scope
+		leader = { #scientists, generals, commanders, official
+			add = {
+				portraits = {
+					beru_doll_01
+					beru_doll_02
+					beru_doll_03
+					beru_doll_04
+					beru_doll_05
+					beru_doll_06
+					beru_doll_07
+					beru_doll_08
+					beru_doll_09
+					beru_doll_10
+					beru_doll_11
+					beru_doll_12
+					beru_doll_13
+					beru_doll_14
+					beru_doll_15
+					beru_doll_16
+					beru_doll_17
+					beru_doll_18
+					beru_doll_19
+					beru_doll_20
+					beru_doll_21
+					beru_doll_22
+					beru_doll_23
+					beru_doll_24
+					beru_doll_25
+					beru_doll_26
+					beru_doll_27
+					beru_doll_28
+					beru_doll_29
+					beru_doll_30
+					beru_doll_31
+					beru_doll_32
+					beru_doll_33
+					beru_doll_34
+					beru_doll_35
+					beru_doll_36
+					beru_doll_37
+					beru_doll_38
+					beru_doll_39
+					beru_doll_40
+					beru_doll_41
+					beru_doll_42
+					beru_doll_43
+					beru_doll_44
+					beru_doll_45
+					beru_doll_46
+					beru_doll_47
+					beru_doll_48
+					beru_doll_49
+					beru_doll_50
+					beru_doll_51
+					beru_doll_52
+					beru_doll_53
+					beru_doll_54
+					beru_doll_55
+					beru_doll_56
+					beru_doll_57
+					beru_doll_58
+					beru_doll_59
+					beru_doll_60
+					beru_doll_61
+					beru_doll_62
+					beru_doll_63
+					beru_doll_64
+					beru_doll_65
+					beru_doll_66
+					beru_doll_67
+					beru_doll_68
+					beru_doll_69
+					beru_doll_70
+					beru_doll_71
+					beru_doll_72
+					beru_doll_73
+					beru_doll_74
+					beru_doll_75
+					beru_doll_76
+					beru_doll_77
+					beru_doll_78
+					beru_doll_79
+					beru_doll_80
+					beru_doll_81
+					beru_doll_82
+					beru_doll_83
+					beru_doll_84
+					beru_doll_85
+					thstf_Black_alice_Black_Alice_Variation2_7
+				}
+			}
+		}
+		
+		#leader scope 
+		ruler = {
+			add = {
+				portraits = {
+					beru_doll_01
+					beru_doll_02
+					beru_doll_03
+					beru_doll_04
+					beru_doll_05
+					beru_doll_06
+					beru_doll_07
+					beru_doll_08
+					beru_doll_09
+					beru_doll_10
+					beru_doll_11
+					beru_doll_12
+					beru_doll_13
+					beru_doll_14
+					beru_doll_15
+					beru_doll_16
+					beru_doll_17
+					beru_doll_18
+					beru_doll_19
+					beru_doll_20
+					beru_doll_21
+					beru_doll_22
+					beru_doll_23
+					beru_doll_24
+					beru_doll_25
+					beru_doll_26
+					beru_doll_27
+					beru_doll_28
+					beru_doll_29
+					beru_doll_30
+					beru_doll_31
+					beru_doll_32
+					beru_doll_33
+					beru_doll_34
+					beru_doll_35
+					beru_doll_36
+					beru_doll_37
+					beru_doll_38
+					beru_doll_39
+					beru_doll_40
+					beru_doll_41
+					beru_doll_42
+					beru_doll_43
+					beru_doll_44
+					beru_doll_45
+					beru_doll_46
+					beru_doll_47
+					beru_doll_48
+					beru_doll_49
+					beru_doll_50
+					beru_doll_51
+					beru_doll_52
+					beru_doll_53
+					beru_doll_54
+					beru_doll_55
+					beru_doll_56
+					beru_doll_57
+					beru_doll_58
+					beru_doll_59
+					beru_doll_60
+					beru_doll_61
+					beru_doll_62
+					beru_doll_63
+					beru_doll_64
+					beru_doll_65
+					beru_doll_66
+					beru_doll_67
+					beru_doll_68
+					beru_doll_69
+					beru_doll_70
+					beru_doll_71
+					beru_doll_72
+					beru_doll_73
+					beru_doll_74
+					beru_doll_75
+					beru_doll_76
+					beru_doll_77
+					beru_doll_78
+					beru_doll_79
+					beru_doll_80
+					beru_doll_81
+					beru_doll_82
+					beru_doll_83
+					beru_doll_84
+					beru_doll_85
+					thstf_Black_alice_Black_Alice_Variation2_7
+				}
+			}
+		}
+	}
+}

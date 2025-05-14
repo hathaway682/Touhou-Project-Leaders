@@ -1,0 +1,51 @@
+objectTypes = {
+	pdxmesh = {
+		name = "ThA_storm_core_mesh"
+		file = "gfx/models/ships/THA/ThA_storm_core.mesh"
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+			texture_diffuse = "ThA_storm_core.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ThA_storm_wall_mesh"
+		file = "gfx/models/ships/THA/ThA_storm_wall.mesh"
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+			texture_diffuse = "ThA_storm_wall.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "Time_sealing_circle_0_mesh"
+		file = "gfx/models/ships/THA/Time_sealing_circle_0.mesh"
+		scale = 1.0
+				#animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "Time_sealing_circle_1_mesh"
+		file = "gfx/models/ships/THA/Time_sealing_circle_0.mesh"
+		scale = 1.0
+				#animation = { id = "idle"			type = "fantasia_bullet_Magic_Circle_idle_animation" }
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+	}
+	pdxmesh = {
+		name = "Time_sealing_circle_frame_mesh"
+		file = "gfx/models/ships/THA/Time_sealing_circle_frame.mesh"
+		scale = 1.0
+	}
+}
+	

@@ -1,0 +1,3418 @@
+
+animation = {
+	name = "Golyat_idle_animation"
+	file = "Golyat_idle.anim"
+}
+
+animation = {
+	name = "Golyat_idle_to_moving_animation"
+	file = "Golyat_idle_to_moving.anim"
+}
+
+animation = {
+	name = "Golyat_moving_animation"
+	file = "Golyat_moving.anim"
+}
+animation = {
+	name = "Golyat_moving_to_idle_animation"
+	file = "Golyat_moving_to_idle.anim"
+}
+
+
+
+
+
+
+animation = {
+	name = "Golyat_idle_to_combat_idle_animation"
+	file = "Golyat_idle_to_combat_idle.anim"
+}
+
+
+animation = {
+	name = "Golyat_moving_to_combat_idle_animation"
+	file = "Golyat_moving_to_combat_idle.anim"
+}
+
+animation = {
+	name = "Golyat_combat_idle_animation"
+	file = "Golyat_combat_idle.anim"
+}
+animation = {
+	name = "Golyat_combat_idle_to_idle_animation"
+	file = "Golyat_combat_idle_to_idle.anim"
+}
+
+
+
+
+animation = {
+	name = "Golyat_idle_to_combat_moving_animation"
+	file = "Golyat_idle_to_combat_moving.anim"
+}
+
+animation = {
+	name = "Golyat_moving_to_combat_moving_animation"
+	file = "Golyat_moving_to_combat_moving.anim"
+}
+
+animation = {
+	name = "Golyat_combat_moving_animation"
+	file = "Golyat_combat_moving.anim"
+}
+animation = {
+	name = "Golyat_combat_moving_to_moving_animation"
+	file = "Golyat_combat_moving_to_moving.anim"
+}
+animation = {
+	name = "Golyat_combat_moving_to_idle_animation"
+	file = "Golyat_combat_moving_to_idle.anim"
+}
+
+
+
+
+
+
+animation = {
+	name = "Golyat_combat_idle_to_combat_moving_animation"
+	file = "Golyat_combat_idle_to_combat_moving.anim"
+}
+
+animation = {
+	name = "Golyat_combat_moving_to_combat_idle_animation"
+	file = "Golyat_combat_moving_to_combat_idle.anim"
+}
+
+
+
+
+
+animation = {
+	name = "Golyat_moving_to_planet_destruction_animation"
+	file = "Golyat_moving_to_planet_destruction.anim"
+}
+
+animation = {
+	name = "Golyat_idle_to_planet_destruction_animation"
+	file = "Golyat_idle_to_planet_destruction.anim"
+}
+
+
+animation = {
+	name = "Golyat_planet_destruction_animation"
+	file = "Golyat_planet_destruction.anim"
+}
+animation = {
+	name = "Golyat_planet_destruction_to_idle_animation"
+	file = "Golyat_planet_destruction_to_idle.anim"
+}
+
+
+
+###############################################################
+
+
+
+animation = {
+	name = "Golyat_L1arm_idle_animation"
+	file = "Golyat_L1arm_idle.anim"
+}
+
+animation = {
+	name = "Golyat_L1arm_idle_to_combat_idle_animation"
+	file = "Golyat_L1arm_idle_to_combat_idle.anim"
+}
+
+
+
+animation = {
+	name = "Golyat_L1arm_combat_idle_to_idle_animation"
+	file = "Golyat_L1arm_combat_idle_to_idle.anim"
+}
+
+
+
+animation = {
+	name = "Golyat_L1arm_combat_idle_1_animation"
+	file = "Golyat_L1arm_combat_idle_1.anim"
+}
+
+
+animation = {
+	name = "Golyat_L1arm_combat_idle_2_animation"
+	file = "Golyat_L1arm_combat_idle_2.anim"
+}
+
+
+animation = {
+	name = "Golyat_L1arm_idle_to_planet_destruction_animation"
+	file = "Golyat_L1arm_idle_to_planet_destruction.anim"
+}
+
+animation = {
+	name = "Golyat_L1arm_planet_destruction_animation"
+	file = "Golyat_L1arm_planet_destruction.anim"
+}
+
+animation = {
+	name = "Golyat_L1arm_planet_destruction_to_idle_animation"
+	file = "Golyat_L1arm_planet_destruction_to_idle.anim"
+}
+
+
+
+
+
+
+
+
+
+
+
+animation = {
+	name = "Golyat_L2arm_idle_animation"
+	file = "Golyat_L2arm_idle.anim"
+}
+
+
+animation = {
+	name = "Golyat_L2arm_idle_to_combat_idle_animation"
+	file = "Golyat_L2arm_idle_to_combat_idle.anim"
+}
+
+
+
+animation = {
+	name = "Golyat_L2arm_combat_idle_to_idle_animation"
+	file = "Golyat_L2arm_combat_idle_to_idle.anim"
+}
+
+
+
+animation = {
+	name = "Golyat_L2arm_combat_idle_1_animation"
+	file = "Golyat_L2arm_combat_idle_1.anim"
+}
+
+
+animation = {
+	name = "Golyat_L2arm_combat_idle_2_animation"
+	file = "Golyat_L2arm_combat_idle_2.anim"
+}
+
+
+animation = {
+	name = "Golyat_L2arm_idle_to_planet_destruction_animation"
+	file = "Golyat_L2arm_idle_to_planet_destruction.anim"
+}
+
+animation = {
+	name = "Golyat_L2arm_planet_destruction_animation"
+	file = "Golyat_L2arm_planet_destruction.anim"
+}
+
+animation = {
+	name = "Golyat_L2arm_planet_destruction_to_idle_animation"
+	file = "Golyat_L2arm_planet_destruction_to_idle.anim"
+}
+
+
+
+
+
+
+
+animation = {
+	name = "Golyat_R1arm_idle_animation"
+	file = "Golyat_R1arm_idle.anim"
+}
+
+animation = {
+	name = "Golyat_R1arm_idle_to_combat_idle_animation"
+	file = "Golyat_R1arm_idle_to_combat_idle.anim"
+}
+
+
+
+animation = {
+	name = "Golyat_R1arm_combat_idle_to_idle_animation"
+	file = "Golyat_R1arm_combat_idle_to_idle.anim"
+}
+
+
+
+animation = {
+	name = "Golyat_R1arm_combat_idle_1_animation"
+	file = "Golyat_R1arm_combat_idle_1.anim"
+}
+
+
+animation = {
+	name = "Golyat_R1arm_combat_idle_2_animation"
+	file = "Golyat_R1arm_combat_idle_2.anim"
+}
+
+animation = {
+	name = "Golyat_R1arm_idle_to_planet_destruction_animation"
+	file = "Golyat_R1arm_idle_to_planet_destruction.anim"
+}
+
+animation = {
+	name = "Golyat_R1arm_planet_destruction_animation"
+	file = "Golyat_R1arm_planet_destruction.anim"
+}
+
+animation = {
+	name = "Golyat_R1arm_planet_destruction_to_idle_animation"
+	file = "Golyat_R1arm_planet_destruction_to_idle.anim"
+}
+
+
+
+
+
+animation = {
+	name = "Golyat_R2arm_idle_animation"
+	file = "Golyat_R2arm_idle.anim"
+}
+
+animation = {
+	name = "Golyat_R2arm_idle_to_combat_idle_animation"
+	file = "Golyat_R2arm_idle_to_combat_idle.anim"
+}
+
+
+
+animation = {
+	name = "Golyat_R2arm_combat_idle_to_idle_animation"
+	file = "Golyat_R2arm_combat_idle_to_idle.anim"
+}
+
+
+
+animation = {
+	name = "Golyat_R2arm_combat_idle_1_animation"
+	file = "Golyat_R2arm_combat_idle_1.anim"
+}
+
+
+animation = {
+	name = "Golyat_R2arm_combat_idle_2_animation"
+	file = "Golyat_R2arm_combat_idle_2.anim"
+}
+animation = {
+	name = "Golyat_R2arm_idle_to_planet_destruction_animation"
+	file = "Golyat_R2arm_idle_to_planet_destruction.anim"
+}
+
+animation = {
+	name = "Golyat_R2arm_planet_destruction_animation"
+	file = "Golyat_R2arm_planet_destruction.anim"
+}
+
+animation = {
+	name = "Golyat_R2arm_planet_destruction_to_idle_animation"
+	file = "Golyat_R2arm_planet_destruction_to_idle.anim"
+}
+
+
+
+
+
+animation = {
+	name = "golyat_addparts_S_booster_idle_animation"
+	file = "golyat_addparts_S_booster_idle.anim"
+}
+
+
+animation = {
+	name = "golyat_addparts_S_booster_moving_animation"
+	file = "golyat_addparts_S_booster_moving.anim"
+}
+
+animation = {
+	name = "golyat_addparts_L_booster_idle_animation"
+	file = "golyat_addparts_L_booster_idle.anim"
+}
+
+###############################################################
+
+
+entity = {
+	name = "Golyat_L1arm_entity"
+	pdxmesh = "Golyat_L1arm_mesh"
+
+	get_state_from_parent = yes
+
+	default_state = "idle"
+
+	state = {
+		name = "idle"	 animation = "idle" animation_blend_time = 0 looping = no next_state = "idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+	}
+	state = {
+		name = "moving"	 animation = "idle" animation_blend_time = 0 looping = no next_state = "moving"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+	}
+
+
+
+	state = {
+		name = "combat_idle"  animation = "idle_to_combat_idle" animation_blend_time = 0 looping = no next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+	}
+	state = {
+		name = "combat_moving"  animation = "idle_to_combat_idle" animation_blend_time = 0 looping = no next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+	}
+
+
+
+
+
+	state = {
+		name = "combat_idle"  animation = "combat_idle_1" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+	state = {
+		name = "combat_idle"  animation = "combat_idle_2" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+
+
+
+
+	state = {
+		name = "combat_moving"  animation = "combat_idle_1" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+	state = {
+		name = "combat_moving"  animation = "combat_idle_2" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+
+
+
+
+
+	state = {
+		name = "idle"	 animation = "combat_idle_to_idle" animation_blend_time = 0 looping = no next_state = "idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+	}
+	state = {
+		name = "moving"	 animation = "combat_idle_to_idle" animation_blend_time = 0 looping = no next_state = "moving"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+	}
+
+
+	state = {
+		name = "idle"	 animation = "planet_destruction_to_idle" animation_blend_time = 0 looping = no next_state = "idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+				"working" = 0
+				"working_looping" = 100
+			}
+		}
+	}
+
+	state = {
+		name = "working_looping"	 animation = "planet_destruction" animation_blend_time = 0 looping = no next_state = "working_looping"
+	}
+
+	state = {
+		name = "working"	 animation = "idle_to_planet_destruction" animation_blend_time = 0 looping = no next_state = "working_looping"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+				"working" = 0
+				"working_looping" = 0
+			}
+		}
+	}
+
+}
+
+
+entity = {
+	name = "Golyat_L2arm_entity"
+	pdxmesh = "Golyat_L2arm_mesh"
+	get_state_from_parent = yes
+
+
+	default_state = "idle"
+
+	state = {
+		name = "idle"	 animation = "idle" animation_blend_time = 0 looping = no next_state = "idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+	}
+	state = {
+		name = "moving"	 animation = "idle" animation_blend_time = 0 looping = no next_state = "moving"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+	}
+
+
+
+	state = {
+		name = "combat_idle"  animation = "idle_to_combat_idle" animation_blend_time = 0 looping = no next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+	}
+	state = {
+		name = "combat_moving"  animation = "idle_to_combat_idle" animation_blend_time = 0 looping = no next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+	}
+
+
+
+
+
+	state = {
+		name = "combat_idle"  animation = "combat_idle_1" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+
+
+	state = {
+		name = "combat_idle"  animation = "combat_idle_2" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+	state = {
+		name = "combat_moving"  animation = "combat_idle_1" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+	state = {
+		name = "combat_moving"  animation = "combat_idle_2" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+
+
+
+
+
+
+
+
+	state = {
+		name = "idle"	 animation = "combat_idle_to_idle" animation_blend_time = 0 looping = no next_state = "idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+	}
+	state = {
+		name = "moving"	 animation = "combat_idle_to_idle" animation_blend_time = 0 looping = no next_state = "moving"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+	}
+
+
+	state = {
+		name = "idle"	 animation = "planet_destruction_to_idle" animation_blend_time = 0 looping = no next_state = "idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+				"working" = 0
+				"working_looping" = 100
+			}
+		}
+	}
+
+	state = {
+		name = "working_looping"	 animation = "planet_destruction" animation_blend_time = 0 looping = no next_state = "working_looping"
+	}
+
+	state = {
+		name = "working"	 animation = "idle_to_planet_destruction" animation_blend_time = 0 looping = no next_state = "working_looping"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+				"working" = 0
+				"working_looping" = 0
+			}
+		}
+	}
+
+}
+
+entity = {
+	name = "Golyat_R1arm_entity"
+	pdxmesh = "Golyat_R1arm_mesh"
+
+	get_state_from_parent = yes
+
+	default_state = "idle"
+
+	state = {
+		name = "idle"	 animation = "idle" animation_blend_time = 0 looping = no next_state = "idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+	}
+	state = {
+		name = "moving"	 animation = "idle" animation_blend_time = 0 looping = no next_state = "moving"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+	}
+
+
+
+	state = {
+		name = "combat_idle"  animation = "idle_to_combat_idle" animation_blend_time = 0 looping = no next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+	}
+	state = {
+		name = "combat_moving"  animation = "idle_to_combat_idle" animation_blend_time = 0 looping = no next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+	}
+
+
+
+
+
+	state = {
+		name = "combat_idle"  animation = "combat_idle_1" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+
+
+	state = {
+		name = "combat_idle"  animation = "combat_idle_2" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+	state = {
+		name = "combat_moving"  animation = "combat_idle_1" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+	state = {
+		name = "combat_moving"  animation = "combat_idle_2" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+
+
+
+
+
+	state = {
+		name = "idle"	 animation = "combat_idle_to_idle" animation_blend_time = 0 looping = no next_state = "idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+	}
+	state = {
+		name = "moving"	 animation = "combat_idle_to_idle" animation_blend_time = 0 looping = no next_state = "moving"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+	}
+
+	state = {
+		name = "idle"	 animation = "planet_destruction_to_idle" animation_blend_time = 0 looping = no next_state = "idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+				"working" = 0
+				"working_looping" = 100
+			}
+		}
+	}
+
+	state = {
+		name = "working_looping"	 animation = "planet_destruction" animation_blend_time = 0 looping = no next_state = "working_looping"
+	}
+
+	state = {
+		name = "working"	 animation = "idle_to_planet_destruction" animation_blend_time = 0 looping = no next_state = "working_looping"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+				"working" = 0
+				"working_looping" = 0
+			}
+		}
+	}
+
+}
+
+
+entity = {
+	name = "Golyat_R2arm_entity"
+	pdxmesh = "Golyat_R2arm_mesh"
+
+	get_state_from_parent = yes
+
+	default_state = "idle"
+
+	state = {
+		name = "idle"	 animation = "idle" animation_blend_time = 0 looping = no next_state = "idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+	}
+	state = {
+		name = "moving"	 animation = "idle" animation_blend_time = 0 looping = no next_state = "moving"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+	}
+
+
+
+	state = {
+		name = "combat_idle"  animation = "idle_to_combat_idle" animation_blend_time = 0 looping = no next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+	}
+	state = {
+		name = "combat_moving"  animation = "idle_to_combat_idle" animation_blend_time = 0 looping = no next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+	}
+
+
+
+
+
+	state = {
+		name = "combat_idle"  animation = "combat_idle_1" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+
+
+	state = {
+		name = "combat_idle"  animation = "combat_idle_2" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+	state = {
+		name = "combat_moving"  animation = "combat_idle_1" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+	state = {
+		name = "combat_moving"  animation = "combat_idle_2" animation_blend_time = 0 looping = no next_state = "combat_idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 100
+			}
+			default = 1
+		}
+	}
+
+
+
+
+
+	state = {
+		name = "idle"	 animation = "combat_idle_to_idle" animation_blend_time = 0 looping = no next_state = "idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+	}
+	state = {
+		name = "moving"	 animation = "combat_idle_to_idle" animation_blend_time = 0 looping = no next_state = "moving"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+	}
+
+
+	state = {
+		name = "idle"	 animation = "planet_destruction_to_idle" animation_blend_time = 0 looping = no next_state = "idle"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+				"working" = 0
+				"working_looping" = 100
+			}
+		}
+	}
+
+	state = {
+		name = "working_looping"	 animation = "planet_destruction" animation_blend_time = 0 looping = no next_state = "working_looping"
+	}
+
+	state = {
+		name = "working"	 animation = "idle_to_planet_destruction" animation_blend_time = 0 looping = no next_state = "working_looping"
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+				"working" = 0
+				"working_looping" = 0
+			}
+		}
+	}
+
+}
+
+###############################################################
+
+
+entity = {
+	name = "Golyat_addparts_S_booster_entity"
+	pdxmesh = "Golyat_addparts_S_booster_mesh"
+
+	get_state_from_parent = yes
+
+	default_state = "idle"
+
+	state = {
+		name = "idle"	 animation = "idle" animation_blend_time = 0 looping = yes
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 2
+		}
+		start_event = { node = "engine_large_add01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+	state = {
+		name = "combat_idle"	 animation = "idle" animation_blend_time = 0 looping = yes
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 2
+		}
+		start_event = { node = "engine_large_add01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = {
+		name = "moving"  animation = "moving" animation_blend_time = 0 looping = yes
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+		start_event = { node = "engine_large_add01" particle = "Golyat_big_exhaust_circle_moving_effect" keep_particle = yes trigger_once = yes }
+	}
+
+	state = {
+		name = "combat_moving"  animation = "moving" animation_blend_time = 0 looping = yes
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+		start_event = { node = "engine_large_add01" particle = "Golyat_big_exhaust_circle_moving_effect" keep_particle = yes trigger_once = yes }
+	}
+
+	scale = 1.0
+
+}
+
+
+entity = {
+	name = "Golyat_addparts_L1L_booster_entity"
+	pdxmesh = "Golyat_addparts_L_booster_mesh"
+
+	get_state_from_parent = yes
+
+	default_state = "idle"
+
+	state = {
+		name = "idle"	 animation = "idle" animation_blend_time = 0 looping = yes
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 2
+		}
+		start_event = { node = "engine_large_add01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+
+
+
+	}
+	state = {
+		name = "combat_idle"	 animation = "idle" animation_blend_time = 0 looping = yes
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 2
+		}
+		start_event = { node = "engine_large_add01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = {
+		name = "moving"  animation = "idle" animation_blend_time = 0 looping = yes
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+		start_event = { node = "engine_large_add01" particle = "Golyat_big_exhaust_circle_moving_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add02" particle = "Golyat_big_exhaust_circle_moving_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add03" particle = "Golyat_big_exhaust_circle_moving_effect" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = {
+		name = "combat_moving"  animation = "idle" animation_blend_time = 0 looping = yes
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+		start_event = { node = "engine_large_add01" particle = "Golyat_big_exhaust_circle_moving_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add02" particle = "Golyat_big_exhaust_circle_moving_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add03" particle = "Golyat_big_exhaust_circle_moving_effect" keep_particle = yes trigger_once = yes }
+
+	}
+	attach = { sub_booster_locator1L = "Golyat_addparts_S_booster_entity" }
+	attach = { sub_booster_locator2L = "Golyat_addparts_S_booster_entity" }
+	attach = { sub_booster_locator3L = "Golyat_addparts_S_booster_entity" }
+
+	attach = { sub_booster_locator1L = "Golyat_addparts_L_booster_sidepanel_entity" }
+	attach = { sub_booster_locator2L = "Golyat_addparts_L_booster_sidepanel_entity" }
+	attach = { sub_booster_locator3L = "Golyat_addparts_L_booster_sidepanel_entity" }
+
+	scale = 3.5
+
+}
+
+
+
+entity = {
+	name = "Golyat_addparts_R1L_booster_entity"
+	pdxmesh = "Golyat_addparts_L_booster_mesh"
+
+	get_state_from_parent = yes
+
+	default_state = "idle"
+
+	state = {
+		name = "idle"	 animation = "idle" animation_blend_time = 0 looping = yes
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 2
+		}
+		start_event = { node = "engine_large_add01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+
+
+
+	}
+	state = {
+		name = "combat_idle"	 animation = "idle" animation_blend_time = 0 looping = yes
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 2
+		}
+		start_event = { node = "engine_large_add01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = {
+		name = "moving"  animation = "idle" animation_blend_time = 0 looping = yes
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+		start_event = { node = "engine_large_add01" particle = "Golyat_big_exhaust_circle_moving_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add02" particle = "Golyat_big_exhaust_circle_moving_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add03" particle = "Golyat_big_exhaust_circle_moving_effect" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = {
+		name = "combat_moving"  animation = "idle" animation_blend_time = 0 looping = yes
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+		start_event = { node = "engine_large_add01" particle = "Golyat_big_exhaust_circle_moving_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add02" particle = "Golyat_big_exhaust_circle_moving_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_add03" particle = "Golyat_big_exhaust_circle_moving_effect" keep_particle = yes trigger_once = yes }
+
+	}
+	attach = { sub_booster_locator1R = "Golyat_addparts_S_booster_entity" }
+	attach = { sub_booster_locator2R = "Golyat_addparts_S_booster_entity" }
+	attach = { sub_booster_locator3R = "Golyat_addparts_S_booster_entity" }
+
+	attach = { sub_booster_locator1R = "Golyat_addparts_L_booster_sidepanel_entity" }
+	attach = { sub_booster_locator2R = "Golyat_addparts_L_booster_sidepanel_entity" }
+	attach = { sub_booster_locator3R = "Golyat_addparts_L_booster_sidepanel_entity" }
+	scale = 3.5
+
+}
+
+
+
+
+entity = {
+	name = "Golyat_addparts_L_booster_sidepanel_entity"
+	pdxmesh = "Golyat_addparts_L_booster_sidepanel_mesh"
+
+}
+entity = {
+	name = "Golyat_addparts_L_booster_frontpanel_entity"
+	pdxmesh = "Golyat_addparts_L_booster_frontpanel_mesh"
+
+}
+
+entity = {
+	name = "Golyat_addparts_SR_spike_entity"
+	pdxmesh = "Golyat_addparts_SR_spike_mesh"
+
+}
+
+
+entity = {
+	name = "Golyat_addparts_SL_spike_entity"
+	pdxmesh = "Golyat_addparts_SL_spike_mesh"
+
+}
+
+###############################################################
+
+
+
+entity = {
+	name = "Golyat_ship_entity"
+	default_state = "idle"
+	state = { name = "idle"	 }
+	state = { name = "combat_idle" }
+	state = { name = "moving" }
+	state = { name = "combat_moving"  }
+	state = { name = "working" }
+	state = { name = "working_looping" }
+	state = { name = "death" state_time = 8.0 looping = no }
+}
+
+entity = {
+	name = "Golyat_NPC_ship_entity"
+	default_state = "idle"
+	state = { name = "idle"	 }
+	state = { name = "combat_idle" }
+	state = { name = "moving" }
+	state = { name = "combat_moving"  }
+	state = { name = "working" }
+	state = { name = "working_looping" }
+	state = { name = "death" state_time = 8.0 looping = no }
+}
+
+
+
+entity = {
+	name = "Golyat_entity"
+	pdxmesh = "Golyat_main_mesh"
+
+
+
+	default_state = "idle"
+
+
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_idle" stop_on_state_change = yes } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "moving" animation = "idle_to_moving"  animation_blend_time = 0 looping = no next_state = "moving"
+
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = { name = "moving" animation = "moving" animation_blend_time = 0 looping = no next_state = "moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"idle_2" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = { name = "idle" animation = "moving_to_idle" animation_blend_time = 0 looping = no next_state = "idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"idle_2" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+
+	state = { name = "combat_idle" animation = "idle_to_combat_idle" animation_blend_time = 0 looping = no next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "combat_idle" animation = "moving_to_combat_idle" animation_blend_time = 0 looping = no next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "combat_idle" animation = "combat_idle" animation_blend_time = 0 looping = no  next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = { name = "idle" animation = "combat_idle_to_idle" animation_blend_time = 0 looping = no  next_state = "idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"idle_2" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "combat_moving" animation = "idle_to_combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "combat_moving" animation = "moving_to_combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = { name = "combat_moving" animation = "combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+	state = { name = "moving" animation = "combat_moving_to_moving" animation_blend_time = 0 looping = no  next_state = "moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+	state = { name = "idle" animation = "combat_moving_to_idle" animation_blend_time = 0 looping = no  next_state = "idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+
+
+
+	state = { name = "combat_moving" animation = "combat_idle_to_combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+
+
+	state = { name = "combat_idle" animation = "combat_moving_to_combat_idle" animation_blend_time = 0 looping = no  next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+
+
+
+
+
+	state = { name = "idle" animation = "planet_destruction_to_idle" looping = no next_state = "idle" 
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+				"working" = 0
+				"working_looping" = 100
+			}
+		}
+		event = { trigger_once = yes sound = { soundeffect = "mammalian_colossus_closing" stop_on_state_change = yes } }
+		
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+
+
+	state = { name = "working_looping" animation = "planet_destruction" 
+
+		event = { time = 0	id = "beam_start" }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+
+	}
+
+
+
+
+	state = { name = "working" animation = "idle_to_planet_destruction" looping = no next_state = "working_looping" 
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+				"working" = 0
+				"working_looping" = 0
+			}
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "mammalian_colossus_opening" stop_on_state_change = yes } }
+
+		event = { time = 1000 id = "beam_start" } #will never fire, but lets the game know that an event with this ID exists
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+	state = { name = "working" animation = "moving_to_planet_destruction" looping = no next_state = "working_looping" 
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+				"working" = 0
+				"working_looping" = 0
+			}
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "mammalian_colossus_opening" stop_on_state_change = yes } }
+
+		event = { time = 1000 id = "beam_start" } #will never fire, but lets the game know that an event with this ID exists
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	attach = { addparts_SL1_booster = "Golyat_addparts_SL_spike_entity" }
+	attach = { addparts_SL2_booster = "Golyat_addparts_SL_spike_entity" }
+	attach = { addparts_SR1_booster = "Golyat_addparts_SR_spike_entity" }
+	attach = { addparts_SR2_booster = "Golyat_addparts_SR_spike_entity" }
+	attach = { addparts_L1L_booster = "Golyat_addparts_L1L_booster_entity" }
+	attach = { addparts_R1L_booster = "Golyat_addparts_R1L_booster_entity" }
+	attach = { addparts_L1L_booster = "Golyat_addparts_L_booster_frontpanel_entity" }
+	attach = { addparts_R1L_booster = "Golyat_addparts_L_booster_frontpanel_entity" }
+
+
+	scale = 1.0
+	game_data = {
+		trail_locators = {
+			"engine_large_01" = 		{ width = @large_trail_W 	lenght = @large_trail_L   	}
+			"engine_large_02" = 		{ width = @large_trail_W 	lenght = @large_trail_L   	}
+			"engine_large_03" = 		{ width = @large_trail_W 	lenght = @large_trail_L   	}
+			"engine_large_04" = 		{ width = @large_trail_W 	lenght = @large_trail_L   	}
+			"engine_large_05" = 		{ width = @large_trail_W 	lenght = @large_trail_L   	}
+			"engine_large_06" = 		{ width = @large_trail_W 	lenght = @large_trail_L   	}
+		}
+	}
+
+}
+
+
+
+#######################Type0############################################################
+
+
+
+
+
+entity = {
+	name = "Golyat_Type0_entity"
+	pdxmesh = "Golyat_main_Type0_mesh"
+
+
+
+	default_state = "idle"
+
+
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 1
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_idle" stop_on_state_change = yes } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "moving" animation = "idle_to_moving"  animation_blend_time = 0 looping = no next_state = "moving"
+
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = { name = "moving" animation = "moving" animation_blend_time = 0 looping = no next_state = "moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"idle_2" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = { name = "idle" animation = "moving_to_idle" animation_blend_time = 0 looping = no next_state = "idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"idle_2" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+
+	state = { name = "combat_idle" animation = "idle_to_combat_idle" animation_blend_time = 0 looping = no next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "combat_idle" animation = "moving_to_combat_idle" animation_blend_time = 0 looping = no next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "combat_idle" animation = "combat_idle" animation_blend_time = 0 looping = no  next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = { name = "idle" animation = "combat_idle_to_idle" animation_blend_time = 0 looping = no  next_state = "idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"idle_2" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "combat_moving" animation = "idle_to_combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+	state = { name = "combat_moving" animation = "moving_to_combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = { name = "combat_moving" animation = "combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+	state = { name = "moving" animation = "combat_moving_to_moving" animation_blend_time = 0 looping = no  next_state = "moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+	state = { name = "idle" animation = "combat_moving_to_idle" animation_blend_time = 0 looping = no  next_state = "idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+
+
+
+	state = { name = "combat_moving" animation = "combat_idle_to_combat_moving" animation_blend_time = 0 looping = no  next_state = "combat_moving"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 100
+				"combat_moving" = 0
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+
+
+	state = { name = "combat_idle" animation = "combat_moving_to_combat_idle" animation_blend_time = 0 looping = no  next_state = "combat_idle"
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 100
+			}
+			default = 0
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+
+
+
+
+
+	state = { name = "idle" animation = "planet_destruction_to_idle" looping = no next_state = "idle" 
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+				"working" = 0
+				"working_looping" = 100
+			}
+		}
+		event = { trigger_once = yes sound = { soundeffect = "mammalian_colossus_closing" stop_on_state_change = yes } }
+		
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+
+
+	state = { name = "working_looping" animation = "planet_destruction" 
+
+		event = { time = 0	id = "beam_start" }
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+
+	}
+
+
+
+
+	state = { name = "working" animation = "idle_to_planet_destruction" looping = no next_state = "working_looping" 
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 100
+				"moving" = 0
+				"combat_idle" = 0
+				"combat_moving" = 0
+				"working" = 0
+				"working_looping" = 0
+			}
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "mammalian_colossus_opening" stop_on_state_change = yes } }
+
+		event = { time = 1000 id = "beam_start" } #will never fire, but lets the game know that an event with this ID exists
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+
+
+	state = { name = "working" animation = "moving_to_planet_destruction" looping = no next_state = "working_looping" 
+
+		chance = {
+			if_current_state = {
+				"start" = 0
+				"idle" = 0
+				"moving" = 100
+				"combat_idle" = 0
+				"combat_moving" = 0
+				"working" = 0
+				"working_looping" = 0
+			}
+		}
+
+		event = { trigger_once = yes sound = { soundeffect = "mammalian_colossus_opening" stop_on_state_change = yes } }
+
+		event = { time = 1000 id = "beam_start" } #will never fire, but lets the game know that an event with this ID exists
+
+		event = { time = 0 node = "eye_C01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_C05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_L01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_L08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "eye_R01" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R02" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R03" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R04" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R05" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R06" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R07" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "eye_R08" particle = "Golyat_eye_effect" keep_particle = yes trigger_once = yes }
+	
+	
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_03" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_04" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_05" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_06" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+	scale = 1.0
+
+	game_data = {
+		trail_locators = {
+			"engine_large_01" = 		{ width = @large_trail_W 	lenght = @large_trail_L   	}
+			"engine_large_02" = 		{ width = @large_trail_W 	lenght = @large_trail_L   	}
+			"engine_large_03" = 		{ width = @large_trail_W 	lenght = @large_trail_L   	}
+			"engine_large_04" = 		{ width = @large_trail_W 	lenght = @large_trail_L   	}
+			"engine_large_05" = 		{ width = @large_trail_W 	lenght = @large_trail_L   	}
+			"engine_large_06" = 		{ width = @large_trail_W 	lenght = @large_trail_L   	}
+		}
+	}
+
+}
+

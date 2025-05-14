@@ -1,0 +1,74 @@
+objectTypes = {
+	pdxmesh = {
+		name = "ATW_Zako_Maid_fairy_mesh"
+		file = "gfx/models/ships/ATW_Zako/ATW_Zako_Maid_fairy.mesh"
+				animation = { id = "idle"			type = "ATW_Zako_Maid_fairy_idle_animation" }
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "ATW_Zako_fairy_mesh"
+		file = "gfx/models/ships/ATW_Zako/ATW_Zako_fairy.mesh"
+				animation = { id = "idle"			type = "ATW_Zako_Maid_fairy_idle_animation" }
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "ATW_Zako_kedama_mesh"
+		file = "gfx/models/ships/ATW_Zako/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "idle"			type = "ATW_Zako_kedama_idle_animation" }
+				animation = { id = "death"			type = "ATW_Zako_kedama_death_animation" }
+		scale = 3.0
+	}
+	pdxmesh = {
+		name = "ATW_Zako_Grimoire_mesh"
+		file = "gfx/models/ships/ATW_Zako/ATW_Zako_Grimoire.mesh"
+		scale = 2.0
+	}
+	pdxmesh = {
+		name = "THCATW_Remilia_mesh"
+		file = "gfx/models/ships/ATW_Zako/THCATW_Remilia.mesh"
+				animation = { id = "idle"			type = "ATW_Illusion_Girls_idle_animation" }
+		scale = 2.0
+	}
+	pdxmesh = {
+		name = "THCATW_Yuyuko_mesh"
+		file = "gfx/models/ships/ATW_Zako/THCATW_Yuyuko.mesh"
+				animation = { id = "idle"			type = "ATW_Illusion_Girls_idle_animation" }
+		scale = 2.0
+	}
+	pdxmesh = {
+		name = "THCATW_Kaguya_mesh"
+		file = "gfx/models/ships/ATW_Zako/THCATW_Kaguya.mesh"
+				animation = { id = "idle"			type = "ATW_Illusion_Girls_idle_animation" }
+		scale = 2.0
+	}
+	pdxmesh = {
+		name = "THCATW_Eiki_mesh"
+		file = "gfx/models/ships/ATW_Zako/THCATW_Eiki.mesh"
+				animation = { id = "idle"			type = "ATW_Illusion_Girls_idle_animation" }
+		scale = 2.0
+	}
+
+	pdxmesh = {
+		name = "ThC_spellcard_effect_mesh"
+		file = "gfx/models/ships/ATW_Zako/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "idle1"			type = "Gear_of_Fate_laserposition_idle_animation" }
+				animation = { id = "idle2"			type = "Spring_Sleep_position_idle_animation" }
+				animation = { id = "idle3"			type = "Three_Nocturne_position_idle_animation" }
+				animation = { id = "idle4"			type = "Running_Hose_Light_position_idle_animation" }
+		scale = 2.0
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_ThCATW_tracer_round_mesh"
+		file = "gfx/models/ships/ATW_Zako/ThC_lastspell_effect.mesh"
+				animation = { id = "open"			type = "ThC_lastspell_effect_openmotion_animation" }
+				animation = { id = "close"			type = "ThC_lastspell_effect_closemotion_animation" }
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+}
+	

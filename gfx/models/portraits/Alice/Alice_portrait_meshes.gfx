@@ -1,0 +1,19 @@
+objectTypes = {
+	
+	# Blokkumi
+	pdxmesh = {
+		name = "Alice_mesh"
+		file = "gfx/models/portraits/Alice/alice.mesh"
+		animation = { id = "idle1"	type = "Alice_idle1_animation" }
+		animation = { id = "idle2"	type = "Alice_idle2_animation" }
+		animation = { id = "idle3"	type = "Alice_idle3_animation" }
+		animation = { id = "idle4"	type = "Alice_idle4_animation" }
+		animation = { id = "idle5"	type = "Alice_idle5_animation" }
+		animation = { id = "idle6"	type = "Alice_idle6_animation" }
+		animation = { id = "idle7"	type = "Alice_idle7_animation" }
+		scale = 0.5
+	}
+	
+
+
+}

@@ -1,0 +1,351 @@
+objectTypes = {
+	pdxmesh = {
+		name = "Golyat_main_mesh"
+		file = "gfx/models/ships/Golyat/golyat_completeform.mesh"
+		scale = 3.0
+				animation = { id = "idle"			type = "Golyat_idle_animation" }
+				animation = { id = "idle_to_moving"			type = "Golyat_idle_to_moving_animation" }
+				animation = { id = "moving"			type = "Golyat_moving_animation" }
+				animation = { id = "moving_to_idle"			type = "Golyat_moving_to_idle_animation" }
+
+
+				animation = { id = "idle_to_combat_idle"			type = "Golyat_idle_to_combat_idle_animation" }
+				animation = { id = "moving_to_combat_idle"			type = "Golyat_moving_to_combat_idle_animation" }
+				animation = { id = "combat_idle"			type = "Golyat_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "Golyat_combat_idle_to_idle_animation" }
+
+				animation = { id = "idle_to_combat_moving"			type = "Golyat_moving_to_combat_moving_animation" }
+				animation = { id = "moving_to_combat_moving"			type = "Golyat_moving_to_combat_moving_animation" }
+				animation = { id = "combat_moving"			type = "Golyat_combat_moving_animation" }
+				animation = { id = "combat_moving_to_moving"			type = "Golyat_combat_moving_to_moving_animation" }
+				animation = { id = "combat_moving_to_idle"			type = "Golyat_combat_moving_to_idle_animation" }
+
+
+				animation = { id = "combat_idle_to_combat_moving"			type = "Golyat_combat_idle_to_combat_moving_animation" }
+				animation = { id = "combat_moving_to_combat_idle"			type = "Golyat_combat_moving_to_combat_idle_animation" }
+
+
+				animation = { id = "idle_to_planet_destruction"			type = "Golyat_idle_to_planet_destruction_animation" }
+				animation = { id = "moving_to_planet_destruction"			type = "Golyat_moving_to_planet_destruction_animation" }
+				animation = { id = "planet_destruction"			type = "Golyat_planet_destruction_animation" }
+				animation = { id = "planet_destruction_to_idle"			type = "Golyat_planet_destruction_to_idle_animation" }
+
+
+
+
+
+
+	
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_main_Type0_mesh"
+		file = "gfx/models/ships/Golyat/golyat_completeform_Type0.mesh"
+		scale = 3.0
+				animation = { id = "idle"			type = "Golyat_idle_animation" }
+				animation = { id = "idle_to_moving"			type = "Golyat_idle_to_moving_animation" }
+				animation = { id = "moving"			type = "Golyat_moving_animation" }
+				animation = { id = "moving_to_idle"			type = "Golyat_moving_to_idle_animation" }
+
+
+				animation = { id = "idle_to_combat_idle"			type = "Golyat_idle_to_combat_idle_animation" }
+				animation = { id = "moving_to_combat_idle"			type = "Golyat_moving_to_combat_idle_animation" }
+				animation = { id = "combat_idle"			type = "Golyat_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "Golyat_combat_idle_to_idle_animation" }
+
+				animation = { id = "idle_to_combat_moving"			type = "Golyat_moving_to_combat_moving_animation" }
+				animation = { id = "moving_to_combat_moving"			type = "Golyat_moving_to_combat_moving_animation" }
+				animation = { id = "combat_moving"			type = "Golyat_combat_moving_animation" }
+				animation = { id = "combat_moving_to_moving"			type = "Golyat_combat_moving_to_moving_animation" }
+				animation = { id = "combat_moving_to_idle"			type = "Golyat_combat_moving_to_idle_animation" }
+
+
+				animation = { id = "combat_idle_to_combat_moving"			type = "Golyat_combat_idle_to_combat_moving_animation" }
+				animation = { id = "combat_moving_to_combat_idle"			type = "Golyat_combat_moving_to_combat_idle_animation" }
+
+
+				animation = { id = "idle_to_planet_destruction"			type = "Golyat_idle_to_planet_destruction_animation" }
+				animation = { id = "moving_to_planet_destruction"			type = "Golyat_moving_to_planet_destruction_animation" }
+				animation = { id = "planet_destruction"			type = "Golyat_planet_destruction_animation" }
+				animation = { id = "planet_destruction_to_idle"			type = "Golyat_planet_destruction_to_idle_animation" }
+
+
+
+
+
+
+	
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_L1arm_mesh"
+		file = "gfx/models/ships/Golyat/golyat_completeform_Larm.mesh"
+		scale = 3.0
+				animation = { id = "idle"			type = "Golyat_L1arm_idle_animation" }
+				animation = { id = "idle_to_combat_idle"			type = "Golyat_L1arm_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "Golyat_L1arm_combat_idle_to_idle_animation" }
+				animation = { id = "combat_idle_1"			type = "Golyat_L1arm_combat_idle_1_animation" }
+				animation = { id = "combat_idle_2"			type = "Golyat_L1arm_combat_idle_2_animation" }
+
+
+				animation = { id = "idle_to_planet_destruction"			type = "Golyat_L1arm_idle_to_planet_destruction_animation" }
+				animation = { id = "planet_destruction"			type = "Golyat_L1arm_planet_destruction_animation" }
+				animation = { id = "planet_destruction_to_idle"			type = "Golyat_L1arm_planet_destruction_to_idle_animation" }
+
+
+
+
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_L2arm_mesh"
+		file = "gfx/models/ships/Golyat/golyat_completeform_Larm.mesh"
+		scale = 3.0
+				animation = { id = "idle"			type = "Golyat_L2arm_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "Golyat_L2arm_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "Golyat_L2arm_combat_idle_to_idle_animation" }
+				animation = { id = "combat_idle_1"			type = "Golyat_L2arm_combat_idle_1_animation" }
+				animation = { id = "combat_idle_2"			type = "Golyat_L2arm_combat_idle_2_animation" }
+
+				animation = { id = "idle_to_planet_destruction"			type = "Golyat_L2arm_idle_to_planet_destruction_animation" }
+				animation = { id = "planet_destruction"			type = "Golyat_L2arm_planet_destruction_animation" }
+				animation = { id = "planet_destruction_to_idle"			type = "Golyat_L2arm_planet_destruction_to_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_R1arm_mesh"
+		file = "gfx/models/ships/Golyat/golyat_completeform_Rarm.mesh"
+		scale = 3.0
+				animation = { id = "idle"			type = "Golyat_R1arm_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "Golyat_R1arm_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "Golyat_R1arm_combat_idle_to_idle_animation" }
+				animation = { id = "combat_idle_1"			type = "Golyat_R1arm_combat_idle_1_animation" }
+				animation = { id = "combat_idle_2"			type = "Golyat_R1arm_combat_idle_2_animation" }
+
+				animation = { id = "idle_to_planet_destruction"			type = "Golyat_R1arm_idle_to_planet_destruction_animation" }
+				animation = { id = "planet_destruction"			type = "Golyat_R1arm_planet_destruction_animation" }
+				animation = { id = "planet_destruction_to_idle"			type = "Golyat_R1arm_planet_destruction_to_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_R2arm_mesh"
+		file = "gfx/models/ships/Golyat/golyat_completeform_Rarm.mesh"
+		scale = 3.0
+				animation = { id = "idle"			type = "Golyat_R2arm_idle_animation" }	
+				animation = { id = "idle_to_combat_idle"			type = "Golyat_R2arm_idle_to_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "Golyat_R2arm_combat_idle_to_idle_animation" }
+				animation = { id = "combat_idle_1"			type = "Golyat_R2arm_combat_idle_1_animation" }
+				animation = { id = "combat_idle_2"			type = "Golyat_R2arm_combat_idle_2_animation" }
+
+				animation = { id = "idle_to_planet_destruction"			type = "Golyat_R2arm_idle_to_planet_destruction_animation" }
+				animation = { id = "planet_destruction"			type = "Golyat_R2arm_planet_destruction_animation" }
+				animation = { id = "planet_destruction_to_idle"			type = "Golyat_R2arm_planet_destruction_to_idle_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_addparts_S_booster_mesh"
+		file = "gfx/models/ships/Golyat/golyat_addparts_S_booster.mesh"
+		scale = 1.0
+				animation = { id = "idle"			type = "golyat_addparts_S_booster_idle_animation" }
+				animation = { id = "moving"			type = "golyat_addparts_S_booster_moving_animation" }
+
+
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_addparts_L_booster_mesh"
+		file = "gfx/models/ships/Golyat/golyat_addparts_L_booster.mesh"
+		scale = 1.0
+				animation = { id = "idle"			type = "golyat_addparts_L_booster_idle_animation" }
+
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_addparts_L_booster_sidepanel_mesh"
+		file = "gfx/models/ships/Golyat/golyat_addparts_L_booster_sidepanel.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_addparts_L_booster_frontpanel_mesh"
+		file = "gfx/models/ships/Golyat/golyat_addparts_L_booster_frontpanel.mesh"
+		scale = 5.0
+
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_addparts_SR_spike_mesh"
+		file = "gfx/models/ships/Golyat/golyat_addparts_SR_spike.mesh"
+		scale = 2.0
+
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_addparts_SL_spike_mesh"
+		file = "gfx/models/ships/Golyat/golyat_addparts_SL_spike.mesh"
+		scale = 2.0
+
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_egg_2_main_mesh"
+		file = "gfx/models/ships/Golyat/golyat_egg_2_main.mesh"
+		scale = 1.0
+				animation = { id = "idle"			type = "Golyat_egg_2_main_idle_animation" }
+				animation = { id = "death"			type = "Golyat_egg_2_main_death_animation" }
+
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_egg_2_leg_mesh"
+		file = "gfx/models/ships/Golyat/golyat_egg_2_leg.mesh"
+		scale = 1.0
+				animation = { id = "idle"			type = "Golyat_egg_2_leg_idle_animation" }
+				animation = { id = "death"			type = "Golyat_egg_2_leg_death_animation" }
+
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_egg_3_mesh"
+		file = "gfx/models/ships/Golyat/golyat_egg_3.mesh"
+		scale = 0.35
+				animation = { id = "idle"			type = "Golyat_egg_3_idle_animation" }
+				animation = { id = "death"			type = "Golyat_egg_3_death_animation" }
+
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_egg_4A_mesh"
+		file = "gfx/models/ships/Golyat/golyat_egg_4A.mesh"
+		scale = 2.0
+				animation = { id = "idle"			type = "Golyat_egg_4A_idle_animation" }
+				animation = { id = "stop"			type = "Golyat_egg_4A_stop_animation" }
+				animation = { id = "death"			type = "Golyat_egg_4A_death_animation" }
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_egg_4B_mesh"
+		file = "gfx/models/ships/Golyat/golyat_egg_4B.mesh"
+		scale = 2.0
+				animation = { id = "idle"			type = "Golyat_egg_4B_idle_animation" }
+				animation = { id = "stop"			type = "Golyat_egg_4B_stop_animation" }
+				animation = { id = "death"			type = "Golyat_egg_4B_death_animation" }
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_egg_4C_mesh"
+		file = "gfx/models/ships/Golyat/golyat_egg_4C.mesh"
+		scale = 2.0
+				animation = { id = "idle"			type = "Golyat_egg_4C_idle_animation" }
+				animation = { id = "death"			type = "Golyat_egg_4C_death_animation" }
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_egg_4_sphere_mesh"
+		file = "gfx/models/ships/Golyat/golyat_egg_4_sphere.mesh"
+		scale = 2.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_egg_7_golyat_mesh"
+		file = "gfx/models/ships/Golyat/Golyat_egg_7_golyat.mesh"
+		scale = 3.0
+				animation = { id = "special"			type = "Golyat_egg_7_golyat_special_animation" }
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Golyat_egg_7_explosions_mesh"
+		file = "gfx/models/ships/Golyat/Golyat_egg_7_explosions.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "Fantasia_Dimensional_Array_mesh"
+		file = "gfx/models/ships/Golyat/Fantasia_Dimensional_Array.mesh"
+				animation = { id = "idle"			type = "Fantasia_Dimensional_Array_idle_animation" }
+		scale = 0.2
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "FDA_Mikoshi_mesh"
+		file = "gfx/models/ships/Golyat/FDA_Mikoshi.mesh"
+		scale = 0.8
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "DollsFactory_core_mesh"
+		file = "gfx/models/ships/Golyat/DollsFactory_core.mesh"
+				animation = { id = "open"			type = "DollsFactory_core_open_animation" }
+				animation = { id = "idle"			type = "DollsFactory_core_idle_animation" }
+				animation = { id = "close"			type = "DollsFactory_core_close_animation" }
+
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "DollsFactory_panel_mesh"
+		file = "gfx/models/ships/Golyat/DollsFactory_panel.mesh"
+				animation = { id = "idle"			type = "DollsFactory_panel_idle_animation" }
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+
+}
+	

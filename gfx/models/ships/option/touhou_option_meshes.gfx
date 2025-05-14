@@ -1,0 +1,22 @@
+objectTypes = {
+	pdxmesh = {
+		name = "option_reimu_mesh"
+		file = "gfx/models/ships/option/option1.mesh"
+				animation = { id = "idle"			type = "option_idle_animation" }
+		scale = 0.5
+	}
+	pdxmesh = {
+		name = "option_marisa_mesh"
+		file = "gfx/models/ships/option/option2.mesh"
+				animation = { id = "idle"			type = "option_idle_animation" }
+		scale = 0.5
+	}
+	pdxmesh = {
+		name = "option_sakuya_mesh"
+		file = "gfx/models/ships/option/option3.mesh"
+				animation = { id = "idle"			type = "option_idle_animation" }
+		scale = 0.5
+	}
+
+}
+	
