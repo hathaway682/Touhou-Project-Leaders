@@ -27,6 +27,7 @@ touhou_no_effect = {
 	}
 }
 
+#默认符卡界面，显示bomb数
 touhou_bomb_interface_default = {
 	potential = {
 		NAND = {
@@ -48,6 +49,7 @@ touhou_bomb_interface_default = {
 	}
 }
 
+#转转符卡界面，显示bomb数+厄运储存
 touhou_bomb_interface_hina = {
 	potential = {
 		check_variable = {
@@ -67,6 +69,7 @@ touhou_bomb_interface_hina = {
 	}
 }
 
+#选择上一个角色
 touhou_subtract_char_id_effect = {
 	potential = {
 		always = yes
@@ -91,6 +94,7 @@ touhou_subtract_char_id_effect = {
 	}
 }
 
+#选择下一个角色
 touhou_add_char_id_effect = {
 	potential = {
 		always = yes
@@ -115,6 +119,7 @@ touhou_add_char_id_effect = {
 	}
 }
 
+#选择上一张符卡
 touhou_subtract_card_id_effect = {
 	potential = {
 		always = yes
@@ -137,6 +142,7 @@ touhou_subtract_card_id_effect = {
 	}
 }
 
+#选择下一张符卡
 touhou_add_card_id_effect = {
 	potential = {
 		always = yes
@@ -159,6 +165,7 @@ touhou_add_card_id_effect = {
 	}
 }
 
+#使用符卡高级版
 touhou_ex_charge_effect = {
 	potential = {
 		from = {
@@ -237,6 +244,7 @@ touhou_ex_charge_effect = {
 	}
 }
 
+#取消符卡高级版
 touhou_ex_charge_cancel_effect = {
 	potential = {
 		from = {
@@ -263,6 +271,7 @@ touhou_ex_charge_cancel_effect = {
 	}
 }
 
+#追踪选择
 touhou_trace_select_effect = {
 	potential = {
 		always = yes
@@ -288,7 +297,7 @@ touhou_trace_select_effect = {
 			from = {
 				set_variable = {
 					which = seleted_char_id
-					value = root.value:touhou_leader_id
+					value = root.leader.value:touhou_leader_id
 				}
 			}
 			if = {

@@ -1557,6 +1557,20 @@ country_event = {
             modifier = modifier_saisen_box_timer
             months = 30
         }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_count
+                    value >= 100000
+                }
+                NOT = {
+                    any_owned_leader = {
+                        has_trait = thl_leader_trait_fly
+                    }
+                }
+            }
+            country_event = { id = touhou_paragon.40600 }
+        }
     }
     option = {
         name = touhou_paragon_enclave.40605.b
@@ -1648,6 +1662,20 @@ country_event = {
             modifier = modifier_saisen_box_timer
             months = 30
         }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_count
+                    value >= 100000
+                }
+                NOT = {
+                    any_owned_leader = {
+                        has_trait = thl_leader_trait_fly
+                    }
+                }
+            }
+            country_event = { id = touhou_paragon.40600 }
+        }
     }
     option = {
         name = touhou_paragon_enclave.40605.c
@@ -1728,28 +1756,20 @@ country_event = {
             modifier = modifier_saisen_box_timer
             months = 30
         }
-    }
-    option = {
-        name = touhou_paragon_enclave.40605.d
-        trigger = {
-            check_variable = {
-                which = touhou_variable_saisen_count
-                value >= 100000
-            }
-        }
-        allow = {
-            has_country_resource = {
-                type = energy
-                amount >= 100000
-            }
-            not = {
-                any_owned_leader = {
-                    has_trait = thl_leader_trait_fly
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_count
+                    value >= 100000
+                }
+                NOT = {
+                    any_owned_leader = {
+                        has_trait = thl_leader_trait_fly
+                    }
                 }
             }
+            country_event = { id = touhou_paragon.40600 }
         }
-        add_resource = { energy = -100000 }
-        country_event = { id = touhou_paragon.40600 }
     }
     option = {
         name = touhou_paragon_enclave.40605.e
