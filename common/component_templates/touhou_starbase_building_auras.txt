@@ -352,8 +352,8 @@ utility_component_template = {
 
 		modifier = {
 			ship_fire_rate_mult = -0.33
-			ship_disengage_chance_reduction = 0.5
-			ship_emergency_ftl_min_days_mult = 0.5
+			ship_disengage_chance_reduction = 10
+			ship_emergency_ftl_min_days_mult = 10
 		}
 
 		graphics = {
@@ -414,8 +414,14 @@ utility_component_template = {
 		modifier = {
 			ship_accuracy_mult = -0.25
 			ship_evasion_mult = -0.25
-			ship_disengage_chance_reduction = 10
-			ship_disengage_opportunities_add = -10
+		}
+
+		damage_per_day = {
+			accuracy = 1
+			damage = {
+				min = 1
+				max = 3
+			}
 		}
 
 		graphics = {
@@ -450,6 +456,8 @@ utility_component_template = {
 		modifier = {
 			ship_accuracy_mult = -0.5
 			ship_evasion_mult = -0.5
+			ship_disengage_chance_reduction = 10
+			ship_emergency_ftl_min_days_mult = 10
 		}
 
 		damage_per_day = {

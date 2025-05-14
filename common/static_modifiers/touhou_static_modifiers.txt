@@ -932,3 +932,11 @@ modifier_susanoo = {
 	damage_vs_country_type_gray_goo_mult = 0.2
 	damage_vs_player_crisis_mult = 0.2
 }
+
+thl_scientist_assassined = {
+	all_technology_research_speed = -0.1
+}
+
+fleet_leader_assassined = {
+	ship_fire_rate_mult = -0.1
+}

@@ -2914,104 +2914,99 @@ country_event = {
     }
 }
 
-planet_event = {
-    id = touhou_paragon_spell.400
-    hide_window = yes
-    is_triggered_only = yes
-
-    immediate = {
-        add_modifier = {
-            modifier = sanae_frog_debuff
+country_event = {
+    id = touhou_paragon_spell.41401
+    title = touhou_paragon_spell.41401.name
+    desc = {
+        trigger = {
+            is_hive_empire = no
+            is_machine_empire = no
+            from = {
+                thl_will_leader_survive = yes
+            }
         }
+        text = touhou_paragon_spell.41401.desc.regular.safe
     }
-}
-
-planet_event = {
-    id = touhou_paragon_spell.401
-    title = touhou_paragon_spell.401.name
-    text = touhou_paragon_spell.401.desc
-    picture = GFX_evt_nuclear_explosion
-    show_sound = event_super_explosion
-
+    desc = {
+        trigger = {
+            is_hive_empire = no
+            is_machine_empire = no
+            from = {
+                species = {
+                    is_robotic = no
+                }
+                thl_will_leader_survive = no
+            }
+        }
+        text = touhou_paragon_spell.41401.desc.regular.organic
+    }
+    desc = {
+        trigger = {
+            is_hive_empire = no
+            is_machine_empire = no
+            from = {
+                species = {
+                    is_robotic = yes
+                }
+                thl_will_leader_survive = no
+            }
+        }
+        text = touhou_paragon_spell.41401.desc.regular.robot
+    }
+    desc = {
+        trigger = {
+            is_hive_empire = yes
+            from = {
+                thl_will_leader_survive = no
+            }
+        }
+        text = touhou_paragon_spell.41401.desc.hive
+    }
+    desc = {
+        trigger = {
+            is_hive_empire = yes
+            from = {
+                thl_will_leader_survive = yes
+            }
+        }
+        text = touhou_paragon_spell.41401.desc.hive.safe
+    }
+    desc = {
+        trigger = {
+            is_machine_empire = yes
+            from = {
+                thl_will_leader_survive = no
+            }
+        }
+        text = touhou_paragon_spell.41401.desc.machine
+    }
+    desc = {
+        trigger = {
+            is_machine_empire = yes
+            from = {
+                thl_will_leader_survive = yes
+            }
+        }
+        text = touhou_paragon_spell.41401.desc.machine.safe
+    }
+    picture = GFX_evt_dark_alley
+    show_sound = event_red_alert
     is_triggered_only = yes
 
     option = {
-        name = UNFORTUNATE
+        trigger = {
+            from = {
+                thl_will_leader_survive = no
+            }
+        }
+        name = touhou_paragon_spell.41401.a
     }
-}
-
-planet_event = {
-    id = touhou_paragon_spell.402
-    hide_window = yes
-    is_triggered_only = yes
-
-    immediate = {
-        add_modifier = {
-            modifier = sanae_snake_debuff
-        }
-        create_country = {
-            name = "NAME_Giant_Snake"
-            type = faction
-            auto_delete = yes
-            flag = {
-                background = {
-                    category = "backgrounds"
-                    file = "00_solid.dds"
-                }
-                colors = {
-                    "green"
-                    "green"
-                    "null"
-                    "null"
-                }
-            }
-            effect = {
-                establish_communications_no_message = root
+    option = {
+        trigger = {
+            from = {
+                thl_will_leader_survive = yes
             }
         }
-        create_army = {
-            name = "NAME_Giant_Snake"
-            type = giant_snake_army
-            owner = last_created_country
-        }
-        set_planet_flag = giant_snake
-    }
-}
-
-planet_event = {
-    id = touhou_paragon_spell.401
-    hide_window = yes
-    is_triggered_only = yes
-
-    immediate = {
-        add_modifier = {
-            modifier = sanae_snake_debuff
-        }
-        create_country = {
-            name = "NAME_Giant_Snake"
-            type = faction
-            auto_delete = yes
-            flag = {
-                background = {
-                    category = "backgrounds"
-                    file = "00_solid.dds"
-                }
-                colors = {
-                    "green"
-                    "green"
-                    "null"
-                    "null"
-                }
-            }
-            effect = {
-                establish_communications_no_message = root
-            }
-        }
-        create_army = {
-            name = "NAME_Giant_Snake"
-            type = giant_snake_army
-            owner = last_created_country
-        }
-        set_planet_flag = giant_snake
+        name = touhou_paragon_spell.41401.b
     }
 }

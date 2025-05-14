@@ -849,6 +849,7 @@ marisa_spell_card_2_effect = {
                     }
                     set_location = root
                     set_fleet_flag = spell_card_fleet
+                    set_fleet_flag = stardust_reverie_fleet
                     fleet_event = {
                         id = touhou_paragon_spell.6
                         days = 180
@@ -883,6 +884,7 @@ marisa_spell_card_2_ex_effect = {
                     }
                     set_location = root
                     set_fleet_flag = spell_card_fleet
+                    set_fleet_flag = event_horizon_fleet
                     fleet_event = {
                         id = touhou_paragon_spell.6
                         days = 360
@@ -1144,6 +1146,7 @@ hina_spell_card_3_effect = {
                         graphical_culture = "extra_dimensional_01"
                     }
                     set_location = root
+                    set_fleet_flag = misfortune_wheel_1_fleet
                     set_fleet_flag = spell_card_fleet
                     fleet_event = {
                         id = touhou_paragon_spell.6
@@ -1178,6 +1181,7 @@ hina_spell_card_3_ex_effect = {
                         graphical_culture = "extra_dimensional_01"
                     }
                     set_location = root
+                    set_fleet_flag = misfortune_wheel_2_fleet
                     set_fleet_flag = spell_card_fleet
                     fleet_event = {
                         id = touhou_paragon_spell.6

@@ -139,6 +139,10 @@ ship_design = {
 			slot = "EXTRA_LARGE_01"
 			template = "MASTER_SPARK_SC"
 		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "MASTER_SPARK_SC"
+		}
 	}
 }
 

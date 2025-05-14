@@ -176,20 +176,16 @@ koishi_card_3_trigger = {
 
 koishi_card_4_trigger = {
 	Root = {
-		is_scope_type = fleet
-		owner = {
-			OR = {
-				is_hostile = from
-				is_at_war_with = from
-			}
+		OR = {
+			is_scope_type = country
+			is_scope_type = planet
+			is_scope_type = fleet
 		}
+		exists = leader
 	}
 	from = {
-		any_owned_fleet = {
-			exists = leader
-			leader = {
-				has_trait = thl_leader_trait_subconscious
-			}
+		any_owned_leader = {
+			has_trait = thl_leader_trait_subconscious
 		}
 	}
 }
@@ -283,6 +279,14 @@ marisa_card_1_trigger = {
 			}
 		}
 	}
+	From = {
+		NOR = {
+			any_owned_fleet = {
+				has_fleet_flag = master_spark_fleet
+				has_fleet_flag = final_spark_fleet
+			}
+		}
+	}
 }
 
 marisa_card_2_trigger = {
@@ -304,6 +308,14 @@ marisa_card_2_trigger = {
 			NOT = {
 				any_fleet_in_orbit = {
 					has_fleet_flag = spell_card_fleet
+				}
+			}
+		}
+		From = {
+			NOR = {
+				any_owned_fleet = {
+					has_fleet_flag = stardust_reverie_fleet
+					has_fleet_flag = event_horizon_fleet
 				}
 			}
 		}
@@ -460,6 +472,14 @@ hina_card_3_trigger = {
 		NOT = {
 			any_fleet_in_orbit = {
 				has_fleet_flag = spell_card_fleet
+			}
+		}
+	}
+	From = {
+		NOR = {
+			any_owned_fleet = {
+				has_fleet_flag = misfortune_wheel_1_fleet
+				has_fleet_flag = misfortune_wheel_2_fleet
 			}
 		}
 	}
