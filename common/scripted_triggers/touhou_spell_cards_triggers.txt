@@ -182,6 +182,12 @@ koishi_card_4_trigger = {
 			is_scope_type = fleet
 		}
 		exists = leader
+		#防止一不小心刺杀自己人
+		owner = {
+			NOT = {
+				is_same_value = from
+			}
+		}
 	}
 	from = {
 		any_owned_leader = {

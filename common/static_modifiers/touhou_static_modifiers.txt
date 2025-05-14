@@ -946,7 +946,7 @@ thl_fleet_leader_assassined = {
 thl_planet_leader_assassined = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_separatist_supporter.dds"
 	icon_frame = 3
-	planet_stability_add = -10
+	planet_stability_add = -15
 	pop_bonus_workforce_mult = -0.1
 }
 
