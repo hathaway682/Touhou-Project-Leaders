@@ -1889,7 +1889,7 @@ building_ranger_lodge = {
 building_izakaya_1 = {
 	base_buildtime = @b1_time
 	category = amenity
-
+	base_cap_amount = 1
 	building_sets = {
 		government
 		urban
