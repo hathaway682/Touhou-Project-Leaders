@@ -400,9 +400,9 @@ aya_capitalism = {
 }
 
 aya_unrest = {
-	planet_stability_add = -100
+	planet_stability_add = -1000
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_separatist_supporter.dds"
-	icon_frame = 1
+	icon_frame = 3
 }
 
 aya_research = {
@@ -934,9 +934,23 @@ modifier_susanoo = {
 }
 
 thl_scientist_assassined = {
-	all_technology_research_speed = -0.1
+	physics_tech_cost_mult = 0.1
+	society_tech_cost_mult = 0.1
+	engineering_tech_cost_mult = 0.1
 }
 
-fleet_leader_assassined = {
-	ship_fire_rate_mult = -0.1
+thl_fleet_leader_assassined = {
+	ship_damage_reduction_mult = -0.1
+}
+
+thl_planet_leader_assassined = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_separatist_supporter.dds"
+	icon_frame = 3
+	planet_stability_add = -10
+	pop_bonus_workforce_mult = -0.1
+}
+
+thl_country_leader_assassined = {
+	planet_stability_add = -10
+	pop_government_ethic_attraction = -0.1
 }

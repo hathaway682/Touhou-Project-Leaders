@@ -2999,12 +2999,26 @@ country_event = {
                 thl_will_leader_survive = no
             }
         }
+        hidden_effect = {
+            from = {
+                kill_leader = {
+                    show_notification = no
+                }
+            }
+        }
         name = touhou_paragon_spell.41401.a
     }
     option = {
         trigger = {
             from = {
                 thl_will_leader_survive = yes
+            }
+        }
+        hidden_effect = {
+            from = {
+                kill_leader = {
+                    show_notification = no
+                }
             }
         }
         name = touhou_paragon_spell.41401.b

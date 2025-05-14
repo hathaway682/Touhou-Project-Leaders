@@ -397,20 +397,119 @@ koishi_spell_card_3_effect = {
 }
 
 koishi_spell_card_4_effect = {
-    add_resource = {
-        thl_bomb = -4
-    }
     from = {
-        every_owned_fleet = {
-            limit = {
-                exists = leader
-                leader = { has_trait = thl_leader_trait_subconscious }
+        add_resource = {
+            thl_bomb = -5
+        }
+    }
+    root = {
+        switch = {
+            trigger = is_scope_type
+            fleet = {
+                if = {
+                    limit = {
+                        leader = {
+                            leader_class = scientist
+                        }
+                    }
+                    owner = {
+                        remove_modifier = thl_scientist_assassined
+                        add_modifier = {
+                            modifier = thl_scientist_assassined
+                            multiplier = root.leader.trigger:has_base_skill
+                            days = 3600
+                        }
+                    }
+                }
+                else = {
+                    remove_modifier = thl_fleet_leader_assassined
+                    add_modifier = {
+                        modifier = thl_fleet_leader_assassined
+                        multiplier = root.leader.trigger:has_base_skill
+                        days = 360
+                    }
+                }
+                owner = {
+                    country_event = {
+                        id = touhou_paragon_spell.41401
+                        scopes = {
+                            from = root.leader
+                        }
+                    }
+                }
             }
-            add_modifier = {
-                modifier = koishi_surprise
-                days = 30
+            planet = {
+                if = {
+                    limit = {
+                        NOT = {
+                            owner = {
+                                any_situation = {
+                                    is_situation_type = situation_planetary_revolt
+                                }
+                            }
+                        }
+                    }
+                    start_situation = {
+                        type = situation_planetary_revolt
+                        target = root
+                        effect = {
+                            save_event_target_as = new_situation
+                            if = {
+                                limit = {
+                                    root = {
+                                        count_owned_pop_amount = {
+                                            count >= 500
+                                            limit = {
+                                                is_enslaved = yes
+                                                is_sapient = yes
+                                                pop_has_happiness = yes
+                                                happiness < 0.4
+                                            }
+                                        }
+                                    }
+                                }
+                                set_situation_flag = slave_revolt
+                            }
+                        }
+                    }
+                }
+                else = {
+                    add_modifier = {
+                        modifier = instability_join_revolt
+                        days = 3600
+                    }
+                }
+                remove_modifier = thl_planet_leader_assassined
+                add_modifier = {
+                    modifier = thl_planet_leader_assassined
+                    multiplier = root.leader.trigger:has_base_skill
+                    days = 3600
+                }
+                owner = {
+                    country_event = {
+                        id = touhou_paragon_spell.41401
+                        scopes = {
+                            from = root.leader
+                        }
+                    }
+                }
             }
-            set_location = root
+            country = {
+                remove_modifier = thl_country_leader_assassined
+                add_modifier = {
+                    modifier = thl_country_leader_assassined
+                    multiplier = root.leader.trigger:has_base_skill
+                    days = 3600
+                }
+                owner = {
+                    country_event = {
+                        id = touhou_paragon_spell.41401
+                        scopes = {
+                            from = leader
+                        }
+                    }
+                }
+            }
         }
     }
 }
