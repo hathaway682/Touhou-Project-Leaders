@@ -425,7 +425,7 @@ country_event = {
 			}
 			any_spynetwork = {
 				owner = { is_same_value = root }
-				is_spynetwork_level > 10
+				is_spynetwork_level > 60
 			}
 			num_defensive_pacts >= 3
 		}

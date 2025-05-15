@@ -251,12 +251,12 @@ touhou_archivist = {
     resources = {
         category = planet_physicists
         produces = {
-            physics_research = 6
-            engineering_research = 6
-            society_research = 6
+            physics_research = 7
+            engineering_research = 7
+            society_research = 7
         }
         upkeep = {
-            consumer_goods = 2
+            consumer_goods = 3.5
         }
         upkeep = {
             trigger = {
@@ -264,7 +264,7 @@ touhou_archivist = {
                     has_planet_flag = has_science_ministry
                 }
             }
-            consumer_goods = 1
+            consumer_goods = 1.75
         }
     }
 
@@ -323,6 +323,95 @@ touhou_archivist = {
         }
     }
 
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = specialist
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+touhou_archivist_drone = {
+    category = complex_drone
+    swappable_data = {
+        default = {
+            condition_string = DRONE_JOB_TRIGGER
+            building_icon = building_master_archive
+            icon = fe_archivist
+        }
+    }
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+    possible = { can_think = yes }
+
+    resources = {
+        category = planet_physicists
+        produces = {
+            physics_research = 7
+            engineering_research = 7
+            society_research = 7
+        }
+        upkeep = {
+            energy = 7
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            energy = 3.5
+        }
+    }
+
+    overlord_resources = {
+        category = planet_requisitioned_research
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            physics_research = 3
+            engineering_research = 3
+            society_research = 3
+        }
+    }
+
+    # triggered_pop_modifier = {
+    #     potential = {
+    #         planet = {
+    #             exists = army_leader
+    #             army_leader = {
+    #                 has_trait = leader_trait_academia_recruiter
+    #             }
+    #         }
+    #     }
+    #     modifier = {
+    #         pop_defense_armies_add = 1
+    #     }
+    # }
+
+    weight = {
+        weight = @specialist_job_weight
+        mult = value:job_weights_research_modifier|JOB|archivist|
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = civic_machine_assimilator }
+            has_trait = trait_cybernetic
+        }
+    }
     promotion = {
         time = @standard_promotion_time
         effect = {
@@ -507,6 +596,180 @@ dollmaker = {
     }
 }
 
+dollmaker_drone = {
+    category = complex_drone
+    swappable_data = {
+        default = {
+            condition_string = DRONE_JOB_TRIGGER
+            building_icon = building_doll_assembly_plant
+            icon = dollmaker
+        }
+    }
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+    possible = { can_think = yes }
+
+    possible = {
+        OR = {
+            is_robot_pop = no
+            AND = {
+                has_trait = trait_thl_doll
+                owner = { has_technology = tech_doll_assembly_complex }
+            }
+            AND = {
+                has_trait = trait_mechanical
+                OR = {
+                    owner = { has_technology = tech_synthetic_workers }
+                    owner = { is_individual_machine = yes }
+                }
+            }
+            AND = {
+                has_trait = trait_machine_unit
+                OR = {
+                    owner = { has_technology = tech_synthetic_workers }
+                    owner = { is_individual_machine = yes }
+                }
+            }
+        }
+    }
+
+    planet_modifier = {
+        doll_control_limit = 1000
+    }
+
+    triggered_planet_modifier = {
+        potential = { owner = { has_technology = tech_automatic_dolls } }
+        doll_control_limit = 1000
+        #planet_doll_jobs_worker_produces_mult = 0.05
+    }
+
+    triggered_planet_modifier = {
+        potential = { owner = { has_technology = tech_sapient_dolls } }
+        doll_control_limit = 1000
+        #planet_doll_jobs_specialist_produces_mult = 0.05
+    }
+
+    # Add growth from 0 to 25 depending on 'clone_pops_missing_per_vat'.
+    triggered_planet_modifier = {
+        potential = {
+            check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 11 }
+        }
+        planet_pop_assembly_add = 25
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 11
+        LOWER_LIMIT = 10
+        GROWTH = 22
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 10
+        LOWER_LIMIT = 9
+        GROWTH = 20
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 9
+        LOWER_LIMIT = 8
+        GROWTH = 17
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 8
+        LOWER_LIMIT =7
+        GROWTH = 15
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 7
+        LOWER_LIMIT = 6
+        GROWTH = 12
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 6
+        LOWER_LIMIT = 5
+        GROWTH = 10
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 5
+        LOWER_LIMIT = 4
+        GROWTH = 7
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 4
+        LOWER_LIMIT = 3
+        GROWTH = 5
+    }
+
+    inline_script = {
+        script = buildings/doll_maker_output
+        UPPER_LIMIT = 3
+        LOWER_LIMIT = 0
+        GROWTH = 2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                has_technology = tech_sapient_dolls
+            }
+        }
+        planet_pop_assembly_add = 2
+    }
+
+
+    resources = {
+        category = planet_pop_assemblers
+        upkeep = {
+            trigger = {
+                OR = {
+                    planet = {
+                        check_variable_arithmetic = { which = value:doll_missing_per_maker value > 0 }
+                    }
+                }
+            }
+            alloys = 2
+        }
+    }
+
+    weight = {
+        weight = 500
+        modifier = {
+            factor = 10
+            owner = { is_synthetic_empire = yes }
+        }
+    }
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = specialist
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+#花农
 grower = {
     category = worker
     swappable_data = {
@@ -686,7 +949,7 @@ grower_drone = {
         category = planet_farmers
         produces = {
             food = 4
-            consumer_goods = 4
+            energy = 4
             trade = 2
         }
         produces = {
@@ -807,10 +1070,14 @@ touhou_bookseller = {
     resources = {
         category = planet_biologists
         produces = {
-            physics_research = 4
-            engineering_research = 4
-            society_research = 6
-            minor_artifacts = 0.5
+            physics_research = 1
+            astral_threads = 0.1
+            multiplier = owner.trigger:astral_rifts_completed
+        }
+        produces = {
+            society_research = 1
+            minor_artifacts = 0.1
+            multiplier = owner.bookstore_size
         }
         upkeep = {
             consumer_goods = 2
@@ -843,9 +1110,6 @@ touhou_bookseller = {
         pop_physicist_bonus_workforce_mult = 0.01
         pop_biologist_bonus_workforce_mult = 0.01
         pop_engineer_bonus_workforce_mult = 0.01
-        mod_planet_physicists_energy_produces_add = 1.5
-        mod_planet_engineers_energy_produces_add = 1.5
-        mod_planet_biologists_energy_produces_add = 0.5
     }
 
     weight = {
@@ -872,6 +1136,94 @@ touhou_bookseller = {
             factor = 0.8
             is_enslaved = yes
             has_slavery_type = { type = slavery_indentured }
+        }
+    }
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = specialist
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+touhou_bookseller_drone = {
+    category = complex_drone
+    swappable_data = {
+        default = {
+            condition_string = DRONE_JOB_TRIGGER
+            building_icon = building_suzunaan
+            icon = fe_archivist
+        }
+    }
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+    possible = {
+        can_think = yes
+    }
+
+    resources = {
+        category = planet_biologists
+        produces = {
+            physics_research = 1
+            astral_threads = 0.1
+            multiplier = owner.trigger:astral_rifts_completed
+        }
+        produces = {
+            society_research = 1
+            minor_artifacts = 0.1
+            multiplier = owner.bookstore_size
+        }
+        upkeep = {
+            minerals = 4
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            minerals = 2
+        }
+    }
+
+    overlord_resources = {
+        category = planet_requisitioned_research
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            physics_research = 2
+            engineering_research = 2
+            society_research = 3
+        }
+    }
+
+    planet_modifier = {
+        pop_physicist_bonus_workforce_mult = 0.01
+        pop_biologist_bonus_workforce_mult = 0.01
+        pop_engineer_bonus_workforce_mult = 0.01
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = civic_machine_assimilator }
+            has_trait = trait_cybernetic
         }
     }
 
@@ -961,129 +1313,74 @@ touhou_historian = {
         }
     }
 }
-# angler = {
-#     category = worker
-#     swappable_data = {
-#         default = {
-#             condition_string = WORKER_JOB_TRIGGER
-#             building_icon = building_food_processing_facility
-#         }
-#     }
-#
-#     possible_pre_triggers = {
-#         has_owner = yes
-#         is_being_purged = no
-#         is_being_assimilated = no
-#         is_sapient = yes
-#     }
-#
-#     possible_precalc = can_fill_worker_job
-#     possible = {
-#         hidden_trigger = { exists = owner }
-#         owner = {
-#             is_gestalt = no
-#             #is_anglers_empire = yes
-#         }
-#     }
-#
-#     resources = {
-#         category = planet_anglers
-#         produces = {
-#             food = 8
-#         }
-#         produces = {
-#             trigger = {
-#                 has_councilor = { COUNCILOR = "councilor_anglers" }
-#             }
-#
-#             food = @councilor_anglers_angler_food_bonus
-#             mult = value:councilor_level|TYPE|councilor_anglers|
-#         }
-#         produces = {
-#             trigger = {
-#                 has_councilor = { COUNCILOR = "councilor_machine_anglers" }
-#             }
-#
-#             food = @councilor_machine_anglers_angler_food_bonus
-#             mult = value:councilor_level|TYPE|councilor_machine_anglers|
-#         }
-#         produces = {
-#             trigger = {
-#                 planet = {
-#                     has_planet_flag = has_produce_requisitorium
-#                 }
-#             }
-#             food = @requisitorium_food_reduction
-#         }
-#         produces = {
-#             trade = 2
-#         }
-#     }
-#
-#     overlord_resources = {
-#         category = planet_requisitioned_food
-#         produces = {
-#             trigger = {
-#                 planet = {
-#                     has_planet_flag = has_produce_requisitorium
-#                 }
-#             }
-#             food = @requisitorium_food_overlord
-#         }
-#     }
-#
-#     triggered_planet_modifier = {
-#         potential = {
-#             exists = owner
-#             owner = { has_valid_civic = civic_agrarian_idyll }
-#         }
-#         planet_amenities_add = 200
-#         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-#     }
-#
-#     weight = {
-#         weight = @worker_job_weight
-#         mult = value:job_weights_multiple_resources_modifier|JOB|angler|RESOURCE1|food|WEIGHT1|0.8|RESOURCE2|trade|WEIGHT2|0.2|
-#         modifier = {
-#             factor = 1.1
-#             owner = { has_valid_civic = civic_agrarian_idyll }
-#         }
-#         modifier = {
-#             factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
-#             owner = { has_valid_civic = civic_agrarian_idyll }
-#         }
-#         modifier = {
-#             factor = 10
-#             is_enslaved = yes
-#             can_take_servant_job = no
-#             NOT = { has_slavery_type = { type = slavery_indentured } }
-#         }
-#         modifier = {
-#             factor = 0.25
-#             can_take_servant_job = yes
-#         }
-#     }
-#
-#     inline_script = "jobs/automodding_priority_food"
-#
-#     promotion = {
-#         time = @standard_promotion_time
-#         effect = {
-#             pop_amount_change_category = {
-#                 CATEGORY = worker
-#                 AMOUNT = local_pop_amount
-#             }
-#         }
-#     }
-# }
 
-maple_sugar_harvester = {
-    category = specialist
+touhou_historian_drone = {
+    category = complex_drone
     swappable_data = {
         default = {
-            condition_string = SPECIALIST_JOB_TRIGGER
+            condition_string = DRONE_JOB_TRIGGER
+            building_icon = building_national_historial_archive
+            icon = fe_archivist
+        }
+    }
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+    possible = {
+        can_think = yes
+    }
+
+    resources = {
+        category = planet_bureaucrats
+        produces = {
+            society_research = 1
+            unity = 1
+            minor_artifacts = 0.1
+            mult = owner.trigger:num_ascension_perks
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+
+    country_modifier = {
+        planet_maintenance_drones_unity_produces_add = 1
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+        mult = value:job_weights_research_modifier|JOB|archivist|
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = civic_machine_assimilator }
+            has_trait = trait_cybernetic
+        }
+    }
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = specialist
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+#枫糖采集者
+maple_sugar_harvester = {
+    category = worker
+    swappable_data = {
+        default = {
+            condition_string = WORKER_JOB_TRIGGER
             building_icon = holding_tree_of_life_sapling
-            icon = servant
         }
     }
 
@@ -1094,19 +1391,13 @@ maple_sugar_harvester = {
         is_sapient = yes
     }
 
-    possible_precalc = can_fill_specialist_job
-    possible = {
-        complex_specialist_job_check_trigger = yes
-    }
+    possible_precalc = can_fill_worker_job
 
     resources = {
         category = planet_farmers
         produces = {
-            food = 4
-            rare_crystals = 1
-        }
-        upkeep = {
             consumer_goods = 2
+            rare_crystals = 1
         }
     }
 
@@ -1119,30 +1410,76 @@ maple_sugar_harvester = {
     }
 
     weight = {
-        weight = @specialist_job_weight
-        mult = value:job_weights_modifier|JOB|maple_sugar_harvester|RESOURCE|food|
-        mult = value:job_weights_modifier|JOB|maple_sugar_harvester|RESOURCE|rare_crystals|
+        weight = @worker_job_weight
+        mult = value:job_weights_modifier|JOB|farmer|RESOURCE|food|
         modifier = {
-            factor = 0.2
-            has_citizenship_rights = no
-            NOT = { has_trait = trait_mechanical }
+            factor = 1.1
+            owner = { has_valid_civic = civic_agrarian_idyll }
         }
         modifier = {
-            factor = 2
-            has_living_standard = { type = living_standard_academic_privilege }
+            factor = 10
+            is_enslaved = yes
+            can_take_servant_job = no
+            NOT = { has_slavery_type = { type = slavery_indentured } }
         }
         modifier = {
-            factor = 0.1
+            factor = 3
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+            owner = { has_technology = tech_droid_workers }
+        }
+        modifier = {
+            factor = 200
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+            owner = { NOT = { has_technology = tech_droid_workers } }
+        }
+        modifier = {
+            factor = 0.25
             can_take_servant_job = yes
         }
-        # modifier = {
-        #     factor = 1.5
-        #     has_job = maple_sugar_harvester
-        # }
         modifier = {
-            factor = 0.8
-            is_enslaved = yes
-            has_slavery_type = { type = slavery_indentured }
+            factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+            owner = { has_valid_civic = civic_agrarian_idyll }
+        }
+        # low income modifier
+        modifier = {
+            factor = 3
+            exists = planet
+            planet = {
+                has_available_jobs = farmer
+            }
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = food
+                    value < 10
+                }
+            }
+        }
+
+        modifier = {
+            factor = 0.5
+            has_trait = trait_lithoid
+
+            owner = {
+                is_lithoid_empire = yes
+                country_uses_food = no
+                has_monthly_income = {
+                    resource = food
+                    value >= 0
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_trait = trait_cyborg_creed_of_labor
         }
     }
 
@@ -1157,6 +1494,97 @@ maple_sugar_harvester = {
     }
 }
 
+maple_sugar_harvester_drone = {
+    category = simple_drone
+    swappable_data = {
+        default = {
+            condition_string = DRONE_JOB_TRIGGER
+            building_icon = holding_tree_of_life_sapling
+            icon = maple_sugar_harvester
+        }
+    }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+    possible = {
+        can_think = yes
+    }
+
+    resources = {
+        category = planet_farmers
+        produces = {
+            food = 4
+            rare_crystals = 1
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_amenities_add = 500
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    weight = {
+        weight = @simple_drone_job_weight
+        mult = value:job_weights_modifier|JOB|agri_drone|RESOURCE|food|
+        modifier = {
+            factor = 0.9
+            owner = {
+                has_monthly_income = {
+                    resource = food
+                    value > 50
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            owner = {
+                is_robot_empire = yes
+            }
+        }
+        modifier = {
+            factor = 1.1
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = civic_machine_assimilator }
+            has_trait = trait_cybernetic
+        }
+
+        modifier = {
+            factor = 0.5
+            has_trait = trait_lithoid
+
+            owner = {
+                is_lithoid_empire = yes
+                country_uses_food = no
+                has_monthly_income = {
+                    resource = food
+                    value >= 0
+                }
+            }
+        }
+    }
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = specialist
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+#夜雀食堂员工
 izakaya_worker = {
     category = specialist
     swappable_data = {
@@ -1294,7 +1722,7 @@ izakaya_worker = {
     }
 
     planet_modifier = {
-        logistic_growth_mult = 0.05
+        logistic_growth_mult = 0.01
     }
 
     weight = {
@@ -1337,6 +1765,169 @@ izakaya_worker = {
     }
 }
 
+izakaya_drone = {
+    category = complex_drone
+    swappable_data = {
+        default = {
+            condition_string = DRONE_JOB_TRIGGER
+            building_icon = building_izakaya_2
+            icon = servant
+        }
+    }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+    possible = {
+        can_think = yes
+    }
+
+    resources = {
+        category = planet_entertainers
+        upkeep = {
+            food = 6
+        }
+        produces = {
+            trade = 10
+        }
+        produces = {
+            trigger = {
+                OR = {
+                    AND = {
+                        exists = owner
+                        owner = {
+                            any_owned_leader = {
+                                has_trait = thl_leader_trait_izakaya_2
+                            }
+                        }
+                    }
+                    AND = {
+                        exists = planet.branch_office_owner
+                        planet.branch_office_owner = {
+                            any_owned_leader = {
+                                has_trait = thl_leader_trait_izakaya_2
+                            }
+                        }
+                    }
+                }
+            }
+            trade = 5
+        }
+        produces = {
+            trigger = {
+                OR = {
+                    AND = {
+                        exists = owner
+                        owner = {
+                            any_owned_leader = {
+                                has_trait = thl_leader_trait_izakaya_2
+                            }
+                        }
+                    }
+                    AND = {
+                        exists = planet.branch_office_owner
+                        planet.branch_office_owner = {
+                            any_owned_leader = {
+                                has_trait = thl_leader_trait_izakaya_2
+                            }
+                        }
+                    }
+                }
+            }
+            trade = 10
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_amenities_add = 1000
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                AND = {
+                    exists = owner
+                    owner = {
+                        any_owned_leader = {
+                            has_trait = thl_leader_trait_izakaya_2
+                        }
+                    }
+                }
+                AND = {
+                    exists = planet.branch_office_owner
+                    planet.branch_office_owner = {
+                        any_owned_leader = {
+                            has_trait = thl_leader_trait_izakaya_2
+                        }
+                    }
+                }
+            }
+        }
+        planet_amenities_add = 500
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                AND = {
+                    exists = owner
+                    owner = {
+                        any_owned_leader = {
+                            has_trait = thl_leader_trait_izakaya_3
+                        }
+                    }
+                }
+                AND = {
+                    exists = planet.branch_office_owner
+                    planet.branch_office_owner = {
+                        any_owned_leader = {
+                            has_trait = thl_leader_trait_izakaya_3
+                        }
+                    }
+                }
+            }
+        }
+        planet_amenities_add = 1000
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    planet_modifier = {
+        logistic_growth_mult = 0.05
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = civic_machine_assimilator }
+            has_trait = trait_cybernetic
+        }
+    }
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = complex_drone
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+#魔法使
 magician = {
     category = specialist
     swappable_data = {
@@ -1353,9 +1944,6 @@ magician = {
     }
 
     possible = {
-        NOT = {
-            has_trait = trait_thl_magician
-        }
         battle_thrall_job_check_trigger = yes
     }
 
@@ -1403,6 +1991,66 @@ magician = {
             factor = 0.8
             is_enslaved = yes
             has_slavery_type = { type = slavery_indentured }
+        }
+    }
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = specialist
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+magician_drone = {
+    category = complex_drone
+    swappable_data = {
+        default = {
+            condition_string = DRONE_JOB_TRIGGER
+            building_icon = building_magic_academy
+        }
+    }
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+    possible = { can_think = yes }
+
+    resources = {
+        category = planet_physicists
+        produces = {
+            physics_research = 6
+            society_research = 6
+        }
+        upkeep = {
+            minerals = 4
+        }
+    }
+
+    triggered_country_modifier = {
+        modifier = {
+            country_naval_cap_add = 1
+        }
+        mult = planet.modifier:job_researcher_naval_cap_add
+    }
+
+    inline_script = "output/soldier_triggered_modifiers"
+
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = civic_machine_assimilator }
+            has_trait = trait_cybernetic
         }
     }
 
@@ -1494,30 +2142,12 @@ miko = {
         }
         produces = {
             trigger = {
-                has_trait = trait_latent_psionic
-            }
-            unity = 1
-            physics_research = 1
-            society_research = 1
-            engineering_research = 1
-        }
-        produces = {
-            trigger = {
-                has_trait = trait_psionic
-            }
-            unity = 2
-            physics_research = 2
-            society_research = 2
-            engineering_research = 2
-        }
-        produces = {
-            trigger = {
                 moriya_faith_trigger = yes
                 owner = {
                     has_ascension_perk = ap_cosmogenesis
                 }
             }
-            advanced_logic = 2 #知识就是力量，超理乃是神力
+            advanced_logic = 1 #知识就是力量，超理乃是神力
         }
         upkeep = {
             trigger = {
@@ -1785,7 +2415,7 @@ miko = {
                 has_country_flag = cyber_individualist
             }
         }
-        planet_jobs_produces_mult = 0.025 #避免bug
+        pop_bonus_workforce_mult = 0.025
     }
 
     # Synth Oligarchic Physical / Virtual
@@ -1896,6 +2526,450 @@ miko = {
         modifier = {
             factor = 2
             has_trait = leader_trait_psionic
+        }
+    }
+}
+
+miko_drone = {
+    category = complex_drone
+    swappable_data = {
+        default = {
+            condition_string = DRONE_JOB_TRIGGER
+            building_icon = building_shrine
+        }
+        swap_type = {
+            trigger = {
+                hakurei_faith_trigger = yes
+            }
+            desc = hakurei_miko_drone
+            icon = hakurei_miko
+            building_icon = building_shrine
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 5
+        }
+        swap_type = {
+            trigger = {
+                moriya_faith_trigger = yes
+            }
+            desc = moriya_miko_drone
+            icon = moriya_miko
+            building_icon = building_shrine
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 10
+        }
+    }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+    possible = { can_think = yes }
+
+    resources = {
+        category = planet_bureaucrats
+        produces = {
+            unity = 4
+        }
+        produces = {
+            trigger = {
+                has_trait = trait_latent_psionic
+            }
+            unity = 1
+            physics_research = 1
+            society_research = 1
+            engineering_research = 1
+        }
+        produces = {
+            trigger = {
+                has_trait = trait_psionic
+            }
+            unity = 2
+            physics_research = 2
+            society_research = 2
+            engineering_research = 2
+        }
+        produces = {
+            trigger = {
+                moriya_faith_trigger = yes
+            }
+            physics_research = 2
+            society_research = 2
+            engineering_research = 2
+        }
+        produces = {
+            trigger = {
+                moriya_faith_trigger = yes
+                owner = {
+                    has_ascension_perk = ap_cosmogenesis
+                }
+            }
+            advanced_logic = 1 #知识就是力量，超理乃是神力
+        }
+        upkeep = {
+            trigger = {
+                hakurei_faith_trigger = no
+            }
+            energy = 4
+        }
+        upkeep = {
+            trigger = {
+                hakurei_faith_trigger = yes
+            }
+            minerals = 4
+        }
+        upkeep = {
+            trigger = {
+                moriya_faith_trigger = yes
+            }
+            energy = 2
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_amenities_add = 500
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            moriya_faith_trigger = yes
+            local_or_sector_governor_has_trait = {
+                TRAIT = leader_trait_academia_recruiter
+            }
+        }
+        country_naval_cap_add = 1
+        mult = planet.modifier:job_researcher_naval_cap_add
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+        }
+        modifier = {
+            planet_crime_add = -25
+            planet_defense_armies_add = 3
+            planet_stability_add = 5
+        }
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+        }
+        modifier = {
+            country_naval_cap_add = 4
+        }
+    }
+
+    #这一串对应士兵
+    triggered_country_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            exists = planet
+            planet = {
+                exists = owner
+                owner = { has_technology = "tech_ground_defense_planning" }
+            }
+        }
+        modifier = {
+            country_naval_cap_add = 2
+        }
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            exists = owner
+            owner = {
+                any_owned_leader = {
+                    is_councilor = yes
+                    has_trait = leader_trait_bellicose
+                }
+            }
+        }
+
+        modifier = {
+            country_naval_cap_add = 2
+        }
+        mult = value:bellicose_naval_cap
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            exists = owner
+            owner = {
+                any_owned_leader = {
+                    is_councilor = yes
+                    has_trait = leader_trait_bellicose
+                }
+            }
+        }
+        modifier = {
+            planet_defense_armies_add = 1
+        }
+        mult = value:bellicose_naval_cap
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+        }
+        modifier = {
+            planet_stability_add = 1
+        }
+        mult = planet.modifier:job_soldier_stability_add
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            planet = {
+                exists = owner
+                owner = { has_tradition = "tr_modularity_3" }
+            }
+        }
+        modifier = {
+            planet_stability_add = 0.25
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            has_councilor = { COUNCILOR = "councilor_private_military_companies" }
+        }
+
+        modifier = {
+            planet_stability_add = @councilor_private_military_companies_stability
+        }
+
+        mult = value:councilor_level|TYPE|councilor_private_military_companies|
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            planet = {
+                has_deposit = d_abandoned_black_needle_base
+            }
+        }
+        modifier = {
+            country_naval_cap_add = @abandoned_black_needle_base_naval_cap_from_soldier_job
+        }
+    }
+
+    #这一串对应执法人员
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            exists = planet
+            planet = { has_modifier = anticrime_campaign }
+        }
+        modifier = {
+            planet_crime_add = -10
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            exists = owner
+            owner = {
+                exists = ruler
+                ruler = {
+                    has_trait = leader_trait_legendary_harsh_ruler
+                }
+            }
+        }
+        pop_happiness = -0.025
+    }
+
+    # Cyber Dictatorial Individualist
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            exists = owner
+            owner = {
+                is_cyber_dictatorial = yes
+                has_country_flag = cyber_individualist
+            }
+        }
+        pop_bonus_workforce_mult = 0.025
+    }
+
+    # Synth Oligarchic Physical / Virtual
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            exists = owner
+            owner = {
+                is_oligarchic_authority = yes
+                OR = {
+                    has_country_flag = synth_physical
+                    has_country_flag = synth_virtual
+                }
+            }
+        }
+        planet_jobs_ruler_produces_mult = 0.10
+    }
+
+    # Mutation Dictatorial - Hybrid Mandate
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            exists = owner
+            owner = {
+                is_dictatorial_authority = yes
+                is_mutation_authority = yes
+                NOT = { has_origin = origin_evolutionary_predators }
+            }
+        }
+        modifier = {
+            planet_crime_add = -5
+        }
+    }
+
+    #Maverick Citizens for bio.65
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            exists = owner
+            owner = {
+                has_country_flag = maverick_citizens_flag
+            }
+        }
+        modifier = {
+            planet_stability_add = 2
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            exists = owner
+            owner = {
+                exists = ruler
+                ruler = {
+                    has_trait = leader_trait_legendary_harsh_ruler
+                }
+            }
+        }
+        pop_happiness = -0.025
+    }
+
+    # Cyber Dictatorial Individualist
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            exists = owner
+            owner = {
+                is_cyber_dictatorial = yes
+                has_country_flag = cyber_individualist
+            }
+        }
+        pop_bonus_workforce_mult = 0.025
+    }
+
+    # Synth Oligarchic Physical / Virtual
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            exists = owner
+            owner = {
+                is_oligarchic_authority = yes
+                OR = {
+                    has_country_flag = synth_physical
+                    has_country_flag = synth_virtual
+                }
+            }
+        }
+        planet_jobs_ruler_produces_mult = 0.10
+    }
+
+    # Mutation Dictatorial - Hybrid Mandate
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            exists = owner
+            owner = {
+                is_dictatorial_authority = yes
+                is_mutation_authority = yes
+                NOT = { has_origin = origin_evolutionary_predators }
+            }
+        }
+        modifier = {
+            planet_crime_add = -5
+        }
+    }
+
+    #Maverick Citizens for bio.65
+    triggered_planet_modifier = {
+        potential = {
+            hakurei_faith_trigger = yes
+            exists = owner
+            owner = {
+                has_country_flag = maverick_citizens_flag
+            }
+        }
+        modifier = {
+            planet_stability_add = 2
+        }
+    }
+
+
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_planet_flag = sizuha_planet
+            }
+        }
+        planet_jobs_upkeep_mult = -0.05
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_planet_flag = minoriko_planet
+            }
+        }
+        planet_jobs_produces_mult = 0.05
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_planet_flag = hina_planet
+            }
+        }
+        planet_stability_add = 5
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = civic_machine_assimilator }
+            has_trait = trait_cybernetic
+        }
+    }
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = specialist
+                AMOUNT = local_pop_amount
+            }
         }
     }
 }

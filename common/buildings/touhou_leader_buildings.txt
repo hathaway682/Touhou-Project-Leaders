@@ -46,8 +46,18 @@ building_shrine = {
 		#building_hakurei_shrine
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = no
+		}
 		job_miko_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		job_miko_drone_add = 200
 	}
 
 	on_built = {
@@ -146,6 +156,15 @@ building_shrine = {
 		}
 	}
 	triggered_desc = {
+		trigger = {
+			is_gestalt = no
+		}
+		text = job_miko_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_gestalt = yes
+		}
 		text = job_miko_effect_desc
 	}
 	is_essential = yes
@@ -320,8 +339,18 @@ holding_building_moriya_shrine = {
 		is_capital = yes
 	}
 
-	planet_modifier = {
-		job_miko_add = 200
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = no
+		}
+		job_miko_add = 400
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		job_miko_drone_add = 400
 	}
 
 	resources = {
@@ -420,8 +449,18 @@ building_hakurei_shrine_0 = {
 		building_hakurei_shrine
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = no
+		}
 		job_miko_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		job_miko_drone_add = 200
 	}
 
 	on_built = {
@@ -574,8 +613,18 @@ building_hakurei_shrine = {
 		building_corporate_vault
 	}
 
-	planet_modifier = {
-		job_miko_add = 200
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = no
+		}
+		job_miko_add = 400
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		job_miko_drone_add = 400
 	}
 
 	triggered_planet_modifier = {
@@ -720,7 +769,7 @@ building_metel_catalyst = {
 	}
 
 	triggered_planet_modifier = {
-		pop_metallurgists_bonus_workforce_mult = 0.5
+		pop_foundry_bonus_workforce_mult = 0.5
 	}
 }
 
@@ -1019,8 +1068,30 @@ building_great_library = {
 	allow = {
 		has_major_upgraded_capital = yes
 	}
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = no
+		}
 		job_touhou_archivist_add = 1000
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		job_touhou_archivist_drone_add = 1000
+	}
+
+	triggered_desc = {
+		trigger = {
+			is_gestalt = no
+		}
+		text = job_touhou_archivist_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_gestalt = yes
+		}
+		text = job_touhou_archivist_drone__effect_desc
 	}
 
 	resources = {
@@ -1128,10 +1199,6 @@ building_doll_assembly_plant = {
 		}
 	}
 
-	planet_modifier = {
-		job_dollmaker_add = 100
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -1142,11 +1209,37 @@ building_doll_assembly_plant = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = no
+		}
+		job_dollmaker_add = 100
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_individual_machine = yes
+		}
+		job_dollmaker_add = 100
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		job_dollmaker_drone_add = 200
+	}
+
 	triggered_desc = {
 		trigger = {
-			always = yes
+			is_gestalt = no
 		}
 		text = job_dollmaker_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_gestalt = yes
+		}
+		text = job_dollmaker_drone_effect_desc
 	}
 
 	triggered_desc = {
@@ -1234,10 +1327,6 @@ building_doll_assembly_complex = {
 		}
 	}
 
-	planet_modifier = {
-		job_dollmaker_add = 200
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -1250,8 +1339,37 @@ building_doll_assembly_complex = {
 		}
 	}
 
-	prerequisites = {
-		tech_doll_assembly_complex
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = no
+		}
+		job_dollmaker_add = 300
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_individual_machine = yes
+		}
+		job_dollmaker_add = 100
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		job_dollmaker_drone_add = 400
+	}
+
+	triggered_desc = {
+		trigger = {
+			is_gestalt = no
+		}
+		text = job_dollmaker_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_gestalt = yes
+		}
+		text = job_dollmaker_drone_effect_desc
 	}
 
 	triggered_desc = {
@@ -1315,10 +1433,24 @@ building_suzunaan = {
 
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			is_gestalt = no
 		}
-		job_touhou_bookseller_add = 100
-		mult = owner.bookstore_size
+		job_touhou_bookseller_add = 300
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		job_touhou_bookseller_drone_add = 300
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = no
+		}
+		planet_physicists_trade_produces_add = 1.5
+		planet_engineers_trade_produces_add = 1.5
+		planet_biologists_trade_produces_add = 0.5
 	}
 
 	resources = {
@@ -1333,7 +1465,16 @@ building_suzunaan = {
 	}
 
 	triggered_desc = {
+		trigger = {
+			is_gestalt = no
+		}
 		text = job_touhou_bookseller_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_gestalt = yes
+		}
+		text = job_touhou_bookseller_drone_effect_desc
 	}
 }
 
@@ -1899,6 +2040,7 @@ building_izakaya_1 = {
 
 	potential = {
 		owner = {
+			country_uses_food = yes
 			any_owned_leader = {
 				OR = {
 					has_trait = thl_leader_trait_izakaya
@@ -1932,8 +2074,29 @@ building_izakaya_1 = {
 		building_holo_theatres
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = no
+		}
 		job_izakaya_worker_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		job_izakaya_drone_add = 200
+	}
+	triggered_desc = {
+		trigger = {
+			is_gestalt = no
+		}
+		text = job_izakaya_worker_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_gestalt = yes
+		}
+		text = job_izakaya_drone_desc
 	}
 
 	resources = {
@@ -1979,6 +2142,7 @@ building_izakaya_2 = {
 
 	potential = {
 		owner = {
+			country_uses_food = yes
 			any_owned_leader = {
 				OR = {
 					has_trait = thl_leader_trait_izakaya_2
@@ -2006,8 +2170,29 @@ building_izakaya_2 = {
 		has_modifier = slave_colony
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = no
+		}
 		job_izakaya_worker_add = 400
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		job_izakaya_drone_add = 400
+	}
+	triggered_desc = {
+		trigger = {
+			is_gestalt = no
+		}
+		text = job_izakaya_worker_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_gestalt = yes
+		}
+		text = job_izakaya_drone_desc
 	}
 
 	resources = {
@@ -2039,6 +2224,7 @@ building_izakaya_3 = {
 
 	potential = {
 		owner = {
+			country_uses_food = yes
 			any_owned_leader = {
 				has_trait = thl_leader_trait_izakaya_3
 			}
@@ -2060,8 +2246,133 @@ building_izakaya_3 = {
 		has_modifier = slave_colony
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = no
+		}
 		job_izakaya_worker_add = 600
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		job_izakaya_drone_add = 600
+	}
+	triggered_desc = {
+		trigger = {
+			is_gestalt = no
+		}
+		text = job_izakaya_worker_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_gestalt = yes
+		}
+		text = job_izakaya_drone_desc
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			food = @b3_upkeep
+		}
+	}
+}
+
+holding_izakaya = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	category = amenity
+	owner_type = corporate
+	icon = building_izakaya_2
+
+	building_sets = {
+		government
+		urban
+		entertainment
+		trade
+	}
+
+	potential = {
+		exists = branch_office_owner
+		branch_office_owner = {
+			is_legit_or_legal_criminal = yes
+		}
+		branch_office_owner = {
+			country_uses_food = yes
+			any_owned_leader = {
+				OR = {
+					has_trait = thl_leader_trait_izakaya
+					has_trait = thl_leader_trait_izakaya_2
+					has_trait = thl_leader_trait_izakaya_3
+				}
+			}
+		}
+		owner = {
+			country_uses_food = yes
+		}
+	}
+
+	allow = {
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = no
+		}
+		job_izakaya_worker_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		job_izakaya_drone_add = 200
+	}
+	triggered_desc = {
+		trigger = {
+			is_gestalt = no
+		}
+		text = job_izakaya_worker_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_gestalt = yes
+		}
+		text = job_izakaya_drone_desc
+	}
+
+	#Trader Jobs from civics
+	triggered_country_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_privatized_exploration
+			}
+		}
+		job_capital_trader_add = 200
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_private_prospectors
+			}
+		}
+		job_capital_trader_add = 200
+	}
+
+	country_modifier = {
+		planet_amenities_mult = 0.1
+		planet_resettlement_unemployed_destination_mult = 0.25
 	}
 
 	resources = {
@@ -2110,8 +2421,17 @@ building_magic_academy = {
 		building_research_lab_3
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = no
+		}
 		job_magician_add = 1000
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_gestalt = yes
+		}
+		job_magician_drone_add = 1000
 	}
 
 	resources = {
@@ -2125,7 +2445,16 @@ building_magic_academy = {
 	}
 
 	triggered_desc = {
+		trigger = {
+			is_gestalt = no
+		}
 		text = job_magician_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_gestalt = yes
+		}
+		text = job_magician_drone_effect_desc
 	}
 
 	is_essential = yes
