@@ -48,14 +48,14 @@ building_shrine = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		job_miko_add = 200
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		job_miko_drone_add = 200
 	}
@@ -157,13 +157,13 @@ building_shrine = {
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		text = job_miko_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		text = job_miko_effect_desc
 	}
@@ -341,14 +341,14 @@ holding_building_moriya_shrine = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		job_miko_add = 400
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		job_miko_drone_add = 400
 	}
@@ -451,14 +451,14 @@ building_hakurei_shrine_0 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		job_miko_add = 200
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		job_miko_drone_add = 200
 	}
@@ -615,14 +615,14 @@ building_hakurei_shrine = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		job_miko_add = 400
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		job_miko_drone_add = 400
 	}
@@ -1070,26 +1070,26 @@ building_great_library = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = { owner = { is_gestalt = no } }
 		}
 		job_touhou_archivist_add = 1000
 	}
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		job_touhou_archivist_drone_add = 1000
 	}
 
 	triggered_desc = {
 		trigger = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		text = job_touhou_archivist_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		text = job_touhou_archivist_drone__effect_desc
 	}
@@ -1211,7 +1211,7 @@ building_doll_assembly_plant = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		job_dollmaker_add = 100
 	}
@@ -1224,20 +1224,20 @@ building_doll_assembly_plant = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		job_dollmaker_drone_add = 200
 	}
 
 	triggered_desc = {
 		trigger = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		text = job_dollmaker_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		text = job_dollmaker_drone_effect_desc
 	}
@@ -1341,7 +1341,7 @@ building_doll_assembly_complex = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		job_dollmaker_add = 300
 	}
@@ -1354,20 +1354,20 @@ building_doll_assembly_complex = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		job_dollmaker_drone_add = 400
 	}
 
 	triggered_desc = {
 		trigger = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		text = job_dollmaker_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		text = job_dollmaker_drone_effect_desc
 	}
@@ -1433,20 +1433,20 @@ building_suzunaan = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		job_touhou_bookseller_add = 300
 	}
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		job_touhou_bookseller_drone_add = 300
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		planet_physicists_trade_produces_add = 1.5
 		planet_engineers_trade_produces_add = 1.5
@@ -1466,13 +1466,13 @@ building_suzunaan = {
 
 	triggered_desc = {
 		trigger = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		text = job_touhou_bookseller_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		text = job_touhou_bookseller_drone_effect_desc
 	}
@@ -2076,25 +2076,25 @@ building_izakaya_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		job_izakaya_worker_add = 200
 	}
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		job_izakaya_drone_add = 200
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		text = job_izakaya_worker_desc
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		text = job_izakaya_drone_desc
 	}
@@ -2172,25 +2172,25 @@ building_izakaya_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		job_izakaya_worker_add = 400
 	}
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		job_izakaya_drone_add = 400
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		text = job_izakaya_worker_desc
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		text = job_izakaya_drone_desc
 	}
@@ -2248,25 +2248,25 @@ building_izakaya_3 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		job_izakaya_worker_add = 600
 	}
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		job_izakaya_drone_add = 600
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		text = job_izakaya_worker_desc
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		text = job_izakaya_drone_desc
 	}
@@ -2328,25 +2328,25 @@ holding_izakaya = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		job_izakaya_worker_add = 200
 	}
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		job_izakaya_drone_add = 200
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		text = job_izakaya_worker_desc
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		text = job_izakaya_drone_desc
 	}
@@ -2423,13 +2423,13 @@ building_magic_academy = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		job_magician_add = 1000
 	}
 	triggered_planet_modifier = {
 		potential = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		job_magician_drone_add = 1000
 	}
@@ -2446,13 +2446,13 @@ building_magic_academy = {
 
 	triggered_desc = {
 		trigger = {
-			is_gestalt = no
+			owner = { is_gestalt = no }
 		}
 		text = job_magician_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
-			is_gestalt = yes
+			owner = { is_gestalt = yes }
 		}
 		text = job_magician_drone_effect_desc
 	}
