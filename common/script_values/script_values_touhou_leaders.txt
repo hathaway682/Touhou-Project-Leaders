@@ -123,7 +123,7 @@ doll_bonus_assemble_derivative = {
 	multiply = value:doll_bonus_assemble_derivative_pop_expectation
 	multiply = 0.008 #第一个参数k
 	divide = modifier:doll_control_limit
-	add = 1 #第三个参数，基础值
+	add = 2 #第三个参数，基础值
 	subtract = value:doll_bonus_assemble_derivative_over_limit_punish
 }
 
