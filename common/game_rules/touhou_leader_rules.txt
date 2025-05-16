@@ -23,8 +23,9 @@ system_blocks_sensors = {
 can_species_be_assembled = {
 	is_robotic = yes
 	is_sapient = yes
-	NOT = {
+	NOR = {
 		has_trait = trait_exd
+		has_trait = trait_sanae_robot_worker
 	}
 	NOT = {
 		AND = {

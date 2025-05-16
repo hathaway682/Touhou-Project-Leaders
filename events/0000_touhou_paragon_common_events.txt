@@ -1235,7 +1235,7 @@ leader_event = {
 				rare_crystals = -200
 			}
 		}
-		add_trait = leader_trait_crusader_3
+		add_trait = leader_trait_crusader_2
 		add_trait = leader_trait_lavish_lifestyle
 	}
 	option = {
@@ -1586,6 +1586,12 @@ leader_event = {
 		exists = owner
 	}
 
+	immediate = {
+		owner = {
+			set_country_flag = reimu_psi_jump
+		}
+	}
+
 	option = {
 		name = EXCELLENT
 		owner = {
@@ -1612,6 +1618,12 @@ leader_event = {
 
 	trigger = {
 		exists = owner
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = reimu_psi_shield
+		}
 	}
 
 	option = {

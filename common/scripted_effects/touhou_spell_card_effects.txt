@@ -169,6 +169,21 @@ reimu_spell_card_3_effect = {
         add_resource = {
             thl_bomb = -1
         }
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = reimu_psi_shield
+                }
+            }
+            random_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                leader_event = {
+                    id = touhou_paragon.40630
+                }
+            }
+        }
     }
     if = {
         limit = {
@@ -211,6 +226,21 @@ reimu_spell_card_5_effect = {
     from = {
         add_resource = {
             thl_bomb = -1
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = reimu_psi_shield
+                }
+            }
+            random_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                leader_event = {
+                    id = touhou_paragon.40620
+                }
+            }
         }
     }
     if = {

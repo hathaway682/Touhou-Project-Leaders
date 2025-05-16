@@ -687,7 +687,7 @@ dollmaker_drone = {
     inline_script = {
         script = buildings/doll_maker_output
         UPPER_LIMIT = 8
-        LOWER_LIMIT =7
+        LOWER_LIMIT = 7
         GROWTH = 15
     }
 

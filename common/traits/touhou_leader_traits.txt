@@ -1901,10 +1901,10 @@ leader_trait_wholehearted = {
 		army_experience_gain_mult = 1
 	}
 	sector_modifier = {
-		spirit_workforce_mult = 0.2
+		spirit_workforce_mult = 0.1
 	}
 	planet_modifier = {
-		spirit_workforce_mult = 0.1
+		spirit_workforce_mult = 0.2
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }

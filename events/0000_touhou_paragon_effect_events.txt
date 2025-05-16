@@ -8764,7 +8764,7 @@ country_event = {
     is_triggered_only = yes
     hide_window = yes
     immediate = {
-        every_owned_ship = {
+        every_owned_fleet = {
             if = {
                 limit = {
                     exists = leader
@@ -8772,12 +8772,12 @@ country_event = {
                         has_trait = thl_leader_trait_nuclear
                     }
                 }
-                ship_event = { id = touhou_paragon_effect.42683 } #销毁舰队
+                fleet_event = { id = touhou_paragon_effect.42683 } #销毁舰队
             }
         }
     }
 }
-ship_event = {
+fleet_event = {
     id = touhou_paragon_effect.42683
     is_triggered_only = yes
     title = touhou_paragon_effect.42683.name
@@ -8785,10 +8785,8 @@ ship_event = {
     picture = GFX_evt_utsuho
     show_sound = event_planetary_riot
     immediate = {
-        fleet = {
-            set_event_locked = yes
-            save_global_event_target_as = utsuho_locked_fleet
-        }
+        set_event_locked = yes
+        save_global_event_target_as = utsuho_locked_fleet
     }
     # option = {
     #     name = touhou_paragon_effect.42683.a
