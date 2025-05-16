@@ -1256,7 +1256,7 @@
  #touhou_paragon_enclave.305.f: "作为盟友，我想探听一些情报。"
  touhou_paragon_enclave.305.g: "我听说§Y非想天则§!是你们建造的？"
  touhou_paragon_enclave.305.h: "我可以请水中的工程师§Y河城荷取§!担任我国顾问吗？"
- kappa_enclave_migration: "用2000£alloys£合金交换3个河童£pop£人口，河童精通于生产与科研"
+ kappa_enclave_migration: "用1000£alloys£合金交换3个河童£pop£人口，河童精通于生产与科研"
  kappa_enclave_migration_2: "三个河童人口到达了[this.GetName]行星上"
  kappa_enclave_recently_migration_cooldown: "我们五年内只能购买一次移民服务"
  touhou_paragon_enclave.310.desc.no.slave:0 "没问题盟友，我们正好有一批期望获得更高薪资的河童技术移民，但是您必须保证给予她们完整公民权和一定的福利待遇。另外，我们可能需要一笔手续费，最好是通过工程资源赞助的方式……"
