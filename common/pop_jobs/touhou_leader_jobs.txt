@@ -483,85 +483,101 @@ dollmaker = {
     }
 
     # Add growth from 0 to 25 depending on 'clone_pops_missing_per_vat'.
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 11 }
+    #     }
+    #     planet_pop_assembly_add = 25
+    # }
     triggered_planet_modifier = {
         potential = {
-            check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 11 }
-        }
-        planet_pop_assembly_add = 25
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 11
-        LOWER_LIMIT = 10
-        GROWTH = 22
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 10
-        LOWER_LIMIT = 9
-        GROWTH = 20
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 9
-        LOWER_LIMIT = 8
-        GROWTH = 17
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 8
-        LOWER_LIMIT =7
-        GROWTH = 15
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 7
-        LOWER_LIMIT = 6
-        GROWTH = 12
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 6
-        LOWER_LIMIT = 5
-        GROWTH = 10
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 5
-        LOWER_LIMIT = 4
-        GROWTH = 7
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 4
-        LOWER_LIMIT = 3
-        GROWTH = 5
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 3
-        LOWER_LIMIT = 0
-        GROWTH = 2
-    }
-
-    triggered_planet_modifier = {
-        potential = {
-            owner = {
-                has_technology = tech_sapient_dolls
+            planet = {
+                check_variable_arithmetic = { which = value:doll_missing_per_maker value > 0 }
             }
         }
-        planet_pop_assembly_add = 2
+        modifier = {
+            planet_pop_assembly_add = 1
+        }
+        mult = value:doll_bonus_assemble_derivative
     }
-
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 11 }
+    #     }
+    #     planet_pop_assembly_add = 25
+    # }
+    #
+    # inline_script = {
+    #     script = buildings/doll_maker_output
+    #     UPPER_LIMIT = 11
+    #     LOWER_LIMIT = 10
+    #     GROWTH = 22
+    # }
+    #
+    # inline_script = {
+    #     script = buildings/doll_maker_output
+    #     UPPER_LIMIT = 10
+    #     LOWER_LIMIT = 9
+    #     GROWTH = 20
+    # }
+    #
+    # inline_script = {
+    #     script = buildings/doll_maker_output
+    #     UPPER_LIMIT = 9
+    #     LOWER_LIMIT = 8
+    #     GROWTH = 17
+    # }
+    #
+    # inline_script = {
+    #     script = buildings/doll_maker_output
+    #     UPPER_LIMIT = 8
+    #     LOWER_LIMIT =7
+    #     GROWTH = 15
+    # }
+    #
+    # inline_script = {
+    #     script = buildings/doll_maker_output
+    #     UPPER_LIMIT = 7
+    #     LOWER_LIMIT = 6
+    #     GROWTH = 12
+    # }
+    #
+    # inline_script = {
+    #     script = buildings/doll_maker_output
+    #     UPPER_LIMIT = 6
+    #     LOWER_LIMIT = 5
+    #     GROWTH = 10
+    # }
+    #
+    # inline_script = {
+    #     script = buildings/doll_maker_output
+    #     UPPER_LIMIT = 5
+    #     LOWER_LIMIT = 4
+    #     GROWTH = 7
+    # }
+    #
+    # inline_script = {
+    #     script = buildings/doll_maker_output
+    #     UPPER_LIMIT = 4
+    #     LOWER_LIMIT = 3
+    #     GROWTH = 5
+    # }
+    #
+    # inline_script = {
+    #     script = buildings/doll_maker_output
+    #     UPPER_LIMIT = 3
+    #     LOWER_LIMIT = 0
+    #     GROWTH = 2
+    # }
+    #
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         owner = {
+    #             has_technology = tech_sapient_dolls
+    #         }
+    #     }
+    #     planet_pop_assembly_add = 2
+    # }
 
     resources = {
         category = planet_pop_assemblers

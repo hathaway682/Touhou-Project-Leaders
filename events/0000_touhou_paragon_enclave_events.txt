@@ -313,7 +313,7 @@ country_event = {
             allows_slavery = no
             has_country_resource = {
                 type = alloys
-                amount >= 2000
+                amount >= 1000
             }
         }
         capital_scope = {
@@ -326,7 +326,7 @@ country_event = {
             custom_tooltip = kappa_enclave_migration_2
         }
         add_resource = {
-            alloys = -2000
+            alloys = -1000
         }
         set_timed_country_flag = {
             flag = kappa_enclave_recently_migration
@@ -472,6 +472,7 @@ country_event = {
                 amount = 10
             }
         }
+        country_event = { id = touhou_paragon_enclave.305 }
     }
     option = {
         name = touhou_paragon_enclave.330.b
@@ -481,13 +482,23 @@ country_event = {
                 has_civic = civic_corporate_catalytic_processing
             }
         }
+        allow = {
+            has_country_resource = {
+                type = food
+                amount >= 2500
+            }
+        }
         set_country_flag = kappa_expanded_shipyard_enable
+        add_resource = {
+            food = -2500
+        }
         event_target:kappa_enclave_country = {
             add_trust = {
                 who = root
                 amount = 20
             }
         }
+        country_event = { id = touhou_paragon_enclave.305 }
     }
     option = {
         name = touhou_paragon_enclave.310.b
@@ -742,7 +753,7 @@ country_event = {
             }
             resource_stockpile_compare = {
                 resource = energy
-                value >= -5 #flip to a positive value to make this comparison
+                value >= -3 #flip to a positive value to make this comparison
                 mult = kappa_enclave_cost
             }
             event_target:kappa_enclave_country = {
@@ -757,7 +768,7 @@ country_event = {
             days = 3600
         }
         add_resource = {
-            energy = 5
+            energy = 3
             mult = kappa_enclave_cost
         }
         event_target:kappa_enclave_country = {
@@ -804,7 +815,7 @@ country_event = {
         allow = {
             resource_stockpile_compare = {
                 resource = energy
-                value >= -5 #flip to a positive value to make this comparison
+                value >= -3 #flip to a positive value to make this comparison
                 mult = kappa_enclave_cost
             }
             event_target:kappa_enclave_country = {
@@ -819,7 +830,7 @@ country_event = {
             days = 3600
         }
         add_resource = {
-            energy = 5
+            energy = 3
             mult = kappa_enclave_cost
         }
         event_target:kappa_enclave_country = {
@@ -1042,6 +1053,9 @@ first_contact_event = {
     after = {
         set_site_progress_locked = no
         finish_first_contact_effect = yes
+        owner = {
+            country_event = { id = touhou_paragon_enclave.300 }
+        }
     }
 }
 
