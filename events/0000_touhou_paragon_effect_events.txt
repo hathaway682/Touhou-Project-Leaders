@@ -2625,7 +2625,7 @@ planet_event = {
                     trait = trait_mechanical
                     trait = trait_sanae_robot_worker
                     trait = trait_robot_history_warbot #没有意义，但很酷
-                    #trait = trait_robot_integrated_weaponry 这个会加执法者权重，还是不搞了
+                    trait = trait_robot_ancient_dreadnought
                     trait = trait_auto_mod_robotic
                 }
                 effect = {

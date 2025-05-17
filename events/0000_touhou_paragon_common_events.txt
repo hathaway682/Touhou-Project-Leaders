@@ -54,7 +54,7 @@ country_event = {
 			#	set_leader_flag = reimu_leader
 			#	set_age = 17
 			#}
-			create_reimu_leader = yes
+			create_civic_reimu_leader = yes
 			set_global_flag = reimu
 			set_country_flag = can_build_shirne
 			set_country_flag = hakurei_shrine_country
@@ -66,20 +66,7 @@ country_event = {
 					has_civic = civic_moriya_shinto_corp
 				}
 			}
-			create_fleet = {
-				effect = {
-					set_owner = root
-					create_ship = {
-						name = random
-						design = NAME_Scholarium_Science
-					}
-					set_location = root.capital_star
-					root = {
-						create_sanae_leader = yes
-					}
-					assign_leader = last_created_leader
-				}
-			}
+			create_civic_sanae_leader = yes
 			give_technology = {
 				tech = tech_storm_prediction_1
 				message = no
@@ -107,7 +94,7 @@ country_event = {
 						location = root
 					}
 					root = {
-						create_marisa_leader = yes
+						create_civic_marisa_leader = yes
 					}
 					assign_leader = last_created_leader
 					set_location = root.capital_star
@@ -122,7 +109,7 @@ country_event = {
 					has_civic = civic_scarlet_allience_corp
 				}
 			}
-			create_sakuya_leader = yes
+			create_civic_sakuya_leader = yes
 			capital_scope = {
 				assign_leader = last_created_leader
 			}
@@ -161,9 +148,11 @@ country_event = {
 					save_global_event_target_as = ghost_species
 				}
 			}
-			create_pop_group = {
-				species = event_target:ghost_species
-				size = 400
+			capital_scope = {
+				create_pop_group = {
+					species = event_target:ghost_species
+					size = 400
+				}
 			}
 			set_global_flag = youmu
 		}
@@ -174,7 +163,7 @@ country_event = {
 					has_civic = civic_penglai_medcine_corp
 				}
 			}
-			create_reisen_leader = yes
+			create_civic_reisen_leader = yes
 			give_technology = {
 				tech = tech_genome_mapping
 				message = no

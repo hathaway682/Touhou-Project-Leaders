@@ -200,11 +200,32 @@ kappa_enclave_init = {
 							trait = trait_wet_planet_preference
 							trait = trait_sanae_robot_worker
 							trait = trait_robot_history_warbot
-							#trait = trait_robot_integrated_weaponry
+							trait = trait_robot_ancient_dreadnought
 							trait = trait_auto_mod_robotic
 						}
 						effect = {
 							save_global_event_target_as = sanae_robot_worker_species
+						}
+					}
+					create_species = {
+						name = "NAME_Kappa_Robot_Worker"
+						plural = "NAME_Kappa_Robot_Worker"
+						class = ROBOT
+						portrait = "aqu_machine"
+						namelist = "AI"
+						traits = {
+							trait = trait_mechanical
+							trait = trait_wet_planet_preference
+							trait = trait_sanae_robot_worker
+							trait = trait_robot_history_resourcebot
+							trait = trait_robot_double_jointed
+							trait = trait_robot_durable
+							trait = trait_robot_mass_produced
+							trait = trait_robot_streamlined_protocols
+							trait = trait_auto_mod_robotic
+						}
+						effect = {
+							save_global_event_target_as = kappa_robot_worker_species
 						}
 					}
 				}

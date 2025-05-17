@@ -58,5 +58,5 @@ ruined_shrine = {
 
 touhou_eientei = {
 	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
-	picture = GFX_evt_eientei
+	picture = GFX_evt_tewi_moon
 }

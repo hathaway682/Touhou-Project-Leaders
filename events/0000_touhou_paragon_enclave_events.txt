@@ -731,7 +731,26 @@ country_event = {
         }
         capital_scope = {
             create_pop_group = {
-                species = event_target:sanae_robot_worker_species
+                species = event_target:kappa_robot_worker_species
+                size = 1000
+            }
+            if = {
+                limit = {
+                    mid_game_years_passed > 0
+                }
+                create_pop_group = {
+                    species = event_target:kappa_robot_worker_species
+                    size = 1000
+                }
+            }
+            if = {
+                limit = {
+                    end_game_years_passed > 0
+                }
+                create_pop_group = {
+                    species = event_target:kappa_robot_worker_species
+                    size = 1000
+                }
             }
         }
         event_target:kappa_enclave_country = {

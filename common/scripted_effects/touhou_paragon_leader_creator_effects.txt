@@ -187,6 +187,22 @@ add_suika_traits = {
 	set_age = 17
 }
 
+create_civic_sanae_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x72
+		CLASS = commander
+		NAME = NAME_Sanae
+		LEVEL = 1
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = spiritualist
+		DESC = sanae1
+		CATCH_PHRASE = sanae1_catch_phrase
+		TRAIT_GROUP = sanae
+	}
+}
+
 create_sanae_leader = {
 	thl_leader_creator_core = {
 		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
@@ -287,6 +303,22 @@ add_meiling_traits = {
 	set_age = 17
 }
 
+create_civic_reimu_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x1
+		CLASS = commander
+		NAME = NAME_Reimu
+		LEVEL = 1
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = egalitarian
+		DESC = reimu1
+		CATCH_PHRASE = reimu1_catch_phrase
+		TRAIT_GROUP = reimu
+	}
+}
+
 create_reimu_leader = {
 	thl_leader_creator_core = {
 		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
@@ -320,6 +352,22 @@ add_reimu_traits = {
 	set_leader_flag = legendary_leader
 	set_leader_flag = reimu_leader
 	set_age = 17
+}
+
+create_civic_marisa_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x2
+		CLASS = commander
+		NAME = NAME_Marisa
+		LEVEL = 1
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = militarist
+		DESC = marisa1
+		CATCH_PHRASE = marisa1_catch_phrase
+		TRAIT_GROUP = marisa
+	}
 }
 
 create_marisa_leader = {
@@ -356,6 +404,22 @@ add_marisa_traits = {
 	set_leader_flag = legendary_leader
 	set_leader_flag = marisa_leader
 	set_age = 16
+}
+
+create_civic_reisen_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x6
+		CLASS = commander
+		NAME = NAME_Reisen
+		LEVEL = 1
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = pacifist
+		DESC = reisen1
+		CATCH_PHRASE = reisen1_catch_phrase
+		TRAIT_GROUP = reisen
+	}
 }
 
 create_reisen_leader = {
@@ -395,6 +459,22 @@ add_reisen_traits = {
 	set_age = 17
 }
 
+create_civic_youmu_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x150
+		CLASS = commander
+		NAME = NAME_Youmu
+		LEVEL = 1
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = xenophile
+		DESC = youmu1
+		CATCH_PHRASE = youmu1_catch_phrase
+		TRAIT_GROUP = youmu
+	}
+}
+
 create_youmu_leader = {
 	thl_leader_creator_core = {
 		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
@@ -427,6 +507,22 @@ add_youmu_traits = {
 	set_leader_flag = legendary_leader
 	set_leader_flag = youmu_leader
 	set_age = 17
+}
+
+create_civic_sakuya_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x88
+		CLASS = commander
+		NAME = NAME_Sakuya
+		LEVEL = 1
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = authoritarian
+		DESC = sakuya1
+		CATCH_PHRASE = sakuya1_catch_phrase
+		TRAIT_GROUP = sakuya
+	}
 }
 
 create_sakuya_leader = {
