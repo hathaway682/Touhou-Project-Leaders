@@ -2018,6 +2018,7 @@ decision_miracle_3 = {
 		category = decisions
 		cost = {
 			unity = 1000
+			minerals = 500
 		}
 	}
 

@@ -488,6 +488,8 @@ modifier_utsuho_solette_tech = {
 modifier_sanae_mission_tech_1 = {
 	MACHINE_species_trait_points_add = 1
 	ROBOT_species_trait_points_add = 1
+	MACHINE_species_trait_picks_add = 1
+	ROBOT_species_trait_picks_add = 1
 	planet_pops_robotics_upkeep_mult = -0.15
 }
 
@@ -525,17 +527,17 @@ modifier_sanae_mission_adm_3 = {
 	country_government_civic_points_add = 1
 }
 
-modifier_sanae_mission_faith_3_noperk = {
-	country_unity_produces_mult = 0.10
-	pop_amenities_usage_mult = -0.10
-	pop_government_ethic_attraction = 0.50
-}
-
-modifier_sanae_mission_faith_3_perk = {
-	country_unity_produces_mult = 0.05
-	pop_amenities_usage_mult = -0.05
-	pop_government_ethic_attraction = 0.25
-}
+# modifier_sanae_mission_faith_3_noperk = {
+# 	country_unity_produces_mult = 0.10
+# 	pop_amenities_usage_mult = -0.10
+# 	pop_government_ethic_attraction = 0.50
+# }
+#
+# modifier_sanae_mission_faith_3_perk = {
+# 	country_unity_produces_mult = 0.05
+# 	pop_amenities_usage_mult = -0.05
+# 	pop_government_ethic_attraction = 0.25
+# }
 
 modifier_sanae_mission_adm_4_eco = {
 	megastructure_build_speed_mult = 0.25

@@ -444,7 +444,7 @@ dollmaker = {
 
     possible = {
         OR = {
-            is_robot_pop = no
+            is_robot_pop_group = no
             AND = {
                 has_trait = trait_thl_doll
                 owner = { has_technology = tech_doll_assembly_complex }
@@ -1121,7 +1121,7 @@ touhou_bookseller = {
             society_research = 3
         }
     }
-
+    
     planet_modifier = {
         pop_physicist_bonus_workforce_mult = 0.01
         pop_biologist_bonus_workforce_mult = 0.01
@@ -1225,11 +1225,23 @@ touhou_bookseller_drone = {
             society_research = 3
         }
     }
-
-    planet_modifier = {
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
         pop_physicist_bonus_workforce_mult = 0.01
         pop_biologist_bonus_workforce_mult = 0.01
         pop_engineer_bonus_workforce_mult = 0.01
+        mult = owner.bookstore_size
+    }
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        pop_physicist_bonus_workforce_mult = 0.01
+        pop_biologist_bonus_workforce_mult = 0.01
+        pop_engineer_bonus_workforce_mult = 0.01
+        mult = owner.trigger:astral_rifts_completed
     }
 
     weight = {
