@@ -472,13 +472,13 @@ dollmaker = {
 
     triggered_planet_modifier = {
         potential = { owner = { has_technology = tech_automatic_dolls } }
-        doll_control_limit = 1000
+        doll_control_limit = 500
         #planet_doll_jobs_worker_produces_mult = 0.05
     }
 
     triggered_planet_modifier = {
         potential = { owner = { has_technology = tech_sapient_dolls } }
-        doll_control_limit = 1000
+        doll_control_limit = 500
         #planet_doll_jobs_specialist_produces_mult = 0.05
     }
 

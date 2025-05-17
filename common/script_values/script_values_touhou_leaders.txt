@@ -66,32 +66,32 @@ doll_missing_per_maker = {
 		mode = divide
 	}
 }
-
-doll_bonus_assemble_derivative_exponents = { #幂指数位置的计算
-	base = 0
-	# add = modifier:doll_control_limit
-	complex_trigger_modifier = {
-		trigger = count_owned_pop_amount
-		parameters = {
-			limit = { has_trait = trait_thl_doll }
-		}
-		mode = add
-	}
-	multiply = -0.008 #第一个参数-k,影响S曲线的斜率，即达到组装90%所需的时间
-	add = 4 #第二个参数x_0，直接控制曲线的左右位移，影响曲线的截距
-}
-
-doll_bonus_assemble_derivative_dividend = { #除数位置的计算
-	base = 2.71828
-	pow = value:doll_bonus_assemble_derivative_exponents
-	add = 1
-}
-
-doll_bonus_assemble_derivative_pop_expectation = { #人口期望为人偶上限除以
-	base = 0
-	add = modifier:doll_control_limit
-	divide = value:doll_bonus_assemble_derivative_dividend
-}
+# 这些都是隐变量，我们不需要计算
+# doll_bonus_assemble_derivative_exponents = { #幂指数位置的计算
+# 	base = 0
+# 	# add = modifier:doll_control_limit
+# 	complex_trigger_modifier = {
+# 		trigger = count_owned_pop_amount
+# 		parameters = {
+# 			limit = { has_trait = trait_thl_doll }
+# 		}
+# 		mode = add
+# 	}
+# 	multiply = -0.018 #第一个参数-k,影响S曲线的斜率，即达到组装90%所需的时间
+# 	add = 6 #第二个参数x_0，直接控制曲线的左右位移，影响曲线的截距
+# }
+#
+# doll_bonus_assemble_derivative_dividend = { #除数位置的计算
+# 	base = 2.71828
+# 	pow = value:doll_bonus_assemble_derivative_exponents
+# 	add = 1
+# }
+#
+# doll_bonus_assemble_derivative_pop_expectation = { #人口期望为人偶上限除以
+# 	base = 0
+# 	add = modifier:doll_control_limit
+# 	divide = value:doll_bonus_assemble_derivative_dividend
+# }
 
 doll_bonus_assemble_derivative_over_limit_punish = {
 	base = 0
@@ -103,8 +103,7 @@ doll_bonus_assemble_derivative_over_limit_punish = {
 		mode = add
 	}
 	subtract = modifier:doll_control_limit
-	pow = 2
-	square_root = yes
+	abs = yes
 	complex_trigger_modifier = {
 		trigger = count_owned_pop_amount
 		parameters = {
@@ -119,11 +118,23 @@ doll_bonus_assemble_derivative_over_limit_punish = {
 doll_bonus_assemble_derivative = {
 	base = 0
 	add = modifier:doll_control_limit
-	subtract = value:doll_bonus_assemble_derivative_pop_expectation
-	multiply = value:doll_bonus_assemble_derivative_pop_expectation
-	multiply = 0.008 #第一个参数k
+	complex_trigger_modifier = {
+		trigger = count_owned_pop_amount
+		parameters = {
+			limit = { has_trait = trait_thl_doll }
+		}
+		mode = subtract
+	}
+	complex_trigger_modifier = {
+		trigger = count_owned_pop_amount
+		parameters = {
+			limit = { has_trait = trait_thl_doll }
+		}
+		mode = multiply
+	}
+	multiply = 0.016 #第一个参数k
 	divide = modifier:doll_control_limit
-	add = 2 #第三个参数，基础值
+	add = 1 #第二个参数，基础值
 	subtract = value:doll_bonus_assemble_derivative_over_limit_punish
 }
 
