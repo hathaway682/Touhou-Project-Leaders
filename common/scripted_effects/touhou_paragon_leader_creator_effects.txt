@@ -557,6 +557,22 @@ add_sakuya_traits = {
 	set_age = 20
 }
 
+create_civic_merry_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x48
+		CLASS = scientist
+		NAME = NAME_Merry
+		LEVEL = 1
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = xenophile
+		DESC = merry1
+		CATCH_PHRASE = merry1_catch_phrase
+		TRAIT_GROUP = merry
+	}
+}
+
 create_merry_leader = {
 	thl_leader_creator_core = {
 		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
@@ -588,6 +604,22 @@ add_merry_traits = {
 	set_leader_flag = legendary_leader
 	set_leader_flag = merry_leader
 	set_age = 17
+}
+
+create_civic_renko_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x49
+		CLASS = scientist
+		NAME = NAME_Renko
+		LEVEL = 1
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = materialist
+		DESC = renko1
+		CATCH_PHRASE = renko1_catch_phrase
+		TRAIT_GROUP = renko
+	}
 }
 
 create_renko_leader = {

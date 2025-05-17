@@ -2129,9 +2129,9 @@ thl_leader_trait_century_of_science = {
 		potential = {
 			leader_class = scientist
 		}
-		leader_scientists_physics_research_produces_add = 1
-		leader_scientists_society_research_produces_add = 1
-		leader_scientists_engineering_research_produces_add = 1
+		leader_scientists_physics_research_produces_add = 10
+		leader_scientists_society_research_produces_add = 10
+		leader_scientists_engineering_research_produces_add = 10
 		mult = trigger:has_base_skill
 	}
 	leader_trait_type = veteran
@@ -3645,32 +3645,32 @@ thl_leader_trait_memory = {
 		potential = {
 			always = yes
 		}
-		leader_scientists_unity_produces_add = 6
-		leader_scientists_society_research_produces_add = 6
+		leader_scientists_unity_produces_add = 10
+		leader_scientists_society_research_produces_add = 10
 		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
 			has_trait = thl_leader_trait_cyborg_life
 		}
-		leader_scientists_society_research_produces_add = 6
-		leader_scientists_engineering_research_produces_add = 6
+		leader_scientists_society_research_produces_add = 10
+		leader_scientists_engineering_research_produces_add = 10
 		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
 			has_trait = thl_leader_trait_synth_life
 		}
-		leader_scientists_physics_research_produces_add = 6
-		leader_scientists_engineering_research_produces_add = 6
+		leader_scientists_physics_research_produces_add = 10
+		leader_scientists_engineering_research_produces_add = 10
 		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
 			has_trait = thl_leader_trait_gene_life
 		}
-		leader_scientists_physics_research_produces_add = 6
-		leader_scientists_society_research_produces_add = 6
+		leader_scientists_physics_research_produces_add = 10
+		leader_scientists_society_research_produces_add = 10
 		mult = trigger:has_base_skill
 	}
 	modifier = {

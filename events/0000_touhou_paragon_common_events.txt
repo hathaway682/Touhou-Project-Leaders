@@ -91,7 +91,7 @@ country_event = {
 					}
 					create_ambient_object = {
 						type = eventship_02_object
-						location = root
+						location = root.capital_star
 					}
 					root = {
 						create_civic_marisa_leader = yes
@@ -122,7 +122,7 @@ country_event = {
 					has_civic = civic_nether_world_corp
 				}
 			}
-			create_youmu_leader = yes
+			create_civic_youmu_leader = yes
 			if = {
 				limit = {
 					NOT = {
@@ -233,7 +233,7 @@ country_event = {
 					set_location = root.capital_scope.star
 
 					owner = {
-						create_merry_leader = yes
+						create_civic_merry_leader = yes
 					}
 					set_leader = last_created_leader
 				}
@@ -251,7 +251,7 @@ country_event = {
 					set_location = root.capital_scope.star
 
 					owner = {
-						create_renko_leader = yes
+						create_civic_renko_leader = yes
 					}
 					set_leader = last_created_leader
 				}
