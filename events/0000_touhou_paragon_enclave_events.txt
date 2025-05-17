@@ -2771,10 +2771,10 @@ country_event = {
         allow = {
             has_country_resource = {
                 type = energy
-                amount >= 100000
+                amount >= 10000
             }
         }
-        add_resource = { energy = -100000 }
+        add_resource = { energy = -10000 }
         hidden_effect = {
             every_owned_leader = {
                 limit = {

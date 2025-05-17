@@ -1219,14 +1219,14 @@ building_doll_assembly_plant = {
 		potential = {
 			is_individual_machine = yes
 		}
-		job_dollmaker_add = 100
+		job_dollmaker_add = 50
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			owner = { is_gestalt = yes }
 		}
-		job_dollmaker_drone_add = 200
+		job_dollmaker_drone_add = 150
 	}
 
 	triggered_desc = {
@@ -1343,20 +1343,20 @@ building_doll_assembly_complex = {
 		potential = {
 			owner = { is_gestalt = no }
 		}
-		job_dollmaker_add = 300
+		job_dollmaker_add = 200
 	}
 	triggered_planet_modifier = {
 		potential = {
 			is_individual_machine = yes
 		}
-		job_dollmaker_add = 100
+		job_dollmaker_add = 50
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			owner = { is_gestalt = yes }
 		}
-		job_dollmaker_drone_add = 400
+		job_dollmaker_drone_add = 250
 	}
 
 	triggered_desc = {
