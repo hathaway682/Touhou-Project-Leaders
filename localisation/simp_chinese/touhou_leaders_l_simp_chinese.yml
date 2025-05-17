@@ -1642,14 +1642,14 @@
  job_touhou_bookseller_drone_plural:0 "秘传子个体"
  job_touhou_bookseller_drone_icon:0 "£job_touhou_bookseller_drone£"
  job_touhou_bookseller_drone_desc:0 "我们需要专门分化的子个体处理具有认知危害的物体，来自自主代理“本居小铃”的算法提高了其效率。"
- mod_job_touhou_bookseller_add:0 "$job_touhou_bookseller_drone$岗位"
+ mod_job_touhou_bookseller_add:0 "$job_touhou_bookseller$岗位"
  job_touhou_bookseller_drone_effect_desc:1 "£job_touhou_bookseller_drone£$job_touhou_bookseller_drone_plural$将$r_minerals$转化为根据§Y完成星界裂隙数§!递增的$r_physics$、$r_astral_threads$和根据§Y完成考古遗迹数§!递增的$r_society$、$r_minor_artifacts$，并增加科研岗位的效率。"
  mod_job_touhou_bookseller_drone_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_touhou_bookseller_drone$岗位"
 
  mod_planet_researchers_minor_artifacts_produces_add:0 "£job_researcher£[GetResearcherPlural]产出的£minor_artifacts£ $minor_artifacts$"
- mod_planet_physicists_energy_produces_add:0 "£job_physicist£[GetPhysicsJobPlural]产出的£trade£ $trade$"
- mod_planet_engineers_energy_produces_add:0 "£job_engineer£[GetEngineerPlural]产出的£trade£ $trade$"
- mod_planet_biologists_energy_produces_add:0 "£job_biologist£[GetBiologyJobPlural]产出的£trade£ $trade$"
+ mod_planet_physicists_trade_produces_add:0 "£job_physicist£[GetPhysicsJobPlural]产出的£trade£ $trade$"
+ mod_planet_engineers_trade_produces_add:0 "£job_engineer£[GetEngineerPlural]产出的£trade£ $trade$"
+ mod_planet_biologists_trade_produces_add:0 "£job_biologist£[GetBiologyJobPlural]产出的£trade£ $trade$"
 
  building_suzunaan: "铃奈庵"
  building_suzunaan_desc: "本居小铃经营的借书屋——或者说租书屋，虽然要支付租金且不允许站着白看书，但其中收藏的稀有程度会让借阅者心甘情愿掏钱，借阅书籍可能导致的精神失常、火灾、目击怨灵、学会不明来历的占卜术、被马凭附身、奇怪的谣言四处传播、百鬼夜行、旧日支配者回归等后果由借阅者自负。"
