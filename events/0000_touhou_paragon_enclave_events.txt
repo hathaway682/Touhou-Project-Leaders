@@ -1049,13 +1049,13 @@ first_contact_event = {
                 }
             }
         }
+        owner = {
+            country_event = { id = touhou_paragon_enclave.305 }
+        }
     }
     after = {
         set_site_progress_locked = no
         finish_first_contact_effect = yes
-        owner = {
-            country_event = { id = touhou_paragon_enclave.300 }
-        }
     }
 }
 
