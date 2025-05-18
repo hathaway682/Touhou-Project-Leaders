@@ -910,7 +910,7 @@ country_event = {
 							has_ethic = ethic_fanatic_materialist
 						}
 					}
-					percentage >= 0.5
+					percentage >= 0.4
 				}
 				is_materialist = yes
 			}
@@ -1437,34 +1437,40 @@ country_event = {
 	# 	}
 	# 	add_research_option = tech_sanae_mission_mil_glidingsnake
 	# }
-	# option = {
-	# 	name = touhou_paragon_mission.40319.c
-	# 	allow = {
-	# 		check_modifier_value = {
-	# 			modifier = weapon_type_explosive_weapon_damage_mult
-	# 			value >= 1.0
-	# 		}
-	# 		check_modifier_value = {
-	# 			modifier = weapon_type_explosive_weapon_fire_rate_mult
-	# 			value >= 1.0
-	# 		}
-	# 	}
-	# 	add_research_option = tech_sanae_mission_mil_ironwheel
-	# }
-	# option = {
-	# 	name = touhou_paragon_mission.40319.d
-	# 	allow = {
-	# 		check_modifier_value = {
-	# 			modifier = weapon_type_kinetic_weapon_damage_mult
-	# 			value >= 1.0
-	# 		}
-	# 		check_modifier_value = {
-	# 			modifier = weapon_type_kinetic_weapon_fire_rate_mult
-	# 			value >= 1.0
-	# 		}
-	# 	}
-	# 	add_research_option = tech_sanae_mission_mil_onbashira
-	# }
+	option = {
+		name = touhou_paragon_mission.40319.c
+		allow = {
+			check_modifier_value = {
+				modifier = weapon_type_explosive_weapon_damage_mult
+				value >= 1.0
+			}
+			check_modifier_value = {
+				modifier = weapon_type_explosive_weapon_fire_rate_mult
+				value >= 1.0
+			}
+		}
+		add_research_option = tech_sanae_mission_mil_ironwheel
+	}
+	option = {
+		name = touhou_paragon_mission.40319.d
+		allow = {
+			check_modifier_value = {
+				modifier = weapon_type_kinetic_weapon_damage_mult
+				value >= 1.0
+			}
+			check_modifier_value = {
+				modifier = weapon_type_kinetic_weapon_fire_rate_mult
+				value >= 1.0
+			}
+		}
+		add_research_option = tech_sanae_mission_mil_onbashira
+	}
+	option = {
+		name = touhou_paragon_mission.40319.e
+		add_research_option = tech_sanae_mission_mil_nova
+		add_research_option = tech_sanae_mission_mil_ironwheel
+		add_research_option = tech_sanae_mission_mil_onbashira
+	}
 	after = {
 		hidden_effect = {
 			update_sanae_phase_trait = yes

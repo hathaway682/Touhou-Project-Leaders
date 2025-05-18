@@ -90,10 +90,10 @@ weapon_component_template = {
 	}
 
 	power = -228
-	damage = { min = 126 max = 288 }
+	damage = { min = 116 max = 288 }
 
-	shield_penetration = 1
-	armor_damage = 1.5
+	armor_penetration = 0.5
+	shield_damage = 2
 
 	windup = { min = 50.0 max = 60.0 }
 	range = 120
@@ -109,90 +109,89 @@ weapon_component_template = {
 		}
 	}
 }
-
-strike_craft_component_template = {
-	key = "GLIDINGSNAKE_SANAE"
-	size = LARGE
-	entity = "bomber_entity"
-	icon = "GFX_ship_part_strike_craft_fighter_3"
-	icon_frame = 1
-	weapon_type = point_defence
-	projectile_gfx = "strike_craft_laser_3"
-	prerequisites = { "tech_sanae_mission_mil_glidingsnake" }
-	component_set = "GLIDINGSNAKE_SANAE"
-	ship_behavior = "fighters_behavior"
-	power = -59
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @l_t6_cost
-		}
-		upkeep = {
-			energy = @l_t6_upkeep_energy
-			alloys = @l_t6_upkeep_alloys
-		}
-	}
-	point_defence_targets = { "strike_craft" }
-	count = 10
-	regeneration_per_day = 0.25
-	launch_time = 2
-
-	damage = { min = 10 max = 23 }
-	cooldown = 1.0
-	range = 25
-	engagement_range = 150
-	accuracy = 1.00
-	tracking = 1.00
-
-	health = 15
-	armor = 20
-	shield = 20
-	evasion = 0.95
-
-	speed = 2400
-	rotation_speed = 1.0
-	acceleration = 3.6
-
-	shield_penetration = 1.0
-	armor_damage = 2.0
-
-	tags = { weapon_type_strike_craft }
-	ai_tags = { weapon_role_point_defense carrier }
-	point_defence_targets = { "strike_craft" }
-	ai_weight = {
-		weight = 100
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
-		}
-	}
-}
-
+#非想天则是它的上位替代。目前不考虑继续使用。
+# strike_craft_component_template = {
+# 	key = "GLIDINGSNAKE_SANAE"
+# 	size = LARGE
+# 	entity = "bomber_entity"
+# 	icon = "GFX_ship_part_strike_craft_fighter_3"
+# 	icon_frame = 1
+# 	weapon_type = point_defence
+# 	projectile_gfx = "strike_craft_laser_3"
+# 	prerequisites = { "tech_sanae_mission_mil_glidingsnake" }
+# 	component_set = "GLIDINGSNAKE_SANAE"
+# 	ship_behavior = "fighters_behavior"
+# 	power = -59
+# 	resources = {
+# 		category = ship_components
+# 		cost = {
+# 			alloys = @l_t6_cost
+# 		}
+# 		upkeep = {
+# 			energy = @l_t6_upkeep_energy
+# 			alloys = @l_t6_upkeep_alloys
+# 		}
+# 	}
+# 	point_defence_targets = { "strike_craft" }
+# 	count = 10
+# 	regeneration_per_day = 0.25
+# 	launch_time = 2
+#
+# 	damage = { min = 10 max = 23 }
+# 	cooldown = 1.0
+# 	range = 25
+# 	engagement_range = 150
+# 	accuracy = 1.00
+# 	tracking = 1.00
+#
+# 	health = 15
+# 	armor = 20
+# 	shield = 20
+# 	evasion = 0.95
+#
+# 	speed = 2400
+# 	rotation_speed = 1.0
+# 	acceleration = 3.6
+#
+# 	shield_penetration = 1.0
+# 	armor_damage = 2.0
+#
+# 	tags = { weapon_type_strike_craft }
+# 	ai_tags = { weapon_role_point_defense carrier }
+# 	point_defence_targets = { "strike_craft" }
+# 	ai_weight = {
+# 		weight = 100
+# 		modifier = {
+# 			factor = 0.0
+# 			no_resource_for_component = { RESOURCE = volatile_motes }
+# 		}
+# 	}
+# }
 weapon_component_template = {
-	key = "IRONWHEEL_SANAE"
-	size = MEDIUM
+	key = "IRONWHEEL_SANAE_SMALL"
+	size = small
 	entity = "bomber_entity"
 	type = missile
-	icon = "GFX_ship_part_swarmer_missile_2"
+	icon = "GFX_ship_part_archaeo_missiles"
 	icon_frame = 1
-	projectile_gfx = "swarmer_missiles_02"
+	projectile_gfx = "swarmer_missiles"
 	prerequisites = { "tech_sanae_mission_mil_ironwheel" }
 	component_set = "IRONWHEEL_SANAE"
-	power = -59
+	power = -29
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @l_t6_cost
-			volatile_motes = @l_t6_rare
+			alloys = @l_t4_cost
+			volatile_motes = @l_t4_rare
 		}
 		upkeep = {
-			energy = @l_t6_upkeep_energy
-			alloys = @l_t6_upkeep_alloys
+			energy = @l_t4_upkeep_energy
+			alloys = @l_t4_upkeep_alloys
 		}
 	}
 	point_defence_targets = { "strike_craft" }
-	tags = { weapon_type_explosive g_slot }
-	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	tags = { weapon_type_explosive s_slot }
+	ai_tags = { weapon_role_anti_hull weapon_type_explosive }
 	ai_tag_weight = 0
 	ai_weight = {
 		weight = 1
@@ -201,32 +200,87 @@ weapon_component_template = {
 			no_resource_for_component = { RESOURCE = volatile_motes }
 		}
 	}
-	missile_shield = 30
-	missile_armor = 10
-	missile_evasion = 0.1
-	missile_health = 100
-	missile_speed = 200
+	missile_shield = 3
+	missile_armor = 3
+	missile_evasion = 0.95
+	missile_health = 5
+	missile_speed = 800
 	missile_retarget_range = 50
-	damage = { min = 50 max = 100 }
+	damage = { min = 14 max = 17 }
 	windup = { min = 25.0 max = 30.0 }
 	range = 160
 	accuracy = 1.00
-	tracking = 0.30
+	tracking = 1.00
 
+	size_damage_factor = 0.125
+	shield_penetration = 1.5
+	shield_damage = 0.5
+	hull_damage = 1.5
+}
+
+weapon_component_template = {
+	key = "IRONWHEEL_SANAE_MEDIUM"
+	size = MEDIUM
+	entity = "bomber_entity"
+	type = missile
+	icon = "GFX_ship_part_archaeo_missiles"
+	icon_frame = 1
+	projectile_gfx = "swarmer_missiles_02"
+	prerequisites = { "tech_sanae_mission_mil_ironwheel" }
+	component_set = "IRONWHEEL_SANAE"
+	power = -59
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t5_cost
+			volatile_motes = @l_t5_rare
+		}
+		upkeep = {
+			energy = @l_t5_upkeep_energy
+			alloys = @l_t5_upkeep_alloys
+		}
+	}
+	point_defence_targets = { "strike_craft" }
+	tags = { weapon_type_explosive m_slot }
+	ai_tags = { weapon_role_anti_hull weapon_type_explosive }
+	ai_tag_weight = 0
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+	missile_shield = 5
+	missile_armor = 5
+	missile_evasion = 0.95
+	missile_health = 10
+	missile_speed = 800
+	missile_retarget_range = 50
+	damage = { min = 35 max = 40 }
+	windup = { min = 25.0 max = 30.0 }
+	range = 160
+	accuracy = 1.00
+	tracking = 1.00
+
+	size_damage_factor = 0.125
+	shield_penetration = 1.5
+	shield_damage = 0.5
+	hull_damage = 1.5
 }
 
 weapon_component_template = {
 	key = "ONBASHIRA_SANAE"
-	size = LARGE
-	type = instant
-	icon = "GFX_ship_part_archaeo_mass_driver"
+	size = torpedo
+	type = missile
+	entity = "turret_torpedo_entity"
+	icon = "GFX_ship_part_scourge_missile_1"
 	icon_frame = 1
-	firing_arc = 23.5
 	prerequisites = { "tech_sanae_mission_mil_onbashira" }
 	component_set = "ONBASHIRA_SANAE"
-	projectile_gfx = "mass_driver_l"
-	tags = { weapon_type_kinetic weapon_archaeotech }
-	ai_tags = { weapon_role_anti_shield gunship }
+	projectile_gfx = "neutron_torpedoes"
+	tags = { weapon_type_kinetic g_slot }
+	ai_tags = { weapon_role_anti_shield artillery artillery_stealth }
 	resources = {
 		category = ship_components
 		cost = {
@@ -239,24 +293,35 @@ weapon_component_template = {
 		}
 	}
 
-	power = -114
-	damage = { min = 120 max = 300 }
+	power = -42
+	damage = { min = 216 max = 512 }
 
-	hull_damage = 1.25
-	shield_damage = 1.75
+	firing_arc = 25
+	armor_penetration = 1.5
+	armor_damage = 0.5
+	shield_damage = 2
 
-	windup = { min = 50.0 max = 60.0 }
+	windup = { min = 410.0 max = 475.0 }
 
-	range = 120
+	min_range = 50
+	range = 150
 
 	accuracy = 0.95
 	tracking = 0.05
+	size_damage_factor = 1
+
+	missile_shield = 0
+	missile_armor = 80
+	missile_evasion = 0
+	missile_health = 12
+	missile_speed = 36
+	missile_retarget_range = 125
 
 	ai_weight = {
 		weight = 100
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
+			no_resource_for_component = { RESOURCE = volatile_motes }
 		}
 	}
 }

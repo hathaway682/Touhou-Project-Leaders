@@ -1398,6 +1398,9 @@ building_doll_assembly_complex = {
 		text = tooltip_organic_and_artificial_assembly_warning
 	}
 	is_essential = yes
+	prerequisites = {
+		"tech_doll_assembly_complex"
+	}
 }
 
 building_suzunaan = {
