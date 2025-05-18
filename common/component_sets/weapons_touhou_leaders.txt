@@ -27,7 +27,7 @@ component_set = {
 component_set = {
 	key = "ONBASHIRA_SANAE"
 
-	icon = "GFX_ship_part_mass_driver_5"
+	icon = "GFX_ship_part_scourge_missile_1"
 	icon_frame = 1
 }
 
