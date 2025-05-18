@@ -55,6 +55,9 @@ country_event = {
 			#	set_age = 17
 			#}
 			create_civic_reimu_leader = yes
+			last_created_leader = {
+				add_trait = thl_leader_trait_destined
+			}
 			set_global_flag = reimu
 			set_country_flag = can_build_shirne
 			set_country_flag = hakurei_shrine_country
@@ -95,6 +98,9 @@ country_event = {
 					}
 					root = {
 						create_civic_marisa_leader = yes
+						last_created_leader = {
+							add_trait = thl_leader_trait_destined
+						}
 					}
 					assign_leader = last_created_leader
 					set_location = root.capital_star
@@ -110,6 +116,9 @@ country_event = {
 				}
 			}
 			create_civic_sakuya_leader = yes
+			last_created_leader = {
+				add_trait = thl_leader_trait_destined
+			}
 			capital_scope = {
 				assign_leader = last_created_leader
 			}
@@ -123,6 +132,9 @@ country_event = {
 				}
 			}
 			create_civic_youmu_leader = yes
+			last_created_leader = {
+				add_trait = thl_leader_trait_destined
+			}
 			if = {
 				limit = {
 					NOT = {
@@ -164,6 +176,9 @@ country_event = {
 				}
 			}
 			create_civic_reisen_leader = yes
+			last_created_leader = {
+				add_trait = thl_leader_trait_destined
+			}
 			give_technology = {
 				tech = tech_genome_mapping
 				message = no
@@ -234,6 +249,9 @@ country_event = {
 
 					owner = {
 						create_civic_merry_leader = yes
+						last_created_leader = {
+							add_trait = thl_leader_trait_destined
+						}
 					}
 					set_leader = last_created_leader
 				}
@@ -252,6 +270,9 @@ country_event = {
 
 					owner = {
 						create_civic_renko_leader = yes
+						last_created_leader = {
+							add_trait = thl_leader_trait_destined
+						}
 					}
 					set_leader = last_created_leader
 				}

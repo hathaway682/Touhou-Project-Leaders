@@ -5330,3 +5330,25 @@ thl_leader_trait_excessive_reimu = {
 		}
 	}
 }
+
+thl_leader_trait_destined = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_legendary_leader"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	triggered_self_modifier = {
+		potential = {
+			always = yes
+		}
+		leader_lifespan_mult = 1
+		species_leader_exp_gain = 1
+	}
+	leader_class = { commander official scientist  }
+	selectable_weight = {
+		weight = 0
+	}
+}
