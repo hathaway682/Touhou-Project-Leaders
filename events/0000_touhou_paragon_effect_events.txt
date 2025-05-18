@@ -3870,6 +3870,14 @@ country_event = {
 
     trigger = {
         from = {
+            NOR = {
+                # Spare Organs trait
+                AND = {
+                    species = { has_trait = trait_spare_organs }
+                    NOT = { has_trait = trait_leader_second_chanced }
+                }
+                leader_backup_clone_can_activate = yes
+            }
             OR = {
                 AND = {
                     has_trait = thl_leader_trait_regeneration
