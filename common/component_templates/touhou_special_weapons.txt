@@ -203,9 +203,9 @@ weapon_component_template = {
 	missile_shield = 3
 	missile_armor = 3
 	missile_evasion = 0.95
-	missile_health = 5
-	missile_speed = 800
-	missile_retarget_range = 50
+	missile_health = 3
+	missile_speed = 400
+	missile_retarget_range = 400
 	damage = { min = 14 max = 17 }
 	windup = { min = 25.0 max = 30.0 }
 	range = 160
@@ -254,10 +254,10 @@ weapon_component_template = {
 	missile_shield = 5
 	missile_armor = 5
 	missile_evasion = 0.95
-	missile_health = 10
-	missile_speed = 800
-	missile_retarget_range = 50
-	damage = { min = 35 max = 40 }
+	missile_health = 5
+	missile_speed = 400
+	missile_retarget_range = 400
+	damage = { min = 35 max = 39 }
 	windup = { min = 25.0 max = 30.0 }
 	range = 160
 	accuracy = 1.00
@@ -293,7 +293,7 @@ weapon_component_template = {
 		}
 	}
 
-	power = -42
+	power = -34
 	damage = { min = 216 max = 512 }
 
 	firing_arc = 25
@@ -315,7 +315,7 @@ weapon_component_template = {
 	missile_evasion = 0
 	missile_health = 12
 	missile_speed = 36
-	missile_retarget_range = 125
+	missile_retarget_range = 100
 
 	ai_weight = {
 		weight = 100
