@@ -1358,7 +1358,6 @@ crack_star_edict = {
 	}
 }
 
-<<<<<<< HEAD
 # change_government_touhou = {
 # 	length = 1
 # 	icon = "GFX_edict_type_time"
@@ -1406,55 +1405,6 @@ crack_star_edict = {
 # 		}
 # 	}
 # }
-=======
-change_government_touhou = {
-	length = 1
-	icon = "GFX_edict_type_time"
-	potential = {
-		OR = {
-			has_civic = civic_hakurei_shinto
-			has_civic = civic_moriya_shinto
-			has_civic = civic_kirisame_magic
-			has_civic = civic_scarlet_allience
-			has_civic = civic_nether_world
-			has_civic = civic_penglai_medcine
-			has_civic = civic_hakurei_shinto_corp
-			has_civic = civic_moriya_shinto_corp
-			has_civic = civic_kirisame_magic_corp
-			has_civic = civic_scarlet_allience_corp
-			has_civic = civic_nether_world_corp
-			has_civic = civic_penglai_medcine_corp
-		}
-	}
-	resources = {
-		category = country_base
-		cost = {
-			influence = 200
-		}
-	}
-	allow = {
-		OR = {
-			has_civic = civic_hakurei_shinto
-			has_civic = civic_moriya_shinto
-			has_civic = civic_kirisame_magic
-			has_civic = civic_scarlet_allience
-			has_civic = civic_nether_world
-			has_civic = civic_penglai_medcine
-			has_civic = civic_hakurei_shinto_corp
-			has_civic = civic_moriya_shinto_corp
-			has_civic = civic_kirisame_magic_corp
-			has_civic = civic_scarlet_allience_corp
-			has_civic = civic_nether_world_corp
-			has_civic = civic_penglai_medcine_corp
-		}
-	}
-	effect = {
-		country_event = {
-			id = touhou_paragon.2
-		}
-	}
-}
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 
 reset_touhou_leader_portrait = {
 	length = 1
@@ -1682,7 +1632,6 @@ reset_touhou_leader_portrait = {
 	}
 }
 
-<<<<<<< HEAD
 # sanae_mission_technocracy_for_spiritualist = {
 # 	length = 1
 # 	icon = "GFX_edict_type_time"
@@ -1734,56 +1683,3 @@ reset_touhou_leader_portrait = {
 # 		set_global_flag = kosuzu
 # 	}
 # }
-=======
-sanae_mission_technocracy_for_spiritualist = {
-	length = 1
-	icon = "GFX_edict_type_time"
-	potential = {
-		has_point_of_interest = {
-			poi = touhou_sanae_mission_chain_tech.4
-		}
-		any_owned_leader = {
-			has_trait = thl_leader_trait_miracle
-		}
-		OR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
-		}
-		not = {
-			any_owned_leader = {
-				has_trait = thl_leader_trait_books
-			}
-		}
-	}
-	resources = {
-		category = country_base
-		cost = {
-			influence = 200
-			unity = 10000
-		}
-	}
-	allow = {
-		has_point_of_interest = {
-			poi = touhou_sanae_mission_chain_tech.4
-		}
-		any_owned_leader = {
-			has_trait = thl_leader_trait_miracle
-		}
-		OR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
-		}
-		not = {
-			any_owned_leader = {
-				has_trait = thl_leader_trait_books
-			}
-		}
-	}
-	effect = {
-		country_event = {
-			id = touhou_paragon.42300
-		}
-		set_global_flag = kosuzu
-	}
-}
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926

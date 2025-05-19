@@ -35,7 +35,6 @@
 
 civic_hakurei_shinto = {
 	description = "civic_hakurei_shinto_effects"
-<<<<<<< HEAD
 	modification = {
 		add = {
 			has_civic = civic_hakurei_shinto_corp
@@ -44,9 +43,6 @@ civic_hakurei_shinto = {
 			always = no
 		}
 	}
-=======
-	modification = no
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	alternate_civic_version = civic_hakurei_shinto_corp
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
@@ -87,10 +83,7 @@ civic_hakurei_shinto = {
 		base = 0
 	}
 	modifier = {
-<<<<<<< HEAD
 		planet_bureaucrats_upkeep_mult = -0.15
-=======
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 		ship_fire_rate_mult = 0.15
 		army_damage_mult = 0.15
 	}
@@ -107,7 +100,6 @@ civic_hakurei_shinto = {
 
 civic_hakurei_shinto_corp = {
 	description = "civic_hakurei_shinto_corp_effects"
-<<<<<<< HEAD
 	modification = {
 		add = {
 			has_civic = civic_hakurei_shinto
@@ -116,9 +108,6 @@ civic_hakurei_shinto_corp = {
 			always = no
 		}
 	}
-=======
-	modification = no
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	alternate_civic_version = civic_hakurei_shinto
 	potential = {
 		OR = {
@@ -166,11 +155,7 @@ civic_hakurei_shinto_corp = {
 		base = 0
 	}
 	modifier = {
-<<<<<<< HEAD
 		planet_bureaucrats_upkeep_mult = -0.15
-=======
-		planet_priests_upkeep_mult = -0.15
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 		ship_fire_rate_mult = 0.15
 		army_damage_mult = 0.15
 	}
@@ -187,7 +172,6 @@ civic_hakurei_shinto_corp = {
 
 civic_moriya_shinto = {
 	description = "civic_moriya_shinto_effects"
-<<<<<<< HEAD
 	modification = {
 		add = {
 			has_civic = civic_moriya_shinto_corp
@@ -196,9 +180,6 @@ civic_moriya_shinto = {
 			always = no
 		}
 	}
-=======
-	modification = no
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	alternate_civic_version = civic_moriya_shinto_corp
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
@@ -255,7 +236,6 @@ civic_moriya_shinto = {
 
 civic_moriya_shinto_corp = {
 	description = "civic_moriya_shinto_corp_effects"
-<<<<<<< HEAD
 	modification = {
 		add = {
 			has_civic = civic_moriya_shinto
@@ -264,9 +244,6 @@ civic_moriya_shinto_corp = {
 			always = no
 		}
 	}
-=======
-	modification = no
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	alternate_civic_version = civic_moriya_shinto
 	potential = {
 		OR = {
@@ -323,18 +300,13 @@ civic_moriya_shinto_corp = {
 			is_spiritualist = yes
 		}
 		modifier = {
-<<<<<<< HEAD
 			planet_bureaucrats_unity_produces_add = 1
-=======
-			planet_bureaucrats_unity_produces_add = 1 = 1
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 		}
 	}
 }
 
 civic_kirisame_magic = {
 	description = "civic_kirisame_magic_effects"
-<<<<<<< HEAD
 	modification = {
 		add = {
 			has_civic = civic_kirisame_magic_corp
@@ -343,9 +315,6 @@ civic_kirisame_magic = {
 			always = no
 		}
 	}
-=======
-	modification = no
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	alternate_civic_version = civic_kirisame_magic_corp
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
@@ -389,7 +358,6 @@ civic_kirisame_magic = {
 
 civic_kirisame_magic_corp = {
 	description = "civic_kirisame_magic_corp_effects"
-<<<<<<< HEAD
 	modification = {
 		add = {
 			has_civic = civic_kirisame_magic
@@ -398,9 +366,6 @@ civic_kirisame_magic_corp = {
 			always = no
 		}
 	}
-=======
-	modification = no
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	alternate_civic_version = civic_kirisame_magic
 	potential = {
 		OR = {
@@ -451,7 +416,6 @@ civic_kirisame_magic_corp = {
 
 civic_scarlet_allience = {
 	description = "civic_scarlet_allience_effects"
-<<<<<<< HEAD
 	modification = {
 		add = {
 			has_civic = civic_scarlet_allience_corp
@@ -460,9 +424,6 @@ civic_scarlet_allience = {
 			always = no
 		}
 	}
-=======
-	modification = no
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	alternate_civic_version = civic_scarlet_allience_corp
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
@@ -518,7 +479,6 @@ civic_scarlet_allience = {
 
 civic_scarlet_allience_corp = {
 	description = "civic_scarlet_allience_corp_effects"
-<<<<<<< HEAD
 	modification = {
 		add = {
 			has_civic = civic_scarlet_allience
@@ -527,9 +487,6 @@ civic_scarlet_allience_corp = {
 			always = no
 		}
 	}
-=======
-	modification = no
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	alternate_civic_version = civic_scarlet_allience
 	potential = {
 		OR = {
@@ -593,7 +550,6 @@ civic_scarlet_allience_corp = {
 
 civic_nether_world = {
 	description = "civic_nether_world_effects"
-<<<<<<< HEAD
 	modification = {
 		add = {
 			has_civic = civic_nether_world_corp
@@ -602,9 +558,6 @@ civic_nether_world = {
 			always = no
 		}
 	}
-=======
-	modification = no
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	alternate_civic_version = civic_nether_world_corp
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
@@ -655,7 +608,6 @@ civic_nether_world = {
 
 civic_nether_world_corp = {
 	description = "civic_nether_world_corp_effects"
-<<<<<<< HEAD
 	modification = {
 		add = {
 			has_civic = civic_nether_world
@@ -664,9 +616,6 @@ civic_nether_world_corp = {
 			always = no
 		}
 	}
-=======
-	modification = no
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	alternate_civic_version = civic_nether_world
 	potential = {
 		OR = {
@@ -722,7 +671,6 @@ civic_nether_world_corp = {
 
 civic_penglai_medcine = {
 	description = "civic_penglai_medcine_effects"
-<<<<<<< HEAD
 	modification = {
 		add = {
 			has_civic = civic_penglai_medcine_corp
@@ -731,9 +679,6 @@ civic_penglai_medcine = {
 			always = no
 		}
 	}
-=======
-	modification = no
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	alternate_civic_version = civic_penglai_medcine_corp
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
@@ -783,7 +728,6 @@ civic_penglai_medcine = {
 
 civic_penglai_medcine_corp = {
 	description = "civic_penglai_medcine_corp_effects"
-<<<<<<< HEAD
 	modification = {
 		add = {
 			has_civic = civic_penglai_medcine
@@ -792,9 +736,6 @@ civic_penglai_medcine_corp = {
 			always = no
 		}
 	}
-=======
-	modification = no
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	alternate_civic_version = civic_penglai_medcine
 	potential = {
 		OR = {

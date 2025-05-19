@@ -170,12 +170,7 @@ weapon_component_template = {
 weapon_component_template = {
 	key = "IRONWHEEL_SANAE_SMALL"
 	size = small
-<<<<<<< HEAD
 	type = instant
-=======
-	entity = "bomber_entity"
-	type = missile
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	icon = "GFX_ship_part_archaeo_missiles"
 	icon_frame = 1
 	projectile_gfx = "swarmer_missiles"
@@ -204,25 +199,11 @@ weapon_component_template = {
 			no_resource_for_component = { RESOURCE = volatile_motes }
 		}
 	}
-<<<<<<< HEAD
 	damage = { min = 12 max = 14 }
 	windup = { min = 25.0 max = 30.0 }
 	range = 160
 	accuracy = 1.00
 	tracking = 0.55
-=======
-	missile_shield = 3
-	missile_armor = 3
-	missile_evasion = 0.95
-	missile_health = 3
-	missile_speed = 400
-	missile_retarget_range = 400
-	damage = { min = 14 max = 17 }
-	windup = { min = 25.0 max = 30.0 }
-	range = 160
-	accuracy = 1.00
-	tracking = 1.00
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 
 	size_damage_factor = 0.125
 	shield_penetration = 1.5
@@ -234,11 +215,7 @@ weapon_component_template = {
 	key = "IRONWHEEL_SANAE_MEDIUM"
 	size = MEDIUM
 	entity = "bomber_entity"
-<<<<<<< HEAD
 	type = instant
-=======
-	type = missile
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	icon = "GFX_ship_part_archaeo_missiles"
 	icon_frame = 1
 	projectile_gfx = "swarmer_missiles_02"
@@ -267,25 +244,11 @@ weapon_component_template = {
 			no_resource_for_component = { RESOURCE = volatile_motes }
 		}
 	}
-<<<<<<< HEAD
 	damage = { min = 27 max = 31 }
 	windup = { min = 25.0 max = 30.0 }
 	range = 160
 	accuracy = 1.00
 	tracking = 0.55
-=======
-	missile_shield = 5
-	missile_armor = 5
-	missile_evasion = 0.95
-	missile_health = 5
-	missile_speed = 400
-	missile_retarget_range = 400
-	damage = { min = 35 max = 39 }
-	windup = { min = 25.0 max = 30.0 }
-	range = 160
-	accuracy = 1.00
-	tracking = 1.00
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 
 	size_damage_factor = 0.125
 	shield_penetration = 1.5
@@ -295,11 +258,7 @@ weapon_component_template = {
 
 weapon_component_template = {
 	key = "ONBASHIRA_SANAE"
-<<<<<<< HEAD
 	size = extra_large
-=======
-	size = torpedo
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	type = missile
 	entity = "turret_torpedo_entity"
 	icon = "GFX_ship_part_scourge_missile_1"
@@ -307,16 +266,11 @@ weapon_component_template = {
 	prerequisites = { "tech_sanae_mission_mil_onbashira" }
 	component_set = "ONBASHIRA_SANAE"
 	projectile_gfx = "neutron_torpedoes"
-<<<<<<< HEAD
 	tags = { weapon_type_kinetic artillery x_slot }
-=======
-	tags = { weapon_type_kinetic g_slot }
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	ai_tags = { weapon_role_anti_shield artillery artillery_stealth }
 	resources = {
 		category = ship_components
 		cost = {
-<<<<<<< HEAD
 			alloys = @l_t7_cost
 			volatile_motes = @l_t7_rare
 		}
@@ -330,39 +284,17 @@ weapon_component_template = {
 	damage = { min = 1280 max = 2560 }
 
 	firing_arc = 35
-=======
-			alloys = @l_t6_cost
-			volatile_motes = @l_t6_rare
-		}
-		upkeep = {
-			energy = @l_t6_upkeep_energy
-			alloys = @l_t6_upkeep_alloys
-		}
-	}
-
-	power = -34
-	damage = { min = 216 max = 512 }
-
-	firing_arc = 25
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	armor_penetration = 1.5
 	armor_damage = 0.5
 	shield_damage = 2
 
-<<<<<<< HEAD
 	windup = { min = 256.0 max = 256.0 }
 
 	min_range = 30
-=======
-	windup = { min = 410.0 max = 475.0 }
-
-	min_range = 50
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	range = 150
 
 	accuracy = 0.95
 	tracking = 0.05
-<<<<<<< HEAD
 	size_damage_factor = 0.25
 
 	missile_shield = 100
@@ -370,15 +302,6 @@ weapon_component_template = {
 	missile_evasion = 0
 	missile_health = 200
 	missile_speed = 60
-=======
-	size_damage_factor = 1
-
-	missile_shield = 0
-	missile_armor = 80
-	missile_evasion = 0
-	missile_health = 12
-	missile_speed = 36
->>>>>>> 7bf9161a060bd54b47e5938df62582accb250926
 	missile_retarget_range = 100
 
 	ai_weight = {
