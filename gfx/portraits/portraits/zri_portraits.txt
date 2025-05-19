@@ -1,0 +1,560 @@
+portraits = {
+x1 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img1.dds"}
+x2 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img2.dds"}
+x3 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img3.dds"}
+x4 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img4.dds"}
+x5 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img5.dds"}
+x6 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img6.dds"}
+x7 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img7.dds"}
+x8 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img8.dds"}
+x9 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img9.dds"}
+x10 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img10.dds"}
+x11 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img11.dds"}
+x12 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img12.dds"}
+x13 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img13.dds"}
+x14 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img14.dds"}
+x15 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img15.dds"}
+x16 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img16.dds"}
+x17 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img17.dds"}
+x18 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img18.dds"}
+x19 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img19.dds"}
+x20 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img20.dds"}
+x21 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img21.dds"}
+x22 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img22.dds"}
+x23 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img23.dds"}
+x24 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img24.dds"}
+x25 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img25.dds"}
+x26 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img26.dds"}
+x27 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img27.dds"}
+x28 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img28.dds"}
+x29 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img29.dds"}
+x30 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img30.dds"}
+x31 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img31.dds"}
+x32 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img32.dds"}
+x33 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img33.dds"}
+x34 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img34.dds"}
+x35 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img35.dds"}
+x36 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img36.dds"}
+x37 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img37.dds"}
+x38 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img38.dds"}
+x39 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img39.dds"}
+x40 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img40.dds"}
+x41 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img41.dds"}
+x42 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img42.dds"}
+x43 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img43.dds"}
+x44 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img44.dds"}
+x45 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img45.dds"}
+x46 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img46.dds"}
+x47 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img47.dds"}
+x48 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img48.dds"}
+x49 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img49.dds"}
+x50 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img50.dds"}
+x51 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img51.dds"}
+x52 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img52.dds"}
+x53 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img53.dds"}
+x54 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img54.dds"}
+x55 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img55.dds"}
+x56 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img56.dds"}
+x57 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img57.dds"}
+x58 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img58.dds"}
+x59 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img59.dds"}
+x60 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img60.dds"}
+x61 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img61.dds"}
+x62 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img62.dds"}
+x63 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img63.dds"}
+x64 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img64.dds"}
+x65 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img65.dds"}
+x66 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img66.dds"}
+x67 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img67.dds"}
+x68 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img68.dds"}
+x69 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img69.dds"}
+x70 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img70.dds"}
+x71 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img71.dds"}
+x72 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img72.dds"}
+x73 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img73.dds"}
+x74 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img74.dds"}
+x75 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img75.dds"}
+x76 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img76.dds"}
+x77 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img77.dds"}
+x78 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img78.dds"}
+x79 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img79.dds"}
+x80 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img80.dds"}
+x81 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img81.dds"}
+x82 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img82.dds"}
+x83 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img83.dds"}
+x84 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img84.dds"}
+x85 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img85.dds"}
+x86 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img86.dds"}
+x87 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img87.dds"}
+x88 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img88.dds"}
+x89 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img89.dds"}
+x90 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img90.dds"}
+x91 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img91.dds"}
+x92 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img92.dds"}
+x93 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img93.dds"}
+x94 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img94.dds"}
+x95 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img95.dds"}
+x96 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img96.dds"}
+x97 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img97.dds"}
+x98 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img98.dds"}
+x99 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img99.dds"}
+x100 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img100.dds"}
+x101 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img101.dds"}
+x102 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img102.dds"}
+x103 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img103.dds"}
+x104 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img104.dds"}
+x105 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img105.dds"}
+x106 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img106.dds"}
+x107 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img107.dds"}
+x108 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img108.dds"}
+x109 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img109.dds"}
+x110 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img110.dds"}
+x111 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img111.dds"}
+x112 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img112.dds"}
+x113 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img113.dds"}
+x114 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img114.dds"}
+x115 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img115.dds"}
+x116 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img116.dds"}
+x117 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img117.dds"}
+x118 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img118.dds"}
+x119 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img119.dds"}
+x120 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img120.dds"}
+x121 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img121.dds"}
+x122 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img122.dds"}
+x123 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img123.dds"}
+x124 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img124.dds"}
+x125 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img125.dds"}
+x126 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img126.dds"}
+x127 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img127.dds"}
+x128 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img128.dds"}
+x129 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img129.dds"}
+x130 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img130.dds"}
+x131 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img131.dds"}
+x132 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img132.dds"}
+x133 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img133.dds"}
+x134 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img134.dds"}
+x135 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img135.dds"}
+x136 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img136.dds"}
+x137 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img137.dds"}
+x138 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img138.dds"}
+x139 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img139.dds"}
+x140 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img140.dds"}
+x141 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img141.dds"}
+x142 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img142.dds"}
+x143 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img143.dds"}
+x144 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img144.dds"}
+x145 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img145.dds"}
+x146 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img146.dds"}
+x147 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img147.dds"}
+x148 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img148.dds"}
+x149 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img149.dds"}
+x150 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img150.dds"}
+	x151 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img151.dds"}
+	x152 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/img152.dds"}
+
+tpop1 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop1.dds"}
+tpop2 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop2.dds"}
+tpop3 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop3.dds"}
+tpop4 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop4.dds"}
+tpop5 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop5.dds"}
+tpop6 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop6.dds"}
+tpop7 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop7.dds"}
+tpop8 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop8.dds"}
+tpop9 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop9.dds"}
+tpop10 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop10.dds"}
+tpop11 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop11.dds"}
+tpop12 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop12.dds"}
+tpop13 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop13.dds"}
+tpop14 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop14.dds"}
+tpop15 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop15.dds"}
+tpop16 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/tpop16.dds"}
+
+xpop1 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/ZPOP1.dds"}
+xpop2 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/ZPOP2.dds"}
+xpop3 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/ZPOP3.dds"}
+xpop4 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/ZPOP4.dds"}
+xpop5 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/ZPOP5.dds"}
+xpop6 = {greeting_sound = "human_male_greetings_01" texturefile = "gfx/models/portraits/mammalian/ZPOP6.dds"}
+
+demon1 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/demon/demon1.dds"}
+demon2 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/demon/demon2.dds"}
+demon3 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/demon/demon3.dds"}
+demon4 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/demon/demon4.dds"}
+demon5 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/demon/demon5.dds"}
+demon6 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/demon/demon6.dds"}
+demon7 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/demon/demon7.dds"}
+demon8 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/demon/demon8.dds"}
+demon9 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/demon/demon9.dds"}
+demon10 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/demon/demon10.dds"}
+
+	doll1 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/doll/doll1.dds"}
+	doll2 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/doll/doll2.dds"}
+	doll3 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/doll/doll3.dds"}
+	doll4 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/doll/doll4.dds"}
+	doll5 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/doll/doll5.dds"}
+	doll6 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/doll/doll6.dds"}
+	doll7 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/doll/doll7.dds"}
+	doll8 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/doll/doll8.dds"}
+	doll9 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/doll/doll9.dds"}
+
+	ghost1 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/ghost/ghost1.dds"}
+	ghost2 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/ghost/ghost2.dds"}
+	ghost3 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/ghost/ghost3.dds"}
+	ghost4 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/ghost/ghost4.dds"}
+	ghost5 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/ghost/ghost5.dds"}
+	ghost6 = {greeting_sound = "human_female_greetings_01" texturefile = "gfx/models/portraits/ghost/ghost6.dds"}
+
+}
+portrait_groups = {
+	demon = {
+		default = demon1
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					demon1
+					demon2
+					demon3
+					demon4
+					demon5
+					demon6
+					demon7
+					demon8
+					demon9
+					demon10
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				portraits = {
+					demon1
+					demon2
+					demon3
+					demon4
+					demon5
+					demon6
+					demon7
+					demon8
+					demon9
+					demon10
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				portraits = {
+					demon1
+					demon2
+					demon3
+					demon4
+					demon5
+					demon6
+					demon7
+					demon8
+					demon9
+					demon10
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					demon1
+					demon2
+					demon3
+					demon4
+					demon5
+					demon6
+					demon7
+					demon8
+					demon9
+					demon10
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					demon1
+					demon2
+					demon3
+					demon4
+					demon5
+					demon6
+					demon7
+					demon8
+					demon9
+					demon10
+				}
+			}
+		}
+	}
+	doll = {
+		default = doll1
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					doll1
+					doll2
+					doll3
+					doll4
+					doll5
+					doll6
+					doll7
+					doll8
+					doll9
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				portraits = {
+					doll1
+					doll2
+					doll3
+					doll4
+					doll5
+					doll6
+					doll7
+					doll8
+					doll9
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				portraits = {
+					doll1
+					doll2
+					doll3
+					doll4
+					doll5
+					doll6
+					doll7
+					doll8
+					doll9
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					doll1
+					doll2
+					doll3
+					doll4
+					doll5
+					doll6
+					doll7
+					doll8
+					doll9
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					doll1
+					doll2
+					doll3
+					doll4
+					doll5
+					doll6
+					doll7
+					doll8
+					doll9
+				}
+			}
+		}
+	}
+	kappa = {
+		default = tpop7
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					tpop7
+					tpop8
+					tpop9
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				portraits = {
+					tpop7
+					tpop8
+					tpop9
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				portraits = {
+					tpop7
+					tpop8
+					tpop9
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					tpop7
+					tpop8
+					tpop9
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					tpop7
+					tpop8
+					tpop9
+				}
+			}
+		}
+	}
+	rabbit = {
+		default = tpop14
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					tpop14
+					tpop15
+					tpop16
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				portraits = {
+					tpop14
+					tpop15
+					tpop16
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				portraits = {
+					tpop14
+					tpop15
+					tpop16
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					tpop14
+					tpop15
+					tpop16
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					tpop14
+					tpop15
+					tpop16
+				}
+			}
+		}
+	}
+	
+	ghost = {
+		default = ghost1
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					ghost1
+					ghost2
+					ghost3
+					ghost4
+					ghost5
+					ghost6
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				portraits = {
+					ghost1
+					ghost2
+					ghost3
+					ghost4
+					ghost5
+					ghost6
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				portraits = {
+					ghost1
+					ghost2
+					ghost3
+					ghost4
+					ghost5
+					ghost6
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					ghost1
+					ghost2
+					ghost3
+					ghost4
+					ghost5
+					ghost6
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					ghost1
+					ghost2
+					ghost3
+					ghost4
+					ghost5
+					ghost6
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+#my_casus_belli = {
+#	potential = { ... }		# trigger to make some CBs invalid for certain types of countries; this = attacker (CB owner); default: { always = yes }
+#	is_valid = { ... }		# trigger, evaluated daily to check if CB should be created or destroyed automatically, does not affect CBs granted via script;
+#								# this = attacker (CB owner), from = defender (target country); default: { always = yes }
+#	destroy_if = { ... }	# trigger, evaluated daily to destroy CBs that have been granted via script ahead of expiration date;
+#								# this = attacker (CB owner), from = defender (target country); default: { always = no }
+#	show_notification = no/yes	# optional (default = yes), flag to control whether this CB will generate a notification (to avoid duplicate
+#								# notification when a claim CB is generated)
+#}
+
+
+cb_moriya_crusade = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	aggregated_message_key = TOUHOU_MESSAGE_KEY_SANAE_CRUSADE
+	potential = {
+		is_country_type = default
+		exists = from
+		any_owned_leader = {
+			has_trait = thl_leader_trait_miracle
+		}
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			is_in_federation_with = from
+		}
+	}
+	is_valid = {
+		or = {
+			has_policy_flag = liberation_wars
+			has_policy_flag = unrestricted_wars
+		}
+		from = { is_country_type = default }
+		from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+		has_total_war_cb = no
+		OR = {
+			AND = {
+				is_spiritualist = yes
+				from = { is_spiritualist = no }
+			}
+			AND = {
+				is_materialist = yes
+				from = { is_materialist = no }
+			}
+		}
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}

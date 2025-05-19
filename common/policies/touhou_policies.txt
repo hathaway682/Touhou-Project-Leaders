@@ -1,0 +1,334 @@
+war_doctrine = {
+    potential = {
+        OR = {
+            AND = {
+                is_country_type = default
+                has_tradition = tr_supremacy_finish
+            }
+            is_country_type = enclave_mercenary
+        }
+    }
+
+    option = {
+        name = "defense_in_depth_doctrine"
+
+        policy_flags = {}
+        modifier = {
+            ship_home_territory_fire_rate_mult = 0.10
+        }
+
+        AI_weight = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = "hit_and_run_doctrine"
+
+        policy_flags = {}
+        modifier = {
+            ship_disengage_opportunities_add = 2
+            ship_disengage_chance_mult = 0.33
+            ship_emergency_ftl_mult = -0.25
+        }
+
+        AI_weight = {
+            factor = 10
+            modifier = {
+                factor = 0
+                NOR = {
+                    has_ethic = ethic_pacifist
+                    has_ethic = ethic_fanatic_pacifist
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "rapid_deployment_doctrine"
+
+        policy_flags = {}
+        modifier = {
+            ship_speed_mult = 0.25
+            ship_weapon_range_mult = 0.10
+        }
+
+        AI_weight = {
+            factor = 10
+            modifier = {
+                factor = 100
+                is_country_type = enclave_mercenary
+            }
+        }
+    }
+
+    option = {
+        name = "no_retreat_doctrine"
+
+        valid = {
+            OR = {
+                has_ethic = ethic_militarist
+                has_ethic = ethic_fanatic_militarist
+                has_ethic = ethic_gestalt_consciousness
+                has_civic = civic_fanatic_purifiers
+            }
+        }
+
+        policy_flags = {}
+        modifier = {
+            ship_disengage_chance_reduction = 1
+            ship_emergency_ftl_min_days_mult = 0.5
+            ship_fire_rate_mult = 0.33
+        }
+
+        AI_weight = {
+            factor = 100
+            modifier = {
+                factor = 0
+                NOR = {
+                    has_ai_personality = honorbound_warriors
+                    has_ai_personality = devouring_swarm
+                }
+            }
+        }
+    }
+    option = {
+        name = "utsuho_no_step_back"
+        potential = {
+            has_country_flag = flag_utsuho_no_step_back
+        }
+        policy_flags = { }
+        modifier = {
+            ship_disengage_chance_reduction = 0.5
+            ship_emergency_ftl_min_days_mult = 0.33
+            ship_weapon_range_mult = 0.25
+            ship_fire_rate_mult = 0.25
+            ship_shield_mult = 0.25
+            ship_armor_mult = 0.25
+        }
+        AI_weight = {
+            factor = 0
+        }
+    }
+}
+
+food_policy = {
+    potential = {
+        any_owned_leader = {
+            has_trait = leader_trait_harvest
+        }
+    }
+
+    option = {
+        name = "food_policy_rationing"
+
+        modifier = {
+            planet_pops_organics_food_upkeep_mult = -0.25
+            planet_pops_organics_minerals_upkeep_mult = -0.25
+            logistic_growth_mult = -0.1
+            biological_pop_happiness = -0.1
+            lithoid_pop_happiness = -0.1
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "food_policy_normal"
+
+        modifier = {}
+
+        AI_weight = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = "food_policy_generous"
+
+        modifier = {
+            planet_pops_organics_food_upkeep_mult = 0.25
+            planet_pops_organics_minerals_upkeep_mult = 0.25
+            biological_pop_happiness = 0.05
+            lithoid_pop_happiness = 0.05
+            logistic_growth_mult = 0.10
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "food_policy_hearty"
+
+        valid = {
+            custom_tooltip = {
+                text = level_3_aki
+                any_owned_leader = {
+                    has_trait = leader_trait_harvest
+                    has_base_skill >= 3
+                }
+            }
+        }
+
+        modifier = {
+            planet_pops_organics_food_upkeep_mult = 0.5
+            planet_pops_organics_minerals_upkeep_mult = 0.5
+            biological_pop_happiness = 0.15
+            lithoid_pop_happiness = 0.15
+            logistic_growth_mult = 0.20
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "food_policy_lavish"
+
+        valid = {
+            custom_tooltip = {
+                text = level_6_aki
+                any_owned_leader = {
+                    has_trait = leader_trait_harvest
+                    has_base_skill >= 6
+                }
+            }
+        }
+
+        modifier = {
+            planet_pops_organics_food_upkeep_mult = 0.75
+            planet_pops_organics_minerals_upkeep_mult = 0.75
+            biological_pop_happiness = 0.25
+            lithoid_pop_happiness = 0.25
+            logistic_growth_mult = 0.30
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "food_policy_luxurious"
+
+        valid = {
+            custom_tooltip = {
+                text = level_10_aki
+                any_owned_leader = {
+                    has_trait = leader_trait_harvest
+                    has_base_skill >= 10
+                }
+            }
+        }
+
+        modifier = {
+            planet_pops_organics_food_upkeep_mult = 1
+            planet_pops_organics_minerals_upkeep_mult = 1
+            biological_pop_happiness = 0.4
+            lithoid_pop_happiness = 0.4
+            logistic_growth_mult = 0.40
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+}
+
+foreign_affairs_policy = {
+    potential = {
+        any_owned_leader = {
+            has_trait = thl_leader_trait_miracle
+        }
+        has_country_flag = thl_flag_allow_foreign_affairs
+    }
+    option = {
+        name = "sanae_mission_mil_2_balance"
+
+        modifier = {
+            envoys_add = 1
+        }
+
+        AI_weight = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = "sanae_mission_mil_2_federation"
+
+        valid = {
+            has_federation = yes
+        }
+        modifier = {
+            federation_naval_cap_contribution_mult = 0.50
+            federation_experience_add = 2
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "sanae_mission_mil_2_subjects"
+
+        valid = {
+            count_subject = {
+                count >= 2
+            }
+        }
+
+        modifier = {
+            subject_integration_influence_cost_mult = -0.2
+            divided_patrongage_max_subjects = 1
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "sanae_mission_mil_2_intel"
+
+        valid = {
+            any_spynetwork = {
+                owner = { is_same_value = root }
+                is_spynetwork_level > 10
+            }
+        }
+
+        modifier = {
+            intel_decryption_add = 2
+            intel_gain_speed = 0.25
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "sanae_mission_mil_2_influence"
+
+        valid = {
+            num_defensive_pacts >= 2
+        }
+
+        modifier = {
+            diplomacy_influence_upkeep_mult = -0.25
+            country_trust_growth = 0.20
+        }
+
+        AI_weight = {
+            factor = 0
+        }
+    }
+
+}

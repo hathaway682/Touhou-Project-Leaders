@@ -1,0 +1,419 @@
+spriteTypes = {	
+
+	### RECRUITMENT MESSAGE ICONS ###
+
+	spriteType = {
+		name = "GFX_message_touhou_leaders"
+		texturefile = "gfx/interface/icons/message/touhou_leaders.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_recruit_talent"
+		texturefile = "gfx/interface/icons/agenda_icons/origin_legendary_leader.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_sanae_ascension"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_sanae_ascension.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_dyson_sphere"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_dyson_sphere.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_touhou_regeneration"
+		texturefile = "gfx/interface/icons/traits/trait_limited_regeneration.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_perfected_genes"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/ltrait_perfected_genes.dds"
+	}
+	spriteType = {
+		name = "GFX_thl_leader_trait_frog_bless"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/thl_leader_trait_frog_bless.dds"
+	}
+	spriteType = {
+		name = "GFX_thl_leader_trait_snake_bless"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/thl_leader_trait_snake_bless.dds"
+	}
+
+	spriteType = {
+		name = "GFX_evt_plan_of_hakurei_shrine"
+		texturefile = "gfx/event_pictures/plan_of_hakurei_shrine.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_mk2_titan_robot"
+		texturefile = "gfx/event_pictures/mk2_titan_robot.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_reimu_spell_card"
+		texturefile = "gfx/event_pictures/reimu_spell_card.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_marisa_spell_card"
+		texturefile = "gfx/event_pictures/marisa_spell_card.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_destiny_manipulation"
+		texturefile = "gfx/event_pictures/destiny_manipulation.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_koakuma_comes"
+		texturefile = "gfx/event_pictures/koakuma_comes.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_daiyousei_comes"
+		texturefile = "gfx/event_pictures/daiyousei_comes.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_sakura_tree"
+		texturefile = "gfx/event_pictures/sakura_tree.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_akyuu_longevity"
+		texturefile = "gfx/event_pictures/akyuu_longevity.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_aya_action"
+		texturefile = "gfx/event_pictures/aya_action.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_master_spark"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_master_spark.dds"
+	}
+
+	spriteType = {
+		name = "GFX_planet_type_nether"
+		texturefile = "gfx/interface/icons/planet_nether_icons.dds"
+		noOfFrames = 33
+	}
+	spriteType = {
+		name = "GFX_evt_tenshi_and_yuuka"
+		texturefile = "gfx/event_pictures/tenshi_and_yuuka.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_utsuho"
+		texturefile = "gfx/event_pictures/utsuho.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_utsuho_reform"
+		texturefile = "gfx/event_pictures/utsuho_reform.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_solette"
+		texturefile = "gfx/event_pictures/solette.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_utsuho_lying"
+		texturefile = "gfx/event_pictures/utsuho_lying.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_utsuho_eater"
+		texturefile = "gfx/event_pictures/utsuho_eater.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_remilia"
+		texturefile = "gfx/event_pictures/remilia.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_remilia_bloodmoon"
+		texturefile = "gfx/event_pictures/remilia_bloodmoon.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_remilia_coffin"
+		texturefile = "gfx/event_pictures/remilia_coffin.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_remilia_sakura"
+		texturefile = "gfx/event_pictures/remilia_sakura.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_sakuya"
+		texturefile = "gfx/event_pictures/sakuya.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_sakuya_blood"
+		texturefile = "gfx/event_pictures/sakuya_blood.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_sanae_mission"
+		texturefile = "gfx/event_pictures/sanae_mission.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_satori_birthday_horror"
+		texturefile = "gfx/event_pictures/satori_birthday_horror.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_satori_birthday"
+		texturefile = "gfx/event_pictures/satori_birthday.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_book_club"
+		texturefile = "gfx/event_pictures/book_club.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_cirno_daiyousei"
+		texturefile = "gfx/event_pictures/cirno_daiyousei.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_aya_suika_banquet"
+		texturefile = "gfx/event_pictures/aya_suika_banquet.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_remilia_marisa_bread"
+		texturefile = "gfx/event_pictures/remilia_marisa_bread.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_kirisame_marisa_alchemy"
+		texturefile = "gfx/event_pictures/kirisame_marisa_alchemy.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_kirisame_marisa_mushroom"
+		texturefile = "gfx/event_pictures/kirisame_marisa_mushroom.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_alice_dolls"
+		texturefile = "gfx/event_pictures/alice_dolls.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_alice_goelia"
+		texturefile = "gfx/event_pictures/alice_goelia.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_ruined_shrine"
+		texturefile = "gfx/event_pictures/ruined_shrine.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_mystia_idol"
+		texturefile = "gfx/event_pictures/mystia_idol.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_mystia_sing"
+		texturefile = "gfx/event_pictures/mystia_sing.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_mysita_cook"
+		texturefile = "gfx/event_pictures/mysita_cook.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_marisa_immortal"
+		texturefile = "gfx/event_pictures/marisa_immortal.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_speard_moriya_faith"
+		texturefile = "gfx/event_pictures/speard_moriya_faith.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_sanae_immortal"
+		texturefile = "gfx/event_pictures/sanae_immortal.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_tewi_and_reisen"
+		texturefile = "gfx/event_pictures/tewi_and_reisen.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_tewi_moon"
+		texturefile = "gfx/event_pictures/tewi_moon.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_tewi_rabbit"
+		texturefile = "gfx/event_pictures/tewi_rabbit.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_alice_and_marisa"
+		texturefile = "gfx/event_pictures/alice_and_marisa.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_marisa_cannon"
+		texturefile = "gfx/event_pictures/marisa_cannon.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_marisa_star"
+		texturefile = "gfx/event_pictures/marisa_star.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_marisa_steal"
+		texturefile = "gfx/event_pictures/marisa_steal.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_reimu_grim"
+		texturefile = "gfx/event_pictures/reimu_grim.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_reimu_vs_marisa"
+		texturefile = "gfx/event_pictures/reimu_vs_marisa.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_hifuu_forest"
+		texturefile = "gfx/event_pictures/hifuu_forest.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_hifuu_machine"
+		texturefile = "gfx/event_pictures/hifuu_machine.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_hifuu_couple"
+		texturefile = "gfx/event_pictures/hifuu_couple.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_button_upgrade_ascension_tier_selected"
+		texturefile = "gfx/interface/buttons/button_upgrade_ascension_tier.dds"
+		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_message_pop_magic_transed"
+		texturefile = "gfx/interface/icons/message/message_pop_magic_transed.dds"
+	}
+
+	# spriteType = {
+	# 	name = "GFX_text_touhou_leader"
+	# 	texturefile = "gfx/interface/icons/text_icons/text_icon_touhou_leader.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_leader_icons"
+	# 	texturefile = "gfx/interface/icons/leaders/leaders_small.dds"
+	# 	noOfFrames = 6
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_leader_icons_small"
+	# 	texturefile = "gfx/interface/icons/leaders/leaders_small.dds"
+	# 	noOfFrames = 6
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_leader_icons_medium"
+	# 	texturefile = "gfx/interface/icons/leaders/leaders_medium.dds"
+	# 	noOfFrames = 6
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_leader_icons_large"
+	# 	texturefile = "gfx/interface/icons/leaders/leaders_large.dds"
+	# 	noOfFrames = 6
+	# }
+
+	spriteType = {
+		name = "GFX_zone_garden"
+		texturefile = "gfx/interface/icons/zones/zone_garden.dds"
+	}
+
+	spriteType = {
+		name = "GFX_job_necromancer"
+		texturefile = "gfx/interface/icons/jobs/job_necromancer.dds"
+	}
+}

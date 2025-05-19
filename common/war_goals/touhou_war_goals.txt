@@ -1,0 +1,345 @@
+wg_moriya_crusade = {
+	casus_belli = cb_moriya_crusade
+
+	hide_if_no_cb = no
+	release_occupied_systems_on_status_quo = yes
+	show_agreement_terms = no
+
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	surrender_acceptance = -100
+
+
+	potential = {
+		any_owned_leader = {
+			has_trait = thl_leader_trait_miracle
+		}
+		NOR = {
+			has_valid_civic = civic_inwards_perfection
+			FROM = { has_valid_civic = civic_inwards_perfection }
+			has_authority = auth_corporate
+			has_ascension_perk = ap_become_the_crisis
+		}
+		has_total_war_cb = no
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				is_country_type = default
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_subjugate_empire_member
+			NAND = {
+				has_galactic_emperor = yes
+				is_galactic_community_member = no
+				from = { is_galactic_community_member = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "cannot_use_against_custodian"
+			from = { is_galactic_custodian = no }
+		}
+		custom_tooltip = {
+			fail_text = "cannot_use_against_emperor"
+			from = { is_galactic_emperor = no }
+		}
+		custom_tooltip = {
+			fail_text = "cannot_use_against_btc"
+			from = { has_been_declared_crisis = no }
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		if = {
+			limit = { from = { has_been_declared_crisis = no } }
+			from = {
+				ROOT = {
+					switch = {
+						trigger = has_policy_flag
+						oppressive_terms = {
+							if = {
+								limit = {
+									ROOT = { is_ai = yes }
+								}
+								FROM = {
+									set_subject_of = {
+										who = ROOT
+										preset = preset_vassal_oppressive_ai
+									}
+								}
+							}
+							else = {
+								FROM = {
+									set_subject_of = {
+										who = ROOT
+										preset = preset_vassal_oppressive
+									}
+								}
+							}
+						}
+						balanced_terms = {
+							FROM = {
+								set_subject_of = {
+									who = ROOT
+									preset = preset_vassal_balanced
+								}
+							}
+						}
+						benevolent_terms = {
+							FROM = {
+								set_subject_of = {
+									who = ROOT
+									preset = preset_vassal_benevolent
+								}
+							}
+						}
+					}
+				}
+				add_modifier = {
+					modifier = newly_subjugated_loyalty
+					years = 5
+				}
+			}
+		}
+
+		from = {
+			if = {
+				limit = {
+					is_gestalt = no
+				}
+				custom_tooltip = wg_moriya_crusade_accept
+				custom_tooltip = wg_force_ideology_accept_2
+			}
+
+			every_subject = {
+				limit = {
+					is_gestalt = no
+					any_war = {
+						is_war_participant = {
+							who = prev
+							side = prevprev
+						}
+					}
+				}
+				custom_tooltip = wg_force_ideology_accept_subject
+			}
+		}
+
+		if = {
+			limit = {
+				from = { has_federation = yes }
+			}
+			custom_tooltip = wg_force_ideology_accept_3
+		}
+
+		hidden_effect = {
+			from = {
+				if = {
+					limit = {
+						is_gestalt = no
+						has_corporate_government = no
+					}
+					touhou_moriya_crusade_impose_effect = yes
+					force_remove_civic = 1
+					force_add_civic = civic_moriya_shinto
+				}
+				else_if = {
+					limit = {
+						is_gestalt = no
+						has_corporate_government = no
+					}
+					touhou_moriya_crusade_impose_effect = yes
+					force_remove_civic = 1
+					force_add_civic = civic_moriya_shinto_corp
+				}
+
+				every_subject = {
+					if = {
+						limit = {
+							is_gestalt = no
+							has_corporate_government = no
+						}
+						touhou_moriya_crusade_impose_effect = yes
+						force_remove_civic = 1
+						force_add_civic = civic_moriya_shinto
+					}
+					else_if = {
+						limit = {
+							is_gestalt = no
+							has_corporate_government = no
+						}
+						touhou_moriya_crusade_impose_effect = yes
+						force_remove_civic = 1
+						force_add_civic = civic_moriya_shinto_corp
+					}
+				}
+			}
+			end_rivalry = from
+			from = { end_rivalry = root }
+			every_system_within_border = {
+				limit = {
+					from = { has_claim = prev }
+				}
+				remove_claims = { who = from }
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_in_federation_with = root
+						AND = {
+							is_subject = yes
+							exists = overlord
+							overlord = { is_same_value = root }
+						}
+					}
+				}
+				end_rivalry = from
+				from = { end_rivalry = prev }
+				add_opinion_modifier = { modifier = opinion_we_liberated who = from }
+				from = { add_opinion_modifier = { modifier = opinion_liberated_us who = prev } }
+				every_system_within_border = {
+					limit = {
+						from = { has_claim = prev }
+					}
+					remove_claims = { who = from }
+				}
+			}
+			from = {
+				leave_alliance = { override_requirements = yes }
+			}
+			if = {
+				limit = {
+					has_valid_civic = civic_crusader_spirit
+				}
+				change_variable = {
+					which = we_bring_peace_achievement_count
+					value = 1
+				}
+			}
+		}
+	}
+
+	on_status_quo = {
+		if = {
+			limit = {
+				exists = last_created_country
+				last_created_country = {
+					has_country_flag = released_empire
+				}
+			}
+
+			last_created_country = {
+				set_origin_effect = yes
+				if = {
+					limit = {
+						is_gestalt = no
+						has_corporate_government = no
+					}
+					touhou_moriya_crusade_impose_effect = yes
+					force_remove_civic = 1
+					force_add_civic = civic_moriya_shinto
+				}
+				else_if = {
+					limit = {
+						is_gestalt = no
+						has_corporate_government = no
+					}
+					touhou_moriya_crusade_impose_effect = yes
+					force_remove_civic = 1
+					force_add_civic = civic_moriya_shinto_corp
+				}
+				ROOT = {
+					switch = {
+						trigger = has_policy_flag
+						oppressive_terms = {
+							if = {
+								limit = {
+									ROOT = { is_ai = yes }
+								}
+								PREV = {
+									set_subject_of = {
+										who = ROOT
+										preset = preset_vassal_oppressive_ai
+									}
+								}
+							}
+							else = {
+								PREV = {
+									set_subject_of = {
+										who = ROOT
+										preset = preset_vassal_oppressive
+									}
+								}
+							}
+						}
+						balanced_terms = {
+							PREV = {
+								set_subject_of = {
+									who = ROOT
+									preset = preset_vassal_balanced
+								}
+							}
+						}
+						benevolent_terms = {
+							PREV = {
+								set_subject_of = {
+									who = ROOT
+									preset = preset_vassal_benevolent
+								}
+							}
+						}
+					}
+				}
+				add_modifier = {
+					modifier = newly_subjugated_loyalty
+					years = 5
+				}
+			}
+
+			if = {
+				limit = {
+					root = { has_authority = auth_corporate }
+					last_created_country = { has_authority = auth_corporate }
+				}
+				last_created_country = {
+					set_merchant_government_effect = yes
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_ai_personality_behaviour = wants_tribute
+		}
+	}
+}

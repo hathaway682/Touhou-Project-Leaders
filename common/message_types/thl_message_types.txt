@@ -1,0 +1,49 @@
+
+message_type = {
+	key = "MESSAGE_POPS_GHOST_ARRIVED"
+	icon = "GFX_message_necrophage"
+	icon_frame = 1
+
+	name = "MESSAGE_POPS_GHOST_ARRIVED_TITLE"
+	sound = "event_necrophage"
+	ping = "ping_notification_green"
+	auto_opens = none
+}
+
+message_type = {
+	key = "MESSAGE_POPS_MAGIC_TRANSED"
+	icon = "GFX_message_pop_magic_transed"
+	icon_frame = 1
+
+	name = "MESSAGE_POPS_MAGIC_TRANSED_TITLE"
+	sound = "event_default"
+	ping = "ping_notification_green"
+	auto_opens = none
+}
+
+message_type = {
+	key = "MESSAGE_JINX_STOCKPILE"
+	icon = "GFX_topbar_leaders_button"
+	icon_frame = 1
+
+	name = "MESSAGE_JINX_STOCKPILE_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+
+	default_toast = yes
+
+	category = leaders
+}
+
+message_type = {
+	key = "MORIYA_STORM_AFTERMATH"
+	icon = "GFX_toast_shroud_storm_aftermath"
+
+	name = "MESSAGE_SHROUD_STORM_AFTERMATH_TITLE"
+	sound = "notification"
+	ping = "arrow_notification_yellow"
+
+	default_toast = yes
+
+	category = cosmic_storm
+}

@@ -1,0 +1,440 @@
+#Tooltips will be generated from these rules when they fail. Use of custom_tooltip is recommended
+#There are still multiple hard-coded rules that apply in addition to these.
+#If rules here evaluate to true, there might still be other rules that make the action unavailable.
+#If a rule here evaluates to false the action will become unavailable
+
+system_blocks_sensors = {
+	OR = {
+		is_inside_nebula = yes
+		has_modifier = space_storm
+		has_modifier = zroni_storm
+		has_modifier = queen_scorn_storm
+		has_modifier = mod_tengu_storm
+		has_modifier = bat_swarm
+		has_modifier = red_fog
+		has_star_flag = lcluster
+		has_star_flag = sealed_system
+		has_star_flag = storm_system
+	}
+}
+# Checks if a pop can be assembled
+# This = Species
+# Root = Planet
+can_species_be_assembled = {
+	is_robotic = yes
+	is_sapient = yes
+	NOR = {
+		has_trait = trait_exd
+		has_trait = trait_sanae_robot_worker
+	}
+	NOT = {
+		AND = {
+			has_trait = trait_mechanical
+			root.owner = { is_individual_machine = yes }
+		}
+	}
+	NOT = {
+		AND = {
+			has_virtual_species_trait = yes
+			root.owner = {
+				is_fallen_empire = no
+				has_active_tradition = tr_virtuality_finish
+			}
+		}
+	}
+	dolls_assembly_trigger = yes
+	has_population_control = {
+		type = no
+		country = root.owner
+	}
+}
+
+###人偶
+can_fill_ruler_job = {
+	if = {
+		limit = {
+			exists = owner
+			owner = {
+				has_origin = origin_necrophage
+				has_trait = trait_necrophage
+			}
+		}
+		custom_tooltip = {
+			text = RULER_JOB_NECROPHAGE_TRIGGER
+			has_trait = trait_necrophage
+			is_enslaved = no
+			is_being_purged = no
+			is_being_assimilated = no
+		}
+	}
+	else = {
+		custom_tooltip = RULER_JOB_TRIGGER
+		hidden_trigger = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			exists = owner
+			is_enslaved = no
+			is_being_purged = no
+			is_being_assimilated = no
+			# Rule out Traits for servitude & lack of free will
+			NOR = {
+				has_trait = trait_syncretic_proles
+				has_trait = trait_zombie
+				has_trait = trait_nerve_stapled
+			}
+			# Rule out Machine Pops, unless they're rendered sapient
+			OR = {
+				NOT = { has_trait = trait_mechanical }
+				AND = {
+					NOT = { has_trait = trait_thl_doll }
+					owner = { has_technology = tech_synthetic_workers }
+					owner = { has_policy_flag = ai_full_rights }
+				}
+				AND = {
+					has_trait = trait_thl_doll
+					owner = { has_technology = tech_sapient_dolls }
+					owner = { has_policy_flag = ai_full_rights }
+				}
+			}
+			# Rule out Organic Trophies
+			NOT = {
+				has_citizenship_type = {
+					type = citizenship_organic_trophy
+					country = owner
+				}
+			}
+			# Rule out violations of the 'Right to Work' Resolution (prioritises organic workers)
+			if = {
+				limit = {
+					divinity_right_to_work_job_check_trigger_exempt = no
+				}
+				divinity_right_to_work_job_check_trigger_ruler = yes
+			}
+		}
+	}
+}
+
+species_has_happiness = {
+	NOR = {
+		has_trait = trait_hive_mind
+		can_think = no
+		AND = {
+			has_trait = trait_mechanical
+			OR = {
+				NOT = { exists = from }
+				from = { has_authority = auth_machine_intelligence }
+				AND = {
+					NOT = { has_trait = trait_thl_doll }
+					from = {
+						NOT = { has_technology = tech_synthetic_workers }
+					}
+				}
+				AND = {
+					has_trait = trait_thl_doll
+					from = {
+						NOT = { has_technology = tech_sapient_dolls }
+					}
+				}
+				from = { has_policy_flag = ai_outlawed }
+			}
+		}
+		AND = {
+			has_trait = trait_cybernetic
+			exists = from
+			from = {
+				has_authority = auth_machine_intelligence
+				has_civic = civic_machine_assimilator # Assimilator empire
+			}
+		}
+		AND = {
+			has_trait = trait_machine_unit
+			exists = from
+			from = {
+				has_authority = auth_machine_intelligence
+			}
+		}
+	}
+}
+
+species_can_live_on_planet = {
+	exists = root #somehow this appeared in the error log. No idea how!
+	NAND = {
+		root = { is_planet_class = pc_machine }
+		NOR = {
+			has_trait = trait_machine_unit
+			has_trait = trait_mechanical
+			AND = {
+				has_trait = trait_cybernetic
+				exists = root.owner
+				root.owner = {
+					has_authority = auth_machine_intelligence
+					has_civic = civic_machine_assimilator # Assimilator empire
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			root = { is_planet_class = pc_hive }
+		}
+		OR = {
+			has_trait = trait_hive_mind
+			AND = { #Necrophage Hive Mind can have Necrophytes
+				exists = root.owner
+				root.owner = {
+					is_hive_empire = yes
+					has_origin = origin_necrophage
+					prev = { species_can_be_necrophaged = yes }
+				}
+			}
+		}
+	}
+	###净土
+	if = {
+		limit = {
+			root = { is_planet_class = pc_nether }
+		}
+		OR = {
+			has_trait = trait_thl_spirit
+			AND = { #Necrophage Hive Mind can have Necrophytes
+				exists = root.owner
+				root.owner = {
+					owner_main_species = {
+						has_trait = trait_thl_spirit
+					}
+					has_origin = origin_necrophage
+					prev = { species_can_be_necrophaged = yes }
+				}
+			}
+		}
+	}
+}
+
+should_count_towards_leader_cap = {
+	NOR = {
+		leader_class = envoy
+		AND = {
+			owner = { is_gestalt = yes }
+			is_councilor = yes
+			# We count all rulers as well
+			NOT = { is_ruler = yes }
+		}
+		has_leader_flag = marauder_merc_leader
+		has_leader_flag = hired_admiral_merc_leader
+		has_leader_flag = legendary_leader
+		has_touhou_leader_trait = yes
+		AND = {
+			has_trait_tier1or2 = { TRAIT = leader_trait_eager }
+			has_base_skill < 4
+		}
+	}
+}
+
+can_terraform_planet = {
+	custom_tooltip = {
+		fail_text = terraform_fail_no_presapient_protection_or_no_presapients
+		NAND = {
+			AND = {
+				exists = root
+				root = { has_policy_flag = pre_sapients_protect }
+			}
+			any_owned_species = { is_sapient = no }
+		}
+	}
+	custom_tooltip = {
+		fail_text = "requires_actor_not_devouring_swarm_lithoid"
+		exists = root
+		root = { is_lithoid_devouring_swarm = no }
+	}
+	custom_tooltip = {
+		fail_text = "legendary_leader_planet_no_terraform"
+		exists = root
+		this = {
+			NOT = { has_planet_flag = legendary_leader_planet }
+		}
+	}
+	custom_tooltip = {
+		fail_text = "sakura_planet_no_terraform"
+		exists = root
+		this = {
+			NOT = { has_planet_flag = sakura_planet }
+		}
+	}
+	custom_tooltip = {
+		fail_text = requires_not_relentless_industrialists_situation
+		NOT = {
+			any_targeting_situation = {
+				is_situation_type = relentless_industrialists_situation
+			}
+		}
+	}
+}
+
+can_country_initiate_storm = {
+	OR = {
+		has_ascension_perk = ap_weather_control
+		any_owned_leader = {
+			OR = {
+				has_trait = thl_leader_trait_wind
+				has_trait = thl_leader_trait_miracle
+			}
+		}
+	}
+}
+
+should_count_towards_leader_cap = {
+	NOR = {
+		leader_class = envoy
+		is_hidden = yes
+		has_leader_flag = hired_admiral_merc_leader
+		has_leader_flag = legendary_leader
+		has_touhou_leader_trait = yes
+		has_trait = leader_trait_rift_warped
+		AND = {
+			has_trait_tier1or2 = { TRAIT = leader_trait_eager }
+			has_base_skill < 4
+		}
+		AND = {
+			is_ruler = yes
+			OR = {
+				has_trait = leader_trait_ruler_machine_intelligence
+				has_trait = leader_trait_ruler_hive_mind
+			}
+		}
+	}
+}
+
+#新版关于领袖复活的判断
+# Used to call the Second Chance toast when a leader dies, still need to clone it and actually have the leader survive
+# This = leader
+will_leader_survive = {
+	exists = owner
+	OR = {
+		# Spare Organs trait
+		AND = {
+			species = { has_trait = trait_spare_organs }
+			NOT = { has_trait = trait_leader_second_chanced }
+		}
+		leader_backup_clone_can_activate = yes
+		thl_is_regeneration_leader = yes
+		thl_is_immortal_akyuu = yes
+	}
+}
+
+#
+# This = country establishing contact | From = target country
+# Final check for whether there should be a first contact site spawned. Main check is via country type 'contact_rule', in code. See also: error-logging/fixing event 'action.240', which duplicates this trigger.
+can_have_first_contact = {
+	if = {
+		limit = { from = { is_amoeba_country_type = yes } }
+		NOT = {
+			any_active_first_contact = {
+				contact_country = { is_amoeba_country_type = yes }
+			}
+		}
+	}
+	else_if = {
+		limit = { from = { is_tiyanki_country_type = yes } }
+		NOT = {
+			any_active_first_contact = {
+				contact_country = { is_tiyanki_country_type = yes }
+			}
+		}
+	}
+	else_if = {
+		limit = { from = { is_cutholoids_country_type = yes } }
+		NOT = {
+			any_active_first_contact = {
+				contact_country = { is_cutholoids_country_type = yes }
+			}
+		}
+	}
+	else_if = {
+		limit = { from = { is_voidworms_country_type = yes } }
+		NOT = {
+			any_active_first_contact = {
+				contact_country = { is_voidworms_country_type = yes }
+			}
+		}
+	}
+	else_if = {
+		limit = { from = { is_crystal_country_type = yes } }
+		NOT = {
+			any_active_first_contact = {
+				contact_country = {
+					is_crystal_country_type = yes
+					NOT = { has_country_flag = queued_to_destroy }
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { from = { is_drone_country_type = yes } }
+		NOT = {
+			any_active_first_contact = {
+				contact_country = {
+					is_drone_country_type = yes
+					NOT = { has_country_flag = queued_to_destroy }
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { from = { is_country_type = cloud } }
+		NOT = {
+			any_active_first_contact = {
+				contact_country = { is_country_type = cloud }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			from = {
+				OR = {
+					is_country_type = caravaneer_fleet
+					is_country_type = caravaneer_home
+				}
+			}
+		}
+		NOT = {
+			any_active_first_contact = {
+				contact_country = {
+					OR = {
+						is_country_type = caravaneer_fleet
+						is_country_type = caravaneer_home
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			from = {
+				is_country_type = dragon_dummy
+			}
+		}
+		has_origin = origin_here_be_dragons
+		from = { has_country_flag = dragon_of@prev }
+	}
+	else_if = {
+		limit = {
+			from = {
+				is_country_type = jaunting_traveler_dummy
+			}
+		}
+		from = { has_country_flag = jaunting_traveler_of@prev }
+	}
+	else_if = {
+		limit = {
+			from = {
+				is_country_type = kappa_enclave
+			}
+		}
+		NOT = {
+			any_active_first_contact = {
+				contact_country = {
+					is_country_type = kappa_enclave
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,841 @@
+colony_event_pre_trigger = {
+	has_owner = yes
+	has_ground_combat = no
+	is_capital = no
+	is_occupied_flag = no
+}
+
+has_make_spiritualist_perk = {
+	OR = {
+		AND = {
+			exists = federation
+			federation = { has_federation_perk = make_spiritualist_1 }
+		}
+		any_owned_leader = {
+			is_councilor = yes
+			has_trait = thl_leader_trait_miracle
+		}
+		has_valid_civic = civic_hakurei_shinto
+		has_valid_civic = civic_moriya_shinto
+	}
+}
+
+prosperity_gospel_check_trigger = {
+	is_spiritualist = yes
+	planet = {
+		exists = owner
+		OR = {
+			owner = {
+				OR = {
+					has_valid_civic = civic_gospel_of_the_masses
+					has_valid_civic = civic_hakurei_shinto_corp
+					has_valid_civic = civic_moriya_shinto_corp
+				}
+			}
+			AND = {
+				has_branch_office = yes
+				branch_office_owner = {
+					OR = {
+						has_valid_civic = civic_gospel_of_the_masses
+						has_valid_civic = civic_hakurei_shinto_corp
+						has_valid_civic = civic_moriya_shinto_corp
+					}
+				}
+			}
+		}
+	}
+}
+
+is_touhou_event_leader = {
+	OR = {
+		has_trait = thl_leader_trait_miracle
+		has_trait = thl_leader_trait_fly
+		has_trait = thl_leader_trait_magic
+	}
+}
+
+has_touhou_leader_trait = {
+	OR = {
+		has_trait = thl_leader_trait_earthquake
+		has_trait = thl_leader_trait_density
+		has_trait = thl_leader_trait_miracle
+		has_trait = thl_leader_trait_ice
+		has_trait = thl_leader_trait_kongfu
+		has_trait = thl_leader_trait_fly
+		has_trait = thl_leader_trait_magic
+		has_trait = thl_leader_trait_wave_length
+		has_trait = thl_leader_trait_kendo
+		has_trait = thl_leader_trait_time
+		has_trait = thl_leader_trait_border_merry
+		has_trait = thl_leader_trait_star_located
+		has_trait = thl_leader_trait_mind_reader
+		has_trait = thl_leader_trait_subconscious
+		has_trait = thl_leader_trait_wind
+		has_trait = thl_leader_trait_trial
+		has_trait = thl_leader_trait_distance
+		has_trait = thl_leader_trait_destiny_manipulation
+		has_trait = thl_leader_trait_elements
+		has_trait = thl_leader_trait_dolls
+		has_trait = thl_leader_trait_death
+		has_trait = thl_leader_trait_flower
+		has_trait = thl_leader_trait_flower_commander
+		has_trait = thl_leader_trait_words
+		has_trait = thl_leader_trait_memory
+		has_trait = thl_leader_trait_corpse_travel
+		has_trait = thl_leader_trait_nuclear
+		has_trait = thl_leader_trait_water
+		has_trait = thl_leader_trait_fall
+		has_trait = leader_trait_harvest
+		has_trait = thl_leader_trait_jinx
+		has_trait = thl_leader_trait_song
+		has_trait = thl_leader_trait_luck
+	}
+}
+
+has_touhou_supernatural_trait = {
+	OR = {
+		has_trait = thl_leader_trait_earthquake
+		has_trait = thl_leader_trait_density
+		has_trait = thl_leader_trait_miracle
+		has_trait = thl_leader_trait_ice
+		has_trait = thl_leader_trait_kongfu
+		has_trait = thl_leader_trait_fly
+		has_trait = thl_leader_trait_magic
+		has_trait = thl_leader_trait_wave_length
+		has_trait = thl_leader_trait_kendo
+		has_trait = thl_leader_trait_time
+		has_trait = thl_leader_trait_mind_reader
+		has_trait = thl_leader_trait_subconscious
+		has_trait = thl_leader_trait_wind
+		has_trait = thl_leader_trait_trial
+		has_trait = thl_leader_trait_distance
+		has_trait = thl_leader_trait_destiny_manipulation
+		has_trait = thl_leader_trait_elements
+		has_trait = thl_leader_trait_dolls
+		has_trait = thl_leader_trait_death
+		has_trait = thl_leader_trait_flower
+		has_trait = thl_leader_trait_flower_commander
+		has_trait = thl_leader_trait_corpse_travel
+		has_trait = thl_leader_trait_nuclear
+		has_trait = thl_leader_trait_water
+		has_trait = thl_leader_trait_fall
+		has_trait = leader_trait_harvest
+		has_trait = thl_leader_trait_jinx
+		has_trait = thl_leader_trait_song
+		has_trait = thl_leader_trait_luck
+	}
+}
+
+has_touhou_spell_trait = {
+	OR = {
+		has_trait = thl_leader_trait_fly
+		has_trait = thl_leader_trait_magic
+		has_trait = thl_leader_trait_subconscious
+		has_trait = thl_leader_trait_fall
+		has_trait = leader_trait_harvest
+		has_trait = thl_leader_trait_jinx
+	}
+}
+
+can_be_destiny_target = {
+	NOR = {
+		has_trait = leader_trait_educator
+		has_trait = leader_trait_master_bureaucrat
+		has_trait = leader_trait_shroud_preacher
+		has_trait = leader_trait_master_diplomat
+		has_trait = leader_trait_supreme_organizer
+		has_trait = leader_trait_arbiter
+		has_trait = leader_trait_automation_champion
+		has_trait = leader_trait_expert_survivalist
+		has_trait = leader_trait_utopian_idealist
+		has_trait = leader_trait_mediator
+		has_trait = leader_trait_efficient
+		has_trait = leader_trait_galvanizer
+		has_trait = leader_trait_great_researcher
+		has_trait = leader_trait_deep_space_explorer
+		has_trait = leader_trait_xeno_cataloger
+		has_trait = leader_trait_frontier_adventurer
+		has_trait = leader_trait_brilliant_shipwright
+		has_trait = leader_trait_truth_seeker
+		has_trait = leader_trait_midas_touch
+		has_trait = leader_trait_surveyor
+		has_trait = leader_trait_repair_crew
+		has_trait = leader_trait_robotist
+		has_trait = leader_trait_knowledge_for_the_masses
+		has_trait = leader_trait_fanatic
+		has_trait = leader_trait_reverse_engineer
+		has_trait = leader_trait_supreme_admiral
+		has_trait = leader_trait_armorer
+		has_trait = leader_trait_military_overseer
+		has_trait = leader_trait_master_gunner
+		has_trait = leader_trait_demolisher_destiny
+		has_trait = leader_trait_destiny_engineer
+		has_trait = leader_trait_guerilla_tactics
+		has_trait = leader_trait_survivalist
+		has_trait = leader_trait_maven_of_war
+		has_trait = leader_trait_peacekeeper
+		has_trait = leader_trait_supreme_warrior
+		has_trait = leader_trait_fortress_cracker
+		has_trait = leader_trait_chainbreaker
+		has_trait = leader_trait_honored_warmaster
+		has_trait = leader_trait_academia_recruiter
+		has_trait = leader_trait_pilferer
+		has_trait = leader_trait_taskmaster
+		has_trait = leader_trait_spymaster
+		has_trait = leader_trait_totalitarian
+		has_trait = leader_trait_bellicose
+	}
+}
+###人偶相关
+can_set_ai_policy = {
+	is_mechanical_empire = no
+	OR = {
+		has_technology = tech_synthetic_workers
+		has_technology = tech_sapient_dolls
+		has_technology = tech_sapient_ai
+		any_relation = {
+			has_communications = prev
+			OR = {
+				has_technology = tech_synthetic_workers
+				has_technology = tech_sapient_ai
+				has_authority = auth_machine_intelligence
+			}
+			OR = {
+				is_country_type = default
+				has_ai_personality_behaviour = robot_exploiter
+				has_ai_personality_behaviour = robot_liberator
+			}
+		}
+	}
+}
+
+entertainer_job_check_trigger = {
+	custom_tooltip = SPECIALIST_JOB_TRIGGER
+	hidden_trigger = {
+		exists = owner
+		OR = {
+			is_enslaved = no
+			has_slavery_type = { type = slavery_domestic }
+		}
+		is_being_purged = no
+		is_being_assimilated = no
+		NOT = { has_trait = trait_syncretic_proles }
+		can_think = yes
+		OR = {
+			NOT = { has_trait = trait_mechanical }
+			owner = { has_technology = tech_droid_workers }
+			has_trait = trait_thl_doll
+		}
+		NOT = {
+			has_citizenship_type = {
+				type = citizenship_organic_trophy
+				country = owner
+			}
+		}
+		if = {
+			limit = {
+				divinity_right_to_work_job_check_trigger_exempt = no
+			}
+			divinity_right_to_work_job_check_trigger_specialist = yes
+		}
+	}
+}
+
+battle_thrall_job_check_trigger = {
+	custom_tooltip = BATTLE_THRALL_JOB_TRIGGER
+	hidden_trigger = {
+		exists = owner
+		OR = {
+			is_enslaved = no
+			has_slavery_type = { type = slavery_military }
+		}
+		is_being_purged = no
+		is_being_assimilated = no
+		NOT = { has_trait = trait_syncretic_proles }
+		can_think = yes
+		NOT = {
+			has_military_service_type = {
+				type = military_service_none
+			}
+		}
+		OR = {
+			NOT = { has_trait = trait_mechanical }
+			AND = {
+				NOT = { has_trait = trait_thl_doll }
+				owner = {
+					has_technology = tech_droid_workers
+				}
+			}
+			AND = {
+				has_trait = trait_thl_doll
+				owner = {
+					has_technology = tech_automatic_dolls
+				}
+			}
+		}
+		NOT = {
+			has_citizenship_type = {
+				type = citizenship_organic_trophy
+				country = owner
+			}
+		}
+		if = {
+			limit = {
+				divinity_right_to_work_job_check_trigger_exempt = no
+			}
+			divinity_right_to_work_job_check_trigger_specialist = yes
+		}
+	}
+}
+
+can_fill_specialist_job_trigger = {
+	custom_tooltip = SPECIALIST_JOB_TRIGGER
+	hidden_trigger = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		exists = owner
+		OR = {
+			is_enslaved = no
+			has_slavery_type = { type = slavery_indentured }
+		}
+		is_being_purged = no
+		is_being_assimilated = no
+		# Rule out Traits for servitude & lack of free will
+		NOR = {
+			has_trait = trait_syncretic_proles
+			has_trait = trait_zombie
+			has_trait = trait_nerve_stapled
+		}
+		OR = {
+			NOT = { has_trait = trait_mechanical }
+			AND = {
+				NOT = { has_trait = trait_thl_doll }
+				owner = {
+					has_technology = tech_droid_workers
+				}
+			}
+			AND = {
+				has_trait = trait_thl_doll
+				owner = {
+					has_technology = tech_automatic_dolls
+				}
+			}
+		}
+		NOT = {
+			has_citizenship_type = {
+				type = citizenship_organic_trophy
+				country = owner
+			}
+		}
+		if = {
+			limit = {
+				divinity_right_to_work_job_check_trigger_exempt = no
+			}
+			divinity_right_to_work_job_check_trigger_specialist = yes
+		}
+	}
+}
+
+complex_specialist_job_check_trigger = {
+	hidden_trigger = {
+		exists = owner
+		OR = {
+			NOT = { has_trait = trait_mechanical }
+			OR = {
+				AND = {
+					NOT = { has_trait = trait_thl_doll }
+					owner = {
+						has_technology = tech_droid_workers
+						NOT = { has_policy_flag = ai_outlawed }
+					}
+				}
+				AND = {
+					has_trait = trait_thl_doll
+					owner = {
+						has_technology = tech_automatic_dolls
+						NOT = { has_policy_flag = ai_outlawed }
+					}
+				}
+			}
+		}
+	}
+}
+
+is_domestic_robot = {
+	has_citizenship_type = {
+		type = citizenship_robot_servitude
+		country = owner
+	}
+	OR = {
+		has_trait = trait_robot_domestic_protocols
+		has_trait = trait_thl_doll
+	}
+}
+
+is_memorialist_empire = {
+	OR = {
+		has_valid_civic = civic_memorialist
+		has_valid_civic = civic_hive_memorialist
+		has_valid_civic = civic_machine_memorialist
+		has_valid_civic = civic_nether_world
+		has_country_flag = touhou_flag_flavor_book_club_sanctuary_of_repose
+	}
+}
+
+is_eager_explorer_empire = {
+	OR = {
+		has_civic = civic_eager_explorers
+		has_civic = civic_privatized_exploration
+		has_civic = civic_hive_stargazers
+		has_civic = civic_machine_exploration_protocol
+		has_valid_civic = civic_hifuu
+	}
+}
+
+is_reanimator = {
+	OR = {
+		has_valid_civic = civic_reanimated_armies
+		has_valid_civic = civic_permanent_employment
+		has_valid_civic = civic_hive_cordyceptic_drones
+		has_valid_civic = civic_nether_world
+		has_valid_civic = civic_nether_world_corp
+		any_owned_leader = {
+			is_councilor = yes
+			has_trait = thl_leader_trait_corpse_travel
+		}
+	}
+}
+
+THL_trgr_spcs_RULE_doll_assembly = {
+	root = {
+		OR = {
+			check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 0 }
+			owner = { has_technology = tech_sapient_dolls }
+		}
+		OR = {
+			num_assigned_jobs = {
+				job = dollmaker
+				value >= 1
+			}
+			AND = {
+				exists = leader
+				leader = { has_trait = thl_leader_trait_dolls }
+			}
+		}
+	}
+}
+THL_trgr_spcs_RULE_can_live_on_planet = {
+	if = {
+		limit = { root = { is_planet_class = pc_nether } }
+		OR = {
+			has_trait = trait_thl_spirit
+			AND = { #Necrophage Hive Mind can have Necrophytes
+				exists = root.owner
+				root.owner = {
+					owner_main_species = { has_trait = trait_thl_spirit }
+					has_origin = origin_necrophage
+					prev = { species_can_be_necrophaged = yes }
+				}
+			}
+		}
+	}
+	else = {
+		always = yes
+	}
+}
+THL_trgr_plnt_RULE_can_assembly_organic = {
+	OR = {
+		AND = {
+			owner = { has_civic = civic_nether_world }
+			OR = {
+				has_building = building_galactic_memorial_1
+				has_building = building_galactic_memorial_2
+				has_building = building_galactic_memorial_3
+			}
+		}
+		has_building = building_corpses_disposal_center
+	}
+}
+
+#知识宝库
+is_memory_vault_empire = {
+	OR = {
+		has_valid_civic = civic_memory_vault
+		has_valid_civic = civic_memory_vault_corporate
+		has_valid_civic = civic_memory_vault_machine
+		has_valid_civic = civic_memory_vault_hive
+		has_country_flag = touhou_flag_flavor_book_club_memory_vaults
+	}
+}
+
+can_be_leader = {
+	has_citizenship_rights = yes
+	NOT = { has_trait = trait_syncretic_proles }
+	can_think = yes
+	OR = {
+		is_robot_pop_group = no
+		AND = {
+			NOT = { has_trait = trait_thl_doll }
+			root = {
+				OR = {
+					has_technology = tech_synthetic_leaders
+					has_authority = auth_machine_intelligence
+					is_mechanical_empire = yes
+					is_individual_machine = yes
+				}
+			}
+		}
+		AND = {
+			has_trait = trait_thl_doll
+			root = {
+				OR = {
+					has_technology = tech_doll_leaders
+					has_authority = auth_machine_intelligence
+					is_mechanical_empire = yes
+					is_individual_machine = yes
+				}
+			}
+		}
+	}
+	OR = {
+		is_same_species = root
+		root = {
+			NAND = {
+				has_origin = origin_necrophage
+				has_trait = trait_necrophage
+			}
+		}
+	}
+}
+
+planet_leader_has_trait = {
+	planet = {
+		exists = leader
+		leader = { has_trait = $TRAIT$ }
+	}
+}
+
+sector_leader_has_trait = {
+	planet = {
+		NOT = {
+			planet = {
+				exists = leader
+				leader = { has_trait = $TRAIT$ }
+			}
+		}
+		planet = {
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = { has_trait = $TRAIT$ }
+				}
+			}
+		}
+	}
+}
+
+did_not_select_spell_leader = {
+	NOR = {
+		AND = {
+			check_variable = {
+				which = seleted_char_id
+				value = 1
+			}
+			any_owned_leader = {
+				has_trait = thl_leader_trait_fly
+			}
+		}
+		AND = {
+			check_variable = {
+				which = seleted_char_id
+				value = 2
+			}
+			any_owned_leader = {
+				has_trait = thl_leader_trait_magic
+			}
+		}
+		AND = {
+			check_variable = {
+				which = seleted_char_id
+				value = 35
+			}
+			any_owned_leader = {
+				has_trait = thl_leader_trait_fall
+			}
+		}
+		AND = {
+			check_variable = {
+				which = seleted_char_id
+				value = 36
+			}
+			any_owned_leader = {
+				has_trait = leader_trait_harvest
+			}
+		}
+		AND = {
+			check_variable = {
+				which = seleted_char_id
+				value = 37
+			}
+			any_owned_leader = {
+				has_trait = thl_leader_trait_jinx
+			}
+		}
+		AND = {
+			check_variable = {
+				which = seleted_char_id
+				value = 52
+			}
+			any_owned_leader = {
+				has_trait = thl_leader_trait_subconscious
+			}
+		}
+	}
+}
+
+dolls_assembly_trigger = {
+	if = {
+		limit = {
+			root = {
+				num_assigned_jobs = {
+					job = dollmaker
+					value >= 1
+				}
+			}
+			is_robotic = yes
+		}
+		OR = {
+			AND = {
+				has_trait = trait_thl_doll
+				root = {
+					OR = {
+						check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 0 }
+						has_technology = tech_sapient_dolls
+					}
+
+				}
+			}
+			AND = {
+				NOT = {
+					has_trait = trait_thl_doll
+				}
+				root = {
+					AND = {
+						check_variable_arithmetic = { which = value:doll_missing_per_maker value < 0 }
+						NOT = {
+							has_technology = tech_sapient_dolls
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+thl_is_regeneration_leader = {
+	OR = {
+		has_trait = thl_leader_trait_regeneration
+		has_trait = thl_leader_trait_regeneration_2
+		has_trait = thl_leader_trait_regeneration_3
+	}
+	NAND = {
+		has_trait = thl_leader_trait_regeneration
+		has_trait = thl_leader_trait_injured
+	}
+	NAND = {
+		has_trait = thl_leader_trait_regeneration_2
+		has_trait = thl_leader_trait_injured_2
+	}
+	NAND = {
+		has_trait = thl_leader_trait_regeneration_3
+		has_trait = thl_leader_trait_injured_3
+	}
+}
+
+thl_is_immortal_akyuu = {
+	has_trait = thl_leader_trait_memory
+	OR = {
+		has_trait = thl_leader_trait_cyborg_life
+		has_trait = thl_leader_trait_synth_life
+		has_trait = thl_leader_trait_gene_life
+		has_trait = leader_trait_composer_chosen
+	}
+}
+
+hakurei_faith_trigger = {
+	OR = {
+		#优先级最高：星球总督
+		AND = {
+			planet = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_fly
+				}
+			}
+		}
+		#优先级第二：分社建筑
+		AND = {
+			planet = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+				}
+				OR = {
+					has_building = building_hakurei_shrine
+					has_deposit = d_hakurei_shrine
+					has_deposit = d_hakurei_shrine_large
+					has_deposit = d_hakurei_shrine_imperial
+					has_deposit = d_hakurei_shrine_psionic
+				}
+			}
+		}
+		#优先级第三：星区总督
+		AND = {
+			sector_capital = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_fly
+				}
+			}
+			planet = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+				}
+				NOR = {
+					has_building = building_moriya_shrine
+					has_building = holding_building_moriya_shrine
+				}
+			}
+		}
+		#优先级第四：信仰国策
+		AND = {
+			OR = {
+				has_valid_civic = civic_hakurei_shinto
+				has_valid_civic = civic_hakurei_shinto_corp
+			}
+			sector_capital = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_fly
+					}
+				}
+			}
+			planet = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+				}
+				NOR = {
+					has_building = building_moriya_shrine
+					has_building = holding_building_moriya_shrine
+				}
+			}
+		}
+	}
+}
+
+moriya_faith_trigger = {
+	OR = {
+		#优先级最高：星球总督
+		AND = {
+			planet = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_miracle
+				}
+			}
+		}
+		#优先级第二：分社建筑
+		AND = {
+			planet = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_fly
+					}
+				}
+				OR = {
+					has_building = building_moriya_shrine
+					has_building = holding_building_moriya_shrine
+				}
+			}
+		}
+		#优先级第三：星区总督
+		AND = {
+			sector_capital = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_miracle
+				}
+			}
+			planet = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_fly
+					}
+				}
+				NOR = {
+					has_building = building_hakurei_shrine
+					has_deposit = d_hakurei_shrine
+					has_deposit = d_hakurei_shrine_large
+					has_deposit = d_hakurei_shrine_imperial
+					has_deposit = d_hakurei_shrine_psionic
+				}
+			}
+		}
+		#优先级第四：信仰国策
+		AND = {
+			OR = {
+				has_valid_civic = civic_moriya_shinto
+				has_valid_civic = civic_moriya_shinto_corp
+			}
+			sector_capital = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_fly
+					}
+				}
+			}
+			planet = {
+				NAND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_fly
+					}
+				}
+				NOR = {
+					has_building = building_hakurei_shrine
+					has_deposit = d_hakurei_shrine
+					has_deposit = d_hakurei_shrine_large
+					has_deposit = d_hakurei_shrine_imperial
+					has_deposit = d_hakurei_shrine_psionic
+				}
+			}
+		}
+	}
+}
+
+#这里应该也放入其他mod的复活甲
+#总之等伞兼容更新这个吧
+thl_will_leader_survive = {
+	exists = owner
+	OR = {
+		# Spare Organs trait
+		AND = {
+			species = { has_trait = trait_spare_organs }
+			NOT = { has_trait = trait_leader_second_chanced }
+		}
+		leader_backup_clone_can_activate = yes
+		thl_is_regeneration_leader = yes
+		thl_is_immortal_akyuu = yes
+	}
+}

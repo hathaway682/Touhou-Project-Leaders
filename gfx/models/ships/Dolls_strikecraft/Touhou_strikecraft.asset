@@ -1,0 +1,98 @@
+animation = {
+	name = "Shanghai_doll_strikecraft_launch_animation"
+	file = "Shanghai_doll_strikecraft_launch.anim"
+}
+animation = {
+	name = "Shanghai_doll_strikecraft_idle_animation"
+	file = "Shanghai_doll_strikecraft_idle.anim"
+}
+
+animation = {
+	name = "Hourai_doll_strikecraft_launch_animation"
+	file = "Hourai_doll_strikecraft_launch.anim"
+}
+animation = {
+	name = "Hourai_doll_strikecraft_idle_animation"
+	file = "Hourai_doll_strikecraft_idle.anim"
+}
+animation = {
+	name = "Yin_Yang_ball_strikecraft_idle_animation"
+	file = "Yin_Yang_ball_strikecraft_idle.anim"
+}
+animation = {
+	name = "dolls_fortress_formation_idle_animation"
+	file = "dolls_fortress_formation_idle.anim"
+}
+
+####################################
+
+entity = {
+	name = "Shanghai_doll_strikecraft_entity"
+	pdxmesh = "Shanghai_doll_strikecraft_mesh"
+
+	default_state = "launch"
+	state = { name = "launch" animation = "launch"  animation_blend_time = 0 looping = no next_state = "idle"
+	}
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+	}
+	game_data = {
+		emissive_recolor_crunch = 3.0
+	}
+}
+
+entity = {
+	name = "Hourai_doll_strikecraft_entity"
+	pdxmesh = "Hourai_doll_strikecraft_mesh"
+
+	default_state = "launch"
+	state = { name = "launch" animation = "launch"  animation_blend_time = 0 looping = no next_state = "idle"
+	}
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+	}
+	game_data = {
+		emissive_recolor_crunch = 3.0
+	}
+}
+
+entity = {
+	name = "Yin_Yang_ball_strikecraft_entity"
+	pdxmesh = "Yin_Yang_ball_strikecraft_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+		event = { time = 0 node = "bullet_locator_0"particle = "Yin_Yang_ball_core_idle_particle" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_1"particle = "Yin_Yang_ball_suboption1_idle_particle" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_2"particle = "Yin_Yang_ball_suboption1_idle_particle" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_3"particle = "Yin_Yang_ball_suboption1_idle_particle" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_4"particle = "Yin_Yang_ball_suboption1_idle_particle" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_5"particle = "Yin_Yang_ball_suboption1_idle_particle" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_6"particle = "Yin_Yang_ball_suboption2_idle_particle" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_7"particle = "Yin_Yang_ball_suboption2_idle_particle" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_8"particle = "Yin_Yang_ball_suboption2_idle_particle" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_9"particle = "Yin_Yang_ball_suboption2_idle_particle" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_10"particle = "Yin_Yang_ball_suboption2_idle_particle" keep_particle = yes }
+	}
+	game_data = {
+		emissive_recolor_crunch = 3.0
+	}
+}
+
+
+
+entity = {
+	name = "Dolls_fortress_entity"
+	pdxmesh = "Dolls_fortress_formation_mesh"
+
+	default_state = idle
+
+	state = { name = "idle" animation = "idle" animation_blend_time = 0 looping = yes
+		event = { time = 0 node = "bullet_locator_1"particle = "Magic_Circle_SPELLDF_effect" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_2"particle = "Magic_Circle_SPELLDF_effect" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_3"particle = "Magic_Circle_SPELLDF_effect" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_4"particle = "Magic_Circle_SPELLDF_effect" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_5"particle = "Magic_Circle_SPELLDF_effect" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_6"particle = "Magic_Circle_SPELLDF_effect" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_7"particle = "Magic_Circle_SPELLDF_effect" keep_particle = yes }
+		event = { time = 0 node = "bullet_locator_8"particle = "Magic_Circle_SPELLDF_effect" keep_particle = yes }
+	}
+}

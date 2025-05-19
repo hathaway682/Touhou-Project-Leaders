@@ -1,0 +1,1378 @@
+reimu_spell_card_1_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            random_list = {
+                1 = {
+                    create_ambient_object = {
+                        type = red_sun_grow_particle_object
+                        location = this
+                        duration = 1
+                    }
+                }
+                1 = {
+                    create_ambient_object = {
+                        type = yellow_sun_grow_particle_object
+                        location = this
+                        duration = 1
+                    }
+                }
+                1 = {
+                    create_ambient_object = {
+                        type = blue_sun_grow_particle_object
+                        location = this
+                        duration = 1
+                    }
+                }
+            }
+            set_fleet_flag = yume_no_huuin_target
+            create_fleet = {
+                name = "NAME_Yume_no_Huuin_Fleet"
+                effect = {
+                    create_ship = {
+                        name = "NAME_Yume_no_Huuin"
+                        design = "NAME_Yume_no_Huuin"
+                        prefix = no
+                        upgradable = no
+                    }
+                    set_event_locked = yes
+                    set_location = root
+                    set_owner = from.owner
+                    set_fleet_flag = yume_no_huuin_fleet
+                }
+            }
+            last_created_fleet = {
+                fleet_event = {
+                    id = touhou_paragon_spell.6
+                    days = 2
+                }
+            }
+            fleet_event = {
+                id = touhou_paragon_spell.11
+                days = 2
+            }
+            add_modifier = {
+                modifier = huuin_modifier
+                days = 30
+            }
+        }
+    }
+}
+
+reimu_spell_card_1_ex_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -2
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            random_list = {
+                1 = {
+                    create_ambient_object = {
+                        type = red_sun_grow_particle_object
+                        location = this
+                        duration = 1
+                    }
+                }
+                1 = {
+                    create_ambient_object = {
+                        type = yellow_sun_grow_particle_object
+                        location = this
+                        duration = 1
+                    }
+                }
+                1 = {
+                    create_ambient_object = {
+                        type = blue_sun_grow_particle_object
+                        location = this
+                        duration = 1
+                    }
+                }
+            }
+            set_fleet_flag = yume_no_huuin_target
+            create_fleet = {
+                name = "NAME_Yume_no_Huuin_Fleet"
+                effect = {
+                    create_ship = {
+                        name = "NAME_Yume_no_Huuin_Ex"
+                        design = "NAME_Yume_no_Huuin_Ex"
+                        prefix = no
+                        upgradable = no
+                    }
+                    set_event_locked = yes
+                    set_location = root
+                    set_owner = from.owner
+                    set_fleet_flag = yume_no_huuin_fleet
+                }
+            }
+            last_created_fleet = {
+                fleet_event = {
+                    id = touhou_paragon_spell.6
+                    days = 2
+                }
+            }
+            fleet_event = {
+                id = touhou_paragon_spell.11
+                days = 2
+            }
+            add_modifier = {
+                modifier = huuin_modifier
+                days = 30
+            }
+        }
+    }
+}
+
+reimu_spell_card_2_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -2
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            create_ambient_object = {
+                type = yellow_sun_grow_particle_object
+                location = this
+                duration = 1
+            }
+            add_modifier = {
+                modifier = huuin_modifier
+                days = 120
+            }
+        }
+    }
+}
+
+reimu_spell_card_3_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = reimu_psi_shield
+                }
+            }
+            random_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                leader_event = {
+                    id = touhou_paragon.40630
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet
+            }
+        }
+        root = {
+            add_modifier = {
+                modifier = modifier_planet_barrier
+            }
+        }
+    }
+}
+
+reimu_spell_card_4_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -4
+        }
+    }
+    from = {
+        random_owned_fleet = {
+            limit = {
+                exists = leader
+                leader = {
+                    has_trait = thl_leader_trait_fly
+                }
+            }
+            set_event_locked = yes
+            fleet_event = {
+                id = touhou_paragon_spell.1
+                days = 30
+            }
+        }
+    }
+}
+
+reimu_spell_card_5_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = reimu_psi_shield
+                }
+            }
+            random_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                leader_event = {
+                    id = touhou_paragon.40620
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet
+            }
+        }
+        root = {
+            solar_system = {
+                spawn_megastructure = {
+                    type = reimu_gateway
+                    planet = root
+                    owner = from
+                    orbit_distance = 5
+                    random_pos = yes
+                    init_effect = {
+                        solar_system = {
+                            set_star_flag = reimu_gateway_planet
+                            system_event = {
+                                id = touhou_paragon_spell.4
+                                days = 360
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+reimu_spell_card_6_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -5
+        }
+    }
+    from = {
+        random_owned_fleet = {
+            limit = {
+                exists = leader
+                leader = {
+                    has_trait = thl_leader_trait_fly
+                }
+            }
+            add_modifier = {
+                modifier = invincible_fleet
+                days = 60
+            }
+            fleet_event = {
+                id = touhou_paragon_spell.5
+                days = 60
+            }
+            set_fleet_settings = {
+                is_boss = yes
+            }
+        }
+    }
+}
+
+koishi_spell_card_1_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet
+            }
+        }
+        root = {
+            add_modifier = {
+                modifier = modifier_ancestor_dream
+            }
+        }
+    }
+}
+
+koishi_spell_card_2_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -2
+        }
+    }
+    if = {
+        limit = {
+            NOT = {
+                exists = event_target:koishi_country
+            }
+        }
+        create_country = {
+            name = NAME_Koishi_Fleet
+            adjective = NAME_Koishi_Fleet
+            type = koishi_berserk_fleet
+            flag = {
+                icon={
+                    category="spherical"
+                    file="flag_spherical_12.dds"
+                }
+                background={
+                    category="backgrounds"
+                    file="flag_BG_31.dds"
+                }
+                colors={
+                    "desert_yellow"
+                    "swamp_green"
+                    "null"
+                    "null"
+                }
+            }
+            auto_delete = no
+            randomize_ethos = yes
+            released_from_country = from
+            ignore_initial_colony_error = yes
+        }
+        last_created_country = {
+            save_global_event_target_as = koishi_country
+            copy_techs_from = { target = from }
+        }
+    }
+    else = {
+        event_target:koishi_country = {
+            copy_techs_from = { target = from }
+        }
+    }
+    from = {
+        every_owned_fleet = {
+            limit = {
+                exists = leader
+                leader = { has_trait = thl_leader_trait_subconscious }
+            }
+            add_modifier = {
+                modifier = rampage_fleet
+                days = -1
+            }
+            set_owner = event_target:koishi_country
+            set_fleet_settings = {
+                can_change_leader = no
+                is_boss = yes
+            }
+        }
+        set_country_flag = koishi_rampage
+    }
+}
+
+koishi_spell_card_3_effect = {
+    from = {
+        remove_country_flag = koishi_rampage
+        add_resource = {
+            thl_bomb = -3
+        }
+    }
+    event_target:koishi_country = {
+        every_owned_fleet = {
+            remove_modifier = rampage_fleet
+            set_fleet_settings = {
+                can_change_leader = yes
+                is_boss = no
+            }
+            set_owner = from
+            leader = {
+                set_owner = from
+            }
+            solar_system = {
+                every_fleet_in_system = {
+                    add_modifier = {
+                        modifier = super_ego
+                        days = 30
+                    }
+                }
+            }
+            solar_system = {
+                every_fleet_in_system = {
+                    add_modifier = {
+                        modifier = super_ego
+                        days = 30
+                    }
+                }
+            }
+        }
+    }
+}
+
+koishi_spell_card_4_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -5
+        }
+    }
+    root = {
+        switch = {
+            trigger = is_scope_type
+            fleet = {
+                if = {
+                    limit = {
+                        leader = {
+                            leader_class = scientist
+                        }
+                    }
+                    owner = {
+                        remove_modifier = thl_scientist_assassined
+                        add_modifier = {
+                            modifier = thl_scientist_assassined
+                            multiplier = root.leader.trigger:has_base_skill
+                            days = 3600
+                        }
+                    }
+                }
+                else = {
+                    remove_modifier = thl_fleet_leader_assassined
+                    add_modifier = {
+                        modifier = thl_fleet_leader_assassined
+                        multiplier = root.leader.trigger:has_base_skill
+                        days = 360
+                    }
+                }
+                owner = {
+                    country_event = {
+                        id = touhou_paragon_spell.41401
+                        scopes = {
+                            from = root.leader
+                        }
+                    }
+                }
+            }
+            planet = {
+                if = {
+                    limit = {
+                        NOT = {
+                            owner = {
+                                any_situation = {
+                                    is_situation_type = situation_planetary_revolt
+                                }
+                            }
+                        }
+                    }
+                    start_situation = {
+                        type = situation_planetary_revolt
+                        target = root
+                        effect = {
+                            save_event_target_as = new_situation
+                            if = {
+                                limit = {
+                                    root = {
+                                        count_owned_pop_amount = {
+                                            count >= 500
+                                            limit = {
+                                                is_enslaved = yes
+                                                is_sapient = yes
+                                                pop_has_happiness = yes
+                                                happiness < 0.4
+                                            }
+                                        }
+                                    }
+                                }
+                                set_situation_flag = slave_revolt
+                            }
+                        }
+                    }
+                }
+                else = {
+                    add_modifier = {
+                        modifier = instability_join_revolt
+                        days = 3600
+                    }
+                }
+                remove_modifier = thl_planet_leader_assassined
+                add_modifier = {
+                    modifier = thl_planet_leader_assassined
+                    multiplier = root.leader.trigger:has_base_skill
+                    days = 3600
+                }
+                owner = {
+                    country_event = {
+                        id = touhou_paragon_spell.41401
+                        scopes = {
+                            from = root.leader
+                        }
+                    }
+                }
+            }
+            country = {
+                remove_modifier = thl_country_leader_assassined
+                add_modifier = {
+                    modifier = thl_country_leader_assassined
+                    multiplier = root.leader.trigger:has_base_skill
+                    days = 3600
+                }
+                owner = {
+                    country_event = {
+                        id = touhou_paragon_spell.41401
+                        scopes = {
+                            from = leader
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+sizuha_spell_card_1_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            create_ambient_object = {
+                type = yellow_sun_grow_particle_object
+                location = this
+                duration = 1
+            }
+            add_modifier = {
+                modifier = fall_in_blast_modifier
+                days = 60
+            }
+            random_list = {
+                99 = {}
+                1 = {
+                    set_mia = mia_emergency_ftl
+                }
+            }
+        }
+    }
+}
+
+sizuha_spell_card_2_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_modifier = bleak_planet
+                    }
+                }
+                add_modifier = {
+                    modifier = bleak_planet
+                }
+            }
+            else_if = {
+                limit = {
+                    pop_amount > 0
+                }
+                while = {
+                    count = 2
+                    random_owned_pop_group =  {
+                        kill_single_pop = yes
+                    }
+                }
+                add_modifier = {
+                    modifier = aki_bleak_planet
+                    days = 360
+                }
+            }
+            else = {
+                change_pc = pc_barren
+                add_modifier = {
+                    modifier = terraforming_candidate
+                }
+                add_modifier = {
+                    modifier = aki_terraforming_cost
+                }
+            }
+        }
+    }
+}
+
+minoriko_spell_card_1_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            random_list = {
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_nuked
+                            is_planet_class = pc_arctic
+                        }
+                    }
+                    add_deposit = d_lichen_fields
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_arid
+                            is_planet_class = pc_savannah
+                        }
+                    }
+                    add_deposit = d_bountiful_plains
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        is_planet_class = pc_continental
+                    }
+                    add_deposit = d_rugged_woods
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_ocean
+                            is_planet_class = pc_tropical
+                        }
+                    }
+                    add_deposit = d_green_hills
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_alpine
+                            is_planet_class = pc_tundra
+                        }
+                    }
+                    add_deposit = d_forgiving_tundra
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        is_planet_class = pc_ocean
+                    }
+                    add_deposit = d_boggy_fens
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_ocean
+                            is_planet_class = pc_tropical
+                        }
+                    }
+                    add_deposit = d_nutritious_mudland
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_nuked
+                            is_cold = yes
+                        }
+                    }
+                    add_deposit = d_fungal_caves
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_gaia
+                            is_planet_class = pc_tropical
+                            is_planet_class = pc_ocean
+                        }
+                    }
+                    add_deposit = d_lush_jungle
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_savannah
+                            is_planet_class = pc_continental
+                            is_planet_class = pc_gaia
+                            is_planet_class = pc_arid
+                        }
+                    }
+                    add_deposit = d_fertile_lands
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_arid
+                            is_planet_class = pc_desert
+                        }
+                    }
+                    add_deposit = d_great_river
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_continental
+                            is_planet_class = pc_savannah
+                            is_planet_class = pc_gaia
+                        }
+                    }
+                    add_deposit = d_black_soil
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_gaia
+                            is_planet_class = pc_ocean
+                        }
+                    }
+                    add_deposit = d_teeming_reef
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_arid
+                            is_planet_class = pc_desert
+                        }
+                    }
+                    add_deposit = d_marvelous_oasis
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        OR = {
+                            is_planet_class = pc_arid
+                            is_planet_class = pc_desert
+                            is_planet_class = pc_tropical
+                        }
+                    }
+                    add_deposit = d_tropical_island
+                }
+                0 = {
+                    modifier = {
+                        add = 1
+                        is_cold = yes
+                    }
+                    add_deposit = d_fungal_forest
+                }
+            }
+        }
+    }
+}
+
+minoriko_spell_card_2_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_modifier = hazardous_weather
+                    }
+                }
+                add_modifier = {
+                    modifier = hazardous_weather
+                }
+            }
+            else_if = {
+                limit = {
+                   OR = {
+                       num_buildings = {
+                           type = any
+                           value > 1
+                       }
+                       num_districts = {
+                           type = any
+                           value > 0
+                       }
+                   }
+                }
+                ruin_building = random_no_capital
+                remove_last_built_district = yes
+                add_modifier = {
+                    modifier = aki_hazardous_weather
+                    days = 360
+                }
+            }
+            else = {
+                if = {
+                    limit = {
+                        is_planet_class = pc_city
+                    }
+                    change_pc = pc_relic
+                }
+                random_list = {
+                    1 = {
+                        change_pc = pc_desert
+                    }
+                    1 = {
+                        change_pc = pc_arid
+                    }
+                    1 = {
+                        change_pc = pc_savannah
+                    }
+                    1 = {
+                        change_pc = pc_tropical
+                    }
+                    1 = {
+                        change_pc = pc_continental
+                    }
+                    1 = {
+                        change_pc = pc_ocean
+                    }
+                    1 = {
+                        change_pc = pc_arctic
+                    }
+                    1 = {
+                        change_pc = pc_tundra
+                    }
+                    1 = {
+                        change_pc = pc_alpine
+                    }
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_1_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            create_fleet = {
+                name = "NAME_Master_Spark"
+                effect = {
+                    set_owner = from
+                    create_ship = {
+                        name = "NAME_Master_Spark"
+                        design = "NAME_Master_Spark"
+                        graphical_culture = "extra_dimensional_01"
+                    }
+                    set_location = root
+                    set_fleet_flag = spell_card_fleet
+                    fleet_event = {
+                        id = touhou_paragon_spell.6
+                        days = 180
+                    }
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_1_ex_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -4
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            create_fleet = {
+                name = "NAME_Final_Spark"
+                effect = {
+                    set_owner = from
+                    create_ship = {
+                        name = "NAME_Final_Spark"
+                        design = "NAME_Final_Spark"
+                        graphical_culture = "extra_dimensional_01"
+                    }
+                    set_location = root
+                    set_fleet_flag = spell_card_fleet
+                    fleet_event = {
+                        id = touhou_paragon_spell.6
+                        days = 360
+                    }
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_2_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -2
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            create_fleet = {
+                name = "NAME_Stardust_Reverie"
+                effect = {
+                    set_owner = from
+                    create_ship = {
+                        name = "NAME_Stardust_Reverie"
+                        design = "NAME_Stardust_Reverie"
+                        graphical_culture = "extra_dimensional_01"
+                    }
+                    set_location = root
+                    set_fleet_flag = spell_card_fleet
+                    set_fleet_flag = stardust_reverie_fleet
+                    fleet_event = {
+                        id = touhou_paragon_spell.6
+                        days = 180
+                    }
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_2_ex_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -3
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            create_fleet = {
+                name = "NAME_Event_Horizon"
+                effect = {
+                    set_owner = from
+                    create_ship = {
+                        name = "NAME_Event_Horizon"
+                        design = "NAME_Event_Horizon"
+                        graphical_culture = "extra_dimensional_01"
+                    }
+                    set_location = root
+                    set_fleet_flag = spell_card_fleet
+                    set_fleet_flag = event_horizon_fleet
+                    fleet_event = {
+                        id = touhou_paragon_spell.6
+                        days = 360
+                    }
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_3_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -2
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            while = {
+                count = 4
+                create_ship = {
+                    random_existing_design = marisa_cannon
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_3_ex_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -3
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            while = {
+                count = 6
+                create_ship = {
+                    random_existing_design = marisa_cannon_titanic
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_4_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -4
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            create_fleet = {
+                name = "NAME_Controlled_Asteroid"
+                effect = {
+                    set_owner = from
+                    create_ship = {
+                        name = "NAME_Asteroid"
+                        design = "NAME_Marisa_Asteroid"
+                        prefix = no
+                        upgradable = no
+                    }
+                    set_fleet_settings = {
+                        can_change_composition = no
+                        can_change_leader = no
+                        can_upgrade = no
+                        uses_naval_capacity = no
+                        spawn_debris = no
+                    }
+                    add_modifier = {
+                        modifier = cannot_escape
+                    }
+                    set_location = root
+                }
+            }
+            remove_planet = yes
+        }
+    }
+}
+
+marisa_spell_card_5_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -4
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            planet_event = {
+                id = touhou_paragon_spell.100
+                scopes = {
+                    from = from
+                }
+            }
+        }
+    }
+}
+
+marisa_spell_card_6_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -5
+        }
+    }
+    from = {
+        random_owned_fleet = {
+            limit = {
+                exists = leader
+                leader = {
+                    has_trait = thl_leader_trait_magic
+                }
+            }
+            add_modifier = {
+                modifier = blazing_star
+                days = 180
+            }
+        }
+    }
+}
+
+hina_spell_card_1_effect = {
+    from = {
+        subtract_jinx_or_bomb = yes
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = country #保险措施
+            }
+        }
+        root = {
+            random_owned_planet = {
+                planet_event = {
+                    id = touhou_paragon_spell.300
+                }
+            }
+        }
+    }
+}
+
+hina_spell_card_1_ex_effect = {
+    from = {
+        while = {
+            count = 5
+            subtract_jinx_or_bomb = yes
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = country #保险措施
+            }
+        }
+        root = {
+            set_timed_country_flag = {
+                flag = jinx_target_coutry
+                days = 3600
+            }
+        }
+    }
+}
+
+hina_spell_card_2_effect = {
+    from = {
+        while = {
+            count = 3
+            subtract_jinx_or_bomb = yes
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            create_ambient_object = {
+                type = red_sun_grow_particle_object
+                location = this
+                duration = 1
+            }
+            add_modifier = {
+                modifier = broken_amulet_modifier_1
+                days = 60
+            }
+        }
+    }
+}
+
+hina_spell_card_2_ex_effect = {
+    from = {
+        while = {
+            count = 6
+            subtract_jinx_or_bomb = yes
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = fleet #保险措施
+            }
+        }
+        root = {
+            create_ambient_object = {
+                type = red_sun_grow_particle_object
+                location = this
+                duration = 1
+            }
+            add_modifier = {
+                modifier = broken_amulet_modifier_2
+                days = 60
+            }
+        }
+    }
+}
+
+hina_spell_card_3_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            create_fleet = {
+                name = "NAME_Misfortune_Wheel_1"
+                effect = {
+                    set_owner = from
+                    create_ship = {
+                        name = "NAME_Misfortune_Wheel_1"
+                        design = "NAME_Misfortune_Wheel_1"
+                        graphical_culture = "extra_dimensional_01"
+                    }
+                    set_location = root
+                    set_fleet_flag = misfortune_wheel_1_fleet
+                    set_fleet_flag = spell_card_fleet
+                    fleet_event = {
+                        id = touhou_paragon_spell.6
+                        days = 180
+                    }
+                }
+            }
+        }
+    }
+}
+
+hina_spell_card_3_ex_effect = {
+    from = {
+        add_resource = {
+            thl_bomb = -1
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            create_fleet = {
+                name = "NAME_Misfortune_Wheel_2"
+                effect = {
+                    set_owner = from
+                    create_ship = {
+                        name = "NAME_Misfortune_Wheel_2"
+                        design = "NAME_Misfortune_Wheel_2"
+                        graphical_culture = "extra_dimensional_01"
+                    }
+                    set_location = root
+                    set_fleet_flag = misfortune_wheel_2_fleet
+                    set_fleet_flag = spell_card_fleet
+                    fleet_event = {
+                        id = touhou_paragon_spell.6
+                        days = 360
+                    }
+                }
+            }
+        }
+    }
+}
+
+hina_spell_card_4_effect = {
+    from = {
+        while = {
+            count = 2
+            subtract_jinx_or_bomb = yes
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+        }
+        root = {
+            add_modifier = {
+                modifier = pain_flow_modifier_1
+                days = 360
+            }
+            planet_event = {
+                id = touhou_paragon_spell.300
+            }
+        }
+    }
+}
+
+hina_spell_card_4_ex_effect = {
+    from = {
+        while = {
+            count = 7
+            subtract_jinx_or_bomb = yes
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                is_scope_type = planet #保险措施
+            }
+
+        }
+        root = {
+            every_owned_pop_group =  {
+                set_pop_group_flag = event_purge
+            }
+            add_modifier = {
+                modifier = pain_flow_modifier_2
+                days = 360
+            }
+            planet_event = {
+                id = touhou_paragon_spell.7
+                days = 360
+            }
+        }
+    }
+}

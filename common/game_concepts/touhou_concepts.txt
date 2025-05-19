@@ -1,0 +1,30 @@
+
+# If no icon/texture is specified it will use NDefines::NInterface::GAME_CONCEPT_ICON_DEFAULT
+
+concept_magic_dolls = {
+}
+
+concept_automatic_dolls = {
+}
+
+concept_sapient_dolls = {
+}
+
+concept_doll_leaders = {
+}
+
+concept_ex_charge = {
+}
+
+concept_huuin = {
+}
+
+concept_thl_spirit = {
+}
+
+concept_yomi_leaders = {
+}
+
+concept_thl_mission_ethic_effect = {
+    icon = "gfx/interface/icons/concepts/concept_factions.dds"
+}

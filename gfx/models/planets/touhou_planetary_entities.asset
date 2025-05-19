@@ -1,0 +1,56 @@
+#####    Planet attachments    ######
+@astroid_scale = 30
+
+entity = {
+	name = "nether_planet_01_entity"
+	pdxmesh = "planet_clouded_mesh"
+	default_state = "idle"
+
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "nether_01_diffuse.dds"
+	texture_normal = "nether_01_normals.dds"
+	texture_specular = "nether_01_spec.dds"
+	}
+
+		state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+
+entity = {
+	name = "nether_planet_02_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "nether_02_diffuse.dds"
+	texture_normal = "nether_02_normals.dds"
+	texture_specular = "nether_02_spec.dds"
+	}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+
+entity = {
+	name = "nether_planet_03_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "nether_03_diffuse.dds"
+	texture_normal = "nether_03_normals.dds"
+	texture_specular = "nether_03_spec.dds"
+	}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}

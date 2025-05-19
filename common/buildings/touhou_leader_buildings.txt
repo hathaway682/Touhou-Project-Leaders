@@ -1,0 +1,2466 @@
+##################
+# Unity buildings
+##################
+
+building_shrine = {
+	base_buildtime = @b1_time
+	icon = building_moriya_shrine
+	base_cap_amount = 1
+
+	building_sets = {
+		origin
+	}
+
+	category = unity
+
+	potential = {
+		owner = {
+			NOR = {
+				has_civic = civic_hakurei_shinto
+				has_civic = civic_hakurei_shinto_corp
+			}
+			has_country_flag = can_build_shirne
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_temple
+		building_heritage_site
+		building_simulation_1
+		building_hive_node
+	}
+
+	upgrades = {
+		building_moriya_shrine
+		#building_hakurei_shrine
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		job_miko_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = yes }
+		}
+		job_miko_drone_add = 200
+	}
+
+	on_built = {
+		if = {
+			limit = {
+				OR = {
+					has_deposit = d_nature_preserve_blocker
+					has_deposit = d_big_nature_preserve_blocker
+					has_deposit = d_dense_jungle
+					has_deposit = d_rugged_woods
+					has_deposit = d_lush_jungle
+					has_deposit = d_migrating_forests
+					has_deposit = d_migrating_forest_reserve
+					has_deposit = d_wandering_forests
+					has_deposit = d_seed_bombing_plantoid_blocker
+				}
+				owner = {
+					NOT = {
+						any_owned_leader = {
+							has_trait = thl_leader_trait_fall
+						}
+					}
+				}
+			}
+			planet_event = {
+				id = touhou_paragon.50003
+			}
+			set_planet_flag = sizuha_planet
+		}
+		if = {
+			limit = {
+				planet_resource_compare = {
+					resource = food
+					type = produces
+					value > 50
+				}
+				owner = {
+					NOT = {
+						any_owned_leader = {
+							has_trait = leader_trait_harvest
+						}
+					}
+				}
+			}
+			planet_event = {
+				id = touhou_paragon.50004
+			}
+			set_planet_flag = minoriko_planet
+		}
+		if = {
+			limit = {
+				OR = {
+					free_amenities < -100
+					any_owned_pop_group = {
+						pop_group_has_trait = trait_humanoid_jinxed
+					}
+				}
+
+				owner = {
+					NOT = {
+						any_owned_leader = {
+							has_trait = thl_leader_trait_jinx
+						}
+					}
+				}
+			}
+			planet_event = {
+				id = touhou_paragon.50005
+			}
+			set_planet_flag = hina_planet
+		}
+		if = {
+			limit = {
+				is_capital = yes
+				NOT = {
+					owner = {
+						has_country_flag = saisen_box_active
+					}
+				}
+			}
+			owner = {
+				country_event = { id = touhou_paragon.40612 days = 365 random = 180 }
+				set_country_flag = saisen_box_active
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = no }
+		}
+		text = job_miko_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = yes }
+		}
+		text = job_miko_effect_desc
+	}
+	is_essential = yes
+}
+
+building_moriya_shrine = {
+	base_buildtime = @b3_time
+	icon = building_moriya_shrine
+	can_build = no
+
+	building_sets = {
+		origin
+	}
+
+	category = unity
+
+	potential = {
+		owner = {
+			OR = {
+				has_civic = civic_moriya_shinto
+				has_civic = civic_moriya_shinto_corp
+				any_owned_leader = {
+					has_trait = thl_leader_trait_miracle
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		OR = {
+			has_major_upgraded_capital = yes
+			AND = {
+				has_upgraded_capital = yes
+				owner = {
+					OR = {
+						has_civic = civic_moriya_shinto
+						has_civic = civic_moriya_shinto_corp
+					}
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_citadel_of_faith
+		building_autocurating_vault
+		building_alpha_hub
+		building_corporate_vault
+	}
+
+	planet_modifier = {
+		job_miko_add = 200
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			owner = { has_country_flag = touhou_flag_sanae_shrine_research_speed}
+		}
+		modifier = {
+			all_technology_research_speed = 0.01
+		}
+	}
+
+	inline_script = {
+		script = cosmic_storms/StormBuildingModifiers
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		cost = {
+			trigger = {
+				owner = {
+					NOR = {
+						has_civic = civic_moriya_shinto
+						has_civic = civic_moriya_shinto_corp
+					}
+				}
+			}
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					NOR = {
+						has_civic = civic_moriya_shinto
+						has_civic = civic_moriya_shinto_corp
+					}
+				}
+			}
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_physicists_unity_produces_add = 1
+		planet_engineers_unity_produces_add = 1
+		planet_biologists_unity_produces_add = 1
+		planet_bureaucrats_physics_research_produces_add = 1
+		planet_bureaucrats_society_research_produces_add = 1
+		planet_bureaucrats_engineering_research_produces_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = moriya_storm_attraction
+		}
+		storm_attraction_field_modifier = 0.6
+	}
+
+	triggered_desc = {
+		trigger = {
+			has_planet_flag = moriya_storm_attraction
+		}
+		text = "building_cosmic_storm_advanced_attraction_center_tt"
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = moriya_storm_repelling
+		}
+		storm_repelling_field_modifier = 0.6
+	}
+
+	triggered_desc = {
+		trigger = {
+			has_planet_flag = moriya_storm_repelling
+		}
+		text = "building_cosmic_storm_advanced_repellent_center_tt"
+	}
+
+	triggered_desc = {
+		text = job_moriya_miko_effect_desc
+	}
+	is_essential = yes
+}
+
+holding_building_moriya_shrine = {
+	base_buildtime = @b3_time
+	owner_type = subject_holding
+	icon = building_moriya_shrine
+	base_cap_amount = 1
+	category = unity
+
+	building_sets = {
+		origin
+	}
+
+	potential = {
+		owner.overlord = {
+			OR = {
+				has_civic = civic_moriya_shinto
+				has_civic = civic_moriya_shinto_corp
+				any_owned_leader = {
+					has_trait = thl_leader_trait_miracle
+				}
+			}
+			has_country_flag = touhou_flag_sanae_shrine_research_speed
+		}
+		is_capital = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		job_miko_add = 400
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = yes }
+		}
+		job_miko_drone_add = 400
+	}
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			minerals = @b3_minerals
+		}
+		cost = {
+			trigger = {
+				owner.overlord = {
+					NOR = {
+						has_civic = civic_moriya_shinto
+						has_civic = civic_moriya_shinto_corp
+					}
+				}
+			}
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+
+	planet_modifier = {
+		monthly_loyalty = 1.0
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			owner.overlord = { has_country_flag = touhou_flag_sanae_shrine_research_speed}
+		}
+		modifier = {
+			all_technology_research_speed = 0.01
+		}
+	}
+
+	inline_script = {
+		script = cosmic_storms/StormBuildingModifiers
+	}
+
+	triggered_planet_modifier = {
+		planet_physicists_unity_produces_add = 1
+		planet_engineers_unity_produces_add = 1
+		planet_biologists_unity_produces_add = 1
+		planet_bureaucrats_physics_research_produces_add = 1
+		planet_bureaucrats_society_research_produces_add = 1
+		planet_bureaucrats_engineering_research_produces_add = 1
+	}
+
+	triggered_desc = {
+		text = job_moriya_miko_effect_desc
+	}
+}
+
+#博丽神道国策特供版神社
+building_hakurei_shrine_0 = {
+	base_buildtime = @b1_time
+	icon = building_moriya_shrine
+	base_cap_amount = 1
+
+	building_sets = {
+		origin
+	}
+
+	category = unity
+
+	potential = {
+		owner = {
+			OR = {
+				has_civic = civic_hakurei_shinto
+				has_civic = civic_hakurei_shinto_corp
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_temple
+		building_heritage_site
+		building_simulation_1
+		building_hive_node
+	}
+
+	upgrades = {
+		#building_moriya_shrine
+		building_hakurei_shrine
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		job_miko_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = yes }
+		}
+		job_miko_drone_add = 200
+	}
+
+	on_built = {
+		if = {
+			limit = {
+				OR = {
+					has_deposit = d_nature_preserve_blocker
+					has_deposit = d_big_nature_preserve_blocker
+					has_deposit = d_dense_jungle
+					has_deposit = d_rugged_woods
+					has_deposit = d_lush_jungle
+					has_deposit = d_migrating_forests
+					has_deposit = d_migrating_forest_reserve
+					has_deposit = d_wandering_forests
+					has_deposit = d_seed_bombing_plantoid_blocker
+				}
+				owner = {
+					NOT = {
+						any_owned_leader = {
+							has_trait = thl_leader_trait_fall
+						}
+					}
+				}
+			}
+			planet_event = {
+				id = touhou_paragon.50003
+			}
+			set_planet_flag = sizuha_planet
+		}
+		if = {
+			limit = {
+				planet_resource_compare = {
+					resource = food
+					type = produces
+					value > 50
+				}
+				owner = {
+					NOT = {
+						any_owned_leader = {
+							has_trait = leader_trait_harvest
+						}
+					}
+				}
+			}
+			planet_event = {
+				id = touhou_paragon.50004
+			}
+			set_planet_flag = minoriko_planet
+		}
+		if = {
+			limit = {
+				OR = {
+					free_amenities < -100
+					any_owned_pop_group = {
+						pop_group_has_trait = trait_humanoid_jinxed
+					}
+				}
+
+				owner = {
+					NOT = {
+						any_owned_leader = {
+							has_trait = thl_leader_trait_jinx
+						}
+					}
+				}
+			}
+			planet_event = {
+				id = touhou_paragon.50005
+			}
+			set_planet_flag = hina_planet
+		}
+		if = {
+			limit = {
+				is_capital = yes
+				NOT = {
+					owner = {
+						has_country_flag = saisen_box_active
+					}
+				}
+			}
+			owner = {
+				country_event = { id = touhou_paragon.40612 days = 365 random = 180 }
+				set_country_flag = saisen_box_active
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+	triggered_desc = {
+		text = job_miko_effect_desc
+	}
+	is_essential = yes
+}
+
+building_hakurei_shrine = {
+	base_buildtime = @b3_time
+	icon = building_hakurei_shrine
+	can_build = no
+
+	building_sets = {
+		origin
+	}
+
+	category = unity
+
+	potential = {
+		owner = {
+			OR = {
+				has_civic = civic_hakurei_shinto
+				has_civic = civic_hakurei_shinto_corp
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		OR = {
+			has_major_upgraded_capital = yes
+			AND = {
+				has_upgraded_capital = yes
+				owner = {
+					OR = {
+						has_civic = civic_hakurei_shinto
+						has_civic = civic_hakurei_shinto_corp
+					}
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_citadel_of_faith
+		building_autocurating_vault
+		building_alpha_hub
+		building_corporate_vault
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		job_miko_add = 400
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = yes }
+		}
+		job_miko_drone_add = 400
+	}
+
+	triggered_planet_modifier = {
+		planet_soldiers_unity_produces_add = 1
+		planet_enforcers_unity_produces_add = 1
+	}
+
+	triggered_country_modifier = {
+		ship_accuracy_add = 1
+		ship_tracking_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		cost = {
+			trigger = {
+				owner = {
+					NOR = {
+						has_civic = civic_hakurei_shinto
+						has_civic = civic_hakurei_shinto_corp
+					}
+				}
+			}
+			volatile_motes = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					NOR = {
+						has_civic = civic_hakurei_shinto
+						has_civic = civic_hakurei_shinto_corp
+					}
+				}
+			}
+			volatile_motes = @b3_rare_upkeep
+		}
+	}
+	triggered_desc = {
+		text = job_hakurei_miko_effect_desc
+	}
+	is_essential = yes
+}
+
+building_assembler_mk2 = {
+	base_buildtime = @b4_time
+	base_cap_amount = 1
+	icon = building_wrecking_yards
+
+	building_sets = {
+		government
+		urban
+	}
+
+	category = pop_assembly
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			volatile_motes = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			volatile_motes = @b4_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_pop_assemblers_engineering_research_produces_add = 4
+		planet_pop_assemblers_alloys_upkeep_add = 4
+		planet_pop_assemblers_volatile_motes_upkeep_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_country_flag = kappa_enclave_mk2_already}
+		}
+		job_roboticist_add = 100
+	}
+
+	prerequisites = { tech_sanae_robot_worker }
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = add_mk2_trait_for_new_robot
+	}
+}
+
+building_metel_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	building_sets = {
+		foundry
+	}
+
+	category = manufacturing
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = thl_leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		pop_foundry_bonus_workforce_mult = 0.5
+	}
+}
+
+building_wood_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	building_sets = {
+		factory
+	}
+
+	category = manufacturing
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = thl_leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		pop_artisan_bonus_workforce_mult = 0.5
+	}
+}
+
+building_water_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	building_sets = {
+		farming
+	}
+
+	category = resource
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = thl_leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		pop_farmer_bonus_workforce_mult = 0.5
+	}
+}
+
+building_fire_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	building_sets = {
+		generator
+	}
+
+	category = resource
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = thl_leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		pop_technician_bonus_workforce_mult = 0.5
+	}
+}
+
+building_earth_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	category = resource
+
+	building_sets = {
+		mining
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = thl_leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		pop_miner_bonus_workforce_mult = 0.5
+	}
+}
+
+building_sun_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+	icon = building_fire_catalyst
+
+	category = unity
+
+	building_sets = {
+		unity
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = thl_leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b2_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		pop_bureaucrat_bonus_workforce_mult = 0.5
+	}
+}
+
+building_luna_catalyst = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	category = research
+
+	building_sets = {
+		research
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = thl_leader_trait_elements
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b2_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		pop_physicist_bonus_workforce_mult = 0.5
+		pop_biologist_bonus_workforce_mult = 0.5
+		pop_engineer_bonus_workforce_mult = 0.5
+	}
+}
+
+building_great_library = {
+	base_buildtime = @b4_time
+	empire_limit = 1
+	can_demolish = yes
+	icon = building_master_archive
+
+	building_sets = {
+		research
+	}
+
+	category = research
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = thl_leader_trait_elements
+			}
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { owner = { is_gestalt = no } }
+		}
+		job_touhou_archivist_add = 1000
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = yes }
+		}
+		job_touhou_archivist_drone_add = 1000
+	}
+
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = no }
+		}
+		text = job_touhou_archivist_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = yes }
+		}
+		text = job_touhou_archivist_drone__effect_desc
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 100
+			society_research = 100
+			engineering_research = 100
+		}
+		cost = {
+			minerals = @b4_minerals
+			rare_crystals = @b4_rare_cost
+		}
+		upkeep = {
+			energy = 20
+			rare_crystals = @b4_rare_upkeep
+		}
+	}
+
+	upgrades = {
+	}
+}
+
+##人偶组装厂
+building_doll_assembly_plant = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = pop_assembly
+
+	building_sets = {
+		urban
+		government
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_dolls
+			}
+		}
+		OR = {
+			owner = { is_ai = no }
+			NOT = { exists = assembling_species }
+			assembling_species = { is_robotic_species = yes }
+		}
+		owner = {
+			is_regular_empire = yes
+			NOT = { has_policy_flag = robots_outlawed }
+			OR = {
+				is_ai = no
+				NOT = { has_ascension_perk = ap_engineered_evolution }
+				is_materialist = yes
+			}
+		} 
+		NOT = { has_modifier = slave_colony }
+	}
+
+	convert_to = {
+		building_machine_assembly_plant
+		building_robot_assembly_plant
+	}
+
+	upgrades = {
+		building_doll_assembly_complex
+	}
+
+	allow = {
+		hidden_trigger = {
+			OR = {
+				owner = { is_ai = no }
+				NAND = {
+					free_district_slots = 0
+					free_building_slots <= 1
+					free_housing <= 0
+					free_jobs <= 0
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				OR = {
+					is_regular_empire = no
+					has_policy_flag = robots_outlawed
+				}
+			}
+			has_modifier = slave_colony
+			AND = {
+				owner = { is_ai = yes }
+				free_district_slots = 0
+				free_building_slots = 0
+				free_housing <= 0
+				free_jobs <= 0
+			}
+			owner = {
+				is_ai = yes
+				has_ascension_perk = ap_engineered_evolution
+				is_materialist = no
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		job_dollmaker_add = 100
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_individual_machine = yes
+		}
+		job_dollmaker_add = 50
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = yes }
+		}
+		job_dollmaker_drone_add = 150
+	}
+
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = no }
+		}
+		text = job_dollmaker_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = yes }
+		}
+		text = job_dollmaker_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_building = building_clone_vats
+				has_building = building_clone_army_clone_vat
+				has_building = building_posthumous_employment_center
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_organic_species = yes }
+					exists = owner
+					# owner = {
+					# 	NOT = { has_policy_flag = roboticist_output_build_cyborgs }
+					# }
+				}
+			}
+		}
+		text = tooltip_organic_and_artificial_assembly_warning
+	}
+
+	prerequisites = {
+		"tech_magic_dolls"
+	}
+	is_essential = yes
+}
+
+building_doll_assembly_complex = {
+	base_buildtime = @b3_time
+	can_build = no
+
+	category = pop_group_assembly
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			owner = { is_ai = no }
+			NOT = { exists = assembling_species }
+			assembling_species = { is_robotic_species = yes }
+		}
+		owner = {
+			is_regular_empire = yes
+			NOT = { has_policy_flag = robots_outlawed }
+			OR = {
+				is_ai = no
+				NOT = { has_ascension_perk = ap_engineered_evolution }
+				is_materialist = yes
+			}
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	convert_to = {
+		building_machine_assembly_complex
+		building_robot_assembly_complex
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				OR = {
+					is_regular_empire = no
+					has_policy_flag = robots_outlawed
+				}
+			}
+			has_modifier = slave_colony
+			AND = {
+				owner = { is_ai = yes }
+				free_district_slots = 0
+				free_building_slots = 0
+				free_housing <= 0
+				free_jobs <= 0
+			}
+			owner = {
+				is_ai = yes
+				has_ascension_perk = ap_engineered_evolution
+				is_materialist = no
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		job_dollmaker_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_individual_machine = yes
+		}
+		job_dollmaker_add = 50
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = yes }
+		}
+		job_dollmaker_drone_add = 250
+	}
+
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = no }
+		}
+		text = job_dollmaker_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = yes }
+		}
+		text = job_dollmaker_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = job_dollmaker_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_building = building_clone_vats
+				has_building = building_clone_army_clone_vat
+				has_building = building_posthumous_employment_center
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_organic_species = yes }
+					exists = owner
+					# owner = {
+					# 	NOT = { has_policy_flag = roboticist_output_build_cyborgs }
+					# }
+				}
+			}
+		}
+		text = tooltip_organic_and_artificial_assembly_warning
+	}
+	is_essential = yes
+	prerequisites = {
+		"tech_doll_assembly_complex"
+	}
+}
+
+building_suzunaan = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+	icon = building_suzunaan
+
+	category = research
+
+	building_sets = {
+		research
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_books
+			}
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_archaeostudies_faculty
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		job_touhou_bookseller_add = 300
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = yes }
+		}
+		job_touhou_bookseller_drone_add = 300
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		planet_physicists_trade_produces_add = 1.5
+		planet_engineers_trade_produces_add = 1.5
+		planet_biologists_trade_produces_add = 0.5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			minor_artifacts = 50
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = no }
+		}
+		text = job_touhou_bookseller_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = yes }
+		}
+		text = job_touhou_bookseller_drone_effect_desc
+	}
+}
+
+building_national_historial_archive = {
+	base_buildtime = @b3_time
+	empire_limit = 1
+
+	category = unity
+
+	building_sets = {
+		unity
+		research
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_memory
+			}
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_archaeostudies_faculty
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		job_touhou_historian_add = 1
+		mult = owner.trigger:empire_size
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			minor_artifacts = 50
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	triggered_desc = {
+		text = job_touhou_historian_effect_desc
+	}
+}
+
+building_corpses_disposal_center = {
+	base_buildtime = @b1_time
+
+	category = pop_assembly
+
+	building_sets = {
+		urban
+		government
+	}
+
+	base_cap_amount = 1
+
+	potential = {
+		exists = owner
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_corpse_manipulation
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		OR = {
+			owner = { is_ai = no }
+			NOT = { exists = assembling_species }
+			assembling_species = { is_organic_species = yes }
+		}
+		OR = {
+			owner = { is_ai = no }
+			NAND = {
+				free_district_slots = 0
+				free_building_slots <= 1
+				free_housing <= 0
+				free_jobs <= 0
+			}
+		}
+	}
+
+	destroy_trigger = {
+		NOT = {
+			owner = {
+				any_owned_leader = {
+					has_trait = thl_leader_trait_corpse_manipulation
+				}
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 500
+		job_reassigner_add = 200
+	}
+
+	resources = {
+		category = planet_buildings
+		# Base cost
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			energy = 10
+			food = 10
+			thl_spirit = 10
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_building = building_robot_assembly_plant
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_robotic_species = yes }
+				}
+			}
+		}
+		text = tooltip_organic_and_artificial_assembly_warning
+	}
+	is_essential = yes
+}
+
+building_posthumous_employment_center = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = pop_assembly
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			owner = { is_ai = no }
+			NOT = { exists = assembling_species }
+			assembling_species = { is_organic_species = yes }
+		}
+		OR = {
+			owner = { is_ai = no }
+			NAND = {
+				free_district_slots = 0
+				free_building_slots <= 1
+				free_housing <= 0
+				free_jobs <= 0
+			}
+		}
+		owner = {
+			is_regular_empire = yes
+			OR = {
+				has_valid_civic = civic_permanent_employment
+				has_valid_civic = civic_nether_world_corp
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_valid_civic = civic_permanent_employment
+					has_valid_civic = civic_nether_world_corp
+				}
+			}
+			AND = {
+				owner = { is_ai = yes }
+				free_district_slots = 0
+				free_building_slots = 0
+				free_housing <= 0
+				free_jobs <= 0
+			}
+		}
+	}
+
+	planet_modifier = {
+		job_reassigner_add = 100
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	triggered_desc = {
+		text = job_reassigner_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_building = building_robot_assembly_plant
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_robotic_species = yes }
+				}
+			}
+		}
+		text = tooltip_organic_and_artificial_assembly_warning
+	}
+}
+
+#####################
+# Galactic Paragons Origin Unique Buildings
+#####################
+
+#注：建筑已被移除（反正我没在原版看到这个建筑）
+
+#####################
+# Galactic Paragons Buildings
+#####################
+
+building_paragon_memory_vaults = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	category = unity
+	can_demolish = yes
+	can_be_ruined = yes
+	can_be_disabled = yes
+	is_essential = yes
+
+	empire_limit = 1
+
+	building_sets = {
+		government
+		urban
+		unity
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_memory_vault_empire = no
+		}
+	}
+	desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_civic = civic_memory_vault
+					has_civic = civic_memory_vault_corporate
+				}
+			}
+		}
+		text = building_paragon_memory_vaults_desc
+	}
+	desc = {
+		trigger = {
+			exists = owner
+			owner = { has_civic = civic_memory_vault_machine }
+		}
+		text = building_paragon_memory_vaults_machine_desc
+	}
+	desc = {
+		trigger = {
+			exists = owner
+			owner = { has_civic = civic_memory_vault_hive }
+		}
+		text = building_paragon_memory_vaults_hive_desc
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		hidden_trigger = {
+			owner = {
+				OR = {
+					is_ai = no
+					resource_stockpile_compare = { resource = minerals value >= 800 }
+				}
+			}
+		}
+	}
+
+	potential = {
+		custom_tooltip = {
+			text = EMPIRE_UNIQUE_BUILDING
+			owner = { is_memory_vault_empire = yes }
+		}
+		exists = planet
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_wilderness_empire = yes
+				}
+			}
+			biomass = 200
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+			}
+			unity = 5
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				planet = { is_variable_set = paragon_memory_vault }
+			}
+			unity = 5
+			multiplier = planet.paragon_memory_vault
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_civic = civic_memory_vault_corporate }
+				planet = { is_variable_set = paragon_memory_vault }
+			}
+			trade = 10
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_civic = civic_memory_vault_corporate }
+				planet = { is_variable_set = paragon_memory_vault }
+			}
+			trade = 10
+			multiplier = planet.paragon_memory_vault
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_civic = civic_memory_vault
+					has_civic = civic_memory_vault_machine
+					has_civic = civic_memory_vault_hive
+				}
+			}
+		}
+		species_leader_exp_gain = 0.01
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_civic = civic_memory_vault
+					has_civic = civic_memory_vault_machine
+					has_civic = civic_memory_vault_hive
+				}
+			}
+			planet = { is_variable_set = paragon_memory_vault }
+		}
+		species_leader_exp_gain = 0.01
+		mult = planet.paragon_memory_vault
+	}
+
+	inline_script = {
+		script = buildings/on_all_wilderness_buildings_districts
+	}
+
+	on_built = {
+		set_variable = {
+			which = paragon_memory_vault
+			value = 0
+		}
+	}
+
+	on_destroy = {
+		clear_variable = paragon_memory_vault
+	}
+}
+
+##################
+# Memorialists
+##################
+
+#护林员小屋
+building_ranger_lodge = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = amenity
+	icon = holding_park_ranger_lodge
+	potential = {
+		NOT = {	has_modifier = slave_colony	}
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_environmentalist
+		}
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_relic
+		}
+		is_artificial = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = no_free_district_for_ranger_lodge
+			planet = {
+				num_free_districts = {
+					type = any
+					value > 0
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+			owner = { NOT = { has_valid_civic = civic_environmentalist } }
+			is_planet_class = pc_city
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_relic
+		}
+	}
+
+	ai_resource_production = {
+		unity = 2
+		mult = value:natural_blocker_count
+	}
+
+	ai_resource_production = {
+		unity = 1
+		trigger = { owner_has_resolution = { RES = resolution_ecology_integrated_gardens } }
+		mult = value:natural_blocker_count
+	}
+
+	ai_resource_production = {
+		unity = 1
+		trigger = { owner_has_resolution = { RES = resolution_ecology_environmental_control_board } }
+		mult = value:natural_blocker_count
+	}
+
+	ai_resource_production = {
+		unity = 1
+		trigger = { owner_has_resolution = { RES = resolution_ecology_paradise_initiative } }
+		mult = value:natural_blocker_count
+	}
+
+	planet_modifier = {
+		job_biologist_add = 100 # 100 Rangers no matter what
+		deposit_blockers_natural_unity_produces_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		job_biologist_add = 100 # +100 Rangers per natural blocker
+		mult = value:natural_blocker_count
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner_has_resolution = { RES = resolution_ecology_paradise_initiative }
+		}
+		job_biologist_add = 100 # +100 Rangers per natural blocker if GalCom approves
+		mult = value:natural_blocker_count
+	}
+
+
+	triggered_planet_modifier = {
+		potential = { owner_has_resolution = { RES = resolution_ecology_integrated_gardens } }
+		deposit_blockers_natural_unity_produces_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = { owner_has_resolution = { RES = resolution_ecology_environmental_control_board } }
+		deposit_blockers_natural_unity_produces_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = { owner_has_resolution = { RES = resolution_ecology_paradise_initiative } }
+		deposit_blockers_natural_unity_produces_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	triggered_desc = {
+		text = biologist_is_ranger_tt
+	}
+
+	triggered_desc = {
+		text = job_ranger_effect_desc
+	}
+
+	on_built = {
+		planet = {
+			add_blocker = { type = d_big_nature_preserve_blocker }
+		}
+	}
+
+	on_destroy = {
+		planet = {
+			if = {
+				limit = { has_deposit = d_big_nature_preserve_blocker }
+				every_deposit = {
+					limit = {
+						is_deposit_type = d_big_nature_preserve_blocker
+					}
+					remove_deposit = d_big_nature_preserve_blocker
+				}
+			}
+		}
+	}
+}
+
+building_izakaya_1 = {
+	base_buildtime = @b1_time
+	category = amenity
+	base_cap_amount = 1
+	building_sets = {
+		government
+		urban
+		entertainment
+		trade
+	}
+
+	potential = {
+		owner = {
+			country_uses_food = yes
+			any_owned_leader = {
+				OR = {
+					has_trait = thl_leader_trait_izakaya
+					has_trait = thl_leader_trait_izakaya_2
+					has_trait = thl_leader_trait_izakaya_3
+				}
+			}
+		}
+	}
+
+	allow = {
+		owner = {
+			any_owned_leader = {
+				OR = {
+					has_trait = thl_leader_trait_izakaya
+					has_trait = thl_leader_trait_izakaya_2
+					has_trait = thl_leader_trait_izakaya_3
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_holo_theatres
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		job_izakaya_worker_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = yes }
+		}
+		job_izakaya_drone_add = 200
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = no }
+		}
+		text = job_izakaya_worker_desc
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = yes }
+		}
+		text = job_izakaya_drone_desc
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			food = @b1_upkeep
+		}
+	}
+
+	triggered_desc = {
+		text = job_izakaya_worker_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		job_izakaya_worker_add = 200
+	}
+
+	upgrades = {
+		building_izakaya_2
+	}
+}
+
+building_izakaya_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = amenity
+
+	building_sets = {
+		government
+		urban
+		entertainment
+		trade
+	}
+
+	potential = {
+		owner = {
+			country_uses_food = yes
+			any_owned_leader = {
+				OR = {
+					has_trait = thl_leader_trait_izakaya_2
+					has_trait = thl_leader_trait_izakaya_3
+				}
+			}
+		}
+	}
+
+	allow = {
+		owner = {
+			any_owned_leader = {
+				OR = {
+					has_trait = thl_leader_trait_izakaya_2
+					has_trait = thl_leader_trait_izakaya_3
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		job_izakaya_worker_add = 400
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = yes }
+		}
+		job_izakaya_drone_add = 400
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = no }
+		}
+		text = job_izakaya_worker_desc
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = yes }
+		}
+		text = job_izakaya_drone_desc
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			food = @b2_upkeep
+		}
+	}
+
+	upgrades = {
+		building_izakaya_3
+	}
+}
+
+building_izakaya_3 = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = amenity
+
+	building_sets = {
+		government
+		urban
+		entertainment
+		trade
+	}
+
+	potential = {
+		owner = {
+			country_uses_food = yes
+			any_owned_leader = {
+				has_trait = thl_leader_trait_izakaya_3
+			}
+		}
+	}
+
+	allow = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_izakaya_3
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		job_izakaya_worker_add = 600
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = yes }
+		}
+		job_izakaya_drone_add = 600
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = no }
+		}
+		text = job_izakaya_worker_desc
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = yes }
+		}
+		text = job_izakaya_drone_desc
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			food = @b3_upkeep
+		}
+	}
+}
+
+holding_izakaya = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	category = amenity
+	owner_type = corporate
+	icon = building_izakaya_2
+
+	building_sets = {
+		government
+		urban
+		entertainment
+		trade
+	}
+
+	potential = {
+		exists = branch_office_owner
+		branch_office_owner = {
+			is_legit_or_legal_criminal = yes
+		}
+		branch_office_owner = {
+			country_uses_food = yes
+			any_owned_leader = {
+				OR = {
+					has_trait = thl_leader_trait_izakaya
+					has_trait = thl_leader_trait_izakaya_2
+					has_trait = thl_leader_trait_izakaya_3
+				}
+			}
+		}
+		owner = {
+			country_uses_food = yes
+		}
+	}
+
+	allow = {
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		job_izakaya_worker_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = yes }
+		}
+		job_izakaya_drone_add = 200
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = no }
+		}
+		text = job_izakaya_worker_desc
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = yes }
+		}
+		text = job_izakaya_drone_desc
+	}
+
+	#Trader Jobs from civics
+	triggered_country_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_privatized_exploration
+			}
+		}
+		job_capital_trader_add = 200
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_private_prospectors
+			}
+		}
+		job_capital_trader_add = 200
+	}
+
+	country_modifier = {
+		planet_amenities_mult = 0.1
+		planet_resettlement_unemployed_destination_mult = 0.25
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			food = @b3_upkeep
+		}
+	}
+}
+
+###魔法学院
+building_magic_academy = {
+	base_buildtime = @b1_time
+	empire_limit = 1
+
+	category = unity
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		owner = {
+			has_country_flag = immortal_marisa
+			any_owned_leader = {
+				has_trait = thl_leader_trait_magic
+			}
+		}
+	}
+
+	allow = {
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
+
+	convert_to = {
+		building_research_lab_3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		job_magician_add = 1000
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = yes }
+		}
+		job_magician_drone_add = 1000
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = no }
+		}
+		text = job_magician_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			owner = { is_gestalt = yes }
+		}
+		text = job_magician_drone_effect_desc
+	}
+
+	is_essential = yes
+}
+
+#花田建筑序列

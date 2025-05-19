@@ -1,0 +1,440 @@
+
+on_game_start_country = {
+	events = {
+		touhou_paragon.1
+		touhou_paragon_effect.901
+	}
+}
+
+# Triggers when ground combat starts
+# This = planet
+# From = country attacking
+on_ground_combat_started = {
+	events = {
+		touhou_paragon_effect.1 #天子发动地震
+		touhou_paragon_effect.201#铃仙生成幻象
+		touhou_paragon_effect.802#幽香生成部队
+		paragon_2.1105#触发每10日效果
+		touhou_paragon_effect.1204#早苗召唤信徒
+	}
+}
+
+# Triggers country_event for the attacker upon victory
+# (Before controller is switched)
+# This = country, leader attacker
+# From = country, planet owner
+# FromFrom = planet
+# IDENTITIES: attacker is the side that "IsHostile" to
+# the planet controller; e.g. spawned monster armies
+# are attackers, but if they win and the player attempts
+# to retake the planet, the player is the attacker
+on_planet_attackers_win = {
+	events = {
+		touhou_paragon_effect.202
+		paragon_2.1015
+		paragon_2.2130
+		touhou_paragon_mission.40315
+	}
+}
+
+# Triggers country_event for the attacker upon defeat
+# This = country, attack leader
+# From = country, planet owner
+# FromFrom = planet
+on_planet_attackers_lose = {
+	events = {
+		paragon_2.1015
+		touhou_paragon_effect.202
+	}
+}
+
+on_monthly_pulse_country = {
+	events = {
+		touhou_paragon_effect.101 #宴会
+		touhou_paragon_effect.102 #宴会
+		touhou_paragon.42201
+		touhou_paragon.42202
+		touhou_paragon_mission.40301
+		touhou_paragon_mission.40399 #触发所有早苗的任务判定
+		touhou_paragon_effect.40101 #1.1.4趣味事件包
+		touhou_paragon_effect.41304
+		touhou_paragon_effect.41801
+		touhou_paragon_effect.40401
+		touhou_paragon_effect.41501
+		touhou_paragon_effect.40701
+		touhou_paragon_effect.40702
+		touhou_paragon_spell.10000
+	}
+}
+
+on_decade_pulse_country = {
+	events = {
+		touhou_paragon.40722
+	}
+}
+
+# A country has gained a surveyed status on a planet. Happens after "on_survey" if a science ship surveyed a planet. (Can also happen without a ship through changes in intel levels)
+# Root = Planet
+# From = Country
+# FromFrom = Fleet of the science ship that surveyed it, if any
+on_planet_surveyed = {
+	events = {
+		touhou_paragon_effect.5
+	}
+}
+
+on_tech_increased = {
+	events = {
+		touhou_paragon_effect.32
+		#touhou_paragon_effect.43101
+	}
+}
+
+#激活灰色奇术时
+on_gray_thaumaturgy_enable = {
+	random_events = {
+		1 = touhou_paragon_effect.10
+		1 = touhou_paragon_effect.11
+		1 = touhou_paragon_effect.12
+		1 = touhou_paragon_effect.13
+		1 = touhou_paragon_effect.14
+		1 = touhou_paragon_effect.15
+		1 = touhou_paragon_effect.16
+		1 = touhou_paragon_effect.17
+		1 = touhou_paragon_effect.18
+		1 = touhou_paragon_effect.19
+		1 = touhou_paragon_effect.20
+		1 = touhou_paragon_effect.21
+		1 = touhou_paragon_effect.22
+		1 = touhou_paragon_effect.23
+		1 = touhou_paragon_effect.24
+		1 = touhou_paragon_effect.25
+		1 = touhou_paragon_effect.26
+		1 = touhou_paragon_effect.27
+		1 = touhou_paragon_effect.28
+		1 = touhou_paragon_effect.29
+		1 = touhou_paragon_effect.30
+		1 = touhou_paragon_effect.31
+		3 = touhou_paragon_effect.33
+	}
+}
+
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_entering_battle = {
+	events = {
+		touhou_paragon_effect.51
+		touhou_paragon_effect.61
+		touhou_paragon_effect.505
+		touhou_paragon_effect.506
+		touhou_paragon_effect.803
+		touhou_paragon_effect.1109
+		touhou_paragon_effect.1200
+		touhou_paragon_effect.1202
+		touhou_paragon_effect.1051
+		touhou_paragon_effect.1205
+	}
+}
+
+# Planet has taken damage from orbital bombardment - Damage is applied daily
+# This = Planet
+# From = Bombarder
+on_planet_bombarded = {
+	events = {
+		touhou_paragon_effect.301
+		touhou_paragon_effect.1104
+	}
+}
+
+# Planet has reached 0 pops from orbital bombardment
+# This = Planet
+# From = Bombarder
+on_planet_zero_pops = {
+	events = {
+		touhou_paragon_effect.81
+		touhou_paragon_effect.303
+		touhou_paragon_effect.1106
+	}
+}
+
+#An army has been killed in ground combat
+# This = owner
+# From = army
+# FromFrom = opponent
+# FromFromFrom = planet
+on_army_killed_in_combat = {
+	events = {
+		touhou_paragon_effect.200
+		touhou_paragon_effect.400
+		touhou_paragon_effect.401
+		touhou_paragon_effect.402
+		touhou_paragon_effect.73
+	}
+}
+
+# A fleet has entered a system | See also: on_fleet_auto_move_arrival
+# Scope = Fleet
+# From = System
+on_entering_system_fleet = {
+	events = {
+		touhou_paragon_spell.2
+	}
+	random_events = {
+		19 = 0
+		1 = touhou_paragon_effect.42612
+	}
+}
+
+
+# This = owner of fleet 1 (winner)
+# From = owner of fleet 2 (loser)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_space_battle_won = {
+	events = {
+		touhou_paragon_effect.507
+		touhou_paragon.1010
+	}
+}
+
+# This = owner of fleet 1 (loser)
+# From = owner of fleet 2 (winner)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_space_battle_lost = {
+	events = {
+		touhou_paragon_effect.507
+	}
+}
+
+# Triggers country_event for the defender upon victory
+# Root = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+on_planet_defenders_win = {
+	events = {
+		touhou_paragon_effect.905
+		touhou_paragon_effect.40709
+	}
+}
+
+# Triggers country_event for the defender upon defeat
+# This = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+on_planet_defenders_lose = {
+	events = {
+		touhou_paragon_effect.906
+	}
+}
+
+on_leader_death = {
+	events = {
+		touhou_paragon_effect.600
+		touhou_paragon_effect.700
+		touhou_paragon_effect.41001
+	}
+}
+
+# # A pop has finished assembling
+# # This = Planet scope
+# # From = Country
+# # FromFrom = Pop
+# on_pop_assembled = {
+# 	events = {
+# 		#touhou_paragon_effect.35 #更大，更大，更大！
+# 		# touhou_paragon_effect.1000
+# 		# touhou_paragon_effect.1001
+# 	}
+# }
+
+on_colony_yearly_pulse = {
+	events = {
+		touhou_paragon_effect.35
+	}
+}
+
+on_yearly_pulse_country = {
+	events = {
+		touhou_paragon.41234 #随机事件
+		touhou_paragon_effect.42613 #给阿空喰煞神选
+		touhou_paragon_effect.70#秋姐妹
+		touhou_paragon_spell.350#厄运泄露
+	}
+}
+
+on_five_year_pulse_country = {
+	events = {
+		touhou_paragon_effect.701#减少一道疮痍
+		touhou_paragon.40000 #随机典范领袖
+		touhou_paragon_effect.42601#阿空事件组
+		touhou_paragon_situation.42660
+	}
+}
+
+# on_pop_purged = {
+# 	events = {
+# 		touhou_paragon_effect.801
+# 	}
+# }
+#
+# on_pop_declined = {
+# 	events = {
+# 		touhou_paragon_effect.801
+# 	}
+# }
+
+
+#on_pop_bombed_to_death = {
+#events = {
+		#touhou_paragon_effect.802
+		#touhou_paragon_effect.1102
+#}
+#}
+
+# This = Fleet ( science vessel )
+# From = Archaeological Site
+on_arch_stage_finished = {
+	events = {
+		touhou_paragon_effect.900
+	}
+}
+
+on_arch_site_finished = {
+	events = {
+		touhou_paragon_effect.902
+	}
+}
+
+# This = owner of fleet 1 (winner)
+# From = owner of fleet 2 (loser)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_space_battle_won = {
+	events = {
+		touhou_paragon_effect.53
+		touhou_paragon.1010
+	}
+}
+
+# This = owner of fleet 1 (loser)
+# From = owner of fleet 2 (winner)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_space_battle_lost = {
+	events = {
+		touhou_paragon_effect.54
+	}
+}
+
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_victim = {
+	events = {
+		touhou_paragon_effect.53
+		touhou_paragon_enclave.380
+	}
+}
+
+# This = owner of ship 1 (combatant)
+# From = owner of ship 2 (destroyed)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_perp = {
+	events = {
+		touhou_paragon_effect.74 # On ship destroyed leader traits.
+	}
+}
+
+# This = owner of fleet 1 (combatant)
+# From = owner of fleet 2 (destroyed)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_perp = {
+	random_events = {
+		100 = 0
+		2 = touhou_paragon_effect.42611
+	}
+}
+
+# No scope, like on_game_start
+#on_mid_game_pulse = {
+#	events = {
+#		touhou_paragon_situation.42660
+#	}
+#}
+
+# Triggers when a Special Project to apply a species modification template has completed.
+# Note that this will trigger once for each combination of planet & original species.
+#
+# This = Country
+# From = Species ( Post Modification )
+on_modification_complete = {
+	events = {
+		touhou_paragon_mission.40398
+	}
+}
+
+# Triggers when trying to open the diplomacy view for countries with custom diplomacy.
+# Country scope
+# This = target country (player)
+# From = source country
+on_custom_diplomacy = {
+	events = {
+		touhou_paragon_enclave.300#kappa enclave diplomacy main interface
+		touhou_paragon_enclave.40600#saisen box diplomacy main interface
+	}
+}
+
+on_entering_reimu_gateway = {
+
+}
+
+#use for custom country types that need first contact paths
+# THIS = first_contact
+on_first_contact_stage_1_no_path = {
+	events = {
+		touhou_paragon_enclave.301
+	}
+}
+
+
+# Fired by scripted_action_possible in utility_component_template on a ship,
+# when the ship reaches its target planet, in this case.
+# Reference to this on_action is set by its scripted_action_name.
+# This = planet
+# From = fleet
+
+on_suika_target_planet_reached = {
+	events = {
+		touhou_paragon_effect.99
+	}
+}
+
+on_asteroid_target_planet_reached = {
+	events = {
+		touhou_paragon_spell.80
+	}
+}
+
+# a new leader is created
+# scope: country, from: leader
+on_leader_spawned = {
+	events = {
+		touhou_paragon.40723
+	}
+}
+
+# A leader leveled up.
+# Scope = Country
+# From = Leader
+on_leader_level_up = {
+	events = {
+		touhou_paragon.40721
+		touhou_paragon.40724# Update Gestalt node portraits.
+	}
+}

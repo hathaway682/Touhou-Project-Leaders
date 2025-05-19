@@ -1,0 +1,133 @@
+### Other
+
+# 符卡
+ship_section_template = {
+	key = "spell_card_aura"
+	ship_size = spell_card
+	fits_on_slot = mid
+	entity = "extra_dimensional_01_dimensional_portal_core_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+}
+
+ship_section_template = {
+	key = "spell_card_bat"
+	ship_size = spell_card
+	fits_on_slot = mid
+	entity = "extra_dimensional_01_dimensional_portal_core_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+}
+
+ship_section_template = {
+	key = "spell_card_gun"
+	ship_size = spell_card
+	fits_on_slot = mid
+	entity = "extra_dimensional_01_dimensional_portal_core_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "root"
+	}
+}
+
+ship_section_template = {
+	key = "spell_card_artillery"
+	ship_size = spell_card
+	fits_on_slot = mid
+	entity = "extra_dimensional_01_dimensional_portal_core_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "root"
+	}
+}
+
+ship_section_template = {
+	key = "spell_card_cannon"
+	ship_size = spell_card
+	fits_on_slot = mid
+	entity = "extra_dimensional_01_dimensional_portal_core_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "root"
+	}
+
+	component_slot = {
+		name = "TITANIC_02"
+		template = "invisible_titanic_fixed"
+		locatorname = "root"
+	}
+}
+
+###碎片云
+ship_section_template = {
+	key = "spell_card_aura_debris"
+	ship_size = spell_card_debris
+	fits_on_slot = mid
+	entity = "extra_dimensional_01_dimensional_portal_core_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+}
+
+# 直伤用舰船
+ship_section_template = {
+	key = "spell_card_bullet_aura"
+	ship_size = spell_card_bullet
+	fits_on_slot = mid
+	entity = "null_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+}

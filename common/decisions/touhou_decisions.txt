@@ -1,0 +1,3015 @@
+##########################################################################
+# Federation Decisions
+##########################################################################
+
+decision_remove_unstable_tectonics = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_molten_planet
+
+	enactment_time = 180
+
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 500
+		}
+	}
+
+	potential = {
+		has_modifier = unstable_tectonics
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_earthquake
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_earthquake
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_earthquake
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_earthquake
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_deploy_again
+			NOT = { has_planet_flag = unstable_2 }
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_planet_flag = unstable
+			}
+			set_planet_flag = unstable_2
+		}
+		else = {
+			set_planet_flag = unstable
+		}
+		remove_modifier = unstable_tectonics
+		random_list = {
+			1 = {
+				add_deposit = d_veiny_cliffs
+			}
+			1 = {
+				add_deposit = d_mineral_fields
+			}
+			1 = {
+				add_deposit = d_prosperous_mesa
+			}
+			1 = {
+				add_deposit = d_ore_rich_caverns
+			}
+			1 = {
+				add_deposit = d_rich_mountain
+			}
+			1 = {
+				add_deposit = d_submerged_ore_veins
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+decision_add_unstable_tectonics = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_molten_planet
+
+	enactment_time = 180
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+		}
+	}
+
+	potential = {
+		NOT = { has_modifier = unstable_tectonics }
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_earthquake
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_earthquake
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_earthquake
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_earthquake
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_deploy_again
+			NOT = { has_planet_flag = unstable_2 }
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_planet_flag = unstable
+			}
+			set_planet_flag = unstable_2
+		}
+		else = {
+			set_planet_flag = unstable
+		}
+		add_modifier = {
+			modifier = unstable_tectonics
+			days = -1
+		}
+		random_list = {
+			1 = {
+				add_deposit = d_veiny_cliffs
+			}
+			1 = {
+				add_deposit = d_mineral_fields
+			}
+			1 = {
+				add_deposit = d_prosperous_mesa
+			}
+			1 = {
+				add_deposit = d_ore_rich_caverns
+			}
+			1 = {
+				add_deposit = d_rich_mountain
+			}
+			1 = {
+				add_deposit = d_submerged_ore_veins
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+decision_endless_banquet = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	enactment_time = 180
+
+	resources = {
+		category = decisions
+		cost = {
+			consumer_goods = 1
+			multiplier = trigger:pop_amount
+		}
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_density
+			}
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = {
+			has_trait = thl_leader_trait_density
+		}
+		owner = {
+			NOR = {
+				any_owned_planet = {
+					has_modifier = modifier_endless_banquet
+				}
+				any_owned_planet = {
+					has_modifier = modifier_ended_banquet
+				}
+				any_owned_planet = {
+					has_modifier = modifier_interrupted_banquet
+				}
+			}
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = modifier_endless_banquet
+			days = -1
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_end_banquet = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	enactment_time = 180
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 1000
+		}
+	}
+
+	potential = {
+		has_modifier = modifier_endless_banquet
+	}
+
+	allow = {
+		has_modifier = modifier_endless_banquet
+	}
+
+	effect = {
+		remove_modifier = modifier_endless_banquet
+		add_modifier = {
+			modifier = modifier_ended_banquet
+			days = 3600
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_expand_space = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_wormhole
+
+	enactment_time = 360
+
+	resources = {
+		category = decisions
+		cost = {
+			astral_threads = 100
+		}
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_time
+			}
+		}
+		NOT = {
+			has_modifier = modifier_expanded_space_5
+		}
+	}
+
+	allow = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_time
+				is_councilor = yes
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_modifier = modifier_expanded_space_4
+			}
+			remove_modifier = modifier_expanded_space_4
+			add_modifier = {
+				modifier = modifier_expanded_space_5
+				days = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = modifier_expanded_space_3
+			}
+			remove_modifier = modifier_expanded_space_3
+			add_modifier = {
+				modifier = modifier_expanded_space_4
+				days = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = modifier_expanded_space_2
+			}
+			remove_modifier = modifier_expanded_space_2
+			add_modifier = {
+				modifier = modifier_expanded_space_3
+				days = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = modifier_expanded_space
+			}
+			remove_modifier = modifier_expanded_space
+			add_modifier = {
+				modifier = modifier_expanded_space_2
+				days = -1
+			}
+		}
+		else = {
+			add_modifier = {
+				modifier = modifier_expanded_space
+				days = -1
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_extradimensional_experimentation = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_engineering_research
+
+	resources = {
+		category = decisions
+		cost = {
+			sr_zro = 500
+		}
+	}
+
+	potential = {
+		OR = {
+			AND = {
+				owner = {
+					is_galactic_community_member = yes
+				}
+				is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+			}
+			owner = {
+				any_owned_leader = {
+					has_trait = thl_leader_trait_border_merry
+					is_councilor = yes
+				}
+			}
+		}
+		NOT = { has_modifier = pm_extradimensional_experimentation }
+	}
+
+	allow = {
+
+	}
+
+	effect = {
+		add_modifier = { modifier = pm_extradimensional_experimentation days = -1 }
+	}
+
+	ai_weight = {
+		weight = 1
+
+		modifier = {
+			factor = 0
+			exists = owner
+			owner = {
+				has_monthly_income = {
+					resource = sr_zro
+					value < 1
+				}
+			}
+		}
+	}
+}
+
+decision_subterranean_district = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_arcology_project
+
+	enactment_time = 360
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 1000
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_subterran_manager
+			}
+		}
+		uses_district_set = standard
+		NAND = {
+			has_deposit = d_underground_farm
+			has_deposit = d_underground_mine
+			has_deposit = d_underground_generator
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_subterran_manager
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_subterran_manager
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_subterran_manager
+					}
+				}
+			}
+		}
+	}
+
+	effect = {
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0
+					has_deposit = d_underground_farm
+				}
+				add_deposit = d_underground_farm
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_deposit = d_underground_mine
+				}
+				add_deposit = d_underground_mine
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_deposit = d_underground_generator
+				}
+				add_deposit = d_underground_generator
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+decision_satori_pet = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_animal_wildlife
+
+	enactment_time = 0
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 1000
+			food = 1000
+		}
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_satori_pets
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_satori_pets
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_satori_pets
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_satori_pets
+					}
+				}
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			any_owned_pop_group = {
+				is_pre_sapient = yes
+			}
+		}
+		owner = {
+			not = {
+				any_owned_planet = {
+					has_modifier = modifier_satori_pets
+				}
+			}
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = modifier_satori_pets
+			days = 180
+		}
+		planet_event = { id = touhou_paragon_effect.41301 days = 180 }
+		custom_tooltip = spawn_presapient_species_effect
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+decision_root_out_crime = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_crime
+
+	enactment_time = 90
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 500
+			energy = 500
+		}
+	}
+
+	potential = {
+		OR = {
+			has_modifier = criminal_underworld
+			has_modifier = gang_wars
+			has_modifier = mob_rule
+			has_modifier = bribed_officials
+			has_modifier = substance_abuse
+			has_modifier = smuggler_activity
+			has_modifier = smuggler_activity
+			has_modifier = crime_wave
+			has_modifier = travel_advisory
+			has_modifier = cartel_war
+			has_modifier = protection_racket
+			has_modifier = corrupt_administration
+			has_modifier = trade_pilfering
+			has_modifier = crime_lord_deal
+			has_modifier = crime_lord_deal_broken
+			AND = {
+				exists = branch_office_owner
+				branch_office_owner = {
+					is_criminal_syndicate = yes
+				}
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_trial
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_trial
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_trial
+					}
+				}
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_modifier = criminal_underworld
+			}
+			remove_modifier = criminal_underworld
+		}
+		if = {
+			limit = {
+				has_modifier = gang_wars
+			}
+			remove_modifier = gang_wars
+		}
+		if = {
+			limit = {
+				has_modifier = mob_rule
+			}
+			remove_modifier = mob_rule
+		}
+		if = {
+			limit = {
+				has_modifier = bribed_officials
+			}
+			remove_modifier = bribed_officials
+		}
+		if = {
+			limit = {
+				has_modifier = substance_abuse
+			}
+			remove_modifier = substance_abuse
+		}
+		if = {
+			limit = {
+				has_modifier = smuggler_activity
+			}
+			remove_modifier = smuggler_activity
+		}
+		if = {
+			limit = {
+				has_modifier = crime_wave
+			}
+			remove_modifier = crime_wave
+		}
+		if = {
+			limit = {
+				has_modifier = travel_advisory
+			}
+			remove_modifier = travel_advisory
+		}
+		if = {
+			limit = {
+				has_modifier = cartel_war
+			}
+			remove_modifier = cartel_war
+		}
+		if = {
+			limit = {
+				has_modifier = protection_racket
+			}
+			remove_modifier = protection_racket
+		}
+		if = {
+			limit = {
+				has_modifier = corrupt_administration
+			}
+			remove_modifier = corrupt_administration
+		}
+		if = {
+			limit = {
+				has_modifier = trade_pilfering
+			}
+			remove_modifier = trade_pilfering
+		}
+		if = {
+			limit = {
+				has_modifier = crime_lord_deal
+			}
+			remove_modifier = crime_lord_deal
+		}
+		if = {
+			limit = {
+				has_modifier = crime_lord_deal_broken
+			}
+			remove_modifier = crime_lord_deal_broken
+		}
+		if = {
+			limit = {
+				exists = branch_office_owner
+				branch_office_owner = {
+					is_criminal_syndicate = yes
+				}
+			}
+			close_branch_office = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+decision_mirror_trial = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_unity_symbol
+
+	enactment_time = 30
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 1500
+			rare_crystals = 500
+		}
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_mirror
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_mirror
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_mirror
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_mirror
+					}
+				}
+			}
+		}
+		NOT = {
+			owner = {
+				any_owned_planet = {
+					has_modifier = mirror_trial
+				}
+			}
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = mirror_trial
+			days = -1
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_revoke_mirror_trial = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_unity_symbol
+
+	resources = {
+		category = decisions
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_mirror
+			}
+		}
+	}
+
+	allow = {
+		has_modifier = mirror_trial
+	}
+
+	effect = {
+		remove_modifier = mirror_trial
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_stick_of_repentance = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_martial_law
+
+	enactment_time = 30
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_mirror
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_mirror
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_mirror
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_mirror
+					}
+				}
+			}
+		}
+		NOT = {
+			owner = {
+				any_owned_planet = {
+					has_deposit = d_stick_of_repentance
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = enforcer_stronger
+		hidden_effect = {
+			add_deposit = d_stick_of_repentance
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_revoke_stick_of_repentance = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_end_martial_law
+
+	resources = {
+		category = decisions
+	}
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_mirror
+			}
+		}
+	}
+
+	allow = {
+		has_deposit = d_stick_of_repentance
+	}
+
+	effect = {
+		remove_deposit = d_stick_of_repentance
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_summon_devils = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 180
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_summon_devils
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_summon_devils
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_summon_devils
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_summon_devils
+					}
+				}
+			}
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			astral_threads = 100
+		}
+	}
+
+	effect = {
+		custom_tooltip = small_demon_refugees_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:demon_species
+					}
+				}
+				create_species = {
+					name = "NAME_Demon_Refugees"
+					plural = "NAME_Demon_Refugee_pl"
+					class = MAM
+					namelist = random_class
+					portrait = "demon"
+					traits = {
+						trait = "trait_pc_nuked_preference"
+						trait = "trait_exd"
+						trait = "trait_psionic"
+						trait = "trait_repugnant"
+						trait = "trait_robust"
+						trait = "trait_deviants"
+						trait = "trait_very_strong"
+						trait = "trait_slow_breeders"
+					}
+				}
+				last_created_species = {
+					save_global_event_target_as = demon_species
+				}
+			}
+			create_pop_group = {
+				species = event_target:demon_species
+				size = 666
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_summon_devils_large = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 300
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_summon_devils
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_summon_devils
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_summon_devils
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_summon_devils
+					}
+				}
+			}
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			astral_threads = 600
+		}
+	}
+
+	effect = {
+		custom_tooltip = large_demon_refugees_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:demon_species
+					}
+				}
+				create_species = {
+					name = "NAME_Demon_Refugees"
+					plural = "NAME_Demon_Refugee_pl"
+					class = MAM
+					namelist = random_class
+					portrait = "demon"
+					traits = {
+						trait = "trait_pc_nuked_preference"
+						trait = "trait_exd"
+						trait = "trait_psionic"
+						trait = "trait_repugnant"
+						trait = "trait_robust"
+						trait = "trait_deviants"
+						trait = "trait_very_strong"
+						trait = "trait_slow_breeders"
+					}
+				}
+				last_created_species = {
+					save_global_event_target_as = demon_species
+				}
+			}
+			create_pop_group = {
+				species = event_target:demon_species
+				size = 6666
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_sakura_tree = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = sakura_tree
+	enactment_time = 30
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_sakura
+			}
+		}
+		NOT = {
+			exists = event_target:sakura_planet
+		}
+	}
+
+	allow = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_sakura
+			}
+		}
+		is_wet = yes
+	}
+
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		hidden_effect = {
+			save_global_event_target_as = sakura_planet
+		}
+		owner = {
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_sakura
+				}
+				leader_event = {
+					id = touhou_paragon.42110
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_summon_spirit = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 180
+
+	potential = {
+		owner = {
+			has_country_flag = door_of_nether_avaliable
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_death
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_death
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_death
+					}
+				}
+			}
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			thl_spirit = 1000
+		}
+	}
+
+	effect = {
+		custom_tooltip = small_spirit_refugees_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:ghost_species
+					}
+				}
+				create_species = {
+					name = "NAME_Thl_Ghost"
+					plural = "NAME_Thl_Ghost_pl"
+					class = MAM
+					namelist = random_class
+					portrait = "ghost"
+					traits = {
+						trait = "trait_pc_nether_preference"
+						trait = "trait_thl_spirit"
+						trait = "trait_psionic"
+						trait = "trait_weak"
+						trait = "trait_traditional"
+						trait = "trait_charismatic"
+					}
+				}
+				last_created_species = {
+					save_global_event_target_as = ghost_species
+				}
+			}
+			create_pop_group = {
+				species = event_target:ghost_species
+				size = 1000
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_summon_spirit_large = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 300
+
+	potential = {
+		owner = {
+			has_country_flag = door_of_nether_avaliable
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_death
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_death
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_death
+					}
+				}
+			}
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			thl_spirit = 4000
+		}
+	}
+
+	effect = {
+		custom_tooltip = large_spirit_refugees_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:ghost_species
+					}
+				}
+				create_species = {
+					name = "NAME_Thl_Ghost"
+					plural = "NAME_Thl_Ghost_pl"
+					class = MAM
+					namelist = random_class
+					portrait = "ghost"
+					traits = {
+						trait = "trait_pc_nether_preference"
+						trait = "trait_thl_spirit"
+						trait = "trait_psionic"
+						trait = "trait_weak"
+						trait = "trait_traditional"
+						trait = "trait_charismatic"
+					}
+				}
+				last_created_species = {
+					save_global_event_target_as = ghost_species
+				}
+			}
+			create_pop_group = {
+				species = event_target:ghost_species
+				size = 4444
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_transplant_sakura_tree = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = sakura_tree
+
+	enactment_time = 180
+
+	resources = {
+		category = decisions
+		cost = {
+			thl_spirit = 100
+		}
+	}
+
+	potential = {
+		owner = {
+			has_country_flag = sakura_tree_branch_avaliable
+		}
+		NOR = {
+			has_deposit = sakura_tree
+			has_deposit = sakura_tree_1
+			has_deposit = sakura_tree_3
+			has_deposit = sakura_tree_5
+			has_deposit = sakura_tree_8
+			has_deposit = sakura_tree_branch
+		}
+	}
+
+	allow = {
+		OR = {
+			is_cold = yes
+			owner = {
+				has_country_flag = door_of_nether_avaliable
+			}
+		}
+	}
+
+	effect = {
+		add_deposit = sakura_tree_branch
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+decision_nether_world = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = sakura_tree
+
+	enactment_time = 3600
+
+	resources = {
+		category = decisions
+		cost = {
+			thl_spirit = 1000
+		}
+	}
+
+	potential = {
+		owner = {
+			has_country_flag = nether_world_avaliable
+		}
+	}
+
+	allow = {
+		has_deposit = sakura_tree_branch
+	}
+
+	effect = {
+		change_pc = pc_nether
+		custom_tooltip = decision_nether_world_tooltip
+		hidden_effect = {
+			every_owned_pop_group = {
+				limit = {
+					is_being_purged = no
+					species = {
+						is_robotic = no
+						is_livestock = no
+					}
+				}
+				change_species = event_target:ghost_species
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+decision_rebuild_hakurei_shrine = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_arcology_project
+	enactment_time = 30
+
+	potential = {
+		owner = {
+			has_country_flag = hakurei_shrine_country
+			NOT = {
+				any_owned_planet = {
+					OR = {
+						has_deposit = d_hakurei_shrine
+						has_deposit = d_hakurei_shrine_large
+						has_deposit = d_hakurei_shrine_imperial
+						has_deposit = d_hakurei_shrine_psionic
+					}
+				}
+			}
+		}
+	}
+
+	allow = {
+		is_capital = yes
+	}
+
+	effect = {
+		add_deposit = d_hakurei_shrine
+		last_added_deposit = {
+			set_deposit_flag = keep_deposit_on_terraform
+		}
+	}
+}
+
+decision_expand_hakurei_shrine = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_arcology_project
+	enactment_time = 30
+
+	potential = {
+		has_deposit = d_hakurei_shrine
+	}
+
+	allow = {
+		owner = {
+			has_technology = tech_holographic_rituals
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 800
+			alloys = 400
+		}
+	}
+
+	effect = {
+		remove_deposit = d_hakurei_shrine
+		add_deposit = d_hakurei_shrine_large
+		last_added_deposit = {
+			set_deposit_flag = keep_deposit_on_terraform
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+decision_expand_hakurei_shrine_2 = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_arcology_project
+	enactment_time = 30
+
+	potential = {
+		has_deposit = d_hakurei_shrine_large
+		owner = {
+			OR = {
+				has_civic = civic_hakurei_shinto
+				has_civic = civic_hakurei_shinto_corp
+				has_civic = civic_imperial_cult
+			}
+		}
+	}
+
+	allow = {
+		owner = {
+			has_technology = tech_consecration_fields
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 1200
+			alloys = 600
+			rare_crystals = 200
+		}
+	}
+
+	effect = {
+		remove_deposit = d_hakurei_shrine_large
+		add_deposit = d_hakurei_shrine_imperial
+		last_added_deposit = {
+			set_deposit_flag = keep_deposit_on_terraform
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+decision_unlock_books = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 180
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_books
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_books
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_books
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_books
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = battle_with_youkai
+			NOT = {
+				has_global_flag = battle_with_youkai
+			}
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			minor_artifacts = 500
+		}
+	}
+
+	effect = {
+		custom_tooltip = touhou_paragon_effect.903.a.tooltip
+		hidden_effect = {
+			random_list = {
+				2 = {
+					modifier = {
+						add = 1
+						owner = {
+							has_ethic = ethic_xenophile
+						}
+					}
+					modifier = {
+						add = 2
+						owner = {
+							has_ethic = ethic_fanatic_xenophile
+						}
+					}
+					planet_event = {
+						id = touhou_paragon_effect.903
+					}
+				}
+				2 = {
+					modifier = {
+						add = 1
+						owner = {
+							has_ethic = ethic_xenophobe
+						}
+					}
+					modifier = {
+						add = 2
+						owner = {
+							has_ethic = ethic_fanatic_xenophobe
+						}
+					}
+					planet_event = {
+						id = touhou_paragon_effect.904
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_nuclear_breath = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_consecrated_worlds
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 600
+		}
+	}
+
+	enactment_time = 30
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_fusion_energy
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_fusion_energy
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_fusion_energy
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_fusion_energy
+					}
+				}
+			}
+		}
+		NOT = {
+			has_deposit = d_nuclear_breath
+		}
+	}
+
+	effect = {
+		add_deposit = d_nuclear_breath
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+decision_miracle_1 = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_miracle_1
+
+	enactment_time = 150
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_miracle
+			}
+		}
+	}
+
+	allow = {
+		exists = owner
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_miracle
+				is_councilor = yes
+			}
+		}
+		NOT = {
+			has_modifier = modifier_miracle_1
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 1000
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_2
+			}
+			remove_modifier = modifier_miracle_2
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_4
+			}
+			remove_modifier = modifier_miracle_4
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_5
+			}
+			remove_modifier = modifier_miracle_5
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_6
+			}
+			remove_modifier = modifier_miracle_6
+		}
+		add_modifier = {
+			modifier = modifier_miracle_1
+			days = -1
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_miracle_2 = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_miracle_2
+
+	enactment_time = 150
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_miracle
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_miracle
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_miracle
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+				}
+			}
+		}
+		NOT = {
+			has_modifier = modifier_miracle_2
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 1000
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_1
+			}
+			remove_modifier = modifier_miracle_1
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_4
+			}
+			remove_modifier = modifier_miracle_4
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_5
+			}
+			remove_modifier = modifier_miracle_5
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_6
+			}
+			remove_modifier = modifier_miracle_6
+		}
+		add_modifier = {
+			modifier = modifier_miracle_2
+			days = -1
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_miracle_3 = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_miracle_3
+
+	enactment_time = 150
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_miracle
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_miracle
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_miracle
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+				}
+			}
+		}
+		NOT = {
+			has_modifier = modifier_miracle_3
+		}
+		OR = {
+			is_wet = yes
+			is_planet_class = pc_gaia
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_hive
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 1000
+			minerals = 500
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_1
+			}
+			remove_modifier = modifier_miracle_1
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_2
+			}
+			remove_modifier = modifier_miracle_2
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_4
+			}
+			remove_modifier = modifier_miracle_4
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_5
+			}
+			remove_modifier = modifier_miracle_5
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_6
+			}
+			remove_modifier = modifier_miracle_6
+		}
+		add_modifier = {
+			modifier = modifier_miracle_3
+			days = -1
+		}
+		if = {
+			limit = {
+				has_district = district_farming
+				is_wet = yes
+			}
+			add_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+				replace = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_miracle_4 = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_miracle_4
+
+	enactment_time = 30
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_miracle
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_miracle
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_miracle
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+				}
+			}
+		}
+		NOT = {
+			has_modifier = modifier_miracle_4
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 1000
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_1
+			}
+			remove_modifier = modifier_miracle_1
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_2
+			}
+			remove_modifier = modifier_miracle_2
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_5
+			}
+			remove_modifier = modifier_miracle_5
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_6
+			}
+			remove_modifier = modifier_miracle_6
+		}
+		add_modifier = {
+			modifier = modifier_miracle_4
+			days = -1
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_miracle_5 = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_miracle_5
+
+	enactment_time = 150
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_miracle
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_miracle
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_miracle
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+				}
+			}
+		}
+		NOT = {
+			has_modifier = modifier_miracle_5
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 1000
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_1
+			}
+			remove_modifier = modifier_miracle_1
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_2
+			}
+			remove_modifier = modifier_miracle_2
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_4
+			}
+			remove_modifier = modifier_miracle_4
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_6
+			}
+			remove_modifier = modifier_miracle_6
+		}
+		add_modifier = {
+			modifier = modifier_miracle_5
+			days = -1
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_miracle_6 = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_miracle_6
+
+	enactment_time = 150
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_miracle
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_miracle
+						is_councilor = yes
+					}
+				}
+			}
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_miracle
+				}
+			}
+			sector = {
+				sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+				}
+			}
+		}
+		NOT = {
+			has_modifier = modifier_miracle_6
+		}
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 1000
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_1
+			}
+			remove_modifier = modifier_miracle_1
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_2
+			}
+			remove_modifier = modifier_miracle_2
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				NAND = {
+					exists = owner
+					owner = { is_anglers_empire = yes }
+				}
+			}
+			remove_zone = {
+				district = district_farming
+				zone = zone_anglers
+				zone_slot = slot_food
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_3
+				exists = owner
+				owner = { is_anglers_empire = yes }
+			}
+			remove_modifier = modifier_miracle_3
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_4
+			}
+			remove_modifier = modifier_miracle_4
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_miracle_5
+			}
+			remove_modifier = modifier_miracle_5
+		}
+		add_modifier = {
+			modifier = modifier_miracle_6
+			days = -1
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_suika_transform_fog = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_psi_inoculate_pops
+
+	potential = {
+		OR = {
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_density
+				}
+			}
+			any_planet_army = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_density
+				}
+			}
+		}
+		owner = {
+			NOT = {
+				any_owned_army = {
+					army_type = army_suika_giant
+				}
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_density
+				}
+			}
+			any_planet_army = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_density
+				}
+			}
+		}
+	}
+
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_suika_transform_fog_effect
+		create_fleet = {
+			name = "NAME_Cloud_Oni_Fleet"
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_Cloud_Oni"
+					design = "NAME_Cloud_Oni"
+					prefix = no
+					upgradable = no
+				}
+				set_location = root
+				set_fleet_flag = suika_fleet
+				owner = {
+					random_owned_leader = {
+						limit = {
+							has_trait = thl_leader_trait_density
+						}
+						prevprev = {
+							assign_leader = prev
+							add_modifier = {
+								modifier = suika_fleet_bonus
+								multiplier = prev.trigger:has_base_skill
+							}
+						}
+					}
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				can_change_leader = no
+				uses_naval_capacity = no
+				spawn_debris = no
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_suika_transform_giant = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_psi_inoculate_pops
+
+	potential = {
+		OR = {
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_density
+				}
+			}
+			any_planet_army = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_density
+				}
+			}
+		}
+		owner = {
+			NOT = {
+				any_owned_army = {
+					army_type = army_suika_giant
+				}
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_density
+				}
+			}
+			any_planet_army = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_density
+				}
+			}
+		}
+	}
+
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_suika_transform_giant_effect
+		create_army = {
+			name = "NAME_Giant_Oni"
+			owner = root.owner
+			type = army_suika_giant
+			effect = {
+				owner = {
+					random_owned_leader = {
+						limit = {
+							has_trait = thl_leader_trait_density
+						}
+						prevprev = {
+							assign_leader = prev
+						}
+						set_cooldown = 99999999
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_suika_transform_leader = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_psi_inoculate_pops
+
+	potential = {
+		any_planet_army = {
+			army_type = army_suika_giant
+		}
+	}
+
+	allow = {
+		any_planet_army = {
+			army_type = army_suika_giant
+		}
+	}
+
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_suika_transform_leader_effect
+		hidden_effect = {
+			owner = {
+				every_owned_army = {
+					limit = {
+						army_type = army_suika_giant
+					}
+					leader = {
+						set_cooldown = 0
+						unassign_leader = this
+					}
+					remove_army = yes
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_suika_transform_giant_to_fog = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_psi_inoculate_pops
+
+	potential = {
+		any_planet_army = {
+			army_type = army_suika_giant
+		}
+	}
+
+	allow = {
+		any_planet_army = {
+			army_type = army_suika_giant
+		}
+	}
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_suika_transform_fog_effect
+		hidden_effect = {
+			owner = {
+				every_owned_army = {
+					limit = {
+						army_type = army_suika_giant
+					}
+					leader = {
+						set_cooldown = 0
+						unassign_leader = this
+					}
+					remove_army = yes
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_Cloud_Oni_Fleet"
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_Cloud_Oni"
+					design = "NAME_Cloud_Oni"
+					prefix = no
+					upgradable = no
+				}
+				set_location = root
+				set_fleet_flag = suika_fleet
+				owner = {
+					random_owned_leader = {
+						limit = {
+							has_trait = thl_leader_trait_density
+						}
+						prevprev = {
+							assign_leader = prev
+							add_modifier = {
+								modifier = suika_fleet_bonus
+								multiplier = prev.trigger:has_base_skill
+							}
+						}
+					}
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				can_change_leader = no
+				uses_naval_capacity = no
+				spawn_debris = no
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_repair_shirne = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_arcology_project
+	enactment_time = 180
+
+	potential = {
+		has_planet_flag = shrine_ruin_planet
+	}
+
+	allow = {
+		always = yes
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 300
+		}
+	}
+
+	effect = {
+		remove_planet_flag = shrine_ruin_planet
+		owner = {
+			set_country_flag = can_build_shirne
+		}
+		planet_event = {
+			id = touhou_paragon.50002
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+decision_moriya_storm_attraction = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 1
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_miracle
+			}
+		}
+		NOT = {
+			has_planet_flag = moriya_storm_attraction
+		}
+	}
+
+	allow = {
+		has_building = building_moriya_shrine
+	}
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_moriya_storm_attraction_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					has_planet_flag = moriya_storm_repelling
+				}
+				remove_planet_flag = moriya_storm_repelling
+			}
+			set_planet_flag = moriya_storm_attraction
+			create_influence_field_if_needed = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_moriya_storm_repellent = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 1
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_miracle
+			}
+		}
+		NOT = {
+			has_planet_flag = moriya_storm_repelling
+		}
+	}
+
+	allow = {
+		has_building = building_moriya_shrine
+	}
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_moriya_storm_repellent_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					has_planet_flag = moriya_storm_attraction
+				}
+				remove_planet_flag = moriya_storm_attraction
+			}
+			set_planet_flag = moriya_storm_repelling
+			create_influence_field_if_needed = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_moriya_storm_cancel = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 1
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_miracle
+			}
+		}
+		OR = {
+			has_planet_flag = moriya_storm_attraction
+			has_planet_flag = moriya_storm_repelling
+		}
+	}
+
+	allow = {
+		has_building = building_moriya_shrine
+	}
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_moriya_storm_cancel_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					has_planet_flag = moriya_storm_attraction
+				}
+				remove_planet_flag = moriya_storm_attraction
+			}
+			if = {
+				limit = {
+					has_planet_flag = moriya_storm_repelling
+				}
+				remove_planet_flag = moriya_storm_repelling
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_rabbit_hole = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_wormhole
+
+	enactment_time = 1
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_luck
+			}
+			has_country_flag = unused_rabbit_hole
+		}
+	}
+
+	allow = {
+		any_owned_pop_group = {
+			has_trait = trait_thl_rabbit
+		}
+		custom_tooltip = {
+			fail_text = already_have_rabbit_hole
+			solar_system = {
+				NOT = {
+					has_star_flag = rabbit_hole
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_rabbit_hole_tooltip
+		hidden_effect = {
+			owner = {
+				remove_country_flag = unused_rabbit_hole
+			}
+			solar_system = {
+				set_star_flag = rabbit_hole
+				event_target:rabbit_hole_system = {
+					prev = {
+						spawn_natural_wormhole = {
+							bypass_type = tewi_rabbithole
+							random_pos = yes
+							orbit_angle = 360
+						}
+					}
+					spawn_natural_wormhole = {
+						bypass_type = tewi_rabbithole
+						random_pos = yes
+						orbit_angle = 360
+					}
+					link_wormholes = prev
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_burn_zombies = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = descision_progenitor_empty
+
+	potential = {
+		has_building = building_corpses_disposal_center
+	}
+
+	allow = {
+		any_owned_pop_group = {
+			pop_group_has_trait = trait_zombie
+			OR = {
+				is_pop_category = civilian
+				is_unemployed = yes
+			}
+		}
+	}
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_burn_zombies_tooltip
+		hidden_effect = {
+			ordered_owned_pop_group = {
+				limit = {
+					pop_group_has_trait = trait_zombie
+					OR = {
+						is_pop_category = civilian
+						is_unemployed = yes
+					}
+				}
+				position = 0
+				order_by = trigger:pop_group_size
+				inverse = yes
+				export_trigger_value_to_variable = {
+					trigger = pop_group_size
+					variable = pop_energy
+				}
+				multiply_variable = {
+					which = pop_energy
+					value = 30
+				}
+				from = {
+					add_resource = {
+						energy = 1
+						multiplier = prev.pop_energy
+					}
+				}
+				clear_variable = pop_energy
+				kill_all_pop = yes
+			}
+		}
+	}
+
+	enactment_time = 1
+}

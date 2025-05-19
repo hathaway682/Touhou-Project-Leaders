@@ -1,0 +1,220 @@
+# Councilor Documentation
+#
+# councilor_name_key = {
+#    civic = civic_imperial_cult		Civic that is required for this council position. Also used by UI. Default = none.
+#    leader_class = { }					Which leader classes can have this council position. Currently only used for the Recruit new Leader buttons. Default = none.
+#    is_leader_possible = { }			Can a leader have this council position. Used to filter leaders. Scope: THIS = Leader.
+#    modifier = { }						Country Modifier, that is multiplied by assigned Leader's level.
+#	 custom_tooltip = "LOC_KEY"			Custom tooltip text shown for the modifier of the council position.
+#	 conditional_tooltip = "LOC_KEY"	Custom tooltip text shown for the requirements of the council position.
+# }
+
+councilor_hakurei_shinto = {
+	leader_class = { commander official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+	civic = civic_hakurei_shinto
+	modifier = {
+		ship_fire_rate_mult = 0.02
+		planet_jobs_trade_produces_mult = 0.02
+	}
+}
+
+councilor_hakurei_shinto_corp = {
+	leader_class = { commander official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+	civic = civic_hakurei_shinto_corp
+	modifier = {
+		ship_fire_rate_mult = 0.02
+		branch_office_value_mult = 0.02
+	}
+}
+
+councilor_moriya_shinto = {
+	leader_class = { commander official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+	civic = civic_moriya_shinto
+	modifier = {
+		all_technology_research_speed = 0.02
+		pop_happiness = 0.01
+	}
+}
+
+councilor_moriya_shinto_corp = {
+	leader_class = { commander official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+	civic = civic_moriya_shinto_corp
+	modifier = {
+		all_technology_research_speed = 0.02
+		planet_branch_offices_cost_mult = -0.02
+	}
+}
+
+councilor_kirisame_magic = {
+	leader_class = { commander official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+	civic = civic_kirisame_magic
+	modifier = {
+		op_cat_technology_skill_add = 1
+		ship_weapon_damage = 0.02
+	}
+}
+
+councilor_kirisame_magic_corp = {
+	leader_class = { commander official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+	civic = civic_kirisame_magic_corp
+	modifier = {
+		op_cat_technology_skill_add = 1
+		commercial_pact_mult = 0.02
+	}
+}
+
+councilor_scarlet_allience = {
+	leader_class = { commander official scientist }
+	is_leader_possible = {
+		OR = {
+			has_trait = thl_leader_trait_time
+			has_trait = thl_leader_trait_kongfu
+			has_trait = thl_leader_trait_elements
+			has_trait = thl_leader_trait_destiny_manipulation
+		}
+	}
+	civic = civic_scarlet_allience
+	modifier = {
+		country_influence_produces_mult = 0.03
+	}
+}
+
+councilor_scarlet_allience_corp = {
+	leader_class = { commander official scientist }
+	is_leader_possible = {
+		OR = {
+			has_trait = thl_leader_trait_time
+			has_trait = thl_leader_trait_kongfu
+			has_trait = thl_leader_trait_elements
+			has_trait = thl_leader_trait_destiny_manipulation
+		}
+	}
+	civic = civic_scarlet_allience_corp
+	modifier = {
+		country_influence_produces_mult = 0.02
+		country_energy_produces_mult = 0.02
+	}
+}
+
+councilor_nether_world = {
+	leader_class = { commander official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+	civic = civic_nether_world
+	modifier = {
+		spirit_empire_size_mult = -0.02
+	}
+}
+
+councilor_nether_world_corp = {
+	leader_class = { commander official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+	civic = civic_nether_world_corp
+	modifier = {
+		spirit_workforce_mult = 0.02
+	}
+}
+
+councilor_penglai_medcine = {
+	leader_class = { commander official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+	civic = civic_penglai_medcine
+	modifier = {
+		leader_lifespan_add = 5
+		logistic_growth_mult = 0.01
+		pop_environment_tolerance = 0.02
+	}
+}
+
+councilor_penglai_medcine_corp = {
+	leader_class = { commander official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+	civic = civic_penglai_medcine_corp
+	modifier = {
+		leader_lifespan_add = 5
+		logistic_growth_mult = 0.01
+		category_biology_research_speed_mult = 0.02
+	}
+}
+
+councilor_hifuu = {
+	leader_class = { scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = scientist
+		}
+	}
+	civic = civic_hifuu
+	modifier = {
+		science_ship_survey_speed = 0.15
+		ship_anomaly_research_speed_mult = 0.1
+		ship_archaeological_site_excavation_speed_mult = 0.05
+		ship_ftl_jumpdrive_range_mult = 0.05
+		category_psionics_draw_chance_mult = 0.05
+	}
+}

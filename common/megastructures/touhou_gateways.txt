@@ -1,0 +1,20 @@
+# see README.txt for example
+reimu_gateway = {
+	entity = "astral_scar_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_evt_astral_rift"
+
+	show_galactic_map_icon = no
+	show_in_outliner = no
+	potential = {
+		always = no
+	}
+	possible = {
+		always = no
+	}
+	construction_blocks_and_blocked_by = self_type
+
+	bypass_type = reimu_gateway
+	on_build_complete = {
+	}
+}

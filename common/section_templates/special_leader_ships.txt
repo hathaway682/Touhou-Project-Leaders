@@ -1,0 +1,395 @@
+# 太阳
+ship_section_template = {
+	key = "minor_star_key"
+	ship_size = minor_star
+	fits_on_slot = mid
+	entity = "k_star_class_star_ship_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_05"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_06"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_07"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_08"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_02"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_03"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_04"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_05"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_06"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_07"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_08"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+
+	aux_utility_slots = 2
+}
+ship_section_template = {
+	key = "artificial_star_key"
+	ship_size = artificial_star
+	fits_on_slot = mid
+	entity = "k_star_class_star_ship_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_05"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_06"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_07"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_08"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_02"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_03"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_04"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_05"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_06"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_07"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_08"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+
+	aux_utility_slots = 2
+}
+
+# Space Cloud Section
+ship_section_template = {
+	key = "oni_cloud_section"
+	ship_size = oni_cloud
+	fits_on_slot = mid
+	entity = "space_cloud_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "invisible_missile_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "invisible_missile_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "invisible_missile_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "invisible_missile_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_05"
+		template = "invisible_missile_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_06"
+		template = "invisible_missile_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_07"
+		template = "invisible_missile_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_08"
+		template = "invisible_missile_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_09"
+		template = "invisible_missile_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_10"
+		template = "invisible_missile_turret"
+		locatorname = "root"
+	}
+}
+
+# Baby Dragon
+ship_section_template = {
+	key = "space_dragon_origin_nitori_key"
+	ship_size = space_dragon_nitori_baby
+	fits_on_slot = mid
+	#entity = "guardian_01_space_dragon_red_entity"
+	#entity = "empty_section_entity_entity"
+	entity = "aquatic_dragon_baby_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		template = "medium_turret"
+		locatorname = "xl_gun_01_1_r"
+		#	is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		template = "medium_turret"
+		locatorname = "xl_gun_01_2_r"
+		#	is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		template = "medium_turret"
+		locatorname = "xl_gun_01_1_l"
+		#	is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		template = "medium_turret"
+		locatorname = "xl_gun_01_2_l"
+		#	is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		template = "medium_turret"
+		locatorname = "xl_gun_01_1_r"
+		#	is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		template = "medium_turret"
+		locatorname = "xl_gun_01_2_r"
+		#	is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		template = "medium_turret"
+		locatorname = "xl_gun_01_1_l"
+		#	is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		template = "medium_turret"
+		locatorname = "xl_gun_01_2_l"
+		#	is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		template = "point_defence_turret"
+		locatorname = "xl_gun_01_1_r"
+		#	is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		template = "point_defence_turret"
+		locatorname = "xl_gun_01_2_r"
+		#	is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		template = "point_defence_turret"
+		locatorname = "xl_gun_01_1_l"
+		#	is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		template = "point_defence_turret"
+		locatorname = "xl_gun_01_2_l"
+		#	is_side_slot = yes
+	}
+
+	aux_utility_slots = 2
+	large_utility_slots = 4
+}
+
+ship_section_template = {
+	key = "MARISA_CANNON_CORE"
+	fits_on_slot = "ship"
+	ship_size = marisa_cannon
+	entity = "ion_cannon_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "EXTAR_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "xl_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 6
+	aux_utility_slots = 3
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 0
+		}
+	}
+}
+
+ship_section_template = {
+	key = "MARISA_CANNON_TITANIC_CORE"
+	fits_on_slot = "ship"
+	ship_size = marisa_cannon_titanic
+	entity = "ion_cannon_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "TITANIC_GUN_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "xl_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 6
+	aux_utility_slots = 3
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 0
+		}
+	}
+}

@@ -1,0 +1,6 @@
+
+	NGameplay = {
+
+		COUNCIL_AGENDA_COOLDOWN = 3600 # Number of days before you can pick the same agenda after finishing it
+
+	}

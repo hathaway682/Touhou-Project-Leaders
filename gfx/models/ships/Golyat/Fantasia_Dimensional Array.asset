@@ -1,0 +1,180 @@
+animation = {
+	name = "Fantasia_Dimensional_Array_idle_animation"
+	file = "Fantasia_Dimensional_Array_idle.anim"
+}
+
+
+####################################
+
+
+
+entity = { 
+	name = "FDA_stretched_ring_entity"
+	pdxmesh = "wormhole_stretched_ring_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	
+	scale = 10.0
+	
+	game_data = {
+		bloom_factor			= 2.0
+		uv_animation_speed   = -0.05
+		uv_animation_direction  = { 0.2 0.2 }
+	}
+	
+
+}
+
+
+entity = {
+	name = "Fantasia_Dimensional_Array_ship_entity"
+	pdxmesh = "Fantasia_Dimensional_Array_mesh"
+	cull_radius = 99999
+
+	default_state = "idle"
+
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = yes next_state = "idle"
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_idle" stop_on_state_change = yes } }
+
+		event = { time = 0.0 node = "central_effect" entity = "FDA_stretched_ring_entity" trigger_once = yes }
+		event = { time = 0.0 node = "central_effect" entity = "fantasia_bullet_Magic_Circle_5_entity" trigger_once = yes }
+
+		event = { time = 0 node = "core_effect1" particle = "nemesis_01_science_lightning_core_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0.0 node = "core_effect1" entity = "nemesis_01_science_core_entity" trigger_once = yes }
+
+		event = { time = 0 node = "core_effect2" particle = "nemesis_01_science_lightning_core_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0.0 node = "core_effect2" entity = "nemesis_01_science_core_entity" trigger_once = yes }
+
+		event = { time = 0 node = "core_effect3" particle = "nemesis_01_science_lightning_core_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0.0 node = "core_effect3" entity = "nemesis_01_science_core_entity" trigger_once = yes }
+
+
+
+	}
+	scale = 3.5
+}
+
+#############################################################################################
+
+
+entity = {
+	name = "Fantasia_Dimensional_Array_Torii_entity"
+	pdxmesh = "Fantasia_Dimensional_Array_mesh"
+
+	default_state = "idle"
+
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = yes next_state = "idle"
+		event = { time = 0 node = "core_effect1" particle = "nemesis_01_science_lightning_core_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0.0 node = "core_effect1" entity = "nemesis_01_science_core_entity" trigger_once = yes }
+
+		event = { time = 0 node = "core_effect2" particle = "nemesis_01_science_lightning_core_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0.0 node = "core_effect2" entity = "nemesis_01_science_core_entity" trigger_once = yes }
+
+		event = { time = 0 node = "core_effect3" particle = "nemesis_01_science_lightning_core_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0.0 node = "core_effect3" entity = "nemesis_01_science_core_entity" trigger_once = yes }
+
+	}
+	state = { name = "moving" animation = "idle"  animation_blend_time = 0 looping = yes next_state = "moving"
+		event = { time = 0 node = "core_effect1" particle = "nemesis_01_science_lightning_core_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0.0 node = "core_effect1" entity = "nemesis_01_science_core_entity" trigger_once = yes }
+
+		event = { time = 0 node = "core_effect2" particle = "nemesis_01_science_lightning_core_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0.0 node = "core_effect2" entity = "nemesis_01_science_core_entity" trigger_once = yes }
+
+		event = { time = 0 node = "core_effect3" particle = "nemesis_01_science_lightning_core_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0.0 node = "core_effect3" entity = "nemesis_01_science_core_entity" trigger_once = yes }
+
+	}
+
+}
+
+entity = {
+	name = "FDA_Mikoshi_ship_entity"
+	pdxmesh = "FDA_Mikoshi_mesh"
+
+	default_state = "idle"
+
+	state = { name = "idle" state_time = 4 next_state = "idle"
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_idle" stop_on_state_change = yes } }
+
+		event = { time = 0.0 node = "FDA_locator3" entity = "FDA_stretched_ring_entity" trigger_once = yes }
+		event = { time = 0.0 node = "FDA_locator3" entity = "fantasia_bullet_Magic_Circle_5_entity" trigger_once = yes }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = { name = "moving" state_time = 4 next_state = "moving"
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" stop_on_state_change = yes } }
+
+		event = { time = 0.0 node = "FDA_locator3" entity = "FDA_stretched_ring_entity" trigger_once = yes }
+		event = { time = 0.0 node = "FDA_locator3" entity = "fantasia_bullet_Magic_Circle_5_entity" trigger_once = yes }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+	attach = { FDA_locator1 = "Fantasia_Dimensional_Array_Torii_entity" }
+	scale = 3.5
+}
+
+entity = {
+	name = "FDA_Mikoshi_NPC_ship_entity"
+	pdxmesh = "FDA_Mikoshi_mesh"
+
+	default_state = "idle"
+
+	state = { name = "idle" state_time = 4 next_state = "idle"
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_idle" stop_on_state_change = yes } }
+
+		event = { time = 0.0 node = "FDA_locator3" entity = "FDA_stretched_ring_entity" trigger_once = yes }
+		event = { time = 0.0 node = "FDA_locator3" entity = "fantasia_bullet_Magic_Circle_5_entity" trigger_once = yes }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+
+	state = { name = "moving" state_time = 4 next_state = "moving"
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" stop_on_state_change = yes } }
+
+		event = { time = 0.0 node = "FDA_locator3" entity = "FDA_stretched_ring_entity" trigger_once = yes }
+		event = { time = 0.0 node = "FDA_locator3" entity = "fantasia_bullet_Magic_Circle_5_entity" trigger_once = yes }
+
+		start_event = { node = "engine_large_01" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		start_event = { node = "engine_large_02" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+	}
+	attach = { FDA_locator1 = "Fantasia_Dimensional_Array_Torii_entity" }
+	scale = 3.5
+}
+
+
+######################################幻想の侵蝕#######################################################
+######################################frameのmeshファイルは「幻想を背負う者」の流用#######################################################
+
+entity = {
+	name = "Erosion_of_illusion_ship_entity"
+	pdxmesh = "Illusion_Guardian_frame_mesh"
+	default_state = "idle"
+	state = { name = "idle"	 }
+	state = { name = "moving" }
+	state = { name = "death" state_time = 24 looping = no }
+}
+
+entity = {
+	name = "Erosion_of_illusion_section_entity"
+	pdxmesh = "Illusion_Guardian_frame_mesh"
+	cull_radius = 99999
+
+	default_state = "idle"
+
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = yes next_state = "idle"
+	}
+	attach = { part1 = "FDA_stretched_ring_entity" }
+	attach = { part1 = "fantasia_bullet_Magic_Circle_5_entity" }
+
+	scale = 3.5
+}

@@ -1,0 +1,15 @@
+objectTypes = {
+	pdxmesh = {
+		name = "sukima_mesh"
+		file = "gfx/models/ships/SATO2_system_effects/sukima.mesh"
+				animation = { id = "idle"			type = "sukima_idle_animation" }
+		scale = 2.5
+	}
+	pdxmesh = {
+		name = "Usirodo_mesh"
+		file = "gfx/models/ships/SATO2_system_effects/Usirodo.mesh"
+				animation = { id = "idle"			type = "Usirodo_idle_animation" }
+		scale = 1.0
+	}
+}
+	

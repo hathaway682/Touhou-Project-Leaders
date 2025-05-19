@@ -1,0 +1,53 @@
+#Null void beam
+component_set = {
+	key = "STRIKE_CRAFT_SANAE"
+
+	icon = "GFX_ship_part_strike_craft_skrand"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "NOVA_SANAE"
+
+	icon = "GFX_ship_part_laser_5"
+	icon_frame = 1
+}
+component_set = {
+	key = "GLIDINGSNAKE_SANAE"
+
+	icon = "GFX_ship_part_strike_craft_skrand"
+	icon_frame = 1
+}
+component_set = {
+	key = "IRONWHEEL_SANAE"
+
+	icon = "GFX_ship_part_archaeo_missiles"
+	icon_frame = 1
+}
+component_set = {
+	key = "ONBASHIRA_SANAE"
+
+	icon = "GFX_ship_part_scourge_missile_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "MASTER_SPARK"
+
+	icon = "GFX_ship_part_master_spark"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "FINAL_SPARK"
+
+	icon = "GFX_ship_part_master_spark"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "asteroid_impact"
+
+	icon = "GFX_ship_part_aura_minefield"
+	icon_frame = 1
+}

@@ -1,0 +1,124 @@
+animation = {
+	name = "DollsFactory_core_open_animation"
+	file = "DollsFactory_core_open.anim"
+}
+
+animation = {
+	name = "DollsFactory_core_idle_animation"
+	file = "DollsFactory_core_idle.anim"
+}
+
+animation = {
+	name = "DollsFactory_core_close_animation"
+	file = "DollsFactory_core_close.anim"
+}
+
+
+
+animation = {
+	name = "DollsFactory_panel_idle_animation"
+	file = "DollsFactory_panel_idle.anim"
+}
+
+
+
+
+####################################
+
+entity = {
+	name = "DollsFactory_panel_entity"
+	pdxmesh = "DollsFactory_panel_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+	}
+
+}
+
+
+entity = {
+	name = "DollsFactory_core_entity"
+	pdxmesh = "DollsFactory_core_mesh"
+
+	default_state = "open"
+
+	state = { name = "open" animation = "open"  animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { particle = "Magic_Circle_out_particle" }
+	}
+
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_idle" stop_on_state_change = yes } }
+	}
+	state = { name = "death" animation = "close"animation_blend_time = 0 looping = no
+		event = { time = 8 particle = "Magic_Circle_in_particle" }
+	}
+
+	attach = { panel_locator_01 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_02 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_03 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_04 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_05 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_06 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_07 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_08 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_09 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_10 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_11 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_12 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_13 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_14 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_15 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_16 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_17 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_18 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_19 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_20 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_21 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_22 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_23 = "DollsFactory_panel_entity" }
+	attach = { panel_locator_24 = "DollsFactory_panel_entity" }
+
+
+
+}
+
+
+
+
+entity = {
+	name = "DollsFactory_ship_entity"
+	cull_radius = 999
+
+	locator = { name = "parts001" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts002" position = { 50 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts003" position = { -50 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts004" position = { 0 0 50 } rotation = { 0 0 0 } }
+	locator = { name = "parts005" position = { 0 0 -50 } rotation = { 0 0 0 } }
+	locator = { name = "parts006" position = { 50 0 50 } rotation = { 0 0 0 } }
+	locator = { name = "parts007" position = { 50 0 -50 } rotation = { 0 0 0 } }
+	locator = { name = "parts008" position = { -50 0 50 } rotation = { 0 0 0 } }
+	locator = { name = "parts009" position = { -50 0 -50 } rotation = { 0 0 0 } }
+
+
+	attach = { parts001 = "DollsFactory_core_entity" }
+	attach = { parts002 = "DollsFactory_core_entity" }
+	attach = { parts003 = "DollsFactory_core_entity" }
+	attach = { parts004 = "DollsFactory_core_entity" }
+	attach = { parts005 = "DollsFactory_core_entity" }
+	attach = { parts006 = "DollsFactory_core_entity" }
+	attach = { parts007 = "DollsFactory_core_entity" }
+	attach = { parts008 = "DollsFactory_core_entity" }
+	attach = { parts009 = "DollsFactory_core_entity" }
+
+	scale = 3.0
+}
+
+
+
+
+entity = {
+	name = "Titania_II_ship_entity"
+	default_state = "idle"
+	state = { name = "idle"	 }
+	state = { name = "death" state_time = 8.0 looping = no }
+}

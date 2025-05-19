@@ -1,0 +1,31 @@
+@precursor_easy = 6
+@precursor_medium = 8
+@precursor_hard = 10
+
+touhou_shrine_ruin = {
+	desc = "touhou_shrine_ruin_desc"
+	picture = "GFX_evt_ruined_shrine"
+	level = 1
+
+	spawn_chance = {
+		base = 0
+	}
+
+	on_spawn = {
+		set_planet_flag = shrine_world
+	}
+
+	on_success = touhou_paragon.50000
+}
+
+touhou_crino_temple = {
+	desc = "touhou_crino_temple_desc"
+	picture = "GFX_evt_frozen"
+	level = 9
+
+	spawn_chance = {
+		base = 0
+	}
+
+	on_success = touhou_paragon.40410
+}

@@ -1,0 +1,31 @@
+﻿### Humanoid 1
+### Created by Henrik Thyrwall
+
+NITORI = {
+	character_names = {
+		default = {
+			# A complete name
+			full_names_male = {
+				NAME_Nitori
+			}
+			full_names_female = {
+				NAME_Nitori
+			}
+
+			# Always combined with a second name
+			first_names = {
+			}
+
+			# Always combined with a first name
+			second_names = {
+			}
+
+			regnal_first_names = {
+				NAME_Nitori
+			}
+
+			regnal_second_names = {
+			}
+		}
+	}
+}

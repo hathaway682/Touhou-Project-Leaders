@@ -1,0 +1,2826 @@
+namespace = touhou_paragon_enclave
+
+country_event = {
+    id = touhou_paragon_enclave.300
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        from = {
+            is_country_type = kappa_enclave
+            has_country_flag = kappa_enclave
+        }
+    }
+    immediate = {
+        if = {
+            limit = {
+                NOT = { exists = event_target:kappa_enclave_country }
+            }
+            from = {
+                save_global_event_target_as = kappa_enclave_country
+            }
+        }
+        country_event = { id = touhou_paragon_enclave.305 }
+    }
+}
+
+
+country_event = {
+    id = touhou_paragon_enclave.305
+    title = touhou_paragon_enclave.305.name
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "enclave_salvager_window"
+    custom_gui_option = "enclave_salvager_option"
+    picture_event_data = {
+        portrait = event_target:kappa_enclave_country
+        room = salvagers_room
+    }
+    location = event_target:kappa_enclave_system
+    #First-time greetings
+    desc = {
+        trigger = {
+            NOR = {
+                has_country_flag = kappa_enclave_diplomacy_engaged
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        text = touhou_paragon_enclave.305.desc.scavenger_first
+    }
+    #Return greetings
+    desc = {
+        trigger = {
+            has_country_flag = kappa_enclave_diplomacy_engaged
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        text = touhou_paragon_enclave.305.desc.scavenger_visit
+    }
+    #is_hostile
+    desc = {
+        trigger = {
+            OR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        text = touhou_paragon_enclave.305.desc.hostile
+    }
+    option = {
+        name = touhou_paragon_enclave.305.a
+        custom_tooltip = kappa_enclave_migration
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        allow = {
+            custom_tooltip = {
+                fail_text = kappa_enclave_recently_migration_cooldown
+                NOT = { has_country_flag = kappa_enclave_recently_migration }
+            }
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.310 }
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.305.b
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        allow = {
+            custom_tooltip = {
+                fail_text = kappa_enclave_recently_recruition_cooldown
+                NOT = { has_country_flag = kappa_enclave_recently_recruition }
+            }
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.320 }
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.305.c
+        custom_tooltip = salvager_tt_salvageworks
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+
+        allow = {
+            event_target:kappa_enclave_country = {
+                trust = {
+                    who = root
+                    value >= 30
+                }
+            }
+            custom_tooltip_fail = {
+                text = kappa_enclave_expanded_shipyard_already_text
+                not = {
+                    has_country_flag = kappa_expanded_shipyard_enable
+                }
+            }
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.330 }
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.305.d
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.340 }
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.305.e
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        allow = {
+            #has_technology = tech_robotic_workers
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.350 }
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.305.g
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+                has_country_flag = hisutensoku_already_enabled
+            }
+            event_target:kappa_enclave_country = {
+                trust = {
+                    who = root
+                    value >= 50
+                }
+            }
+        }
+        allow = {
+            custom_tooltip_fail = {
+                text = kappa_enclave_mk2_already_text
+                not = {
+                    has_country_flag = kappa_enclave_mk2_already
+                }
+            }
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.360 }
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.305.h
+        allow = {
+            event_target:kappa_enclave_country = {
+                trust = {
+                    who = root
+                    value >= 90
+                }
+            }
+        }
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+            not = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_water
+                }
+            }
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.370 }
+        }
+    }
+    after = {
+        set_country_flag = kappa_enclave_diplomacy_engaged
+    }
+    option = {
+        name = GOODBYE
+        trigger = {
+            NOT = {
+                is_hostile = event_target:kappa_enclave_country
+            }
+        }
+        default_hide_option = yes
+        set_country_flag = kappa_enclave_diplomacy_engaged
+    }
+    immediate = {
+        # Set costs based on population
+        if = {
+            limit = {
+                pop_amount <= 6000
+            }
+            set_variable = {
+                which = kappa_enclave_cost
+                value = -1000
+            }
+        }
+        else_if = {
+            limit = {
+                pop_amount > 6000
+                pop_amount <= 12000
+            }
+            set_variable = {
+                which = kappa_enclave_cost
+                value = -2000
+            }
+        }
+        else_if = {
+            limit = {
+                pop_amount > 12000
+                pop_amount <= 18000
+            }
+            set_variable = {
+                which = kappa_enclave_cost
+                value = -3000
+            }
+        }
+        else_if = {
+            limit = {
+                pop_amount > 18000
+                pop_amount <= 24000
+            }
+            set_variable = {
+                which = kappa_enclave_cost
+                value = -4000
+            }
+        }
+        else = {
+            set_variable = {
+                which = kappa_enclave_cost
+                value = -5000
+            }
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.310
+    title = touhou_paragon_enclave.310.name
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "enclave_salvager_window"
+    custom_gui_option = "enclave_salvager_option"
+    picture_event_data = {
+        portrait = event_target:kappa_enclave_country
+        room = salvagers_room
+    }
+    location = event_target:kappa_enclave_system
+    desc = {
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+            allows_slavery = no
+        }
+        text = touhou_paragon_enclave.310.desc.no.slave
+    }
+    desc = {
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+            allows_slavery = yes
+        }
+        text = touhou_paragon_enclave.310.desc.slave
+    }
+    option = {
+        name = touhou_paragon_enclave.310.a
+        allow = {
+            allows_slavery = no
+            has_country_resource = {
+                type = alloys
+                amount >= 1000
+            }
+        }
+        capital_scope = {
+            while = {
+                count = 3
+                create_pop_group = {
+                    species = event_target:kappa_enclave_species
+                }
+            }
+            custom_tooltip = kappa_enclave_migration_2
+        }
+        add_resource = {
+            alloys = -1000
+        }
+        set_timed_country_flag = {
+            flag = kappa_enclave_recently_migration
+            days = 1800
+        }
+        event_target:kappa_enclave_country = {
+            add_trust = {
+                who = root
+                amount = 10
+            }
+        }
+        country_event = { id = touhou_paragon_enclave.305 }
+    }
+    option = {
+        name = touhou_paragon_enclave.310.b
+        country_event = { id = touhou_paragon_enclave.305 }
+    }
+}
+
+#招募一个科学家
+country_event = {
+    id = touhou_paragon_enclave.320
+    title = touhou_paragon_enclave.320.name
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "enclave_salvager_window"
+    custom_gui_option = "enclave_salvager_option"
+    picture_event_data = {
+        portrait = event_target:kappa_enclave_country
+        room = salvagers_room
+    }
+    location = event_target:kappa_enclave_system
+    desc = {
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        text = touhou_paragon_enclave.320.desc
+    }
+    option = {
+        name = touhou_paragon_enclave.320.a
+        allow = {
+            resource_stockpile_compare = {
+                resource = energy
+                value >= -1 #flip to a positive value to make this comparison
+                mult = kappa_enclave_cost
+            }
+            custom_tooltip_fail = {
+                text = kappa_enclave_achivist_already
+                not = {
+                    any_owned_leader = {
+                        has_leader_flag = kappa_archivist
+                    }
+                }
+            }
+        }
+        create_leader = {
+            class = scientist
+            species = event_target:kappa_enclave_species
+            name = random
+            skill = 3
+            event_leader = yes # prevents this leader from leading factions and winning elections
+            background_ethic = ethic_materialist
+            skip_background_generation = yes
+            custom_description = kappa_archivist_desc
+            custom_catch_phrase = curator_archivist_catch_phrase
+            randomize_traits = yes
+            traits = {
+                0 = leader_trait_expertise_industry_2
+                1 = subclass_scientist_scholar
+            }
+            effect = {
+                set_leader_flag = kappa_archivist
+                set_leader_flag = renowned_leader
+            }
+        }
+        last_created_leader = {
+            fire_on_action = {
+                on_action = on_leader_hired
+            }
+        }
+        add_resource = {
+            energy = 1
+            mult = kappa_enclave_cost
+        }
+        set_timed_country_flag = {
+            flag = kappa_enclave_recently_recruition
+            days = 3600
+        }
+        event_target:kappa_enclave_country = {
+            add_trust = {
+                who = root
+                amount = 10
+            }
+        }
+        country_event = { id = touhou_paragon_enclave.305 }
+    }
+    option = {
+        name = touhou_paragon_enclave.310.b
+        country_event = { id = touhou_paragon_enclave.305 }
+    }
+}
+
+#河童扩展船坞
+country_event = {
+    id = touhou_paragon_enclave.330
+    title = touhou_paragon_enclave.330.name
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "enclave_salvager_window"
+    custom_gui_option = "enclave_salvager_option"
+    picture_event_data = {
+        portrait = event_target:kappa_enclave_country
+        room = salvagers_room
+    }
+    location = event_target:kappa_enclave_system
+    desc = {
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        text = touhou_paragon_enclave.330.desc
+    }
+    option = {
+        name = touhou_paragon_enclave.330.a
+        allow = {
+            has_country_resource = {
+                type = food
+                amount >= 10000
+            }
+        }
+        set_country_flag = kappa_expanded_shipyard_enable
+        add_resource = {
+            food = -10000
+        }
+        event_target:kappa_enclave_country = {
+            add_trust = {
+                who = root
+                amount = 10
+            }
+        }
+        country_event = { id = touhou_paragon_enclave.305 }
+    }
+    option = {
+        name = touhou_paragon_enclave.330.b
+        trigger = {
+            or = {
+                has_civic = civic_catalytic_processing
+                has_civic = civic_corporate_catalytic_processing
+            }
+        }
+        allow = {
+            has_country_resource = {
+                type = food
+                amount >= 2500
+            }
+        }
+        set_country_flag = kappa_expanded_shipyard_enable
+        add_resource = {
+            food = -2500
+        }
+        event_target:kappa_enclave_country = {
+            add_trust = {
+                who = root
+                amount = 20
+            }
+        }
+        country_event = { id = touhou_paragon_enclave.305 }
+    }
+    option = {
+        name = touhou_paragon_enclave.310.b
+        country_event = { id = touhou_paragon_enclave.305 }
+    }
+}
+
+#建造技术
+country_event = {
+    id = touhou_paragon_enclave.340
+    title = touhou_paragon_enclave.340.name
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "enclave_salvager_window"
+    custom_gui_option = "enclave_salvager_option"
+    picture_event_data = {
+        portrait = event_target:kappa_enclave_country
+        room = salvagers_room
+    }
+    location = event_target:kappa_enclave_system
+    desc = {
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        text = touhou_paragon_enclave.340.desc
+    }
+    immediate = {
+        if = {
+            limit = {
+                or = {
+                    check_variable = {
+                        which = kappa_construction_count
+                        value <= 0
+                    }
+                    check_variable = {
+                        which = kappa_construction_count
+                        value >= 31
+                    }
+                }
+            }
+            set_variable = {
+                which = kappa_construction_count
+                value = 1
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.340.a
+        allow = {
+            custom_tooltip_fail = {
+                text = kappa_enclave_construction_already
+                not = {
+                    has_country_flag = modifier_kappa_construction_cooldown
+                }
+            }
+            resource_stockpile_compare = {
+                resource = energy
+                value >= 200 #flip to a positive value to make this comparison
+                mult = kappa_construction_count
+            }
+        }
+        add_modifier = {
+            modifier = modifier_kappa_construction
+            days = 240
+            multiplier = kappa_construction_count
+        }
+        set_timed_country_flag = {
+            flag = modifier_kappa_construction_cooldown
+            days = 720
+        }
+        add_resource = {
+            energy = -200
+            multiplier = kappa_construction_count
+        }
+        event_target:kappa_enclave_country = {
+            add_trust = {
+                who = root
+                amount = 2
+            }
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = kappa_construction_count
+                        value <= 29
+                    }
+                }
+                change_variable = {
+                    which = kappa_construction_count
+                    value = 1
+                }
+            }
+        }
+        country_event = { id = touhou_paragon_enclave.305 }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.341 days = 720 }
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.310.b
+        country_event = { id = touhou_paragon_enclave.305 }
+    }
+}
+#建造技术续约
+country_event = {
+    id = touhou_paragon_enclave.341
+    title = touhou_paragon_enclave.340.name
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "enclave_salvager_window"
+    custom_gui_option = "enclave_salvager_option"
+    picture_event_data = {
+        portrait = event_target:kappa_enclave_country
+        room = salvagers_room
+    }
+    location = event_target:kappa_enclave_system
+    desc = {
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        text = touhou_paragon_enclave.341.desc
+    }
+    option = {
+        name = touhou_paragon_enclave.341.a
+        allow = {
+            resource_stockpile_compare = {
+                resource = energy
+                value >= 200 #flip to a positive value to make this comparison
+                mult = kappa_construction_count
+            }
+        }
+        add_modifier = {
+            modifier = modifier_kappa_construction
+            days = 240
+            multiplier = kappa_construction_count
+        }
+        set_timed_country_flag = {
+            flag = modifier_kappa_construction_cooldown
+            days = 720
+        }
+        add_resource = {
+            energy = -200
+            multiplier = kappa_construction_count
+        }
+        event_target:kappa_enclave_country = {
+            add_trust = {
+                who = root
+                amount = 2
+            }
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = kappa_construction_count
+                        value <= 29
+                    }
+                }
+                change_variable = {
+                    which = kappa_construction_count
+                    value = 1
+                }
+            }
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.341 days = 360 }
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.341.b
+    }
+}
+#机器人技术
+country_event = {
+    id = touhou_paragon_enclave.350
+    title = touhou_paragon_enclave.350.name
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "enclave_salvager_window"
+    custom_gui_option = "enclave_salvager_option"
+    picture_event_data = {
+        portrait = event_target:kappa_enclave_country
+        room = salvagers_room
+    }
+    location = event_target:kappa_enclave_system
+    desc = {
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        text = touhou_paragon_enclave.350.desc
+    }
+    option = {
+        name = touhou_paragon_enclave.350.a
+        allow = {
+            custom_tooltip_fail = {
+                text = kappa_enclave_robot_sample_already
+                not = {
+                    has_country_flag = kappa_robot_sample
+                }
+            }
+            resource_stockpile_compare = {
+                resource = energy
+                value >= -1 #flip to a positive value to make this comparison
+                mult = kappa_enclave_cost
+            }
+        }
+        set_timed_country_flag = {
+            flag = kappa_robot_sample
+            days = 360
+        }
+        add_resource = {
+            energy = 1
+            mult = kappa_enclave_cost
+        }
+        capital_scope = {
+            create_pop_group = {
+                species = event_target:kappa_robot_worker_species
+                size = 1000
+            }
+            if = {
+                limit = {
+                    mid_game_years_passed > 0
+                }
+                create_pop_group = {
+                    species = event_target:kappa_robot_worker_species
+                    size = 1000
+                }
+            }
+            if = {
+                limit = {
+                    end_game_years_passed > 0
+                }
+                create_pop_group = {
+                    species = event_target:kappa_robot_worker_species
+                    size = 1000
+                }
+            }
+        }
+        event_target:kappa_enclave_country = {
+            add_trust = {
+                who = root
+                amount = 2
+            }
+        }
+        country_event = { id = touhou_paragon_enclave.305 }
+    }
+    option = {
+        name = touhou_paragon_enclave.350.b
+        allow = {
+            custom_tooltip_fail = {
+                text = kappa_enclave_robot_line_already
+                not = {
+                    has_modifier = modifier_kappa_robot
+                }
+            }
+            resource_stockpile_compare = {
+                resource = energy
+                value >= -3 #flip to a positive value to make this comparison
+                mult = kappa_enclave_cost
+            }
+            event_target:kappa_enclave_country = {
+                trust = {
+                    who = root
+                    value >= 20
+                }
+            }
+        }
+        add_modifier = {
+            modifier = modifier_kappa_robot
+            days = 3600
+        }
+        add_resource = {
+            energy = 3
+            mult = kappa_enclave_cost
+        }
+        event_target:kappa_enclave_country = {
+            add_trust = {
+                who = root
+                amount = 10
+            }
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.351 days = 3600}
+        }
+        country_event = { id = touhou_paragon_enclave.305 }
+    }
+    option = {
+        name = touhou_paragon_enclave.310.b
+        country_event = { id = touhou_paragon_enclave.305 }
+    }
+}
+
+#机器人续约
+country_event = {
+    id = touhou_paragon_enclave.351
+    title = touhou_paragon_enclave.350.name
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "enclave_salvager_window"
+    custom_gui_option = "enclave_salvager_option"
+    picture_event_data = {
+        portrait = event_target:kappa_enclave_country
+        room = salvagers_room
+    }
+    location = event_target:kappa_enclave_system
+    desc = {
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        text = touhou_paragon_enclave.351.desc
+    }
+    option = {
+        name = touhou_paragon_enclave.351.a
+        allow = {
+            resource_stockpile_compare = {
+                resource = energy
+                value >= -3 #flip to a positive value to make this comparison
+                mult = kappa_enclave_cost
+            }
+            event_target:kappa_enclave_country = {
+                trust = {
+                    who = root
+                    value >= 20
+                }
+            }
+        }
+        add_modifier = {
+            modifier = modifier_kappa_robot
+            days = 3600
+        }
+        add_resource = {
+            energy = 3
+            mult = kappa_enclave_cost
+        }
+        event_target:kappa_enclave_country = {
+            add_trust = {
+                who = root
+                amount = 10
+            }
+        }
+        hidden_effect = {
+            country_event = { id = touhou_paragon_enclave.351 days = 3600}
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.351.b
+    }
+}
+#非想天则
+country_event = {
+    id = touhou_paragon_enclave.360
+    title = touhou_paragon_enclave.360.name
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "enclave_salvager_window"
+    custom_gui_option = "enclave_salvager_option"
+    picture_event_data = {
+        portrait = event_target:kappa_enclave_country
+        room = salvagers_room
+    }
+    location = event_target:kappa_enclave_system
+    desc = {
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        text = touhou_paragon_enclave.360.desc
+    }
+    option = {
+        name = touhou_paragon_enclave.360.a
+        allow = {
+            custom_tooltip_fail = {
+                text = kappa_enclave_mk2_sample_already
+                not = {
+                    has_country_flag = kappa_mk2_sample
+                }
+            }
+            resource_stockpile_compare = {
+                resource = energy
+                value >= -1 #flip to a positive value to make this comparison
+                mult = kappa_enclave_cost
+            }
+        }
+        set_country_flag = kappa_mk2_sample
+        add_resource = {
+            energy = 1
+            mult = kappa_enclave_cost
+        }
+        capital_scope = {
+            create_pop_group = {
+                species = event_target:sanae_robot_worker_species
+                size = 1
+            }
+        }
+        event_target:kappa_enclave_country = {
+            add_trust = {
+                who = root
+                amount = 5
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.360.b
+        trigger = {
+            has_technology = tech_sanae_robot_worker
+        }
+        set_country_flag = kappa_enclave_mk2_already
+        event_target:kappa_enclave_country = {
+            add_trust = {
+                who = root
+                amount = 10
+            }
+        }
+        custom_tooltip = kappa_enclave_mk2_text
+    }
+    option = {
+        name = touhou_paragon_enclave.310.b
+        country_event = { id = touhou_paragon_enclave.305 }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.370
+    title = touhou_paragon_enclave.370.name
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "enclave_salvager_window"
+    custom_gui_option = "enclave_salvager_option"
+    picture_event_data = {
+        portrait = event_target:kappa_enclave_country
+        room = salvagers_room
+    }
+    location = event_target:kappa_enclave_system
+    desc = {
+        trigger = {
+            NOR = {
+                is_hostile = event_target:kappa_enclave_country
+                is_homicidal = yes
+            }
+        }
+        text = touhou_paragon_enclave.370.desc
+    }
+    option = {
+        name = touhou_paragon_enclave.370.a
+        country_event = { id = touhou_paragon.42700 }
+        event_target:kappa_enclave_country = {
+            add_trust = {
+                who = root
+                amount = 100
+            }
+        }
+        custom_tooltip = kappa_enclave_nitori_recruition
+    }
+    option = {
+        name = touhou_paragon_enclave.370.b
+        country_event = { id = touhou_paragon_enclave.305 }
+    }
+}
+
+first_contact_event = {
+    id = touhou_paragon_enclave.301
+    hide_window = yes
+    trigger = {
+        contact_country = {
+            is_country_type = kappa_enclave
+        }
+    }
+    is_triggered_only = yes
+    first_contact = yes
+    immediate = {
+        set_site_progress_locked = yes
+    }
+    after = {
+        set_site_progress_locked = no
+        set_first_contact_stage = kappa_enclave_stage_1
+    }
+}
+
+first_contact_event = {
+    id = touhou_paragon_enclave.302
+    title = first_contact_critters.1.name
+    desc = first_contact_critters.1.desc
+    picture = GFX_evt_satellite_in_orbit
+    inline_script = first_contact_event_sounds
+
+    is_triggered_only = yes
+    first_contact = yes
+
+    immediate = {
+        set_site_progress_locked = yes
+    }
+
+    after = {
+        set_site_progress_locked = no
+    }
+
+    option = {
+        name = first_contact_critters.1.A
+        set_first_contact_stage = kappa_enclave_stage_2
+    }
+}
+
+first_contact_event = {
+    id = touhou_paragon_enclave.303
+    title = first_contact_critters.5.name
+    desc = first_contact_critters.5.desc
+    picture = GFX_evt_space_station
+
+    inline_script = first_contact_event_sounds
+    is_triggered_only = yes
+    first_contact = yes
+
+    immediate = {
+        set_site_progress_locked = yes
+    }
+
+    option = {
+        name = SCUM
+        trigger = {
+            owner = { has_valid_civic = civic_fanatic_purifiers }
+        }
+    }
+
+    option = {
+        name = TASTY
+        trigger = {
+            owner = { has_valid_civic = civic_hive_devouring_swarm }
+        }
+    }
+
+    option = {
+        name = EXTERMINATE
+        trigger = {
+            owner = { has_valid_civic = civic_machine_terminator }
+        }
+    }
+
+    option = {
+        name = first_contact_critters.5.A
+        trigger = {
+            owner = {
+                NOR = {
+                    has_valid_civic = civic_fanatic_purifiers
+                    has_valid_civic = civic_hive_devouring_swarm
+                    has_valid_civic = civic_machine_terminator
+                }
+            }
+        }
+        owner = {
+            country_event = { id = touhou_paragon_enclave.305 }
+        }
+    }
+    after = {
+        set_site_progress_locked = no
+        finish_first_contact_effect = yes
+    }
+}
+
+#河童城邦的毁灭
+country_event = {
+    id = touhou_paragon_enclave.380
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_country_type = kappa_enclave
+    }
+
+    immediate = {
+        # they will be re-saved when/if station is reestablished
+        fromfrom.solar_system = { save_event_target_as = old_kappa_enclave_system }
+        from = {
+            country_event = { id = touhou_paragon_enclave.381 } # notification for destroyer
+        }
+
+        every_playable_country = {
+            limit = {
+                has_communications = root
+                NOT = { is_same_value = root.from }
+            }
+            country_event = { id = touhou_paragon_enclave.382 days = 1 } # notification for others
+        }
+
+        # find new location
+        if = {
+            limit = {
+                any_playable_country = {
+                    is_ai = no
+                    any_planet_within_border = {
+                        is_wet = yes
+                    }
+                    is_homicidal = no
+                }
+            }
+            random_playable_country = {
+                limit = {
+                    is_ai = no
+                    any_planet_within_border = {
+                        is_wet = yes
+                    }
+                    is_homicidal = no
+                }
+                random_planet_within_border = {
+                    limit = {
+                        is_wet = yes
+                    }
+                    save_event_target_as = kappa_enclave_new_system_planet
+                    solar_system = {
+                        save_global_event_target_as = kappa_enclave_new_system
+                    }
+                }
+                country_event = { id = touhou_paragon_enclave.383 days = 60 }
+            }
+        }
+        else_if = {
+            limit = {
+                any_playable_country = {
+                    is_ai = yes
+                    any_planet_within_border = {
+                        is_wet = yes
+                    }
+                    is_homicidal = no
+                }
+            }
+            random_playable_country = {
+                limit = {
+                    is_ai = no
+                    any_planet_within_border = {
+                        is_wet = yes
+                    }
+                    is_homicidal = no
+                }
+                random_planet_within_border = {
+                    limit = {
+                        is_wet = yes
+                    }
+                    save_event_target_as = kappa_enclave_new_system_planet
+                    solar_system = {
+                        save_global_event_target_as = kappa_enclave_new_system
+                    }
+                }
+                country_event = { id = touhou_paragon_enclave.383 days = 60 }
+            }
+        }
+        else = {
+            set_global_flag = kappa_enclave_destoryed
+        }
+    }
+}
+
+# Any Trader Destroyed (Destroyer)
+country_event = {
+    id = touhou_paragon_enclave.381
+    title = "leviathans.141"
+    desc = "leviathans.141.desc"
+    picture = GFX_evt_space_debris
+    location = event_target:old_kappa_enclave_system
+    show_sound = event_ship_bridge
+    is_triggered_only = yes
+
+    immediate = {
+        every_country = {
+            limit = {
+                is_country_type = default
+                NOR = {
+                    is_same_value = root
+                    has_valid_civic = civic_fanatic_purifiers
+                    has_valid_civic = civic_hive_devouring_swarm
+                    has_valid_civic = civic_machine_terminator
+                }
+            }
+            add_opinion_modifier = {
+                who = root
+                modifier = opinion_destroyed_trader
+            }
+        }
+    }
+    option = {
+        name = EXCELLENT
+        add_resource = {
+            minerals = 2000
+            energy = 2000
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.382
+    title = leviathans.141
+    desc = {
+        trigger = {
+            NOT = {
+                has_global_flag = kappa_enclave_destoryed
+            }
+        }
+        text = touhou_paragon_enclave.382.desc.saved
+    }
+    desc = {
+        trigger = {
+            has_global_flag = kappa_enclave_destoryed
+        }
+        text = touhou_paragon_enclave.382.desc.destoryed
+    }
+    picture = GFX_evt_space_debris
+    location = event_target:old_kappa_enclave_system
+    show_sound = event_ship_bridge
+    is_triggered_only = yes
+    option = {
+        name = OK
+    }
+}
+
+
+# Contact to reestablish station
+country_event = {
+    id = touhou_paragon_enclave.383
+    title =  touhou_paragon_enclave.305.name
+    desc = touhou_paragon_enclave.383.desc
+    diplomatic = yes
+    is_triggered_only = yes
+    custom_gui = "enclave_salvager_window"
+    custom_gui_option = "enclave_salvager_option"
+    location = event_target:kappa_enclave_new_system_planet
+    picture_event_data = {
+        portrait = event_target:kappa_enclave_country
+        room = salvagers_room
+    }
+    trigger = { # check that they still own the system
+        event_target:kappa_enclave_new_system = {
+            exists = space_owner
+            space_owner = { is_same_value = root }
+        }
+    }
+
+    option = { # Accept
+        name = touhou_paragon_enclave.383.a
+        custom_tooltip = touhou_paragon_enclave.383.a_tooltip
+        hidden_effect = {
+            event_target:kappa_enclave_country = {
+                create_fleet = {
+                    name = "NAME_Kappa_Enclave_Fleet"
+                    settings = { spawn_debris = no }
+                    effect = {
+                        set_owner = prev
+                        create_ship = {
+                            name = random
+                            design = "NAME_Kappa_Enclave_Station"
+                            graphical_culture = prev
+                        }
+                        set_location = {
+                            target = event_target:kappa_enclave_new_system_planet
+                            angle = random
+                            distance = 15
+                        }
+                        save_event_target_as = CustomCapital
+                        prev = {
+                            set_custom_capital_location = event_target:CustomCapital
+                        }
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = { # Reject
+        name = touhou_paragon_enclave.383.b
+        response_text = touhou_paragon_enclave.383.b.reply
+        hidden_effect = { # find other empire
+            set_country_flag = kappa_reestablishment_rejected
+            if = {
+                limit = {
+                    any_playable_country = {
+                        is_ai = no
+                        any_planet_within_border = {
+                            is_wet = yes
+                        }
+                        is_homicidal = no
+                        NOT = {
+                            has_country_flag = kappa_reestablishment_rejected
+                        }
+                    }
+                }
+                random_playable_country = {
+                    limit = {
+                        is_ai = no
+                        any_planet_within_border = {
+                            is_wet = yes
+                        }
+                        is_homicidal = no
+                        NOT = {
+                            has_country_flag = kappa_reestablishment_rejected
+                        }
+                    }
+                    random_planet_within_border = {
+                        limit = {
+                            is_wet = yes
+                        }
+                        save_event_target_as = kappa_enclave_new_system_planet
+                        solar_system = {
+                            save_global_event_target_as = kappa_enclave_new_system
+                        }
+                    }
+                    country_event = { id = touhou_paragon_enclave.383 days = 60 }
+                }
+            }
+            else_if = {
+                limit = {
+                    any_playable_country = {
+                        is_ai = yes
+                        any_planet_within_border = {
+                            is_wet = yes
+                        }
+                        is_homicidal = no
+                        NOT = {
+                            has_country_flag = kappa_reestablishment_rejected
+                        }
+                    }
+                }
+                random_playable_country = {
+                    limit = {
+                        is_ai = no
+                        any_planet_within_border = {
+                            is_wet = yes
+                        }
+                        is_homicidal = no
+                        NOT = {
+                            has_country_flag = kappa_reestablishment_rejected
+                        }
+                    }
+                    random_planet_within_border = {
+                        limit = {
+                            is_wet = yes
+                        }
+                        save_event_target_as = kappa_enclave_new_system_planet
+                        solar_system = {
+                            save_global_event_target_as = kappa_enclave_new_system
+                        }
+                    }
+                    country_event = { id = touhou_paragon_enclave.383 days = 60 }
+                }
+            }
+            else = {
+                set_global_flag = kappa_enclave_destoryed
+            }
+        }
+        ai_chance = {
+            factor = 0
+            modifier = {
+                add = 50
+                has_ethic = ethic_authoritarian
+            }
+            modifier = {
+                add = 100
+                has_ethic = ethic_fanatic_authoritarian
+            }
+            modifier = {
+                add = 100
+                has_ethic = ethic_xenophobe
+            }
+            modifier = {
+                add = 200
+                has_ethic = ethic_fanatic_xenophobe
+            }
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.40600
+    diplomatic_title = NAME_Saisen_Box
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        room = saisenbox_room
+    }
+    is_triggered_only = yes
+    trigger = {
+        from = {
+            is_country_type = saisen_box
+        }
+        not = {
+            has_country_flag = touhou_flag_in_diplo_with_saisen_box
+        }
+    }
+    title = NAME_Saisen_Box
+    desc = touhou_paragon_enclave.40600.desc
+    immediate = {
+        set_country_flag = touhou_flag_in_diplo_with_saisen_box
+    }
+    option = {
+        name = touhou_paragon_enclave.40600.a
+        trigger = {
+            is_spiritualist = no
+            is_materialist = no
+        }
+        allow = {
+            not = {
+                has_modifier = modifier_saisen_box_timer
+            }
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40605
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40600.b
+        trigger = {
+            is_spiritualist = yes
+        }
+        allow = {
+            not = {
+                has_modifier = modifier_saisen_box_timer
+            }
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40605
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40600.c
+        trigger = {
+            is_materialist = yes
+        }
+        allow = {
+            not = {
+                has_modifier = modifier_saisen_box_timer
+            }
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40605
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40600.d
+        default_hide_option = yes
+        remove_country_flag = touhou_flag_in_diplo_with_saisen_box
+    }
+    option = {
+        name = touhou_paragon_enclave.40600.e
+        trigger = {
+            has_country_flag = touhou_flag_allow_reimu_saisen_box_option
+        }
+        allow = {
+            not = {
+                has_modifier = modifier_saisen_box_timer
+            }
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.40605
+    diplomatic_title = NAME_Saisen_Box
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        room = saisenbox_room
+    }
+    is_triggered_only = yes
+    title = NAME_Saisen_Box
+    desc = {
+        text = touhou_paragon_enclave.40605.1.desc
+    }
+    desc = {
+        text = touhou_paragon_enclave.40605.2.desc
+    }
+    desc = {
+        text = touhou_paragon_enclave.40605.3.desc
+    }
+    desc = {
+        text = touhou_paragon_enclave.40605.4.desc
+    }
+    desc = {
+        text = touhou_paragon_enclave.40605.5.desc
+    }
+    option = {
+        name = touhou_paragon_enclave.40605.a
+        trigger = {
+            check_variable = {
+                which = touhou_variable_saisen_count
+                value >= 1
+            }
+        }
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 100
+            }
+        }
+        add_resource = { energy = -100 }
+        tooltip = {
+            random_list = {
+                25 = {
+                    random_owned_planet = {
+                        limit = {
+                            is_colony = yes
+                        }
+                        add_modifier = {
+                            modifier = modifier_saisen_hapiness
+                            years = 1
+                        }
+                    }
+                }
+                25 = {
+                    random_owned_planet = {
+                        limit = {
+                            is_colony = yes
+                        }
+                        add_modifier = {
+                            modifier = modifier_saisen_hapiness
+                            months = 30
+                        }
+                    }
+                }
+                25 = {
+                    random_owned_leader = {
+                        add_experience = 300
+                    }
+                }
+                25 = {
+                    random_owned_leader = {
+                        add_experience = 500
+                    }
+                }
+            }
+        }
+        hidden_effect = {
+            random_list = {
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 1
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 2
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 3
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 4
+                    }
+                }
+            }
+            country_event = { id = touhou_paragon_enclave.40610 }
+            change_variable = {
+                which = touhou_variable_saisen_count
+                value = 100
+            }
+            country_event = { id = touhou_paragon_enclave.40605 days = 900}
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            months = 30
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_count
+                    value >= 100000
+                }
+                NOT = {
+                    any_owned_leader = {
+                        has_trait = thl_leader_trait_fly
+                    }
+                }
+            }
+            country_event = { id = touhou_paragon.40600 }
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40605.b
+        trigger = {
+            check_variable = {
+                which = touhou_variable_saisen_count
+                value >= 100
+            }
+        }
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        tooltip = {
+            random_list = {
+                25 = {
+                    random_owned_leader = {
+                        add_age = -10
+                    }
+                }
+                25 = {
+                    random_owned_planet = {
+                        limit = {
+                            is_colony = yes
+                        }
+                        add_modifier = {
+                            modifier = modifier_saisen_unity
+                            months = 30
+                        }
+                    }
+                }
+                25 = {
+                    random_owned_planet = {
+                        limit = {
+                            is_colony = yes
+                        }
+                        add_modifier = {
+                            modifier = modifier_saisen_growth
+                            months = 30
+                        }
+                    }
+                }
+                25 = {
+                    add_modifier = {
+                        modifier = modifier_saisen_morale
+                        months = 30
+                    }
+                }
+            }
+        }
+        hidden_effect = {
+            random_list = {
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 1
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 2
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 3
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 4
+                    }
+                }
+            }
+            country_event = { id = touhou_paragon_enclave.40615 }
+            change_variable = {
+                which = touhou_variable_saisen_count
+                value = 1000
+            }
+            country_event = { id = touhou_paragon_enclave.40605 days = 900}
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            months = 30
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_count
+                    value >= 100000
+                }
+                NOT = {
+                    any_owned_leader = {
+                        has_trait = thl_leader_trait_fly
+                    }
+                }
+            }
+            country_event = { id = touhou_paragon.40600 }
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40605.c
+        trigger = {
+            check_variable = {
+                which = touhou_variable_saisen_count
+                value >= 1000
+            }
+        }
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 10000
+            }
+        }
+        add_resource = { energy = -10000 }
+        tooltip = {
+            random_list = {
+                25 = {
+                    random_owned_leader = {
+                        add_trait = leader_trait_psionic
+                    }
+                }
+                25 = {
+                    random_owned_leader = {
+                        remove_all_negative_traits = yes
+                    }
+                }
+                25 = {
+                    add_modifier = {
+                        modifier = modifier_saisen_morale_2
+                        months = 30
+                    }
+                }
+                25 = {
+                    add_modifier = {
+                        modifier = modifier_saisen_rate
+                        months = 30
+                    }
+                }
+            }
+        }
+        hidden_effect = {
+            random_list = {
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 1
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 2
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 3
+                    }
+                }
+                25 = {
+                    set_variable = {
+                        which = touhou_variable_saisen_switch
+                        value = 4
+                    }
+                }
+            }
+            country_event = { id = touhou_paragon_enclave.40620 }
+            change_variable = {
+                which = touhou_variable_saisen_count
+                value = 10000
+            }
+            country_event = { id = touhou_paragon_enclave.40605 days = 900}
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            months = 30
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_count
+                    value >= 100000
+                }
+                NOT = {
+                    any_owned_leader = {
+                        has_trait = thl_leader_trait_fly
+                    }
+                }
+            }
+            country_event = { id = touhou_paragon.40600 }
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40605.e
+        default_hide_option = yes
+    }
+    after = {
+        remove_country_flag = touhou_flag_in_diplo_with_saisen_box
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.40610
+    diplomatic_title = NAME_Saisen_Box
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        room = saisenbox_room
+    }
+    is_triggered_only = yes
+    title = NAME_Saisen_Box
+    desc = touhou_paragon_enclave.40610.desc
+    option = {
+        name = GOOD
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 1
+                }
+            }
+            random_owned_planet = {
+                limit = {
+                    is_colony = yes
+                }
+                add_modifier = {
+                    modifier = modifier_saisen_hapiness
+                    years = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 2
+                }
+            }
+            random_owned_planet = {
+                limit = {
+                    is_colony = yes
+                }
+                add_modifier = {
+                    modifier = modifier_saisen_hapiness
+                    months = 30
+                }
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 3
+                }
+            }
+            random_owned_leader = {
+                add_experience = 300
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 4
+                }
+            }
+            random_owned_leader = {
+                add_experience = 500
+            }
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.40615
+    diplomatic_title = NAME_Saisen_Box
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        room = saisenbox_room
+    }
+    is_triggered_only = yes
+    title = NAME_Saisen_Box
+    desc = touhou_paragon_enclave.40615.desc
+    option = {
+        name = GOOD
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 1
+                }
+            }
+            random_owned_leader = {
+                add_age = -10
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 2
+                }
+            }
+            random_owned_planet = {
+                limit = {
+                    is_colony = yes
+                }
+                add_modifier = {
+                    modifier = modifier_saisen_unity
+                    months = 30
+                }
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 3
+                }
+            }
+            random_owned_planet = {
+                limit = {
+                    is_colony = yes
+                }
+                add_modifier = {
+                    modifier = modifier_saisen_growth
+                    months = 30
+                }
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 4
+                }
+            }
+            add_modifier = {
+                modifier = modifier_saisen_morale
+                months = 30
+            }
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.40620
+    diplomatic_title = NAME_Saisen_Box
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        room = saisenbox_room
+    }
+    is_triggered_only = yes
+    title = NAME_Saisen_Box
+    desc = touhou_paragon_enclave.40620.desc
+    option = {
+        name = GOOD
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 1
+                }
+            }
+            random_owned_leader = {
+                limit = {
+                    not = { has_trait = leader_trait_psionic }
+                }
+                add_trait = leader_trait_psionic
+            }
+            custom_tooltip = akyuu1
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 2
+                }
+                any_owned_leader = {
+                    OR = {
+                        num_negative_traits = 1
+                        num_negative_traits = 2
+                        num_negative_traits = 3
+                        num_negative_traits = 4
+                    }
+                }
+            }
+            random_owned_leader = {
+                limit = {
+                    OR = {
+                        num_negative_traits = 1
+                        num_negative_traits = 2
+                        num_negative_traits = 3
+                        num_negative_traits = 4
+                    }
+                }
+                remove_all_negative_traits = yes
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 2
+                }
+                NOT = {
+                    any_owned_leader = {
+                        OR = {
+                            num_negative_traits = 1
+                            num_negative_traits = 2
+                            num_negative_traits = 3
+                            num_negative_traits = 4
+                        }
+                    }
+                }
+            }
+            custom_tooltip = touhou_tooltip_no_negative_traits
+            add_resource = {
+                energy = 10000
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 3
+                }
+            }
+            add_modifier = {
+                modifier = modifier_saisen_morale_2
+                months = 30
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = touhou_variable_saisen_switch
+                    value = 4
+                }
+            }
+            add_modifier = {
+                modifier = modifier_saisen_rate
+                months = 30
+            }
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_enclave.40625
+    diplomatic_title = NAME_Saisen_Box
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        room = saisenbox_room
+    }
+    is_triggered_only = yes
+    title = NAME_Saisen_Box_shrine
+    desc = {
+        trigger = {
+            OR = {
+                is_materialist = yes
+                AND = {
+                    is_spiritualist = no
+                    any_owned_leader = {
+                        has_trait = thl_leader_trait_fly
+                        check_variable_arithmetic = {
+                            which = touhou_variable_reimu_excessive_amount
+                            value >= 300
+                        }
+                    }
+                }
+            }
+        }
+        text = touhou_paragon_enclave.40625.1.desc
+    }
+    desc = {
+        trigger = {
+            is_materialist = no
+            is_spiritualist = no
+            any_owned_leader = {
+                has_trait = thl_leader_trait_fly
+                check_variable_arithmetic = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value >= 150
+                }
+            }
+        }
+        text = touhou_paragon_enclave.40625.2.desc
+    }
+    desc = {
+        trigger = {
+            OR = {
+                is_spiritualist = yes
+                AND = {
+                    is_materialist = no
+                    is_spiritualist = no
+                    any_owned_leader = {
+                        has_trait = thl_leader_trait_fly
+                        check_variable_arithmetic = {
+                            which = touhou_variable_reimu_excessive_amount
+                            value < 150
+                        }
+                    }
+                }
+            }
+        }
+        text = touhou_paragon_enclave.40625.3.desc
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.a
+        custom_tooltip = touhou_paragon_enclave.40625.a.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 100
+            }
+        }
+        add_resource = { energy = -100 }
+        hidden_effect = {
+            random_owned_leader = {
+                limit = {
+                    OR = {
+                        num_negative_traits = 1
+                        num_negative_traits = 2
+                        num_negative_traits = 3
+                        num_negative_traits = 4
+                    }
+                    nor = {
+                        has_trait = thl_leader_trait_excessive_reimu
+                        has_trait = thl_leader_trait_short_life
+                    }
+                }
+                remove_all_negative_traits = yes
+            }
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+            }
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 180
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 180
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.b
+        custom_tooltip = touhou_paragon_enclave.40625.b.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 100
+            }
+        }
+        add_resource = { energy = -100 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+            }
+        }
+        add_modifier = {
+            modifier = modifier_sumiyoshi_sanshin
+            years = 1
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 180
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 180
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.c
+        custom_tooltip = touhou_paragon_enclave.40625.c.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 100
+            }
+        }
+        add_resource = { energy = -100 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+            }
+        }
+        add_modifier = {
+            modifier = modifier_benten
+            years = 2
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 180
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 180
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.d
+        custom_tooltip = touhou_paragon_enclave.40625.d.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_monthly_resource_mult = {
+            resource = physics_research
+            value = 3
+            max = 100000
+            min = 500
+        }
+        add_monthly_resource_mult = {
+            resource = society_research
+            value = 3
+            max = 100000
+            min = 500
+        }
+        add_monthly_resource_mult = {
+            resource = engineering_research
+            value = 3
+            max = 100000
+            min = 500
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.e
+        custom_tooltip = touhou_paragon_enclave.40625.e.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_sugawara_no_michizane
+            years = 2
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.f
+        custom_tooltip = touhou_paragon_enclave.40625.f.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_monthly_resource_mult = {
+            resource = consumer_goods
+            value = 1
+            max = 100000
+            min = 1000
+        }
+        add_monthly_resource_mult = {
+            resource = alloys
+            value = 1
+            max = 50000
+            min = 500
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.g
+        custom_tooltip = touhou_paragon_enclave.40625.g.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        random_owned_leader = {
+            limit = {
+                nor = {
+                    has_trait = thl_leader_trait_time
+                    has_trait = thl_leader_trait_short_life
+                }
+            }
+            add_trait = leader_trait_intemporal
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.h
+        custom_tooltip = touhou_paragon_enclave.40625.h.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_monthly_resource_mult = {
+            resource = energy
+            value = 3
+            max = 100000
+            min = 500
+        }
+        add_monthly_resource_mult = {
+            resource = food
+            value = 3
+            max = 100000
+            min = 500
+        }
+        add_modifier = {
+            modifier = modifier_amaterasu_okami
+            years = 1
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.i
+        custom_tooltip = touhou_paragon_enclave.40625.i.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_hariti
+            years = 1
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.j
+        custom_tooltip = touhou_paragon_enclave.40625.j.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_monthly_resource_mult = {
+            resource = unity
+            value = 6
+            max = 100000
+            min = 1000
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.k
+        custom_tooltip = touhou_paragon_enclave.40625.k.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_sinatsuhiko_no_mikami
+            years = 3
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.l
+        custom_tooltip = touhou_paragon_enclave.40625.l.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 1000
+            }
+        }
+        add_resource = { energy = -1000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 1.25
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_ebisu
+            years = 1
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 360
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 360
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.m
+        custom_tooltip = touhou_paragon_enclave.40625.m.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 10000
+            }
+        }
+        add_resource = { energy = -10000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 3
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_kanayamahiko_no_kami
+            years = 1
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 720
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 720
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.n
+        custom_tooltip = touhou_paragon_enclave.40625.n.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 10000
+            }
+        }
+        add_resource = { energy = -10000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 3
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_sukenabikona_no_mikoto
+            years = 1
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 720
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 720
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.o
+        custom_tooltip = touhou_paragon_enclave.40625.o.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 10000
+            }
+        }
+        add_resource = { energy = -10000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 3
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_ame_no_tajikarao_no_kami
+            years = 3
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 720
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 720
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.p
+        custom_tooltip = touhou_paragon_enclave.40625.p.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 10000
+            }
+        }
+        add_resource = { energy = -10000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                change_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 3
+                }
+                multiply_variable = {
+                    which = touhou_variable_reimu_excessive_amount
+                    value = 2
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_susanoo
+            years = 1
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 720
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 720
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.q
+        custom_tooltip = touhou_paragon_enclave.40625.q.tooltip
+        allow = {
+            has_country_resource = {
+                type = energy
+                amount >= 10000
+            }
+        }
+        add_resource = { energy = -10000 }
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                set_variable_to_random_value = {
+                    which = touhou_variable_reimu_excessive_amount
+                    min = 1
+                    max = 5
+                }
+                round_variable = touhou_variable_reimu_excessive_amount
+            }
+        }
+        add_modifier = {
+            modifier = modifier_saisen_box_timer
+            days = 180
+        }
+        country_event = {
+            id = touhou_paragon_enclave.40625
+            days = 180
+        }
+    }
+    option = {
+        name = touhou_paragon_enclave.40625.r
+        default_hide_option = yes
+    }
+    after = {
+        remove_country_flag = touhou_flag_in_diplo_with_saisen_box
+    }
+}

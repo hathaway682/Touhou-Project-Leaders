@@ -1,0 +1,123 @@
+objectTypes = {
+	pdxmesh = {
+		name = "THC_Reimu_main_mesh"
+		file = "gfx/models/ships/THC_ReimuRobot/THC_Reimu_main.mesh"
+				animation = { id = "idle"			type = "THC_Reimu_main_idle_animation" }
+				animation = { id = "idle_to_moving"			type = "THC_Reimu_main_idle_to_moving_animation" }
+				animation = { id = "moving"			type = "THC_Reimu_main_moving_animation" }
+				animation = { id = "moving_to_idle"			type = "THC_Reimu_main_moving_to_idle_animation" }
+
+
+				animation = { id = "idle_to_combat_idle"			type = "THC_Reimu_main_idle_to_combat_idle_animation" }
+				animation = { id = "moving_to_combat_idle"			type = "THC_Reimu_main_moving_to_combat_idle_animation" }
+				animation = { id = "combat_idle"			type = "THC_Reimu_main_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "THC_Reimu_main_combat_idle_to_idle_animation" }
+
+				animation = { id = "idle_to_combat_moving"			type = "THC_Reimu_main_moving_to_combat_moving_animation" }
+				animation = { id = "moving_to_combat_moving"			type = "THC_Reimu_main_moving_to_combat_moving_animation" }
+				animation = { id = "combat_moving"			type = "THC_Reimu_main_combat_moving_animation" }
+				animation = { id = "combat_moving_to_moving"			type = "THC_Reimu_main_combat_moving_to_moving_animation" }
+				animation = { id = "combat_moving_to_idle"			type = "THC_Reimu_main_combat_moving_to_idle_animation" }
+
+
+				animation = { id = "combat_idle_to_combat_moving"			type = "THC_Reimu_main_combat_idle_to_combat_moving_animation" }
+				animation = { id = "combat_moving_to_combat_idle"			type = "THC_Reimu_main_combat_moving_to_combat_idle_animation" }
+				animation = { id = "CQB_attack"			type = "THC_Reimu_main_CQB_attack_animation" }
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "THC_Reimu_L_arm_mesh"
+		file = "gfx/models/ships/THC_ReimuRobot/THC_Reimu_L_arm.mesh"
+				animation = { id = "idle"			type = "THC_Reimu_L_arm_idle_animation" }
+		scale = 0.25
+	}
+	pdxmesh = {
+		name = "THC_Reimu_R_arm_mesh"
+		file = "gfx/models/ships/THC_ReimuRobot/THC_Reimu_R_arm.mesh"
+				animation = { id = "idle"			type = "THC_Reimu_R_arm_idle_animation" }
+				animation = { id = "CQB_attack"			type = "THC_Reimu_R_arm_CQB_attack_animation" }
+		scale = 0.25
+	}
+	pdxmesh = {
+		name = "THC_Reimu_skirt1_mesh"
+		file = "gfx/models/ships/THC_ReimuRobot/THC_Reimu_skirt1.mesh"
+				animation = { id = "idle"			type = "THC_Reimu_skirt1_idle_animation" }
+		scale = 0.25
+	}
+	pdxmesh = {
+		name = "THC_Reimu_skirt2_mesh"
+		file = "gfx/models/ships/THC_ReimuRobot/THC_Reimu_skirt2.mesh"
+				animation = { id = "idle"			type = "THC_Reimu_skirt2_idle_animation" }
+		scale = 0.25
+	}
+	pdxmesh = {
+		name = "THC_Reimu_Harae_stick_mesh"
+		file = "gfx/models/ships/THC_ReimuRobot/THC_Reimu_Harae_stick.mesh"
+				animation = { id = "idle"			type = "THC_Reimu_Harae_stick_idle_animation" }
+				animation = { id = "CQB_attack"			type = "THC_Reimu_Harae_stick_CQB_attack_animation" }
+		scale = 0.2
+	}
+
+
+
+	pdxmesh = {
+		name = "THC_Reimu_weapon_section_mesh"
+		file = "gfx/models/ships/THC_ReimuRobot/THC_Reimu_weapon_section.mesh"
+		scale = 8.0
+	}
+
+	pdxmesh = {
+		name = "Illusion_Guardian_frame_mesh"
+		file = "gfx/models/ships/THC_ReimuRobot/Illusion_Guardian_frame.mesh"
+		scale = 4.0
+	}
+
+	pdxmesh = {
+		name = "THC_Reimu_destructioned_mesh"
+		file = "gfx/models/ships/THC_ReimuRobot/THC_Reimu_destructioned.mesh"
+		scale = 1.0
+	}
+
+
+
+
+	pdxmesh = {
+		name = "THC_ReimuRed_main_mesh"
+		file = "gfx/models/ships/THC_ReimuRobot/THC_ReimuRed_main.mesh"
+				animation = { id = "idle"			type = "THC_Reimu_main_idle_animation" }
+				animation = { id = "idle_to_moving"			type = "THC_Reimu_main_idle_to_moving_animation" }
+				animation = { id = "moving"			type = "THC_Reimu_main_moving_animation" }
+				animation = { id = "moving_to_idle"			type = "THC_Reimu_main_moving_to_idle_animation" }
+
+
+				animation = { id = "idle_to_combat_idle"			type = "THC_Reimu_main_idle_to_combat_idle_animation" }
+				animation = { id = "moving_to_combat_idle"			type = "THC_Reimu_main_moving_to_combat_idle_animation" }
+				animation = { id = "combat_idle"			type = "THC_Reimu_main_combat_idle_animation" }
+				animation = { id = "combat_idle_to_idle"			type = "THC_Reimu_main_combat_idle_to_idle_animation" }
+
+				animation = { id = "idle_to_combat_moving"			type = "THC_Reimu_main_moving_to_combat_moving_animation" }
+				animation = { id = "moving_to_combat_moving"			type = "THC_Reimu_main_moving_to_combat_moving_animation" }
+				animation = { id = "combat_moving"			type = "THC_Reimu_main_combat_moving_animation" }
+				animation = { id = "combat_moving_to_moving"			type = "THC_Reimu_main_combat_moving_to_moving_animation" }
+				animation = { id = "combat_moving_to_idle"			type = "THC_Reimu_main_combat_moving_to_idle_animation" }
+
+
+				animation = { id = "combat_idle_to_combat_moving"			type = "THC_Reimu_main_combat_idle_to_combat_moving_animation" }
+				animation = { id = "combat_moving_to_combat_idle"			type = "THC_Reimu_main_combat_moving_to_combat_idle_animation" }
+				animation = { id = "CQB_attack"			type = "THC_Reimu_main_CQB_attack_animation" }
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "THC_ReimuRed_skirt1_mesh"
+		file = "gfx/models/ships/THC_ReimuRobot/THC_Reimu_skirt1R.mesh"
+				animation = { id = "idle"			type = "THC_Reimu_skirt1_idle_animation" }
+		scale = 0.25
+	}
+	pdxmesh = {
+		name = "THC_ReimuRed_skirt2_mesh"
+		file = "gfx/models/ships/THC_ReimuRobot/THC_Reimu_skirt2R.mesh"
+				animation = { id = "idle"			type = "THC_Reimu_skirt2_idle_animation" }
+		scale = 0.25
+	}
+}
+	

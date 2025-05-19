@@ -1,0 +1,99 @@
+utility_component_template = {
+	key = "AURA_GUNGNIR"
+	size = medium
+	icon = "GFX_ship_part_whisperers_covenant_aux"
+	icon_frame = 1
+	power = 0
+
+	component_set = "ship_aura_components"
+
+	size_restriction = { spell_card_bullet }
+
+	hostile_aura = {
+		name = "aura_bullet_hostile_gungnir"
+		system_wide = yes
+
+		limit = {
+			has_ship_flag = gungnir_target
+		}
+
+		damage_per_day = {
+			accuracy = 1
+			damage = {
+				min = 666666
+				max = 666666
+			}
+		}
+
+		graphics = {
+		}
+	}
+}
+
+utility_component_template = {
+	key = "AURA_YUME_NO_HUUIN"
+	size = medium
+	icon = "GFX_ship_part_whisperers_covenant_aux"
+	icon_frame = 1
+	power = 0
+
+	component_set = "ship_aura_components"
+
+	size_restriction = { spell_card_bullet }
+
+	hostile_aura = {
+		name = "aura_bullet_hostile_yume_no_huuin"
+		system_wide = yes
+
+		limit = {
+			fleet = {
+				has_fleet_flag = yume_no_huuin_target
+			}
+		}
+
+		damage_per_day = {
+			accuracy = 1
+			damage = {
+				min = 200
+				max = 200
+			}
+		}
+
+		graphics = {
+		}
+	}
+}
+
+utility_component_template = {
+	key = "AURA_YUME_NO_HUUIN_EX"
+	size = medium
+	icon = "GFX_ship_part_whisperers_covenant_aux"
+	icon_frame = 1
+	power = 0
+
+	component_set = "ship_aura_components"
+
+	size_restriction = { spell_card_bullet }
+
+	hostile_aura = {
+		name = "aura_bullet_hostile_yume_no_huuin_ex"
+		system_wide = yes
+
+		limit = {
+			fleet = {
+				has_fleet_flag = yume_no_huuin_target
+			}
+		}
+
+		damage_per_day = {
+			accuracy = 1
+			damage = {
+				min = 1000
+				max = 1000
+			}
+		}
+
+		graphics = {
+		}
+	}
+}

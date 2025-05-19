@@ -1,0 +1,25 @@
+namespace = touhou_paragon_ui
+
+#####################
+# SPELL CORDES
+#####################
+country_event = {
+    id = touhou_paragon_ui.1
+    title = OK
+    desc = OK
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "touhou_spell_card_view"
+
+    immediate = {
+        set_country_flag = spell_cards_view_open
+        set_start_char_id = yes
+    }
+
+    option = {
+        name = OK
+    }
+    after = {
+        remove_country_flag = spell_cards_view_open
+    }
+}

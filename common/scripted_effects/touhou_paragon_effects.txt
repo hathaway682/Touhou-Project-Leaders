@@ -1,0 +1,2707 @@
+random_converse_army_if_reisen_attacker = {
+	if = {
+		limit = {
+			# Check if the general on side A has the supreme warrior trait
+			any_ground_combat_attacker = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_wave_length
+				}
+			}
+		}
+		
+		# 15% of the time: converse a random unit
+		random_list = {
+			85 = {}
+			15 = {
+				random_ground_combat_attacker = {
+					limit = {
+						exists = leader
+						leader = {
+							has_trait = thl_leader_trait_wave_length
+						}
+					}
+					owner = {
+						save_event_target_as = converser
+					}
+				}
+				random_ground_combat_defender = {
+					limit = {
+						is_in_frontline = yes
+					}
+					species = {
+						save_event_target_as = converse_species
+					}
+					remove_army = yes
+				}
+				if = {
+					limit = {
+						event_target:converse_species = {
+							is_robotic = yes
+						}
+					}
+					create_army = {
+						type = robotic_army
+						owner = event_target:converser
+						species = event_target:converse_species
+					}
+				}
+				else = {
+					create_army = {
+						type = assault_army
+						owner = event_target:converser
+						species = event_target:converse_species
+					}
+				}
+			}
+		}
+	}
+}
+
+random_converse_army_if_reisen_defender = {
+	if = {
+		limit = {
+			# Check if the general on side A has the supreme warrior trait
+			any_ground_combat_defender = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_wave_length
+				}
+			}
+		}
+
+		# 15% of the time: converse a random unit
+		random_list = {
+			85 = {}
+			15 = {
+				random_ground_combat_defender = {
+					limit = {
+						exists = leader
+						leader = {
+							has_trait = thl_leader_trait_wave_length
+						}
+					}
+					owner = {
+						save_event_target_as = converser
+					}
+				}
+				random_ground_combat_attacker = {
+					limit = {
+						is_in_frontline = yes
+					}
+					species = {
+						save_event_target_as = converse_species
+					}
+					remove_army = yes
+				}
+				if = {
+					limit = {
+						event_target:converse_species = {
+							is_robotic = yes
+						}
+					}
+					create_army = {
+						type = robotic_defense_army
+						owner = event_target:converser
+						species = event_target:converse_species
+					}
+				}
+				else = {
+					create_army = {
+						type = defense_army
+						owner = event_target:converser
+						species = event_target:converse_species
+					}
+				}
+			}
+		}
+	}
+}
+
+random_kill_army_if_youmu_attacker = {
+	if = {
+		limit = {
+			# Check if the general on side A has the supreme warrior trait
+			any_ground_combat_attacker = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_kendo
+				}
+			}
+		}
+		random_list = {
+			6 = {}
+			4 = {
+				random_ground_combat_defender = {
+					limit = {
+						is_in_frontline = yes
+					}
+					remove_army = yes
+				}
+			}
+		}
+	}
+}
+
+random_kill_army_if_youmu_defender = {
+	if = {
+		limit = {
+			# Check if the general on side A has the supreme warrior trait
+			any_ground_combat_defender = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_kendo
+				}
+			}
+		}
+
+		random_list = {
+			6 = {}
+			4 = {
+				random_ground_combat_attacker = {
+					limit = {
+						is_in_frontline = yes
+					}
+					remove_army = yes
+				}
+			}
+		}
+	}
+}
+
+random_kill_army_if_oni_attacker = {
+	if = {
+		limit = {
+			# Check if the general on side A has the supreme warrior trait
+			any_ground_combat_attacker = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_oni_power
+				}
+			}
+		}
+
+		# 30% of the time: kill a random unit
+		random_list = {
+			70 = {}
+			30 = {
+				random_ground_combat_defender = {
+					limit = {
+						is_in_frontline = yes
+					}
+					remove_army = yes
+				}
+			}
+		}
+	}
+}
+
+random_kill_army_if_oni_defender = {
+	if = {
+		limit = {
+			# Check if the general on side A has the supreme warrior trait
+			any_ground_combat_defender = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_oni_power
+				}
+			}
+		}
+
+		# 30% of the time: kill a random unit
+		random_list = {
+			70 = {}
+			30 = {
+				random_ground_combat_attacker = {
+					limit = {
+						is_in_frontline = yes
+					}
+					remove_army = yes
+				}
+			}
+		}
+	}
+}
+
+thl_ethic_leader_hire_effect = {
+	random_owned_planet = {
+		limit = {
+			is_variable_set = paragon_memory_vault
+		}
+		change_variable = {
+			which = paragon_memory_vault
+			value = 1
+		}
+	}
+
+	# lower_leader_chance = yes #招募东方领袖不应该减少原版领袖的频率
+	set_country_flag = spawning_renowned_leader
+	event_target:ethic_leader = {
+		set_owner = root
+	}
+	# clone_leader = {
+	# 	target = event_target:ethic_leader
+	# 	skip_background_generation = yes
+	# }
+	last_created_leader = {
+		save_global_event_target_as = $LEADER$
+		set_leader_flag = $LEADER$
+		set_leader_flag = renowned_leader
+	}
+
+	remove_country_flag = spawning_renowned_leader
+
+	create_message = {
+		type = MESSAGE_RECRUITED_LEADER
+		localization =  MESSAGE_RECRUITED_LEADER_DESC
+		days = @toast_message_days
+		target = event_target:ethic_leader
+		variable = {
+			type = name
+			localization = LEADER
+			scope = event_target:ethic_leader
+		}
+		variable = {
+			key = "border"
+			value = "GFX_border_veteran" #TODO Add real rarity frame gfx
+		}
+	}
+	event_target:$LEADER$ = {
+		leader_event = { id = focus.46 } # Empire Focus
+	}
+}
+
+clear_confilt_traits = {
+	if = {
+		limit = {
+			has_trait = trait_hive_mind
+		}
+		modify_species = {
+			species = this
+			remove_trait = trait_hive_mind
+			add_traits_at_start_of_list = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait = trait_slow_breeders
+		}
+		modify_species = {
+			species = this
+			remove_trait = trait_slow_breeders
+			add_traits_at_start_of_list = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait = trait_rapid_breeders
+		}
+		modify_species = {
+			species = this
+			remove_trait = trait_rapid_breeders
+			add_traits_at_start_of_list = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait = trait_plantoid_budding
+		}
+		modify_species = {
+			species = this
+			remove_trait = trait_plantoid_budding
+			add_traits_at_start_of_list = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait = trait_lithoid_budding
+		}
+		modify_species = {
+			species = this
+			remove_trait = trait_lithoid_budding
+			add_traits_at_start_of_list = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait = trait_tiyanki
+		}
+		modify_species = {
+			species = this
+			remove_trait = trait_tiyanki
+			add_traits_at_start_of_list = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait = trait_clone_soldier_fertile
+		}
+		modify_species = {
+			species = this
+			remove_trait = trait_clone_soldier_fertile
+			add_traits_at_start_of_list = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait = trait_clone_soldier_infertile
+		}
+		modify_species = {
+			species = this
+			remove_trait = trait_clone_soldier_infertile
+			add_traits_at_start_of_list = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait = trait_clone_soldier_infertile_full_potential
+		}
+		modify_species = {
+			species = this
+			remove_trait = trait_clone_soldier_infertile_full_potential
+			add_traits_at_start_of_list = yes
+		}
+	}
+}
+
+add_observation_insight_effect = {
+	# Accepts the following parameters:
+	# VALUE = int, amount of observation insights gained.
+	# OUTPOST is the scope of the outpost around the planet that this insight occured on.
+	# Whenever 10 observation insights are gained, a random Observation Technology is granted.
+	# When calling this effect, you can set a country flag of physics_insight, society_insights or engineering_insights to determine the tech granted.
+	hidden_effect = {
+		set_variable = {
+			which = observation_insight_change
+			value = $VALUE$
+		}
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_xenophile
+			}
+			multiply_variable = {
+				which = observation_insight_change
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_valid_civic = civic_machine_exploration_protocol
+					has_valid_civic = civic_hifuu
+				}
+			}
+			multiply_variable = {
+				which = observation_insight_change
+				value = 1.5
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = hands_off_approach
+			}
+			multiply_variable = {
+				which = observation_insight_change
+				value = 1.25
+			}
+		}
+		if = {
+			limit = {
+				is_galactic_community_formed = yes
+				is_galactic_community_member = yes
+				is_active_resolution = resolution_pre_ftl_stances_non_interference
+			}
+			multiply_variable = {
+				which = observation_insight_change
+				value = 1.25
+			}
+		}
+		set_variable = {
+			which = observation_insight_change_comparator
+			value = observation_insight_change
+		}
+		if = {
+			limit = {
+				any_situation = {
+					is_situation_type = situation_observation_insight
+				}
+			}
+			random_situation = {
+				limit = {
+					is_situation_type = situation_observation_insight
+				}
+				save_event_target_as = insight_situation
+			}
+			subtract_variable = {
+				which = observation_insight_change_comparator
+				value = 100
+			}
+			multiply_variable = {
+				which = observation_insight_change_comparator
+				value = -1
+			}
+			if = {
+				limit = {
+					event_target:insight_situation = {
+						situation_progress >= prev.observation_insight_change_comparator
+					}
+				}
+				set_variable = {
+					which = observation_insight_variable
+					value = 101
+				}
+			}
+			else = {
+				set_variable = {
+					which = observation_insight_variable
+					value = 9
+				}
+			}
+			set_variable = {
+				which = observation_insight_change_comparator
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				any_situation = {
+					is_situation_type = situation_observation_insight
+				}
+				check_variable = {
+					which = observation_insight_variable
+					value < 100
+				}
+			}
+			random_situation = {
+				limit = {
+					is_situation_type = situation_observation_insight
+				}
+				add_situation_progress = prev.observation_insight_change
+			}
+		}
+	}
+	if = {
+		# Check that you have discovered 10 insights.
+		limit = {
+			OR = {
+				check_variable = {
+					which = observation_prediction_insight_variable
+					value >= 100
+				}
+				check_variable = {
+					which = observation_insight_variable
+					value >= 100
+				}
+				has_country_flag = pending_insight_tech
+			}
+			#hhas_first_contact_dlc = yes
+		}
+		if = {
+			limit = {
+				has_all_insights = no
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							has_country_flag = physics_insights
+							has_all_physics_insights = no
+						}
+						AND = {
+							has_country_flag = engineering_insights
+							has_all_engineering_insights = yes
+						}
+						AND = {
+							has_country_flag = society_insights
+							has_all_society_insights = yes
+						}
+					}
+				}
+				custom_tooltip = gained_physics_insight
+				hidden_effect = {
+					random_list = {
+						1 = {
+							modifier = {
+								factor = 0
+								NOT = { has_technology = tech_detection_array }
+							}
+							modifier = {
+								factor = 0
+								OR = {
+									has_technology = tech_unusual_senses
+									has_tech_option = tech_unusual_senses
+								}
+							}
+							add_research_option = tech_unusual_senses
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_technology = tech_new_numbers
+									has_tech_option = tech_new_numbers
+								}
+							}
+							add_research_option = tech_new_numbers
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_technology = tech_trinary_computing
+									has_tech_option = tech_trinary_computing
+								}
+							}
+							add_research_option = tech_trinary_computing
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_technology = tech_atmospheric_orbital_mechanics
+									has_tech_option = tech_atmospheric_orbital_mechanics
+								}
+							}
+							add_research_option = tech_atmospheric_orbital_mechanics
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						AND = {
+							has_country_flag = society_insights
+							has_all_society_insights = no
+						}
+						AND = {
+							has_country_flag = engineering_insights
+							has_all_engineering_insights = yes
+						}
+						AND = {
+							has_country_flag = physics_insights
+							has_all_physics_insights = yes
+						}
+					}
+				}
+				custom_tooltip = gained_society_insight
+				hidden_effect = {
+					random_list = {
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_technology = tech_predatory_tactics
+									has_tech_option = tech_predatory_tactics
+								}
+							}
+							modifier = {
+								factor = 0
+								NOT = { has_technology = tech_cloaking_1 }
+							}
+							add_research_option = tech_predatory_tactics
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_technology = tech_satisfying_insults
+									has_tech_option = tech_satisfying_insults
+								}
+							}
+							add_research_option = tech_satisfying_insults
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_technology = tech_compact_living
+									has_tech_option = tech_compact_living
+								}
+							}
+							add_research_option = tech_compact_living
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_technology = tech_alien_topography
+									has_tech_option = tech_alien_topography
+								}
+							}
+							add_research_option = tech_alien_topography
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_technology = tech_xeno_aesthetics
+									has_tech_option = tech_xeno_aesthetics
+								}
+							}
+							add_research_option = tech_xeno_aesthetics
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						AND = {
+							has_country_flag = engineering_insights
+							has_all_engineering_insights = no
+						}
+						AND = {
+							has_country_flag = society_insights
+							has_all_society_insights = yes
+						}
+						AND = {
+							has_country_flag = physics_insights
+							has_all_physics_insights = yes
+						}
+					}
+				}
+				custom_tooltip = gained_engineering_insight
+				hidden_effect = {
+					random_list = {
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_technology = tech_lost_building_methods
+									has_tech_option = tech_lost_building_methods
+								}
+							}
+							add_research_option = tech_lost_building_methods
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_technology = tech_supreme_alloy
+									has_tech_option = tech_supreme_alloy
+								}
+							}
+							add_research_option = tech_supreme_alloy
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_technology = tech_ordered_retreat
+									has_tech_option = tech_ordered_retreat
+								}
+							}
+							add_research_option = tech_ordered_retreat
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_technology = tech_temple_of_transportation
+									has_tech_option = tech_temple_of_transportation
+								}
+							}
+							modifier = {
+								factor = 0
+								NOT = { has_technology = tech_hyper_relays }
+							}
+							add_research_option = tech_temple_of_transportation
+						}
+					}
+				}
+			}
+		}
+		else = {
+			custom_tooltip = gained_insight_modifier
+			locked_random_list = {
+				0 = {
+					modifier = {
+						add = 1
+						OR = {
+							has_country_flag = physics_insights
+							has_country_flag = society_insights
+							has_country_flag = engineering_insights
+						}
+					}
+					modifier = {
+						factor = 0
+						$OUTPOST$ = {
+							has_modifier = insight_unity_5
+						}
+					}
+					$OUTPOST$ = {
+						add_modifier = {
+							modifier = insight_unity_5
+							days = -1
+						}
+					}
+				}
+				0 = {
+					modifier = {
+						add = 1
+						OR = {
+							has_country_flag = physics_insights
+							has_country_flag = society_insights
+							has_country_flag = engineering_insights
+						}
+					}
+					modifier = {
+						factor = 0
+						$OUTPOST$ = {
+							has_modifier = insight_influence_01
+						}
+					}
+					$OUTPOST$ = {
+						add_modifier = {
+							modifier = insight_influence_01
+							days = -1
+						}
+					}
+				}
+				0 = {
+					modifier = {
+						add = 1
+						has_country_flag = physics_insights
+					}
+					modifier = {
+						factor = 0
+						$OUTPOST$ = {
+							has_modifier = insight_physics_5
+						}
+					}
+					$OUTPOST$ = {
+						add_modifier = {
+							modifier = insight_physics_5
+							days = -1
+						}
+					}
+				}
+				0 = {
+					modifier = {
+						add = 1
+						has_country_flag = society_insights
+					}
+					modifier = {
+						factor = 0
+						$OUTPOST$ = {
+							has_modifier = insight_society_5
+						}
+					}
+					$OUTPOST$ = {
+						add_modifier = {
+							modifier = insight_society_5
+							days = -1
+						}
+					}
+				}
+				0 = {
+					modifier = {
+						add = 1
+						OR = {
+							has_country_flag = engineering_insights
+						}
+					}
+					modifier = {
+						factor = 0
+						$OUTPOST$ = {
+							has_modifier = insight_engineering_5
+						}
+					}
+					$OUTPOST$ = {
+						add_modifier = {
+							modifier = insight_engineering_5
+							days = -1
+						}
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			clear_variable = observation_insight_variable
+			clear_variable = observation_prediction_insight_variable
+			remove_country_flag = pending_insight_tech
+			random_situation = {
+				limit = {
+					is_situation_type = situation_observation_insight
+				}
+				destroy_situation = this
+			}
+		}
+	}
+	else = {
+		custom_tooltip = gained_insight_progress
+	}
+	remove_country_flag = physics_insights
+	remove_country_flag = society_insights
+	remove_country_flag = engineering_insights
+}
+
+finish_first_contact_effect = {
+	optimize_memory
+	owner = {
+		set_country_flag = first_contact_completed@root.contact_country
+	}
+	if = {
+		limit = {
+			exists = reverse_first_contact
+		}
+		hidden_effect = {
+			contact_country = {
+				create_message = {
+					type = MESSAGE_FIRST_CONTACT_ABORTED_THEY_COMPLETED
+					localization = MESSAGE_FIRST_CONTACT_ABORTED_THEY_COMPLETED_DESC
+					days = 30
+					target = root.owner.capital_scope
+					variable = {
+						type = name
+						localization = COUNTRY
+						scope = root.reverse_first_contact
+					}
+				}
+			}
+			reverse_first_contact = {
+				if = {
+					limit = { is_current_first_contact_stage = default_end_stage_hostile_no_crew }
+					owner = {
+						country_event = { id = first_contact.1100 days = 30 random = 5 }
+					}
+				}
+				else_if = {
+					limit = { is_current_first_contact_stage = default_end_stage_hostile_with_vivisection }
+					owner = {
+						country_event = { id = first_contact.1105 days = 30 random = 5 }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							is_current_first_contact_stage = default_end_stage_hostile_with_crew
+							is_current_first_contact_stage = default_end_stage_hostile_with_crew_easy
+							is_current_first_contact_stage = default_end_stage_hostile_with_crew_hard
+						}
+					}
+					owner = {
+						country_event = { id = first_contact.1110 days = 30 random = 5 }
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			contact_country = { is_country_type = default }
+			NOT = { has_first_contact_flag = hostile_first_contact_attempted }
+		}
+		owner = {
+			if = {
+				limit = {
+					has_policy_flag = first_contact_proactive
+				}
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier2influencecontactxenophile
+					min = @tier2influencecontactminxenophile
+					max = @tier2influencecontactmaxxenophile
+				}
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier2influencecontact
+					min = @tier2influencecontactmin
+					max = @tier2influencecontactmax
+				}
+			}
+			if = {
+				limit = {
+					has_valid_civic = civic_machine_exploration_protocol
+				}
+				add_monthly_resource_mult = {
+					resource = unity
+					value = @tier1unityreward
+					min = @tier1unitymin
+					max = @tier1unitymax
+				}
+			}
+			if = {
+				limit = {
+					has_valid_civic = civic_hifuu
+				}
+				add_monthly_resource_mult = {
+					resource = unity
+					value = @tier1unityreward
+					min = @tier1unitymin
+					max = @tier1unitymax
+				}
+			}
+		}
+		hidden_effect = {
+			owner = { country_event = { id = tutorial.2006 } }
+			contact_country = {
+				country_event = { id = tutorial.63 }
+			}
+			if = {
+				limit = {
+					contact_country = {
+						has_policy_flag = first_contact_proactive
+					}
+					reverse_first_contact = {
+						NOT = { has_first_contact_flag = hostile_first_contact_attempted }
+					}
+				}
+				owner = { set_country_flag = we_come_in_peace_achievement }
+			}
+		}
+	}
+	else = {
+		owner = {
+			if = {
+				limit = {
+					has_policy_flag = first_contact_proactive
+				}
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier1influencecontactxenophile
+					min = @tier1influencecontactminxenophile
+					max = @tier1influencecontactmaxxenophile
+				}
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier1influencecontact
+					min = @tier1influencecontactmin
+					max = @tier1influencecontactmax
+				}
+			}
+		}
+		switch = {
+			trigger = has_first_contact_flag
+			tiyanki_first_contact = {
+				owner = {
+					set_country_flag = tiyanki_encountered
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_tiyanki_country_type = yes
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_tiyanki_country_type = yes
+								}
+							}
+							custom_tooltip = further_fc_tiyanki_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_tiyanki_country_type = yes
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = tiyanki_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = tiyanki_encountered }
+						}
+					}
+				}
+				hidden_effect = {
+					owner = {
+						if = {
+							limit = {
+								has_country_flag = tiyanki_graveyard_survey
+							}
+							country_event = { id = galactic_features.387 } # Tiyanki Graveyard follow-up
+						}
+					}
+				}
+			}
+			amoeba_first_contact = {
+				owner = {
+					set_country_flag = amoeba_encountered
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_amoeba_country_type = yes
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_amoeba_country_type = yes
+								}
+							}
+							custom_tooltip = further_fc_amoebas_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_amoeba_country_type = yes
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = amoeba_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = amoeba_encountered }
+						}
+					}
+				}
+			}
+			crystals_first_contact = {
+				owner = {
+					set_country_flag = crystals_encountered
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_crystal_country_type = yes
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_crystal_country_type = yes
+								}
+							}
+							custom_tooltip = further_fc_crystals_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_crystal_country_type = yes
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = crystals_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = crystals_encountered }
+						}
+					}
+				}
+			}
+			drones_first_contact = {
+				owner = {
+					set_country_flag = drones_encountered
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_drone_country_type = yes
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_drone_country_type = yes
+								}
+							}
+							custom_tooltip = further_fc_drones_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_drone_country_type = yes
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = drones_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = drones_encountered }
+						}
+					}
+				}
+			}
+			caravaneers_first_contact = {
+				contact_country = {
+					hidden_effect = { country_event = { id = tutorial.63 } }
+				}
+				owner = {
+					hidden_effect = { country_event = { id = tutorial.2006 } }
+					if = {
+						limit = {
+							any_country = {
+								OR = {
+									is_country_type = caravaneer_fleet
+									is_country_type = caravaneer_home
+								}
+								NOT = { is_same_value = root.contact_country }
+								root.owner = {
+									NOT = { has_communications = prev }
+									has_established_contact = prev
+								}
+							}
+						}
+						every_country = {
+							limit = {
+								OR = {
+									is_country_type = caravaneer_fleet
+									is_country_type = caravaneer_home
+								}
+								NOT = { is_same_value = root.contact_country }
+								root.owner = {
+									NOT = { has_communications = prev }
+									has_established_contact = prev
+								}
+							}
+							#							custom_tooltip = further_fc_caravaneers_completed
+							hidden_effect = {
+								if = {
+									limit = {
+										exists = event_target:caravaneer_fleet1_country
+										is_same_value = event_target:caravaneer_fleet1_country
+									}
+									root.owner = { country_event = { id = cara.1020 } }
+								}
+								else_if = {
+									limit = {
+										exists = event_target:caravaneer_fleet2_country
+										is_same_value = event_target:caravaneer_fleet2_country
+									}
+									root.owner = { country_event = { id = cara.2020 } }
+								}
+								else_if = {
+									limit = {
+										exists = event_target:caravaneer_fleet3_country
+										is_same_value = event_target:caravaneer_fleet3_country
+									}
+									root.owner = { country_event = { id = cara.3020 } }
+								}
+							}
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								exists = event_target:caravaneer_fleet1_country
+								root.contact_country = { is_same_value = event_target:caravaneer_fleet1_country }
+							}
+							country_event = { id = cara.1020 }
+							if = {
+								limit = { exists = event_target:caravaneer_fleet2_country }
+								event_target:caravaneer_fleet2_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+							if = {
+								limit = { exists = event_target:caravaneer_fleet3_country }
+								event_target:caravaneer_fleet3_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								exists = event_target:caravaneer_fleet2_country
+								root.contact_country = { is_same_value = event_target:caravaneer_fleet2_country }
+							}
+							country_event = { id = cara.2020 }
+							if = {
+								limit = { exists = event_target:caravaneer_fleet1_country }
+								event_target:caravaneer_fleet1_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+							if = {
+								limit = { exists = event_target:caravaneer_fleet3_country }
+								event_target:caravaneer_fleet3_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								exists = event_target:caravaneer_fleet3_country
+								root.contact_country = { is_same_value = event_target:caravaneer_fleet3_country }
+							}
+							country_event = { id = cara.3020 }
+							if = {
+								limit = { exists = event_target:caravaneer_fleet1_country }
+								event_target:caravaneer_fleet1_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+							if = {
+								limit = { exists = event_target:caravaneer_fleet2_country }
+								event_target:caravaneer_fleet2_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+						}
+						if = {
+							limit = {
+								exists = event_target:caravaneer_home_country
+								NOT = { has_communications = event_target:caravaneer_home_country }
+							}
+							establish_communications_no_message = event_target:caravaneer_home_country
+						}
+					}
+				}
+			}
+			marauders_first_contact = {
+				contact_country = {
+					hidden_effect = { country_event = { id = tutorial.63 } }
+				}
+				owner = {
+					hidden_effect = {
+						country_event = { id = tutorial.2007 }
+						country_event = { id = marauder.15 }
+					}
+				}
+			}
+			enclave_first_contact = {
+				contact_country = {
+					hidden_effect = {
+						country_event = { id = tutorial.63 } #Other party completed contact
+						switch = {
+							trigger = has_country_flag
+							trader_enclave_country = { country_event = { id = leviathans.101 scopes = { from = root.owner } } }
+							artist_enclave_country = { country_event = { id = leviathans.290 scopes = { from = root.owner } } }
+							curator_enclave_country = { country_event = { id = leviathans.501 scopes = { from = root.owner } } }
+							mercenary_enclave_country = { country_event = { id = enclave.204 scopes = { from = root.owner } } }
+							salvager_enclave_country = { country_event = { id = enclave.304 scopes = { from = root.owner } } }
+							shroudwalker_enclave_country = { country_event = { id = enclave.404 scopes = { from = root.owner } } }
+							default = { log_error = "Unexpected enclave type or missing script flag" }
+						}
+					}
+				}
+				owner = {
+					hidden_effect = {
+						country_event = {
+							id = tutorial.2100 # Enclaves (not Mercenaries)
+							scopes = { from = from.contact_country }
+						}
+						country_event = {
+							id = tutorial.2105 # Mercenary enclave
+							scopes = { from = from.contact_country }
+						}
+					}
+				}
+			}
+			pirates_first_contact = {
+				contact_country = {
+					hidden_effect = { country_event = { id = tutorial.63 } }
+				}
+				owner = {
+					hidden_effect = { country_event = { id = tutorial.2007 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_country_type = pirate
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_country_type = pirate
+								}
+							}
+							custom_tooltip = further_fc_pirates_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_country_type = pirate
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+						}
+					}
+				}
+			}
+			void_clouds_first_contact = {
+				owner = {
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					set_country_flag = void_clouds_encountered
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_country_type = cloud
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_country_type = cloud
+								}
+							}
+							custom_tooltip = further_fc_clouds_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_country_type = cloud
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = void_clouds_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = void_clouds_encountered }
+						}
+					}
+				}
+			}
+			nomad_first_contact = {
+				contact_country = {
+					hidden_effect = { country_event = { id = tutorial.63 } }
+				}
+				owner = {
+					hidden_effect = {
+						country_event = { id = tutorial.2007 }
+						country_event = { id = nomad.10 }
+					}
+				}
+			}
+		}
+	}
+
+	finish_first_contact = yes
+
+	hidden_effect = {
+		owner = {
+			add_intel = {
+				who = root.contact_country
+				amount = 10
+			}
+		}
+	}
+
+	owner = {
+		if = {
+			limit = {
+				root.contact_country = {
+					is_country_type = default #it's harder
+				}
+			}
+			increment_first_contact_skill_2 = yes
+		}
+		else = {
+			increment_first_contact_skill_1 = yes
+		}
+	}
+}
+
+destroy_star_system_nuclear = {
+	fire_on_action = { on_action = on_destroy_star_system }
+	set_star_flag = star_cracked
+	set_star_class = sc_black_hole
+	every_system_ambient_object = {
+		limit = {
+			# Preserve Unbidden crisis effects
+			NOR = {
+				has_ambient_object_flag = extradimensional_system_effect
+				has_ambient_object_flag = extradimensional_system_effect_2
+			}
+		}
+		destroy_ambient_object = this
+	}
+	every_system_planet = {
+		limit = { is_star = yes }
+		create_ambient_object = {
+			type = "star_explosion"
+			play_animation_once = yes
+			location = this
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = prev
+				distance = 0
+				angle = random
+			}
+		}
+		change_pc = pc_black_hole
+	}
+	# Handle Contingency Machine Worlds
+	every_system_planet = {
+		limit = {
+			is_planet_class = pc_ai
+			NOT = { has_planet_flag = machine_lair }
+		}
+		destroy_machine_world = yes
+	}
+	random_system_planet = {
+		limit = {
+			is_planet_class = pc_ai
+			has_planet_flag = machine_lair
+		}
+		from.owner = { save_event_target_as = final_machine_world_destroyer }
+		stop_crisis_sound = yes
+		planet_event = { id = crisis.2046 }
+	}
+	every_system_planet = {
+		limit = {
+			is_star = no
+			is_asteroid = no
+			NOR = {
+				is_planet_class = pc_shattered
+				is_planet_class = pc_shattered_2
+				is_planet_class = pc_shielded
+				is_planet_class = pc_ringworld_habitable_damaged
+				is_planet_class = pc_ringworld_tech_damaged
+				is_planet_class = pc_ringworld_seam_damaged
+			}
+		}
+		if = {
+			limit = { is_planet_class = pc_habitat } # uncolonized
+			spawn_habitat_cracker_effect = yes
+			remove_planet = yes
+		}
+		if = {
+			limit = { is_colony = yes }
+			if = {
+				limit = {
+					exists = orbital_defence
+				}
+				destroy_fleet = orbital_defence
+			}
+			remove_all_buildings = yes
+			destroy_colony = yes
+			if = {
+				limit = { is_planet_class = pc_habitat }
+				spawn_habitat_cracker_effect = yes
+				remove_planet = yes
+			}
+			else_if = {
+				limit = { is_ringworld = yes }
+				spawn_ringworld_cracker_effect = yes
+				change_pc = pc_ringworld_habitable_damaged
+			}
+			else = {
+				change_pc = pc_shattered
+			}
+		}
+		else_if = {
+			limit = { is_ringworld = yes }
+			spawn_ringworld_cracker_effect = yes
+			change_pc = pc_ringworld_habitable_damaged
+		}
+		else_if = {
+			limit = { is_planet_class = pc_ringworld_tech }
+			spawn_ringworld_cracker_effect = yes
+			change_pc = pc_ringworld_tech_damaged
+		}
+		else_if = {
+			limit = { is_planet_class = pc_ringworld_seam }
+			spawn_ringworld_cracker_effect = yes
+			change_pc = pc_ringworld_seam_damaged
+		}
+		else = {
+			change_pc = pc_shattered
+		}
+	}
+	every_system_planet = {
+		limit = {
+			exists = orbital_station
+		}
+		orbital_station = { dismantle = yes }
+	}
+	every_system_planet = {
+		clear_deposits = yes
+		clear_planet_modifiers = yes
+		prevent_anomaly = yes
+	}
+	every_system_planet = {
+		limit = { is_asteroid = yes }
+		clear_deposits = yes
+	}
+	every_fleet_in_system = {
+		limit = {
+			NOR = {
+				is_same_value = from
+				# except Extradimensionals
+				AND = {
+					exists = owner
+					owner = {
+						OR = {
+							is_country_type = portal_holder
+							is_country_type = extradimensional
+							is_country_type = extradimensional_2
+							is_country_type = extradimensional_3
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_mobile = yes
+			}
+			set_mia = mia_return_home
+		}
+		else = {
+			destroy_fleet = this
+		}
+	}
+	every_system_megastructure = {
+		set_ruined_megastructure = yes
+	}
+	star = {
+		create_ambient_object = {
+			type = "destroyed_system"
+			location = this
+		}
+		last_created_ambient_object = {
+			set_ambient_object_flag = destroyed_system_effect
+			set_location = {
+				target = prev
+				distance = 0
+				angle = random
+			}
+		}
+	}
+}
+
+complete_sanae_mission = {
+	if = {
+		limit = { has_event_chain = "touhou_sanae_mission_chain" }
+		add_event_chain_counter = {
+			event_chain = "touhou_sanae_mission_chain"
+			counter = "touhou_sanae_mission_counter"
+			amount = 1
+		}
+	}
+}
+
+set_start_char_id = {
+	if = {
+		limit = {
+			any_owned_leader = {
+				has_touhou_supernatural_trait = yes
+			}
+		}
+		ordered_owned_leader = {
+			limit = {
+				has_touhou_supernatural_trait = yes
+			}
+			order_by = value:touhou_leader_id
+			position = 0
+			inverse = yes
+			root = {
+				set_variable = {
+					which = seleted_char_id
+					value = prev.value:touhou_leader_id
+				}
+			}
+			if = {
+				limit = {
+					check_variable_arithmetic = {
+						which = value:leader_num_spell_cards
+						value > 0
+					}
+				}
+				root = {
+					set_variable = {
+						which = seleted_card_id
+						value = 1
+					}
+					set_variable = {
+						which = seleted_card_nums
+						value = prev.value:leader_num_spell_cards
+					}
+				}
+			}
+			else = {
+				root = {
+					set_variable = {
+						which = seleted_card_id
+						value = 0
+					}
+					set_variable = {
+						which = seleted_card_nums
+						value = 0
+					}
+				}
+			}
+		}
+	}
+	else = {
+		set_variable = {
+			which = seleted_char_id
+			value = 0
+		}
+		root = {
+			set_variable = {
+				which = seleted_card_id
+				value = 0
+			}
+			set_variable = {
+				which = seleted_card_nums
+				value = 0
+			}
+		}
+	}
+}
+
+add_char_id = {
+	from = {
+		if = {
+			limit = {
+				any_owned_leader = {
+					has_touhou_supernatural_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_after_selected
+						value > 0
+					}
+				}
+			}
+			ordered_owned_leader = {
+				limit = {
+					has_touhou_supernatural_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_after_selected
+						value > 0
+					}
+				}
+				order_by = value:leader_id_after_selected
+				position = 0
+				inverse = yes
+				from = {
+					set_variable = {
+						which = seleted_char_id
+						value = prev.value:touhou_leader_id
+					}
+				}
+				if = {
+					limit = {
+						check_variable_arithmetic = {
+							which = value:leader_num_spell_cards
+							value > 0
+						}
+					}
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = prev.value:leader_num_spell_cards
+						}
+					}
+				}
+				else = {
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 0
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = 0
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_owned_leader = {
+					has_touhou_supernatural_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_before_selected
+						value > 0
+					}
+				}
+			}
+			ordered_owned_leader = {
+				limit = {
+					has_touhou_supernatural_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_before_selected
+						value > 0
+					}
+				}
+				order_by = value:leader_id_before_selected
+				position = 0
+				from = {
+					set_variable = {
+						which = seleted_char_id
+						value = prev.value:touhou_leader_id
+					}
+				}
+				if = {
+					limit = {
+						check_variable_arithmetic = {
+							which = value:leader_num_spell_cards
+							value > 0
+						}
+					}
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = prev.value:leader_num_spell_cards
+						}
+					}
+				}
+				else = {
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 0
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = 0
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+subtract_char_id = {
+	from = {
+		if = {
+			limit = {
+				any_owned_leader = {
+					has_touhou_supernatural_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_before_selected
+						value > 0
+					}
+				}
+			}
+			ordered_owned_leader = {
+				limit = {
+					has_touhou_supernatural_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_before_selected
+						value > 0
+					}
+				}
+				order_by = value:leader_id_before_selected
+				position = 0
+				inverse = yes
+				from = {
+					set_variable = {
+						which = seleted_char_id
+						value = prev.value:touhou_leader_id
+					}
+				}
+				if = {
+					limit = {
+						check_variable_arithmetic = {
+							which = value:leader_num_spell_cards
+							value > 0
+						}
+					}
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = prev.value:leader_num_spell_cards
+						}
+					}
+				}
+				else = {
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 0
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = 0
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_owned_leader = {
+					has_touhou_supernatural_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_after_selected
+						value > 0
+					}
+				}
+			}
+			ordered_owned_leader = {
+				limit = {
+					has_touhou_supernatural_trait = yes
+					check_variable_arithmetic = {
+						which = value:leader_id_after_selected
+						value > 0
+					}
+				}
+				order_by = value:leader_id_after_selected
+				position = 0
+				from = {
+					set_variable = {
+						which = seleted_char_id
+						value = prev.value:touhou_leader_id
+					}
+				}
+				if = {
+					limit = {
+						check_variable_arithmetic = {
+							which = value:leader_num_spell_cards
+							value > 0
+						}
+					}
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 1
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = prev.value:leader_num_spell_cards
+						}
+					}
+				}
+				else = {
+					from = {
+						set_variable = {
+							which = seleted_card_id
+							value = 0
+						}
+						set_variable = {
+							which = seleted_card_nums
+							value = 0
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+add_card_id = {
+	from = {
+		if = {
+			limit = {
+				check_variable = {
+					which = seleted_card_id
+					value < seleted_card_nums
+				}
+			}
+			change_variable = {
+				which = seleted_card_id
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = seleted_card_nums
+					value > 0
+				}
+			}
+			set_variable = {
+				which = seleted_card_id
+				value = 1
+			}
+		}
+		else = {
+			set_variable = {
+				which = seleted_card_id
+				value = 0
+			}
+		}
+		set_variable = {
+			which = ex_charge
+			value = 0
+		}
+	}
+}
+
+subtract_card_id = {
+	from = {
+		if = {
+			limit = {
+				check_variable = {
+					which = seleted_card_id
+					value > 1
+				}
+			}
+			subtract_variable = {
+				which = seleted_card_id
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = seleted_card_nums
+					value > 0
+				}
+			}
+			set_variable = {
+				which = seleted_card_id
+				value = seleted_card_nums
+			}
+		}
+		else = {
+			set_variable = {
+				which = seleted_card_id
+				value = 0
+			}
+		}
+		set_variable = {
+			which = ex_charge
+			value = 0
+		}
+	}
+}
+
+continue_marisa_alice_regeneration = {
+	if = {
+		limit = { has_event_chain = "touhou_marisa_alice_regeneration_chain" }
+		add_event_chain_counter = {
+			event_chain = "touhou_marisa_alice_regeneration_chain"
+			counter = "touhou_marisa_alice_regeneration_counter"
+			amount = 1
+		}
+	}
+}
+
+subtract_jinx_or_bomb = {
+	if = {
+		limit = {
+			check_variable = {
+				which = jinx_stockpile
+				value > 1
+			}
+		}
+		subtract_variable = {
+			which = jinx_stockpile
+			value = 1
+		}
+	}
+	else = {
+		add_resource = {
+			thl_bomb = -1
+		}
+	}
+}
+
+touhou_moriya_crusade_impose_effect = {
+	if = {
+		limit = {
+			is_ai = yes
+			OR = {
+				has_origin = origin_legendary_leader
+				has_origin = origin_legendary_leader_imperial
+				has_origin = origin_legendary_leader_dictatorial
+			}
+		}
+		random_owned_leader = {
+			limit = { is_ruler = yes }
+			kill_leader = { show_notification = yes }
+		}
+		set_origin = origin_legendary_leader_death
+	}
+	if = {
+		limit = {
+			root = {
+				is_materialist = yes
+			}
+		}
+		shift_ethic = ethic_fanatic_materialist
+	}
+	if = {
+		limit = {
+			root = {
+				is_spiritualist = yes
+			}
+		}
+		shift_ethic = ethic_fanatic_spiritualist
+	}
+	if = {
+		limit = {
+			has_civic = civic_galactic_sovereign
+		}
+		force_remove_civic = civic_galactic_sovereign
+	}
+	if = {
+		limit = {
+			has_civic = civic_galactic_sovereign_megacorp
+		}
+		force_remove_civic = civic_galactic_sovereign_megacorp
+	}
+	if = {
+		limit = {
+			has_civic = civic_psionic_sovereign
+		}
+		force_remove_civic = civic_psionic_sovereign
+	}
+	if = {
+		limit = {
+			root = { has_authority = auth_corporate }
+			has_authority = auth_corporate
+		}
+		set_merchant_government_effect = yes
+	}
+	if = {
+		limit = {
+			root = { has_civic = civic_shared_burden }
+		}
+		force_remove_civic = 1
+		force_add_civic = civic_shared_burden
+	}
+	if = {
+		limit = {
+			root = { has_civic = civic_crusader_spirit }
+		}
+		force_remove_civic = 1
+		force_add_civic = civic_crusader_spirit
+	}
+	add_modifier = { modifier = recently_liberated days = 7200 }
+	add_opinion_modifier = { modifier = opinion_liberated_us who = root }
+	root = {
+		add_opinion_modifier = { modifier = opinion_we_liberated who = from }
+	}
+}
+
+create_shrine_point_of_interest = {
+	if = {
+		limit = {
+			NOT = {
+				any_owned_leader = {
+					has_trait = thl_leader_trait_fall
+				}
+			}
+		}
+		create_point_of_interest = {
+			id = leaf_shirne
+			name = leaf_shirne
+			desc = leaf_shirne_desc
+			event_chain = ruined_shrine
+			location = capital_scope
+			category = leaf_shirne_cat
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				any_owned_leader = {
+					has_trait = leader_trait_harvest
+				}
+			}
+		}
+		create_point_of_interest = {
+			id = harvest_shirne
+			name = harvest_shirne
+			desc = harvest_shirne_desc
+			event_chain = ruined_shrine
+			location = capital_scope
+			category = harvest_shirne_cat
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				any_owned_leader = {
+					has_trait = thl_leader_trait_jinx
+				}
+			}
+		}
+		create_point_of_interest = {
+			id = jinx_shirne
+			name = jinx_shirne
+			desc = jinx_shirne_desc
+			event_chain = ruined_shrine
+			location = capital_scope
+			category = jinx_shirne_cat
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				any_owned_leader = {
+					has_trait = thl_leader_trait_fly
+				}
+			}
+		}
+		create_point_of_interest = {
+			id = capital_shirne
+			name = capital_shirne
+			desc = capital_shirne_desc
+			event_chain = ruined_shrine
+			location = capital_scope
+			category = capital_shirne_cat
+		}
+	}
+}
+
+moriya_storm_add = {
+	set_star_flag = moriya_system
+	set_global_flag = cosmic_storm_has_occurred
+
+	inline_script = {
+		script = cosmic_storms/StormVisuals
+		STORM_NAME = "shroud_storm"
+	}
+
+	if = {
+		limit = {
+			has_owner = yes
+		}
+		owner = {
+			set_country_flag = affected_by_shroud_storm
+		}
+	}
+	moriya_storm_events = yes
+}
+
+moriya_storm_remove = {
+	remove_storm_visuals_effect = yes
+	remove_star_flag = storm_system
+
+	if = {
+		limit = {
+			has_owner = yes
+		}
+		owner = {
+			remove_country_flag = affected_by_shroud_storm
+		}
+	}
+
+	moriya_storm_apply_aftermath_modifier = yes
+	moriya_storm_apply_deposits = yes
+}
+
+moriya_storm_apply_aftermath_modifier = {
+	every_system_planet = {
+		limit = {
+			OR = {
+				is_colonizable = yes
+				is_colony = yes
+			}
+		}
+
+		storm_apply_aftermath_modifier = {
+
+			severity = {
+				modifier = "shroud_storm_aftermath_modifier_severity_1"
+				days = @Severity1Duration
+				chance = {
+					base = @Severity1BaseChance
+					modifier = {
+						factor = 0
+						OR = {
+							has_modifier = "shroud_storm_aftermath_modifier_severity_2"
+							has_modifier = "shroud_storm_aftermath_modifier_severity_3"
+						}
+					}
+					modifier = {
+						factor =  $FactorSev1|1$
+					}
+				}
+
+				effect = {
+					set_timed_planet_flag = {
+						flag = AFFECTED_BY_MORIYA_AFTERMATH
+						days = @Severity1Duration
+					}
+				}
+			}
+
+			severity = {
+				modifier = "shroud_storm_aftermath_modifier_severity_2"
+				days = @Severity2Duration
+				chance = {
+					base = @Severity2BaseChance
+					modifier = {
+						factor = 0
+						has_modifier = "shroud_storm_aftermath_modifier_severity_3"
+					}
+					modifier = {
+						factor =  $FactorSev2|1$
+					}
+				}
+
+				effect = {
+					set_timed_planet_flag = {
+						flag = AFFECTED_BY_MORIYA_AFTERMATH
+						days = @Severity2Duration
+					}
+				}
+			}
+
+			severity = {
+				modifier = "shroud_storm_aftermath_modifier_severity_3"
+				days = @Severity3Duration
+				chance = {
+					base = @Severity3BaseChance
+					modifier = {
+						factor =  $FactorSev3|1$
+					}
+				}
+
+				effect = {
+					set_timed_planet_flag = {
+						flag = AFFECTED_BY_MORIYA_AFTERMATH
+						days = @Severity3Duration
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = { is_colony = yes }
+			owner = {
+				create_message = {
+					type = SHROUD_STORM_AFTERMATH
+					localization = MESSAGE_STORM_AFTERMATH_DESC
+					days = @toast_important_message_days
+					target = prev
+					variable = {
+						type = name
+						localization = PLANET
+						scope = prev
+					}
+					custom_toast_content_text = shroud_storm_aftermath_custom_desc
+				}
+			}
+		}
+	}
+}
+
+moriya_storm_events = {
+	random_system_planet = {
+		limit = {
+			NOT = { has_planet_flag = shroud_storm_changed }
+			is_artificial = no
+			is_astral_scar = no
+			is_asteroid = no
+			NOT = { is_planet_class = pc_molten }
+			NOT = { has_modifier = terraforming_candidate }
+		}
+		random_list = {
+			80 = {}
+			20 = {
+				planet_event = { id = cstorms.8500 }
+			}
+		}
+	}
+}
+
+moriya_storm_apply_deposits = {
+	every_system_planet = {
+		limit = {
+			OR = {
+				is_colonizable = yes
+				is_colony = yes
+			}
+			is_artificial = no
+			NOR = {
+				has_deposit = d_shroud_storm_1_society
+				has_deposit = d_shroud_storm_2_zro
+				has_deposit = d_shroud_storm_3_happy
+			}
+		}
+
+		random_list = {
+			80 = {}
+			20 = {
+				random_list = {
+					30 = { add_deposit = d_shroud_storm_1_society }
+					30 = { add_deposit = d_shroud_storm_2_zro }
+					30 = { add_deposit = d_shroud_storm_3_happy }
+				}
+				if = {
+					limit = {
+						has_owner = yes
+					}
+					planet_event = { id = cstorms.8000 }
+				}
+			}
+		}
+	}
+}
+
+update_sanae_phase_trait = {
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_adm.1
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.1
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_mil.1
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.1
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_tech.1
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.1
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_faith.1
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.1
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.1
+						}
+					}
+				}
+			}
+		}
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_miracle
+			}
+			remove_trait = thl_leader_trait_sanae_phase0
+			add_trait = thl_leader_trait_sanae_phase1
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_sanae_phase1
+			}
+			OR = {
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_adm.2
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.2
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_mil.2
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.2
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_tech.2
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.2
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_faith.2
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.2
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.2
+						}
+					}
+				}
+			}
+		}
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_miracle
+			}
+			add_trait = thl_leader_trait_sanae_phase2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_sanae_phase2
+			}
+			OR = {
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_adm.3
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.3
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_mil.3
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.3
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_tech.3
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.3
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_faith.3
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.3
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.3
+						}
+					}
+				}
+			}
+		}
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_miracle
+			}
+			add_trait = thl_leader_trait_sanae_phase3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_sanae_phase3
+			}
+			OR = {
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_adm.4
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.4
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_mil.4
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.4
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_tech.4
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_faith.4
+						}
+					}
+				}
+				AND = {
+					has_point_of_interest = {
+						poi = touhou_sanae_mission_chain_faith.4
+					}
+					NOR = {
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_mil.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_tech.4
+						}
+						has_point_of_interest = {
+							poi = touhou_sanae_mission_chain_adm.4
+						}
+					}
+				}
+			}
+		}
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_miracle
+			}
+			add_trait = thl_leader_trait_sanae_phase4
+		}
+	}
+}

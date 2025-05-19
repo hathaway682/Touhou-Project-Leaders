@@ -1,0 +1,235 @@
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "ATW_bullet_1"
+	color = { 0.3	0.3		0.3		0.8 }
+	hit_entity = "gauss_cannon_large_hit_entity"
+	shield_hit_entity = "gauss_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = "fantasia_bullet_4A_muzzle_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "ATW_bullet_1_entity"
+	speed = 180.0			#preferred speed of the projectile
+	max_duration = 40.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "ATW_bullet_2"
+	color = { 1.0	0.5		0.5		0.8 }
+	hit_entity = "gauss_cannon_large_hit_entity"
+	shield_hit_entity = "gauss_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = "fantasia_bullet_3A_muzzle_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "ATW_bullet_2_entity"
+	speed = 200		#preferred speed of the projectile
+	max_duration = 4.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "ATW_bullet_3"
+	color = { 0.3	1.0		0.3		0.8 }
+	hit_entity = "gauss_cannon_large_hit_entity"
+	shield_hit_entity = "gauss_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = "fantasia_bullet_3A_muzzle_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "ATW_bullet_3_entity"
+	speed = 200		#preferred speed of the projectile
+	max_duration = 4.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "ATW_bullet_4"
+	color = { 1.0	0.5		0.5		0.8 }
+	hit_entity = "gauss_cannon_large_hit_entity"
+	shield_hit_entity = "gauss_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = "fantasia_bullet_5A_muzzle_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "ATW_bullet_4_entity"
+	speed = 250		#preferred speed of the projectile
+	max_duration = 8.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "ATW_bullet_5"
+	color = { 0.5	0.5		1.0		0.8 }
+	hit_entity = "gauss_cannon_large_hit_entity"
+	shield_hit_entity = "gauss_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = "fantasia_bullet_5A_muzzle_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "ATW_bullet_5_entity"
+	speed = 200		#preferred speed of the projectile
+	max_duration = 4.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "ATW_bullet_6"
+	color = { 1.0	0.5		0.5		0.8 }
+	hit_entity = "gauss_cannon_large_hit_entity"
+	shield_hit_entity = "gauss_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = "fantasia_bullet_5A_muzzle_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "ATW_bullet_6_entity"
+	speed = 200		#preferred speed of the projectile
+	max_duration = 4.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "ATW_bullet_7"
+	color = { 1.0	0.5		0.5		0.8 }
+	hit_entity = "gauss_cannon_large_hit_entity"
+	shield_hit_entity = "gauss_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = "fantasia_bullet_5A_muzzle_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "ATW_bullet_7_entity"
+	speed = 200		#preferred speed of the projectile
+	max_duration = 4.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "ATW_bullet_8"
+	color = { 0.1	1.0		0.1		0.2 }
+	hit_entity = ""
+	shield_hit_entity = ""
+	muzzle_flash_entity = ""
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "ATW_bullet_8_entity"
+	speed = 300		#preferred speed of the projectile
+	max_duration = 16.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "ATW_bullet_9"
+	color = { 0.1	0.1		1.0		0.6 }
+	hit_entity = "gauss_cannon_large_hit_entity"
+	shield_hit_entity = "gauss_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = "ATW_bullet_9_muzzle_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "ATW_bullet_9_entity"
+	speed = 250	#preferred speed of the projectile
+	max_duration = 4		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "ATW_bullet_10"
+	color = { 0.1	0.1		1.0		0.7 }
+	hit_entity = "gauss_cannon_large_hit_entity"
+	shield_hit_entity = "gauss_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = "fantasia_bullet_5A_muzzle_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "ATW_bullet_10_entity"
+	speed = 200	#preferred speed of the projectile
+	max_duration = 16		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "ATW_bullet_11"
+	color = { 1.0	0.1		0.1		0.7 }
+	hit_entity = "gauss_cannon_large_hit_entity"
+	shield_hit_entity = "gauss_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = "fantasia_bullet_5A_muzzle_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "ATW_bullet_11_entity"
+	speed = 200	#preferred speed of the projectile
+	max_duration = 16		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "ATW_bullet_12"
+	color = { 0.5	0.5		1.0		0.7 }
+	hit_entity = "gauss_cannon_large_hit_entity"
+	shield_hit_entity = "gauss_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = "fantasia_bullet_5A_muzzle_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "ATW_bullet_12_entity"
+	speed = 200	#preferred speed of the projectile
+	max_duration = 16		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+
+
+

@@ -1,0 +1,370 @@
+﻿l_simp_chinese:
+ #################################################
+ #符卡
+ #################################################
+ edict_open_spell_cards_gui: "开启符卡UI"
+ edict_open_spell_cards_gui_desc: "这将允许你使用东方领袖们的主动能力。"
+
+ spell_card_header:0 "符卡"
+ touhou_mana_value:0 "魔力：§B[From.interface_mana]/[From.interface_mana_need]§!"
+ touhou_cards_value:0 "可用BOMB：§H[From.interface_bomb]§!"
+ touhou_cards_value_hina:0 "可用BOMB：§H[From.interface_bomb]§!+§G[From.jinx_stockpile]§!"
+ touhou_selected_char:0 "[GetSelectedLeader]"
+
+ thl_mana: "魔力"
+ thl_mana_desc: "§E§H$thl_mana$§!（£thl_mana£）代表着我们的东方project领袖可以操控的精神力量，当我们的国家积攒了足够的魔力，便会自动转化为一个用于使用§H符卡§!的BOMB，转化所需魔力随着持有BOMB的数量上升，魔力由东方project领袖产出，领袖等级越高产出也就越高。"
+ mod_country_resource_max_thl_mana_add: "魔力上限"
+ thl_bomb: "BOMB"
+ thl_bomb_desc: "§E§H$thl_bomb$§!（£thl_bomb£）是使用§H符卡§!所必须的资源，由积攒的魔力自动转化而来，转化所需魔力随着持有BOMB的数量上升。"
+ mod_country_resource_max_thl_bomb_add: "BOMB上限"
+ mod_leader_commanders_thl_mana_produces_add: "每月魔力"
+ mod_leader_officials_thl_mana_produces_add: "每月魔力"
+ mod_leader_scientists_thl_mana_produces_add: "每月魔力"
+
+ touhou_error_no_spell:0 "无可用符卡"
+ touhou_error_wrong_target:0 "无效目标"
+ touhou_error_unmet_needs:0 "未满足要求"
+ touhou_error_no_resource:0 "缺少BOMB资源"
+ touhou_can_confirm:0 "使用符卡"
+
+ touhou_target_text:0 "选择：[Root.GetName]"
+
+ touhou_trace_select_desc:0 "§H追踪选择§!\n\n§E选中任意东方领袖管理的对象，再按下此按钮可选择该领袖以使用她的符卡。§!"
+ touhou_trace_select_fail_desc:0 "$TRIGGER_FAIL$请先选择一个由你拥有的东方领袖管理的对象！"
+ touhou_ex_charge_desc:0 "§H符卡增幅§!\n\n§E使用该按钮施放所选符卡的高级版本，一般和低级版本效果类似，但有更高的COST和更大的威力。§!"
+ touhou_ex_charge_fail_desc:0 "$TRIGGER_FAIL$该符卡没有高级版！"
+ touhou_need_technology_desc:0 "$TRIGGER_FAIL$需要§H魔力场发射阵列§!技术！"
+
+ concept_ex_charge:0 "符卡增幅"
+ concept_ex_charge_desc:0 "允许施放符卡的高级版本，一般和低级版本效果类似，但有更高的COST和更大的威力。"
+ ex_charge_tooltip:0 "§H解锁特性：§!['concept_ex_charge']"
+
+ tech_mana_field_emission_array: "魔力场发射阵列"
+ tech_mana_field_emission_array_desc: "在过去，我们依赖拥有特殊能力的领袖作为施放符卡时魔力的唯一来源。然而，现在的技术进步使我们能够通过外部设备为符卡提供魔力，这使我们的领袖能够使用威力远超以往的符卡。"
+
+ touhou_selected_char_0:0 "未选择角色"
+
+ touhou_selected_char_1:0 "博丽灵梦" #符卡已完成
+ touhou_selected_char_2:0 "雾雨魔理沙"
+ #红魔乡
+ touhou_selected_char_3:0 "露米娅" #未制作
+ touhou_selected_char_4:0 "琪露诺"
+ touhou_selected_char_5:0 "红美铃"
+ touhou_selected_char_6:0 "帕秋莉·诺蕾姬"
+ touhou_selected_char_7:0 "十六夜咲夜"
+ touhou_selected_char_8:0 "蕾米莉亚·斯卡蕾特"
+ touhou_selected_char_9:0 "芙兰朵露·斯卡蕾特" #搁置中
+ #妖妖梦
+ touhou_selected_char_10:0 "蕾蒂·霍瓦特洛克" #未制作
+ touhou_selected_char_11:0 "橙" #未制作
+ touhou_selected_char_12:0 "爱丽丝·玛格特洛依德"
+ touhou_selected_char_13:0 "莉莉霍瓦特" #未制作
+ touhou_selected_char_14:0 "露娜萨·普莉兹姆利巴" #未制作
+ touhou_selected_char_15:0 "梅露兰·普莉兹姆利巴" #未制作
+ touhou_selected_char_16:0 "莉莉卡·普莉兹姆利巴" #未制作
+ touhou_selected_char_17:0 "魂魄妖梦"
+ touhou_selected_char_18:0 "西行寺幽幽子"
+ touhou_selected_char_19:0 "八云蓝" #未制作
+ touhou_selected_char_20:0 "八云紫" #未制作
+ #萃梦想
+ touhou_selected_char_21:0 "伊吹萃香"
+ #永夜抄
+ touhou_selected_char_22:0 "莉格露·奈特巴格" #未制作
+ touhou_selected_char_23:0 "米斯蒂娅·萝蕾拉" #制作中
+ touhou_selected_char_24:0 "上白泽慧音" #未制作
+ touhou_selected_char_25:0 "因幡帝" #未制作
+ touhou_selected_char_26:0 "铃仙·优昙华院·因幡"
+ touhou_selected_char_27:0 "八意永琳" #未制作
+ touhou_selected_char_28:0 "蓬莱山辉夜" #计划中
+ touhou_selected_char_29:0 "藤原妹红" #计划中
+ #文花帖
+ touhou_selected_char_30:0 "射命丸文"
+ #花映冢
+ touhou_selected_char_31:0 "梅蒂欣·梅兰可莉" #未制作
+ touhou_selected_char_32:0 "风见幽香"
+ touhou_selected_char_33:0 "小野塚小町"
+ touhou_selected_char_34:0 "四季映姬·夜摩仙那度"
+ #风神录
+ touhou_selected_char_35:0 "秋静叶" #符卡已完成
+ touhou_selected_char_36:0 "秋穰子" #符卡已完成
+ touhou_selected_char_37:0 "键山雏" #符卡已完成
+ touhou_selected_char_38:0 "河城荷取"
+ touhou_selected_char_39:0 "犬走椛" #搁置中
+ touhou_selected_char_40:0 "东风谷早苗"
+ touhou_selected_char_41:0 "八坂神奈子" #计划中
+ touhou_selected_char_42:0 "洩矢诹访子" #计划中
+ #绯想天
+ touhou_selected_char_43:0 "永江衣玖" #未制作
+ touhou_selected_char_44:0 "比那名居天子"
+ #地灵殿
+ touhou_selected_char_45:0 "琪斯美" #未制作
+ touhou_selected_char_46:0 "黑谷山女" #未制作
+ touhou_selected_char_47:0 "水桥帕露西" #未制作
+ touhou_selected_char_48:0 "星熊勇仪" #未制作
+ touhou_selected_char_49:0 "古明地觉"
+ touhou_selected_char_50:0 "火焰猫燐"
+ touhou_selected_char_51:0 "灵乌路空"
+ touhou_selected_char_52:0 "古明地恋" #符卡已完成
+
+ spell_card_none_group:0 "未选择符卡"
+ spell_card_none:0 "未选择符卡"
+ spell_card_none_desc:0 ""
+
+ spell_card: "术式"
+ spell_card_plural: "术式"
+
+ bullet: "弹幕"
+ bullet_plural: "弹幕"
+
+ touhou_selected_char_1_desc:0 "可用符卡：\n§Y灵符「梦想封印」（1）§! §H神灵「梦想封印」（2）§!\n§Y梦符「封魔阵」（2）§!\n§Y梦符「二重结界」（1）§!\n§Y神技「八方龙杀阵」（4）§!\n§Y梦符「梦想亚空穴」（1）§!\n§Y「梦想天生」（5）§!"
+
+ spell_card_reimu_group:0 "[GetSelectedCardReimu]"
+ spell_card_reimu_tooltip:0 "[GetSelectedCardReimuDesc]"
+ spell_card_reimu_requirement:0 "[GetSelectedCardRequirementReimu]"
+ spell_card_reimu_1:0 "灵符「梦想封印」"
+ spell_card_reimu_1_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Reimu$§!处在同一星系的§Y敌对舰队§!。\n\n对舰队内所有敌方战舰造成随机§Y200-1200§!点伤害，并['concept_huuin']该舰队§Y30§!天。"
+ spell_card_reimu_1_ex:0 "神灵「梦想封印」"
+ spell_card_reimu_1_ex_desc:0 "COST：§Y2§!\n目标：任意与§H$NAME_Reimu$§!处在同一星系的§Y敌对舰队§!。\n\n对舰队内所有敌方战舰造成随机§Y4000-8000§!点伤害，并['concept_huuin']该舰队§Y30§!天"
+ spell_card_reimu_2:0 "梦符「封魔阵」"
+ spell_card_reimu_2_desc:0 "COST：§Y2§!\n目标：任意与§H$NAME_Reimu$§!处在同一星系或者在我方境内的§Y敌对舰队§!\n\n['concept_huuin']指定的敌方舰队§Y180§!天。"
+ spell_card_reimu_3:0 "梦符「二重结界」"
+ spell_card_reimu_3_desc:0 "COST：§Y1§!\n目标：任意未被占领，不存在§Y二重结界§!行星修正的己方§Y殖民地§!。\n\n使用结界术保护一颗星球，在§Y2§!年内降低§G75%§!轨道轰炸对其的伤害。"
+ spell_card_reimu_4:0 "神技「八方龙杀阵」"
+ spell_card_reimu_4_desc:0 "COST：§Y4§!\n条件：§H$NAME_Reimu$§!正在指挥舰队或运输船队，且处在我方星系内。\n\n在该星系布设阵法，§Y30§!天布设时间内§H$NAME_Reimu$§!的舰队将被锁定，布设完成后，该星系成为陷阱，所有进入该星系的敌人自动被['concept_huuin']§Y180§!天，陷阱效果持续§Y5§!年。"
+ spell_card_reimu_5:0 "梦符「梦想亚空穴」"
+ spell_card_reimu_5_desc:0 "COST：§Y1§!\n目标：§H$NAME_Reimu$§!舰队所在§Y星系§!，或是我方§Y首都星系§!内的§Y非恒星天体§!，星系内需要没有其他§Y亚空穴§!。\n\n暂时打开空间的裂缝，在目标天体上空产生一个仅供我方穿行的类似§Y星门§!的通道，其将会存在§Y360§!天。"
+ spell_card_reimu_6:0 "「梦想天生」"
+ spell_card_reimu_6_desc:0 "COST：§Y5§!\n条件：§H$NAME_Reimu$§!正在指挥舰队或运输船队。\n\n使用§H$NAME_Reimu$§!的能力暂时让她率领的舰队在§Y60§!天内进入彻底的§Y无敌状态§!。"
+
+ reimu_gateway: "亚空穴"
+ reimu_gateway_DESC: "使用§H博丽灵梦§!的能力在星系间打开的临时通道。"
+
+ REIMU_GATEWAY_GALACTIC: "亚空穴"
+ REIMU_GATEWAY_GALACTIC_DESC: "该恒星系包含一个§Y亚空穴§!"
+ REIMU_GATEWAY_COUNTRY_CANNOT_USE: "$TRIGGER_FAIL$需要§R博丽灵梦§!的能力，或是§M更强的隙间操控能力§!来使用§Y亚空穴§!。"
+
+ concept_huuin:0 "封印"
+ concept_huuin_desc:0 "被§H$NAME_Reimu$§!的能力所§Y封印§!的舰队会将§Y亚光速航速§!和§Y跃迁引擎范围§!降低至最低，大幅提高§Y超空间跳跃冷却§!和§Y跃迁引擎冷却§!，使得该舰队丧失机动能力。"
+
+ touhou_selected_char_2_desc:0 "可用符卡：\n§Y恋符「Master Spark」（1）§! §H魔炮「Final Spark」（4）§!\n§Y魔符「Stardust Reverie」（2）§! §H黑魔「Event Horizon」（3）§!\n§Y仪符「Orrery's Sun」（2）§! §H天仪「Orrery's Solar System」（3）§!\n§Y魔空「Asteroid Belt」（4）§!\n§Y魔废「Deep Ecological Bomb」（4）§!\n§Y彗星「Blazing Star」（5）§!"
+
+ spell_card_marisa_group:0 "[GetSelectedCardMarisa]"
+ spell_card_marisa_tooltip:0 "[GetSelectedCardMarisaDesc]"
+ spell_card_marisa_requirement:0 "[GetSelectedCardRequirementMarisa]"
+ spell_card_marisa_1:0 "恋符「Master Spark」"
+ spell_card_marisa_1_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n在天体上方生成一个持续使用§YMaster Spark§!攻击的法阵，法阵存在§Y180§!天。"
+ spell_card_marisa_1_ex:0 "魔炮「Final Spark」"
+ spell_card_marisa_1_ex_desc:0 "COST：§Y4§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n在天体上方生成一个持续使用两挺§YFinal Spark§!攻击的法阵，法阵存在§Y360§!天。"
+ spell_card_marisa_2:0 "魔符「Stardust Reverie」"
+ spell_card_marisa_2_desc:0 "COST：§Y2§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n使用魔法强化舰队武器，在星系内生成一个为友方提供§G33%§!§Y舰船武器射速§!增益的法阵，法阵存在§Y180§!天。"
+ spell_card_marisa_2_ex:0 "黑魔「Event Horizon」"
+ spell_card_marisa_2_ex_desc:0 "COST：§Y3§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n用魔法创造结界，在星系内生成一个为友方提供§G33%§!§Y舰船武器射速§!增益和为敌方提供§R33%§!§Y舰船武器射速§!减益，§R50%§!§Y撤退概率§!和§Y紧急超光速冷却§!惩罚的法阵，法阵存在§Y360§!天。"
+ spell_card_marisa_3:0 "仪符「Orrery's Sun」"
+ spell_card_marisa_3_desc:0 "COST：§Y2§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的§Y我方舰队§!（包括她自己的）。\n条件：拥有£engineering£§Y战列舰§!科技，且至少有一种可用的§Y浮游炮（X）§!设计。\n\n在舰队中添加§Y4§!座随机存在设计的§Y浮游炮（X）§!，设计可在舰船设计器中编辑。"
+ spell_card_marisa_3_ex:0 "天仪「Orrery's Solar System」"
+ spell_card_marisa_3_ex_desc:0 "COST：§Y3§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的§Y我方舰队§!（包括她自己的）。\n条件：拥有£engineering£§Y泰坦§!科技，且至少有一种可用的§Y浮游炮（T）设计。\n\n在舰队中添加§Y6§!座随机存在设计的§Y浮游炮（T）§!，设计可在舰船设计器中编辑。"
+ spell_card_marisa_4:0 "魔空「Asteroid Belt」"
+ spell_card_marisa_4_desc:0 "COST：§Y4§!\n目标：任意与§H$NAME_Marisa$§!处在同一星系的§Y小行星§!。\n\n控制§Y小行星§!的魔法，目标小行星将成为能够用于撞击星球表面的§Y一次性武器§!，撞击将彻底毁灭行星地表，使其成为一个§P熔岩星球§!，如果星球为§Y巨型结构§!，则会直接将其摧毁，此等行为可被视同巨像打击，会损害其他国家对我们的£opinion£§Y评价§!。"
+ spell_card_marisa_5:0 "魔废「Deep Ecological Bomb」"
+ spell_card_marisa_5_desc:0 "COST：§Y4§!\n目标：任意§H$NAME_Marisa$§!正在被我方轰炸的敌方§Y殖民地§!。\n\n向星球上倾泻实验产生的§M魔法废物§!，会发生什么连魔理沙自己都不知道，此等行为可被视同巨像打击，会损害其他国家对我们的£opinion£§Y评价§!。"
+ spell_card_marisa_6:0 "彗星「Blazing Star」"
+ spell_card_marisa_6_desc:0 "COST：§Y5§!\n条件：§H$NAME_Marisa$§!正在指挥舰队或运输船队。\n\n化身巨大的彗星进行突击，为魔理沙的舰队提高§G900%§!的§Y亚光速航速§!和§Y舰船武器射速§!，降低§G90%§!的§Y超空间航行冷却§!并提高§G90§!的§Y闪避§!，持续§G180§!天。"
+
+ marisa_cannon: "浮游炮（X）"
+ marisa_cannon_plural: "浮游炮（X）"
+ marisa_cannon_titanic: "浮游炮（T）"
+ marisa_cannon_titanic_plural: "浮游炮（T）"
+ MARISA_CANNON_CORE: "浮游炮核心"
+ MARISA_CANNON_TITANIC_CORE: "离子加农核心"
+ marisa_asteroid: "小行星"
+ marisa_asteroid_plural: "小行星"
+ NAME_Controlled_Asteroid: "受控小行星"
+ NAME_Marisa_Asteroid: "小行星"
+ ASTEROID_IMPECT: "小行星撞击"
+ ASTEROID_IMPECT_DESC: "这颗小行星质量巨大，足以将它撞上的任何星球表面彻底摧毁。"
+ asteroid_impact: "小行星撞击"
+ asteroid_impact_menu_title: "撞击行星"
+ asteroid_impact_action_activity_key: "撞击$PLANET_NAME|Y$"
+ asteroid_impact_action_button: "§H撞击行星§!\n令所选的小行星撞击这颗星球，撞击将彻底毁灭行星地表，使其成为一个§P熔岩星球§!，如果星球为§Y巨型结构§!，则会直接将其摧毁。"
+
+ opinion_asteroid_impected_my_uninhabited_world: "使用小行星撞击了我们的未殖民的行星"
+ opinion_asteroid_impected_an_uninhabited_world: "使用小行星撞击了一颗未殖民的行星"
+ opinion_asteroid_impected_my_world: "使用小行星撞击了我们的星球"
+ opinion_asteroid_impected_a_world: "使用小行星撞击了星球"
+ opinion_asteroid_impected_a_primitive_world: "使用小行星撞击了一个前超光速星球"
+ opinion_asteroid_impected_a_primitive_world_phile: "$opinion_cracked_a_primitive_world_phile$"
+ opinion_polluted_my_uninhabited_world: "污染了我们的未殖民的行星"
+ opinion_polluted_an_uninhabited_world: "污染了一颗未殖民的行星"
+ opinion_polluted_my_world: "污染了我们的星球"
+ opinion_polluted_a_world: "污染了星球"
+ opinion_polluted_a_primitive_world: "污染了一个前超光速星球"
+ opinion_polluted_a_primitive_world_phile: "$opinion_cracked_a_primitive_world_phile$"
+
+ toxic_habitat_marisa: "被毒害的居住站"
+ toxic_habitat_marisa_desc: "这个居住站内部的大气如今拥有强烈的毒性，这使得它不再适合居住。"
+ paradisiacal_habitat_marisa: "$paradisiacal_habitat$"
+ paradisiacal_habitat_marisa_desc: "$paradisiacal_habitat_desc$"
+
+ d_infestation_marisa: "剧毒废土"
+ d_infestation_marisa_desc: "这片土地已被毒性极强的废弃物覆盖，要想重新开发利用这里，必须先清理掉这些废弃物。"
+
+ NAME_Master_Spark:0 "恋符「Master Spark」"
+ NAME_Final_Spark:0 "魔炮「Final Spark」"
+ AURA_STARDUST_REVERIE: "魔符「Stardust Reverie」"
+ friendly_aura_stardust_reverie: "星尘幻想"
+ AURA_EVENT_HORIZON: "黑魔「Event Horizon」"
+ friendly_aura_event_horizon: "事件视界"
+ hostile_aura_event_horizon: "事件视界"
+ NAME_Stardust_Reverie:0 "魔符「Stardust Reverie」"
+ NAME_Event_Horizon:0 "黑魔「Event Horizon」"
+
+ spell_card_sanne_1:0 "秘术「Gray Thaumaturgy」"
+ spell_card_sanne_1_desc:0 "COST：§Y1§!\n条件：无。\n\n发动奇迹所必要的准备阶段制成的特殊符卡，使用后一个§Y低概率事件§!会在我国境内发生。"
+ spell_card_sanne_1_ex:0 "秘术「遗忘之祭仪」"
+ spell_card_sanne_1_ex_desc:0 "COST：§Y1§!\n条件：无。\n\n。"
+ spell_card_sanne_2:0 "蛙符「操纵蛤蟆」"
+ spell_card_sanne_2.desc:0 "COST：§Y2§!\n目标：任意其他国家的§Y非人工星球殖民地§!。\n\n来自东方的神秘力量，为我方舰队解锁§Y汲取生命§!轰炸姿态，用该轰炸姿态杀死人口会为舰队指挥官提供寿命加成，效果持续§Y10§!年。"
+ spell_card_sanne_3:0 "蛇符「神代大蛇」"
+ spell_card_sanne_3.desc:0 "COST：§Y2§!\n目标：任意其他国家的§Y非人工星球殖民地§!。\n\n在目标星球生成一只§Y巨蛇§!敌对陆军，直到被击败前，它的存在都会大幅降低£happiness£§Y幸福度§!和£mod_pop_environment_tolerance£§Y宜居性§!，并且会持续吞食星球上的£pops£§Y人口§!。"
+ spell_card_sanne_4:0 "奇迹「神之风」"
+ spell_card_sanne_4.desc:0 "COST：§Y2§!\n目标：早苗所在星系，或拥有守矢神社星系的恒星。\n\n在目标星系产生一个§r守矢风暴§!，该风暴会§G赐福§!守矢的忠实信徒并§R惩罚§!无信者。"
+ spell_card_sanne_4_ex:0 "大奇迹「八坂之神风」"
+ spell_card_sanne_4_ex.desc:0 "COST：§Y2§!\n目标：早苗所在星系，或拥有守矢神社星系的恒星。\n\n在目标星系产生一个§l八坂神风§!，该风暴是§r守矢风暴§!的全面增强版本。"
+ spell_card_sanne_5:0 "秘法「九字切」"
+ spell_card_sanne_5_desc:0 "COST：§Y5§!\n条件：§H$NAME_Sanae$§!正在指挥舰队或运输船队。\n\n在星系内生成以九字刻印为形的巨大格状结界，彻底将形势扭向早苗的超大技。持续§Y9§!次此效果，每天降低星系内所有敌对舰船§Y10%§!的§Y船体§!，作用期间以及之后的§Y99§!天，所有敌方舰船无法自战斗中§Y撤退§!。"
+
+ giant_snake_army:0 "巨蛇"
+ NAME_Giant_Snake:0 "巨蛇"
+ modifier_sanae_star:0 "客星辉煌之夜"
+
+ moriya_storm: "守矢风暴"
+ moriya_storm_lore_description: "§L$storm_planet_modifier_intro$$moriya_storm$$storm_planet_modifier_outro$§!"
+ moriya_storm_ship_evasion_modifier_tt: "—若帝国是守矢的信徒，§G+$@shroud_storm_evasion|0%$§!$MOD_SHIP_EVASION_MULT$"
+ moriya_storm_ship_damage_modifier_tt: "—若帝国是守矢的信徒，§G+$@shroud_storm_damage|0%$§!$MOD_SHIP_WEAPON_DAMAGE$。"
+ moriya_storm_ship_evasion_negative_modifier_tt: "—若帝国不是守矢的信徒，§R-$@shroud_storm_evasion|0%$§!$MOD_SHIP_EVASION_MULT$"
+ moriya_storm_ship_damage_negative_modifier_tt: "—若帝国不是守矢的信徒，§R-$@shroud_storm_damage|0%$§!$MOD_SHIP_WEAPON_DAMAGE$。"
+
+ spell_card_koishi_group:0 "[GetSelectedCardKoishi]"
+ spell_card_koishi_tooltip:0 "[GetSelectedCardKoishiDesc]"
+ spell_card_koishi_requirement:0 "[GetSelectedCardRequirementKoishi]"
+ spell_card_koishi_1:0 "表象「列祖列宗入梦来」"
+ spell_card_koishi_1_desc:0 "COST：§Y1§!\n目标：任意未被占领，未受§Y列祖列宗入梦来§!影响的我方§Y殖民地§!。\n\n让我们的居民能够梦到自己的祖先（实际是我们的集体无意识的反映）的符卡，大幅增加该星球§Y主流思潮吸引§!，略微提高§Y幸福度§!和§Y凝聚力产出§!。"
+ spell_card_koishi_2:0 "本能「本我的解放」"
+ spell_card_koishi_2_desc:0 "COST：§Y1§!\n条件：§H$NAME_Koishi$§!正在指挥舰队或运输船队，且未处于§P狂暴§!状态。\n\n释放舰队成员无意识深处的本能，带来最纯粹的杀戮。恋的舰队进入§P狂暴§!状态，§Y舰船武器伤害§!、§Y射速§!、§Y穿透§!提高§G100%§!，但开始§P不受控制地行动并无差别攻击一切目标§!。"
+ spell_card_koishi_3:0 "抑制「Super Ego」"
+ spell_card_koishi_3_desc:0 "COST：§Y4§!\n条件：§H$NAME_Koishi$§!正在指挥舰队或运输船队，且处于§P狂暴§!状态。\n\n最大化地压抑精神，使舰队成员从狂暴回归。解除恋舰队的§P狂暴§!状态，并使星系内的敌我舰队在§Y30§!天内降低§P50%§!§Y舰船武器伤害§!、§Y亚光速航速§!和§Y闪避§!。"
+ spell_card_koishi_4:0 "现在就给你打电话别忘了接哦"
+ spell_card_koishi_4_desc:0 "COST：§Y5§!\n目标：任意§B科研船§!/§R舰队§!/§Y星球§!/§C国家§!。\n\n来自玛丽小姐都市传说的力量，对指定对象的领袖（舰队司令，科研船科学家，星球总督或国家领导人）进行一次刺杀，按照目标领袖等级造成§B研究花费§!/§R舰队所受伤害§!/§Y星球稳定度和岗位效率§!/§C国家稳定度和主流思潮吸引§!的减益，刺杀总督还有立刻诱发星球叛乱的可能性，没有防御手段的领袖会直接死亡，对有再生能力的领袖使用会增加一层疮痍，有其他能力的领袖也存在幸存可能，§H但减益仍会生效§!。"
+
+ #spell_card_koishi_5:0 "反应「妖怪测谎机」"
+ #spell_card_koishi_5_desc:0 "COST：§Y3§!\n目标：任意在我国有§Y间谍网§!的国家。\n\n能探测出对手一丝一毫的动摇并将其以图表的形式表现的符卡，使用后彻底清除目标国家在我国的§Y间谍网§!。"
+ #spell_card_koishi_6:0 "深层「无意识的基因」"
+ #spell_card_koishi_6_desc:0 "COST：§Y1§!\n目标：任意§Y国家§!。\n\n能够读取和改写生物演化的记忆的符卡，使用后目标国家主流人口的特质会发生随机的改变。"
+
+ spell_card_sizuha_group:0 "[GetSelectedCardSizuha]"
+ spell_card_sizuha_tooltip:0 "[GetSelectedCardSizuhaDesc]"
+ spell_card_sizuha_requirement:0 "[GetSelectedCardRequirementSizuha]"
+ spell_card_sizuha_1:0 "秋符「Fall in Blast」"
+ spell_card_sizuha_1_desc:0 "COST：§Y1§!\n目标：任意与§H$NAME_Sizuha$§!处在同一星系或者在我方境内的§Y敌对舰队§!。\n\n使用星系风暴如秋风扫落叶般冲散敌方舰队的阵型，使其§Y射速§!、§Y闪避§!和§Y航速§!在§Y60§!天内下降§R20%§!，有§Y1%§!概率使其进入§Y任务中失踪§!状态。"
+ spell_card_sizuha_2:0 "枯道「Lost Windrow」"
+ spell_card_sizuha_2_desc:0 "COST：§Y1§!\n目标：任意的§Y非人工宜居星球§!。\n\n使得目标星球的生命枯萎，为星球添加§Y$bleak_planet$§!修正，如果已有该修正，随机杀死两个£pop£§Y人口§!，并在§Y360§!天内使星球$r_food$产出下降§R200%§!，如果星球已没有£pop£§Y人口§!，会将其变为可以减少§Y75%§!花费进行环境改造的§Y荒芜星球§!。"
+
+ aki_bleak_planet:0 "颗粒无收"
+ aki_bleak_planet_desc:0 "揭开第三印的时候，我听见第三个活物说：“你来！”我就观看，见有一匹黑马。骑在马上的手里拿着天平。我听见在四活物中似乎有声音说：“一钱银子买一升麦子，一钱银子买三升大麦，油和酒不可糟蹋。”"
+
+ aki_terraforming_cost:0 "凋落与重生"
+ aki_terraforming_cost_desc:0 "这颗星球上凋零的生命留下的大量有机质为重建生态系统打下了基础。"
+
+ spell_card_minoriko_group:0 "[GetSelectedCardMinoriko]"
+ spell_card_minoriko_tooltip:0 "[GetSelectedCardMinorikoDesc]"
+ spell_card_minoriko_requirement:0 "[GetSelectedCardRequirementMinoriko]"
+ spell_card_minoriko_1:0 "丰收「谷物神的允诺」"
+ spell_card_minoriko_1_desc:0 "COST：§Y1§!\n目标：任意§Y我方非人工殖民地§!。\n\n利用谷物神的力量开拓一块丰收的田地，制造一个增加£district£§Y农业区划§!上限的行星特征。"
+ spell_card_minoriko_2:0 "秋符「秋日无常如少女之心」"
+ spell_card_minoriko_2_desc:0 "COST：§Y1§!\n目标：任意的§Y非人工宜居星球§!。\n\n将秋日的无常天气放大作用于星球，为星球添加§Y$hazardous_weather$§!修正，对已有该修正且有殖民地的星球使用，会产生强烈的风暴随机破坏§Y1§!个£building£§Y建筑§!和§Y1§!个£district£§Y区划§!，并在§Y360§!天内使星球§Y宜居性§!和§Y人口幸福度§!下降§R50%§!，如果星球已没有非首府£building£§Y建筑§!和£district£§Y区划§!，会将星球转化为随机的§Y宜居类型§!，§Y理想城§!会固定成为§Y遗落星球§!。"
+
+ aki_hazardous_weather:0 "风暴"
+ aki_hazardous_weather_desc:0 "毁灭性的风暴正在扫荡星球的表面，所到之处，房屋倒塌，树木折断，生命难以生存。"
+ #静叶：你TM折我树是吧！
+
+ spell_card_hina_group:0 "[GetSelectedCardHina]"
+ spell_card_hina_tooltip:0 "[GetSelectedCardHinaDesc]"
+ spell_card_hina_requirement:0 "[GetSelectedCardRequirementHina]"
+ spell_card_hina_1:0 "厄符「Bad Fortune」"
+ spell_card_hina_1_desc:0 "COST：§G1§!\n目标：任意§Y其他国家§!。\n\n将厄运带给目标国家，触发随机的§R负面事件§!。"
+ spell_card_hina_1_ex:0 "厄符「厄神大人的生理节律」"
+ spell_card_hina_1_ex_desc:0 "COST：§G5§!\n目标：任意§Y其他国家§!。\n\n将厄运持续带给目标国家，连续§Y10§!年每年触发随机的§R负面事件§!。"
+ spell_card_hina_2:0 "疵符「Broken Amulet」"
+ spell_card_hina_2_desc:0 "COST：§G3§!\n目标：任意与§H$NAME_Hina$§!处在同一星系且未受同类符卡影响的§Y敌对舰队§!。\n\n令敌方舰队的装甲和护盾出现随机的裂缝，§Y装甲硬化§!和§Y护盾硬化§!下降§R50%§!，持续§Y60§!天。"
+ spell_card_hina_2_ex:0 "疵痕「损坏的护符」"
+ spell_card_hina_2_ex_desc:0 "COST：§G6§!\n目标：任意与§H$NAME_Hina$§!处在同一星系且未受同类符卡影响的§Y敌对舰队§!。\n\n令敌方舰队的装甲和护盾出现明显的裂口，§Y装甲硬化§!和§Y护盾硬化§!下降§R1000%§!，持续§Y60§!天。"
+ spell_card_hina_3:0 "恶灵「Misfortune's Wheel」"
+ spell_card_hina_3_desc:0 "COST：§G4§!\n目标：任意与§H$NAME_Hina$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n产生一个厄运的漩涡，持续§Y180§!天，星系内的敌方舰队的§Y命中§!和§Y闪避§!受其影响会下降§R25%§!，且§P持续承受伤害§!。"
+ spell_card_hina_3_ex:0 "悲运「大钟婆之火」"
+ spell_card_hina_3_ex_desc:0 "COST：§G6§!\n目标：任意与§H$NAME_Hina$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n将厄运实体化为火焰的漩涡，持续§Y360§!天，星系内的敌方舰队的§Y命中§!和§Y闪避§!受其影响会下降§R50%§!，§P持续承受伤害§!，且§H无法撤出战斗§!。"
+ spell_card_hina_4:0 "创符「Pain Flow」"
+ spell_card_hina_4_desc:0 "COST：§G2§!\n目标：任意其他国家的未受同类符卡影响的§Y殖民地§!。\n\n用巨量的厄运冲刷某地，目标星球的£mod_pop_happiness£§Y人口幸福度§!在§Y360§!天内下降§Y100%§!，并承受随机§R负面事件§!。"
+ spell_card_hina_4_ex:0 "创符「流刑人形」"
+ spell_card_hina_4_ex_desc:0 "COST：§G7§!\n目标：任意其他国家的未受同类符卡影响的§Y殖民地§!。\n\n将厄运化为痛苦的洪流，目标星球的所有人口在§Y360§!天内内将会处于被£job_purge£§R净化§!的状态。"
+
+ pain_flow_modifier_1: "痛苦之流"
+ pain_flow_modifier_1_desc: "这颗星球的居民正在被厄运的洪流冲击。"
+ pain_flow_modifier_2: "流刑人形"
+ pain_flow_modifier_2_desc: "这颗星球的居民正在被无穷无尽的厄运淹没。"
+ JINX_MODIFIER_PURGE: "全部人口将会进入被£job_purge£§R净化§!的状态。"
+ AURA_MISFORTUNE_WHEEL_1: "恶灵「Misfortune's Wheel」"
+ NAME_Misfortune_Wheel_1: "恶灵「Misfortune's Wheel」"
+ AURA_MISFORTUNE_WHEEL_2: "悲运「大钟婆之火」"
+ NAME_Misfortune_Wheel_2: "悲运「大钟婆之火」"
+ friendly_aura_misfortune_wheel: "厄运漩涡"
+
+ spell_card_shikieiki_group:0 "[GetSelectedCardShikieiki]"
+ spell_card_shikieiki_tooltip:0 "[GetSelectedCardShikieikiDesc]"
+ spell_card_shikieiki_requirement:0 "[GetSelectedCardRequirementShikieiki]"
+ spell_card_shikieiki_1:0 "审判「Last Judgement」"
+ spell_card_shikieiki_1_desc:0 "COST：§G1§!\n目标：任意我方§Y星球§!。\n\n对目标星球的全部罪行进行最终审判，消除该殖民地所有的§Y犯罪行为§!，例如§Y犯罪负面修正§!和§Y犯罪集团分部§!。"
+ spell_card_shikieiki_2:0 "罪符「罪孽的分量」"
+ spell_card_shikieiki_2_desc:0 "COST：§G2§!\n目标：任意我方§Y星球§!。\n\n部署一支悔悟棒镇暴部队，使得£job_enforcer£§Y执法者§!产出更多£stability£§Y稳定度§!，降低更多£crime£§Y犯罪度§!，并增加§Y防御部队伤害§!。"
+ spell_card_shikieiki_3:0 "审判「净颇梨审判」"
+ spell_card_shikieiki_3_desc:0 "COST：§G3§!\n目标：任意我方§Y星球§!。\n\n榨干一个人全部的个人信息的宝镜将悬于星球之上，以大幅降低£happiness£§Y幸福度§!和$r_research$产出为代价清除£crime£§Y犯罪度§!并大幅提高£stability£§Y稳定度§!和$r_unity$产出。再次对其他星球使用使用会转移宝镜，对已有该效果的星球使用会收回宝镜。"
+
+ spell_card_onoduka_group:0 "[GetSelectedCardOnoduka]"
+ spell_card_onoduka_tooltip:0 "[GetSelectedCardOnodukaDesc]"
+ spell_card_onoduka_requirement:0 "[GetSelectedCardRequirementOnoduka]"
+ spell_card_onoduka_1:0 "地狱「无间之狭间」"
+ spell_card_onoduka_1_desc:0 "COST：§G3§!\n目标：任意与§H$NAME_Onoduka$§!处在同一星系的非恒星，且轨道上没有法阵的§Y天体§!。\n\n制造一个操纵距离的法阵，大大提高我方舰队射程的同时大大降低敌方舰队射程。"
+ spell_card_onoduka_2:0 "死歌「八重雾中渡」"
+ spell_card_onoduka_2_desc:0 "COST：§G2§!\n目标：任意与§H$NAME_Onoduka$§!处在同一星系的§Y殖民地§!。\n\n死神滥用职权的能力之一，在目标星球上空召唤一支§Y幽灵舰队§!，规模取决于星球人口，舰队会跟随小町的舰队行动。"
+ spell_card_onoduka_3:0 "恨符「充满留恋的紧缚灵」"
+ spell_card_onoduka_3_desc:0 "COST：§G3§!\n目标：任意敌方§Y舰队§!。\n条件：小町正在指挥§Y舰队§!或管理§Y星球§!。\n\n死神滥用职权的能力之一，从小町所在位置召唤一队战力略高于目标的§Y幽灵舰队§!追踪目标舰队，直到目标舰队毁灭或者§Y幽灵舰队§!自身被击败才会消失。"
+ spell_card_onoduka_4:0 "薄命「余命无几许」"
+ spell_card_onoduka_4_desc:0 ""
+
+ #spell_card_hina_5:0 "创符「流刑人偶」"
+ #spell_card_hina_5_desc:0 "COST：§G10§!\n目标：任意敌对§Y领袖§!指挥的对象。\n\n看来某个人要倒霉了，将目标领袖流放§Y360§!天。"
+
+ #spell_card_tenshi_1:0 "地符「不让土壤之剑」"
+ #spell_card_tenshi_1_desc:0 "COST：§Y1§!\n目标：任意不存在§Y$unstable_tectonics$§!行星修正的己方§Y殖民地§!。\n\n将气质打入地下使地上产生大的隆起，制造一个增加£district£§Y采矿区划§!上限的行星特征，有概率添加§Y$unstable_tectonics$§!行星修正。"
+ #spell_card_tenshi_2:0 "非想「非想非非想之剑」"
+ #spell_card_tenshi_2_desc:0 "COST：§Y1§!\n目标：任意存在§Y环境危害§!的§Y星系§!。（可选择星系内任意对象）\n\n绯想之剑所具备的力量之一，施加气质封印的符卡，消除该星系§P环境危害§!对己方的影响。"
+ #spell_card_tenshi_3:0 "地震「先忧后乐之剑」"
+ #spell_card_tenshi_3_desc:0 "COST：§Y2§!\n条件：§H比那名居天子§!正在指挥舰队或陆军。\n目标：和§H比那名居天子§!处于相同星系的§Y敌对行星§!，或是§H比那名居天子§!正在战斗的星球。\n\n将剑刺入地面使地壳产生运动，清扫整个行星表面的敌军，对行星造成§Y50%§!的破坏度，每支敌军都有§Y50%§!概率被消灭。"
+ #spell_card_tenshi_4:0 "气符「天启气象之剑」"
+ #spell_card_tenshi_4_desc:0 "COST：§Y3§!\n条件：己方控制存在§Y环境危害§!的星系，存在可用目标。\n目标：任意§Y不存在环境危害§!的§Y星系§!。（可选择星系内任意对象）\n\n绯想之剑所具备的力量之一，以剑为载体聚集气质并释放，使得星系内的敌人舰队承受指定的§P环境危害§!（需要己方控制拥有对应环境危害的星系）。"
+ #spell_card_tenshi_5:0 "气符「无念无想的境界」"
+ #spell_card_tenshi_5_desc:0 "COST：§Y1§!\n目标：任意存在§Y指挥官§!的己方运输船部队，或是己方§Y指挥官§!正在战斗的星球。\n\n可以让人感受不到任何痛楚的符卡，使得目标所指挥的部队完全不会受到§Y士气伤害§!。"
+ #spell_card_tenshi_6:0 "「全人类的绯想天」"
+ #spell_card_tenshi_6_desc:0 "COST：§Y5§!\n条件：§H比那名居天子§!正在指挥舰队或陆军。\n目标：和§H比那名居天子§!处于相同星系的§Y敌对行星§!，或是§H比那名居天子§!正在战斗的星球。\n\n将周围的气质凝缩在绯想之剑上，并向下方一口气放出的超大技，会彻底清扫星球的人口并将其改造为随机宜居类型。"
+ #
+ #spell_card_suika_1:0 "鬼神「Missing Purple Power」"
+ #spell_card_suika_1_desc:0 "COST：§Y1§!\n条件：已经部署§H伊吹萃香§!。\n\n§H伊吹萃香§!在自己所在地变形为了可以进行陆地战的§Y鬼王巨人§!，这会将她锁定为自己的§P指挥官§!，可以在星球决议或法令中变回正常形态。"
+ #spell_card_suika_2:0 "鬼气「蒙蒙迷雾」"
+ #spell_card_suika_2_desc:0 "COST：§Y1§!\n条件：已经部署§H伊吹萃香§!。\n\n§Y伊吹萃香§!在自己所在地变形为了一团可以进行太空战的§Y鬼雾§!，这会将她锁定为自己的§P指挥官§!，可以通过战舰与星球的互动或法令变回正常形态。"
+ #spell_card_suika_3:0 "雾符「云集雾散」"
+ #spell_card_suika_3_desc:0 "COST：§Y2§!\n条件：§H伊吹萃香§!正在指挥舰队或运输船队。\n目标：和§H伊吹萃香§!处于相同星系的§Y友方舰队§!。\n\n将鬼雾作为防壁的防御技，为指定的舰队的每一艘战舰提供数值固定的额外§Y护盾§!。"
+ #spell_card_suika_4:0 "鬼火「超高密度磷祸术」"
+ #spell_card_suika_4_desc:0 "COST：§Y3§!\n条件：§H伊吹萃香§!正在指挥舰队或运输船队。\n目标：和§H伊吹萃香§!处于相同星系的§Y敌对舰队§!。\n\n将高密度的热量萃集到敌方舰队处，产生持续损害舰队的高温，受到影响的舰队将不断损失§Y船体值§!。"
+ #spell_card_suika_5:0 "醉梦「施饿鬼缚之术」"
+ #spell_card_suika_5_desc:0 "COST：§Y4§!\n条件：§H伊吹萃香§!正在指挥舰队或运输船队。\n目标：和§H伊吹萃香§!处于相同星系的§Y敌对舰队§!。\n\n用锁链束缚敌方的舰队随后牵引至§H伊吹萃香§!所在位置，敌人舰队会暂时承受巨大的§Y亚光速航速§!和§Y舰船武器射速§!减益。如果§H伊吹萃香§!指挥运输船队，该船队会被消耗以发起跳帮战，每个运输船都能§Y夺取§!一艘敌方战舰。"
+ #spell_card_suika_6:0 "「百万鬼夜行」"
+ #spell_card_suika_6_desc:0 "COST：§Y5§!\n目标：任意己方§Y星系§!，或§H伊吹萃香§!所在星系的§Y星系§!。（可选择星系内任意对象）\n\n在目标§Y星系§!召唤数支无差别攻击我方以外一切敌人的§Y鬼雾§!舰队，这些舰队不能被控制。"

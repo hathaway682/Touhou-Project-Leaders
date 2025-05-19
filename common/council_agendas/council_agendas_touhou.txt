@@ -1,0 +1,70 @@
+agenda_recruit_talent = {
+	agenda_cost = 3500
+	agenda_cooldown = 1800
+	allow = {
+		OR = {
+			has_technology = tech_xeno_linguistics
+			has_technology = tech_autonomous_agents
+		}
+	}
+	potential = {
+		#has_paragon_dlc = yes
+		is_ai = no
+	}
+	modifier = {
+		leaders_cost_mult = -0.2
+	}
+	finish_modifier = agenda_recruit_talent_finish
+	effect = {
+		custom_tooltip = council_agenda_agenda_recruit_talent_effect
+		hidden_effect = {
+			country_event = {
+				id = touhou_paragon.40001
+			}
+		}
+	}
+}
+
+agenda_dyson_sphere = {
+	agenda_cost = 7000
+	allow = {
+		any_owned_leader = {
+			has_trait = thl_leader_trait_fusion_energy
+			is_councilor = yes
+		}
+	}
+	potential = {
+		any_owned_leader = {
+			has_trait = thl_leader_trait_fusion_energy
+		}
+	}
+	modifier = {
+	}
+	effect = {
+		add_research_option = tech_dyson_sphere
+	}
+}
+
+agenda_sanae_ascension = {
+	agenda_cost = 7000
+	allow = {
+		any_owned_leader = {
+			has_trait = thl_leader_trait_miracle
+		}
+	}
+	potential = {
+		#has_paragon_dlc = yes
+		is_ai = no
+		has_country_flag = touhou_flag_sanae_ascension
+	}
+	modifier = {
+		planetary_ascension_effect_mult = 0.1
+	}
+	finish_modifier = modifier_sanae_mission_faith_5_agenda_modifier
+	effect = {
+		random_owned_planet = {
+			limit = { has_planetary_ascension_tier < 10 }
+			set_planetary_ascension_tier = 10
+		}
+	}
+}

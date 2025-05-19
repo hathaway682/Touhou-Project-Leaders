@@ -1,0 +1,5449 @@
+
+namespace = touhou_paragon
+
+#开局事件
+country_event = {
+	id = touhou_paragon.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					has_civic = civic_hakurei_shinto
+					has_civic = civic_hakurei_shinto_corp
+				}
+			}
+			capital_scope = {
+				add_deposit = d_hakurei_shrine
+				last_added_deposit = {
+					set_deposit_flag = keep_deposit_on_terraform
+				}
+			}
+			#civic_leader_creator = {
+			#	SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+			#	LEADER_PORTRAIT = x1
+			#	CLASS = commander
+			#	NAME = NAME_Reimu
+			#	LEVEL = 6
+			#	GENDER = female
+			#	IMMORTAL = no
+			#	ETHIC = egalitarian
+			#	DESC = reimu1
+			#	CATCH_PHRASE = reimu1_catch_phrase
+			#}
+			#last_created_leader = { #7
+			#	add_trait = subclass_commander_miko
+			#	add_trait = thl_leader_trait_invincible
+			#	add_trait = thl_leader_trait_like_cloud_and_water
+			#	add_trait = thl_leader_trait_theurgist
+			#	add_trait = thl_leader_trait_tracker
+			#	add_trait = thl_leader_exorcism_roud
+			#	add_trait = leader_trait_rocketry_specialization
+			#	add_trait = leader_trait_gifted_2
+			#	add_trait = thl_leader_trait_excessive_reimu
+			#	add_trait = thl_leader_trait_regeneration
+			#	add_trait = thl_leader_trait_fly
+			#	set_leader_flag = touhou_leader
+			#	set_leader_flag = legendary_leader
+			#	set_leader_flag = reimu_leader
+			#	set_age = 17
+			#}
+			create_civic_reimu_leader = yes
+			last_created_leader = {
+				add_trait = thl_leader_trait_destined
+			}
+			set_global_flag = reimu
+			set_country_flag = can_build_shirne
+			set_country_flag = hakurei_shrine_country
+		}
+		if = {
+			limit = {
+				OR = {
+					has_civic = civic_moriya_shinto
+					has_civic = civic_moriya_shinto_corp
+				}
+			}
+			create_civic_sanae_leader = yes
+			give_technology = {
+				tech = tech_storm_prediction_1
+				message = no
+			}
+			set_global_flag = sanae
+			set_country_flag = can_build_shirne
+		}
+		if = {
+			limit = {
+				OR = {
+					has_civic = civic_kirisame_magic
+					has_civic = civic_kirisame_magic_corp
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = root
+					create_ship = {
+						name = NAME_Casket_of_Star
+						design = NAME_Casket_of_Star
+						prefix = yes
+					}
+					create_ambient_object = {
+						type = eventship_02_object
+						location = root.capital_star
+					}
+					root = {
+						create_civic_marisa_leader = yes
+						last_created_leader = {
+							add_trait = thl_leader_trait_destined
+						}
+					}
+					assign_leader = last_created_leader
+					set_location = root.capital_star
+				}
+			}
+			set_global_flag = marisa
+		}
+		if = {
+			limit = {
+				OR = {
+					has_civic = civic_scarlet_allience
+					has_civic = civic_scarlet_allience_corp
+				}
+			}
+			create_civic_sakuya_leader = yes
+			last_created_leader = {
+				add_trait = thl_leader_trait_destined
+			}
+			capital_scope = {
+				assign_leader = last_created_leader
+			}
+			set_global_flag = sakuya
+		}
+		if = {
+			limit = {
+				OR = {
+					has_civic = civic_nether_world
+					has_civic = civic_nether_world_corp
+				}
+			}
+			create_civic_youmu_leader = yes
+			last_created_leader = {
+				add_trait = thl_leader_trait_destined
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:ghost_species
+					}
+				}
+				create_species = {
+					name = "NAME_Thl_Ghost"
+					plural = "NAME_Thl_Ghost_pl"
+					class = MAM
+					namelist = random_class
+					portrait = "ghost"
+					traits = {
+						trait = "trait_pc_nether_preference"
+						trait = "trait_thl_spirit"
+						trait = "trait_psionic"
+						trait = "trait_weak"
+						trait = "trait_traditional"
+						trait = "trait_charismatic"
+					}
+				}
+				last_created_species = {
+					save_global_event_target_as = ghost_species
+				}
+			}
+			capital_scope = {
+				create_pop_group = {
+					species = event_target:ghost_species
+					size = 400
+				}
+			}
+			set_global_flag = youmu
+		}
+		if = {
+			limit = {
+				OR = {
+					has_civic = civic_penglai_medcine
+					has_civic = civic_penglai_medcine_corp
+				}
+			}
+			create_civic_reisen_leader = yes
+			last_created_leader = {
+				add_trait = thl_leader_trait_destined
+			}
+			give_technology = {
+				tech = tech_genome_mapping
+				message = no
+			}
+			give_technology = {
+				tech = tech_gene_tailoring
+				message = no
+			}
+			give_technology = {
+				tech = tech_frontier_health
+				message = no
+			}
+			capital_scope = {
+				if = {
+					limit = {
+						NOR = {
+							has_building = building_medical_1
+							has_building = building_medical_2
+						}
+					}
+					add_building = building_medical_2
+				}
+			}
+			set_global_flag = reisen
+		}
+		if = {
+			limit = {
+				has_civic = civic_hifuu
+			}
+			give_technology = { message = no tech = tech_subspace_drive }
+			low_tech_start_add_research_options_effect = yes
+			give_technology = {
+				tech = tech_subspace_drive
+				message = no
+			}
+			add_research_option = tech_hyper_drive_1
+			every_owned_ship = {
+				limit = {
+					OR = {
+						is_ship_class = shipclass_science_ship
+						is_ship_class = shipclass_constructor
+					}
+				}
+				if = {
+					limit = {
+						exists = leader
+					}
+					leader = {
+						kill_leader = {
+							show_notification = no
+							fire = yes
+						}
+					}
+				}
+				delete_ship = this
+			}
+			create_fleet = {
+				effect = {
+					set_owner = root
+
+					create_ship = {
+						name = random
+						random_existing_design = explorer_vessel
+					}
+
+					set_fleet_stance = passive
+					set_location = root.capital_scope.star
+
+					owner = {
+						create_civic_merry_leader = yes
+						last_created_leader = {
+							add_trait = thl_leader_trait_destined
+						}
+					}
+					set_leader = last_created_leader
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = root
+
+					create_ship = {
+						name = random
+						random_existing_design = explorer_vessel
+					}
+
+					set_fleet_stance = passive
+					set_location = root.capital_scope.star
+
+					owner = {
+						create_civic_renko_leader = yes
+						last_created_leader = {
+							add_trait = thl_leader_trait_destined
+						}
+					}
+					set_leader = last_created_leader
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = root
+
+					create_ship = {
+						name = random
+						random_existing_design = constructor
+					}
+
+					set_fleet_stance = evasive
+					set_location = root.capital_star
+				}
+			}
+			set_global_flag = merry
+			set_global_flag = renko
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = can_build_shirne
+				}
+				is_ai = no
+			}
+			capital_scope = {
+				solar_system = {
+					closest_system = {
+						limit = {
+							any_system_planet = {
+								is_colonizable = yes
+								is_colony = no
+							}
+						}
+						random_system_planet = {
+							limit = {
+								is_colonizable = yes
+								is_colony = no
+							}
+							add_anomaly = {
+								category = touhou_shrine_ruin
+								target = root
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			random_galaxy_planet = {
+				limit = {
+					distance = {
+						source = root.capital_scope
+						min_jumps = 1
+						max_jumps = 2
+					}
+					is_planet_class = pc_frozen
+				}
+				add_anomaly = {
+					category = touhou_crino_temple
+					target = root
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		switch = {
+			trigger = has_civic
+			civic_hakurei_shinto = {
+				force_add_civic = civic_hakurei_shinto_corp
+				force_remove_civic = civic_hakurei_shinto
+			}
+			civic_moriya_shinto = {
+				force_add_civic = civic_moriya_shinto_corp
+				force_remove_civic = civic_moriya_shinto
+			}
+			civic_kirisame_magic = {
+				force_add_civic = civic_kirisame_magic_corp
+				force_remove_civic = civic_kirisame_magic
+			}
+			civic_scarlet_allience = {
+				force_add_civic = civic_scarlet_allience_corp
+				force_remove_civic = civic_scarlet_allience
+			}
+			civic_nether_world = {
+				force_add_civic = civic_nether_world_corp
+				force_remove_civic = civic_nether_world
+			}
+			civic_penglai_medcine = {
+				force_add_civic = civic_penglai_medcine_corp
+				force_remove_civic = civic_penglai_medcine
+			}
+			civic_hakurei_shinto_corp = {
+				force_add_civic = civic_hakurei_shinto
+				force_remove_civic = civic_hakurei_shinto_corp
+			}
+			civic_moriya_shinto_corp = {
+				force_add_civic = civic_moriya_shinto
+				force_remove_civic = civic_moriya_shinto_corp
+			}
+			civic_kirisame_magic_corp = {
+				force_add_civic = civic_kirisame_magic
+				force_remove_civic = civic_kirisame_magic_corp
+			}
+			civic_scarlet_allience_corp = {
+				force_add_civic = civic_scarlet_allience
+				force_remove_civic = civic_scarlet_allience_corp
+			}
+			civic_nether_world_corp = {
+				force_add_civic = civic_nether_world
+				force_remove_civic = civic_nether_world_corp
+			}
+			civic_penglai_medcine_corp = {
+				force_add_civic = civic_penglai_medcine
+				force_remove_civic = civic_penglai_medcine_corp
+			}
+		}
+	}
+}
+
+#介绍绑定领袖
+
+country_event = {
+	id = touhou_paragon.41101
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = {
+			id = touhou_paragon.41200
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.41601
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = {
+			id = touhou_paragon.41700
+		}
+	}
+}
+
+#触发按年的事件
+
+country_event = {
+	id = touhou_paragon.41234
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		#has_paragon_dlc = yes
+	}
+
+	immediate = {
+		random_owned_leader = {
+			limit = { is_touhou_event_leader = yes }
+			switch = {
+				trigger = has_trait
+				thl_leader_trait_miracle = { # 早苗
+					random_list = {
+						1 = {
+							modifier = {
+								mult = 0
+								owner = {
+									NOR = {
+										has_technology = tech_robotic_workers
+										has_technology = tech_robomodding_m
+										has_technology = tech_robomodding
+									}
+								}
+							}
+							modifier = {
+								mult = 4
+								owner = {
+									OR = {
+										has_technology = tech_droid_workers
+										has_technology = tech_binary_motivators
+									}
+								}
+							}
+							modifier = {
+								mult = 4
+								owner = {
+									OR = {
+										has_technology = tech_synthetic_workers
+										has_technology = tech_nanite_assemblers
+									}
+								}
+							}
+							leader_event = { id = touhou_paragon.40310 }# days = 1 random = 360 }
+						} # 非想天则
+						32 = {
+						}
+					}
+				}
+				thl_leader_trait_fly = { # 灵梦
+					random_list = {
+						1 = {
+							modifier = {
+								add = 2
+								owner = {
+									any_owned_leader = {
+										has_leader_flag = sanae_leader
+									}
+								}
+							}
+							modifier = {
+								add = 6
+								owner = {
+									any_owned_planet = {
+										has_building = building_moriya_shrine
+									}
+								}
+							}
+							modifier = {
+								mult = 0
+								owner = {
+									OR = {
+										has_civic = civic_hakurei_shinto
+										has_civic = civic_hakurei_shinto_corp
+									}
+								}
+							}
+							leader_event = { id = touhou_paragon.40610 days = 1 random = 360 }
+						} # 博丽分社
+						9 = {}
+					}
+				}
+				thl_leader_trait_magic = {
+					# 魔理沙
+					random_list = {
+						1 = { # 魔炮
+							modifier = {
+								mult = 0
+								owner = {
+									NOT = {
+										has_technology = tech_energy_lance_1
+									}
+								}
+							}
+							modifier = {
+								mult = 2
+								owner = {
+									has_technology = tech_energy_lance_2
+								}
+							}
+							modifier = {
+								mult = 2
+								owner = {
+									has_technology = tech_titans
+								}
+							}
+							leader_event = { id = touhou_paragon.40710 days = 1 random = 360 }
+						}
+						8 = {}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_owned_leader = {
+					has_trait = thl_leader_trait_memory
+					leader_age = 20
+				}
+			}
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_memory
+				}
+				leader_event = {
+					id = touhou_paragon.42410
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_tradition = tr_cybernetics_finish
+					has_tradition = tr_synthetics_finish
+					has_tradition = tr_genetics_finish
+					has_tradition = tr_psionics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
+				}
+				any_owned_leader = {
+					has_trait = thl_leader_trait_memory
+				}
+				has_country_flag = longer_life
+			}
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_memory
+				}
+				leader_event = {
+					id = touhou_paragon.42411
+				}
+			}
+		}
+		#米丝蒂娅
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = mystia
+					has_country_flag = dismissed_mystia
+				}
+				OR = {
+					num_assigned_jobs = {
+						job = entertainer
+						value >= 400
+					}
+					num_assigned_jobs = {
+						job = duelist
+						value >= 400
+					}
+				}
+				any_owned_planet = {
+					OR = {
+						num_assigned_jobs = {
+							job = entertainer
+							value >= 400
+						}
+						num_assigned_jobs = {
+							job = duelist
+							value >= 400
+						}
+					}
+				}
+			}
+			set_global_flag = mystia
+			random_owned_planet = {
+				limit = {
+					OR = {
+						num_assigned_jobs = {
+							job = entertainer
+							value >= 400
+						}
+						num_assigned_jobs = {
+							job = duelist
+							value >= 400
+						}
+					}
+				}
+				planet_event = {
+					id = touhou_paragon.43110
+				}
+			}
+		}
+		#因幡帝
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = tewi
+				}
+				any_owned_planet = {
+					OR = {
+						has_building = building_hypercomms_forum
+						has_building = building_corporate_forum
+					}
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					OR = {
+						has_building = building_hypercomms_forum
+						has_building = building_corporate_forum
+					}
+				}
+				planet_event = {
+					id = touhou_paragon.43210
+				}
+			}
+		}
+		#魔理沙
+		if = {
+			limit = {
+				has_megastructure = grand_archive_0
+				NOT = {
+					has_global_flag = marisa
+				}
+			}
+			country_event = {
+				id = touhou_paragon.40730
+			}
+		}
+		#梅莉
+		if = {
+			limit = {
+				any_owned_planet = {
+					OR = {
+						has_building = building_astral_siphon_1
+						has_building = building_astral_siphon_2
+						has_building = building_astral_siphon_3
+					}
+				}
+				has_country_flag = can_build_shirne
+				has_technology = tech_rift_sphere
+				NOR = {
+					has_global_flag = merry
+					has_global_flag = renko
+				}
+			}
+			country_event = {
+				id = touhou_paragon.41110
+			}
+		}
+		#早苗任务 每年一次机会瞬造中继器
+		if = {
+			limit = {
+				any_owned_leader = {
+					has_trait = thl_leader_trait_miracle
+				}
+				has_modifier = modifier_sanae_mission_adm_4_eco
+				not = {
+					has_country_flag = flash_forge_hyper_relay_activated
+				}
+			}
+			set_country_flag = flash_forge_hyper_relay_activated
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.40310
+	title = touhou_paragon.40310.name
+	desc = touhou_paragon.40310.desc
+	picture = GFX_evt_mk2_titan_robot
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	# option = {
+	# 	name = touhou_paragon.40310.a
+	# 	set_leader_flag = touhou_flag_sanae_robotist_councilor_update
+	# 	owner = {
+	# 		add_research_option = tech_sanae_robot_army
+	# 	}
+	# }
+	# option = {
+	# 	name = touhou_paragon.40310.b
+	# 	set_leader_flag = touhou_flag_sanae_robotist_councilor_update
+	# 	owner = {
+	# 		add_research_option = tech_sanae_robot_strike_craft
+	# 	}
+	# }
+	option = {
+		name = touhou_paragon.40310.c
+		set_leader_flag = touhou_flag_sanae_robotist_councilor_update_industry
+		owner = {
+			add_research_option = tech_sanae_robot_worker
+			add_resource = {
+				alloys = -500
+				exotic_gases = -50
+			}
+		}
+		custom_tooltip = touhou_paragon.40310.c.tooltip
+	}
+	# option = {
+	# 	trigger = {
+	# 		owner = {
+	# 			resource_stockpile_compare = {
+	# 				resource = alloys
+	# 				value > 50000
+	# 			}
+	# 			resource_stockpile_compare = {
+	# 				resource = volatile_motes
+	# 				value > 5000
+	# 			}
+	# 			resource_stockpile_compare = {
+	# 				resource = exotic_gases
+	# 				value > 5000
+	# 			}
+	# 			resource_stockpile_compare = {
+	# 				resource = rare_crystals
+	# 				value > 5000
+	# 			}
+	# 		}
+	# 	}
+	# 	name = touhou_paragon.40310.d
+	# 	custom_tooltip = touhou_paragon.40310.d.tooltip
+	# 	set_leader_flag = touhou_flag_sanae_robotist_councilor_update
+	# 	owner = {
+	# 		add_resource = {
+	# 			alloys = -50000
+	# 			volatile_motes = -5000
+	# 			exotic_gases = -5000
+	# 			rare_crystals = -5000
+	# 		}
+	# 		add_research_option = tech_sanae_robot_army
+	# 		add_research_option = tech_sanae_robot_strike_craft
+	# 		add_research_option = tech_sanae_robot_worker
+	# 	}
+	# }
+}
+
+leader_event = {
+	id = touhou_paragon.40311
+	title = touhou_paragon.40311.name
+	desc = touhou_paragon.40311.desc
+	picture = GFX_evt_mk2_titan_robot
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+	option = {
+		name = touhou_paragon.40311.a
+		set_leader_flag = touhou_flag_sanae_robotist_update_army
+		owner = {
+			add_research_option = tech_sanae_robot_army
+			add_resource = {
+				alloys = -500
+				volatile_motes = -50
+			}
+		}
+		custom_tooltip = touhou_paragon.40311.a.tooltip
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.40312
+	title = touhou_paragon.40312.name
+	desc = touhou_paragon.40312.desc
+	picture = GFX_evt_mk2_titan_robot
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+	option = {
+		name = touhou_paragon.40312.a
+		set_leader_flag = touhou_flag_sanae_robotist_update_navy
+		owner = {
+			add_research_option = tech_sanae_robot_strike_craft
+			add_resource = {
+				alloys = -500
+				rare_crystals = -50
+			}
+		}
+		custom_tooltip = touhou_paragon.40312.a.tooltip
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.40420
+	title = touhou_paragon.40420.name
+	desc = touhou_paragon.40420.desc
+	picture = GFX_evt_daiyousei_comes
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	option = {
+		name = touhou_paragon.40420.a
+		owner = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							exists = event_target:yousei_species
+						}
+					}
+					create_species = {
+						name = "NAME_Fairy"
+						plural = "NAME_Fairy"
+						class = MAM
+						namelist = random_class
+						portrait = "demon"
+						traits = {
+							trait = "trait_pc_gaia_preference"
+							trait = "trait_extremely_adaptive"
+							trait = "trait_fertile"
+							trait = "trait_resilient"
+							trait = "trait_slow_learners"
+							trait = "trait_deviants"
+						}
+					}
+					last_created_species = {
+						save_global_event_target_as = yousei_species
+					}
+				}
+				create_leader = {
+					species = event_target:leader_species
+					name = "DAIYOUSEI_NAME"
+					custom_description = "DAIYOUSEI_DESC"
+					class = official
+					gender = indeterminable
+					set_age = 17
+					skill = 1
+					randomize_traits = yes
+					background_ethic = ethic_xenophile
+					effect = {
+						save_event_target_as = DAIYOUSEI
+						set_leader_flag = daiyousei_leader
+					}
+					skip_background_generation = yes
+					background_job = none
+				}
+				event_target:DAIYOUSEI = {
+					change_leader_portrait = x87
+					add_trait_no_notify = subclass_official_governor
+					add_trait_no_notify = leader_trait_galvanizer
+					add_trait_no_notify = leader_trait_agrarian_upbringing
+					add_trait_no_notify = leader_trait_eager
+					add_trait_no_notify = leader_trait_intemporal
+					add_trait_no_notify = thl_leader_trait_regeneration_3
+					set_leader_flag = daiyousei_leader
+					set_owner = prev
+				}
+				hire_event_leader_message = {
+					LEADER = DAIYOUSEI
+				}
+			}
+		}
+		custom_tooltip = touhou_paragon.40420.a.custom_tooltip
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.40610
+	title = touhou_paragon.40610.name
+	desc = {
+		trigger = {
+			NOT = {
+				owner = {
+					any_owned_leader = {
+						has_leader_flag = sanae_leader
+					}
+				}
+			}
+			owner = {
+				NOR = {
+					is_spiritualist = yes
+					has_modifier = covenant_composer_of_strands_0
+					has_modifier = covenant_composer_of_strands
+					has_modifier = covenant_eater_of_worlds_0
+					has_modifier = covenant_eater_of_worlds
+					has_modifier = covenant_instrument_of_desire_0
+					has_modifier = covenant_instrument_of_desire
+					has_modifier = covenant_whisperers_in_the_void_0
+					has_modifier = covenant_whisperers_in_the_void
+				}
+			}
+		}
+		text = touhou_paragon.40610.desc
+	}
+	desc = {
+		trigger = {
+			owner = {
+				any_owned_leader = {
+					has_leader_flag = sanae_leader
+				}
+				NOT = {
+					any_owned_planet = {
+						has_building = building_moriya_shrine
+					}
+				}
+			}
+			owner = {
+				NOR = {
+					is_spiritualist = yes
+					has_modifier = covenant_composer_of_strands_0
+					has_modifier = covenant_composer_of_strands
+					has_modifier = covenant_eater_of_worlds_0
+					has_modifier = covenant_eater_of_worlds
+					has_modifier = covenant_instrument_of_desire_0
+					has_modifier = covenant_instrument_of_desire
+					has_modifier = covenant_whisperers_in_the_void_0
+					has_modifier = covenant_whisperers_in_the_void
+				}
+			}
+		}
+		text = touhou_paragon.40610.sanae
+	}
+	desc = {
+		trigger = {
+			owner = {
+				any_owned_planet = {
+					has_building = building_moriya_shrine
+				}
+			}
+			owner = {
+				NOR = {
+					is_spiritualist = yes
+					has_modifier = covenant_composer_of_strands_0
+					has_modifier = covenant_composer_of_strands
+					has_modifier = covenant_eater_of_worlds_0
+					has_modifier = covenant_eater_of_worlds
+					has_modifier = covenant_instrument_of_desire_0
+					has_modifier = covenant_instrument_of_desire
+					has_modifier = covenant_whisperers_in_the_void_0
+					has_modifier = covenant_whisperers_in_the_void
+				}
+			}
+		}
+		text = touhou_paragon.40610.moriya
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				owner = {
+					any_owned_leader = {
+						has_leader_flag = sanae_leader
+					}
+				}
+			}
+			owner = {
+				OR = {
+					is_spiritualist = yes
+					has_modifier = covenant_composer_of_strands_0
+					has_modifier = covenant_composer_of_strands
+					has_modifier = covenant_eater_of_worlds_0
+					has_modifier = covenant_eater_of_worlds
+					has_modifier = covenant_instrument_of_desire_0
+					has_modifier = covenant_instrument_of_desire
+					has_modifier = covenant_whisperers_in_the_void_0
+					has_modifier = covenant_whisperers_in_the_void
+				}
+			}
+		}
+		text = touhou_paragon.40610.desc.spi
+	}
+	desc = {
+		trigger = {
+			owner = {
+				any_owned_leader = {
+					has_leader_flag = sanae_leader
+				}
+				NOT = {
+					any_owned_planet = {
+						has_building = building_moriya_shrine
+					}
+				}
+			}
+			owner = {
+				OR = {
+					is_spiritualist = yes
+					has_modifier = covenant_composer_of_strands_0
+					has_modifier = covenant_composer_of_strands
+					has_modifier = covenant_eater_of_worlds_0
+					has_modifier = covenant_eater_of_worlds
+					has_modifier = covenant_instrument_of_desire_0
+					has_modifier = covenant_instrument_of_desire
+					has_modifier = covenant_whisperers_in_the_void_0
+					has_modifier = covenant_whisperers_in_the_void
+				}
+			}
+		}
+		text = touhou_paragon.40610.sanae.spi
+	}
+	desc = {
+		trigger = {
+			owner = {
+				any_owned_planet = {
+					has_building = building_moriya_shrine
+				}
+			}
+			owner = {
+				OR = {
+					is_spiritualist = yes
+					has_modifier = covenant_composer_of_strands_0
+					has_modifier = covenant_composer_of_strands
+					has_modifier = covenant_eater_of_worlds_0
+					has_modifier = covenant_eater_of_worlds
+					has_modifier = covenant_instrument_of_desire_0
+					has_modifier = covenant_instrument_of_desire
+					has_modifier = covenant_whisperers_in_the_void_0
+					has_modifier = covenant_whisperers_in_the_void
+				}
+			}
+		}
+		text = touhou_paragon.40610.moriya.spi
+	}
+	picture = GFX_evt_plan_of_hakurei_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+		owner = {
+			exists = capital_scope
+			 NOT = {
+				any_owned_planet = {
+					OR = {
+						has_deposit = d_hakurei_shrine
+						has_deposit = d_hakurei_shrine_large
+						has_deposit = d_hakurei_shrine_imperial
+						has_deposit = d_hakurei_shrine_psionic
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40610.a
+		owner.capital_scope = {
+			add_deposit = d_hakurei_shrine
+			last_added_deposit = {
+				set_deposit_flag = keep_deposit_on_terraform
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon.40610.b
+		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		allow = {
+			owner = {
+				has_resource = {
+					type = minerals
+					amount > 800
+				}
+			}
+		}
+		owner.capital_scope = {
+			add_deposit = d_hakurei_shrine_large
+			last_added_deposit = {
+				set_deposit_flag = keep_deposit_on_terraform
+			}
+		}
+		owner = {
+			add_resource = {
+				minerals = -800
+			}
+		}
+		add_trait = leader_trait_crusader
+	}
+	option = {
+		name = touhou_paragon.40610.c
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		allow = {
+			owner = {
+				has_resource = {
+					type = minerals
+					amount > 400
+				}
+				has_resource = {
+					type = unity
+					amount > 100
+				}
+			}
+		}
+		custom_tooltip = touhou_paragon.40610.min_god.tooltip
+		owner.capital_scope = {
+			add_deposit = d_hakurei_shrine_large
+			last_added_deposit = {
+				set_deposit_flag = keep_deposit_on_terraform
+			}
+		}
+		owner = {
+			add_resource = {
+				minerals = -400
+				unity = -100
+			}
+		}
+		add_trait = leader_trait_crusader_2
+	}
+	option = {
+		name = touhou_paragon.40610.d
+		trigger = {
+			owner = {
+				OR = {
+					has_civic = civic_imperial_cult
+					has_civic = civic_psionic_sovereign
+				}
+			}
+		}
+		allow = {
+			owner = {
+				has_resource = {
+					type = minerals
+					amount > 1200
+				}
+				has_resource = {
+					type = alloys
+					amount > 600
+				}
+				has_resource = {
+					type = rare_crystals
+					amount > 200
+				}
+			}
+		}
+		custom_tooltip = touhou_paragon.40610.min_god.tooltip
+		owner.capital_scope = {
+			add_deposit = d_hakurei_shrine_imperial
+			last_added_deposit = {
+				set_deposit_flag = keep_deposit_on_terraform
+			}
+		}
+		owner = {
+			add_resource = {
+				minerals = -1200
+				alloys = -600
+				rare_crystals = -200
+			}
+		}
+		add_trait = leader_trait_crusader_2
+		add_trait = leader_trait_lavish_lifestyle
+	}
+	option = {
+		trigger = {
+			owner = {
+				has_trait = trait_psionic
+			}
+			owner = {
+				OR = {
+					has_modifier = covenant_composer_of_strands_0
+					has_modifier = covenant_composer_of_strands
+					has_modifier = covenant_eater_of_worlds_0
+					has_modifier = covenant_eater_of_worlds
+					has_modifier = covenant_instrument_of_desire_0
+					has_modifier = covenant_instrument_of_desire
+					has_modifier = covenant_whisperers_in_the_void_0
+					has_modifier = covenant_whisperers_in_the_void
+				}
+			}
+		}
+		allow = {
+			owner = {
+				has_resource = {
+					type = minerals
+					amount > 1200
+				}
+				has_resource = {
+					type = alloys
+					amount > 600
+				}
+				has_resource = {
+					type = sr_zro
+					amount > 100
+				}
+			}
+		}
+		name = touhou_paragon.40610.e
+		custom_tooltip = touhou_paragon.40610.min_god.tooltip
+		owner.capital_scope = {
+			add_deposit = d_hakurei_shrine_psionic
+			last_added_deposit = {
+				set_deposit_flag = keep_deposit_on_terraform
+			}
+		}
+		owner = {
+			add_resource = {
+				minerals = -1200
+				alloys = -600
+				sr_zro = -100
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_modifier = covenant_composer_of_strands_0
+						has_modifier = covenant_composer_of_strands
+					}
+				}
+			}
+			add_trait = leader_trait_composer_chosen
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_modifier = covenant_eater_of_worlds_0
+						has_modifier = covenant_eater_of_worlds
+					}
+				}
+			}
+			add_trait = leader_trait_eater_chosen
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_modifier = covenant_instrument_of_desire_0
+						has_modifier = covenant_instrument_of_desire
+					}
+				}
+			}
+			add_trait = leader_trait_instrument_chosen
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_modifier = covenant_whisperers_in_the_void_0
+						has_modifier = covenant_whisperers_in_the_void
+					}
+				}
+			}
+			add_trait = leader_trait_whisperers_chosen
+		}
+		custom_tooltip = touhou_paragon.40610.psi_god.tooltip
+	}
+	option = {
+		trigger = {
+			owner = {
+				has_authority = auth_corporate
+			}
+		}
+		allow = {
+			owner = {
+				has_resource = {
+					type = minerals
+					amount > 800
+				}
+			}
+		}
+		name = touhou_paragon.40610.f
+		custom_tooltip = touhou_paragon.40610.f.tooltip
+		owner.capital_scope = {
+			add_deposit = d_hakurei_shrine
+			last_added_deposit = {
+				set_deposit_flag = keep_deposit_on_terraform
+			}
+		}
+		owner = {
+			add_resource = {
+				energy = 100000
+				minerals = -800
+			}
+		}
+	}
+	after = {
+		owner = {
+			set_country_flag = hakurei_shrine_country
+		}
+		if = {
+			limit = {
+				not = {
+					any_country = {
+						is_country_type = saisen_box
+					}
+				}
+			}
+			owner = {
+				country_event = { id = touhou_paragon.40611 days = 365 random = 180 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40611
+	title = touhou_paragon.40611.name
+	desc = touhou_paragon.40611.desc
+	picture = GFX_evt_plan_of_hakurei_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+	immediate = {
+		random_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_fly
+			}
+			save_event_target_as = tp_target_leader
+		}
+	}
+	picture_event_data = {
+		portrait = event_target:tp_target_leader
+	}
+	option = {
+		name = touhou_paragon.40611.a
+		custom_tooltip = touhou_paragon.40611.a.response
+		set_country_flag = touhou_flag_allow_reimu_saisen_box_option
+		hidden_effect = {
+			create_country = {
+				name = "NAME_Saisen_Box"
+				type = saisen_box
+				flag = {
+					icon= {
+						category = "gskc"
+						file = "flag_gskc_1.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "horizontal.dds"
+					}
+					colors={
+						"red"
+						"white"
+						"null"
+						"null"
+					}
+				}
+			}
+			last_created_country = {
+				establish_communications_no_message = root
+				create_leader = {
+					class = commander
+					species = event_target:leader_species
+					name = NAME_Reimu
+					event_leader = yes
+					skill = 10
+					set_age = 0
+					traits = {
+						trait = subclass_commander_miko
+						trait = thl_leader_trait_invincible
+						trait = thl_leader_trait_theurgist
+						trait = thl_leader_trait_fly
+					}
+				}
+				set_leader = last_created_leader
+				save_global_event_target_as = saisen_box_country
+			}
+			set_variable = {
+				which = touhou_variable_saisen_count
+				value = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40612
+	title = touhou_paragon.40611.name
+	desc = touhou_paragon.40612.desc
+	picture = GFX_evt_ruined_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = touhou_paragon.40611.a
+		remove_point_of_interest = capital_shirne
+		custom_tooltip = touhou_paragon.40612.a.response
+		hidden_effect = {
+			create_country = {
+				name = "NAME_Saisen_Box"
+				type = saisen_box
+				flag = {
+					icon= {
+						category = "gskc"
+						file = "flag_gskc_1.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "horizontal.dds"
+					}
+					colors={
+						"red"
+						"white"
+						"null"
+						"null"
+					}
+				}
+			}
+			last_created_country = {
+				establish_communications_no_message = root
+				create_leader = {
+					class = commander
+					species = event_target:leader_species
+					name = NAME_Reimu
+					event_leader = yes
+					skill = 10
+					set_age = 0
+					traits = {
+						trait = subclass_commander_miko
+						trait = thl_leader_trait_invincible
+						trait = thl_leader_trait_theurgist
+						trait = thl_leader_trait_fly
+					}
+				}
+				set_leader = last_created_leader
+				save_global_event_target_as = saisen_box_country
+			}
+			set_variable = {
+				which = touhou_variable_saisen_count
+				value = 1
+			}
+		}
+	}
+}
+
+#招募灵梦后，触发神灵之名事件，为赛钱箱提供新的选项
+country_event = {
+	id = touhou_paragon.40613
+	title = touhou_paragon.40613.name
+	desc = {
+		trigger = {
+			nor = {
+				has_civic = civic_hakurei_shinto
+				has_civic = civic_hakurei_shinto_corp
+			}
+			any_owned_leader = {
+				has_trait = thl_leader_trait_fly
+			}
+			is_materialist = no
+		}
+		text = touhou_paragon.40613.a.desc
+	}
+	desc = {
+		trigger = {
+			nor = {
+				has_civic = civic_hakurei_shinto
+				has_civic = civic_hakurei_shinto_corp
+			}
+			any_owned_leader = {
+				has_trait = thl_leader_trait_fly
+			}
+			is_materialist = yes
+		}
+		text = touhou_paragon.40613.b.desc
+	}
+	picture = GFX_evt_ruined_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = {
+			trigger = {
+				is_materialist = no
+			}
+			text = touhou_paragon.40613.aa
+		}
+		name = {
+			trigger = {
+				is_materialist = yes
+			}
+			text = touhou_paragon.40613.ab
+		}
+		custom_tooltip = touhou_paragon.40613.a.response
+		set_country_flag = touhou_flag_allow_reimu_saisen_box_option
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.40620
+	title = touhou_paragon.40620.name
+	desc = touhou_paragon.40620.desc
+	picture = GFX_evt_reimu_spell_card
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = reimu_psi_jump
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		owner = {
+			add_research_option = tech_psi_jump_drive_1
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.40630
+	title = touhou_paragon.40630.name
+	desc = touhou_paragon.40630.desc
+	picture = GFX_evt_reimu_spell_card
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = reimu_psi_shield
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		owner = {
+			add_research_option = tech_psionic_shield
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.40710
+	title = touhou_paragon.40710.name
+	desc = touhou_paragon.40710.desc
+	picture = GFX_evt_marisa_spell_card
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	option = {
+		name = touhou_paragon.40710.a
+		owner = {
+			add_research_option = tech_master_spark
+			add_research_option = tech_final_spark
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.40720
+	title = touhou_paragon.40720.name
+	desc = touhou_paragon.40720.desc
+	picture = GFX_evt_marisa_immortal
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+
+	}
+
+	option = {
+		name = touhou_paragon.40720.a
+		custom_tooltip = touhou_paragon.40720.a.tooltip
+		remove_trait = thl_leader_trait_magician
+		add_trait = thl_leader_trait_great_magician
+		owner = {
+			set_country_flag = immortal_marisa
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40721
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			exists = owner
+			has_trait = thl_leader_trait_magic
+			has_base_skill >= 10
+		}
+	}
+
+	immediate = {
+		from = {
+			leader_event = {
+				id = touhou_paragon.40720
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40722
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_planet = {
+			has_building = building_magic_academy
+		}
+	}
+
+	immediate = {
+		random_owned_leader = {
+			limit = {
+				is_event_leader = no
+				NOR = {
+					has_trait = thl_leader_trait_magician
+					has_trait = thl_leader_trait_great_magician
+				}
+			}
+			save_event_target_as = magician_leader
+			add_trait = thl_leader_trait_magician
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = ingore_magician_event
+				}
+			}
+			country_event = {
+				id = touhou_paragon.40725
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40723
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_planet = {
+			has_building = building_magic_academy
+		}
+		from = {
+			is_event_leader = no
+			NOR = {
+				has_trait = thl_leader_trait_magician
+				has_trait = thl_leader_trait_great_magician
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			random_list = {
+				80 = {}
+				20 = {
+					add_trait = thl_leader_trait_magician
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40724
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			NOT = {
+				has_trait = thl_leader_trait_magic
+			}
+			has_trait = thl_leader_trait_magician
+			has_base_skill >= 10
+		}
+	}
+
+	immediate = {
+		from = {
+			save_event_target_as = magician_leader
+			remove_trait = thl_leader_trait_magician
+			add_trait = thl_leader_trait_great_magician
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = ingore_great_magician_event
+				}
+			}
+			country_event = {
+				id = touhou_paragon.40726
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40725
+	title = touhou_paragon.40725.name
+	desc = touhou_paragon.40725.desc
+	picture = GFX_evt_marisa_immortal
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		custom_tooltip = touhou_paragon.40725.tooltip
+	}
+
+	option = {
+		name = touhou_paragon.40725.ingore
+		custom_tooltip = touhou_paragon.40725.tooltip
+		hidden_effect = {
+			set_country_flag = ingore_magician_event
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40726
+	title = touhou_paragon.40726.name
+	desc = touhou_paragon.40726.desc
+	picture = GFX_evt_marisa_immortal
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		custom_tooltip = touhou_paragon.40726.tooltip
+	}
+
+	option = {
+		name = touhou_paragon.40725.ingore
+		custom_tooltip = touhou_paragon.40726.tooltip
+		hidden_effect = {
+			set_country_flag = ingore_great_magician_event
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40730
+	title = touhou_paragon.40730.name
+	desc = touhou_paragon.40730.desc
+	picture = GFX_evt_marisa_steal
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+	trigger = {
+		has_megastructure = grand_archive_0
+	}
+
+	option = {
+		name = touhou_paragon.40730.a
+		country_event = {
+			id = touhou_paragon.40731
+			days = 10
+		}
+	}
+
+	option = {
+		trigger = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_dolls
+			}
+		}
+		name = touhou_paragon.40730.b
+		country_event = {
+			id = touhou_paragon.40735
+			days = 10
+		}
+	}
+
+	option = {
+		trigger = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_fly
+			}
+		}
+		name = touhou_paragon.40730.c
+		country_event = {
+			id = touhou_paragon.40740
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40731
+	title = touhou_paragon.40731.name
+	desc = touhou_paragon.40731.desc
+	picture = GFX_evt_marisa_spell_card
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+	option = {
+		name = touhou_paragon.40731.a
+		country_event = {
+			id = touhou_paragon.40732
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40732
+	title = touhou_paragon.40732.name
+	desc = touhou_paragon.40732.desc
+	picture = GFX_evt_marisa_steal
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+
+	immediate = {
+		random_owned_megastructure = {
+			limit = {
+				is_megastructure_type = grand_archive_0
+			}
+			save_event_target_as = target_grand_archive
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40732.a
+		create_country = {
+			name = "NAME_Marisa_Task_Beast_Country"
+			type = faction
+			flag = {
+				icon = {
+					category = "zoological"
+					file = "flag_zoological_1.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors={
+					"black"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				save_global_event_target_as = marisa_task_beast_country
+			}
+		}
+		create_fleet = {
+			NAME = "NAME_Marisa_Task_Beast"
+			effect = {
+				set_owner = event_target:marisa_task_beast_country
+				#可汗大点兵
+				#我怎么不记得我得博物馆有这么多东西
+				create_ship = {
+					name = ""
+					design = "NAME_Tiyanki_Ox_Clonable"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Tiyanki_Cow"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Tiyanki_Bull"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Tiyanki_Hatchling"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Tiyanki_Calf"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Large_Crystal_Entity_Blue"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Medium_Crystal_Entity_Blue"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Small_Crystal_Entity_Blue"
+				}
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Large_Crystal_Entity_Green"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Medium_Crystal_Entity_Green"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Small_Crystal_Entity_Green"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Large_Crystal_Entity_Yellow"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Medium_Crystal_Entity_Yellow"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Small_Crystal_Entity_Yellow"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Large_Crystal_Entity_Red"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Medium_Crystal_Entity_Red"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Small_Crystal_Entity_Red"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Large_Space_Organism_Teal"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Small_Space_Organism_Teal"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Large_Space_Organism_Orange"
+				# }
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Small_Space_Organism_Orange"
+				# }
+				create_ship = {
+					name = ""
+					design = "NAME_Large_Space_Organism_Zebra"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Small_Space_Organism_Zebra"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Voidworms_Nymph"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Voidworms_Juvenile"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Voidworms_Mature"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Cutholoids_Hatchling"
+				}
+				create_ship = {
+					name = ""
+					design = "NAME_Cutholoids_Juvenile"
+				}
+				# create_ship = {
+				# 	name = ""
+				# 	design = "NAME_Cutholoids"
+				# }
+				set_location = {
+					target = event_target:target_grand_archive
+					distance = 20
+					angle = 0
+				}
+				set_fleet_stance = aggressive
+				set_aggro_range_measure_from = self
+				set_aggro_range = 0
+			}
+		}
+		enable_special_project = {
+			name = MARISA_SPECIAL_PROJECT
+			location = event_target:target_grand_archive
+			owner = root
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40733
+	title = touhou_paragon.40733.name
+	desc = touhou_paragon.40733.desc
+	picture = GFX_evt_marisa_cannon
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+	option = {
+		name = touhou_paragon.40733.a
+		country_event = {
+			id = touhou_paragon.40734
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40734
+	title = touhou_paragon.40734.name
+	desc = touhou_paragon.40734.desc
+	picture = GFX_evt_marisa_star
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+	option = {
+		name = touhou_paragon.40734.a
+		country_event = {
+			id = touhou_paragon.40700
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40735
+	title = touhou_paragon.40735.name
+	desc = touhou_paragon.40735.desc
+	picture = GFX_evt_alice_dolls
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+	option = {
+		name = touhou_paragon.40735.a
+		country_event = {
+			id = touhou_paragon.40736
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40736
+	title = touhou_paragon.40736.name
+	desc = touhou_paragon.40736.desc
+	picture = GFX_evt_alice_and_marisa
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+	option = {
+		name = touhou_paragon.40736.a
+		country_event = {
+			id = touhou_paragon.40737
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40737
+	title = touhou_paragon.40737.name
+	desc = touhou_paragon.40737.desc
+	picture = GFX_evt_alice_goelia
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+	option = {
+		name = touhou_paragon.40737.a
+		country_event = {
+			id = touhou_paragon.40738
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40738
+	title = touhou_paragon.40738.name
+	desc = touhou_paragon.40738.desc
+	picture = GFX_evt_alice_and_marisa
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+	trigger = {
+
+	}
+
+	option = {
+		name = touhou_paragon.40738.a
+		country_event = {
+			id = touhou_paragon.40739
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40739
+	title = touhou_paragon.40739.name
+	desc = touhou_paragon.40739.desc
+	picture = GFX_evt_marisa_star
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+	trigger = {
+
+	}
+
+	option = {
+		name = touhou_paragon.40739.a
+		country_event = {
+			id = touhou_paragon.40700
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40740
+	title = touhou_paragon.40740.name
+	desc = touhou_paragon.40740.desc
+	picture = GFX_evt_reimu_grim
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+
+	option = {
+		name = touhou_paragon.40740.a
+		country_event = {
+			id = touhou_paragon.40741
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40741
+	title = touhou_paragon.40741.name
+	desc = touhou_paragon.40741.desc
+	picture = GFX_evt_reimu_vs_marisa
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+
+	option = {
+		name = touhou_paragon.40741.a
+		country_event = {
+			id = touhou_paragon.40742
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40742
+	title = touhou_paragon.40742.name
+	desc = touhou_paragon.40742.desc
+	picture = GFX_evt_marisa_star
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+	option = {
+		name = touhou_paragon.40742.a
+		country_event = {
+			id = touhou_paragon.40700
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.41820
+	title = touhou_paragon.41820.name
+	desc = touhou_paragon.41820.desc
+	picture = GFX_evt_koakuma_comes
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	option = {
+		name = touhou_paragon.41820.a
+		owner = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							exists = event_target:demon_species
+						}
+					}
+					create_species = {
+						name = "NAME_Demon_Refugees"
+						plural = "NAME_Demon_Refugee_pl"
+						class = MAM
+						namelist = random_class
+						portrait = "demon"
+						traits = {
+							trait = "trait_pc_nuked_preference"
+							trait = "trait_psionic"
+							trait = "trait_repugnant"
+							trait = "trait_robust"
+							trait = "trait_deviants"
+							trait = "trait_very_strong"
+							trait = "trait_slow_breeders"
+						}
+					}
+					last_created_species = {
+						save_global_event_target_as = demon_species
+					}
+				}
+				create_leader = {
+					species = event_target:demon_species
+					name = "KOAKUMA_NAME"
+					custom_description = "KOAKUMA_DESC"
+					class = scientist
+					gender = indeterminable
+					set_age = 17
+					skill = 3
+					randomize_traits = yes
+					background_ethic = ethic_xenophile
+					effect = {
+						save_event_target_as = KOAKUMA
+						set_leader_flag = koakuma_leader
+					}
+					skip_background_generation = yes
+					background_job = touhou_archivist
+				}
+				event_target:KOAKUMA = {
+					change_leader_portrait = x147
+					add_trait_no_notify = subclass_scientist_explorer
+					add_trait_no_notify = leader_trait_xeno_cataloger
+					add_trait_no_notify = leader_trait_carefree
+					add_trait_no_notify = leader_trait_collaborator
+					add_trait_no_notify = leader_trait_science_communicator
+					add_trait_no_notify = leader_trait_intemporal
+					add_trait_no_notify = thl_leader_trait_regeneration_2
+					set_owner = prev
+				}
+				hire_event_leader_message = {
+					LEADER = KOAKUMA
+				}
+			}
+		}
+		custom_tooltip = touhou_paragon.41820.a.custom_tooltip
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.42110
+	title = touhou_paragon.42110.name
+	desc = touhou_paragon.42110.desc
+	picture = GFX_evt_sakura_tree
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	option = {
+		name = touhou_paragon.42110.a
+		leader_event = {
+			id = touhou_paragon.42111
+			days = 900
+		}
+		event_target:sakura_planet = {
+			add_deposit = sakura_tree
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.42111
+	title = touhou_paragon.42111.name
+	desc = touhou_paragon.42111.desc
+	picture = GFX_evt_sakura_tree
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	option = {
+		name = touhou_paragon.42111.a
+		remove_trait = thl_leader_trait_sakura
+		add_trait = thl_leader_trait_sakura_1
+		leader_event = {
+			id = touhou_paragon.42112
+			days = 900
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = event_target:ghost_species
+				}
+			}
+			create_species = {
+				name = "NAME_Thl_Ghost"
+				plural = "NAME_Thl_Ghost_pl"
+				class = MAM
+				namelist = random_class
+				portrait = "ghost"
+				traits = {
+					trait = "trait_pc_nether_preference"
+					trait = "trait_thl_spirit"
+					trait = "trait_psionic"
+					trait = "trait_weak"
+					trait = "trait_traditional"
+					trait = "trait_charismatic"
+				}
+			}
+			last_created_species = {
+				save_global_event_target_as = ghost_species
+			}
+		}
+		event_target:sakura_planet = {
+			create_pop_group = {
+				species = event_target:ghost_species
+			}
+			remove_deposit = sakura_tree
+			add_deposit = sakura_tree_1
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.42112
+	title = touhou_paragon.42112.name
+	desc = touhou_paragon.42112.desc
+	picture = GFX_evt_sakura_tree
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	option = {
+		name = touhou_paragon.42112.a
+		custom_tooltip = touhou_paragon.42112.tooltip
+		remove_trait = thl_leader_trait_sakura_1
+		add_trait = thl_leader_trait_sakura_3
+		leader_event = {
+			id = touhou_paragon.42113
+			days = 900
+		}
+		event_target:sakura_planet = {
+			change_pc = pc_tundra
+			remove_deposit = sakura_tree_1
+			add_deposit = sakura_tree_3
+		}
+		owner = {
+			set_country_flag = sakura_tree_branch_avaliable
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.42113
+	title = touhou_paragon.42113.name
+	desc = touhou_paragon.42113.desc
+	picture = GFX_evt_sakura_tree
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	option = {
+		name = touhou_paragon.42113.a
+		custom_tooltip = touhou_paragon.42113.tooltip
+		remove_trait = thl_leader_trait_sakura_3
+		add_trait = thl_leader_trait_sakura_5
+		leader_event = {
+			id = touhou_paragon.42114
+			days = 900
+		}
+		event_target:sakura_planet = {
+			change_pc = pc_arctic
+			remove_deposit = sakura_tree_3
+			add_deposit = sakura_tree_5
+		}
+		owner = {
+			set_country_flag = door_of_nether_avaliable
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.42114
+	title = touhou_paragon.42114.name
+	desc = touhou_paragon.42114.desc
+	picture = GFX_evt_sakura_tree
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	option = {
+		name = touhou_paragon.42114.a
+		custom_tooltip = touhou_paragon.42114.tooltip
+
+		remove_trait = thl_leader_trait_sakura_5
+		add_trait = thl_leader_trait_sakura_8
+		event_target:sakura_planet = {
+			change_pc = pc_nether
+			remove_deposit = sakura_tree_5
+			add_deposit = sakura_tree_8
+			hidden_effect = {
+				every_owned_pop_group = {
+					limit = {
+						is_being_purged = no
+						species = {
+							is_robotic = no
+							is_livestock = no
+						}
+					}
+					change_species = event_target:ghost_species
+				}
+			}
+		}
+		owner = {
+			set_country_flag = nether_world_avaliable
+		}
+	}
+}
+
+country_event = { #Crisis
+	id = touhou_paragon.42201
+	title = "touhou_paragon.42201.name"
+	desc = "touhou_paragon.42201.desc"
+	show_sound = event_bad_omen
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		any_owned_leader = {
+			has_trait = thl_leader_trait_flower
+		}
+		has_crisis = yes
+		NOT = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_flower_commander
+			}
+		}
+	}
+
+	diplomatic = yes
+
+	immediate = {
+	}
+
+	picture_event_data = {
+		portrait = x152 #sharpbeak_portrait
+		room = paragon_skrand_room
+	}
+
+	option = {
+		name = touhou_paragon.42201.a
+		response_text = touhou_paragon.42201.a.response
+		custom_tooltip =  touhou_paragon.yuka.tt
+		add_research_option = tech_master_spark
+		add_research_option = tech_final_spark
+		hidden_effect = {
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_flower
+				}
+				kill_leader = {
+					fire = yes
+					show_notification = no
+				}
+			}
+			civic_leader_creator = {
+				SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+				LEADER_PORTRAIT = x152
+				CLASS = commander
+				NAME = NAME_Yuka
+				LEVEL = 10
+				GENDER = female
+				IMMORTAL = no
+				ETHIC = militarist
+				DESC = yuka1
+				CATCH_PHRASE = yuka1_catch_phrase
+			}
+			last_created_leader = { #18
+				add_trait = subclass_commander_admiral
+				add_trait = leader_trait_demolisher_destiny
+				add_trait = leader_trait_legendary_foe_hammer
+				add_trait = leader_trait_legendary_commanding_presence
+				add_trait = leader_trait_legendary_gunboat_diplomacy
+				add_trait = leader_trait_aggressive
+				add_trait = leader_trait_demolisher_2
+				add_trait = leader_trait_intimidator_2
+				add_trait = leader_trait_wrecker_2
+				add_trait = leader_trait_artillerist_2
+				add_trait = leader_trait_artillery_specialization
+				add_trait = leader_trait_reckless_2
+				add_trait = leader_trait_tyrannical_2
+				add_trait = leader_trait_legendary_harsh_ruler
+				add_trait = thl_leader_trait_flower_commander
+				add_trait = thl_leader_trait_incarnation_of_nature_commander
+				add_trait = thl_leader_trait_sleeping_terror_commander
+				set_age = 17
+			}
+		}
+	}
+}
+
+country_event = { #Crisis
+	id = touhou_paragon.42202
+	title = "touhou_paragon.42202.name"
+	desc = "touhou_paragon.42202.desc"
+	show_sound = event_bad_omen
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		any_owned_leader = {
+			has_trait = thl_leader_trait_flower
+		}
+		any_country = {
+			is_country_type = awakened_fallen_empire
+		}
+		NOT = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_flower_commander
+			}
+		}
+	}
+
+	diplomatic = yes
+
+	immediate = {
+	}
+
+	picture_event_data = {
+		portrait = x152 #sharpbeak_portrait
+		room = paragon_skrand_room
+	}
+
+	option = {
+		name = touhou_paragon.42202.a
+		response_text = touhou_paragon.42202.a.response
+		custom_tooltip =  touhou_paragon.yuka.tt
+		add_research_option = tech_master_spark
+		add_research_option = tech_final_spark
+		hidden_effect = {
+			set_country_flag = yuka_become_admiral
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_flower
+				}
+				kill_leader = {
+					fire = yes
+					show_notification = no
+				}
+			}
+			civic_leader_creator = {
+				SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+				LEADER_PORTRAIT = x152
+				CLASS = commander
+				NAME = NAME_Yuka
+				LEVEL = 10
+				GENDER = female
+				IMMORTAL = no
+				ETHIC = militarist
+				DESC = yuka1
+				CATCH_PHRASE = yuka1_catch_phrase
+			}
+			last_created_leader = { #18
+				add_trait = subclass_commander_admiral
+				add_trait = leader_trait_demolisher_destiny
+				add_trait = leader_trait_legendary_foe_hammer
+				add_trait = leader_trait_legendary_commanding_presence
+				add_trait = leader_trait_legendary_gunboat_diplomacy
+				add_trait = leader_trait_aggressive
+				add_trait = leader_trait_demolisher_2
+				add_trait = leader_trait_intimidator_2
+				add_trait = leader_trait_wrecker_2
+				add_trait = leader_trait_artillerist_2
+				add_trait = leader_trait_reckless_2
+				add_trait = leader_trait_tyrannical_2
+				add_trait = leader_trait_legendary_harsh_ruler
+				add_trait = thl_leader_trait_flower_commander
+				add_trait = thl_leader_trait_incarnation_of_nature_commander
+				add_trait = thl_leader_trait_sleeping_terror_commander
+				set_age = 17
+			}
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.42410
+	title = touhou_paragon.42410.name
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_tradition = tr_cybernetics_finish
+					has_tradition = tr_synthetics_finish
+					has_tradition = tr_genetics_finish
+					has_tradition = tr_mutation_finish
+					has_tradition = tr_purity_finish
+					has_tradition = tr_cloning_finish
+					has_tradition = tr_psionics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
+				}
+			}
+		}
+		text = touhou_paragon.42410.no_asc
+	}
+	desc = {
+		trigger = {
+			owner = {
+				has_tradition = tr_cybernetics_finish
+			}
+		}
+		text = touhou_paragon.42410.cyborg
+	}
+	desc = {
+		trigger = {
+			owner = {
+				or = {
+					has_tradition = tr_synthetics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
+				}
+			}
+		}
+		text = touhou_paragon.42410.synth
+	}
+	desc = {
+		trigger = {
+			owner = {
+				has_tradition = tr_genetics_finish
+				has_tradition = tr_mutation_finish
+				has_tradition = tr_purity_finish
+				has_tradition = tr_cloning_finish
+			}
+		}
+		text = touhou_paragon.42410.gene
+	}
+	desc = {
+		trigger = {
+			owner = {
+				has_tradition = tr_psionics_finish
+			}
+		}
+		text = touhou_paragon.42410.psi
+	}
+	picture = GFX_evt_akyuu_longevity
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	immediate = {
+		save_global_event_target_as = akyuu_leader
+	}
+
+	option = {
+		name = touhou_paragon.42410.a
+		custom_tooltip = touhou_paragon.42410.a.tooltip
+		leader_event = {
+			id = touhou_paragon.42411
+			days = 7
+		}
+	}
+
+	option = {
+		name = touhou_paragon.42410.b
+		custom_tooltip = touhou_paragon.42410.b.tooltip
+		owner = {
+			country_event = {
+				id = touhou_paragon.42400
+				days = 43200
+				random = 21600
+			}
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.42411
+	title = touhou_paragon.42411.name
+	desc = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_tradition = tr_cybernetics_finish
+					has_tradition = tr_synthetics_finish
+					has_tradition = tr_genetics_finish
+					has_tradition = tr_mutation_finish
+					has_tradition = tr_purity_finish
+					has_tradition = tr_cloning_finish
+					has_tradition = tr_psionics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
+				}
+			}
+		}
+		text = touhou_paragon.42411.no_asc
+	}
+	desc = {
+		trigger = {
+			owner = {
+				has_tradition = tr_cybernetics_finish
+			}
+		}
+		text = touhou_paragon.42411.cyborg
+	}
+	desc = {
+		trigger = {
+			owner = {
+				or = {
+					has_tradition = tr_synthetics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
+				}
+			}
+		}
+		text = touhou_paragon.42411.synth
+	}
+	desc = {
+		trigger = {
+			owner = {
+				OR = {
+					has_tradition = tr_genetics_finish
+					has_tradition = tr_mutation_finish
+					has_tradition = tr_purity_finish
+					has_tradition = tr_cloning_finish
+				}
+			}
+		}
+		text = touhou_paragon.42411.gene
+	}
+	desc = {
+		trigger = {
+			owner = {
+				has_tradition = tr_psionics_finish
+				NOR = {
+					has_modifier = covenant_whisperers_in_the_void
+					has_modifier = covenant_whisperers_in_the_void_0
+				}
+			}
+		}
+		text = touhou_paragon.42411.psi
+	}
+	desc = {
+		trigger = {
+			owner = {
+				has_tradition = tr_psionics_finish
+				OR = {
+					has_modifier = covenant_whisperers_in_the_void
+					has_modifier = covenant_whisperers_in_the_void_0
+				}
+			}
+		}
+		text = touhou_paragon.42411.psi_parton
+	}
+	picture = GFX_evt_akyuu_longevity
+	show_sound = event_default
+	is_triggered_only = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	immediate = {
+		owner = {
+			if = {
+				limit = {
+					has_country_flag = longer_life
+				}
+			}
+			remove_country_flag = longer_life
+			set_country_flag = no_resource_longer
+		}
+	}
+
+	option = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_tradition = tr_cybernetics_finish
+					has_tradition = tr_synthetics_finish
+					has_tradition = tr_genetics_finish
+					has_tradition = tr_psionics_finish
+				}
+			}
+		}
+		enable_special_project = {
+			name = AKYUU_SPECIAL_PROJECT_NO_ASC
+			owner = root.owner
+			location = root.owner.capital_scope
+		}
+		name = touhou_paragon.42411.a
+		hidden_effect = {
+			owner = {
+				set_country_flag = longer_life
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			owner = {
+				has_tradition = tr_cybernetics_finish
+			}
+		}
+		allow = {
+			owner = {
+				resource_stockpile_compare = {
+					resource = nanites
+					value > 50
+				}
+			}
+		}
+		owner = {
+			add_resource = {
+				nanites = -50
+			}
+		}
+		name = touhou_paragon.42411.b
+		enable_special_project = {
+			name = AKYUU_SPECIAL_PROJECT_CYBORG
+			owner = root.owner
+			location = root.owner.capital_scope
+		}
+	}
+
+	option = {
+		trigger = {
+			owner = {
+				or = {
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
+					has_tradition = tr_synthetics_finish
+				}
+			}
+		}
+		allow = {
+			owner = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value > 1000
+				}
+			}
+		}
+		owner = {
+			add_resource = {
+				alloys = -1000
+			}
+		}
+		name = touhou_paragon.42411.c
+		enable_special_project = {
+			name = AKYUU_SPECIAL_PROJECT_SYNTH
+			owner = root.owner
+			location = root.owner.capital_scope
+		}
+	}
+
+	option = {
+		trigger = {
+			owner = {
+				has_tradition = tr_genetics_finish
+			}
+		}
+		allow = {
+			owner = {
+				resource_stockpile_compare = {
+					resource = exotic_gases
+					value > 500
+				}
+			}
+		}
+		owner = {
+			add_resource = {
+				exotic_gases = 500
+			}
+		}
+		name = touhou_paragon.42411.d
+		enable_special_project = {
+			name = AKYUU_SPECIAL_PROJECT_GENE
+			owner = root.owner
+			location = root.owner.capital_scope
+		}
+	}
+
+	option = {
+		trigger = {
+			owner = {
+				has_tradition = tr_psionics_finish
+			}
+		}
+		name = touhou_paragon.42411.e
+		leader_event = { id = touhou_paragon.42416 }
+	}
+
+	option = {
+		name = touhou_paragon.42411.f
+		custom_tooltip = touhou_paragon.42410.b.tooltip
+		owner = {
+			country_event = {
+				id = touhou_paragon.42400
+				days = 43200
+				random = 21600
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_tradition = tr_cybernetics_finish
+					has_tradition = tr_synthetics_finish
+					has_tradition = tr_genetics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
+				}
+				NOT = {
+					has_country_flag = no_resource_longer
+				}
+			}
+		}
+		enable_special_project = {
+			name = AKYUU_SPECIAL_PROJECT_NO_ASC
+			owner = root.owner
+			location = root.owner.capital_scope
+		}
+		name = touhou_paragon.42411.g
+		leader_event = {
+			id = touhou_paragon.42411
+			days = 7200
+		}
+		hidden_effect = {
+			owner = {
+				set_country_flag = no_resource_longer
+			}
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_tradition = tr_cybernetics_finish
+					has_tradition = tr_synthetics_finish
+					has_tradition = tr_genetics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
+				}
+				has_country_flag = no_resource_longer
+			}
+		}
+		name = touhou_paragon.42411.h
+		leader_event = {
+			id = touhou_paragon.42411
+			days = 3600
+		}
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.42412
+	title =  touhou_paragon.42412.name
+	desc =  touhou_paragon.42412.desc
+	picture = GFX_evt_genetic_modification
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	option = {
+		name = touhou_paragon.42412.a
+		add_trait = thl_leader_trait_longer_life
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.42413
+	title =  touhou_paragon.42413.name
+	desc =  touhou_paragon.42413.desc
+	picture = GFX_evt_cybernetics
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	option = {
+		name = touhou_paragon.42413.a
+		remove_trait = thl_leader_trait_short_life
+		add_trait = thl_leader_trait_cyborg_life
+		add_trait = leader_trait_expertise_industry
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.42414
+	title =  touhou_paragon.42414.name
+	desc =  touhou_paragon.42414.desc
+	picture = GFX_evt_robot_assembly_plant
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	option = {
+		name = touhou_paragon.42414.a
+		remove_trait = thl_leader_trait_short_life
+		add_trait = thl_leader_trait_synth_life
+		add_trait = leader_trait_expertise_computing
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.42415
+	title =  touhou_paragon.42415.name
+	desc =  touhou_paragon.42415.desc
+	picture = GFX_evt_circuitry_modification
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	option = {
+		name = touhou_paragon.42415.a
+		remove_trait = thl_leader_trait_short_life
+		add_trait = thl_leader_trait_gene_life
+		add_trait = leader_trait_expertise_biology
+	}
+}
+
+leader_event = {
+	id = touhou_paragon.42416
+	title =  touhou_paragon.42416.name
+	desc =  touhou_paragon.42416.desc
+	picture = GFX_evt_shroudwalker_enclave
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = root
+	}
+
+	trigger = {
+		exists = owner
+	}
+
+	option = {
+		name = touhou_paragon.42416.a
+		remove_trait = thl_leader_trait_short_life
+		add_trait = leader_trait_whisperers_chosen
+		add_trait = trait_ruler_deep_connections_3
+		add_trait = leader_trait_reformer_3
+		add_trait = leader_trait_politician_2
+		add_trait = leader_trait_bureaucrat_2
+		add_trait = leader_trait_expertise_psionics
+	}
+}
+
+#火焰猫燐事件链
+country_event = {
+	id = touhou_paragon.42501
+	title = touhou_paragon.42501.name
+	desc = touhou_paragon.42501.desc
+	picture = GFX_evt_marisa_immortal
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.42501.a
+		country_event = {
+			id = touhou_paragon.42502
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.42502
+	title = touhou_paragon.42502.name
+	desc = touhou_paragon.42502.desc
+	picture = GFX_evt_marisa_immortal
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.42502.a
+		country_event = {
+			id = touhou_paragon.42503
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.42503
+	title = touhou_paragon.42503.name
+	desc = touhou_paragon.42503.desc
+	picture = GFX_evt_marisa_immortal
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.42503.a
+		country_event = {
+			id = touhou_paragon.42500
+			days = 10
+		}
+	}
+}
+
+# On winning a space battle.
+country_event = {
+	id = touhou_paragon.1010
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		FROMFROM = { # Winning fleet.
+			if = {
+				limit = { exists = leader }
+				leader = {
+
+					# Reverse Engineer.
+					if = {
+						limit = {
+							has_trait = leader_trait_reverse_engineer
+						}
+						ROOT = {
+							random_list = {
+								66 = {} # 33% chance to happen.
+								33 = {
+									if = {
+										limit = {
+											can_copy_random_tech_from = {
+												who = FROM
+												category = particles
+											}
+										}
+										copy_random_tech_from = {
+											who = FROM
+											category = particles
+											progress = 0.5
+										}
+									}
+									else = {
+										copy_random_tech_from = {
+											who = FROM
+											category = propulsion
+											progress = 0.5
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = touhou_paragon.50000
+	title = touhou_paragon.50000.name
+	desc = touhou_paragon.50000.desc
+	picture = GFX_evt_ruined_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.50000.a
+		owner = {
+			country_event = {
+				id = touhou_paragon.50001
+			}
+			begin_event_chain = {
+				event_chain = ruined_shrine
+				target = from
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.50001
+	title = touhou_paragon.50001.title
+	diplomatic_title = touhou_paragon.50001.name
+	desc = touhou_paragon.50001.desc
+	location = capital_star
+	show_sound = event_mystic_reveal
+	event_chain = ruined_shrine
+	diplomatic = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = touhou_paragon.50001.a
+		response_text = touhou_paragon.50001.a.responce
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.50001.b
+		response_text = touhou_paragon.50001.b.responce
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.50001.c
+		response_text = touhou_paragon.50001.c.responce
+		is_dialog_only = yes
+	}
+	option = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		name = touhou_paragon.50001.d
+		response_text = touhou_paragon.50001.d.responce
+		is_dialog_only = yes
+	}
+	option = {
+		trigger = {
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		name = touhou_paragon.50001.d.mat
+		response_text = touhou_paragon.50001.d.mat.responce
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.50001.e
+		response_text = touhou_paragon.50001.e.responce
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.50001.f
+		response_text = touhou_paragon.50001.f.responce
+		is_dialog_only = yes
+	}
+	option = {
+		name = touhou_paragon.50001.g
+		response_text = touhou_paragon.50001.g.responce
+		custom_tooltip = touhou_paragon.50001.tooltip
+		add_modifier = {
+			modifier = blessed_by_nameless_god
+			days = -1
+		}
+		hidden_effect = {
+			fromfrom = {
+				set_planet_flag = shrine_ruin_planet
+				if = {
+					limit = {
+						is_colonizable = no
+					}
+					change_pc = pc_continental
+				}
+			}
+		}
+		create_point_of_interest = {
+			id = ruined_shrine_location
+			name = "ruined_shrine_location"
+			desc = "ruined_shrine_location_desc"
+			event_chain = ruined_shrine
+			category = ruined_shrine_home_cat
+			location = event_target:shrine_ruin_planet
+		}
+	}
+	option = {
+		name = touhou_paragon.50001.h
+		response_text = touhou_paragon.50001.h.responce
+		custom_tooltip = touhou_paragon.50001.tooltip
+		add_resource = {
+			society_research = 100
+		}
+		hidden_effect = {
+			fromfrom = {
+				set_planet_flag = shrine_ruin_planet
+				if = {
+					limit = {
+						is_colonizable = no
+					}
+					change_pc = pc_continental
+				}
+			}
+		}
+		create_point_of_interest = {
+			id = ruined_shrine_location
+			name = "ruined_shrine_location"
+			desc = "ruined_shrine_location_desc"
+			event_chain = ruined_shrine
+			category = ruined_shrine_home_cat
+			location = event_target:shrine_ruin_planet
+		}
+	}
+}
+
+planet_event = {
+	id = touhou_paragon.50002
+	title = touhou_paragon.50002.name
+	desc = touhou_paragon.50002.desc
+	picture = GFX_evt_ruined_shrine
+	show_sound = event_default
+	event_chain = ruined_shrine
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_authority = auth_corporate
+				}
+			}
+		}
+		name = touhou_paragon.50002.a
+		# while = {
+		# 	count = 2
+		# 	random_owned_pop_group =  {
+		# 		modify_species = {
+		# 			add_traits_at_start_of_list = yes
+		# 			add_trait = trait_latent_psionic
+		# 		}
+		# 		pop_change_ethic = ethic_spiritualist
+		# 	}
+		# }
+		if = {
+			limit = {
+				has_modifier = blessed_by_nameless_god
+			}
+			remove_modifier = blessed_by_nameless_god
+			add_modifier = {
+				modifier = blessed_by_nameless_god_advanced
+				days = -1
+			}
+		}
+		custom_tooltip = touhou_paragon.50002.tooltip
+		owner = {
+			remove_point_of_interest = ruined_shrine_location
+			create_point_of_interest = {
+				id = leaf_shirne
+				name = leaf_shirne
+				desc = leaf_shirne_desc
+				event_chain = ruined_shrine
+				location = capital_scope
+				category = leaf_shirne_cat
+			}
+			create_point_of_interest = {
+				id = harvest_shirne
+				name = harvest_shirne
+				desc = harvest_shirne_desc
+				event_chain = ruined_shrine
+				location = capital_scope
+				category = harvest_shirne_cat
+			}
+			create_point_of_interest = {
+				id = jinx_shirne
+				name = jinx_shirne
+				desc = jinx_shirne_desc
+				event_chain = ruined_shrine
+				location = capital_scope
+				category = jinx_shirne_cat
+			}
+			create_shrine_point_of_interest = yes
+		}
+	}
+
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+				NOT = { has_authority = auth_corporate }
+			}
+		}
+		name = touhou_paragon.50002.a.mat
+		# while = {
+		# 	count = 2
+		# 	random_owned_pop_group =  {
+		# 		modify_species = {
+		# 			add_traits_at_start_of_list = yes
+		# 			add_trait = trait_latent_psionic
+		# 		}
+		# 	}
+		# }
+		if = {
+			limit = {
+				has_modifier = blessed_by_nameless_god
+			}
+			remove_modifier = blessed_by_nameless_god
+			add_modifier = {
+				modifier = blessed_by_nameless_god_advanced
+				days = -1
+			}
+		}
+		custom_tooltip = touhou_paragon.50002.tooltip
+		owner = {
+			remove_point_of_interest = ruined_shrine_location
+			create_shrine_point_of_interest = yes
+		}
+	}
+
+	option = {
+		trigger = {
+			owner = {
+				has_authority = auth_corporate
+			}
+		}
+		name = touhou_paragon.50002.a.corp
+		# while = {
+		# 	count = 2
+		# 	random_owned_pop_group =  {
+		# 		modify_species = {
+		# 			add_traits_at_start_of_list = yes
+		# 			add_trait = trait_latent_psionic
+		# 		}
+		# 	}
+		# }
+		if = {
+			limit = {
+				has_modifier = blessed_by_nameless_god
+			}
+			remove_modifier = blessed_by_nameless_god
+			add_modifier = {
+				modifier = blessed_by_nameless_god_advanced
+				days = -1
+			}
+		}
+		custom_tooltip = touhou_paragon.50002.tooltip
+		owner = {
+			remove_point_of_interest = ruined_shrine_location
+			create_shrine_point_of_interest = yes
+		}
+	}
+}
+
+planet_event = {
+	id = touhou_paragon.50003
+	title = touhou_paragon.50003.name
+	desc = touhou_paragon.50003.desc
+	picture = GFX_evt_ruined_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.50003.a
+		owner = {
+			country_event = {
+				id = touhou_paragon.42800
+			}
+			remove_point_of_interest = leaf_shirne
+		}
+	}
+}
+
+planet_event = {
+	id = touhou_paragon.50004
+	title = touhou_paragon.50004.name
+	desc = touhou_paragon.50004.desc
+	picture = GFX_evt_ruined_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.50004.a
+		owner = {
+			country_event = {
+				id = touhou_paragon.42900
+			}
+			remove_point_of_interest = harvest_shirne
+		}
+	}
+}
+
+planet_event = {
+	id = touhou_paragon.50005
+	title = touhou_paragon.50005.name
+	desc = touhou_paragon.50005.desc
+	picture = GFX_evt_ruined_shrine
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = touhou_paragon.50005.a
+		owner = {
+			country_event = {
+				id = touhou_paragon.43000
+			}
+			remove_point_of_interest = jinx_shirne
+		}
+	}
+}
+
+#米丝蒂娅事件链
+planet_event = {
+	id = touhou_paragon.43110
+	title = touhou_paragon.43110.name
+	desc = touhou_paragon.43110.desc
+	picture = GFX_evt_mystia_idol
+	show_sound = event_default
+	is_triggered_only = yes
+	location = this
+	option = {
+		name = touhou_paragon.43110.a
+		add_modifier = {
+			modifier = mystia_modifier_1
+		}
+		hidden_effect = {
+			remove_global_flag = mystia # Put this leader back into the pool, so player could still get him
+			owner = {
+				set_country_flag = dismissed_mystia
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon.43110.b
+		enable_special_project = {
+			name = MYSTIA_SPECIAL_PROJECT
+			owner = root.owner
+			location = root
+		}
+		save_global_event_target_as = mystia_planet
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43111
+	title = touhou_paragon.43111.name
+	desc = touhou_paragon.43111.desc
+	picture = GFX_evt_mystia_sing
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43111.a
+		country_event = {
+			id = touhou_paragon.43112
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43112
+	title = touhou_paragon.43112.name
+	desc = touhou_paragon.43112.desc
+	picture = GFX_evt_mysita_cook
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43112.a
+		country_event = {
+			id = touhou_paragon.43113
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43113
+	title = touhou_paragon.43113.name
+	desc = touhou_paragon.43113.desc
+	picture = GFX_evt_mysita_cook
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43113.a
+		country_event = {
+			id = touhou_paragon.43114
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43114
+	title = touhou_paragon.43114.name
+	desc = touhou_paragon.43114.desc
+	picture = GFX_evt_mystia_sing
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43114.a
+		country_event = {
+			id = touhou_paragon.43100
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43115
+	title = touhou_paragon.43115.name
+	desc = touhou_paragon.43115.desc
+	picture = GFX_evt_mysita_cook
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43115.a
+		event_target:mystia_planet = {
+			add_modifier = {
+				modifier = mystia_modifier_2
+			}
+		}
+	}
+}
+
+#因幡帝事件链
+planet_event = {
+	id = touhou_paragon.43210
+	title = touhou_paragon.43210.name
+	desc = touhou_paragon.43210.desc
+	picture = GFX_evt_worrying_signal
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		save_global_event_target_as = tewi_world
+		set_global_flag = tewi
+	}
+
+	#不予调查（放弃因幡帝事件链）
+	option = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+		name = touhou_paragon.43210.a
+		custom_tooltip = touhou_paragon.43210.a.tooltip
+		add_modifier = {
+			modifier = modifier_tewi_world_end
+			days = 3600
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+		name = touhou_paragon.43210.b
+		custom_tooltip = touhou_paragon.43210.a.tooltip
+		add_modifier = {
+			modifier = modifier_tewi_world_end
+			days = 1800
+		}
+	}
+	#调查因幡帝事件链
+	option = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		name = touhou_paragon.43210.c
+		add_modifier = {
+			modifier = modifier_tewi_world_end
+			days = 3600
+		}
+		begin_event_chain = {
+			event_chain = touhou_eientei
+			target = root.owner
+		}
+		enable_special_project = {
+			name = TEWI_SPECIAL_PROJECT
+			owner = root.owner
+			location = root
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		name = touhou_paragon.43210.d
+		add_modifier = {
+			modifier = modifier_tewi_world_end_4
+			days = 3600
+		}
+		begin_event_chain = {
+			event_chain = touhou_eientei
+			target = root.owner
+		}
+		enable_special_project = {
+			name = TEWI_SPECIAL_PROJECT
+			owner = root.owner
+			location = root
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+		name = touhou_paragon.43210.e
+		add_modifier = {
+			modifier = modifier_tewi_world_end_2
+			days = 3600
+		}
+		begin_event_chain = {
+			event_chain = touhou_eientei
+			target = root.owner
+		}
+		enable_special_project = {
+			name = TEWI_SPECIAL_PROJECT
+			owner = root.owner
+			location = root
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				has_ethic = ethic_authoritarian
+			}
+		}
+		name = touhou_paragon.43210.f
+		add_modifier = {
+			modifier = modifier_tewi_world_end_2
+			days = 3600
+		}
+		begin_event_chain = {
+			event_chain = touhou_eientei
+			target = root.owner
+		}
+		enable_special_project = {
+			name = TEWI_SPECIAL_PROJECT
+			owner = root.owner
+			location = root
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		name = touhou_paragon.43210.g
+		add_modifier = {
+			modifier = modifier_tewi_world_end_3
+			days = 3600
+		}
+		begin_event_chain = {
+			event_chain = touhou_eientei
+			target = root.owner
+		}
+		enable_special_project = {
+			name = TEWI_SPECIAL_PROJECT
+			owner = root.owner
+			location = root
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		name = touhou_paragon.43210.h
+		add_modifier = {
+			modifier = modifier_tewi_world_end
+			days = 10800
+		}
+		owner = {
+			add_modifier = {
+				modifier = modifier_tewi_world_end_5
+				days = 10800
+			}
+		}
+		begin_event_chain = {
+			event_chain = touhou_eientei
+			target = root.owner
+		}
+		enable_special_project = {
+			name = TEWI_SPECIAL_PROJECT
+			owner = root.owner
+			location = root
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43211
+	title = touhou_paragon.43211.name
+	desc = touhou_paragon.43211.desc
+	picture = GFX_evt_tewi_rabbit
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43211.a
+		country_event = {
+			id = touhou_paragon.43212
+			days = 30
+		}
+		hidden_effect = {
+			event_target:tewi_world = {
+				create_species = {
+					name = "NAME_Rabbit"
+					plural = "NAME_Rabbit_pl"
+					class = MAM
+					namelist = random_class
+					portrait = rabbit
+					traits = {
+						trait = trait_pc_continental_preference
+						trait = trait_thl_rabbit
+						trait = trait_extremely_adaptive
+						trait = trait_charismatic
+						trait = trait_communal
+						trait = trait_thrifty
+						trait = trait_weak
+						trait = trait_fleeting
+					}
+					effect = {
+						save_global_event_target_as = rabbit_species
+					}
+				}
+				create_pop_group = {
+					species = event_target:rabbit_species
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43212
+	title = touhou_paragon.43212.name
+	desc = touhou_paragon.43212.desc
+	picture = GFX_evt_tewi_and_reisen
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43212.a
+		country_event = {
+			id = touhou_paragon.43213
+			days = 30
+		}
+		create_point_of_interest = {
+			id = reisen_data
+			name = reisen_data
+			desc = reisen_data_desc
+			event_chain = touhou_eientei
+			category = reisen_data_cat
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43213
+	title = touhou_paragon.43213.name
+	desc = touhou_paragon.43213.desc
+	picture = GFX_evt_tewi_moon
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.43213.a
+		country_event = {
+			id = touhou_paragon.43200
+		}
+		hidden_effect = {
+			every_owned_planet = {
+				if = {
+					limit = {
+						has_modifier = modifier_tewi_world_end
+					}
+					remove_modifier = modifier_tewi_world_end
+				}
+				if = {
+					limit = {
+						has_modifier = modifier_tewi_world_end_2
+					}
+					remove_modifier = modifier_tewi_world_end_2
+				}
+				if = {
+					limit = {
+						has_modifier = modifier_tewi_world_end_3
+					}
+					remove_modifier = modifier_tewi_world_end_3
+				}
+				if = {
+					limit = {
+						has_modifier = modifier_tewi_world_end_4
+					}
+					remove_modifier = modifier_tewi_world_end_4
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43220
+	title = touhou_paragon.43220.name
+	desc = touhou_paragon.43220.desc
+	diplomatic = yes
+	picture_event_data = {
+		room = root
+		portrait = x9
+		planet_background = root.capital_scope
+		graphical_culture =root
+		city_level = root
+	}
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = tewi_trade_ui_open
+		if = {
+			limit = {
+				NOT = {
+					is_variable_set = tewi_trade_times
+				}
+			}
+			set_variable = {
+				which = tewi_trade_times
+				value = 0
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon.43220.a
+		country_event = {
+			id = touhou_paragon.43221
+		}
+	}
+	option = {
+		name = touhou_paragon.43220.b
+		response_text = touhou_paragon.43220.b.responce
+	}
+	after = {
+		remove_country_flag = tewi_trade_ui_open
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43221
+	title = touhou_paragon.43221.name
+	desc = touhou_paragon.43221.desc
+	diplomatic = yes
+	picture_event_data = {
+		room = root
+		portrait = x9
+		planet_background = root.capital_scope
+		graphical_culture = root
+		city_level = root
+	}
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = tewi_trade_ui_open
+		random_playable_country = {
+			weights = {
+				base = 0
+				add = trigger:num_owned_planets
+			}
+			limit = {
+				has_communications = root
+			}
+			save_event_target_as = target_country_1
+			set_country_flag = tewi_target_country
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_communications = root
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+			}
+			random_playable_country = {
+				weights = {
+					base = 0
+					add = trigger:num_commercial_pacts
+					add = trigger:num_defensive_pacts
+					add = trigger:num_migration_pacts
+					add = trigger:num_non_aggression_pacts
+					add = trigger:num_research_agreements
+				}
+				limit = {
+					root = {
+					has_communications = prev
+				}
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+				save_event_target_as = target_country_2
+				set_country_flag = tewi_target_country
+			}
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_communications = root
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+			}
+			random_playable_country = {
+				weights = {
+					base = 0
+					add = trigger:pop_amount
+				}
+				limit = {
+					has_communications = root
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+				save_event_target_as = target_country_3
+				set_country_flag = tewi_target_country
+			}
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_communications = root
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+			}
+			random_playable_country = {
+				weights = {
+					base = 0
+					add = trigger:num_researched_techs
+				}
+				limit = {
+					has_communications = root
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+				save_event_target_as = target_country_4
+				set_country_flag = tewi_target_country
+			}
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_communications = root
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+			}
+			random_playable_country = {
+				weights = {
+					base = 0
+					add = trigger:fleet_power
+				}
+				limit = {
+					has_communications = root
+					NOT = {
+						has_country_flag = tewi_target_country
+					}
+				}
+				save_event_target_as = target_country_5
+				set_country_flag = tewi_target_country
+			}
+		}
+		random_list = {
+			5 = {
+				modifier = {
+					mult = 0
+					NOT = {
+						any_country = {
+							has_communications = root
+							NOR = {
+								has_country_flag = tewi_target_country
+								has_country_flag = rabbit_hole
+							}
+						}
+					}
+				}
+				modifier = {
+					mult = 0
+					has_country_flag = unused_rabbit_hole
+				}
+				random_playable_country = {
+					limit = {
+						has_communications = root
+						NOR = {
+							has_country_flag = tewi_target_country
+							has_country_flag = rabbit_hole
+						}
+					}
+					save_global_event_target_as = rabbit_hole_country
+					capital_star = {
+						solar_system = {
+							save_global_event_target_as = rabbit_hole_system
+						}
+					}
+					set_country_flag = tewi_target_country
+					set_country_flag = rabbit_hole
+				}
+				set_country_flag = sell_rabbit_hole
+			}
+			5 = {
+				modifier = {
+					mult = 0
+					NOT = {
+						any_country = {
+							is_country_type = guardian_dragon
+							NOT = { has_communications = root }
+							num_fleets > 0
+							any_controlled_fleet = {
+								exists = solar_system
+								solar_system = {
+									has_star_flag = guardian
+									is_curator_guardian_poi = no
+								}
+							}
+						}
+					}
+				}
+				set_country_flag = sell_dragon_poi
+			}
+			5 = {
+				modifier = {
+					mult = 0
+					NOT = {
+						has_country_flag = encountered_first_lgate
+						NOT = { has_country_flag = completed_lcluster_chain }
+						NOT = { has_global_flag = l_cluster_opened }
+						has_distar = yes
+					}
+				}
+				set_country_flag = sell_lgate_clue
+			}
+			5 = {
+				modifier = {
+					mult = 0
+					NOR = {
+						AND = {
+							has_event_chain = "vultaum_chain"
+							any_system_within_border = {
+								has_star_flag = precursor_1
+							}
+							NOT = {
+								has_completed_event_chain_counter = {
+									event_chain = vultaum_chain
+									counter = vultaum_artifacts
+								}
+							}
+						}
+						AND = {
+							has_event_chain = "yuht_chain"
+							any_system_within_border = {
+								has_star_flag = precursor_2
+							}
+							NOT = {
+								has_completed_event_chain_counter = {
+									event_chain = yuht_chain
+									counter = yuht_artifacts
+								}
+							}
+						}
+						AND = {
+							has_event_chain = "first_league_chain"
+							any_system_within_border = {
+								has_star_flag = precursor_3
+							}
+							NOT = {
+								has_completed_event_chain_counter = {
+									event_chain = first_league_chain
+									counter = first_league_artifacts
+								}
+							}
+						}
+						AND = {
+							has_event_chain = "irassian_chain"
+							any_system_within_border = {
+								has_star_flag = precursor_4
+							}
+							NOT = {
+								has_completed_event_chain_counter = {
+									event_chain = irassian_chain
+									counter = irassian_artifacts
+								}
+							}
+						}
+						AND = {
+							has_event_chain = "cybrex_chain"
+							any_system_within_border = {
+								has_star_flag = precursor_5
+							}
+							NOT = {
+								has_completed_event_chain_counter = {
+									event_chain = cybrex_chain
+									counter = cybrex_artifacts
+								}
+							}
+						}
+					}
+				}
+				set_country_flag = sell_precursor_clue
+			}
+			0 = {
+				modifier = {
+					add = tewi_trade_times
+				}
+				modifier = {
+					mult = 0
+					any_owned_leader = {
+						has_trait = thl_leader_trait_wave_length
+					}
+				}
+				modifier = {
+					mult = 0
+					has_global_flag = reisen
+				}
+				modifier = {
+					mult = 0
+					has_country_flag = dismissed_reisen
+				}
+				set_country_flag = sell_reisen
+			}
+		}
+	}
+	option = {
+		trigger = {
+			exists = event_target:target_country_1
+		}
+		allow = {
+			has_resource = { type = energy amount > 1000 }
+		}
+		name = touhou_paragon.43221.a
+		add_resource = {
+			energy = -1000
+		}
+		add_intel_report = {
+			category = government
+			level = 4
+			days = 720
+			who = event_target:target_country_1
+		}
+		hidden_effect = {
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+	}
+	option = {
+		trigger = {
+			exists = event_target:target_country_2
+		}
+		allow = {
+			has_resource = { type = energy amount > 1500 }
+		}
+		name = touhou_paragon.43221.b
+		add_resource = {
+			energy = -1500
+		}
+		add_intel_report = {
+			category = diplomacy
+			level = 4
+			days = 720
+			who = event_target:target_country_2
+		}
+		hidden_effect = {
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+	}
+	option = {
+		trigger = {
+			exists = event_target:target_country_3
+		}
+		allow = {
+			has_resource = { type = energy amount > 2000 }
+		}
+		name = touhou_paragon.43221.c
+		add_resource = {
+			energy = -2000
+		}
+		add_intel_report = {
+			category = economy
+			level = 4
+			days = 720
+			who = event_target:target_country_3
+		}
+		hidden_effect = {
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+	}
+	option = {
+		trigger = {
+			exists = event_target:target_country_4
+		}
+		allow = {
+			has_resource = { type = energy amount > 2500 }
+		}
+		name = touhou_paragon.43221.d
+		add_resource = {
+			energy = -2500
+		}
+		add_intel_report = {
+			category = technology
+			level = 4
+			days = 720
+			who = event_target:target_country_4
+		}
+		hidden_effect = {
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+	}
+	option = {
+		trigger = {
+			exists = event_target:target_country_5
+		}
+		allow = {
+			has_resource = { type = energy amount > 3000 }
+		}
+		name = touhou_paragon.43221.e
+		add_resource = {
+			energy = -3000
+		}
+		add_intel_report = {
+			category = military
+			level = 4
+			days = 720
+			who = event_target:target_country_5
+		}
+		hidden_effect = {
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+		response_text = touhou_paragon.43221.a.responce
+	}
+	option = {
+		trigger = {
+			has_country_flag = sell_rabbit_hole
+			exists = event_target:rabbit_hole_country
+		}
+		name = touhou_paragon.43221.f
+		allow = {
+			has_resource = { type = energy amount > 10000 }
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			add_seen_bypass_type = tewi_rabbithole
+			set_country_flag = unused_rabbit_hole
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+		response_text = touhou_paragon.43221.f.responce
+	}
+	option = {
+		trigger = {
+			has_country_flag = sell_dragon_poi
+		}
+		name = touhou_paragon.43221.g
+		allow = {
+			has_resource = { type = energy amount > 10000 }
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			capital_scope = {
+				closest_system = {
+					min_steps = 0
+					max_steps = 999
+					limit = {
+						has_star_flag = guardian
+						is_curator_guardian_poi = no
+						any_fleet_in_system = {
+							exists = owner
+							owner = {
+								is_country_type = guardian_dragon
+								NOT = { has_communications = root }
+							}
+						}
+					}
+					random_fleet_in_system = {
+						limit = {
+							exists = owner
+							owner = {
+								is_country_type = guardian_dragon
+								NOT = { has_communications = root }
+							}
+						}
+						owner = {
+							create_curator_guardian_poi = {
+								POI = curator_poi_dragon
+							}
+						}
+					}
+				}
+			}
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+		response_text = touhou_paragon.43221.g.responce
+	}
+	option = {
+		trigger = {
+			has_country_flag = sell_precursor_clue
+		}
+		name = touhou_paragon.43221.h
+		allow = {
+			has_resource = { type = energy amount > 10000 }
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			country_event = { id = precursor.320 }
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+		response_text = touhou_paragon.43221.h.responce
+	}
+	option = {
+		trigger = {
+			has_country_flag = sell_lgate_clue
+		}
+		name = touhou_paragon.43221.i
+		allow = {
+			has_resource = { type = energy amount > 10000 }
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			generate_lcluster_clue = yes
+			change_variable = {
+				which = tewi_trade_times
+				value = 1
+			}
+			set_timed_country_flag = {
+				flag = tewi_trade
+				days = 360
+			}
+			set_saved_date = {
+				key = tewi_trade_date
+				days_from_present = 360
+				expires = 361
+			}
+		}
+		response_text = touhou_paragon.43221.i.responce
+	}
+	option = {
+		trigger = {
+			has_country_flag = sell_reisen
+		}
+		name = touhou_paragon.43221.reisen
+		allow = {
+			has_resource = { type = energy amount > 53000 }
+		}
+		add_resource = {
+			energy = -53000
+		}
+		country_event = {
+			id = touhou_paragon.40800
+		}
+		hidden_effect = {
+			remove_point_of_interest = reisen_data
+		}
+		response_text = touhou_paragon.43221.reisen.responce
+	}
+	option = {
+		name = touhou_paragon.43221.z
+		response_text = touhou_paragon.43221.z.responce
+	}
+	after = {
+		every_country = {
+			limit = {
+				has_country_flag = tewi_target_country
+			}
+			remove_country_flag = tewi_target_country
+		}
+		remove_country_flag = sell_rabbit_hole
+		remove_country_flag = sell_dragon_poi
+		remove_country_flag = sell_precursor_clue
+		remove_country_flag = sell_lgate_clue
+		remove_country_flag = sell_reisen
+		remove_country_flag = tewi_trade_ui_open
+	}
+}
+
+ship_event = {
+	id = touhou_paragon.40410
+	title = touhou_paragon.40410.name
+	desc = touhou_paragon.40410.desc
+	picture = GFX_evt_hidden_door
+	show_sound = event_wind_ruins
+	location = from
+	is_triggered_only = yes
+
+	immediate = {
+		leader = {
+			save_event_target_as = target_scientist
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40410.a
+		hidden_effect = {
+			ship_event = {
+				id = touhou_paragon.40411
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = touhou_paragon.40411
+	title = touhou_paragon.40411.name
+	desc = touhou_paragon.40411.desc
+	picture = GFX_evt_alien_hieroglyphics
+	show_sound = event_wind_ruins
+	location = from
+	is_triggered_only = yes
+
+	immediate = {
+		leader = {
+			save_event_target_as = target_scientist
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40411.a
+		hidden_effect = {
+			ship_event = {
+				id = touhou_paragon.40412
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = touhou_paragon.40412
+	title = touhou_paragon.40412.name
+	desc = touhou_paragon.40412.desc
+	picture = GFX_evt_ancient_records
+	show_sound = event_wind_ruins
+	location = from
+	is_triggered_only = yes
+
+	immediate = {
+		leader = {
+			save_event_target_as = target_scientist
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40412.a
+		hidden_effect = {
+			ship_event = {
+				id = touhou_paragon.40416
+			}
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40412.b
+		hidden_effect = {
+			ship_event = {
+				id = touhou_paragon.40413
+			}
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40412.c
+		hidden_effect = {
+			ship_event = {
+				id = touhou_paragon.40416
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = touhou_paragon.40413
+	title = touhou_paragon.40413.name
+	desc = touhou_paragon.40413.desc
+	picture = GFX_evt_ancient_records
+	show_sound = event_wind_ruins
+	location = from
+	is_triggered_only = yes
+
+	immediate = {
+		leader = {
+			save_event_target_as = target_scientist
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40413.a
+		hidden_effect = {
+			ship_event = {
+				id = touhou_paragon.40416
+			}
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40413.b
+		hidden_effect = {
+			ship_event = {
+				id = touhou_paragon.40416
+			}
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40413.c
+		hidden_effect = {
+			ship_event = {
+				id = touhou_paragon.40414
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = touhou_paragon.40414
+	title = touhou_paragon.40414.name
+	desc = touhou_paragon.40414.desc
+	picture = GFX_evt_ancient_records
+	show_sound = event_wind_ruins
+	location = from
+	is_triggered_only = yes
+
+	immediate = {
+		leader = {
+			save_event_target_as = target_scientist
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40414.a
+		hidden_effect = {
+			ship_event = {
+				id = touhou_paragon.40415
+			}
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40414.b
+		hidden_effect = {
+			ship_event = {
+				id = touhou_paragon.40416
+			}
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40414.c
+		hidden_effect = {
+			ship_event = {
+				id = touhou_paragon.40416
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = touhou_paragon.40415
+	title = touhou_paragon.40415.name
+	desc = touhou_paragon.40415.desc
+	picture = GFX_evt_astral_rift_tower_invitation
+	show_sound = event_wind_ruins
+	location = from
+	is_triggered_only = yes
+
+	immediate = {
+		leader = {
+			save_event_target_as = target_scientist
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40415.a
+		owner = {
+			country_event = {
+				id = touhou_paragon.40400
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = touhou_paragon.40416
+	title = touhou_paragon.40416.name
+	desc = touhou_paragon.40416.desc
+	picture = GFX_evt_ancient_records
+	show_sound = event_wind_ruins
+	location = from
+	is_triggered_only = yes
+
+	immediate = {
+		leader = {
+			save_event_target_as = target_scientist
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40416.a
+		event_target:target_scientist = {
+			add_trait = thl_leader_trait_bird_brain
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.41110
+	title = touhou_paragon.41110.name
+	desc = touhou_paragon.41110.desc
+	picture = GFX_evt_astral_rift
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = event_target:hifuu_system
+
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				OR = {
+					has_building = building_astral_siphon_1
+					has_building = building_astral_siphon_2
+					has_building = building_astral_siphon_3
+				}
+			}
+			save_global_event_target_as = hifuu_planet
+			solar_system = {
+				save_global_event_target_as = hifuu_system
+			}
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		event_target:hifuu_system = {
+			spawn_astral_rift = {
+				orbit_angle = 360
+				random_pos = yes
+				id = hifuu_space_station
+				graphics_entity_name = astral_rift_entity
+			}
+		}
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41111
+	title = touhou_paragon.41111.name
+	desc = touhou_paragon.41111.desc
+	picture = GFX_evt_hifuu_forest
+	show_sound = ap_rift_event_30_sentient_trees_planet
+	difficulty = @astral_rift_initial_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41111.a
+		explorer = { astral_thread_small_reward = yes }
+		set_next_astral_rift_event = { id = touhou_paragon.41112 }
+	}
+	option = {
+		name = touhou_paragon.41111.b
+		explorer = { astral_thread_small_reward = yes }
+		set_next_astral_rift_event = { id = touhou_paragon.41113 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41112
+	title = touhou_paragon.41112.name
+	desc = {
+		trigger = {
+			explorer = {
+				owner_main_species = {
+					is_human_species = yes
+				}
+			}
+		}
+		text = touhou_paragon.41112.desc.human
+	}
+	desc = {
+		trigger = {
+			explorer = {
+				owner_main_species = {
+					is_human_species = no
+				}
+			}
+		}
+		text = touhou_paragon.41112.desc
+	}
+	picture = GFX_evt_hifuu_machine
+	show_sound = ap_rift_event_30_sentient_trees_planet
+	difficulty = @astral_rift_initial_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41112.a
+		explorer = {
+			astral_thread_small_reward = yes
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_genome_mapping
+					}
+				}
+				add_tech_progress = {
+					tech = tech_genome_mapping
+					progress = 0.25
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_technology = tech_gene_tailoring
+					}
+				}
+				add_tech_progress = {
+					tech = tech_gene_tailoring
+					progress = 0.25
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_technology = tech_gene_expressions
+					}
+				}
+				add_tech_progress = {
+					tech = tech_gene_expressions
+					progress = 0.25
+				}
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier1researchreward
+					min = @tier1researchmin
+					max = @tier1researchmax
+				}
+			}
+		}
+		set_next_astral_rift_event = { id = touhou_paragon.41114 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41113
+	title = touhou_paragon.41113.name
+	desc = {
+		trigger = {
+			explorer = {
+				owner_main_species = {
+					is_human_species = yes
+				}
+			}
+		}
+		text = touhou_paragon.41113.desc.human
+	}
+	desc = {
+		trigger = {
+			explorer = {
+				owner_main_species = {
+					is_human_species = no
+				}
+			}
+		}
+		text = touhou_paragon.41113.desc
+	}
+	picture = GFX_evt_hifuu_machine
+	show_sound = ap_rift_event_30_sentient_trees_planet
+	difficulty = @astral_rift_initial_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41113.a
+		explorer = {
+			astral_thread_small_reward = yes
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_habitat_1
+					}
+				}
+				add_tech_progress = {
+					tech = tech_habitat_1
+					progress = 0.25
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_technology = tech_habitat_2
+					}
+				}
+				add_tech_progress = {
+					tech = tech_habitat_2
+					progress = 0.25
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_technology = tech_habitat_3
+					}
+				}
+				add_tech_progress = {
+					tech = tech_habitat_3
+					progress = 0.25
+				}
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier1researchreward
+					min = @tier1researchmin
+					max = @tier1researchmax
+				}
+			}
+		}
+		set_next_astral_rift_event = { id = touhou_paragon.41114 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41114
+	title = touhou_paragon.41114.name
+	desc = {
+		trigger = {
+			explorer = {
+				owner_main_species = {
+					is_human_species = yes
+				}
+			}
+		}
+		text = touhou_paragon.41114.desc.human
+	}
+	desc = {
+		trigger = {
+			explorer = {
+				owner_main_species = {
+					is_human_species = no
+				}
+			}
+		}
+		text = touhou_paragon.41114.desc
+	}
+	picture = GFX_evt_hifuu_couple
+	show_sound = ap_rift_event_30_sentient_trees_planet
+	difficulty = @astral_rift_initial_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41114.a
+		explorer = { astral_thread_small_reward = yes }
+		set_next_astral_rift_event = { id = touhou_paragon.41115 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41115
+	title = touhou_paragon.41115.name
+	desc = touhou_paragon.41115.desc
+	picture = GFX_evt_astral_rift_crystal_3
+	show_sound = ap_rift_event_30_sentient_trees_planet
+	difficulty = @astral_rift_initial_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41115.a
+		explorer = { astral_thread_small_reward = yes }
+		hidden_effect = {
+			add_stage_modifier = { modifier = astral_rift_difficulty_increase_1 }
+		}
+		set_next_astral_rift_event = { id = touhou_paragon.41116 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41116
+	title = touhou_paragon.41116.name
+	desc = touhou_paragon.41116.desc
+	picture = GFX_evt_astral_rift_tropical_habitat
+	show_sound = ap_rift_event_30_sentient_trees_planet
+	difficulty = @astral_rift_initial_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41116.a
+		explorer = {
+			astral_thread_large_reward = yes
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_morphogenetic_field_mastery
+					}
+				}
+				add_tech_progress = {
+					tech = tech_morphogenetic_field_mastery
+					progress = 0.25
+				}
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier2researchreward
+					min = @tier2researchmin
+					max = @tier2researchmax
+				}
+			}
+			country_event = {
+				id = touhou_paragon.41100
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				spawn_planet = {
+					class = pc_habitat
+					name = "NAME_Bird_Ship_Relic"
+					location = event_target:hifuu_planet
+					orbit_location = yes
+					orbit_distance_offset = 10
+					orbit_angle_offset = 5
+					init_effect = {
+						set_planet_flag = habitat
+						set_planet_flag = habitat_level_1
+						set_planet_entity = {
+							entity = "habitat_phase_01_entity"
+							graphical_culture = humanoid_01
+						}
+						save_event_target_as = pre_sapient_planet
+						create_generic_presapient_species = { UPLIFT_TO = MAM }
+						set_planet_flag = pre_sapient_planet
+						add_deposit = d_hifuu_habitat_research
+						add_deposit = d_dangerous_wildlife_blocker
+						add_deposit = d_dangerous_wildlife_blocker
+						add_deposit = d_dangerous_wildlife_blocker
+					}
+				}
+			}
+		}
+		custom_tooltip = hifuu_station_tooltip
+		finish_astral_rift = yes
+	}
+}

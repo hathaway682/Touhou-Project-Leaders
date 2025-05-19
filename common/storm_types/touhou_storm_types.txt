@@ -1,0 +1,191 @@
+# Moriya Storm Type
+
+moriya_storm = {
+	inline_script = "cosmic_storms/BaseModifier"
+
+	inline_script = {
+		script = "cosmic_storms/StormConfig"
+		MIN_RADIUS = 25
+		MAX_RADIUS = 50
+		MIN_RANGE = value:storm_range_min
+		MAX_RANGE = value:storm_range_max
+		STORM_SPEED = 0.02
+		ACTIVATION_PERIOD_IN_MONTHS = 12
+		MONTHLY_ADDED_DEVASTATION = @cosmic_storm_base_monthly_devastation
+	}
+
+	spawn_weight = {
+		base = 0
+	}
+	description = moriya_storm_lore_description
+
+	### positive effects ###
+
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				NOR = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+					has_civic = civic_moriya_shinto
+					has_civic = civic_moriya_shinto_corp
+				}
+			}
+		}
+		modifier = {
+			ship_evasion_mult = -0.1
+			custom_tooltip = "moriya_storm_ship_evasion_negative_modifier_tt"
+		}
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				NOR = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+					has_civic = civic_moriya_shinto
+					has_civic = civic_moriya_shinto_corp
+				}
+			}
+		}
+		modifier = {
+			ship_weapon_damage = -0.3
+			custom_tooltip = "moriya_storm_ship_evasion_negative_modifier_tt"
+		}
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				OR = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+					has_civic = civic_moriya_shinto
+					has_civic = civic_moriya_shinto_corp
+				}
+			}
+		}
+		modifier = {
+			ship_evasion_mult = 0.1
+			custom_tooltip = "moriya_storm_ship_evasion_modifier_tt"
+		}
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			owner = {
+				OR = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+					has_civic = civic_moriya_shinto
+					has_civic = civic_moriya_shinto_corp
+				}
+			}
+		}
+		modifier = {
+			ship_weapon_damage = 0.3
+			custom_tooltip = "moriya_storm_ship_damage_modifier_tt"
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				is_colony = yes
+				is_colonizable = yes
+			}
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			planet_priests_produces_mult = 0.5
+		}
+	}
+
+	### negative effects ###
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				is_colony = yes
+				is_colonizable = yes
+			}
+			system_has_negating_storm_building = no
+			owner = {
+				NOR = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+					has_civic = civic_moriya_shinto
+					has_civic = civic_moriya_shinto_corp
+				}
+			}
+		}
+		planet_stability_mult = -0.2
+		mult = value:storm_resistant_production_multiplier
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				is_colony = yes
+				is_colonizable = yes
+			}
+			owner = {
+				OR = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+					has_civic = civic_moriya_shinto
+					has_civic = civic_moriya_shinto_corp
+				}
+			}
+		}
+		planet_stability_mult = 0.2
+	}
+
+	on_start = {
+		every_system_within_storm = {
+			added_to_storm_base_effect = yes
+			shroud_storm_add = yes
+		}
+	}
+
+	on_finished = {
+		every_system_within_storm = {
+			removed_from_storm_base_effect = yes
+			shroud_storm_remove = yes
+		}
+	}
+
+	on_moved = {
+		every_system_added_to_storm = {
+			added_to_storm_base_effect = yes
+			shroud_storm_add = yes
+		}
+
+		every_system_removed_from_storm = {
+			removed_from_storm_base_effect = yes
+			shroud_storm_remove = yes
+		}
+	}
+	cosmic_storm_texture_path = "gfx/map/storms/NebulaOpacity.dds"
+	cosmic_storm_texture_color_path = "gfx/map/storms/shroud_storm_color.dds"
+	cosmic_storm_event_sprite = "GFX_shroud_storm"
+	icon = GFX_planetview_storm_shroud_modifier_frame
+
+	cosmic_storm_texture_lightning_paths = {
+		"gfx/map/storms/lightning/lightning_small_storm_01.dds"
+		"gfx/map/storms/lightning/lightning_small_storm_02.dds"
+		"gfx/map/storms/lightning/lightning_mid_storm_01.dds"
+		"gfx/map/storms/lightning/lightning_mid_storm_02.dds"
+	}
+
+	cosmic_storm_galaxy_lightning_time = 10.0
+	cosmic_storm_galaxy_max_opacity = 0.4
+}

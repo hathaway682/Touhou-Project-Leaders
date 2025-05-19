@@ -1,0 +1,601 @@
+
+animation = {
+	name = "Golyat_egg_2_main_idle_animation"
+	file = "Golyat_egg_2_main_idle.anim"
+}
+animation = {
+	name = "Golyat_egg_2_main_death_animation"
+	file = "Golyat_egg_2_main_death.anim"
+}
+
+animation = {
+	name = "Golyat_egg_2_leg_idle_animation"
+	file = "Golyat_egg_2_leg_idle.anim"
+}
+animation = {
+	name = "Golyat_egg_2_leg_death_animation"
+	file = "Golyat_egg_2_leg_death.anim"
+}
+
+animation = {
+	name = "Golyat_egg_3_idle_animation"
+	file = "Golyat_egg_3_idle.anim"
+}
+animation = {
+	name = "Golyat_egg_3_death_animation"
+	file = "Golyat_egg_3_death.anim"
+}
+
+
+animation = {
+	name = "Golyat_egg_4A_stop_animation"
+	file = "Golyat_egg_4A_stop.anim"
+}
+animation = {
+	name = "Golyat_egg_4A_idle_animation"
+	file = "Golyat_egg_4A_idle.anim"
+}
+animation = {
+	name = "Golyat_egg_4A_death_animation"
+	file = "Golyat_egg_4A_death.anim"
+}
+
+
+animation = {
+	name = "Golyat_egg_4B_stop_animation"
+	file = "Golyat_egg_4B_stop.anim"
+}
+animation = {
+	name = "Golyat_egg_4B_idle_animation"
+	file = "Golyat_egg_4B_idle.anim"
+}
+animation = {
+	name = "Golyat_egg_4B_death_animation"
+	file = "Golyat_egg_4B_death.anim"
+}
+
+
+animation = {
+	name = "Golyat_egg_4C_idle_animation"
+	file = "Golyat_egg_4C_idle.anim"
+}
+animation = {
+	name = "Golyat_egg_4C_death_animation"
+	file = "Golyat_egg_4C_death.anim"
+}
+
+
+
+
+
+
+animation = {
+	name = "Golyat_egg_7_golyat_special_animation"
+	file = "Golyat_egg_7_golyat_special.anim"
+}
+
+
+####################################
+
+
+
+
+entity = {
+	name = "Golyat_egg_2_main_entity"
+	pdxmesh = "Golyat_egg_2_main_mesh"
+
+	default_state = "idle"
+
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+	}
+}
+
+
+entity = {
+	name = "Golyat_egg_2_leg_entity"
+	pdxmesh = "Golyat_egg_2_leg_mesh"
+
+	default_state = "idle"
+
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+	}
+}
+
+
+
+entity = {
+	name = "Golyat_egg_2_entity"
+	cull_radius = 99999
+
+	locator = { name = "parts001" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts002" position = { 0 0 0 } rotation = { 0 0 0 } }
+
+	attach = { parts001 = "Golyat_egg_2_main_entity" }
+	attach = { parts002 = "Golyat_egg_2_leg_entity" }
+
+}
+
+####################################
+
+
+
+entity = {
+	name = "Golyat_egg_3_stations_entity"
+	pdxmesh = "Golyat_egg_3_mesh"
+
+	default_state = "idle"
+
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+	}
+
+	attach = { station_locator1 = "nemesis_01_mining_station_section_entity" }
+	attach = { station_locator2 = "nemesis_01_mining_station_section_entity" }
+	attach = { station_locator3 = "nemesis_01_mining_station_section_entity" }
+	attach = { station_locator4 = "nemesis_01_mining_station_section_entity" }
+	attach = { station_locator5 = "nemesis_01_mining_station_section_entity" }
+	attach = { station_locator6 = "nemesis_01_mining_station_section_entity" }
+	attach = { station_locator7 = "nemesis_01_mining_station_section_entity" }
+	attach = { station_locator8 = "nemesis_01_mining_station_section_entity" }
+	attach = { station_locator9 = "nemesis_01_mining_station_section_entity" }
+	attach = { station_locator10 = "nemesis_01_mining_station_section_entity" }
+	attach = { station_locator11 = "nemesis_01_mining_station_section_entity" }
+	attach = { station_locator12 = "nemesis_01_mining_station_section_entity" }
+	scale = 5
+}
+
+
+
+
+entity = {
+	name = "Golyat_egg_3_entity"
+	cull_radius = 99999
+
+	locator = { name = "parts001" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts002" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts003" position = { 0 0 0 } rotation = { 0 0 0 } }
+
+	attach = { parts001 = "Golyat_egg_2_main_entity" }
+	attach = { parts002 = "Golyat_egg_2_leg_entity" }
+	attach = { parts003 = "Golyat_egg_3_stations_entity" }
+}
+
+
+####################################
+
+
+
+entity = {
+	name = "Golyat_egg_4A_stop_entity"
+	pdxmesh = "Golyat_egg_4A_mesh"
+
+	default_state = "idle"
+
+	state = { name = "idle" animation = "stop"  animation_blend_time = 0 looping = no next_state = "idle"
+	}
+}
+
+entity = {
+	name = "Golyat_egg_4B_stop_entity"
+	pdxmesh = "Golyat_egg_4B_mesh"
+
+	default_state = "idle"
+
+	state = { name = "idle" animation = "stop"  animation_blend_time = 0 looping = no next_state = "idle"
+	}
+}
+
+entity = {
+	name = "Golyat_egg_4C_idle_entity"
+	pdxmesh = "Golyat_egg_4C_mesh"
+
+	default_state = "idle"
+
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+	}
+}
+entity = {
+	name = "Golyat_egg_4C_sphere_entity"
+	pdxmesh = "Golyat_egg_4_sphere_mesh"
+}
+
+
+entity = {
+	name = "Golyat_egg_4_entity"
+	cull_radius = 99999
+
+	locator = { name = "parts001" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts002" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts003" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts004" position = { 0 240 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts005" position = { 0 240 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts006" position = { 0 240 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts007" position = { 0 240 0 } rotation = { 0 0 0 } }
+
+	attach = { parts001 = "Golyat_egg_2_main_entity" }
+	attach = { parts002 = "Golyat_egg_2_leg_entity" }
+	attach = { parts003 = "Golyat_egg_3_stations_entity" }
+	attach = { parts004 = "Golyat_egg_4A_stop_entity" }
+	attach = { parts005 = "Golyat_egg_4B_stop_entity" }
+	attach = { parts006 = "Golyat_egg_4C_idle_entity" }
+	attach = { parts007 = "Golyat_egg_4C_sphere_entity" }
+}
+
+
+####################################
+
+
+
+entity = {
+	name = "Golyat_egg_4A_idle_entity"
+	pdxmesh = "Golyat_egg_4A_mesh"
+
+	default_state = "idle"
+
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+	}
+}
+
+entity = {
+	name = "Golyat_egg_4B_idle_entity"
+	pdxmesh = "Golyat_egg_4B_mesh"
+
+	default_state = "idle"
+
+	state = { name = "idle" animation = "idle"  animation_blend_time = 0 looping = no next_state = "idle"
+	}
+}
+
+
+entity = {
+	name = "Golyat_egg_5_entity"
+	cull_radius = 99999
+
+	locator = { name = "parts001" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts002" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts003" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts004" position = { 0 240 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts005" position = { 0 240 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts006" position = { 0 240 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts007" position = { 0 240 0 } rotation = { 0 0 0 } }
+
+	attach = { parts001 = "Golyat_egg_2_main_entity" }
+	attach = { parts002 = "Golyat_egg_2_leg_entity" }
+	attach = { parts003 = "Golyat_egg_3_stations_entity" }
+	attach = { parts004 = "Golyat_egg_4A_idle_entity" }
+	attach = { parts005 = "Golyat_egg_4B_idle_entity" }
+	attach = { parts006 = "Golyat_egg_4C_idle_entity" }
+	attach = { parts007 = "Golyat_egg_4C_sphere_entity" }
+}
+
+
+
+
+
+#########################################################################################################
+
+
+
+entity = {
+	name = "Golyat_egg_2_main_death_entity"
+	pdxmesh = "Golyat_egg_2_main_mesh"
+
+	default_state = "idle"
+
+	state = { name = "idle" animation = "death"  state_time = 720 looping = no next_state = "idle"
+	}
+}
+
+
+entity = {
+	name = "Golyat_egg_2_leg_death_entity"
+	pdxmesh = "Golyat_egg_2_leg_mesh"
+
+	default_state = "idle"
+
+	state = { name = "idle" animation = "death"  state_time = 720 looping = no next_state = "idle"
+	}
+}
+
+entity = {
+	name = "nemesis_01_mining_station_section_death_entity"
+	pdxmesh = "nemesis_01_mining_station_mesh"
+
+
+	default_state = "death"
+	state = { name = "death"	 animation = "death" state_time = 720 looping = no  next_state = "death"
+
+		event = { time = 0.0 node = "light_locator_1" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		event = { time = 2.5 node = "light_locator_2" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		event = { time = 4.5 node = "light_locator_3" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		event = { time = 10.0 node = "light_locator_4" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		event = { time = 15.0 node = "light_locator_5" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		event = { time = 1.0 node = "explosion_locator_1" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		event = { time = 4.0 node = "explosion_locator_2" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+
+		event = { time = 19.0 node = "light_locator_1" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		event = { time = 20.5 node = "light_locator_2" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		event = { time = 19.5 node = "light_locator_3" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		event = { time = 23.0 node = "light_locator_4" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		event = { time = 24.0 node = "light_locator_5" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		event = { time = 22.50 node = "explosion_locator_1" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		event = { time = 21.80 node = "explosion_locator_2" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+	}
+}
+
+
+entity = {
+	name = "Golyat_egg_3_stations_death_entity"
+	pdxmesh = "Golyat_egg_3_mesh"
+
+	default_state = "death"
+
+	state = { name = "death" animation = "death"  state_time = 720 looping = no  next_state = "death"
+	}
+
+	attach = { station_locator1 = "nemesis_01_mining_station_section_death_entity" }
+	attach = { station_locator2 = "nemesis_01_mining_station_section_death_entity" }
+	attach = { station_locator3 = "nemesis_01_mining_station_section_death_entity" }
+	attach = { station_locator4 = "nemesis_01_mining_station_section_death_entity" }
+	attach = { station_locator5 = "nemesis_01_mining_station_section_death_entity" }
+	attach = { station_locator6 = "nemesis_01_mining_station_section_death_entity" }
+	attach = { station_locator7 = "nemesis_01_mining_station_section_death_entity" }
+	attach = { station_locator8 = "nemesis_01_mining_station_section_death_entity" }
+	attach = { station_locator9 = "nemesis_01_mining_station_section_death_entity" }
+	attach = { station_locator10 = "nemesis_01_mining_station_section_death_entity" }
+	attach = { station_locator11 = "nemesis_01_mining_station_section_death_entity" }
+	attach = { station_locator12 = "nemesis_01_mining_station_section_death_entity" }
+	scale = 5
+}
+
+
+
+entity = {
+	name = "Golyat_egg_4A_death_entity"
+	pdxmesh = "Golyat_egg_4A_mesh"
+
+	default_state = "death"
+
+	state = { name = "death" animation = "death"  animation_blend_time = 0 state_time = 720 looping = no next_state = "death"
+	}
+}
+
+
+entity = {
+	name = "Golyat_egg_4B_death_entity"
+	pdxmesh = "Golyat_egg_4B_mesh"
+
+	default_state = "death"
+
+	state = { name = "death" animation = "death"  animation_blend_time = 0 state_time = 720 looping = no next_state = "death"
+	}
+}
+
+
+entity = {
+	name = "Golyat_egg_4C_death_entity"
+	pdxmesh = "Golyat_egg_4C_mesh"
+
+	default_state = "death"
+
+	state = { name = "death" animation = "death"  animation_blend_time = 0 state_time = 720 looping = no next_state = "death"
+	}
+}
+
+
+
+entity = {
+	name = "Golyat_egg_7_explosion_entity"
+	pdxmesh = "nemesis_01_battleship_frame_mesh"
+
+	default_state = "death"
+
+	state = { name = "death" animation = "death" state_time = 720 animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 1.26 node = "explosion_locator_01" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 1.26 node = "explosion_locator_01" particle = "ship_burn_particle" }
+
+		event = { time = 3.26 node = "explosion_locator_02" particle = "nemesis_01_350_large_ship_explosion" }
+		
+		event = { time = 5.63 node = "explosion_locator_03" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+
+		event = { time = 7.26 node = "explosion_locator_04" particle = "ship_burn_particle" }
+		event = { time = 7.26 node = "explosion_locator_04" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+
+		event = { time = 10.4 node = "part2" particle = "nemesis_01_350_large_ship_explosion" sound = { soundeffect = "ship_destroyed" } }
+
+
+		event = { time = 13.26 node = "explosion_locator_01" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 13.26 node = "explosion_locator_01" particle = "ship_burn_particle" }
+
+		event = { time = 14.26 node = "explosion_locator_02" particle = "nemesis_01_350_large_ship_explosion" }
+		
+		event = { time = 16.63 node = "explosion_locator_03" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+
+		event = { time = 17.26 node = "explosion_locator_04" particle = "ship_burn_particle" }
+		event = { time = 18.26 node = "explosion_locator_04" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+
+		event = { time = 20.4 node = "part2" particle = "nemesis_01_350_large_ship_explosion" sound = { soundeffect = "ship_destroyed" } }
+
+	}
+	state = { name = "death" animation = "death2" state_time = 720 animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 2.56 node = "explosion_locator_01" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 2.56 node = "explosion_locator_01" particle = "ship_burn_particle" }
+
+		event = { time = 4.56 node = "explosion_locator_02" particle = "nemesis_01_350_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 5.00 node = "explosion_locator_03" particle = "nemesis_01_large_ship_explosion" }
+
+		event = { time = 5.56 node = "part2_front_locator" particle = "nemesis_01_350_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 6.56 node = "part2_front_locator" particle = "ship_burn_particle" }
+
+
+		event = { time = 7.7 node = "explosion_locator_04" particle = "ship_explosion_air_vent_particle" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 8.7 node = "explosion_locator_04" particle = "ship_burn_particle" }
+		event = { time = 10.7 node = "explosion_locator_05" particle = "nemesis_01_350_large_ship_explosion" }
+
+		event = { time = 13.4 node = "part2_back_locator" particle = "nemesis_01_large_ship_explosion" }
+		event = { time = 14.4 node = "explosion_locator_05" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_destroyed" }}
+		event = { time = 16.56 node = "explosion_locator_01" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 17.56 node = "explosion_locator_01" particle = "ship_burn_particle" }
+
+
+
+		event = { time = 17.56 node = "explosion_locator_02" particle = "nemesis_01_350_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 18.00 node = "explosion_locator_03" particle = "nemesis_01_large_ship_explosion" }
+
+		event = { time = 18.86 node = "part2_front_locator" particle = "nemesis_01_350_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 19.56 node = "part2_front_locator" particle = "ship_burn_particle" }
+
+
+		event = { time = 20.7 node = "explosion_locator_04" particle = "ship_explosion_air_vent_particle" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 21.3 node = "explosion_locator_04" particle = "ship_burn_particle" }
+		event = { time = 21.7 node = "explosion_locator_05" particle = "nemesis_01_350_large_ship_explosion" }
+
+		event = { time = 22.4 node = "part2_back_locator" particle = "nemesis_01_large_ship_explosion" }
+		event = { time = 22.4 node = "explosion_locator_05" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_destroyed" }}
+	}
+	state = { name = "death" animation = "death3" state_time = 720 animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 1.0 node = "explosion_locator_01" particle = "ship_burn_particle" }
+		event = { time = 1.0 node = "explosion_locator_01" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+
+		event = { time = 1.7 node = "explosion_locator_02" particle = "ship_burn_particle" }
+		event = { time = 1.7 node = "explosion_locator_02" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+
+		event = { time = 2.7 node = "explosion_locator_03" particle = "ship_burn_particle" }
+		event = { time = 2.7 node = "explosion_locator_03" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+
+		event = { time = 4.0 node = "explosion_locator_04" particle = "ship_burn_particle" }
+		event = { time = 6.0 node = "explosion_locator_04" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+
+		event = { time = 7.3 node = "explosion_locator_05" particle = "ship_burn_particle" }
+		event = { time = 8.3 node = "explosion_locator_05" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+
+
+		event = { time = 10.4 node = "part2" particle = "nemesis_01_350_large_ship_explosion" sound = { soundeffect = "ship_destroyed" } }
+		event = { time = 13.0 node = "explosion_locator_01" particle = "ship_burn_particle" }
+		event = { time = 14.0 node = "explosion_locator_01" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+
+		event = { time = 14.7 node = "explosion_locator_02" particle = "ship_burn_particle" }
+		event = { time = 15.7 node = "explosion_locator_02" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+
+		event = { time = 18.7 node = "explosion_locator_03" particle = "ship_burn_particle" }
+		event = { time = 18.7 node = "explosion_locator_03" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+
+		event = { time = 20.0 node = "explosion_locator_04" particle = "ship_burn_particle" }
+		event = { time = 20.0 node = "explosion_locator_04" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+
+		event = { time = 21.3 node = "explosion_locator_05" particle = "ship_burn_particle" }
+		event = { time = 21.3 node = "explosion_locator_05" particle = "nemesis_01_large_ship_explosion" sound = { soundeffect = "ship_explosion"} }
+
+		event = { time = 22.4 node = "part2" particle = "nemesis_01_350_large_ship_explosion" sound = { soundeffect = "ship_destroyed" } }
+	}
+
+	scale = 0.3
+
+	game_data = {
+		size = @battleship_scale
+		emissive_recolor_crunch = 5.0
+	}
+
+}
+
+entity = {
+	name = "Golyat_egg_7_explosions_entity"
+	pdxmesh = "Golyat_egg_7_explosions_mesh"
+
+
+	attach = { explosion_locator_01 = "Golyat_egg_7_explosion_entity" }
+	attach = { explosion_locator_02 = "Golyat_egg_7_explosion_entity" }
+	attach = { explosion_locator_03 = "Golyat_egg_7_explosion_entity" }
+	attach = { explosion_locator_04 = "Golyat_egg_7_explosion_entity" }
+	attach = { explosion_locator_05 = "Golyat_egg_7_explosion_entity" }
+	attach = { explosion_locator_06 = "Golyat_egg_7_explosion_entity" }
+	attach = { explosion_locator_07 = "Golyat_egg_7_explosion_entity" }
+	attach = { explosion_locator_08 = "Golyat_egg_7_explosion_entity" }
+	scale = 2.0
+}
+entity = { 
+	name = "Golyat_egg_7_supernova_entity"
+	pdxmesh = "system_plane_collision_mesh"
+	
+	locator = { name = "part1" position = { 0 0 0 } }
+
+
+	default_state = "explode"
+	state = { name = "explode" state_time = 720 looping = no
+		event = { time = 12.2 node = "part1" particle = "star_explosion_2_effect"  keep_particle = no trigger_once = yes }
+		event = { time = 11.1 node = "part1" particle = "star_explosion_shockwave_effect"  keep_particle = no trigger_once = yes }
+		event = { time = 6.9 trigger_once = yes sound = { soundeffect = "shattered_planet_explosion" } }	
+	}
+
+	scale = 3.5
+}
+
+
+entity = {
+	name = "Golyat_egg_7_golyat_entity"
+	pdxmesh = "Golyat_egg_7_golyat_mesh"
+
+	default_state = "idle"
+
+	state = { name = "idle" animation = "special"  state_time = 720 looping = no next_state = "idle"
+		event = { time = 6 node = "eye_C01" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_C02" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_C03" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_C04" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_C05" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+
+		event = { time = 6 node = "eye_L01" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_L02" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_L03" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_L04" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_L05" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_L06" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_L07" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_L08" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+
+		event = { time = 6 node = "eye_R01" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_R02" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_R03" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_R04" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_R05" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_R06" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_R07" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+		event = { time = 6 node = "eye_R08" particle = "Golyat_egg_eye_effect" keep_particle = yes }
+
+	}
+}
+
+
+
+
+entity = {
+	name = "Golyat_egg_7_entity"
+	cull_radius = 99999
+
+	locator = { name = "parts001" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts002" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts003" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts004" position = { 0 240 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts005" position = { 0 240 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts006" position = { 0 240 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts007" position = { 0 360 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts008" position = { 0 160 0 } rotation = { 0 0 0 } }
+	locator = { name = "parts009" position = { 0 320 0 } rotation = { 0 0 180 } }
+	locator = { name = "parts010" position = { 0 270 0 } rotation = { 0 0 0 } }
+
+	attach = { parts001 = "Golyat_egg_2_main_death_entity" }
+	attach = { parts002 = "Golyat_egg_2_leg_death_entity" }
+	attach = { parts003 = "Golyat_egg_3_stations_death_entity" }
+	attach = { parts004 = "Golyat_egg_4A_death_entity" }
+	attach = { parts005 = "Golyat_egg_4B_death_entity" }
+	attach = { parts006 = "Golyat_egg_4C_death_entity" }
+	attach = { parts007 = "Golyat_egg_7_golyat_entity" }
+	attach = { parts008 = "Golyat_egg_7_explosions_entity" }
+	attach = { parts009 = "Golyat_egg_7_explosions_entity" }
+	attach = { parts010 = "Golyat_egg_7_supernova_entity" }
+
+
+
+}
+
+
+

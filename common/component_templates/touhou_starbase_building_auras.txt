@@ -1,0 +1,478 @@
+utility_component_template = {
+	key = "STARBASE_AURA_ZA_WARUDO"
+	size = medium
+	icon = "GFX_ship_part_aura_snare"
+	icon_frame = 1
+	power = 0
+
+	class_restriction = { shipclass_starbase }
+
+	friendly_aura = {
+		name = "aura_starbase_friendly_za_warudo_aura"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_za_warudo_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_fire_rate_mult = 0.33
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	hostile_aura = {
+		name = "aura_starbase_hostile_za_warudo_aura"
+		system_wide = yes
+
+		stack_info = {
+			id = hostile_za_warudo_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_fire_rate_mult = -0.33
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_AURA_TENGU_STORM"
+	size = medium
+	icon = "GFX_ship_part_extradimensional_defense_1"
+	icon_frame = 1
+	power = 0
+
+	class_restriction = { shipclass_starbase }
+
+	friendly_aura = {
+		name = "friendly_aura_starbase_tengu_storm"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_tengu_storm_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_speed_reduction = -0.5
+			ship_windup_mult = -0.5
+			ship_winddown_mult = -0.5
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	hostile_aura = {
+		name = "hostile_aura_starbase_tengu_storm"
+		system_wide = yes
+
+		stack_info = {
+			id = hostile_tengu_storm_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_speed_reduction = 0.5
+			ship_disengage_chance_reduction = 0.5
+			ship_emergency_ftl_min_days_mult = 0.5
+		}
+
+		damage_per_day = {
+			accuracy = 1
+			damage = {
+				min = 1
+				max = 2
+			}
+			size_damage_factor = 1
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_AURA_RED_FOG"
+	size = medium
+	icon = "GFX_ship_part_aura_targeting_grid"
+	icon_frame = 1
+	power = 0
+
+	class_restriction = { shipclass_starbase }
+
+	friendly_aura = {
+		name = "friendly_aura_starbase_red_fog"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_red_fog_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_hull_regen_add_perc = 0.3
+			ship_armor_regen_add_perc = 0.3
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	hostile_aura = {
+		name = "hostile_aura_starbase_red_fog"
+		system_wide = yes
+
+		stack_info = {
+			id = hostile_red_fog_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_accuracy_mult = -0.3
+			ship_tracking_mult = -0.3
+		}
+
+		damage_per_day = {
+			accuracy = 1
+			damage = {
+				min = 6
+				max = 6
+			}
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "AURA_ONI_FOG"
+	size = medium
+	icon = "GFX_ship_part_whisperers_covenant_aux"
+	icon_frame = 1
+	power = 80
+
+	component_set = "ship_aura_components"
+
+	size_restriction = { oni_cloud }
+
+	friendly_aura = {
+		name = "friendly_aura_oni_fog"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_oni_fog_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_evasion_mult = 0.5
+			ship_shield_hardening_add = 0.5
+			ship_shield_reduction = -1
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	hostile_aura = {
+		name = "hostile_aura_oni_fog"
+		system_wide = yes
+
+		stack_info = {
+			id = hostile_oni_fog_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_accuracy_mult = -0.5
+			ship_tracking_mult = -0.5
+		}
+
+		damage_per_day = {
+			accuracy = 1
+			damage = {
+				min = 2
+				max = 5
+			}
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	scripted_action_possible = {
+		is_colony = yes
+		OR = {
+			is_owned_by = root.owner
+			owner = {
+				is_at_war_with = root.owner
+			}
+		}
+	}
+
+	scripted_action_button_possible = {
+		always = yes
+	}
+
+	scripted_action_finished = {
+		OR = {
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = thl_leader_trait_density
+				}
+			}
+			any_planet_army = {
+				army_type = army_suika_giant
+			}
+		}
+	}
+
+	scripted_action_name = on_suika_target_planet_reached
+	scripted_action_context_menu_name = transform_context_menu_title
+	scripted_action_tooltip = transform_action_button
+	scripted_action_icon = GFX_fleet_order_button_land_armies
+	scripted_action_activity_key = transform_action_activity_key
+}
+
+utility_component_template = {
+	key = "AURA_STARDUST_REVERIE"
+	size = medium
+	icon = "GFX_ship_part_whisperers_covenant_aux"
+	icon_frame = 1
+	power = 0
+
+	component_set = "ship_aura_components"
+
+	size_restriction = { spell_card }
+
+	friendly_aura = {
+		name = "friendly_aura_stardust_reverie"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_stardust_reverie_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_fire_rate_mult = 0.33
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "AURA_EVENT_HORIZON"
+	size = medium
+	icon = "GFX_ship_part_whisperers_covenant_aux"
+	icon_frame = 1
+	power = 0
+
+	component_set = "ship_aura_components"
+
+	size_restriction = { spell_card }
+
+	friendly_aura = {
+		name = "friendly_aura_event_horizon"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_event_horizon_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_fire_rate_mult = 0.33
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	hostile_aura = {
+		name = "hostile_aura_event_horizon"
+		system_wide = yes
+
+		stack_info = {
+			id = hostile_event_horizon_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_fire_rate_mult = -0.33
+			ship_disengage_chance_reduction = 10
+			ship_emergency_ftl_min_days_mult = 10
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "ASTEROID_IMPECT"
+	size = medium
+	icon = "GFX_ship_part_border_extruder_1"
+	icon_frame = 1
+	power = 0
+
+	component_set = "asteroid_impact"
+
+	size_restriction = { marisa_asteroid }
+
+	scripted_action_possible = {
+		is_colony = yes
+	}
+
+	scripted_action_finished = {
+		has_planet_flag = asteroid_impected
+	}
+
+	scripted_action_name = on_asteroid_target_planet_reached
+	scripted_action_context_menu_name = asteroid_impact_menu_title
+	scripted_action_tooltip = asteroid_impact_action_button
+	scripted_action_icon = GFX_fleet_order_button_land_armies
+	scripted_action_activity_key = asteroid_impact_action_activity_key
+}
+
+utility_component_template = {
+	key = "AURA_MISFORTUNE_WHEEL_1"
+	size = medium
+	icon = "GFX_ship_part_whisperers_covenant_aux"
+	icon_frame = 1
+	power = 0
+
+	component_set = "ship_aura_components"
+
+	size_restriction = { spell_card }
+
+	hostile_aura = {
+		name = "friendly_aura_misfortune_wheel"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_missfortune_wheel_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_accuracy_mult = -0.25
+			ship_evasion_mult = -0.25
+		}
+
+		damage_per_day = {
+			accuracy = 1
+			damage = {
+				min = 1
+				max = 3
+			}
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "AURA_MISFORTUNE_WHEEL_2"
+	size = medium
+	icon = "GFX_ship_part_whisperers_covenant_aux"
+	icon_frame = 1
+	power = 0
+
+	component_set = "ship_aura_components"
+
+	size_restriction = { spell_card }
+
+	hostile_aura = {
+		name = "friendly_aura_misfortune_wheel"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_missfortune_wheel_aura
+			priority = 20
+		}
+
+		modifier = {
+			ship_accuracy_mult = -0.5
+			ship_evasion_mult = -0.5
+			ship_disengage_chance_reduction = 10
+			ship_emergency_ftl_min_days_mult = 10
+		}
+
+		damage_per_day = {
+			accuracy = 1
+			damage = {
+				min = 1
+				max = 10
+			}
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}

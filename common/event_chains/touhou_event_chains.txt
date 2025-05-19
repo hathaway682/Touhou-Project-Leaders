@@ -1,0 +1,62 @@
+# Event chains.
+
+# counter, counters that can be increased and checked from effects and triggers
+#
+# Localization needed:
+# event_chain_chainnkey_title, a title to show in the situation log.
+# event_chain_chainnkey_desc, a description to show in the situation log.
+
+touhou_sanae_mission_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_sanae_mission
+	counter = {
+		touhou_sanae_mission_counter = {
+			max = 20
+		}
+	}
+	abort_trigger = {
+		or = {
+			has_country_flag = sanae_mission_complete
+			not = {
+				any_owned_leader = {
+					has_trait = thl_leader_trait_miracle
+				}
+			}
+		}
+	}
+}
+
+touhou_marisa_alice_regeneration_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_physics.dds"
+	picture = GFX_evt_kirisame_marisa_alchemy
+	counter = {
+		touhou_marisa_alice_regeneration_counter = {
+			max = 8
+		}
+	}
+	abort_trigger = {
+		or = {
+			has_country_flag = marisa_alice_regeneration_complete
+			not = {
+				any_owned_leader = {
+					has_trait = thl_leader_trait_magic
+				}
+			}
+			not = {
+				any_owned_leader = {
+					has_trait = thl_leader_trait_dolls
+				}
+			}
+		}
+	}
+}
+
+ruined_shrine = {
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	picture = GFX_evt_ruined_shrine
+}
+
+touhou_eientei = {
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	picture = GFX_evt_tewi_moon
+}

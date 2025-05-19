@@ -1,0 +1,848 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "fantasia_bullet_3_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_tracer_round.mesh"
+		scale = 2.0
+		meshsettings = {
+			texture_diffuse = "fantasia_bullet_3.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_4_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_tracer_round.mesh"
+		scale = 2.5
+		meshsettings = {
+			texture_diffuse = "fantasia_bullet_4.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_6_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_tracer_round.mesh"
+		scale = 2.0
+		meshsettings = {
+			texture_diffuse = "fantasia_bullet_6.dds"
+		}
+	}
+
+
+
+
+	pdxmesh = {
+		name = "fantasia_bullet_1_barrage_effect_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_barrage_effect_P.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_barragepattern_6_animation" }
+	}
+
+	pdxmesh = {
+		name = "fantasia_bullet_3_barrage_effect_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_barrage_effect.mesh"
+		scale = 0.5
+				animation = { id = "idle"			type = "fantasia_bullet_barragepattern_2_animation" }
+		meshsettings = {
+			texture_diffuse = "fantasia_bullet_3.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_4_barrage_effect_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_barrage_effect.mesh"
+		scale = 0.6
+				animation = { id = "idle"			type = "fantasia_bullet_barragepattern_4_animation" }
+		meshsettings = {
+			texture_diffuse = "fantasia_bullet_4.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "fantasia_bullet_5_barrage_effect_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_barrage_effect_P.mesh"
+		scale = 1.0
+				animation = { id = "idle"			type = "fantasia_bullet_barragepattern_2_animation" }
+	}
+
+	pdxmesh = {
+		name = "fantasia_bullet_6_barrage_effect_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_barrage_effect.mesh"
+		scale = 0.35
+				animation = { id = "idle"			type = "fantasia_bullet_barragepattern_1_animation" }
+		meshsettings = {
+			texture_diffuse = "fantasia_bullet_6.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_Master_Spark_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_Master_Spark.mesh"
+		scale = 1.0
+				animation = { id = "idle"			type = "MasterSpark_fire_animation" }
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+	}
+
+
+
+	#normalver
+	pdxmesh = {
+		name = "fantasia_bullet_3A_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_tracer_round.mesh"
+		scale = 2.0
+		meshsettings = {
+			texture_diffuse = "fantasia_bullet_3A.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_3B_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_tracer_round.mesh"
+		scale = 2.0
+		meshsettings = {
+			texture_diffuse = "fantasia_bullet_3B.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_3C_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_tracer_round.mesh"
+		scale = 2.0
+		meshsettings = {
+			texture_diffuse = "fantasia_bullet_3C.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_3D_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_tracer_round.mesh"
+		scale = 2.0
+		meshsettings = {
+			texture_diffuse = "fantasia_bullet_3D.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_4A_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_tracer_round.mesh"
+		scale = 2.5
+		meshsettings = {
+			texture_diffuse = "fantasia_bullet_4A.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_6A_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_tracer_round.mesh"
+		scale = 2.0
+		meshsettings = {
+			texture_diffuse = "fantasia_bullet_6A.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_8A_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_8A_tracer_round.mesh"
+
+
+
+				animation = { id = "launch1"			type = "fantasia_bullet_8A_launch1_animation" }
+				animation = { id = "launch2"			type = "fantasia_bullet_8A_launch2_animation" }
+				animation = { id = "launch3"			type = "fantasia_bullet_8A_launch3_animation" }
+				animation = { id = "idle"			type = "fantasia_bullet_8A_idle_animation" }
+
+		scale = 2.0
+		meshsettings = {
+			texture_diffuse = "fantasia_bullet_8A.dds"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_10A_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_10A_tracer_round.mesh"
+				animation = { id = "launch1"			type = "fantasia_bullet_10A_launch1_animation" }
+				animation = { id = "launch2"			type = "fantasia_bullet_10A_launch2_animation" }
+				animation = { id = "launch3"			type = "fantasia_bullet_10A_launch3_animation" }
+				animation = { id = "idle"			type = "fantasia_bullet_10A_idle_animation" }
+
+		scale = 1.2
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_12_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_12_tracer_round.mesh"
+				animation = { id = "idle"			type = "fantasia_bullet_12_idle_animation" }
+
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_13A_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_13A_tracer_round.mesh"
+				animation = { id = "idle1"			type = "fantasia_bullet_13A_idle1_animation" }
+				animation = { id = "idle2"			type = "fantasia_bullet_13A_idle2_animation" }
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_14A_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_14A_tracer_round.mesh"
+				animation = { id = "idle1"			type = "fantasia_bullet_14A_idle1_animation" }
+				animation = { id = "idle2"			type = "fantasia_bullet_14A_idle2_animation" }
+				animation = { id = "idle3"			type = "fantasia_bullet_14A_idle3_animation" }
+				animation = { id = "idle4"			type = "fantasia_bullet_14A_idle4_animation" }
+				animation = { id = "idle5"			type = "fantasia_bullet_14A_idle5_animation" }
+				animation = { id = "idle6"			type = "fantasia_bullet_14A_idle6_animation" }
+
+
+
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "Scarlet_Shoot_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "launch"			type = "scarlet_shoot_launch_pattern_animation" }
+				animation = { id = "idle"			type = "scarlet_shoot_idle_pattern_animation" }
+				animation = { id = "stop"			type = "scarlet_shoot_stop_pattern_animation" }
+
+		scale = 4.0
+	}
+	pdxmesh = {
+		name = "Swallowtail_Butterfly_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "idle"			type = "Swallowtail_Butterfly_pattern_animation" }
+				animation = { id = "stop"			type = "Swallowtail_Butterfly_pattern_stop_animation" }
+
+		scale = 3.0
+	}
+	pdxmesh = {
+		name = "Fantasy_Seal_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "launch"			type = "Fantasy_Seal_launch_pattern_animation" }
+				animation = { id = "idle"			type = "Fantasy_Seal_launch_idle_animation" }
+		scale = 7.0
+	}
+	pdxmesh = {
+		name = "Dragon's_Neck_mesh"
+		file = "gfx/models/combat_items/Dragon's_Neck_effect.mesh"
+		scale = 0.13
+				animation = { id = "idle"			type = "Dragon's_Neck_idle_pattern_animation" }
+				animation = { id = "stop"			type = "Dragon's_Neck_stop_pattern_animation" }
+	}
+	pdxmesh = {
+		name = "Gray_Thaumaturgy_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 1.2
+				animation = { id = "launch"			type = "Gray_Thaumaturgy_launch_pattern_animation" }
+				animation = { id = "idle"			type = "Gray_Thaumaturgy_idle_pattern_animation" }
+	}
+	pdxmesh = {
+		name = "Green_eyed_monster_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "idle1"			type = "Green_eyed_monster_idle1_animation" }
+				animation = { id = "idle2"			type = "Green_eyed_monster_idle2_animation" }
+				animation = { id = "idle3"			type = "Green_eyed_monster_idle3_animation" }
+				animation = { id = "idle4"			type = "Green_eyed_monster_idle4_animation" }
+
+
+		scale = 3.0
+	}
+	pdxmesh = {
+		name = "Purification_demon_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 1.5
+				animation = { id = "idle"			type = "Purification_demon_idle_animation" }
+	}
+	pdxmesh = {
+		name = "Yuri_Murderous_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 2.0
+				animation = { id = "idle"			type = "Yuri_Murderous_idle_animation" }
+	}
+	pdxmesh = {
+		name = "Yuri_Murderous_sidelaser_mesh"
+		file = "gfx/models/combat_items/Yuri_Murderous_sidelaser.mesh"
+		scale = 0.4
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "12thcolors_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 1.2
+				animation = { id = "idle"			type = "12thcolors_idle_animation" }
+	}
+	pdxmesh = {
+		name = "Ayano_Tsuzumi_core_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "launch"			type = "Ayano_Tsuzumi_core_launch_animation" }
+				animation = { id = "idle"			type = "Ayano_Tsuzumi_core_idle_animation" }
+				animation = { id = "stop"			type = "Ayano_Tsuzumi_core_stop_animation" }
+
+		scale = 4.5
+	}
+	pdxmesh = {
+		name = "Ayano_Tsuzumi_1_mesh"
+		file = "gfx/models/combat_items/Ayano_Tsuzumi_bullet.mesh"
+
+				animation = { id = "launch"			type = "Ayano_Tsuzumi_launch1_animation" }
+				animation = { id = "idle"			type = "Ayano_Tsuzumi_idle_animation" }
+				animation = { id = "stop"			type = "Ayano_Tsuzumi_stop_animation" }
+		scale = 0.3
+		meshsettings = {
+			texture_diffuse = "Ayano_Tsuzumi_bullet.dds"
+		}
+	}
+	pdxmesh = {
+		name = "Ayano_Tsuzumi_2_mesh"
+		file = "gfx/models/combat_items/Ayano_Tsuzumi_bullet.mesh"
+
+				animation = { id = "launch"			type = "Ayano_Tsuzumi_launch2_animation" }
+				animation = { id = "idle"			type = "Ayano_Tsuzumi_idle_animation" }
+				animation = { id = "stop"			type = "Ayano_Tsuzumi_stop_animation" }
+		scale = 0.3
+		meshsettings = {
+			texture_diffuse = "Ayano_Tsuzumi_bullet.dds"
+		}
+	}
+	pdxmesh = {
+		name = "Ayano_Tsuzumi_3_mesh"
+		file = "gfx/models/combat_items/Ayano_Tsuzumi_bullet.mesh"
+
+				animation = { id = "launch"			type = "Ayano_Tsuzumi_launch3_animation" }
+				animation = { id = "idle"			type = "Ayano_Tsuzumi_idle_animation" }
+				animation = { id = "stop"			type = "Ayano_Tsuzumi_stop_animation" }
+		scale = 0.3
+		meshsettings = {
+			texture_diffuse = "Ayano_Tsuzumi_bullet.dds"
+		}
+	}
+	pdxmesh = {
+		name = "Ayano_Tsuzumi_4_mesh"
+		file = "gfx/models/combat_items/Ayano_Tsuzumi_bullet.mesh"
+
+				animation = { id = "launch"			type = "Ayano_Tsuzumi_launch4_animation" }
+				animation = { id = "idle"			type = "Ayano_Tsuzumi_idle_animation" }
+				animation = { id = "stop"			type = "Ayano_Tsuzumi_stop_animation" }
+		scale = 0.3
+		meshsettings = {
+			texture_diffuse = "Ayano_Tsuzumi_bullet.dds"
+		}
+	}
+	pdxmesh = {
+		name = "Seven_star_sword_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 7.0
+				animation = { id = "idle"			type = "Seven_star_sword_idle_animation" }
+	}
+	pdxmesh = {
+		name = "Linear_modeling_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 3.0
+				animation = { id = "idle"			type = "Linear_modeling_idle_animation" }
+	}
+	pdxmesh = {
+		name = "Heavenly_Steeds_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 1.3
+				animation = { id = "launch"			type = "Heavenly_Steeds_launch_animation" }
+				animation = { id = "idle"			type = "Heavenly_Steeds_idle_animation" }
+				animation = { id = "stop"			type = "Heavenly_Steeds_stop_animation" }
+
+	}
+	pdxmesh = {
+		name = "Masterspark_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 1.6
+				animation = { id = "idle"			type = "Masterspark_idle_animation" }
+	}
+	pdxmesh = {
+		name = "Masterspark_ring_mesh"
+		file = "gfx/models/combat_items/Masterspark_ring.mesh"
+		scale = 1.0
+				animation = { id = "idle"			type = "Masterspark_ring_idle_animation" }
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "ice_bullet_mesh"
+		file = "gfx/models/combat_items/ice_bullet.mesh"
+
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "Freeze_Actress_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "launch"			type = "Freeze_Actress_launch_animation" }
+				animation = { id = "idle"			type = "Freeze_Actress_idle_animation" }
+				animation = { id = "stop"			type = "Freeze_Actress_stop_animation" }
+
+		scale = 4.0
+	}
+	pdxmesh = {
+		name = "Grand_Guignol_1_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 0.95
+				animation = { id = "idle1"			type = "Grand_Guignol_idle1_animation" }
+				animation = { id = "idle2"			type = "Grand_Guignol_idle1A_animation" }
+	}
+	pdxmesh = {
+		name = "Grand_Guignol_2_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 0.9
+				animation = { id = "idle"			type = "Grand_Guignol_idle2_animation" }
+	}
+	pdxmesh = {
+		name = "Grand_Guignol_core_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 2.0
+				animation = { id = "idle"			type = "Grand_Guignol_core_idle_animation" }
+	}
+	pdxmesh = {
+		name = "Blazing_Star_mesh"
+		file = "gfx/models/combat_items/Blazing_Star.mesh"
+		scale = 1.0
+				animation = { id = "launch"			type = "Blazing_Star_launch_animation" }
+				animation = { id = "idle"			type = "Blazing_Star_idle_animation" }
+	}
+	pdxmesh = {
+		name = "Fantasy_Nature_core_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 2.0
+				animation = { id = "idle"			type = "Fantasy_Nature_core_idle_animation" }
+				animation = { id = "idle1"			type = "Fantasy_Nature_ball_idle_animation" }
+
+	}
+	pdxmesh = {
+		name = "Fantasy_Nature_sub_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 3.0
+				animation = { id = "idle1"			type = "Fantasy_Nature_idle1_animation" }
+				animation = { id = "idle2"			type = "Fantasy_Nature_idle2_animation" }
+				animation = { id = "idle3"			type = "Fantasy_Nature_idle3_animation" }
+				animation = { id = "idle4"			type = "Fantasy_Nature_idle4_animation" }
+				animation = { id = "idle5"			type = "Fantasy_Nature_idle5_animation" }
+	}
+	pdxmesh = {
+		name = "Last_judgment_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 2.0
+				animation = { id = "idle"			type = "Last_judgment_idle_animation" }
+	}
+	pdxmesh = {
+		name = "Resurrection_Butterfly_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 3.0
+				animation = { id = "launch_blue"			type = "Resurrection_Butterfly_blue_launch_animation" }
+				animation = { id = "launch_orange"			type = "Resurrection_Butterfly_orange_launch_animation" }
+				animation = { id = "idle"			type = "Resurrection_Butterfly_idle_animation" }
+	}
+	pdxmesh = {
+		name = "Losing_Hometown_laser_muzzle_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 2.0
+				animation = { id = "idle1"			type = "Losing_Hometown_laser_idle1_animation" }
+				animation = { id = "idle2"			type = "Losing_Hometown_laser_idle2_animation" }
+	}
+	pdxmesh = {
+		name = "Murder_doll_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_laser_effect.mesh"
+		scale = 2.0
+				animation = { id = "launch"			type = "Murder_doll_launch_animation" }
+				animation = { id = "idle"			type = "Murder_doll_idle_animation" }
+
+	}
+	pdxmesh = {
+		name = "Curse_of_Vlad_Tepes_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "launch"			type = "Curse_of_Vlad_Tepes_launch_animation" }
+				animation = { id = "idle"			type = "Curse_of_Vlad_Tepes_idle_animation" }
+				animation = { id = "stop"			type = "Curse_of_Vlad_Tepes_stop_animation" }
+
+		scale = 2.6
+	}
+	pdxmesh = {
+		name = "sato2_Gungnir_mesh"
+		file = "gfx/models/combat_items/sato2_Gungnir.mesh"
+
+				animation = { id = "launch"			type = "sato2_Gungnir_launch_animation" }
+				animation = { id = "idle"			type = "sato2_Gungnir_idle_animation" }
+				animation = { id = "stop"			type = "sato2_Gungnir_stop_animation" }
+
+		scale = 3.0
+	}
+	pdxmesh = {
+		name = "dollswar_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_laser_effect.mesh"
+
+				animation = { id = "launch"			type = "dollswar_launch_animation" }
+				animation = { id = "idle"			type = "dollswar_idle_animation" }
+				animation = { id = "stop"			type = "dollswar_stop_animation" }
+
+		scale = 3.0
+	}
+	pdxmesh = {
+		name = "Straw_doll_kamikaze_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_laser_effect.mesh"
+
+				animation = { id = "launch"			type = "Straw_doll_kamikaze_launch_animation" }
+				animation = { id = "idle"			type = "Straw_doll_kamikaze_idle_animation" }
+				animation = { id = "stop"			type = "Straw_doll_kamikaze_stop_animation" }
+
+		scale = 5.0
+	}
+	pdxmesh = {
+		name = "Seeker_dolls_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_laser_effect.mesh"
+
+				animation = { id = "idle1"			type = "Seeker_dolls_idle1_animation" }
+				animation = { id = "idle2"			type = "Seeker_dolls_idle2_animation" }
+				animation = { id = "idle3"			type = "Seeker_dolls_idle3_animation" }
+
+
+		scale = 3.0
+	}
+
+
+	pdxmesh = {
+		name = "ATW_bullet_1_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "launch"			type = "ATW_bullet_1_launch_animation" }
+
+
+
+		scale = 5.0
+	}
+	pdxmesh = {
+		name = "ATW_bullet_2_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_laser_effect.mesh"
+
+				animation = { id = "launch"			type = "ATW_bullet_2_launch_animation" }
+
+
+
+		scale = 7.0
+	}
+	pdxmesh = {
+		name = "ATW_bullet_3_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "launch"			type = "ATW_bullet_3_launch_animation" }
+
+
+
+		scale = 7.0
+	}
+	pdxmesh = {
+		name = "ATW_bullet_4_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "launch"			type = "ATW_bullet_4_launch_animation" }
+
+
+
+		scale = 2.0
+	}
+	pdxmesh = {
+		name = "ATW_bullet_5_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_laser_effect.mesh"
+
+				animation = { id = "launch"			type = "ATW_bullet_2_launch_animation" }
+
+
+
+		scale = 6.0
+	}
+	pdxmesh = {
+		name = "ATW_bullet_6_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_laser_effect.mesh"
+
+				animation = { id = "launch"			type = "ATW_bullet_2_launch_animation" }
+
+
+
+		scale = 4.0
+	}
+	pdxmesh = {
+		name = "ATW_bullet_7_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "launch"			type = "ATW_bullet_7_launch_animation" }
+
+
+
+		scale = 6.0
+	}
+	pdxmesh = {
+		name = "ATW_bullet_8_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "launch"			type = "ATW_bullet_8_launch_animation" }
+
+
+
+		scale = 4.0
+	}
+	pdxmesh = {
+		name = "ATW_bullet_9_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "launch1"			type = "ATW_bullet_9_launch1_animation" }
+				animation = { id = "launch2"			type = "ATW_bullet_9_launch2_animation" }
+				animation = { id = "launch3"			type = "ATW_bullet_9_launch3_animation" }
+				animation = { id = "launch4"			type = "ATW_bullet_9_launch4_animation" }
+
+
+		scale = 4.0
+	}
+	pdxmesh = {
+		name = "ATW_bullet_10_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "launch"			type = "ATW_bullet_10_launch_animation" }
+
+		scale = 6.0
+	}
+	pdxmesh = {
+		name = "Lingering_Cold_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+		scale = 4.0
+				animation = { id = "launch"			type = "Lingering_Cold_launch_animation" }
+				animation = { id = "stop"			type = "Lingering_Cold_stop_animation" }
+
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_ThC2_tracer_round_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_10A_tracer_round.mesh"
+				animation = { id = "launch1"			type = "fantasia_bullet_10A_launch1_animation" }
+				animation = { id = "launch2"			type = "fantasia_bullet_10A_launch2_animation" }
+				animation = { id = "launch3"			type = "fantasia_bullet_10A_launch3_animation" }
+				animation = { id = "idle"			type = "fantasia_bullet_10A_idle_animation" }
+
+		scale = 1.2
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "fantasia_bullet_ThC2.dds"
+			texture_normal = "fantasia_bullet_ThC2.dds"
+			texture_specular = "fantasia_bullet_ThC2.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "Gear_of_Fate_laser_mesh"
+		file = "gfx/models/combat_items/THC_ATW5_laser.mesh"
+				animation = { id = "idle1"			type = "Gear_of_Fate_laser1_idle_animation" }
+				animation = { id = "idle2"			type = "Gear_of_Fate_laser2_idle_animation" }
+				animation = { id = "idle3"			type = "Gear_of_Fate_laser3_idle_animation" }
+		scale = 1.5
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+			texture_diffuse = "sato2_Gungnir_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "Gear_of_Fate_bullets_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "idle1"			type = "Gear_of_Fate_bullet1_idle_animation" }
+				animation = { id = "idle2"			type = "Gear_of_Fate_bullet2_idle_animation" }
+		scale = 0.5
+	}
+	pdxmesh = {
+		name = "Spring_Sleep_bullet_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "idle"			type = "Spring_Sleep_bullet_idle_animation" }
+		scale = 3.0
+	}
+	pdxmesh = {
+		name = "Three_Nocturne_bullets_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "idle1"			type = "Three_Nocturne_bullet1_idle_animation" }
+				animation = { id = "launch"			type = "Three_Nocturne_bullet2_launch_animation" }
+		scale = 0.4
+	}
+	pdxmesh = {
+		name = "Running_Hose_Light_bullet_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "idle1"			type = "Running_Hose_Light_bullet1_idle_animation" }
+		scale = 4.0
+	}
+	pdxmesh = {
+		name = "Running_Hose_Light_2_mesh"
+		file = "gfx/models/combat_items/Running_Hose_Light_2.mesh"
+				animation = { id = "idle2"			type = "Running_Hose_Light_bullet2_idle_animation" }
+		scale = 2.0
+	}
+
+
+
+	pdxmesh = {
+		name = "fantasia_bullet_ThCATW1barrage_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "cooldown"			type = "THC_ATW_cooldown48_animation" }
+				animation = { id = "randmaized1"			type = "THC_ATW_randmaized5_animation" }
+				animation = { id = "randmaized2"			type = "THC_ATW_randmaized11_animation" }
+				animation = { id = "randmaized3"			type = "THC_ATW_randmaized16_animation" }
+				animation = { id = "randmaized4"			type = "THC_ATW_randmaized27_animation" }
+				animation = { id = "idle1"			type = "THC_ATW1_1_idle_animation" }
+				animation = { id = "idle2"			type = "THC_ATW1_2_idle_animation" }
+				animation = { id = "idle3"			type = "THC_ATW1_3_idle_animation" }
+				animation = { id = "idle4"			type = "THC_ATW1_4_idle_animation" }
+
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_ThCATW2barrage_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "cooldown"			type = "THC_ATW_cooldown48_animation" }
+				animation = { id = "randmaized1"			type = "THC_ATW_randmaized5_animation" }
+				animation = { id = "randmaized2"			type = "THC_ATW_randmaized11_animation" }
+				animation = { id = "randmaized3"			type = "THC_ATW_randmaized16_animation" }
+				animation = { id = "randmaized4"			type = "THC_ATW_randmaized27_animation" }
+				animation = { id = "idle1"			type = "THC_ATW2_1_idle_animation" }
+				animation = { id = "idle2"			type = "THC_ATW2_2_idle_animation" }
+				animation = { id = "idle3"			type = "THC_ATW2_3_idle_animation" }
+				animation = { id = "idle4"			type = "THC_ATW2_4_idle_animation" }
+
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_ThCATW3barrage_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "cooldown"			type = "THC_ATW_cooldown48_animation" }
+				animation = { id = "randmaized1"			type = "THC_ATW_randmaized5_animation" }
+				animation = { id = "randmaized2"			type = "THC_ATW_randmaized11_animation" }
+				animation = { id = "randmaized3"			type = "THC_ATW_randmaized16_animation" }
+				animation = { id = "randmaized4"			type = "THC_ATW_randmaized27_animation" }
+				animation = { id = "idle1"			type = "THC_ATW3_1_idle_animation" }
+				animation = { id = "idle2"			type = "THC_ATW3_2_idle_animation" }
+				animation = { id = "idle3"			type = "THC_ATW3_3_idle_animation" }
+				animation = { id = "idle4"			type = "THC_ATW3_4_idle_animation" }
+
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_ThCATW4barrage_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "cooldown"			type = "THC_ATW_cooldown48_animation" }
+				animation = { id = "randmaized1"			type = "THC_ATW_randmaized5_animation" }
+				animation = { id = "randmaized2"			type = "THC_ATW_randmaized11_animation" }
+				animation = { id = "randmaized3"			type = "THC_ATW_randmaized16_animation" }
+				animation = { id = "randmaized4"			type = "THC_ATW_randmaized27_animation" }
+				animation = { id = "idle1"			type = "THC_ATW4_1_idle_animation" }
+				animation = { id = "idle2"			type = "THC_ATW4_2_idle_animation" }
+
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_ThCATW5laser_mesh"
+		file = "gfx/models/combat_items/THC_ATW5_laser.mesh"
+				animation = { id = "cooldown"			type = "THC_ATW_cooldown48_animation" }
+				animation = { id = "idle1"			type = "THC_ATW5_laser1_idle_animation" }
+				animation = { id = "idle2"			type = "THC_ATW5_laser2_idle_animation" }
+
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_ThCATW5_2_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "launch1"			type = "fantasia_bullet_ThCATW5_2_launch1_animation" }
+				animation = { id = "launch2"			type = "fantasia_bullet_ThCATW5_2_launch2_animation" }
+				animation = { id = "idle"			type = "fantasia_bullet_ThCATW5_2_idle_animation" }
+		scale = 2.0
+	}
+	pdxmesh = {
+		name = "fantasia_bullet_ThCATW_normal_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "idle1"			type = "fantasia_bullet_ThCATW_normal1_idle_animation" }
+		scale = 8.0
+	}
+	pdxmesh = {
+		name = "Dolls_fortress_2_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "launch"			type = "Dolls_fortress_2_launch_animation" }
+		scale = 8.0
+	}
+	pdxmesh = {
+		name = "Dolls_fortress_3_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "position"			type = "Dolls_fortress_3_position_animation" }
+				animation = { id = "launch"			type = "Dolls_fortress_3_launch_animation" }
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "Dolls_fortress_4_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+				animation = { id = "launch"			type = "ATW_bullet_1_launch_animation" }
+		scale = 4.0
+	}
+
+
+
+	pdxmesh = {
+		name = "THA_ATW_bullet_1_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "launch"			type = "THA_ATW1_launch_animation" }
+				animation = { id = "idle"			type = "THA_ATW1_idle_animation" }
+
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "THA_ATW_bullet_1_1_mesh"
+		file = "gfx/models/combat_items/fantasia_bullet_spellcard_effect.mesh"
+
+				animation = { id = "idle1"			type = "THA_ATW1_1_idle_animation" }
+				animation = { id = "idle2"			type = "THA_ATW1_2_idle_animation" }
+
+		scale = 1.0
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

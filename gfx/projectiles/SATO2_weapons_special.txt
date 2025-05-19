@@ -1,0 +1,94 @@
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "Ice_barrier_projectile"
+	color = { 0.5	0.5		1.0		1.0 }
+	hit_entity = "Ice_barrier_hit_entity"
+	shield_hit_entity = "Ice_barrier_hit_entity"
+	muzzle_flash_entity = ""
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = ""
+	speed = 1000.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "Sealing_Circle_projectile"
+	color = { 1.0	0.5		0.5		0.8 }
+	hit_entity = "Sealing_Circle_hit_entity"
+	shield_hit_entity = "Sealing_Circle_hit_entity"
+	muzzle_flash_entity = ""
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = ""
+	speed = 1000.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "Resurrection_Butterfly_blue_projectile"
+	color = { 0.2	0.2		1.0		0.7 }
+	hit_entity = "gauss_cannon_large_hit_entity"
+	shield_hit_entity = "gauss_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = ""
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "Resurrection_Butterfly_blue_entity"
+	speed = 150.0			#preferred speed of the projectile
+	max_duration = 12.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "Resurrection_Butterfly_orange_projectile"
+	color = { 1.0	0.7		0.0		0.7 }
+	hit_entity = "gauss_cannon_large_hit_entity"
+	shield_hit_entity = "gauss_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = ""
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "Resurrection_Butterfly_orange_entity"
+	speed = 150.0			#preferred speed of the projectile
+	max_duration = 12.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "Losing_Hometown_laser_projectile"
+	color = { 1.0	0.5		0.5		0.8 }
+	hit_entity = "gauss_cannon_large_hit_entity"
+	shield_hit_entity = "gauss_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = "Losing_Hometown_laser_entity"	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = ""
+	speed = 50.0			#preferred speed of the projectile
+	max_duration = 4.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}

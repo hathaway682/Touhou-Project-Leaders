@@ -1,0 +1,326 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# blocked_modifier - applied to planet only when deposit blocker has been cleared
+# constant_modifier - applied to planet always
+# blocker = <key/any/none> - default any
+# station = station class in orbit to gather
+
+# 执法部队
+d_stick_of_repentance = {
+	is_for_colonizable = yes
+	icon = "d_quarantine_zone"
+
+	potential = { always = no }
+
+	triggered_planet_modifier = {
+		potential = {
+			num_assigned_jobs = {
+				job = enforcer
+				value >= 1
+			}
+		}
+		planet_stability_add = 4
+		planet_crime_add = -15
+		army_defense_damage_mult = 0.1
+		multiplier = value:enforcer_job_number
+	}
+}
+
+# 博丽神社
+d_hakurei_shrine = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = "d_hakurei_shrine"
+
+	potential = { always = no }
+
+	planet_modifier = {
+		job_miko_add = 200
+		planet_jobs_energy_produces_mult = 0.1
+		planet_jobs_unity_produces_mult = 0.1
+		planet_jobs_trade_produces_mult = 0.1
+		#pop_defense_armies_add = 1
+	}
+}
+
+# 博丽大社
+d_hakurei_shrine_large = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = "d_hakurei_shrine_large"
+
+	potential = { always = no }
+
+	planet_modifier = {
+		job_miko_add = 400
+		planet_jobs_energy_produces_mult = 0.25
+		planet_jobs_unity_produces_mult = 0.25
+		planet_jobs_trade_produces_mult = 0.25
+		planet_resettlement_unemployed_destination_mult = 0.25
+		#pop_defense_armies_add = 1
+	}
+}
+
+# 博丽神宫
+d_hakurei_shrine_imperial = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = "d_hakurei_shrine_imperial"
+
+	potential = { always = no }
+
+	planet_modifier = {
+		job_miko_add = 600
+		planet_jobs_energy_produces_mult = 0.5
+		planet_jobs_unity_produces_mult = 0.5
+		planet_jobs_trade_produces_mult = 0.5
+		planet_resettlement_unemployed_destination_mult = 0.5
+		pop_happiness = 0.1
+		#pop_defense_armies_add = 1
+	}
+
+	country_modifier = {
+		country_edict_fund_add = 100
+		pop_government_ethic_attraction = 0.5
+		diplo_weight_mult = 0.2
+		pop_happiness = 0.05
+	}
+}
+
+# 博丽圣所
+d_hakurei_shrine_psionic = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = "d_hakurei_shrine_psionic"
+
+	potential = { always = no }
+
+	triggered_planet_modifier = {
+		job_miko_add = 600
+		planet_jobs_physics_research_produces_mult = 0.25
+		planet_jobs_society_research_produces_mult = 0.25
+		planet_jobs_engineering_research_produces_mult = 0.25
+		planet_jobs_unity_produces_mult = 0.25
+		planet_jobs_trade_produces_mult = 0.15
+		planet_resettlement_unemployed_destination_mult = 0.5
+		#pop_defense_armies_add = 1
+	}
+
+	country_modifier = {
+		shroud_delve_cooldown = -0.15
+	}
+}
+
+sakura_tree = {
+	is_for_colonizable = yes
+	icon = "d_sakura_tree"
+
+	potential = { always = no }
+}
+
+sakura_tree_branch = {
+	is_for_colonizable = yes
+	icon = "d_sakura_tree"
+	triggered_planet_modifier = {
+		spirit_workforce_mult = 0.1
+		spirit_empire_size_mult = -0.1
+	}
+
+	potential = { always = no }
+}
+
+sakura_tree_1 = {
+	is_for_colonizable = yes
+	icon = "d_sakura_tree"
+
+	potential = { always = no }
+
+	triggered_planet_modifier = {
+		spirit_workforce_mult = 0.05
+		spirit_empire_size_mult = -0.05
+	}
+}
+
+sakura_tree_3 = {
+	is_for_colonizable = yes
+	icon = "d_sakura_tree"
+
+	potential = { always = no }
+
+	triggered_planet_modifier = {
+		spirit_workforce_mult = 0.15
+		spirit_empire_size_mult = -0.15
+	}
+}
+
+sakura_tree_5 = {
+	is_for_colonizable = yes
+	icon = "d_sakura_tree"
+
+	potential = { always = no }
+
+	triggered_planet_modifier = {
+		spirit_workforce_mult = 0.25
+		spirit_empire_size_mult = -0.25
+	}
+}
+
+sakura_tree_8 = {
+	is_for_colonizable = yes
+	icon = "d_sakura_tree"
+
+	potential = { always = no }
+
+	triggered_planet_modifier = {
+		spirit_workforce_mult = 0.4
+		spirit_empire_size_mult = -0.4
+	}
+}
+
+d_nuclear_breath = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_geothermal_vent
+
+	planet_modifier = {
+		district_generator_max = 3
+		planet_max_districts_add = 2
+		planet_jobs_trade_produces_mult = 0.05
+		planet_amenities_mult = 0.05
+	}
+
+	drop_weight = {
+		weight = 0
+		#Bought from Caravaneer Fleet 2
+	}
+}
+
+d_maple_forest = {
+	time = 180
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers_natural
+
+	can_be_cleared = {
+		custom_tooltip = {
+			fail_text = has_ranger_lodge
+			planet = {
+				NOT = { has_building = building_ranger_lodge }
+			}
+		}
+	}
+
+	resources = {
+		category = deposit_blockers_natural
+		cost = {
+			energy = 500
+		}
+	}
+
+	potential = {
+		is_wet = yes
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+		job_maple_sugar_harvester_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_food_produces_add = 1
+	}
+
+	all_blocker_swap_types = yes
+
+	inline_script = deposits/ai_weight_natural_blocker
+
+	drop_weight = {
+		weight = @blocker_high
+		modifier = {
+			factor = 2
+			OR = {
+				is_planet_class = pc_continental
+				is_planet_class = pc_tropical
+			}
+		}
+		modifier = {
+			factor = 0
+			num_free_districts = {
+				type = district_city
+				value < 2
+			}
+		}
+	}
+
+	prerequisites = { "tech_dense_jungle" }
+}
+
+d_infestation_marisa = {
+	icon = d_infestation
+	time = 120
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+	potential = { always = no }
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+		}
+	}
+}
+
+d_hifuu_habitat_research = {
+	is_for_colonizable = yes
+	icon = d_station_reactor
+	category = deposit_cat_rare
+
+	potential = { always = no }
+
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.1
+		district_hab_science_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_biologist_add = 200
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_biologist_add = 200
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_biologist_add = 200
+		}
+	}
+}
