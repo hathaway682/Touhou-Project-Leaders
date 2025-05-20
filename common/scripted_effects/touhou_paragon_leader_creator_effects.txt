@@ -1250,6 +1250,71 @@ add_tewi_traits = {
 	set_age = 2100
 }
 
+create_kanako_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x124
+		CLASS = commander
+		NAME = NAME_Kanako
+		LEVEL = 6
+		GENDER = female
+		IMMORTAL = yes
+		ETHIC = materialist
+		DESC = kanako1
+		CATCH_PHRASE =  kanako1_catch_phrase
+		TRAIT_GROUP = kanako
+	}
+}
+
+add_kanako_traits = {
+	add_trait = subclass_commander_lord
+	add_trait = subclass_commander_admiral
+	add_trait = leader_trait_master_gunner
+	add_trait = thl_leader_trait_heaven
+	add_trait = thl_leader_trait_godness_of_war
+	add_trait = leader_trait_fleet_logistician
+	add_trait = leader_trait_conscripter_2
+	add_trait = leader_trait_hardy_2
+	add_trait = leader_trait_lethargic_2
+	add_trait = leader_trait_armchair_commander
+	add_trait = thl_leader_trait_regeneration_2
+	set_age = 2000
+}
+
+create_suwako_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x76
+		CLASS = official
+		NAME = NAME_Suwako
+		LEVEL = 6
+		GENDER = female
+		IMMORTAL = yes
+		ETHIC = spiritualist
+		DESC = suwako1
+		CATCH_PHRASE =  suwako1_catch_phrase
+		TRAIT_GROUP = suwako
+	}
+}
+
+add_suwako_traits = {
+	add_trait = subclass_official_governor
+	add_trait = leader_trait_shroud_preacher
+	add_trait = thl_leader_trait_earth
+	add_trait = thl_leader_trait_no_fear_of_storm
+	add_trait = leader_trait_forge_focus_3
+	add_trait = leader_trait_distribution_lines_3
+	add_trait = leader_trait_environmental_engineer
+	add_trait = leader_trait_settler_2
+	add_trait = leader_trait_touhou_assembler
+	add_trait = leader_trait_sadistic
+	add_trait = leader_trait_gullible
+	add_trait = thl_leader_trait_regeneration_2
+	set_age = 2300
+}
+
+
+
 
 
 
