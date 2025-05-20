@@ -339,17 +339,19 @@ country_event = {
 			poi = touhou_sanae_mission_chain_adm.2
 		}
 		OR = {
-			country_uses_bio_ships = yes
-			has_monthly_income = {
-				resource = food
-				value >= 600
+			AND = {
+				country_uses_bio_ships = yes
+				has_monthly_income = {
+					resource = food
+					value >= 600
+				}
 			}
-		}
-		OR = {
-			country_uses_bio_ships = no
-			has_monthly_income = {
-				resource = alloys
-				value >= 150
+			AND = {
+				country_uses_bio_ships = no
+				has_monthly_income = {
+					resource = alloys
+					value >= 150
+				}
 			}
 		}
 	}

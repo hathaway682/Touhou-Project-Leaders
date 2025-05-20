@@ -21,8 +21,12 @@ touhou_leader_randomizer = {
 		has_ethic = ethic_fanatic_$ETHIC$
 	}
 	modifier = {
-		factor = 0
-		is_$ETHIC_NEG$ = yes
+		factor = 0.2
+		has_ethic = ethic_$ETHIC_NEG$
+	}
+	modifier = {
+		factor = 0.1
+		has_ethic = ethic_fanatic_$ETHIC_NEG$
 	}
 	modifier = {
 		factor = 0
