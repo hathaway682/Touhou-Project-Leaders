@@ -7,7 +7,7 @@
  CLASS_PREFIX_TOUHOU_LEGEND:0 "§l东方Project"
 
  touhou_leader_plural: "幻想乡领袖"
- touhou_leader_plural_with_icon: "$touhou_leader$幻想乡领袖"
+ touhou_leader_plural_with_icon: "£touhou_leader£幻想乡领袖"
  YOUR_TOUHOU_LEADER: "你的幻想乡领袖"
  YOUR_TOUHOU_LEADER_PLURAL: "你的幻想乡领袖"
  YOU_HAVE_NO_TOUHOU_LEADER_PLURAL: "你没有幻想乡领袖"
@@ -1422,7 +1422,7 @@
  mod_job_roboticist_add:0 "$job_roboticist$岗位"
  mod_job_dollmaker_drone_add:0 "$job_dollmaker_drone$岗位"
  mod_job_dollmaker_drone_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_dollmaker_drone$岗位"
- mod_job_dollmaker_drone_per_pop_short:0 "\n每$VALUE$ £pop£ §G+1§! $mod_job_dollmaker_drone_add$ "
+ mod_job_dollmaker_drone_per_pop_short:0 "\n每$VALUE$ £pop£ §G+1§! £mod_job_dollmaker_drone_add£ "
 
  building_doll_assembly_plant:0 "人偶工坊"
  building_doll_assembly_plant_desc:0 "在这里，我们的人偶师精心制作她们的每一个人偶。"
@@ -2009,7 +2009,7 @@
  job_maple_sugar_harvester_drone_effect_desc:1 "£job_maple_sugar_harvester_drone£ $job_maple_sugar_harvester_drone_plural$生产$r_food$和$r_rare_crystals$。"
  mod_job_maple_sugar_harvester_drone_add:0 "$job_maple_sugar_harvester_drone$岗位"
  mod_job_maple_sugar_harvester_drone_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_maple_sugar_harvester_drone$岗位"
- mod_job_maple_sugar_harvester_drone_per_pop_short:0 "\n每$VALUE$ £pop£ §G+1§! $mod_job_maple_sugar_harvester_drone_add$ "
+ mod_job_maple_sugar_harvester_drone_per_pop_short:0 "\n每$VALUE$ £pop£ §G+1§! £mod_job_maple_sugar_harvester_drone_add£ "
 
  bombardment_wither: "众生凋零"
  bombardment_wither_desc: "$bombardment_wither$轰炸将以秋之权能令星球的生命尽数枯萎凋落。\n—对§Y陆军§!造成§R毁灭性§!伤害\n—对§Y行星§!造成§E轻度§!伤害\n—对§Y机械人口§!§E不造成§!伤害\n—对§Y有机人口§!造成§R毁灭性§!伤害\n—将会轰炸不设防的星球\n—可将星球炸成毫无生机的§Y荒芜星球§!"
@@ -2161,7 +2161,7 @@
  job_izakaya_drone_effect_desc:1 "£job_izakaya_drone£ $job_izakaya_drone_plural$将$r_food$转化为$r_amenities$和$r_trade_value$，并提高£mod_logistic_growth_mult£§Y人口增长速度§!。"
  mod_job_izakaya_drone_add:0 "$job_izakaya_drone$岗位"
  mod_job_izakaya_drone_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_izakaya_drone$岗位"
- mod_job_izakaya_drone_per_pop_short:0 "\n每$VALUE$ £pop£ §G+1§! $mod_job_izakaya_drone_add$ "
+ mod_job_izakaya_drone_per_pop_short:0 "\n每$VALUE$ £pop£ §G+1§! £mod_job_izakaya_drone_add£ "
  mod_pop_izakaya_drone_bonus_workforce_mult: "[izakaya_drone.GetNamePlural]的岗位效率"
 
  NAME_Tewi:0 "因幡帝"
