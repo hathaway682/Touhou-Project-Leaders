@@ -241,39 +241,39 @@ utility_component_template = {
 		}
 	}
 
-	scripted_action_possible = {
-		is_colony = yes
-		OR = {
-			is_owned_by = root.owner
-			owner = {
-				is_at_war_with = root.owner
-			}
-		}
-	}
-
-	scripted_action_button_possible = {
-		always = yes
-	}
-
-	scripted_action_finished = {
-		OR = {
-			AND = {
-				exists = leader
-				leader = {
-					has_trait = thl_leader_trait_density
+	scripted_action = {
+		scope = planet
+		possible = {
+			is_colony = yes
+			OR = {
+				is_owned_by = root.owner
+				owner = {
+					is_at_war_with = root.owner
 				}
 			}
-			any_planet_army = {
-				army_type = army_suika_giant
+		}
+		button_clickable = {
+			always = yes
+		}
+		finished = {
+			OR = {
+				AND = {
+					exists = leader
+					leader = {
+						has_trait = thl_leader_trait_density
+					}
+				}
+				any_planet_army = {
+					army_type = army_suika_giant
+				}
 			}
 		}
+		name = on_suika_target_planet_reached
+		context_menu_name = transform_context_menu_title
+		tooltip = transform_action_button
+		icon = GFX_fleet_order_button_land_armies
+		activity_key = transform_action_activity_key
 	}
-
-	scripted_action_name = on_suika_target_planet_reached
-	scripted_action_context_menu_name = transform_context_menu_title
-	scripted_action_tooltip = transform_action_button
-	scripted_action_icon = GFX_fleet_order_button_land_armies
-	scripted_action_activity_key = transform_action_activity_key
 }
 
 utility_component_template = {
@@ -376,19 +376,24 @@ utility_component_template = {
 
 	size_restriction = { marisa_asteroid }
 
-	scripted_action_possible = {
-		is_colony = yes
+	scripted_action = {
+		scope = planet
+		possible = {
+			is_colony = yes
+		}
+
+		finished = {
+			has_planet_flag = asteroid_impected
+		}
+
+		name = on_asteroid_target_planet_reached
+		context_menu_name = asteroid_impact_menu_title
+		tooltip = asteroid_impact_action_button
+		icon = GFX_fleet_order_button_land_armies
+		activity_key = asteroid_impact_action_activity_key
 	}
 
-	scripted_action_finished = {
-		has_planet_flag = asteroid_impected
-	}
 
-	scripted_action_name = on_asteroid_target_planet_reached
-	scripted_action_context_menu_name = asteroid_impact_menu_title
-	scripted_action_tooltip = asteroid_impact_action_button
-	scripted_action_icon = GFX_fleet_order_button_land_armies
-	scripted_action_activity_key = asteroid_impact_action_activity_key
 }
 
 utility_component_template = {
