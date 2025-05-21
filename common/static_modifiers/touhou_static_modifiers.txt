@@ -341,6 +341,18 @@ modifier_miracle_6 = {
 	planet_farmers_consumer_goods_produces_add = 1
 }
 
+modifier_sanae_situation = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_consecrated_worlds.dds"
+	icon_frame = 1
+	pop_miko_bonus_workforce_mult = 0.5
+}
+
+modifier_sanae_situation_last = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_consecrated_worlds.dds"
+	icon_frame = 1
+	planet_jobs_unity_produces_mult = 0.25
+}
+
 suika_fleet_bonus = {
 	ship_hull_add = 10000
 	ship_shield_add = 10000
