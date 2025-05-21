@@ -2011,6 +2011,7 @@ country_event = {
                     }
                 }
                 remove_all_negative_traits = yes
+
             }
         }
         if = {
