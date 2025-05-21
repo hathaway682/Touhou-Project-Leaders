@@ -1188,7 +1188,7 @@
  job_touhou_archivist_drone_plural:0 "解码子个体"
  job_touhou_archivist_drone_desc:1 "来自魔导书的信息往往是高度加密的，需要特化的子个体进行解码工作，来自自主代理“帕秋莉诺蕾姬”的算法提高了其效率。"
  mod_job_touhou_archivist_drone_add:0 "$job_touhou_archivist_drone$岗位"
- job_touhou_archivist_effect_desc: "£job_touhou_archivist_drone£$job_touhou_archivist_drone_plural$将$r_energy$转化为大量$r_research$"
+ job_touhou_archivist_drone_effect_desc: "£job_touhou_archivist_drone£$job_touhou_archivist_drone_plural$将$r_energy$转化为大量$r_research$"
 
  building_fire_catalyst: "炼金催化器（火）"
  building_fire_catalyst_desc: "在§H帕秋莉·诺蕾姬§!帮助下建造的巨大装置，大大提高了我们的生产效率。"

@@ -392,3 +392,53 @@ touhou_value_reimu_excessive_amount = {
 	add = touhou_variable_reimu_excessive_amount
 	max = 600
 }
+
+touhou_value_miko_job_number_a_quator = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		parameters = {
+			job = miko
+		}
+		mode = add
+	}
+	divide = 100
+	divide = 3 #每3个神社提供每月+2进度
+}
+
+touhou_value_materialist_percentage = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = pop_amount_percentage
+		parameters = {
+			limit = {
+				pop_group_has_ethic = ethic_materialist
+			}
+		}
+		mode = add
+	}
+	multiply = 5 #比例的五倍
+}
+
+touhou_value_spiritualist_percentage = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = pop_amount_percentage
+		parameters = {
+			limit = {
+				pop_group_has_ethic = ethic_spiritualist
+			}
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = pop_amount_percentage
+		parameters = {
+			limit = {
+				pop_group_has_ethic = ethic_spiritualist
+			}
+		}
+		mode = add
+	}
+	multiply = 5 #比例的五倍
+}

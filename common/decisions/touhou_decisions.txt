@@ -3083,3 +3083,67 @@ decision_trans_dolls = {
 
 	enactment_time = 1
 }
+
+decision_enable_sanae_summon = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_miracle_4
+
+	enactment_time = 60
+
+	potential = {
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_miracle
+			}
+			any_situation = {
+				is_situation_type = situation_sanae_sommon
+			}
+		}
+	}
+
+	allow = {
+		exists = owner
+		owner = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_miracle
+			}
+			any_situation = {
+				is_situation_type = situation_sanae_sommon
+			}
+			not = {
+				any_owned_planet = {
+					has_modifier = modifier_sanae_situation
+				}
+			}
+		}
+		has_building = building_moriya_shrine
+	}
+
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 10000
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = modifier_sanae_situation
+			days = -1
+		}
+		owner = {
+			every_situation = {
+				limit = {
+					is_situation_type = situation_sanae_sommon
+				}
+				change_situation_target = root
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
