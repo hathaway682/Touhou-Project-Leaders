@@ -3013,3 +3013,73 @@ decision_burn_zombies = {
 
 	enactment_time = 1
 }
+
+decision_trans_dolls = {
+	owned_planets_only = yes
+	sound = event_psionic_01
+	icon = decision_machine_sapience
+
+	potential = {
+		num_assigned_jobs = {
+			job = dollmaker
+			value >= 1
+		}
+	}
+
+	allow = {
+		any_owned_pop_group = {
+			is_robot_pop = yes
+			NOT = {
+				pop_group_has_trait = trait_thl_doll
+			}
+		}
+	}
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_trans_dolls_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:doll_species
+					}
+				}
+				create_species = {
+					name = "DOLL"
+					plural = "DOLL_plural"
+					class = ROBOT
+					namelist = this
+					portrait = "doll"
+					traits = {
+						ideal_planet_class = root.capital_scope
+						trait = "trait_mechanical"
+						trait = "trait_thl_doll"
+					}
+
+					effect = {
+						set_species_flag = doll_species@root
+						save_global_event_target_as = doll_species
+					}
+				}
+			}
+			ordered_owned_pop_group = {
+				limit = {
+					is_robot_pop = yes
+					NOT = {
+						pop_group_has_trait = trait_thl_doll
+					}
+				}
+				position = 0
+				order_by = trigger:pop_group_size
+				inverse = yes
+				change_species = event_target:doll_species
+			}
+		}
+	}
+
+	enactment_time = 1
+}

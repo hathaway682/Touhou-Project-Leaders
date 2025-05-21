@@ -611,7 +611,6 @@ dolls_assembly_trigger = {
 						check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 0 }
 						has_technology = tech_sapient_dolls
 					}
-
 				}
 			}
 			AND = {

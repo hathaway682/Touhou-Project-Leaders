@@ -2741,7 +2741,7 @@ leader_trait_expert_survivalist = {
 	leader_potential_add = {
 		always = no
 	}
-	modifier = {
+	planet_modifier = {
 		pop_environment_tolerance = 0.3
 		planet_pops_upkeep_mult = -0.15
 		logistic_growth_mult = 0.15

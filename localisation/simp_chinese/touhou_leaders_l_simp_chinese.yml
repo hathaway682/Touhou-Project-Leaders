@@ -818,7 +818,7 @@
  thl_leader_trait_satori_pets: "觉的动物朋友们"
  thl_leader_trait_satori_pets_desc: "这位领袖十分擅长管理宠物——或者说部下，可以大胆放心的让他们自己行动，同时也热衷于收集新的宠物。"
  thl_leader_trait_satori_pets_effect: "解锁§Y沟通动物§!决议，可以在星球上立刻发现一种新的§Y未开智动物§!。"
- thl_leader_trait_detective: "怨灵也为之惧怯的少女"
+ thl_leader_trait_detective: "犯规侦探觉"
  thl_leader_trait_detective_desc: "这位领袖会利用自己读心的能力协助侦破案件。"
 
  decision_subterranean_district: "地下区划规划"
@@ -1369,6 +1369,10 @@
  mod_planet_doll_jobs_worker_produces_mult:0 "人偶[GetWorker]人口资源产出"
  mod_planet_doll_jobs_specialist_produces_mult:0 "人偶[GetSpecialist]人口资源产出"
  mod_planet_doll_jobs_ruler_produces_mult:2 "人偶$pop_cat_ruler$人口资源产出"
+
+ decision_trans_dolls: "将机器人改造为人偶"
+ decision_trans_dolls_desc: "给机器人换个型号并不是什么难事。"
+ decision_trans_dolls_tooltip: "星球上规模§H最小§!的机械£pop£§Y人口组§!会被立刻全部改造为§I人偶§!。"
 
  DOLL:0 "人偶"
  DOLL_plural:0 "人偶"

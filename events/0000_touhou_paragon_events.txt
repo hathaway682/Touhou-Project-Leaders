@@ -2640,6 +2640,7 @@ country_event = { # 爱丽丝
 
 				effect = {
 					set_species_flag = doll_species@root
+					save_global_event_target_as = doll_species
 				}
 			}
 			capital_scope = {
