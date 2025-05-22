@@ -234,7 +234,11 @@ thl_ethic_leader_hire_effect = {
 		}
 	}
 
-	# lower_leader_chance = yes #招募东方领袖不应该减少原版领袖的频率
+	#lower_leader_chance = yes #招募东方领袖不应该减少原版领袖的频率
+	change_variable = {
+		which = touhou_leader_lower_chance
+		value = 1
+	}
 	set_country_flag = spawning_renowned_leader
 	event_target:ethic_leader = {
 		set_owner = root
@@ -2390,6 +2394,11 @@ moriya_storm_apply_deposits = {
 }
 
 update_sanae_phase_trait = {
+	add_event_chain_counter = {
+		event_chain = "touhou_sanae_mission_chain"
+		counter = "touhou_sanae_mission_counter"
+		amount = 1
+	}
 	if = {
 		limit = {
 			OR = {

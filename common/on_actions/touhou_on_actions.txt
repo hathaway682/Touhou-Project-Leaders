@@ -262,6 +262,7 @@ on_yearly_pulse_country = {
 		touhou_paragon_effect.42613 #给阿空喰煞神选
 		touhou_paragon_effect.70#秋姐妹
 		touhou_paragon_spell.350#厄运泄露
+		touhou_paragon_situation.40300#早苗星之仪式
 	}
 }
 

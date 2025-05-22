@@ -90,11 +90,6 @@ country_event = {
 			resource = food
 			value = 3
 		}
-		add_event_chain_counter = {
-			event_chain = "touhou_sanae_mission_chain"
-			counter = "touhou_sanae_mission_counter"
-			amount = 1
-		}
 		hidden_effect = {
 			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_adm.1
@@ -141,11 +136,6 @@ country_event = {
 				}
 				add_trait = leader_trait_touhou_fleet_logistician
 			}
-		}
-		add_event_chain_counter = {
-			event_chain = "touhou_sanae_mission_chain"
-			counter = "touhou_sanae_mission_counter"
-			amount = 1
 		}
 		hidden_effect = {
 			update_sanae_phase_trait = yes
@@ -261,11 +251,6 @@ country_event = {
 				progress = 0.25
 			}
 		}
-		add_event_chain_counter = {
-			event_chain = "touhou_sanae_mission_chain"
-			counter = "touhou_sanae_mission_counter"
-			amount = 1
-		}
 		hidden_effect = {
 			update_sanae_phase_trait = yes
 			remove_point_of_interest = touhou_sanae_mission_chain_tech.1
@@ -306,11 +291,6 @@ country_event = {
 		}
 		add_resource = {
 			rare_crystals = 200
-		}
-		add_event_chain_counter = {
-			event_chain = "touhou_sanae_mission_chain"
-			counter = "touhou_sanae_mission_counter"
-			amount = 1
 		}
 		hidden_effect = {
 			update_sanae_phase_trait = yes
@@ -1290,6 +1270,12 @@ country_event = {
 	}
 	option = {
 		name = touhou_paragon_mission.40318.e
+		if = {
+			limit = {
+				has_modifier = relic_activation_cooldown
+			}
+			remove_modifier = relic_activation_cooldown
+		}
 	}
 	option = {
 		name = touhou_paragon_mission.40318.b

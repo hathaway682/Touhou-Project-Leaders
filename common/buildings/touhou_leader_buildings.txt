@@ -1091,7 +1091,7 @@ building_great_library = {
 		trigger = {
 			owner = { is_gestalt = yes }
 		}
-		text = job_touhou_archivist_drone__effect_desc
+		text = job_touhou_archivist_drone_effect_desc
 	}
 
 	resources = {
@@ -2394,7 +2394,7 @@ building_magic_academy = {
 	base_buildtime = @b1_time
 	empire_limit = 1
 
-	category = unity
+	category = research
 
 	building_sets = {
 		government

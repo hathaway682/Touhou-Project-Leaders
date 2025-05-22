@@ -597,3 +597,46 @@ situation_event = {
         name = touhou_paragon_situation.42675.a
     }
 }
+
+#星之仪式局势开始
+country_event = {
+    id = touhou_paragon_situation.40300
+    title = touhou_paragon_situation.40300.name
+    desc = touhou_paragon_situation.40300.desc
+    picture = GFX_evt_shroudwalker_enclave
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        any_owned_leader = {
+            has_trait = thl_leader_trait_miracle
+            or = {
+                has_trait = thl_leader_trait_snake_bless
+                has_trait = thl_leader_trait_snake_bless_2
+                has_trait = thl_leader_trait_snake_bless_3
+            }
+            or = {
+                has_trait = thl_leader_trait_frog_bless
+                has_trait = thl_leader_trait_frog_bless_2
+                has_trait = thl_leader_trait_frog_bless_3
+            }
+            or = {
+                has_trait = thl_leader_trait_sanae_phase3
+                has_trait = thl_leader_trait_sanae_phase4
+                has_trait = thl_leader_trait_sanae_complete
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.40300.a
+        start_situation = {
+            type = situation_sanae_sommon
+            target = capital_scope
+            effect = {
+                save_global_event_target_as = sanae_sommon_situation
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.40300.b
+    }
+}

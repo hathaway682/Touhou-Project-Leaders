@@ -3706,7 +3706,7 @@ country_event = {
 
 
 country_event = {
-	# 神奈子
+	# 诹访子
 	id = touhou_paragon.43400
 	title = "touhou_paragon.43400.name"
 	desc = "touhou_paragon.43400.desc"

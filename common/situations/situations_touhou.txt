@@ -89,7 +89,7 @@ situation_utsuho_infection = {
 }
 
 situation_utsuho_cure = {
-	picture = GFX_evt_circurtry_modification
+	picture = GFX_evt_genetic_modification
 	complete_icon_frame = GFX_situation_outcome_frame_blue
 	complete_icon = GFX_situation_outcome_unknown
 	monthly_progress = {
@@ -394,6 +394,245 @@ situation_utsuho_reform = {
 			target.owner = { NOT = { is_same_value = root.owner } }
 			owner = {
 				has_country_flag = utsuho_reform_abort
+			}
+		}
+	}
+}
+
+situation_sanae_sommon = {
+	picture = GFX_evt_shroudwalker_enclave
+	category = positive
+	initial_progress = 0
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_ascension
+	monthly_progress = {
+		base = 15
+		modifier = {
+			mult = 0
+			desc = "genetic_ascension_situation_pause_desc"
+			has_situation_flag = situation_sanae_pause
+		}
+		modifier = {
+			add = owner.value:touhou_value_miko_job_number_a_quator
+			desc = situation_sanae_sommon_number_of_miko_job_number_a_quator
+		}
+		modifier = {
+			add = owner.value:touhou_value_materialist_percentage
+			desc = situation_sanae_sommon_materialist_percentage
+			or = {
+				current_stage = stage_1
+				current_stage = stage_2
+			}
+		}
+		modifier = {
+			add = owner.value:touhou_value_spiritualist_percentage
+			desc = situation_sanae_sommon_spiritualist_percentage
+			or = {
+				current_stage = stage_3
+				current_stage = stage_4
+			}
+		}
+		modifier = {
+			add = 1
+			desc = situation_sanae_sommon_high_unity
+			owner = {
+				resource_revenue_compare = {
+					resource = unity
+					value >= 100000
+				}
+			}
+		}
+		modifier = {
+			add = 1
+			desc = situation_sanae_sommon_medium_unity
+			owner = {
+				resource_revenue_compare = {
+					resource = unity
+					value >= 10000
+				}
+				resource_revenue_compare = {
+					resource = unity
+					value < 100000
+				}
+			}
+		}
+		modifier = {
+			add = 1
+			desc = situation_sanae_sommon_low_unity
+			owner = {
+				resource_revenue_compare = {
+					resource = unity
+					value >= 1000
+				}
+				resource_revenue_compare = {
+					resource = unity
+					value < 10000
+				}
+			}
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_sanae_whole_power
+			mult = 1.15
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_sanae_demi_power
+			mult = 1.0
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_sanae_zero_power
+			mult = 0.85
+		}
+		modifier = {
+			mult = 0
+			desc = "situation_sanae_no_place_desc"
+			owner = {
+				NOT = {
+					any_owned_planet = {
+						has_modifier = modifier_sanae_situation
+					}
+				}
+			}
+		}
+	}
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 500
+			on_first_enter = {
+
+			}
+			modifier = {
+				country_unity_produces_mult = -0.1
+			}
+			custom_tooltip = thl_sanae_situation_stage_1_effects
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 1000
+			on_first_enter = {
+
+			}
+			modifier = {
+				country_unity_produces_mult = -0.2
+			}
+			custom_tooltip = thl_sanae_situation_stage_2_effects
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_magenta
+			end = 1500
+			on_first_enter = {
+				owner = {
+					country_event = { id = touhou_paragon.43300 }
+				}
+			}
+			modifier = {
+				country_unity_produces_mult = -0.15
+			}
+			custom_tooltip = thl_sanae_situation_stage_3_effects
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			end = 2000
+			on_first_enter = {
+
+			}
+			modifier = {
+				country_unity_produces_mult = -0.3
+			}
+			custom_tooltip = thl_sanae_situation_stage_4_effects
+		}
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_sanae_summon_outcome_approach
+		hidden_effect = {
+			target = {
+				remove_modifier = modifier_sanae_situation
+				add_modifier = {
+					modifier = modifier_sanae_situation_last
+					days = -1
+				}
+			}
+			owner = {
+				country_event = { id = touhou_paragon.43400 }
+			}
+		}
+	}
+	approach = {
+		name = approach_sanae_whole_power
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_sanae_whole_power_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 100
+				unity = 200
+			}
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = -0.25
+		}
+	}
+	approach = {
+		name = approach_sanae_demi_power
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_sanae_demi_power_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 50
+				unity = 100
+			}
+		}
+		target_modifier = {
+			planet_jobs_unity_produces_mult = -0.25
+		}
+	}
+	approach = {
+		name = approach_sanae_zero_power
+		icon = GFX_situation_approach_shrug
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_sanae_zero_power_tooltip
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 25
+				unity = 50
+			}
+		}
+	}
+	abort_trigger = {
+		OR = {
+			NOT = { exists = target.owner }
+			target.owner = { NOT = { is_same_value = root.owner } }
+			owner = {
+				not = {
+					any_owned_leader = {
+						has_trait = thl_leader_trait_miracle
+					}
+				}
+			}
+			owner = {
+				any_owned_leader = {
+					has_trait = thl_leader_trait_heaven
+				}
+				any_owned_leader = {
+					has_trait = thl_leader_trait_earth
+				}
 			}
 		}
 	}
