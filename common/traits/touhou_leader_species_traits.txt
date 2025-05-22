@@ -276,13 +276,23 @@ trait_thl_doll = {
 
 	assembly_score = {
 		modifier = {
-			add = value:doll_missing_per_maker
+			add = 100
 			from = {
 				num_assigned_jobs = {
 					job = dollmaker
 					value >= 1
 				}
-				check_variable_arithmetic = { which = value:doll_missing_per_maker value > 0 }
+				check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 1 }
+			}
+		}
+		modifier = {
+			add = 10
+			from = {
+				num_assigned_jobs = {
+					job = dollmaker
+					value >= 1
+				}
+				check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 0.5 }
 			}
 		}
 		modifier = {
