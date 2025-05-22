@@ -259,7 +259,7 @@ trait_thl_doll = {
 			}
 		}
 		pop_bonus_workforce_mult = 0.04
-		multiplier = value:doll_missing_per_maker
+		multiplier = planet.value:doll_missing_per_maker
 	}
 	triggered_pop_group_modifier = {
 		potential = {
@@ -273,6 +273,31 @@ trait_thl_doll = {
 		pop_bonus_workforce_mult = -2
 	}
 	custom_tooltip_with_modifiers = trait_thl_doll_tooltip
+
+	assembly_score = {
+		modifier = {
+			add = value:doll_missing_per_maker
+			from = {
+				num_assigned_jobs = {
+					job = dollmaker
+					value >= 1
+				}
+				check_variable_arithmetic = { which = value:doll_missing_per_maker value > 0 }
+			}
+		}
+		modifier = {
+			subtract = 100
+			from = {
+				OR = {
+					num_assigned_jobs = {
+						job = dollmaker
+						value <= 0
+					}
+					check_variable_arithmetic = { which = value:doll_missing_per_maker value <= 0 }
+				}
+			}
+		}
+	}
 }
 
 trait_pc_nether_preference = {

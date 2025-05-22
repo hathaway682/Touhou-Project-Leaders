@@ -2705,3 +2705,43 @@ update_sanae_phase_trait = {
 		}
 	}
 }
+
+create_mechanical_doll_species = {
+	create_species = {
+		name = "DOLL"
+		plural = "DOLL_plural"
+		class = ROBOT
+		namelist = this
+		portrait = "doll"
+		traits = {
+			ideal_planet_class = root.capital_scope
+			trait = "trait_mechanical"
+			trait = "trait_thl_doll"
+		}
+
+		effect = {
+			set_species_flag = doll_species@root
+			save_global_event_target_as = doll_species
+		}
+	}
+}
+
+create_machine_unit_doll_species = {
+	create_species = {
+		name = "DOLL"
+		plural = "DOLL_plural"
+		class = ROBOT
+		namelist = this
+		portrait = "doll"
+		traits = {
+			ideal_planet_class = root.capital_scope
+			trait = "trait_machine_unit"
+			trait = "trait_thl_doll"
+		}
+
+		effect = {
+			set_species_flag = doll_species@root
+			save_global_event_target_as = doll_species
+		}
+	}
+}

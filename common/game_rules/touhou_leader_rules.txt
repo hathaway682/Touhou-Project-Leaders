@@ -42,7 +42,12 @@ can_species_be_assembled = {
 			}
 		}
 	}
-	dolls_assembly_trigger = yes
+	if = {
+		limit = {
+			has_trait = trait_thl_doll
+		}
+		THL_trgr_spcs_RULE_doll_assembly = yes
+	}
 	has_population_control = {
 		type = no
 		country = root.owner

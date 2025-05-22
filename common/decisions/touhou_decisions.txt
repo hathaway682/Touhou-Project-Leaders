@@ -3059,7 +3059,6 @@ decision_trans_dolls = {
 						trait = "trait_mechanical"
 						trait = "trait_thl_doll"
 					}
-
 					effect = {
 						set_species_flag = doll_species@root
 						save_global_event_target_as = doll_species

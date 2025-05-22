@@ -471,7 +471,13 @@ country_event = { # ethic leader lottery machine
 				modifier = {
 					factor = 0
 					NOT = {
-						has_technology = tech_robotic_workers
+						any_owned_pop_group = {
+							is_robot_pop = yes
+							NOR = {
+								has_trait = thl_leader_trait_dolls
+								has_trait = trait_sanae_robot_worker
+							}
+						}
 					}
 				}
 				modifier = {
@@ -2626,27 +2632,19 @@ country_event = { # 爱丽丝
 			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_alice
 			}
-			create_species = {
-				name = "DOLL"
-				plural = "DOLL_plural"
-				class = ROBOT
-				namelist = this
-				portrait = "doll"
-				traits = {
-					ideal_planet_class = root.capital_scope
-					trait = "trait_mechanical"
-					trait = "trait_thl_doll"
+			if = {
+				limit = {
+					is_individual_machine = yes
 				}
-
-				effect = {
-					set_species_flag = doll_species@root
-					save_global_event_target_as = doll_species
-				}
+				create_machine_unit_doll_species = yes
+			}
+			else = {
+				create_mechanical_doll_species = yes
 			}
 			capital_scope = {
 				create_pop_group = {
 					species = last_created_species
-					size = 1
+					size = 100
 				}
 			}
 			set_built_species = last_created_species

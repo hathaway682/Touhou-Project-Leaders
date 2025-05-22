@@ -407,19 +407,13 @@ is_reanimator = {
 
 THL_trgr_spcs_RULE_doll_assembly = {
 	root = {
+		num_assigned_jobs = {
+			job = dollmaker
+			value >= 1
+		}
 		OR = {
 			check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 0 }
 			owner = { has_technology = tech_sapient_dolls }
-		}
-		OR = {
-			num_assigned_jobs = {
-				job = dollmaker
-				value >= 1
-			}
-			AND = {
-				exists = leader
-				leader = { has_trait = thl_leader_trait_dolls }
-			}
 		}
 	}
 }
