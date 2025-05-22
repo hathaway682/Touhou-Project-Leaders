@@ -503,7 +503,11 @@ situation_sanae_sommon = {
 			icon_background = GFX_situation_stage_frame_green
 			end = 500
 			on_first_enter = {
-
+				situation_event = {
+					id = touhou_paragon_situation.40350
+					days = 360
+					random = 360
+				}
 			}
 			modifier = {
 				country_unity_produces_mult = -0.1
@@ -515,7 +519,11 @@ situation_sanae_sommon = {
 			icon_background = GFX_situation_stage_frame_blue
 			end = 1000
 			on_first_enter = {
-
+				situation_event = {
+					id = touhou_paragon_situation.40310
+					days = 360
+					random = 360
+				}
 			}
 			modifier = {
 				country_unity_produces_mult = -0.2
@@ -530,6 +538,16 @@ situation_sanae_sommon = {
 				owner = {
 					country_event = { id = touhou_paragon.43300 }
 				}
+				situation_event = {
+					id = touhou_paragon_situation.40330
+					days = 360
+					random = 360
+				}
+				situation_event = {
+					id = touhou_paragon_situation.40340
+					days = 720
+					random = 360
+				}
 			}
 			modifier = {
 				country_unity_produces_mult = -0.15
@@ -541,7 +559,11 @@ situation_sanae_sommon = {
 			icon_background = GFX_situation_stage_frame_red
 			end = 2000
 			on_first_enter = {
-
+				situation_event = {
+					id = touhou_paragon_situation.40320
+					days = 360
+					random = 360
+				}
 			}
 			modifier = {
 				country_unity_produces_mult = -0.3

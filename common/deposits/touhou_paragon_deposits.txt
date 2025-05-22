@@ -324,3 +324,15 @@ d_hifuu_habitat_research = {
 		}
 	}
 }
+
+d_sanaa = {
+	icon = d_city
+
+	category = deposit_cat_rare
+	potential = { always = no }
+	planet_modifier = {
+		planet_max_districts_add = 1
+		trader_jobs_bonus_workforce_mult = 0.15
+	}
+
+}
