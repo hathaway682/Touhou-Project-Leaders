@@ -262,3 +262,12 @@ opinion_polluted_a_primitive_world_phile = {
 	}
 }
 
+opinion_sanae_situation_fallen_empire_materialist_jealous = {
+	opinion = {
+		base = -50
+	}
+	accumulative = no
+	decay = {
+		base = 1
+	}
+}

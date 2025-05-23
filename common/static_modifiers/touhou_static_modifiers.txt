@@ -968,3 +968,13 @@ thl_country_leader_assassined = {
 	planet_stability_add = -10
 	pop_government_ethic_attraction = -0.1
 }
+
+thl_modifier_sanae_onedayeurika = {
+	pop_physicist_bonus_workforce_mult = 5
+	pop_biologist_bonus_workforce_mult = 5
+	pop_engineer_bonus_workforce_mult = 5
+}
+
+thl_modifier_sanae_dark_cuisine = {
+	planet_jobs_food_produces_mult = 0.03
+}

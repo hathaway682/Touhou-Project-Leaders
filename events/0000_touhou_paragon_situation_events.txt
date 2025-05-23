@@ -640,3 +640,242 @@ country_event = {
         name = touhou_paragon_situation.40300.b
     }
 }
+
+#趣味事件
+situation_event = {
+    id = touhou_paragon_situation.40310
+    title = touhou_paragon_situation.40310.name
+    desc = touhou_paragon_situation.40310.desc
+    picture = GFX_evt_city_planet
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.40310.a
+        owner = {
+            add_resource = {
+                influence = -50
+            }
+            add_resource = {
+                minerals = -1000
+            }
+        }
+        target = {
+            add_deposit = d_sanaa
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.40310.b
+        target = {
+            create_pop_group = {
+                species = owner_main_species
+            }
+        }
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.40320
+    title = touhou_paragon_situation.40320.name
+    desc = touhou_paragon_situation.40320.desc
+    picture = GFX_evt_ongoing_disaster
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.40320.a
+        allow = {
+            owner = {
+                or = {
+                    is_xenophobe = yes
+                    is_authoritarian = yes
+                }
+            }
+        }
+        owner = {
+            add_resource = {
+                influence = -50
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 6
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.40320.b
+        allow = {
+            owner = {
+                or = {
+                    is_militarist = yes
+                    is_spiritualist = yes
+                }
+            }
+        }
+        owner = {
+            abort_situation = prev
+            add_resource = {
+                influence = 100
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.40320.c
+        allow = {
+            owner = {
+                or = {
+                    is_egalitarian = yes
+                    is_materialist = yes
+                }
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 6
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = -3
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.40320.d
+        allow = {
+            owner = {
+                or = {
+                    is_xenophile = yes
+                    is_pacifist = yes
+                }
+            }
+        }
+        owner = {
+            add_resource = {
+                influence = -25
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 3
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.40320.e
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = -3
+            }
+            add_monthly_resource_mult = {
+                resource = food
+                value = 6
+            }
+        }
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.40330
+    title = touhou_paragon_situation.40330.name
+    desc = touhou_paragon_situation.40330.desc
+    picture = GFX_evt_friendly_enlightenment
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.40330.a
+        owner = {
+            every_situation = {
+                limit = {
+                    is_situation_type = situation_sanae_sommon
+                }
+                add_situation_progress = 50
+            }
+        }
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.40340
+    title = touhou_paragon_situation.40340.name
+    desc = touhou_paragon_situation.40340.desc
+    picture = GFX_evt_physics_research
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.40340.a
+        owner = {
+            add_modifier = {
+                modifier = thl_modifier_sanae_onedayeurika
+                months = 1
+            }
+        }
+        every_country = {
+            limit = {
+                is_fallen_empire_materialist = yes
+            }
+            add_opinion_modifier = {
+                who = this.owner
+                modifier = opinion_sanae_situation_fallen_empire_materialist_jealous
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.40340.b
+        allow = {
+            owner = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_bird_brain
+                }
+            }
+        }
+        owner = {
+            add_modifier = {
+                modifier = thl_modifier_sanae_onedayeurika
+                months = 1
+            }
+            every_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_bird_brain
+                }
+                add_experience = 5000
+            }
+        }
+        every_country = {
+            limit = {
+                is_fallen_empire_materialist = yes
+            }
+            add_opinion_modifier = {
+                who = this.owner
+                modifier = opinion_sanae_situation_fallen_empire_materialist_jealous
+            }
+        }
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.40350
+    title = touhou_paragon_situation.40350.name
+    desc = touhou_paragon_situation.40350.desc
+    picture = GFX_evt_grand_archive
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.40350.a
+        owner = {
+            add_modifier = {
+                modifier = thl_modifier_sanae_dark_cuisine
+                years = 10
+            }
+        }
+        custom_tooltip = touhou_paragon_situation.40350.tooltip
+    }
+}
