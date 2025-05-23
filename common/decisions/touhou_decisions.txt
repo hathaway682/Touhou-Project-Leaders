@@ -3116,10 +3116,7 @@ decision_enable_sanae_summon = {
 				}
 			}
 		}
-		num_assigned_jobs = {
-			job = moriya_miko
-			value >= 1
-		}
+		moriya_faith_trigger = yes
 	}
 
 
@@ -3141,6 +3138,7 @@ decision_enable_sanae_summon = {
 					is_situation_type = situation_sanae_sommon
 				}
 				change_situation_target = root
+				set_situation_approach = approach_sanae_demi_power
 			}
 		}
 	}

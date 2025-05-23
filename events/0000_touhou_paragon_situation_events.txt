@@ -793,7 +793,11 @@ situation_event = {
                 limit = {
                     is_situation_type = situation_sanae_sommon
                 }
-                add_situation_progress = 50
+                add_situation_progress = -20
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 3
             }
         }
     }
@@ -877,5 +881,149 @@ situation_event = {
             }
         }
         custom_tooltip = touhou_paragon_situation.40350.tooltip
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.40360
+    title = touhou_paragon_situation.40360.name
+    desc = touhou_paragon_situation.40360.desc
+    picture = GFX_evt_engineering_research
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.40360.a
+        owner = {
+            add_resource = {
+                alloys = 1000
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.40360.b
+        owner = {
+            add_modifier = {
+                modifier = thl_modifier_sanae_rapid_missile
+                years = 10
+            }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.40360.c
+        owner = {
+            every_situation = {
+                limit = {
+                    is_situation_type = situation_sanae_sommon
+                }
+                add_situation_progress = -10
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+            }
+        }
+        hidden_effect = {
+            situation_event = { id = touhou_paragon_situation.40361 days = 60 random = 60 }
+        }
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.40361
+    title = touhou_paragon_situation.40361.name
+    desc = touhou_paragon_situation.40361.desc
+    picture = GFX_evt_engineering_research
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.40361.a
+        allow = {
+            owner = {
+                has_country_resource = {
+                    type = volatile_motes
+                    amount >= 100
+                }
+            }
+        }
+        owner = {
+            add_resource = {
+                volatile_motes = -100
+            }
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier2researchreward
+                min = @tier2researchmin
+                max = @tier2researchmax
+            }
+        }
+        hidden_effect = {
+            situation_event = { id = touhou_paragon_situation.40362 days = 180 random = 180 }
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.40361.b
+        owner = {
+            add_resource = {
+                influence = 50
+            }
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
+            }
+        }
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.40362
+    title = touhou_paragon_situation.40362.name
+    desc = touhou_paragon_situation.40362.desc
+    picture = GFX_evt_engineering_research
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.40362.a
+        target = {
+            add_deposit = d_sanae_amusement
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.40362.b
+        target = {
+            add_deposit = d_sanae_engineering_research
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.40362.c
+        allow = {
+            owner = {
+                or = {
+                    has_authority = auth_imperial
+                    has_authority = auth_dictatorial
+                }
+            }
+        }
+        target = {
+            add_deposit = d_sanae_monument
+        }
+    }
+    option = {
+        name = touhou_paragon_situation.40362.d
+        owner = {
+            every_situation = {
+                limit = {
+                    is_situation_type = situation_sanae_sommon
+                }
+                add_situation_progress = 75
+            }
+        }
     }
 }
