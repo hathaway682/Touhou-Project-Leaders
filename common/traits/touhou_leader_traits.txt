@@ -1163,7 +1163,7 @@ thl_leader_trait_kongfu = {
 		ship_hull_mult = 0.25
 		ship_armor_mult = 0.75
 		ship_armor_hardening_add = 1
-		ship_armor_penetration_mult = 1
+		ship_armor_penetration_add = 1
 	}
 	on_gained_effect = {
 		change_background_job = doorman
@@ -1556,7 +1556,7 @@ thl_leader_trait_magician = {
 			leader_class = commander
 		}
 		ship_weapon_damage = 0.10
-		ship_shield_penetration_mult = 0.10
+		ship_shield_penetration_add = 0.10
 	}
 	# Commander - Army Modifier
 	triggered_army_modifier = {
@@ -1648,7 +1648,7 @@ thl_leader_trait_great_magician = {
 			leader_class = commander
 		}
 		ship_weapon_damage = 0.20
-		ship_shield_penetration_mult = 0.20
+		ship_shield_penetration_add = 0.20
 	}
 	# Commander - Army Modifier
 	triggered_army_modifier = {
@@ -1734,7 +1734,7 @@ thl_leader_trait_wave_length = {
 		weapon_type_energy_weapon_damage_mult = 0.3
 		weapon_type_kinetic_weapon_damage_mult = 0.15
 		ship_shield_hardening_add = 1
-		ship_shield_penetration_mult = 1
+		ship_shield_penetration_add = 1
 		ship_cloaking_strength_add = 6
 	}
 	army_modifier = {

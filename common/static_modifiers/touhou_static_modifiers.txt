@@ -266,11 +266,11 @@ miracle_perforator_1 = {
 }
 
 miracle_perforator_2 = {
-	ship_armor_penetration_mult = 0.4
+	ship_armor_penetration_add = 0.4
 }
 
 miracle_perforator_3 = {
-	ship_shield_penetration_mult = 0.4
+	ship_shield_penetration_add = 0.4
 }
 
 miracle_perforator_4 = {
