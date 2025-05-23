@@ -633,6 +633,7 @@ country_event = {
     }
     option = {
         name = touhou_paragon_enclave.341.a
+        default_hide_option = yes
         allow = {
             resource_stockpile_compare = {
                 resource = energy

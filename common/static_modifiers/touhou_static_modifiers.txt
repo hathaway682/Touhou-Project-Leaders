@@ -978,3 +978,7 @@ thl_modifier_sanae_onedayeurika = {
 thl_modifier_sanae_dark_cuisine = {
 	planet_jobs_food_produces_mult = 0.03
 }
+
+thl_modifier_sanae_rapid_missile = {
+	explosive_weapon_fire_rate_mult = 0.2
+}

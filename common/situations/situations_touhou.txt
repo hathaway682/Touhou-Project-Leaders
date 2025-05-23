@@ -504,8 +504,13 @@ situation_sanae_sommon = {
 			end = 500
 			on_first_enter = {
 				situation_event = {
-					id = touhou_paragon_situation.40350
+					id = touhou_paragon_situation.40360
 					days = 360
+					random = 360
+				}
+				situation_event = {
+					id = touhou_paragon_situation.40350
+					days = 720
 					random = 360
 				}
 			}

@@ -336,3 +336,37 @@ d_sanaa = {
 	}
 
 }
+
+d_sanae_amusement = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = { always = no }
+	icon = d_ruins_medium
+	planet_modifier = {
+		planet_jobs_trade_produces_mult = 0.05
+		pop_job_amenities_mult = 0.1
+	}
+}
+
+d_sanae_engineering_research = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = { always = no }
+	icon = d_engineering_research
+	planet_modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.1
+		job_engineer_add = 100
+	}
+}
+
+d_sanae_monument = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_monument
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+	}
+	potential = { always = no }
+}
