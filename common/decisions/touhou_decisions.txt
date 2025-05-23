@@ -3116,7 +3116,10 @@ decision_enable_sanae_summon = {
 				}
 			}
 		}
-		has_building = building_moriya_shrine
+		num_assigned_jobs = {
+			job = moriya_miko
+			value >= 1
+		}
 	}
 
 
