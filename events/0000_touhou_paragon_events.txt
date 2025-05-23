@@ -474,7 +474,7 @@ country_event = { # ethic leader lottery machine
 						any_owned_pop_group = {
 							is_robot_pop = yes
 							NOR = {
-								has_trait = thl_leader_trait_dolls
+								has_trait = trait_thl_doll
 								has_trait = trait_sanae_robot_worker
 							}
 						}
