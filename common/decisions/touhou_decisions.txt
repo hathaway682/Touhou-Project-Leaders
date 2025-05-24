@@ -3116,7 +3116,20 @@ decision_enable_sanae_summon = {
 				}
 			}
 		}
-		moriya_faith_trigger = yes
+		custom_tooltip = {
+			text = moriya_faith_trigger_tooltip
+			moriya_faith_trigger = yes
+			OR = {
+				num_assigned_jobs = {
+					job = miko
+					value >= 1
+				}
+				num_assigned_jobs = {
+					job = miko_drone
+					value >= 1
+				}
+			}
+		}
 	}
 
 

@@ -350,6 +350,8 @@
  moriya_chosen_army_plural: "守矢神选者"
  moriya_chosen_army_desc: "受到守矢信仰感召而主动加入进攻星球一方的灵能者。"
 
+ moriya_faith_trigger_tooltip: "星球拥有£moriya_miko£$job_moriya_miko_plural$"
+
  NAME_Cirno:0 "琪露诺"
  cirno1:0 "自称最强的妖精，前来寻求冒险，实际上是个笨蛋。"
  cirno1_catch_phrase:0 "最强的咱已经迫不及待要大干一场啦！"

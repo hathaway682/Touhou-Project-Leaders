@@ -402,6 +402,13 @@ touhou_value_miko_job_number_a_quator = {
 		}
 		mode = add
 	}
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		parameters = {
+			job = miko_drone
+		}
+		mode = add
+	}
 	divide = 100
 	divide = 3 #每3个神社提供每月+2进度
 }
