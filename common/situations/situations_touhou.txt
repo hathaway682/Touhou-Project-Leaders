@@ -504,6 +504,9 @@ situation_sanae_sommon = {
 			end = 500
 			on_first_enter = {
 				situation_event = {
+					id = touhou_paragon_situation.40301
+				}
+				situation_event = {
 					id = touhou_paragon_situation.40360
 					days = 360
 					random = 360
@@ -525,6 +528,9 @@ situation_sanae_sommon = {
 			end = 1000
 			on_first_enter = {
 				situation_event = {
+					id = touhou_paragon_situation.40302
+				}
+				situation_event = {
 					id = touhou_paragon_situation.40310
 					days = 360
 					random = 360
@@ -540,6 +546,9 @@ situation_sanae_sommon = {
 			icon_background = GFX_situation_stage_frame_magenta
 			end = 1500
 			on_first_enter = {
+				situation_event = {
+					id = touhou_paragon_situation.40303
+				}
 				owner = {
 					country_event = { id = touhou_paragon.43300 }
 				}
@@ -565,6 +574,9 @@ situation_sanae_sommon = {
 			end = 2000
 			on_first_enter = {
 				situation_event = {
+					id = touhou_paragon_situation.40304
+				}
+				situation_event = {
 					id = touhou_paragon_situation.40320
 					days = 360
 					random = 360
@@ -579,13 +591,6 @@ situation_sanae_sommon = {
 	on_progress_complete = {
 		custom_tooltip = situation_sanae_summon_outcome_approach
 		hidden_effect = {
-			target = {
-				remove_modifier = modifier_sanae_situation
-				add_modifier = {
-					modifier = modifier_sanae_situation_last
-					days = -1
-				}
-			}
 			owner = {
 				country_event = { id = touhou_paragon.43400 }
 			}
@@ -653,14 +658,14 @@ situation_sanae_sommon = {
 					}
 				}
 			}
-			owner = {
-				any_owned_leader = {
-					has_trait = thl_leader_trait_heaven
-				}
-				any_owned_leader = {
-					has_trait = thl_leader_trait_earth
-				}
-			}
+			# owner = {
+			# 	any_owned_leader = {
+			# 		has_trait = thl_leader_trait_heaven
+			# 	}
+			# 	any_owned_leader = {
+			# 		has_trait = thl_leader_trait_earth
+			# 	}
+			# }
 		}
 	}
 }
