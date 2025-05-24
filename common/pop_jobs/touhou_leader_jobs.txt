@@ -16,8 +16,6 @@ ghost_lead = { icon = colonist possible = { always = no } }
 fire_trolley = { icon = colonist possible = { always = no } }
 sun_bird = { icon = colonist possible = { always = no } }
 god = { icon = colonist possible = { always = no } }
-hakurei_miko = { icon = colonist possible = { always = no } }
-moriya_miko = { icon = colonist possible = { always = no } }
 
 ###替换原版
 healthcare = {
@@ -426,7 +424,6 @@ touhou_archivist_drone = {
 #人偶师
 dollmaker = {
     category = specialist
-    condition_string = SPECIALIST_JOB_TRIGGER
     swappable_data = {
         default = {
             condition_string = SPECIALIST_JOB_TRIGGER
@@ -661,96 +658,28 @@ dollmaker_drone = {
 
     triggered_planet_modifier = {
         potential = { owner = { has_technology = tech_automatic_dolls } }
-        doll_control_limit = 1000
+        doll_control_limit = 500
         #planet_doll_jobs_worker_produces_mult = 0.05
     }
 
     triggered_planet_modifier = {
         potential = { owner = { has_technology = tech_sapient_dolls } }
-        doll_control_limit = 1000
+        doll_control_limit = 500
         #planet_doll_jobs_specialist_produces_mult = 0.05
     }
 
     # Add growth from 0 to 25 depending on 'clone_pops_missing_per_vat'.
     triggered_planet_modifier = {
         potential = {
-            check_variable_arithmetic = { which = value:doll_missing_per_maker value >= 11 }
-        }
-        planet_pop_assembly_add = 25
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 11
-        LOWER_LIMIT = 10
-        GROWTH = 22
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 10
-        LOWER_LIMIT = 9
-        GROWTH = 20
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 9
-        LOWER_LIMIT = 8
-        GROWTH = 17
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 8
-        LOWER_LIMIT = 7
-        GROWTH = 15
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 7
-        LOWER_LIMIT = 6
-        GROWTH = 12
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 6
-        LOWER_LIMIT = 5
-        GROWTH = 10
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 5
-        LOWER_LIMIT = 4
-        GROWTH = 7
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 4
-        LOWER_LIMIT = 3
-        GROWTH = 5
-    }
-
-    inline_script = {
-        script = buildings/doll_maker_output
-        UPPER_LIMIT = 3
-        LOWER_LIMIT = 0
-        GROWTH = 2
-    }
-
-    triggered_planet_modifier = {
-        potential = {
-            owner = {
-                has_technology = tech_sapient_dolls
+            planet = {
+                check_variable_arithmetic = { which = value:doll_missing_per_maker value > 0 }
             }
         }
-        planet_pop_assembly_add = 2
+        modifier = {
+            planet_pop_assembly_add = 1
+        }
+        mult = value:doll_bonus_assemble_derivative
     }
-
 
     resources = {
         category = planet_pop_assemblers
@@ -2995,7 +2924,7 @@ miko_drone = {
         time = @standard_promotion_time
         effect = {
             pop_amount_change_category = {
-                CATEGORY = specialist
+                CATEGORY = complex_drone
                 AMOUNT = local_pop_amount
             }
         }

@@ -54,9 +54,11 @@ subclass_commander_servant = {
 		COUNCIL = no
 	}
 	custom_tooltip_with_modifiers = governor_subclass_tt
+	fleet_modifier = {
+		ship_hull_mult = 0.05
+	}
 	army_modifier = {
 		army_health = 0.05
-		army_morale = 0.05
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -109,7 +111,9 @@ subclass_commander_miko = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			owner = {
+				is_gestalt = no
+			}
 		}
 		#planet_jobs_ruler_produces_mult = 0.02 #先注释掉吧
 		#planet_jobs_specialist_produces_mult = 0.02
@@ -119,12 +123,38 @@ subclass_commander_miko = {
 	}
 	triggered_sector_modifier = {
 		potential = {
-			always = yes
+			owner = {
+				is_gestalt = no
+			}
 		}
 		#planet_jobs_ruler_produces_mult = 0.01
 		#planet_jobs_specialist_produces_mult = 0.01
 		job_soldier_or_warrior_add = -50
 		job_miko_add = 50
+		multiplier = trigger:has_base_skill
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		#planet_jobs_ruler_produces_mult = 0.02 #先注释掉吧
+		#planet_jobs_specialist_produces_mult = 0.02
+		job_soldier_or_warrior_add = -100
+		job_miko_drone_add = 100
+		multiplier = trigger:has_base_skill
+	}
+	triggered_sector_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		#planet_jobs_ruler_produces_mult = 0.01
+		#planet_jobs_specialist_produces_mult = 0.01
+		job_soldier_or_warrior_add = -50
+		job_miko_drone_add = 50
 		multiplier = trigger:has_base_skill
 	}
 	triggered_councilor_modifier = {
@@ -3126,14 +3156,44 @@ thl_leader_trait_dolls = {
 		mult = trigger:has_base_skill
 	}
 	planet_modifier = {
-		job_dollmaker_add = 100
 		doll_workforce_mult = 0.2
 		doll_empire_size_mult = -0.5
 	}
 	sector_modifier = {
-		job_dollmaker_add = 50
 		doll_workforce_mult = 0.1
 		doll_empire_size_mult = -0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+		job_dollmaker_add = 100
+	}
+	triggered_sector_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+		job_dollmaker_add = 50
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		job_dollmaker_drone_add = 100
+	}
+	triggered_sector_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		job_dollmaker_drone_add = 50
 	}
 	on_gained_effect = {
 		change_background_job = magician
