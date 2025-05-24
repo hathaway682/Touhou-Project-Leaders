@@ -1027,3 +1027,88 @@ situation_event = {
         }
     }
 }
+
+situation_event = {
+    id = touhou_paragon_situation.40301
+    title = touhou_paragon_situation.40301.name
+    desc = touhou_paragon_situation.40301.desc
+    picture = GFX_evt_shroudwalker_enclave
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.40301.a
+        custom_tooltip = touhou_paragon_situation.40301.tooltip
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.40302
+    title = touhou_paragon_situation.40302.name
+    desc = touhou_paragon_situation.40302.desc
+    picture = GFX_evt_shroudwalker_enclave
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.40302.a
+        custom_tooltip = touhou_paragon_situation.40302.tooltip
+
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.40303
+    title = touhou_paragon_situation.40303.name
+    desc = touhou_paragon_situation.40303.desc
+    picture = GFX_evt_shroudwalker_enclave
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.40303.a
+        custom_tooltip = touhou_paragon_situation.40303.tooltip
+
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.40304
+    title = touhou_paragon_situation.40304.name
+    desc = touhou_paragon_situation.40304.desc
+    picture = GFX_evt_shroudwalker_enclave
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.40304.a
+        custom_tooltip = touhou_paragon_situation.40304.tooltip
+
+    }
+}
+
+situation_event = {
+    id = touhou_paragon_situation.40305
+    title = touhou_paragon_situation.40305.name
+    desc = touhou_paragon_situation.40305.desc
+    picture = GFX_evt_shroudwalker_enclave
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+    situation = this
+    location = target
+    option = {
+        name = touhou_paragon_situation.40305.a
+        target = {
+            remove_modifier = modifier_sanae_situation
+            add_modifier = {
+                modifier = modifier_sanae_situation_last
+                days = -1
+            }
+        }
+        destroy_situation = this
+    }
+}
