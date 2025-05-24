@@ -63,7 +63,10 @@ agenda_sanae_ascension = {
 	finish_modifier = modifier_sanae_mission_faith_5_agenda_modifier
 	effect = {
 		random_owned_planet = {
-			limit = { has_planetary_ascension_tier < 10 }
+			limit = {
+				is_colony = yes
+				has_planetary_ascension_tier < 10
+			}
 			set_planetary_ascension_tier = 10
 		}
 	}
