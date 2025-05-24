@@ -590,6 +590,9 @@ situation_sanae_sommon = {
 	}
 	on_progress_complete = {
 		custom_tooltip = situation_sanae_summon_outcome_approach
+		situation_event = {
+			id = touhou_paragon_situation.40305
+		}
 		hidden_effect = {
 			owner = {
 				country_event = { id = touhou_paragon.43400 }
