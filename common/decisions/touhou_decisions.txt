@@ -920,10 +920,7 @@ decision_stick_of_repentance = {
 	}
 
 	effect = {
-		custom_tooltip = enforcer_stronger
-		hidden_effect = {
-			add_deposit = d_stick_of_repentance
-		}
+		add_deposit = d_stick_of_repentance
 	}
 
 	ai_weight = {

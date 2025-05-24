@@ -350,7 +350,7 @@
  moriya_chosen_army_plural: "守矢神选者"
  moriya_chosen_army_desc: "受到守矢信仰感召而主动加入进攻星球一方的灵能者。"
 
- moriya_faith_trigger_tooltip: "星球拥有£moriya_miko£$job_moriya_miko_plural$"
+ moriya_faith_trigger_tooltip: "$TRIGGER_FAIL$星球拥有£moriya_miko£$job_moriya_miko_plural$"
 
  NAME_Cirno:0 "琪露诺"
  cirno1:0 "自称最强的妖精，前来寻求冒险，实际上是个笨蛋。"
@@ -1293,7 +1293,7 @@
  edict_red_fog: "红色的幻想乡"
  edict_red_fog_desc: "献祭该星球的人口，以他们的血液为媒介发动魔法，制造笼罩一整个星系的红雾。"
  edict_red_fog_effect: "§R5§!个£pop£人口将死去，优先杀死失业的，然后是被奴役的。\n§Y蕾米莉亚§!所在星系出现§Y1800§!天的§Y红雾§!：\n阻碍§Y探测器§!\n大幅降低敌方§Y命中§!和§Y索敌§!\n持续侵蚀敌方§Y船体§!和§Y装甲§!\n持续修复己方§Y船体§!和§Y装甲§!"
- red_fog_fail_text: "目标星系已经存在红雾"
+ red_fog_fail_text: "$TRIGGER_FAIL$目标星系已经存在红雾"
 
  NAME_Bat_Attack: "魔符「全世界梦魇」"
  BAT_STRIKE_CRAFT: "蝙蝠群"
@@ -1301,18 +1301,18 @@
  edict_bat_swarm: "全世界梦魇"
  edict_bat_swarm_desc: "献祭人口，以他们的血液为媒介发动魔法，制造大量凶残且巨大，足以与战舰抗衡的蝙蝠。"
  edict_bat_swarm_effect: "§R2§!个£pop£人口将死去，优先杀死失业的，然后是被奴役的。\n§Y蕾米莉亚§!所在星系出现§Y360§!天的§Y法阵§!：\n阻碍§Y探测器§!\n持续释放§Y蝙蝠攻击§!"
- bat_swarm_fail_text: "该符卡最多只能同时存在一个"
+ bat_swarm_fail_text: "$TRIGGER_FAIL$该符卡最多只能同时存在一个"
 
  edict_gungnir: "必杀「Heart Break」（攻击移动目标）"
  edict_gungnir_desc: "将传说中的神器冈格尼尔投出，几乎任何战舰都会被贯穿，但遗憾之处在于一次只有一击，尽量将它用在关键目标上。"
  edict_gungnir_effect: "立刻对星系内生命值最高的敌对战舰造成§Y100000§!船体伤害，舰队中的敌方战舰会受到震慑而在§I30§!天内减少§P50§!%的舰船武器射速。"
- edict_gungnir_fail_text: "需要蕾米莉亚所在星系内有可用目标"
- edict_gungnir_shooted: "我们已经将神枪投出，现在需要用工程船将其回收。"
+ edict_gungnir_fail_text: "$TRIGGER_FAIL$需要蕾米莉亚所在星系内有可用目标"
+ edict_gungnir_shooted: "$TRIGGER_FAIL$我们已经将神枪投出，现在需要用工程船将其回收。"
 
  edict_gungnir_starbase: "必杀「Heart Break」（攻击固定目标）"
  edict_gungnir_starbase_desc: "将传说中的神器冈格尼尔投出，几乎任何要塞都会被贯穿，但遗憾之处在于一次只有一击，尽量将它用在关键目标上。"
  edict_gungnir_starbase_effect: "立刻对星系内生命值最高的敌对空间站造成§Y100000§!船体伤害。"
- edict_gungnir_starbase_fail_text: "需要蕾米莉亚所在星系内有可用目标"
+ edict_gungnir_starbase_fail_text: "$TRIGGER_FAIL$需要蕾米莉亚所在星系内有可用目标"
 
  GUNGNIR_SPECIAL_PROJECT:0 "回收冈格尼尔"
  GUNGNIR_SPECIAL_PROJECT_DESC:1 "文献只提到了冈格尼尔可以击穿它击中的任何东西，现在看来，它似乎不像口口相传的那样会自动回到主人手中？"
