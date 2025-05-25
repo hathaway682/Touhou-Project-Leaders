@@ -1348,7 +1348,7 @@ thl_leader_exorcism_roud = {
 		TIER = 1
 	}
 	fleet_modifier = {
-		ship_weapon_range_mult = 0.15
+		ship_weapon_range_mult = 0.33
 	}
 	leader_class = { commander }
 	leader_trait_type = veteran
@@ -1368,7 +1368,7 @@ thl_leader_exorcism_roud_2 = {
 		TIER = 2
 	}
 	fleet_modifier = {
-		ship_weapon_range_mult = 0.3
+		ship_weapon_range_mult = 0.66
 	}
 	leader_class = { commander }
 	leader_trait_type = veteran
@@ -1388,7 +1388,7 @@ thl_leader_exorcism_roud_3 = {
 		TIER = 3
 	}
 	fleet_modifier = {
-		ship_weapon_range_mult = 0.45
+		ship_weapon_range_mult = 1
 		ship_evasion_mult = -0.05
 	}
 	leader_class = { commander }

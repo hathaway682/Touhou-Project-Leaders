@@ -47,6 +47,7 @@ paragon_reimu_wormhole_key = {
 
 invincible_fleet = {
 	ship_damage_reduction_mult = -10
+	ship_damage_reduction_add = 99999999
 }
 
 battle_with_reisen = {

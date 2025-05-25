@@ -2,6 +2,8 @@
  #################################################
  #符卡
  #################################################
+ disable_spell_cards_gui: "全局：永久禁用符卡UI"
+ disable_spell_cards_gui_desc: "和官方外挂说拜拜，联机时一人点击即对所有人有效。"
  edict_open_spell_cards_gui: "开启符卡UI"
  edict_open_spell_cards_gui_desc: "这将允许你使用东方领袖们的主动能力。"
 
