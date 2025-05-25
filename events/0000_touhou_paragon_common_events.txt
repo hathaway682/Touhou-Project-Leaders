@@ -241,7 +241,7 @@ country_event = {
 
 					create_ship = {
 						name = random
-						random_existing_design = explorer_vessel
+						design = "NAME_Explorer_Vessel_Hifuu"
 					}
 
 					set_fleet_stance = passive
@@ -262,7 +262,7 @@ country_event = {
 
 					create_ship = {
 						name = random
-						random_existing_design = explorer_vessel
+						design = "NAME_Explorer_Vessel_Hifuu"
 					}
 
 					set_fleet_stance = passive

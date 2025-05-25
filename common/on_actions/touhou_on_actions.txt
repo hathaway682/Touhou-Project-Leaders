@@ -422,6 +422,12 @@ on_asteroid_target_planet_reached = {
 	}
 }
 
+on_hifuu_callback_activated = {
+	events = {
+		touhou_paragon_effect.41101
+	}
+}
+
 # a new leader is created
 # scope: country, from: leader
 on_leader_spawned = {

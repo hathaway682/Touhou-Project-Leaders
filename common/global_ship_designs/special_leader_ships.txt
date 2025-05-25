@@ -536,3 +536,20 @@ ship_design = {
 	}
 	required_component = "SENSOR_4"
 }
+
+##秘封的船
+ship_design = {
+	name = "NAME_Explorer_Vessel_Hifuu"
+	ship_size = explorer_vessel
+
+	section = {
+		template = "pre_ftl_laser_ship_key"
+		slot = "mid"
+	}
+
+	required_component = "SHIP_THRUSTER_1"
+	required_component = "SENSOR_1"
+	required_component = "CORVETTE_FISSION_REACTOR"
+	required_component = "SUBSPACE_DRIVE"
+	required_component = "HIFUU_CALLBACK"
+}

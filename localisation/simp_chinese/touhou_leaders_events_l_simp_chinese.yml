@@ -360,7 +360,20 @@
  civic_penglai_medcine_corp_effects: "拥有§Y铃仙·优昙华院·因幡§!作为起始指挥官。\n在开始时就拥有§Y£society_research£ $tech_genome_mapping$§!、§Y£society_research£ $tech_gene_tailoring$§!和§Y£society_research£ $tech_frontier_health$§!科技。\n£job_healthcare£§Y$job_healthcare_plural$§!产出的$r_amenities$：§G+2§!\n£job_healthcare£§Y$job_healthcare_plural$§!产出的$r_trade_value$：§G+4§!\n可以建造£building£§Y$building_corporate_clinics$§!$BRANCH_OFFICE_BUILDING$"
  civic_hifuu: "秘封少女俱乐部"
  civic_hifuu_desc: "这一文明在前太空阶段意外的遇到了两名跨越梦与现，自遥远未来而来的客人。带着对浩瀚星宇深处的秘密的共同渴望，文明最优秀的航天科学家和她们合作，仿造来自那个遥远“科学世纪”的跃迁技术，研制了早期型号的太空探索飞船。"
- civic_hifuu_effects: "§R开局将陷入科技和基础设施的劣势，£pops£人口比正常开局要少10！§!\n开局拥有2艘分别由§Y玛艾露贝莉·赫恩§!和§Y宇佐见莲子§!驾驶的§H$explorer_vessel_plural$§!，以及一艘配备§H亚空间引擎§!的§H$engineer_vessel$§!，这使它们无法进行超空间旅行，但能提供有限的跃迁引擎能力。\n观测前超光速文明可获得额外§G50%§!的洞见进度。\n每次完成建立第一次接触可获得£unity£§H凝聚力§!。"
+ civic_hifuu_effects: "§R开局将陷入科技和基础设施的劣势，£pops£人口比正常开局要少10！§!\n开局拥有2艘分别由§Y玛艾露贝莉·赫恩§!和§Y宇佐见莲子§!驾驶的§H$explorer_vessel_plural$§!，以及一艘配备§H亚空间引擎§!的§H$engineer_vessel$§!，这使它们无法进行超空间旅行，但能提供有限的跃迁引擎能力，且在遇险时可以传送至另一位成员身边。\n观测前超光速文明可获得额外§G50%§!的洞见进度。\n每次完成建立第一次接触可获得£unity£§H凝聚力§!。"
+
+ NAME_Explorer_Vessel_Hifuu: "秘封探险船"
+ HIFUU_CALLBACK: "舰载隙间生成器"
+ hifuu_callback: "舰载隙间生成器"
+ hifuu_callback_menu_title: "隙间传送"
+ hifuu_callback_ship_activity_key: "隙间传送"
+ hifuu_callback_ship_progress_activity_key: "$hifuu_callback_ship_activity_key$（§Y$PROGRESS$%§!）"
+ hifuu_callback_ship_button: "§H$hifuu_callback_menu_title$§!\n$hifuu_callback_ship_effect$"
+ hifuu_callback_ship_effect: "将§Y秘封少女俱乐部§!的一名成员传送至另一名成员身边。"
+ hifuu_callback_tt: "解锁行动：$hifuu_callback_menu_title$\n$hifuu_callback_ship_effect$\n\n"
+ hifuu_callback_modifier: "$hifuu_callback_menu_title$"
+
+ hiffu_callback_clickable: "§Y秘封少女俱乐部§!的另一位成员也在指挥§H科研船§!或§H探险船§!。"
 
  thl_leader_trait_destined: "注定伟大"
  thl_leader_trait_destined_desc: "这位领袖的命运与她所在的帝国深刻联系在了一起。"
