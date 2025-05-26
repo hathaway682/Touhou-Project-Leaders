@@ -1430,7 +1430,7 @@
  touhou_paragon_enclave.383.b:0 "对不起，我们之间还没有建立良好的信任。"
  touhou_paragon_enclave.383.b.reply:0 "可是我们还能去哪里呢？"
 
- #1.1.4更新趣味事件包
+ #趣味事件包
  touhou_paragon_effect.40101.name:0 "花海"
  touhou_paragon_effect.40101.desc:0 "鲜花向日开，阳光洒满海。\n可是为什么，有要石砸下来？\n花田被损坏，天子趴地摔。\n落了一个下跪赔罪真活该~\n\n弹幕被打败，天子很痛快。\n要石拔出来，土壤被疏松开。\n花肥不用买，幽香很释怀。\n不用说拜拜，下次还敢来！"
  RICH_MINERAL_GARDEN:0 "£job_grower£ $job_grower_plural$额外生产1点$r_minerals$"

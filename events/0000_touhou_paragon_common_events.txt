@@ -5445,3 +5445,4 @@ astral_rift_event = {
 		finish_astral_rift = yes
 	}
 }
+
