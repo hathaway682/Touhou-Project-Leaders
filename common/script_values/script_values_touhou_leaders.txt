@@ -70,6 +70,22 @@ doll_missing_per_maker = {
 		mode = divide
 	}
 }
+
+doll_workforce_debuff = {
+	base = 0
+	add = modifier:doll_control_limit
+	complex_trigger_modifier = {
+		trigger = count_owned_pop_amount
+		parameters = {
+			limit = { has_trait = trait_thl_doll }
+		}
+		mode = divide
+	}
+	pow = 2
+	multiply = -1
+	add = 1
+}
+
 # 这些都是隐变量，我们不需要计算
 # doll_bonus_assemble_derivative_exponents = { #幂指数位置的计算
 # 	base = 0

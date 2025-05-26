@@ -4884,7 +4884,7 @@ country_event = {
                         }
                         #It copies the traditions and technologies in code
 
-                        create_fleet_from_naval_cap = 0.8
+                        create_fleet_from_naval_cap = 1
                     }
                 }
             }
