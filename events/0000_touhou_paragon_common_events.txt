@@ -1988,10 +1988,6 @@ country_event = {
 				#我怎么不记得我得博物馆有这么多东西
 				create_ship = {
 					name = ""
-					design = "NAME_Tiyanki_Ox_Clonable"
-				}
-				create_ship = {
-					name = ""
 					design = "NAME_Tiyanki_Cow"
 				}
 				create_ship = {
