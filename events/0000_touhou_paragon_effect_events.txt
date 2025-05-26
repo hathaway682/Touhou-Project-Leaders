@@ -1429,7 +1429,7 @@ country_event = {
         name = EXCELLENT
         add_random_research_option = {
             add_progress = 0.5
-            ignore_prereqs = yes
+            ignore_prereqs = no
             ignore_rare = no
         }
     }

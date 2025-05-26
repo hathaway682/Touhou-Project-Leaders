@@ -1313,9 +1313,37 @@ add_suwako_traits = {
 	set_age = 2300
 }
 
+create_suwako_commander_leader = {
+	thl_leader_creator_core = {
+		SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+		LEADER_PORTRAIT = x76
+		CLASS = commander
+		NAME = NAME_Suwako
+		LEVEL = 6
+		GENDER = female
+		IMMORTAL = no
+		ETHIC = spiritualist
+		DESC = suwako1
+		CATCH_PHRASE =  suwako1_catch_phrase
+		TRAIT_GROUP = suwako_commander
+	}
+}
 
-
-
+add_suwako_commander_traits = {
+	add_trait = subclass_commander_admiral
+	add_trait = thl_leader_trait_future_and_past
+	add_trait = thl_leader_trait_earth
+	add_trait = thl_leader_trait_no_fear_of_storm
+	add_trait = leader_trait_rocketry_specialization_2
+	add_trait = leader_trait_gunship_specialization_2
+	add_trait = leader_trait_archaeo_specialization_2
+	add_trait = leader_trait_commanding_presence_2
+	add_trait = trait_ruler_corvette_focus
+	add_trait = leader_trait_sadistic
+	add_trait = leader_trait_gullible
+	add_trait = thl_leader_trait_regeneration_2
+	set_age = 2300
+}
 
 
 
