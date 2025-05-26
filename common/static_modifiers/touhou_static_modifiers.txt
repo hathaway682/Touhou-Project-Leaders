@@ -46,7 +46,8 @@ paragon_reimu_wormhole_key = {
 }
 
 invincible_fleet = {
-	ship_damage_reduction_mult = -10
+	ship_damage_reduction_mult = 10
+	ship_damage_reduction_add = 100000
 }
 
 battle_with_reisen = {
@@ -233,7 +234,7 @@ yuka_terror = {
 
 nuclear_attack_bonus = {
 	ship_weapon_damage = 0.3
-	ship_damage_reduction_add = -0.1
+	ship_damage_reduction_mult = -0.1
 }
 
 weather_debuff_1 = {
@@ -708,6 +709,7 @@ fall_in_blast_modifier = {
 
 aki_bleak_planet = {
 	planet_jobs_food_produces_mult = -10
+	BIOLOGICAL_logistic_growth_mult = -10
 	icon = "gfx/interface/icons/planet_modifiers/pm_bleak.dds"
 	icon_frame = 3
 }
@@ -739,11 +741,11 @@ paradisiacal_habitat_marisa = {
 }
 
 blazing_star = {
-	ship_speed_mult = 9
-	ship_fire_rate_mult = 9
-	ship_windup_mult = -0.9
-	ship_winddown_mult = -0.9
-	ship_evasion_add = 90
+	ship_speed_mult = 1
+	ship_fire_rate_mult = 1
+	ship_windup_mult = -0.1
+	ship_winddown_mult = -0.1
+	ship_evasion_add = 10
 }
 
 pain_flow_modifier_1 = {

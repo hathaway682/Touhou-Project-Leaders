@@ -274,8 +274,25 @@ reimu_spell_card_5_effect = {
 
 reimu_spell_card_6_effect = {
     from = {
-        add_resource = {
-            thl_bomb = -5
+        export_resource_stockpile_to_variable = {
+            resource = thl_bomb
+            variable = reimu_spell_time
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = reimu_spell_time
+                    value > 18
+                }
+            }
+            set_variable = {
+                which = reimu_spell_time
+                value = 18
+            }
+        }
+        set_resource = {
+            resource = thl_bomb
+            value = 0
         }
     }
     from = {
@@ -288,14 +305,8 @@ reimu_spell_card_6_effect = {
             }
             add_modifier = {
                 modifier = invincible_fleet
-                days = 60
-            }
-            fleet_event = {
-                id = touhou_paragon_spell.5
-                days = 60
-            }
-            set_fleet_settings = {
-                is_boss = yes
+                days = 10
+                time_multiplier = from.reimu_spell_time
             }
         }
     }
@@ -405,22 +416,6 @@ koishi_spell_card_3_effect = {
             set_owner = from
             leader = {
                 set_owner = from
-            }
-            solar_system = {
-                every_fleet_in_system = {
-                    add_modifier = {
-                        modifier = super_ego
-                        days = 30
-                    }
-                }
-            }
-            solar_system = {
-                every_fleet_in_system = {
-                    add_modifier = {
-                        modifier = super_ego
-                        days = 30
-                    }
-                }
             }
         }
     }
@@ -589,39 +584,9 @@ sizuha_spell_card_2_effect = {
             }
         }
         root = {
-            if = {
-                limit = {
-                    NOT = {
-                        has_modifier = bleak_planet
-                    }
-                }
-                add_modifier = {
-                    modifier = bleak_planet
-                }
-            }
-            else_if = {
-                limit = {
-                    pop_amount > 0
-                }
-                while = {
-                    count = 2
-                    random_owned_pop_group =  {
-                        kill_single_pop = yes
-                    }
-                }
-                add_modifier = {
-                    modifier = aki_bleak_planet
-                    days = 360
-                }
-            }
-            else = {
-                change_pc = pc_barren
-                add_modifier = {
-                    modifier = terraforming_candidate
-                }
-                add_modifier = {
-                    modifier = aki_terraforming_cost
-                }
+            add_modifier = {
+                modifier = aki_bleak_planet
+                days = 3600
             }
         }
     }
@@ -815,70 +780,47 @@ minoriko_spell_card_2_effect = {
             }
         }
         root = {
-            if = {
-                limit = {
-                    NOT = {
-                        has_modifier = hazardous_weather
+            random_list = {
+                1 = {
+                    spawn_random_storm = {
+                        type = gravity_storm
+                        immediate = yes
+                        cosmic_storm_start_position = root.solar_system
                     }
                 }
-                add_modifier = {
-                    modifier = hazardous_weather
+                1 = {
+                    spawn_random_storm = {
+                        type = celestial_storm
+                        immediate = yes
+                        cosmic_storm_start_position = root.solar_system
+                    }
                 }
-            }
-            else_if = {
-                limit = {
-                   OR = {
-                       num_buildings = {
-                           type = any
-                           value > 1
-                       }
-                       num_districts = {
-                           type = any
-                           value > 0
-                       }
-                   }
+                1 = {
+                    spawn_random_storm = {
+                        type = electric_storm
+                        immediate = yes
+                        cosmic_storm_start_position = root.solar_system
+                    }
                 }
-                ruin_building = random_no_capital
-                remove_last_built_district = yes
-                add_modifier = {
-                    modifier = aki_hazardous_weather
-                    days = 360
+                1 = {
+                    spawn_random_storm = {
+                        type = particle_storm
+                        immediate = yes
+                        cosmic_storm_start_position = root.solar_system
+                    }
                 }
-            }
-            else = {
-                if = {
-                    limit = {
-                        is_planet_class = pc_city
+                1 = {
+                    spawn_random_storm = {
+                        type = solar_storm
+                        immediate = yes
+                        cosmic_storm_start_position = root.solar_system
                     }
-                    change_pc = pc_relic
                 }
-                random_list = {
-                    1 = {
-                        change_pc = pc_desert
-                    }
-                    1 = {
-                        change_pc = pc_arid
-                    }
-                    1 = {
-                        change_pc = pc_savannah
-                    }
-                    1 = {
-                        change_pc = pc_tropical
-                    }
-                    1 = {
-                        change_pc = pc_continental
-                    }
-                    1 = {
-                        change_pc = pc_ocean
-                    }
-                    1 = {
-                        change_pc = pc_arctic
-                    }
-                    1 = {
-                        change_pc = pc_tundra
-                    }
-                    1 = {
-                        change_pc = pc_alpine
+                1 = {
+                    spawn_random_storm = {
+                        type = magnetic_storm
+                        immediate = yes
+                        cosmic_storm_start_position = root.solar_system
                     }
                 }
             }
@@ -1136,8 +1078,41 @@ marisa_spell_card_5_effect = {
 
 marisa_spell_card_6_effect = {
     from = {
-        add_resource = {
-            thl_bomb = -5
+        export_resource_stockpile_to_variable = {
+            resource = thl_bomb
+            variable = marisa_spell_time
+        }
+        set_variable = {
+            which = marisa_spell_strength
+            value = marisa_spell_time
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = marisa_spell_time
+                    value > 18
+                }
+            }
+            set_variable = {
+                which = marisa_spell_time
+                value = 18
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = marisa_spell_strength
+                    value > 9
+                }
+            }
+            set_variable = {
+                which = marisa_spell_strength
+                value = 9
+            }
+        }
+        set_resource = {
+            resource = thl_bomb
+            value = 0
         }
     }
     from = {
@@ -1150,7 +1125,9 @@ marisa_spell_card_6_effect = {
             }
             add_modifier = {
                 modifier = blazing_star
-                days = 180
+                days = 10
+                multiplier = from.marisa_spell_strength
+                time_multiplier = from.marisa_spell_time
             }
         }
     }

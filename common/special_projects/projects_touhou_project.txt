@@ -321,19 +321,19 @@ special_project = {
 	tech_department = society_technology
 	timelimit = -1
 	picture = GFX_evt_marisa_steal
-	days_to_research = 100
+	days_to_research = 30
 	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
 	event_scope = ship_event
 	event_chain = touhou_eientei
 	location = yes
 
 	requirements = {
-		shipclass_transport = 1
+		fleet_power = 3000
 	}
 
 	on_success = {
 		owner = {
-			country_event = { id = touhou_paragon.40733 }
+			country_event = { id = touhou_paragon.40732 }
 		}
 	}
 }

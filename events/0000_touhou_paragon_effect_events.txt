@@ -4884,7 +4884,7 @@ country_event = {
                         }
                         #It copies the traditions and technologies in code
 
-                        create_fleet_from_naval_cap = 0.8
+                        create_fleet_from_naval_cap = 1
                     }
                 }
             }
@@ -10175,6 +10175,51 @@ country_event = {
                 }
                 remove_army = yes
             }
+        }
+    }
+}
+
+fleet_event = {
+    id = touhou_paragon_effect.41101
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                leader = {
+                    has_trait = thl_leader_trait_border_merry
+                }
+            }
+            owner = {
+                random_owned_fleet = {
+                    limit = {
+                        leader = {
+                            has_trait = thl_leader_trait_star_located
+                        }
+                    }
+                    save_event_target_as = hifuu_callback_target
+                }
+            }
+            set_location = event_target:hifuu_callback_target
+        }
+        if = {
+            limit = {
+                leader = {
+                    has_trait = thl_leader_trait_star_located
+                }
+            }
+            owner = {
+                random_owned_fleet = {
+                    limit = {
+                        leader = {
+                            has_trait = thl_leader_trait_hifuu
+                        }
+                    }
+                    save_event_target_as = hifuu_callback_target
+                }
+            }
+            set_location = event_target:hifuu_callback_target
         }
     }
 }

@@ -235,6 +235,9 @@ sizuha_card_2_trigger = {
 			is_colony = yes
 			is_colonizable = yes
 		}
+		NOT = {
+			has_modifier = aki_bleak_planet
+		}
 	}
 }
 
@@ -254,11 +257,7 @@ minoriko_card_1_trigger = {
 minoriko_card_2_trigger = {
 	Root = {
 		is_scope_type = planet
-		is_artificial = no
-		OR = {
-			is_colony = yes
-			is_colonizable = yes
-		}
+		is_star = yes
 	}
 }
 

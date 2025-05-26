@@ -51,3 +51,10 @@ component_set = {
 	icon = "GFX_ship_part_aura_minefield"
 	icon_frame = 1
 }
+
+component_set = {
+	key = "hifuu_callback"
+
+	icon = "GFX_ship_part_aura_minefield"
+	icon_frame = 1
+}

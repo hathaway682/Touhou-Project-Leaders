@@ -392,8 +392,6 @@ utility_component_template = {
 		icon = GFX_fleet_order_button_land_armies
 		activity_key = asteroid_impact_action_activity_key
 	}
-
-
 }
 
 utility_component_template = {
@@ -469,7 +467,7 @@ utility_component_template = {
 			accuracy = 1
 			damage = {
 				min = 1
-				max = 10
+				max = 6
 			}
 		}
 
@@ -479,5 +477,72 @@ utility_component_template = {
 				dynamic_scale = no
 			}
 		}
+	}
+}
+
+utility_component_template = {
+	key = "HIFUU_CALLBACK"
+	size = medium
+	icon = "GFX_ship_part_whisperers_covenant_aux"
+	icon_frame = 1
+	power = 0
+
+	component_set = "hifuu_callback"
+
+	size_restriction = { explorer_vessel }
+
+	scripted_action = {
+		scope = self
+		button_visible = {
+			exists = leader
+			OR = {
+				leader = {
+					has_trait = thl_leader_trait_border_merry
+				}
+				leader = {
+					has_trait = thl_leader_trait_star_located
+				}
+			}
+		}
+
+		button_clickable = {
+			custom_tooltip = {
+				text = hiffu_callback_clickable
+				OR = {
+					AND = {
+						leader = {
+							has_trait = thl_leader_trait_border_merry
+						}
+						owner = {
+							any_owned_fleet = {
+								leader = {
+									has_trait = thl_leader_trait_star_located
+								}
+							}
+						}
+					}
+					AND = {
+						leader = {
+							has_trait = thl_leader_trait_star_located
+						}
+						owner = {
+							any_owned_fleet = {
+								leader = {
+									has_trait = thl_leader_trait_border_merry
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		name = on_hifuu_callback_activated
+		tooltip = hifuu_callback_ship_button
+		icon = GFX_fleet_action_button_active_reconnaissance
+		icon_selected = GFX_fleet_order_button_build_wormhole_station_selected
+		activity_key = hifuu_callback_ship_activity_key
+		context_menu_name = hifuu_callback_menu_title
+		cooldown = 30
 	}
 }

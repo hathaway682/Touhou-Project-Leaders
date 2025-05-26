@@ -9,12 +9,33 @@
 
 @sacrificeReward1 = 0.15
 
+disable_spell_cards_gui = {
+	length = 1
+	icon = "GFX_edict_type_policy"
+	potential = {
+		NOT = {
+			has_global_flag = disable_spell_cards_gui
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+		}
+	}
+	effect = {
+		set_global_flag = disable_spell_cards_gui
+	}
+}
+
 open_spell_cards_gui = {
 	length = 1
 	icon = "GFX_edict_type_policy"
 	potential = {
 		any_owned_leader = {
 			has_touhou_spell_trait = yes
+		}
+		NOT = {
+			has_global_flag = disable_spell_cards_gui
 		}
 	}
 	resources = {
