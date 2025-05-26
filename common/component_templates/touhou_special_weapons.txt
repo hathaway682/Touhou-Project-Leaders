@@ -437,7 +437,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_final_spark" }
 	component_set = "FINAL_SPARK"
-	projectile_gfx = "Finalspark_projectile"
+	projectile_gfx = "Masterspark_projectile"
 	resources = {
 		category = ship_components
 		cost = {

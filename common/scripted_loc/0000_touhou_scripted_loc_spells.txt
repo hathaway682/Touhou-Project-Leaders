@@ -990,7 +990,7 @@ defined_text = {
 						}
 						resource_stockpile_compare = {
 							resource = thl_bomb
-							value < 5
+							value < 1
 						}
 					}
 				}
@@ -1963,7 +1963,7 @@ defined_text = {
 						}
 						resource_stockpile_compare = {
 							resource = thl_bomb
-							value < 5
+							value < 1
 						}
 					}
 				}

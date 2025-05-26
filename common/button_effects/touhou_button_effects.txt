@@ -495,7 +495,7 @@ touhou_reimu_spell_card_effect = {
 						}
 						resource_stockpile_compare = {
 							resource = thl_bomb
-							value >= 5
+							value >= 1
 						}
 					}
 					reimu_card_6_trigger = yes
@@ -1091,7 +1091,7 @@ touhou_marisa_spell_card_effect = {
 						}
 						resource_stockpile_compare = {
 							resource = thl_bomb
-							value >= 5
+							value >= 1
 						}
 					}
 					marisa_card_6_trigger = yes

@@ -1890,56 +1890,12 @@ country_event = {
 			days = 10
 		}
 	}
-
-	option = {
-		trigger = {
-			any_owned_leader = {
-				has_trait = thl_leader_trait_dolls
-			}
-		}
-		name = touhou_paragon.40730.b
-		country_event = {
-			id = touhou_paragon.40735
-			days = 10
-		}
-	}
-
-	option = {
-		trigger = {
-			any_owned_leader = {
-				has_trait = thl_leader_trait_fly
-			}
-		}
-		name = touhou_paragon.40730.c
-		country_event = {
-			id = touhou_paragon.40740
-			days = 10
-		}
-	}
 }
 
 country_event = {
 	id = touhou_paragon.40731
 	title = touhou_paragon.40731.name
 	desc = touhou_paragon.40731.desc
-	picture = GFX_evt_marisa_spell_card
-	show_sound = event_default
-	is_triggered_only = yes
-	fire_only_once = yes
-	location = capital_scope
-	option = {
-		name = touhou_paragon.40731.a
-		country_event = {
-			id = touhou_paragon.40732
-			days = 10
-		}
-	}
-}
-
-country_event = {
-	id = touhou_paragon.40732
-	title = touhou_paragon.40732.name
-	desc = touhou_paragon.40732.desc
 	picture = GFX_evt_marisa_steal
 	show_sound = event_default
 	is_triggered_only = yes
@@ -1956,7 +1912,79 @@ country_event = {
 	}
 
 	option = {
+		name = touhou_paragon.40731.a
+		enable_special_project = {
+			name = MARISA_SPECIAL_PROJECT
+			location = event_target:target_grand_archive
+			owner = root
+		}
+	}
+
+	option = {
+		trigger = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_dolls
+			}
+		}
+		name = touhou_paragon.40731.b
+		country_event = {
+			id = touhou_paragon.40740
+			days = 10
+		}
+	}
+
+	option = {
+		trigger = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_fly
+			}
+		}
+		name = touhou_paragon.40731.c
+		country_event = {
+			id = touhou_paragon.40745
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40732
+	title = touhou_paragon.40732.name
+	desc = touhou_paragon.40732.desc
+	picture = GFX_evt_marisa_spell_card
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+	option = {
 		name = touhou_paragon.40732.a
+		country_event = {
+			id = touhou_paragon.40733
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40733
+	title = touhou_paragon.40733.name
+	desc = touhou_paragon.40733.desc
+	picture = GFX_evt_marisa_steal
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+
+	immediate = {
+		random_owned_megastructure = {
+			limit = {
+				is_megastructure_type = grand_archive_0
+			}
+			save_event_target_as = target_grand_archive
+		}
+	}
+
+	option = {
+		name = touhou_paragon.40733.a
 		create_country = {
 			name = "NAME_Marisa_Task_Beast_Country"
 			type = faction
@@ -1977,6 +2005,7 @@ country_event = {
 				}
 			}
 			effect = {
+				set_country_flag = marisa_task_beast_country
 				save_global_event_target_as = marisa_task_beast_country
 			}
 		}
@@ -1986,6 +2015,10 @@ country_event = {
 				set_owner = event_target:marisa_task_beast_country
 				#可汗大点兵
 				#我怎么不记得我得博物馆有这么多东西
+				create_ship = {
+					name = ""
+					design = "NAME_Casket_of_Star"
+				}
 				create_ship = {
 					name = ""
 					design = "NAME_Tiyanki_Cow"
@@ -2014,58 +2047,6 @@ country_event = {
 					name = ""
 					design = "NAME_Small_Crystal_Entity_Blue"
 				}
-				# create_ship = {
-				# 	name = ""
-				# 	design = "NAME_Large_Crystal_Entity_Green"
-				# }
-				# create_ship = {
-				# 	name = ""
-				# 	design = "NAME_Medium_Crystal_Entity_Green"
-				# }
-				# create_ship = {
-				# 	name = ""
-				# 	design = "NAME_Small_Crystal_Entity_Green"
-				# }
-				# create_ship = {
-				# 	name = ""
-				# 	design = "NAME_Large_Crystal_Entity_Yellow"
-				# }
-				# create_ship = {
-				# 	name = ""
-				# 	design = "NAME_Medium_Crystal_Entity_Yellow"
-				# }
-				# create_ship = {
-				# 	name = ""
-				# 	design = "NAME_Small_Crystal_Entity_Yellow"
-				# }
-				# create_ship = {
-				# 	name = ""
-				# 	design = "NAME_Large_Crystal_Entity_Red"
-				# }
-				# create_ship = {
-				# 	name = ""
-				# 	design = "NAME_Medium_Crystal_Entity_Red"
-				# }
-				# create_ship = {
-				# 	name = ""
-				# 	design = "NAME_Small_Crystal_Entity_Red"
-				# }
-				# create_ship = {
-				# 	name = ""
-				# 	design = "NAME_Large_Space_Organism_Teal"
-				# }
-				# create_ship = {
-				# 	name = ""
-				# 	design = "NAME_Small_Space_Organism_Teal"
-				# }
-				# create_ship = {
-				# 	name = ""
-				# 	design = "NAME_Large_Space_Organism_Orange"
-				# }
-				# create_ship = {
-				# 	name = ""
-				# 	design = "NAME_Small_Space_Organism_Orange"
-				# }
 				create_ship = {
 					name = ""
 					design = "NAME_Large_Space_Organism_Zebra"
@@ -2084,20 +2065,12 @@ country_event = {
 				}
 				create_ship = {
 					name = ""
-					design = "NAME_Voidworms_Mature"
-				}
-				create_ship = {
-					name = ""
 					design = "NAME_Cutholoids_Hatchling"
 				}
 				create_ship = {
 					name = ""
 					design = "NAME_Cutholoids_Juvenile"
 				}
-				# create_ship = {
-				# 	name = ""
-				# 	design = "NAME_Cutholoids"
-				# }
 				set_location = {
 					target = event_target:target_grand_archive
 					distance = 20
@@ -2105,30 +2078,9 @@ country_event = {
 				}
 				set_fleet_stance = aggressive
 				set_aggro_range_measure_from = self
-				set_aggro_range = 0
+				set_aggro_range = 10
+				set_fleet_flag = marisa_task_beast_fleet
 			}
-		}
-		enable_special_project = {
-			name = MARISA_SPECIAL_PROJECT
-			location = event_target:target_grand_archive
-			owner = root
-		}
-	}
-}
-
-country_event = {
-	id = touhou_paragon.40733
-	title = touhou_paragon.40733.name
-	desc = touhou_paragon.40733.desc
-	picture = GFX_evt_marisa_cannon
-	show_sound = event_default
-	is_triggered_only = yes
-	fire_only_once = yes
-	location = capital_scope
-	option = {
-		name = touhou_paragon.40733.a
-		country_event = {
-			id = touhou_paragon.40734
 		}
 	}
 }
@@ -2137,15 +2089,30 @@ country_event = {
 	id = touhou_paragon.40734
 	title = touhou_paragon.40734.name
 	desc = touhou_paragon.40734.desc
-	picture = GFX_evt_marisa_star
+	picture = GFX_evt_marisa_cannon
 	show_sound = event_default
 	is_triggered_only = yes
 	fire_only_once = yes
-	location = capital_scope
+	location = this
+	trigger = {
+		From = {
+			has_country_flag = marisa_task_beast_country
+		}
+		FromFromFrom = {
+			has_fleet_flag = marisa_task_beast_fleet
+		}
+	}
 	option = {
 		name = touhou_paragon.40734.a
 		country_event = {
-			id = touhou_paragon.40700
+			id = touhou_paragon.40735
+		}
+		FromFrom = {
+			create_ship = {
+				name = NAME_Casket_of_Star
+				design = NAME_Casket_of_Star
+				prefix = yes
+			}
 		}
 	}
 }
@@ -2154,7 +2121,7 @@ country_event = {
 	id = touhou_paragon.40735
 	title = touhou_paragon.40735.name
 	desc = touhou_paragon.40735.desc
-	picture = GFX_evt_alice_dolls
+	picture = GFX_evt_marisa_steal
 	show_sound = event_default
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2162,7 +2129,7 @@ country_event = {
 	option = {
 		name = touhou_paragon.40735.a
 		country_event = {
-			id = touhou_paragon.40736
+			id = touhou_paragon.40700
 		}
 	}
 }
@@ -2171,15 +2138,30 @@ country_event = {
 	id = touhou_paragon.40736
 	title = touhou_paragon.40736.name
 	desc = touhou_paragon.40736.desc
-	picture = GFX_evt_alice_and_marisa
+	picture = GFX_evt_marisa_cannon
 	show_sound = event_default
 	is_triggered_only = yes
 	fire_only_once = yes
 	location = capital_scope
+	trigger = {
+		From = {
+			has_country_flag = marisa_task_beast_country
+		}
+		FromFromFrom = {
+			has_fleet_flag = marisa_task_beast_fleet
+		}
+	}
 	option = {
 		name = touhou_paragon.40736.a
 		country_event = {
 			id = touhou_paragon.40737
+			days = 30
+			random = 150
+		}
+		hidden_effect = {
+			FromFromFrom = {
+				delete_fleet = this
+			}
 		}
 	}
 }
@@ -2188,56 +2170,13 @@ country_event = {
 	id = touhou_paragon.40737
 	title = touhou_paragon.40737.name
 	desc = touhou_paragon.40737.desc
-	picture = GFX_evt_alice_goelia
+	picture = GFX_evt_marisa_cannon
 	show_sound = event_default
 	is_triggered_only = yes
 	fire_only_once = yes
 	location = capital_scope
 	option = {
 		name = touhou_paragon.40737.a
-		country_event = {
-			id = touhou_paragon.40738
-			days = 10
-		}
-	}
-}
-
-country_event = {
-	id = touhou_paragon.40738
-	title = touhou_paragon.40738.name
-	desc = touhou_paragon.40738.desc
-	picture = GFX_evt_alice_and_marisa
-	show_sound = event_default
-	is_triggered_only = yes
-	fire_only_once = yes
-	location = capital_scope
-	trigger = {
-
-	}
-
-	option = {
-		name = touhou_paragon.40738.a
-		country_event = {
-			id = touhou_paragon.40739
-		}
-	}
-}
-
-country_event = {
-	id = touhou_paragon.40739
-	title = touhou_paragon.40739.name
-	desc = touhou_paragon.40739.desc
-	picture = GFX_evt_marisa_star
-	show_sound = event_default
-	is_triggered_only = yes
-	fire_only_once = yes
-	location = capital_scope
-	trigger = {
-
-	}
-
-	option = {
-		name = touhou_paragon.40739.a
 		country_event = {
 			id = touhou_paragon.40700
 		}
@@ -2248,16 +2187,16 @@ country_event = {
 	id = touhou_paragon.40740
 	title = touhou_paragon.40740.name
 	desc = touhou_paragon.40740.desc
-	picture = GFX_evt_reimu_grim
+	picture = GFX_evt_alice_and_marisa
 	show_sound = event_default
 	is_triggered_only = yes
 	fire_only_once = yes
 	location = capital_scope
-
 	option = {
 		name = touhou_paragon.40740.a
 		country_event = {
 			id = touhou_paragon.40741
+			days = 10
 		}
 	}
 }
@@ -2266,16 +2205,16 @@ country_event = {
 	id = touhou_paragon.40741
 	title = touhou_paragon.40741.name
 	desc = touhou_paragon.40741.desc
-	picture = GFX_evt_reimu_vs_marisa
+	picture = GFX_evt_alice_goelia
 	show_sound = event_default
 	is_triggered_only = yes
 	fire_only_once = yes
 	location = capital_scope
-
 	option = {
 		name = touhou_paragon.40741.a
 		country_event = {
 			id = touhou_paragon.40742
+			days = 10
 		}
 	}
 }
@@ -2284,13 +2223,116 @@ country_event = {
 	id = touhou_paragon.40742
 	title = touhou_paragon.40742.name
 	desc = touhou_paragon.40742.desc
+	picture = GFX_evt_alice_and_marisa
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+	trigger = {
+
+	}
+
+	option = {
+		name = touhou_paragon.40742.a
+		country_event = {
+			id = touhou_paragon.40743
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40743
+	title = touhou_paragon.40743.name
+	desc = touhou_paragon.40743.desc
+	picture = GFX_evt_marisa_star
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+	trigger = {
+
+	}
+
+	option = {
+		name = touhou_paragon.40743.a
+		country_event = {
+			id = touhou_paragon.40744
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40744
+	title = touhou_paragon.40744.name
+	desc = touhou_paragon.40744.desc
+	picture = GFX_evt_marisa_star
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+	trigger = {
+
+	}
+
+	option = {
+		name = touhou_paragon.40744.a
+		country_event = {
+			id = touhou_paragon.40700
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40745
+	title = touhou_paragon.40745.name
+	desc = touhou_paragon.40745.desc
+	picture = GFX_evt_reimu_grim
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+
+	option = {
+		name = touhou_paragon.40745.a
+		country_event = {
+			id = touhou_paragon.40746
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40746
+	title = touhou_paragon.40746.name
+	desc = touhou_paragon.40746.desc
+	picture = GFX_evt_reimu_vs_marisa
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+
+	option = {
+		name = touhou_paragon.40746.a
+		country_event = {
+			id = touhou_paragon.40747
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40747
+	title = touhou_paragon.40747.name
+	desc = touhou_paragon.40747.desc
 	picture = GFX_evt_marisa_star
 	show_sound = event_default
 	is_triggered_only = yes
 	fire_only_once = yes
 	location = capital_scope
 	option = {
-		name = touhou_paragon.40742.a
+		name = touhou_paragon.40747.a
 		country_event = {
 			id = touhou_paragon.40700
 		}
