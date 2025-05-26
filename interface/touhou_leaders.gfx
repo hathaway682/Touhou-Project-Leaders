@@ -295,6 +295,12 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 	spriteType = {
+		name = "GFX_evt_suwako"
+		texturefile = "gfx/event_pictures/suwako.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
 		name = "GFX_evt_tewi_and_reisen"
 		texturefile = "gfx/event_pictures/tewi_and_reisen.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"

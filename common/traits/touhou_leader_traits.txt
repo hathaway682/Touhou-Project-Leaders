@@ -5621,3 +5621,36 @@ thl_leader_trait_no_fear_of_storm = {
 		weight = 0
 	}
 }
+
+thl_leader_trait_future_and_past = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_shroud_preacher
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.25
+	}
+	sector_modifier = {
+		planet_jobs_produces_mult = 0.125
+	}
+	fleet_modifier = {
+		explosive_weapon_damage_mult = 0.5
+	}
+	custom_tooltip_with_modifiers = leader_trait_future_and_past_tooltip
+	triggered_modifier = {
+		potential = {
+			has_ethic = ethic_spiritualist
+		}
+		country_edict_fund_mult = 1
+	}
+	leader_class = { official commander }
+	selectable_weight = {
+		weight = 0
+	}
+	immortal_leaders = yes
+}
