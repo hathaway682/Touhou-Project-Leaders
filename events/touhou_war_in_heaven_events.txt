@@ -772,7 +772,6 @@ country_event = {
         add_imperial_authority = 100
         custom_tooltip = war_in_heaven.7.tooltip
         hidden_effect = {
-            # Fallen Empires declare war
             every_country = {
                 limit = {
                     OR = {
@@ -787,6 +786,7 @@ country_event = {
                 }
                 every_subject = {
                     join_war = prev
+                    remove_from_galactic_community = yes
                 }
             }
             every_playable_country = {
@@ -794,15 +794,7 @@ country_event = {
                     is_galactic_emperor = no
                     is_galactic_community_member = yes
                 }
-                if = {
-                    limit = {
-                        is_same_value = event_target:moriya_wih_attacker
-                    }
-                    remove_from_galactic_community = yes
-                }
-                else = {
-                    join_war = event_target:gal_emperor
-                }
+                join_war = event_target:gal_emperor
             }
         }
     }

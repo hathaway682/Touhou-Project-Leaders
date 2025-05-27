@@ -480,12 +480,33 @@ wg_moriya_war_in_heaven = {
 							"null"
 						}
 					}
+					save_event_target_as = awakened_hive
 					every_country = {
 						limit = {
 							has_ai_personality = fallen_empire_hive_mind
 						}
 						integrate_country_effect = {
-							OWNER = from
+							OWNER = event_target:awakened_hive
+						}
+					}
+					random_system = {
+						limit = {
+							has_star_flag = last_thought_system
+						}
+						create_starbase = {
+							size = "starbase_outpost"
+							owner = event_target:awakened_hive
+							effect = {
+								while = {
+									count = 2
+									create_fallen_empire_platform = yes
+								}
+							}
+						}
+					}
+					event_target:fallen_empire_hive_forgotten = {
+						every_owned_fleet = {
+							set_owner = event_target:awakened_hive
 						}
 					}
 				}
