@@ -592,6 +592,7 @@ country_event = {
 		#米丝蒂娅
 		if = {
 			limit = {
+				is_ai = no
 				NOR = {
 					has_global_flag = mystia
 					has_country_flag = dismissed_mystia
@@ -599,22 +600,22 @@ country_event = {
 				OR = {
 					num_assigned_jobs = {
 						job = entertainer
-						value >= 400
+						value >= 1
 					}
 					num_assigned_jobs = {
 						job = duelist
-						value >= 400
+						value >= 1
 					}
 				}
 				any_owned_planet = {
 					OR = {
 						num_assigned_jobs = {
 							job = entertainer
-							value >= 400
+							value >= 1
 						}
 						num_assigned_jobs = {
 							job = duelist
-							value >= 400
+							value >= 1
 						}
 					}
 				}
@@ -625,11 +626,11 @@ country_event = {
 					OR = {
 						num_assigned_jobs = {
 							job = entertainer
-							value >= 400
+							value >= 1
 						}
 						num_assigned_jobs = {
 							job = duelist
-							value >= 400
+							value >= 1
 						}
 					}
 				}

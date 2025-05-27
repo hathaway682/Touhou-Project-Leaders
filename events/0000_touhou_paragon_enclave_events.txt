@@ -1597,8 +1597,9 @@ country_event = {
                     which = touhou_variable_saisen_count
                     value >= 100000
                 }
-                NOT = {
+                NOR = {
                     has_global_flag = reimu
+                    has_country_flag = dismissed_reimu
                 }
             }
             set_global_flag = reimu
@@ -1701,8 +1702,9 @@ country_event = {
                     which = touhou_variable_saisen_count
                     value >= 100000
                 }
-                NOT = {
+                NOR = {
                     has_global_flag = reimu
+                    has_country_flag = dismissed_reimu
                 }
             }
             set_global_flag = reimu
@@ -1794,8 +1796,9 @@ country_event = {
                     which = touhou_variable_saisen_count
                     value >= 100000
                 }
-                NOT = {
+                NOR = {
                     has_global_flag = reimu
+                    has_country_flag = dismissed_reimu
                 }
             }
             set_global_flag = reimu
@@ -1804,8 +1807,9 @@ country_event = {
     }
     option = {
         trigger = {
-            NOT = {
+            NOR = {
                 has_global_flag = reimu
+                has_country_flag = dismissed_reimu
             }
         }
         name = touhou_paragon_enclave.40605.d
