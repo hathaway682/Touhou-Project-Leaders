@@ -3922,6 +3922,24 @@ country_event = {
                 add_trait = thl_leader_trait_injured
             }
         }
+        last_created_leader = {
+            if = {
+                limit = {
+                    OR = {
+                        has_trait = thl_leader_trait_miracle
+                        has_trait = thl_leader_trait_heaven
+                    }
+                    root = {
+                        any_owned_leader = {
+                            has_trait = thl_leader_trait_earth
+                        }
+                    }
+                }
+                root = {
+                    country_event = { id = touhou_paragon.43410 }
+                }
+            }
+        }
     }
 }
 

@@ -5629,7 +5629,7 @@ thl_leader_trait_future_and_past = {
 		CLASS = leader
 		ICON = GFX_leader_trait_shroud_preacher
 		RARITY = paragon
-		COUNCIL = no
+		COUNCIL = yes
 		TIER = none
 	}
 	planet_modifier = {
@@ -5638,15 +5638,54 @@ thl_leader_trait_future_and_past = {
 	sector_modifier = {
 		planet_jobs_produces_mult = 0.125
 	}
-	fleet_modifier = {
-		explosive_weapon_damage_mult = 0.5
-	}
 	custom_tooltip_with_modifiers = leader_trait_future_and_past_tooltip
-	triggered_modifier = {
+	triggered_councilor_modifier = {
 		potential = {
 			has_ethic = ethic_spiritualist
 		}
 		country_edict_fund_mult = 1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_ethic = ethic_authoritarian
+		}
+		country_power_projection_influence_produces_add = 5
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_ethic = ethic_militarist
+		}
+		country_claim_influence_cost_mult = -0.5
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_ethic = ethic_xenophobe
+		}
+		logistic_growth_mult = 0.3
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_ethic = ethic_materialist
+		}
+		all_technology_research_speed = 0.2
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_ethic = ethic_pacifist
+		}
+		empire_size_districts_mult = -0.5
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_ethic = ethic_egalitarian
+		}
+		pop_amenities_usage_base = -0.5
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_ethic = ethic_xenophile
+		}
+		planet_jobs_trade_produces_mult = 0.2
 	}
 	leader_class = { official commander }
 	selectable_weight = {
