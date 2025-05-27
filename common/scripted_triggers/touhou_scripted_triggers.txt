@@ -89,6 +89,8 @@ has_touhou_leader_trait = {
 		has_trait = thl_leader_trait_jinx
 		has_trait = thl_leader_trait_song
 		has_trait = thl_leader_trait_luck
+		has_trait = thl_leader_trait_heaven
+		has_trait = thl_leader_trait_earth
 	}
 }
 
@@ -123,6 +125,8 @@ has_touhou_supernatural_trait = {
 		has_trait = thl_leader_trait_jinx
 		has_trait = thl_leader_trait_song
 		has_trait = thl_leader_trait_luck
+		has_trait = thl_leader_trait_heaven
+		has_trait = thl_leader_trait_earth
 	}
 }
 

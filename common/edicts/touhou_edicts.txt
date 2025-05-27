@@ -1704,3 +1704,92 @@ reset_touhou_leader_portrait = {
 # 		set_global_flag = kosuzu
 # 	}
 # }
+
+suwako_change_between_commander_and_officer = {
+	length = 1
+	edict_lock_in_months = 3
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_leader = {
+			has_trait = thl_leader_trait_earth
+		}
+		OR = {
+			has_country_flag = thl_flag_suwako_is_officer
+			has_country_flag = thl_flag_suwako_is_commander
+		}
+	}
+	resources = {
+		category = country_base
+		cost = {
+			unity = 1000
+		}
+	}
+	allow = {
+		any_owned_leader = {
+			has_trait = thl_leader_trait_earth
+		}
+		OR = {
+			has_country_flag = thl_flag_suwako_is_officer
+			has_country_flag = thl_flag_suwako_is_commander
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				has_country_flag = thl_flag_suwako_is_commander
+			}
+			hidden_effect = {
+				every_owned_leader = {
+					limit = {
+						has_trait = thl_leader_trait_earth
+					}
+					save_global_event_target_as = thl_exile_suwako_commander_target
+					exile_leader_as = thl_exile_suwako_commander
+				}
+				set_country_flag = spawning_renowned_leader
+				event_target:thl_exile_suwako_officer_target = {
+					set_owner = root
+					set_leader_flag = renowned_leader
+				}
+				remove_country_flag = spawning_renowned_leader
+				hidden_effect = {
+					every_owned_leader = {
+						limit = {
+							has_trait = thl_leader_trait_earth
+							not = {
+								has_trait = thl_leader_trait_future_and_past
+							}
+						}
+						remove_trait = leader_trait_shroud_preacher
+						add_trait = thl_leader_trait_future_and_past
+					}
+				}
+			}
+			custom_tooltip = suwako_change_between_commander_and_officer_tooltip.1
+			country_event = { id = touhou_paragon.43460 }
+		}
+
+		if = {
+			limit = {
+				has_country_flag = thl_flag_suwako_is_officer
+			}
+			hidden_effect = {
+				every_owned_leader = {
+					limit = {
+						has_trait = thl_leader_trait_earth
+					}
+					save_global_event_target_as = thl_exile_suwako_officer_target
+					exile_leader_as = thl_exile_suwako_officer
+				}
+				set_country_flag = spawning_renowned_leader
+				event_target:thl_exile_suwako_commander_target = {
+					set_owner = root
+					set_leader_flag = renowned_leader
+				}
+				remove_country_flag = spawning_renowned_leader
+			}
+			custom_tooltip = suwako_change_between_commander_and_officer_tooltip.2
+			country_event = { id = touhou_paragon.43450 }
+		}
+	}
+}

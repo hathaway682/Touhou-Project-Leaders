@@ -5517,7 +5517,12 @@ country_event = {
 	desc = "touhou_paragon.43420.desc"
 	show_sound = event_psionic
 	is_triggered_only = yes
-	picture = GFX_evt_suwako
+	#picture = GFX_evt_suwako
+	diplomatic = yes
+	picture_event_data = {
+		portrait = x76
+		room = paragon_skrand_room
+	}
 	location = event_target:thl_suwako_position_planet
 	option = {
 		name = touhou_paragon.43420.a
@@ -5525,8 +5530,10 @@ country_event = {
 			limit = {
 				has_trait = thl_leader_trait_earth
 			}
-			exile_leader_as = thl_exile_suwako
+			save_global_event_target_as = thl_exile_suwako_officer_target
+			exile_leader_as = thl_exile_suwako_officer
 		}
+		custom_tooltip = touhou_paragon.43420.tooltip
 		hidden_effect = {
 			create_country = {
 				name = "NAME_Suwako_Country"
@@ -5575,12 +5582,16 @@ country_event = {
 						}
 					}
 					while = {
-						count = 20
+						count = 30
 						create_ship = {
 							name = random
 							design = "NAME_Zealot"
 							graphical_culture = fallen_empire_01
 						}
+					}
+					add_modifier = {
+						modifier = thl_modifier_suwako_faction_modifier
+						days = -1
 					}
 					set_fleet_stance = aggressive
 					set_aggro_range_measure_from = self
@@ -5588,8 +5599,182 @@ country_event = {
 					set_fleet_flag = thl_flag_suwako_faction_fleet
 					set_location = event_target:thl_suwako_position_planet
 					set_leader = last_created_leader
+					save_event_target_as = thl_target_suwako_faction_fleet
 				}
 			}
+			country_event = {
+				id = touhou_paragon.43430
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43430
+	title = "touhou_paragon.43430.name"
+	desc = "touhou_paragon.43430.desc"
+	show_sound = event_psionic
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_evt_sabotaged_ship
+	location = event_target:thl_target_suwako_faction_fleet
+	option = {
+		name = touhou_paragon.43430.a
+		custom_tooltip = touhou_paragon.43430.tooltip_block_shield
+		hidden_effect = {
+			event_target:thl_target_suwako_faction_fleet = {
+				remove_modifier = thl_modifier_suwako_faction_modifier
+				add_modifier = {
+					modifier = thl_modifier_suwako_faction_modifier_only_armor
+				}
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon.43430.b
+		custom_tooltip = touhou_paragon.43430.tooltip_block_armor
+		hidden_effect = {
+			event_target:thl_target_suwako_faction_fleet = {
+				remove_modifier = thl_modifier_suwako_faction_modifier
+				add_modifier = {
+					modifier = thl_modifier_suwako_faction_modifier_only_shield
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43440
+	title = "touhou_paragon.43440.name"
+	desc = "touhou_paragon.43440.desc"
+	show_sound = event_psionic
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_evt_suwako_injury
+	location = FromFromFrom
+	trigger = {
+		FromFromFrom = {
+			has_fleet_flag = thl_flag_suwako_faction_fleet
+		}
+	}
+	option = {
+		name = touhou_paragon.43440.a
+		country_event = {
+			id = touhou_paragon.43401
+			days = 180
+			random = 180
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43450
+	title = "touhou_paragon.43450.name"
+	desc = "touhou_paragon.43450.desc"
+	show_sound = event_psionic
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = x76
+		room = paragon_skrand_room
+	}
+	option = {
+		name = touhou_paragon.43450.a
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_earth
+			}
+			change_background_ethic = ethic_spiritualist
+		}
+	}
+	option = {
+		name = touhou_paragon.43450.b
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_earth
+			}
+			change_background_ethic = ethic_authoritarian
+		}
+	}
+	option = {
+		name = touhou_paragon.43450.c
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_earth
+			}
+			change_background_ethic = ethic_militarist
+		}
+	}
+	option = {
+		name = touhou_paragon.43450.d
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_earth
+			}
+			change_background_ethic = ethic_xenophobe
+		}
+	}
+	after = {
+		hidden_effect = {
+			set_country_flag = thl_flag_suwako_is_commander
+			remove_country_flag = thl_flag_suwako_is_officer
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43460
+	title = "touhou_paragon.43460.name"
+	desc = "touhou_paragon.43460.desc"
+	show_sound = event_psionic
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = x76
+		room = paragon_skrand_room
+	}
+	option = {
+		name = touhou_paragon.43460.a
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_earth
+			}
+			change_background_ethic = ethic_materialist
+		}
+	}
+	option = {
+		name = touhou_paragon.43460.b
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_earth
+			}
+			change_background_ethic = ethic_egalitarian
+		}
+	}
+	option = {
+		name = touhou_paragon.43460.c
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_earth
+			}
+			change_background_ethic = ethic_pacifist
+		}
+	}
+	option = {
+		name = touhou_paragon.43460.d
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_earth
+			}
+			change_background_ethic = ethic_xenophile
+		}
+	}
+	after = {
+		hidden_effect = {
+			set_country_flag = thl_flag_suwako_is_officer
+			remove_country_flag = thl_flag_suwako_is_commander
 		}
 	}
 }

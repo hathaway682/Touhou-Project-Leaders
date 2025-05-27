@@ -988,3 +988,19 @@ thl_modifier_sanae_rapid_missile = {
 sanae_max_subjects = {
 	divided_patrongage_max_subjects = 30
 }
+
+#event modifiers
+thl_modifier_suwako_faction_modifier = {
+	ship_armor_mult = 1000
+	ship_armor_hardening_add = 1
+	ship_shield_mult = 1000
+	ship_shield_hardening_add = 1
+}
+
+thl_modifier_suwako_faction_modifier_only_armor = {
+	ship_armor_mult = 1000
+}
+
+thl_modifier_suwako_faction_modifier_only_shield = {
+	ship_shield_mult = 1000
+}
