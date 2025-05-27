@@ -1612,7 +1612,7 @@
  harvest_shirne: "丰收之神社"
  harvest_shirne_desc: "我们的农民需要一座神社来为丰收祈祷。（提示：在$r_food$月产出在§Y50§!以上的星球建造£building£§Y神社§!）"
  jinx_shirne: "厄运之神社"
- jinx_shirne_desc: "饱受厄运困扰的人民也许会很需要一座神社。（提示：在任意£pop£§Y人口§!拥有§R厄运§!特质，或是£amenities£§Y舒适度§!在§R-10§!以下的星球建造£building£§Y神社§!）"
+ jinx_shirne_desc: "饱受厄运困扰的人民也许会很需要一座神社。（提示：在任意£pop£§Y人口§!拥有§R厄运§!特质、£amenities£§Y舒适度§!在§R-1§!以下，或是类型为§Y废土星球§!的星球建造£building£§Y神社§!）"
  capital_shirne:0 "未知之神社"
  capital_shirne_desc: "我们首都的居民或许需要一座神社。（提示：在§Y首都§!建造£building£§Y神社§!）"
 

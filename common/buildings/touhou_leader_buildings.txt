@@ -110,10 +110,11 @@ building_shrine = {
 		if = {
 			limit = {
 				OR = {
-					free_amenities < -100
+					free_amenities < -1
 					any_owned_pop_group = {
 						pop_group_has_trait = trait_humanoid_jinxed
 					}
+					is_planet_class = pc_nuked
 				}
 
 				owner = {
