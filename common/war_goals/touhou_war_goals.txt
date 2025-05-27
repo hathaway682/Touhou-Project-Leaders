@@ -343,3 +343,308 @@ wg_moriya_crusade = {
 		}
 	}
 }
+
+wg_moriya_war_in_heaven = {
+	casus_belli = cb_moriya_war_in_heaven
+
+	total_war = yes
+
+	forbidden_peace_offers = {
+		demand_surrender = ""
+		surrender = ""
+	}
+
+	surrender_acceptance = -1000
+	war_exhaustion = 0.25
+
+	set_defender_wargoal = wg_moriya_war_in_heaven
+
+	potential = {
+		is_country_type = default
+		exists = from
+		any_owned_leader = {
+			has_trait = thl_leader_trait_miracle
+		}
+		has_country_flag = can_declare_moriya_war_in_heaven
+		from = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = moriya_war_in_heaven_started
+			NOT = {
+				has_global_flag = war_in_heaven_started
+			}
+		}
+	}
+
+	on_wargoal_set = {
+		save_global_event_target_as = moriya_wih_attacker
+		from = { save_global_event_target_as = moriya_wih_defender }
+		set_global_flag = war_in_heaven_started
+		set_global_flag = war_in_heaven_ongoing
+		set_timed_global_flag = {
+			flag = war_in_heaven_recently_started
+			days = 5400
+		}
+		if = {
+			limit ={
+				from = {
+					is_country_type = fallen_empire
+				}
+			}
+			set_global_flag = moriya_war_in_heaven_vs_fallen
+			from = {
+				set_country_type = awakened_fallen_empire
+				if = {
+					limit = {
+						is_hive_empire = no
+					}
+					change_government = {
+						civics = {
+							civic = civic_revanchist_fervor
+							civic = civic_ancient_caches_of_technology
+						}
+					}
+					if = {
+						limit = {
+							has_paragon_dlc = yes
+						}
+						unlock_council_slots = 2
+						while = {
+							count = 2
+							create_leader = {
+								class = scientist
+								species = owner_main_species
+								name = random
+								skill = 10
+								leader_age_min = 25
+								leader_age_max = 45
+							}
+						}
+					}
+				}
+				else = {
+					switch = {
+						trigger = has_country_flag
+						fallen_empire_hive_war = {
+							change_government = {
+								civics = {
+									civic = civic_restored_mind
+									civic = civic_ancient_memories_of_war
+								}
+							}
+						}
+						fallen_empire_hive_growth = {
+							change_government = {
+								civics = {
+									civic = civic_restored_mind
+									civic = civic_ancient_memories_of_growth
+								}
+							}
+						}
+						fallen_empire_hive_control = {
+							change_government = {
+								civics = {
+									civic = civic_restored_mind
+									civic = civic_ancient_memories_of_control
+								}
+							}
+							add_to_galactic_community = yes
+							set_global_flag = control_awoke
+							every_playable_country = {
+								limit = {
+									is_ai = no
+								}
+								country_event = { id = bio.3400 days = 1 }
+							}
+						}
+					}
+					change_country_flag = {
+						icon = {
+							category = "special"
+							file = "hive_fe_flag_restored.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "flag_BG_39.dds"
+						}
+						colors = {
+							"light_orange"
+							"dark_orange"
+							"black"
+							"null"
+						}
+					}
+					every_country = {
+						limit = {
+							has_ai_personality = fallen_empire_hive_mind
+						}
+						integrate_country_effect = {
+							OWNER = root
+						}
+					}
+				}
+				# Changing country type resets resources, so give them full stores
+				add_awakened_fallen_empire_resources = yes
+				add_awakened_fallen_empire_fleet = yes #also some more fleet
+			}
+		}
+		else = {
+			set_global_flag =moriya_war_in_heaven_vs_awakened
+		}
+		if = {
+			limit = {
+				OR = {
+					has_galactic_emperor = no
+					AND = {#The galcom wont go to war if the control fragment is emperor
+						has_galactic_emperor = yes
+						event_target:gal_emperor = {
+							OR = {
+								is_country_type = awakened_fallen_empire
+								is_same_value = root
+							}
+						}
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						is_same_value = root
+					}
+					is_country_type = default
+				}
+				country_event = { id = touhou_war_in_heaven.4 }
+			}
+		}
+		else = {
+			every_country = {
+				limit = {
+					NOT = {
+						is_same_value = root
+					}
+					is_country_type = default
+					is_galactic_community_member = yes
+				}
+				country_event = { id = touhou_war_in_heaven.7 }
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						is_same_value = root
+					}
+					is_country_type = default
+					is_galactic_community_member = no
+				}
+				country_event = { id = touhou_war_in_heaven.4 }
+			}
+		}
+	}
+
+	on_accept = {
+		hidden_effect = {
+			if = {
+				limit = {
+					is_country_type = awakened_fallen_empire
+				}
+				set_global_flag = fallen_won_moriya_wih
+				save_event_target_as = WarInHeavenFEOne
+				remove_global_flag = war_in_heaven_ongoing
+				set_global_flag = war_in_heaven_ended
+				every_playable_country = {
+					country_event = { id = touhou_war_in_heaven.5 }
+				}
+				from = {
+					if = {
+						limit = {
+							any_war = {
+								NOT = { is_war_participant = { who = root } }
+								any_war_participant = {
+									prev = {
+										using_war_goal = {
+											type = wg_war_in_heaven
+											owner = prev
+										}
+									}
+								}
+							}
+						}
+						every_war = { #End War in Heaven
+							limit = {
+								NOT = { is_war_participant = { who = root } }
+								any_war_participant = {
+									prev = {
+										using_war_goal = {
+											type = wg_war_in_heaven
+											owner = prev
+										}
+									}
+								}
+							}
+							end_war_effect = yes
+						}
+					}
+				}
+			}
+			else = {
+				set_global_flag = moriya_won_moriya_wih
+				save_event_target_as = WarInHeavenFEOne
+				remove_global_flag = war_in_heaven_ongoing
+				set_global_flag = war_in_heaven_ended
+				every_playable_country = {
+					country_event = { id = touhou_war_in_heaven.5 }
+				}
+				from = {
+					if = {
+						limit = {
+							any_war = {
+								NOT = { is_war_participant = { who = root } }
+								any_war_participant = {
+									prev = {
+										using_war_goal = {
+											type = wg_war_in_heaven
+											owner = prev
+										}
+									}
+								}
+							}
+						}
+						every_war = { #End War in Heaven
+							limit = {
+								NOT = { is_war_participant = { who = root } }
+								any_war_participant = {
+									prev = {
+										using_war_goal = {
+											type = wg_war_in_heaven
+											owner = prev
+										}
+									}
+								}
+							}
+							end_war_effect = yes
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_status_quo = {
+		hidden_effect = {
+			save_event_target_as = WarInHeavenFEOne
+			from = { save_event_target_as = WarInHeavenFETwo }
+			every_playable_country = {
+				country_event = { id = touhou_war_in_heaven.6 }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}

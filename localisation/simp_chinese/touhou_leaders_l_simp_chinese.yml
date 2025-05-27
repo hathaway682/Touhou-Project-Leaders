@@ -266,6 +266,10 @@
  war_goal_wg_moriya_crusade_desc:0 "这场战争是为了强迫敌人与我们统一意识形态，并可能使其成为我们的附庸。\n\n若本国为唯物主义，将迫使他们信仰唯物主义并添加守矢神道国策。若本国为唯心主义，将迫使他们信仰唯心主义并添加守矢神道国策。\n\n若是以“维持现状”结束战争的话，所占据的恒星系将释放为新的附庸，并统一信仰，前提是他们被释放后必须拥有至少一个行星。\n\n该附庸的初始协议条款由我们的要求臣服战争条款政策决定。"
  wg_moriya_crusade_accept: "§Y[This.GetName]§!被强迫施行与§Y[Root.GetName]§!在唯心主义或唯物主义上相同的主流思潮"
 
+ casus_belli_cb_moriya_war_in_heaven:0 "天堂之战"
+ war_goal_wg_moriya_war_in_heaven: "天堂之战"
+ war_goal_wg_moriya_war_in_heaven_desc: "发动战争，以将守矢之光传遍银河。"
+
  mod_planet_telepaths_physics_research_produces_add:0 "£job_telepath£ $job_telepath_plural$产出的£physics£ $PHYSICS_RESEARCH$"
  mod_planet_telepaths_society_research_produces_add:0 "£job_telepath£ $job_telepath_plural$产出的£society£ $SOCIETY_RESEARCH$"
  mod_planet_telepaths_engineering_research_produces_add:0 "£job_telepath£ $job_telepath_plural$产出的£engineering£ $ENGINEERING_RESEARCH$"

@@ -1182,7 +1182,10 @@ country_event = {
 	}
 	option = {
 		name = touhou_paragon_mission.40317.a
-		set_country_flag = touhou_flag_sanae_churchdistrict_update
+		set_country_flag = can_declare_moriya_war_in_heaven
+		add_modifier = {
+			modifier = sanae_max_subjects
+		}
 	}
 	after = {
 		hidden_effect = {

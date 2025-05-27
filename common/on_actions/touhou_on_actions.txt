@@ -64,6 +64,17 @@ on_monthly_pulse_country = {
 		touhou_paragon_effect.40701
 		touhou_paragon_effect.40702
 		touhou_paragon_spell.10000
+		touhou_war_in_heaven.12
+		touhou_war_in_heaven.14
+	}
+}
+
+#This = destroyed country
+#From = optional, destroyer (country)
+on_country_destroyed = {
+	events = {
+		touhou_war_in_heaven.17 #WiH - both AFEs dead - do not flip the order here!
+		touhou_war_in_heaven.10 #WiH - first AFE dead by NAL - do not flip the order here
 	}
 }
 

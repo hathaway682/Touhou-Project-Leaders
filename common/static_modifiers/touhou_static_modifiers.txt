@@ -984,3 +984,7 @@ thl_modifier_sanae_dark_cuisine = {
 thl_modifier_sanae_rapid_missile = {
 	explosive_weapon_fire_rate_mult = 0.2
 }
+
+sanae_max_subjects = {
+	divided_patrongage_max_subjects = 30
+}
