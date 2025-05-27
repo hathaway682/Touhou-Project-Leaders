@@ -1458,7 +1458,7 @@
  touhou_paragon_enclave.383.b:0 "对不起，我们之间还没有建立良好的信任。"
  touhou_paragon_enclave.383.b.reply:0 "可是我们还能去哪里呢？"
 
- #1.1.4更新趣味事件包
+ #趣味事件包
  touhou_paragon_effect.40101.name:0 "花海"
  touhou_paragon_effect.40101.desc:0 "鲜花向日开，阳光洒满海。\n可是为什么，有要石砸下来？\n花田被损坏，天子趴地摔。\n落了一个下跪赔罪真活该~\n\n弹幕被打败，天子很痛快。\n要石拔出来，土壤被疏松开。\n花肥不用买，幽香很释怀。\n不用说拜拜，下次还敢来！"
  RICH_MINERAL_GARDEN:0 "£job_grower£ $job_grower_plural$额外生产1点$r_minerals$"
@@ -1791,3 +1791,13 @@
  d_hifuu_habitat_research_desc: "设施的信息终端依旧处于可访问状态，使得我们的研究人员可以源源不断的从此处获取这一生态系统的相关数据，我们的生物学研究从中受益匪浅。"
  hifuu_station_tooltip: "§Y名为鸟船遗迹的轨道居住站出现在了[hifuu_planet.GetName]的轨道上。§!"
 
+ touhou_paragon.43410.name:0 "明日之盛…"
+ touhou_paragon.43410.desc:0 "神是依赖于人而存在的。\n是众生的信仰，支撑了神明的意识。\n只有人们献上了信仰，神才是实现了存在的价值，达成了存在的目的。\n又或者……存在本身即是目的。\n\n可是为什么，那死亡之味，恐惧之息，涌上了喉。\n我所爱之人啊，你缘何而受如此伤痛。\n这是无信者的时代，这是荒芜的时代。\n我要用那无知之血，来浇灌我们的土地！"
+ touhou_paragon.43410.a:0 "啊，这不是我们的错误……"
+ touhou_paragon.43420.name:0 "…昨日之俗"
+ touhou_paragon.43420.desc:0 "神就是绝对，神就是顶点。\n神立于人之上，统治众生。\n失去了神明，人将如临深渊，如履薄冰。\n人不过是神之饵食，没有人不需要神的庇护。\n\n我的眼前，是那世代交替的幻灯片。\n他们因我而活着，我却眼睁睁看着她们死去。\n我的孩子，我所爱之人……\n且让这风再次吹起，聆听它哭泣的声音。"
+ touhou_paragon.43420.a:0 "控制住她！"
+ NAME_Suwako_Country:0 "洩矢之国"
+ NAME_Suwako_fleet:0 "旧日信徒"
+ thl_leader_trait_future_and_past:0 "明日之盛，昨日之俗"
+ thl_leader_trait_future_and_past_desc:0 "这位领袖脑海中充斥着当年的辉煌与苦难，那历历在目的遥远往事将悲愤化作了力量。"

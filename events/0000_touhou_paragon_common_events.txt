@@ -5483,3 +5483,112 @@ astral_rift_event = {
 		finish_astral_rift = yes
 	}
 }
+
+country_event = {
+	id = touhou_paragon.43410
+	title = "touhou_paragon.43410.name"
+	desc = "touhou_paragon.43410.desc"
+	show_sound = event_psionic
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_evt_suwako
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_earth
+			}
+			planet = {
+				save_event_target_as = thl_suwako_position_planet
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon.43410.a
+		country_event = {
+			id = touhou_paragon.43420
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.43420
+	title = "touhou_paragon.43420.name"
+	desc = "touhou_paragon.43420.desc"
+	show_sound = event_psionic
+	is_triggered_only = yes
+	picture = GFX_evt_suwako
+	location = event_target:thl_suwako_position_planet
+	option = {
+		name = touhou_paragon.43420.a
+		every_owned_leader = {
+			limit = {
+				has_trait = thl_leader_trait_earth
+			}
+			exile_leader_as = thl_exile_suwako
+		}
+		hidden_effect = {
+			create_country = {
+				name = "NAME_Suwako_Country"
+				type = faction
+				flag = {
+					icon = {
+						category = "zoological"
+						file = "flag_zoological_1.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors={
+						"black"
+						"black"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					save_global_event_target_as = suwako_awaken_country
+				}
+			}
+			thl_ethic_leader_creator = {
+				LEADER = suwako_commander
+			}
+			create_fleet = {
+				NAME = "NAME_Suwako_fleet"
+				effect = {
+					set_owner = event_target:suwako_awaken_country
+					while = {
+						count = 3
+						create_ship = {
+							name = random
+							design = "NAME_Eternal"
+							graphical_culture = fallen_empire_01
+						}
+					}
+					while = {
+						count = 10
+						create_ship = {
+							name = random
+							design = "NAME_Avatar"
+							graphical_culture = fallen_empire_01
+						}
+					}
+					while = {
+						count = 20
+						create_ship = {
+							name = random
+							design = "NAME_Zealot"
+							graphical_culture = fallen_empire_01
+						}
+					}
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 50
+					set_fleet_flag = thl_flag_suwako_faction_fleet
+					set_location = event_target:thl_suwako_position_planet
+					set_leader = last_created_leader
+				}
+			}
+		}
+	}
+}
