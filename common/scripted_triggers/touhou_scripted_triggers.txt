@@ -642,6 +642,10 @@ thl_is_regeneration_leader = {
 		has_trait = thl_leader_trait_regeneration_3
 		has_trait = thl_leader_trait_injured_3
 	}
+	OR = {
+		is_immortal = yes
+		leader_age < value:death_age
+	}
 }
 
 thl_is_immortal_akyuu = {

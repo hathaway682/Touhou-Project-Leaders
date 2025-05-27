@@ -1,4 +1,4 @@
-﻿ l_simp_chinese:
+﻿l_simp_chinese:
    #################################################
    # 更新代号：死冥权能
    #################################################
@@ -44,12 +44,15 @@
    tech_spirit_capture_desc:0 "幽灵拥有巨大的应用潜力，只要我们能对其进行收集利用。"
    tech_spirit_capture_tooltip:0 "解锁资源：['concept_thl_spirit']"
 
-    #妖梦解锁的相关
-    building_nether_garden:0 "冥界花园"
-    building_nether_garden_desc:0 "冥界的花园，种植着各种各样的植物。"
+   #妖梦解锁的相关
+   building_nether_garden:0 "冥界花园"
+   building_nether_garden_desc:0 "冥界的花园，种植着各种各样的植物。"
 
    NAME_Thl_Ghost:0 "亡灵"
    NAME_Thl_Ghost_pl:0 "亡灵"
+
+   trait_thl_spirit:0 "亡灵"
+   trait_thl_spirit_desc:0 "这一人口是拒绝了自身死亡的逝者。"
 
    touhou_paragon.42110.name:0 "西行妖的枝干"
    touhou_paragon.42110.desc:1 "我们小心翼翼的将§Y[Root.GetName]§!提供的西行妖的枝干扦插到了我们生物学家精心准备的基质上，并进行了DNA测试以及后续的观察，但并为发现任何特别之处。后续观察显示，该植株的确有对灵魂进行吸引的作用。"
