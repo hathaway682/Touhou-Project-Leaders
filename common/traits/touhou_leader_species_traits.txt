@@ -33,9 +33,10 @@ trait_thl_spirit = {
 	infertile = yes
 	icon = "gfx/interface/icons/traits/trait_zombie.dds"
 	modifier = {
-		pc_nether_habitability = 10
+		pc_nether_habitability = 2
 		worker_and_simple_drone_cat_bonus_workforce_mult = -0.5
-		planet_pops_upkeep_mult = -2
+		specialist_and_complex_drone_cat_bonus_workforce_mult = 0.25
+		planet_pops_upkeep_mult = -0.5
 		pop_housing_usage_add = -0.5
 	}
 	triggered_pop_group_modifier = {
