@@ -794,7 +794,15 @@ country_event = {
                     is_galactic_emperor = no
                     is_galactic_community_member = yes
                 }
-                join_war = event_target:gal_emperor
+                if = {
+                    limit = {
+                        is_same_value = event_target:moriya_wih_attacker
+                    }
+                    remove_from_galactic_community = yes
+                }
+                else = {
+                    join_war = event_target:gal_emperor
+                }
             }
         }
     }
