@@ -485,7 +485,7 @@ wg_moriya_war_in_heaven = {
 							has_ai_personality = fallen_empire_hive_mind
 						}
 						integrate_country_effect = {
-							OWNER = root
+							OWNER = from
 						}
 					}
 				}
