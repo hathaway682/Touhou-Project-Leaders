@@ -36,6 +36,7 @@ trait_thl_spirit = {
 		pc_nether_habitability = 2
 		worker_and_simple_drone_cat_bonus_workforce_mult = -0.5
 		specialist_and_complex_drone_cat_bonus_workforce_mult = 0.25
+		pop_cat_ruler_bonus_workforce_mult = 0.4
 		planet_pops_upkeep_mult = -0.5
 		pop_housing_usage_add = -0.5
 	}
