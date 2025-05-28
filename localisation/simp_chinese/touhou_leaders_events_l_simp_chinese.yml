@@ -1831,12 +1831,12 @@
  touhou_war_in_heaven.1.name: "天堂之战"
  touhou_war_in_heaven.1.fallen: "$touhou_war_in_heaven.4.start$沉眠的上古帝国。\n\n在一场面向全银河的广播之中，§l东风谷早苗§!代表§H[moriya_wih_attacker.GetName]§!严厉谴责了§H[moriya_wih_defender.GetName]§!的傲慢，号召全银河的守矢信徒拿起武器，将这过时的帝国彻底打入火狱。§H[moriya_wih_defender.GetName]§!随即还以颜色，他们重启了沉眠已久的泰坦巨舰铸造厂，恢复了他们退缩到目前边境之时废弃的侦察哨站，并开始为一场全面的战争动员他们的整个社会。$touhou_war_in_heaven.1.end$"
  touhou_war_in_heaven.1.awakened: "$touhou_war_in_heaven.4.start$复苏的上古帝国。\n\n在一场面向全银河的广播之中，§l东风谷早苗§!代表§H[moriya_wih_attacker.GetName]§!严厉谴责了§H[moriya_wih_defender.GetName]§!的复仇主义，号召全银河的守矢信徒拿起武器，将这疯狂的帝国彻底打入火狱。正在试图恢复他们在银河之中地位的§H[moriya_wih_defender.GetName]§!没有忽视这样一个挑战，在集结舰队的同时，他们也向反对守矢信仰扩张的国家抛去了橄榄枝。$touhou_war_in_heaven.1.end$"
- touhou_war_in_heaven.1.end: "\n\n每一方都派遣了一名代表去往其他国家，承诺厚赏加入他们的人并严惩反对他们的人。慑于双方的强大实力，许多国家都选择了当场站队，屈从于他们认为的胜利者。转瞬之间，银河系的大部分已成为两个庞大集团的战场。尽管仍然有国家选择了保持中立，然而在这种情况下，中立很有可能招致双方的围攻，预计这些国家会寻求通过军事联盟保护自己。本台记者射命丸文为您报道。"
+ touhou_war_in_heaven.1.end: "\n\n每一方都派遣了一名代表去往其他国家，承诺厚赏加入他们的人并严惩反对他们的人。慑于双方的强大实力，许多国家都选择了当场站队，屈从于他们认为的胜利者。转瞬之间，银河系的大部分已成为两个庞大集团的战场。尽管仍然有国家选择了保持中立，然而在这种情况下，中立很有可能招致双方的围攻，预计这些国家会寻求通过军事联盟保护自己。\n\n本台记者射命丸文为您报道。"
  touhou_war_in_heaven.1.a: "建御名方神与我们同在！"
  touhou_war_in_heaven.1.a.tooltip: "§Y银河系所有国家都将收到通知，要求他们在我们和§H[moriya_wih_defender.GetName]§!之中选择一方成为附庸国。§!"
 
  touhou_war_in_heaven.2.name: "与不结盟组织的战争"
- touhou_war_in_heaven.2.desc: "无论是我们还是§H[moriya_wih_defender.GetName]§!都不可能允许一个§H不结盟组织§!在我们互相厮杀时渔翁得利，我们向不结盟组织发出了最后通牒，要求他们立刻解散。几乎同时，§H[moriya_wih_defender.GetName]§!也发出了同样的要求。不出所料，§H不结盟组织§!拒绝了我们的要求，并且宣称要以战争回应我们的威胁。"
+ touhou_war_in_heaven.2.desc: "无论是我们还是§H[moriya_wih_defender.GetName]§!都不可能允许一个§H不结盟组织§!在我们互相厮杀时作壁上观。我们向不结盟组织发出了最后通牒，要求他们立刻解散。几乎同时，§H[moriya_wih_defender.GetName]§!也发出了同样的要求。不出所料，§H不结盟组织§!拒绝了我们的要求，并且宣称要以战争回应我们的威胁。"
  touhou_war_in_heaven.2.a: "那就开战！"
  touhou_war_in_heaven.2.tooltip: "§Y[moriya_wih_attacker.GetName]§!和§Y[moriya_wih_defender.GetName]§!向§Y不结盟组织§!§R宣战§!。"
 
@@ -1914,6 +1914,6 @@
  touhou_war_in_heaven.22.name: "不结盟组织"
  touhou_war_in_heaven.22.desc: "在守矢神道对先祖帝国的挑战之中，并非所有的年轻物种都选择了其中一方。比如我们就保持了中立，但这意味着我们要独自面对双方的威胁。以在战争中抵抗各边势力为目标，§H不结盟组织§!在§H[From.GetName]§!的领导下成立了。"
  touhou_war_in_heaven.22.desc2: "并非所有的年轻物种都选择了在守矢神道对先祖帝国的挑战之中站队。有些，比如我们，保持了中立；但倘若战争的天平朝一方倾斜，我们恐怕就要独自面对来自双方的威胁了。§H[From.GetName]§!奋勇当先，宣布其联盟将作为§H不结盟组织§!挑起了反抗战争双方的大旗，并邀请其他中立国团结在他们的旗帜下。"
- touhou_war_in_heaven.22.desc3: "在我们推翻腐朽帝国的伟大事业中，并非所有的年轻物种都选择了其中一方。现在，他们在§H[From.GetName]§!的撮合下组成了§H不结盟组织§!，号称要同时反抗战争双方，并且开始拉拢其他中立国。"
+ touhou_war_in_heaven.22.desc3: "在我们推翻腐朽帝国的伟大事业中，并非所有的年轻物种都选择了其中一方。尽管一开始可能希望待价而沽或是渔翁得利，现在这些中立者发现自己同时受到了双方的威胁。他们在§H[From.GetName]§!的撮合下组成了§H不结盟组织§!，号称要同时反抗战争双方，并且开始拉拢其他中立国。"
  touhou_war_in_heaven.22.a: "一次豪赌。"
  touhou_war_in_heaven.22.b: "他们以区区之数，又何以自安？"

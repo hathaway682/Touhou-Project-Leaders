@@ -2128,14 +2128,14 @@ country_event = {
         trigger = {
             from = {
                 has_federation = yes
-                NOT = { has_country_flag = moriya_wih_attacker }
             }
+            NOT = { has_country_flag = moriya_wih_attacker }
         }
     }
     desc = {
         text = touhou_war_in_heaven.22.desc3
         trigger = {
-            from = { has_country_flag = moriya_wih_attacker }
+            has_country_flag = moriya_wih_attacker
         }
     }
     picture = {

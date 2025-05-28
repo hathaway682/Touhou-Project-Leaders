@@ -1,0 +1,39 @@
+war_name_parts_list = {
+	key = "moriya_crusade_war_names"
+	parts = {
+		Crusade = 1
+		Jihad = 1
+		Great_Holy_War = 1
+		Great_Purification = 1
+	}
+}
+
+# 守矢圣战
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 9999
+			using_war_goal = {
+				type = wg_moriya_crusade
+				owner = attacker
+			}
+		}
+	}
+	format = "{war_vs_adjectives {[This.MainAttacker.GetAdj] [This.MainDefender.GetAdj] <moriya_crusade_war_names>}}"
+}
+
+### 天堂之战
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999900
+			using_war_goal = {
+				type = wg_moriya_war_in_heaven
+				owner = attacker
+			}
+		}
+	}
+	format = "{<war_in_heaven_war_names>}"
+}
