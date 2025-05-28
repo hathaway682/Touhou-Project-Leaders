@@ -66,6 +66,7 @@ on_monthly_pulse_country = {
 		touhou_paragon_spell.10000
 		touhou_war_in_heaven.12
 		touhou_war_in_heaven.14
+		touhou_war_in_heaven.16
 	}
 }
 

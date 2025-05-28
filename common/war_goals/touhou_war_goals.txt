@@ -354,6 +354,8 @@ wg_moriya_war_in_heaven = {
 		surrender = ""
 	}
 
+	hide_if_no_cb = yes
+
 	surrender_acceptance = -1000
 	war_exhaustion = 0.25
 
@@ -383,6 +385,10 @@ wg_moriya_war_in_heaven = {
 	}
 
 	on_wargoal_set = {
+		every_country = {
+			remove_country_flag = sleepers_awake_first_sleeper
+			remove_country_flag = sleepers_awake_ancient_rival
+		}
 		set_country_flag = moriya_wih_attacker
 		save_global_event_target_as = moriya_wih_attacker
 		from = {
@@ -489,6 +495,15 @@ wg_moriya_war_in_heaven = {
 						limit = {
 							has_ai_personality = fallen_empire_hive_mind
 						}
+						save_event_target_as = assimilated_fe
+						set_country_flag = got_assimialted
+						every_playable_country = {
+							limit = {
+								has_communications = root
+								NOT = { is_same_value = root }
+							}
+							country_event = { id = fallen_empires_awakening.11 }
+						}
 						integrate_country_effect = {
 							OWNER = event_target:awakened_hive
 						}
@@ -518,9 +533,31 @@ wg_moriya_war_in_heaven = {
 				add_awakened_fallen_empire_resources = yes
 				add_awakened_fallen_empire_fleet = yes #also some more fleet
 			}
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+					NOT = { has_communications = root }
+				}
+				establish_communications_no_message = root
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+					NOT = { has_communications = from }
+				}
+				establish_communications_no_message = from
+			}
 		}
 		else = {
-			set_global_flag =moriya_war_in_heaven_vs_awakened
+			set_global_flag = moriya_war_in_heaven_vs_awakened
 		}
 		if = {
 			limit = {
@@ -569,6 +606,7 @@ wg_moriya_war_in_heaven = {
 				country_event = { id = touhou_war_in_heaven.4 }
 			}
 		}
+		country_event = { id = touhou_war_in_heaven.1 }
 	}
 
 	on_accept = {

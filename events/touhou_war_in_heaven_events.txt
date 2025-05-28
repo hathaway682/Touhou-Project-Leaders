@@ -2,6 +2,87 @@
 namespace = touhou_war_in_heaven
 
 country_event = {
+    id = touhou_war_in_heaven.1
+    title = touhou_war_in_heaven.1.name
+    desc = {
+        text = touhou_war_in_heaven.1.fallen
+        trigger = {
+            has_global_flag = moriya_war_in_heaven_vs_fallen
+        }
+    }
+    desc = {
+        text = touhou_war_in_heaven.1.awakened
+        trigger = {
+            has_global_flag = moriya_war_in_heaven_vs_awakened
+        }
+    }
+    picture = {
+        trigger = {
+            NOT = {
+                any_country = {
+                    has_country_flag = moriya_wih_defender
+                    is_hive_empire = yes
+                }
+            }
+        }
+        picture = GFX_evt_fallen_empire_awakes
+    }
+    picture = {
+        trigger = {
+            any_country = {
+                has_country_flag = moriya_wih_defender
+                is_hive_empire = yes
+            }
+        }
+        picture = GFX_evt_hive_mind_fallen_empire
+    }
+    show_sound = event_alien_signal
+    location = root
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_war_in_heaven.1.a
+        custom_tooltip = touhou_war_in_heaven.1.a.tooltip
+    }
+}
+
+country_event = {
+    id = touhou_war_in_heaven.2
+    title = touhou_war_in_heaven.2.name
+    desc = touhou_war_in_heaven.2.desc
+    picture = {
+        trigger = {
+            NOT = {
+                any_country = {
+                    has_country_flag = moriya_wih_defender
+                    is_hive_empire = yes
+                }
+            }
+        }
+        picture = GFX_evt_fallen_empire_awakes
+    }
+    picture = {
+        trigger = {
+            any_country = {
+                has_country_flag = moriya_wih_defender
+                is_hive_empire = yes
+            }
+        }
+        picture = GFX_evt_hive_mind_fallen_empire
+    }
+    show_sound = event_alien_signal
+    location = root
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_war_in_heaven.2.a
+        custom_tooltip = touhou_war_in_heaven.2.tooltip
+    }
+}
+
+country_event = {
     id = touhou_war_in_heaven.4
     title = touhou_war_in_heaven.4.name
     desc = {
@@ -18,15 +99,19 @@ country_event = {
     }
     picture = {
         trigger = {
-            event_target:moriya_wih_defender = {
-                is_hive_empire = yes
+            NOT = {
+                any_country = {
+                    has_country_flag = moriya_wih_defender
+                    is_hive_empire = yes
+                }
             }
         }
         picture = GFX_evt_fallen_empire_awakes
     }
     picture = {
         trigger = {
-            event_target:moriya_wih_defender = {
+            any_country = {
+                has_country_flag = moriya_wih_defender
                 is_hive_empire = yes
             }
         }
@@ -530,6 +615,18 @@ country_event = {
                 }
             }
         }
+        if = {
+            limit = {
+                event_target:moriya_wih_defender = {
+                    has_country_flag = fallen_empire_hive_growth
+                }
+            }
+            hidden_effect = {
+                set_subject_of = {
+                    who = event_target:moriya_wih_defender
+                }
+            }
+        }
         hidden_effect = {
             hidden_effect = { add_opinion_modifier = { who = event_target:moriya_wih_defender modifier = opinion_war_in_heaven_ally } }
             event_target:moriya_wih_defender = { add_opinion_modifier = { who = root modifier = opinion_war_in_heaven_ally } }
@@ -649,18 +746,17 @@ country_event = {
         trigger = {
             NOT = {
                 any_country = {
-                    is_country_type = awakened_fallen_empire
+                    has_country_flag = moriya_wih_defender
                     is_hive_empire = yes
                 }
             }
         }
         picture = GFX_evt_fallen_empire_awakes
     }
-
     picture = {
         trigger = {
             any_country = {
-                is_country_type = awakened_fallen_empire
+                has_country_flag = moriya_wih_defender
                 is_hive_empire = yes
             }
         }
@@ -689,18 +785,17 @@ country_event = {
         trigger = {
             NOT = {
                 any_country = {
-                    is_country_type = awakened_fallen_empire
+                    has_country_flag = moriya_wih_defender
                     is_hive_empire = yes
                 }
             }
         }
         picture = GFX_evt_fallen_empire_awakes
     }
-
     picture = {
         trigger = {
             any_country = {
-                is_country_type = awakened_fallen_empire
+                has_country_flag = moriya_wih_defender
                 is_hive_empire = yes
             }
         }
@@ -736,18 +831,17 @@ country_event = {
         trigger = {
             NOT = {
                 any_country = {
-                    is_country_type = awakened_fallen_empire
+                    has_country_flag = moriya_wih_defender
                     is_hive_empire = yes
                 }
             }
         }
         picture = GFX_evt_fallen_empire_awakes
     }
-
     picture = {
         trigger = {
             any_country = {
-                is_country_type = awakened_fallen_empire
+                has_country_flag = moriya_wih_defender
                 is_hive_empire = yes
             }
         }
@@ -801,7 +895,7 @@ country_event = {
     option = {
         name = war_in_heaven.7.b
         trigger = { is_galactic_emperor = no }
-        custom_tooltip = war_in_heaven.7.tooltip
+        custom_tooltip = touhou_war_in_heaven.7.tooltip
     }
 }
 
@@ -944,18 +1038,17 @@ country_event = {
         trigger = {
             NOT = {
                 any_country = {
-                    is_country_type = awakened_fallen_empire
+                    has_country_flag = moriya_wih_defender
                     is_hive_empire = yes
                 }
             }
         }
         picture = GFX_evt_fallen_empire_awakes
     }
-
     picture = {
         trigger = {
             any_country = {
-                is_country_type = awakened_fallen_empire
+                has_country_flag = moriya_wih_defender
                 is_hive_empire = yes
             }
         }
@@ -1028,10 +1121,9 @@ country_event = {
                 has_galactic_custodian = yes
                 any_playable_country = {
                     is_galactic_custodian = yes
-                    NOT = {
+                    NOR = {
                         has_country_flag = war_in_heaven_league_leader_declined
                         has_country_flag = moriya_wih_attacker
-                        has_country_flag = moriya_wih_defender
                         any_country = {
                             OR = {
                                 has_country_flag = moriya_wih_attacker
@@ -1045,10 +1137,9 @@ country_event = {
             random_playable_country = {
                 limit = {
                     is_galactic_custodian = yes
-                    NOT = {
+                    NOR = {
                         has_country_flag = war_in_heaven_league_leader_declined
                         has_country_flag = moriya_wih_attacker
-                        has_country_flag = moriya_wih_defender
                         any_country = {
                             OR = {
                                 has_country_flag = moriya_wih_attacker
@@ -1077,7 +1168,6 @@ country_event = {
                         NOR = {
                             has_country_flag = war_in_heaven_league_leader_declined
                             has_country_flag = moriya_wih_attacker
-                            has_country_flag = moriya_wih_defender
                             any_country = {
                                 OR = {
                                     has_country_flag = moriya_wih_attacker
@@ -1102,7 +1192,6 @@ country_event = {
                                     has_country_flag = war_in_heaven_league_leader_declined
                                     has_ascension_perk = ap_become_the_crisis
                                     has_country_flag = moriya_wih_attacker
-                                    has_country_flag = moriya_wih_defender
                                     any_country = {
                                         OR = {
                                             has_country_flag = moriya_wih_attacker
@@ -1130,7 +1219,6 @@ country_event = {
                             is_level_4_player_crisis = yes
                             is_level_5_player_crisis = yes
                             has_country_flag = moriya_wih_attacker
-                            has_country_flag = moriya_wih_defender
                             any_country = {
                                 OR = {
                                     has_country_flag = moriya_wih_attacker
@@ -1155,7 +1243,6 @@ country_event = {
                                     has_country_flag = war_in_heaven_league_leader_declined
                                     has_ascension_perk = ap_become_the_crisis
                                     has_country_flag = moriya_wih_attacker
-                                    has_country_flag = moriya_wih_defender
                                     any_country = {
                                         OR = {
                                             has_country_flag = moriya_wih_attacker
@@ -1177,7 +1264,6 @@ country_event = {
                             is_level_4_player_crisis = yes
                             is_level_5_player_crisis = yes
                             has_country_flag = moriya_wih_attacker
-                            has_country_flag = moriya_wih_defender
                             any_country = {
                                 OR = {
                                     has_country_flag = moriya_wih_attacker
@@ -1212,7 +1298,6 @@ country_event = {
                         is_level_4_player_crisis = yes
                         is_level_5_player_crisis = yes
                         has_country_flag = moriya_wih_attacker
-                        has_country_flag = moriya_wih_defender
                         has_global_flag = war_in_heaven_seeking_league_leader
                         has_country_flag = war_in_heaven_league_leader_declined
                         any_country = {
@@ -1274,18 +1359,17 @@ country_event = {
         trigger = {
             NOT = {
                 any_country = {
-                    is_country_type = awakened_fallen_empire
+                    has_country_flag = moriya_wih_defender
                     is_hive_empire = yes
                 }
             }
         }
         picture = GFX_evt_fallen_empire_awakes
     }
-
     picture = {
         trigger = {
             any_country = {
-                is_country_type = awakened_fallen_empire
+                has_country_flag = moriya_wih_defender
                 is_hive_empire = yes
             }
         }
@@ -1336,10 +1420,6 @@ country_event = {
         }
         hidden_effect = {
             set_timed_country_flag = { flag = war_in_heaven_nonaligned_league_timer days = 180 }
-            country_event = {
-                id = touhou_war_in_heaven.16
-                days = 180
-            }
             set_country_flag = war_in_heaven_league_leader
             set_global_flag = war_in_heaven_nonaligned_league
             remove_global_flag = war_in_heaven_seeking_league_leader
@@ -1365,6 +1445,8 @@ country_event = {
                     NOR = {
                         is_same_value = root
                         has_country_flag = war_in_heaven_nonaligned_league_check
+                    }
+                    NOT = {
                         has_country_flag = moriya_wih_attacker
                     }
                 }
@@ -1456,24 +1538,17 @@ country_event = {
         trigger = {
             NOT = {
                 any_country = {
-                    OR = {
-                        has_country_flag = moriya_wih_attacker
-                        has_country_flag = moriya_wih_defender
-                    }
+                    has_country_flag = moriya_wih_defender
                     is_hive_empire = yes
                 }
             }
         }
         picture = GFX_evt_fallen_empire_awakes
     }
-
     picture = {
         trigger = {
             any_country = {
-                OR = {
-                    has_country_flag = moriya_wih_attacker
-                    has_country_flag = moriya_wih_defender
-                }
+                has_country_flag = moriya_wih_defender
                 is_hive_empire = yes
             }
         }
@@ -1668,18 +1743,17 @@ country_event = {
         trigger = {
             NOT = {
                 any_country = {
-                    is_country_type = awakened_fallen_empire
+                    has_country_flag = moriya_wih_defender
                     is_hive_empire = yes
                 }
             }
         }
         picture = GFX_evt_fallen_empire_awakes
     }
-
     picture = {
         trigger = {
             any_country = {
-                is_country_type = awakened_fallen_empire
+                has_country_flag = moriya_wih_defender
                 is_hive_empire = yes
             }
         }
@@ -1697,6 +1771,9 @@ country_event = {
             has_federation_flag = non_aligned_league
         }
         has_global_flag = war_in_heaven_nonaligned_league
+        NOT = {
+            has_country_flag = war_in_heaven_nonaligned_league_timer
+        }
         NOR = {
             has_global_flag = war_in_heaven_nonaligned_league_war
             any_country = {
@@ -1738,6 +1815,14 @@ country_event = {
                 every_subject = {
                     join_war = prev
                 }
+            }
+        }
+        every_country = {
+            limit = {
+                has_country_flag = moriya_wih_attacker
+            }
+            country_event = {
+                id = touhou_war_in_heaven.2#Give some time to prepare
             }
         }
     }
@@ -1836,18 +1921,17 @@ country_event = {
         trigger = {
             NOT = {
                 any_country = {
-                    is_country_type = awakened_fallen_empire
+                    has_country_flag = moriya_wih_defender
                     is_hive_empire = yes
                 }
             }
         }
         picture = GFX_evt_fallen_empire_awakes
     }
-
     picture = {
         trigger = {
             any_country = {
-                is_country_type = awakened_fallen_empire
+                has_country_flag = moriya_wih_defender
                 is_hive_empire = yes
             }
         }
@@ -1889,18 +1973,17 @@ country_event = {
         trigger = {
             NOT = {
                 any_country = {
-                    is_country_type = awakened_fallen_empire
+                    has_country_flag = moriya_wih_defender
                     is_hive_empire = yes
                 }
             }
         }
         picture = GFX_evt_fallen_empire_awakes
     }
-
     picture = {
         trigger = {
             any_country = {
-                is_country_type = awakened_fallen_empire
+                has_country_flag = moriya_wih_defender
                 is_hive_empire = yes
             }
         }
@@ -1968,18 +2051,17 @@ country_event = {
         trigger = {
             NOT = {
                 any_country = {
-                    is_country_type = awakened_fallen_empire
+                    has_country_flag = moriya_wih_defender
                     is_hive_empire = yes
                 }
             }
         }
         picture = GFX_evt_fallen_empire_awakes
     }
-
     picture = {
         trigger = {
             any_country = {
-                is_country_type = awakened_fallen_empire
+                has_country_flag = moriya_wih_defender
                 is_hive_empire = yes
             }
         }
@@ -2003,18 +2085,17 @@ country_event = {
         trigger = {
             NOT = {
                 any_country = {
-                    is_country_type = awakened_fallen_empire
+                    has_country_flag = moriya_wih_defender
                     is_hive_empire = yes
                 }
             }
         }
         picture = GFX_evt_fallen_empire_awakes
     }
-
     picture = {
         trigger = {
             any_country = {
-                is_country_type = awakened_fallen_empire
+                has_country_flag = moriya_wih_defender
                 is_hive_empire = yes
             }
         }
@@ -2036,31 +2117,42 @@ country_event = {
     desc = {
         text = touhou_war_in_heaven.22.desc
         trigger = {
-            from = { has_federation = no }
+            from = {
+                has_federation = no
+                NOT = { has_country_flag = moriya_wih_attacker }
+            }
         }
     }
     desc = {
         text = touhou_war_in_heaven.22.desc2
         trigger = {
-            from = { has_federation = yes }
+            from = {
+                has_federation = yes
+                NOT = { has_country_flag = moriya_wih_attacker }
+            }
+        }
+    }
+    desc = {
+        text = touhou_war_in_heaven.22.desc3
+        trigger = {
+            from = { has_country_flag = moriya_wih_attacker }
         }
     }
     picture = {
         trigger = {
             NOT = {
                 any_country = {
-                    is_country_type = awakened_fallen_empire
+                    has_country_flag = moriya_wih_defender
                     is_hive_empire = yes
                 }
             }
         }
         picture = GFX_evt_fallen_empire_awakes
     }
-
     picture = {
         trigger = {
             any_country = {
-                is_country_type = awakened_fallen_empire
+                has_country_flag = moriya_wih_defender
                 is_hive_empire = yes
             }
         }
