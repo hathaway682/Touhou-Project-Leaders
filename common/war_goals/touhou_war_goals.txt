@@ -383,8 +383,12 @@ wg_moriya_war_in_heaven = {
 	}
 
 	on_wargoal_set = {
+		set_country_flag = moriya_wih_attacker
 		save_global_event_target_as = moriya_wih_attacker
-		from = { save_global_event_target_as = moriya_wih_defender }
+		from = {
+			save_global_event_target_as = moriya_wih_defender
+			set_country_flag = moriya_wih_defender
+		}
 		set_global_flag = war_in_heaven_started
 		set_global_flag = war_in_heaven_ongoing
 		set_timed_global_flag = {
