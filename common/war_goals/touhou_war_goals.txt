@@ -18,9 +18,8 @@ wg_moriya_crusade = {
 		any_owned_leader = {
 			has_trait = thl_leader_trait_miracle
 		}
-		NOR = {
+		NOT = {
 			has_valid_civic = civic_inwards_perfection
-			FROM = { has_valid_civic = civic_inwards_perfection }
 		}
 	}
 	possible = {
@@ -75,7 +74,53 @@ wg_moriya_crusade = {
 			}
 		}
 		if = {
-			limit = { from = { has_been_declared_crisis = no } }
+			limit = {
+				is_megacorp = yes
+				from = { has_been_declared_crisis = no }
+			}
+			FROM = {
+				if = {
+					limit = { has_been_declared_crisis = no }
+					ROOT = {
+						switch = {
+							trigger = has_policy_flag
+							oppressive_terms = {
+								FROM = {
+									set_subject_of = {
+										who = ROOT
+										preset = preset_subsidiary_oppressive
+									}
+								}
+							}
+							balanced_terms = {
+								FROM = {
+									set_subject_of = {
+										who = ROOT
+										preset = preset_subsidiary_balanced
+									}
+								}
+							}
+							benevolent_terms = {
+								FROM = {
+									set_subject_of = {
+										who = ROOT
+										preset = preset_subsidiary_benevolent
+									}
+								}
+							}
+						}
+					}
+					add_modifier = {
+						modifier = newly_subjugated_loyalty
+						years = 5
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				from = { has_been_declared_crisis = no }
+			}
 			from = {
 				ROOT = {
 					switch = {
@@ -207,6 +252,7 @@ wg_moriya_crusade = {
 					}
 				}
 			}
+
 			end_rivalry = from
 			from = { end_rivalry = root }
 			every_system_within_border = {
@@ -825,172 +871,9 @@ wg_marisa_raid = {
 				}
 			}
 		}
-		if = {
-			limit = { from = { has_been_declared_crisis = no } }
-			from = {
-				ROOT = {
-					switch = {
-						trigger = has_policy_flag
-						oppressive_terms = {
-							if = {
-								limit = {
-									ROOT = { is_ai = yes }
-								}
-								FROM = {
-									set_subject_of = {
-										who = ROOT
-										preset = preset_vassal_oppressive_ai
-									}
-								}
-							}
-							else = {
-								FROM = {
-									set_subject_of = {
-										who = ROOT
-										preset = preset_vassal_oppressive
-									}
-								}
-							}
-						}
-						balanced_terms = {
-							FROM = {
-								set_subject_of = {
-									who = ROOT
-									preset = preset_vassal_balanced
-								}
-							}
-						}
-						benevolent_terms = {
-							FROM = {
-								set_subject_of = {
-									who = ROOT
-									preset = preset_vassal_benevolent
-								}
-							}
-						}
-					}
-				}
-				add_modifier = {
-					modifier = newly_subjugated_loyalty
-					years = 5
-				}
-			}
-		}
-
-		from = {
-			if = {
-				limit = {
-					is_gestalt = no
-				}
-				custom_tooltip = wg_moriya_crusade_accept
-				custom_tooltip = wg_force_ideology_accept_2
-			}
-
-			every_subject = {
-				limit = {
-					is_gestalt = no
-					any_war = {
-						is_war_participant = {
-							who = prev
-							side = prevprev
-						}
-					}
-				}
-				custom_tooltip = wg_force_ideology_accept_subject
-			}
-		}
-
-		if = {
-			limit = {
-				from = { has_federation = yes }
-			}
-			custom_tooltip = wg_force_ideology_accept_3
-		}
-
-		hidden_effect = {
-			from = {
-				if = {
-					limit = {
-						is_gestalt = no
-						has_corporate_government = no
-					}
-					touhou_moriya_crusade_impose_effect = yes
-					force_remove_civic = 1
-					force_add_civic = civic_moriya_shinto
-				}
-				else_if = {
-					limit = {
-						is_gestalt = no
-						has_corporate_government = no
-					}
-					touhou_moriya_crusade_impose_effect = yes
-					force_remove_civic = 1
-					force_add_civic = civic_moriya_shinto_corp
-				}
-
-				every_subject = {
-					if = {
-						limit = {
-							is_gestalt = no
-							has_corporate_government = no
-						}
-						touhou_moriya_crusade_impose_effect = yes
-						force_remove_civic = 1
-						force_add_civic = civic_moriya_shinto
-					}
-					else_if = {
-						limit = {
-							is_gestalt = no
-							has_corporate_government = no
-						}
-						touhou_moriya_crusade_impose_effect = yes
-						force_remove_civic = 1
-						force_add_civic = civic_moriya_shinto_corp
-					}
-				}
-			}
-			end_rivalry = from
-			from = { end_rivalry = root }
-			every_system_within_border = {
-				limit = {
-					from = { has_claim = prev }
-				}
-				remove_claims = { who = from }
-			}
-			every_country = {
-				limit = {
-					OR = {
-						is_in_federation_with = root
-						AND = {
-							is_subject = yes
-							exists = overlord
-							overlord = { is_same_value = root }
-						}
-					}
-				}
-				end_rivalry = from
-				from = { end_rivalry = prev }
-				add_opinion_modifier = { modifier = opinion_we_liberated who = from }
-				from = { add_opinion_modifier = { modifier = opinion_liberated_us who = prev } }
-				every_system_within_border = {
-					limit = {
-						from = { has_claim = prev }
-					}
-					remove_claims = { who = from }
-				}
-			}
-			from = {
-				leave_alliance = { override_requirements = yes }
-			}
-			if = {
-				limit = {
-					has_valid_civic = civic_crusader_spirit
-				}
-				change_variable = {
-					which = we_bring_peace_achievement_count
-					value = 1
-				}
-			}
+		steal_relic = {
+			target = from
+			relic = all
 		}
 	}
 
