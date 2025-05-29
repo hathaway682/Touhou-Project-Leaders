@@ -876,7 +876,7 @@ country_event = {
                 declare_war = {
                     target = event_target:gal_emperor
                     name = "NAME_The_War_in_Heaven"
-                    attacker_war_goal = "wg_war_in_heaven"
+                    attacker_war_goal = "wg_moriya_war_in_heaven_nonaligned"
                 }
                 every_subject = {
                     join_war = prev
@@ -919,7 +919,7 @@ country_event = {
             any_war_participant = {
                 prev = { #The War
                     using_war_goal = {
-                        type = wg_war_in_heaven
+                        type = wg_moriya_war_in_heaven
                         owner = prev #The War participant
                     }
                 }
@@ -981,7 +981,7 @@ country_event = {
                     any_war_participant = {
                         prev = { #The War
                             using_war_goal = {
-                                type = wg_war_in_heaven
+                                type = wg_moriya_war_in_heaven
                                 owner = prev #The Participant
                             }
                         }
@@ -996,7 +996,7 @@ country_event = {
                 any_war_participant = {
                     prev = { #The war we are iterating through
                         using_war_goal = {
-                            type = wg_war_in_heaven
+                            type = wg_moriya_war_in_heaven
                             owner = prev #The participant
                         }
                     }
@@ -1012,7 +1012,7 @@ country_event = {
                     any_country = {
                         any_war = {
                             using_war_goal = {
-                                type = wg_war_in_heaven
+                                type = wg_moriya_war_in_heaven
                                 owner = prev
                             }
                         }
@@ -1809,7 +1809,7 @@ country_event = {
             declare_war = {
                 target = root
                 name = "NAME_The_War_in_Heaven"
-                attacker_war_goal = "wg_war_in_heaven"
+                attacker_war_goal = "wg_moriya_war_in_heaven_nonaligned"
             }
             hidden_effect = {
                 every_subject = {
@@ -1862,7 +1862,7 @@ country_event = {
                     any_war_participant = {
                         prev = {
                             using_war_goal = {
-                                type = wg_war_in_heaven
+                                type = wg_moriya_war_in_heaven
                                 owner = prev
                             }
                         }
@@ -1874,7 +1874,20 @@ country_event = {
                     any_war_participant = {
                         prev = {
                             using_war_goal = {
-                                type = wg_war_in_heaven
+                                type = wg_moriya_war_in_heaven
+                                owner = prev
+                            }
+                        }
+                    }
+                }
+                end_war_effect = yes
+            }
+            every_war = { #End War in Heaven
+                limit = {
+                    any_war_participant = {
+                        prev = {
+                            using_war_goal = {
+                                type = wg_moriya_war_in_heaven_nonaligned
                                 owner = prev
                             }
                         }

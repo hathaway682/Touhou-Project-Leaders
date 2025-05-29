@@ -390,6 +390,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/message/message_pop_magic_transed.dds"
 	}
 
+	spriteType = {
+		name = "GFX_wg_moriya_crusade"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_moriya_crusade.dds"
+	}
+
+	spriteType = {
+		name = "GFX_wg_moriya_war_in_heaven"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_moriya_war_in_heaven.dds"
+	}
+
 	# spriteType = {
 	# 	name = "GFX_text_touhou_leader"
 	# 	texturefile = "gfx/interface/icons/text_icons/text_icon_touhou_leader.dds"

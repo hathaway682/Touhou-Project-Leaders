@@ -23,7 +23,6 @@ artifact_random_secrct_research = {
 	allow = {
 		any_owned_leader = {
 			has_trait = thl_leader_trait_words
-			is_councilor = yes
 		}
 		custom_tooltip = {
 			text = all_secret_unlocked
