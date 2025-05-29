@@ -10404,3 +10404,47 @@ fleet_event = {
         }
     }
 }
+
+country_event = {
+    id = touhou_paragon_effect.40720
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        any_owned_leader = {
+            has_trait = thl_leader_trait_master_sacker
+        }
+        from = {
+            num_owned_relics >= 1
+        }
+        fromfrom = {
+            NOR = {
+                using_war_goal = {
+                    type = wg_marisa_raid
+                    owner = root
+                }
+                using_war_goal = {
+                    type = wg_steal_galatron
+                    owner = root
+                }
+                using_war_goal = {
+                    type = wg_steal_galatron_imperium
+                    owner = root
+                }
+                using_war_goal = {
+                    type = wg_take_galatron
+                    owner = root
+                }
+                using_war_goal = {
+                    type = wg_take_galatron_imperium
+                    owner = root
+                }
+            }
+        }
+    }
+    immediate = {
+        steal_relic = {
+            target = from
+            relic = random
+        }
+    }
+}

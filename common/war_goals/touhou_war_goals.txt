@@ -794,7 +794,7 @@ wg_moriya_war_in_heaven_nonaligned = {
 }
 
 wg_marisa_raid = {
-	casus_belli = cb_moriya_crusade
+	casus_belli = cb_marisa_raid
 
 	hide_if_no_cb = no
 	show_agreement_terms = no
@@ -809,18 +809,22 @@ wg_marisa_raid = {
 
 
 	potential = {
+		is_country_type = default
+		exists = from
 		any_owned_leader = {
 			has_trait = thl_leader_trait_master_sacker
 		}
-		NOR = {
-			has_valid_civic = civic_inwards_perfection
-			FROM = { has_valid_civic = civic_inwards_perfection }
-			has_authority = auth_corporate
-			has_ascension_perk = ap_become_the_crisis
+		NOT = {
+			is_in_federation_with = from
 		}
-		has_total_war_cb = no
 	}
 	possible = {
+		custom_tooltip = {
+			fail_text = no_relic_to_steal
+			from = {
+				num_owned_relics <= 0
+			}
+		}
 		custom_tooltip = {
 			fail_text = has_claimed_all_systems
 			from = {

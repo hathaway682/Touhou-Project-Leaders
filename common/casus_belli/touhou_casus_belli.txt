@@ -32,16 +32,43 @@ cb_moriya_crusade = {
 		from = { is_country_type = default }
 		from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
 		has_total_war_cb = no
-		OR = {
-			AND = {
-				is_spiritualist = yes
-				from = { is_spiritualist = no }
-			}
-			AND = {
-				is_materialist = yes
-				from = { is_materialist = no }
+		from = {
+			NOR = {
+				has_valid_civic = civic_moriya_shinto
+				has_valid_civic = civic_moriya_shinto_corp
 			}
 		}
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_marisa_raid = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	aggregated_message_key = TOUHOU_MESSAGE_KEY_MARISA_RAID
+	potential = {
+		is_country_type = default
+		exists = from
+		any_owned_leader = {
+			has_trait = thl_leader_trait_master_sacker
+		}
+		NOT = {
+			is_in_federation_with = from
+		}
+	}
+	is_valid = {
+		or = {
+			has_policy_flag = liberation_wars
+			has_policy_flag = unrestricted_wars
+		}
+		from = {
+			num_owned_relics >= 1
+		}
+		from = { is_country_type = default }
 		NOT = { is_overlord_to = FROM }
 		OR = {
 			is_subject = no

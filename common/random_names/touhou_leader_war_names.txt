@@ -8,6 +8,16 @@ war_name_parts_list = {
 	}
 }
 
+war_name_parts_list = {
+	key = "marisa_raid_war_names"
+	parts = {
+		Marisa_Raid_1 = 1
+		Marisa_Raid_2 = 1
+		Marisa_Raid_3 = 1
+		Marisa_Raid_4 = 1
+	}
+}
+
 # 守矢圣战
 war_name_format = {
 	random_weight = {
@@ -21,6 +31,21 @@ war_name_format = {
 		}
 	}
 	format = "{war_vs_adjectives {[This.MainAttacker.GetAdj] [This.MainDefender.GetAdj] <moriya_crusade_war_names>}}"
+}
+
+# 魔理沙洗劫
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 9999
+			using_war_goal = {
+				type = wg_marisa_raid
+				owner = attacker
+			}
+		}
+	}
+	format = "{war_vs_adjectives {[This.MainAttacker.GetAdj] [This.MainDefender.GetAdj] <marisa_raid_war_names>}}"
 }
 
 ### 天堂之战

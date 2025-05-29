@@ -37,7 +37,12 @@ civic_hakurei_shinto = {
 	description = "civic_hakurei_shinto_effects"
 	modification = {
 		add = {
-			has_civic = civic_hakurei_shinto_corp
+			OR = {
+				has_civic = civic_hakurei_shinto_corp
+				any_owned_leader = {
+					has_trait = thl_leader_trait_fly
+				}
+			}
 		}
 		remove = {
 			always = no
@@ -103,6 +108,9 @@ civic_hakurei_shinto_corp = {
 	modification = {
 		add = {
 			has_civic = civic_hakurei_shinto
+			any_owned_leader = {
+				has_trait = thl_leader_trait_fly
+			}
 		}
 		remove = {
 			always = no
