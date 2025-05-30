@@ -2720,7 +2720,7 @@ leader_trait_automation_champion = {
 		always = no
 	}
 	modifier = {
-		robotic_pop_bonus_workforce_mult = -0.25
+		robotic_pop_bonus_workforce_mult = 0.25
 		planet_buildings_upkeep_mult = -0.25
 		planet_districts_upkeep_mult = -0.25
 	}
