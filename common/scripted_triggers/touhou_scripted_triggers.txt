@@ -403,7 +403,7 @@ is_reanimator = {
 		has_valid_civic = civic_nether_world
 		has_valid_civic = civic_nether_world_corp
 		any_owned_leader = {
-			is_councilor = yes
+			#is_councilor = yes
 			has_trait = thl_leader_trait_corpse_travel
 		}
 	}

@@ -1654,7 +1654,7 @@
 
  thl_leader_trait_words: "可以读懂任何文字程度的能力"
  thl_leader_trait_words_desc: "这位领袖可以阅读一切的文字，包括已经消亡的古代文明或是完全陌生的外星文明，甚至加密的文字。"
- thl_leader_trait_words_effect: "解锁§H解读先驱者秘密§!文物行动，可以消耗大量稀有文物获得一项§Y先驱者秘密§!科技。\n完成一个考古发掘阶段时，获得等同于§Y6§!个月产出的随机类型$r_research$。"
+ thl_leader_trait_words_effect: "§E拥有该领袖时§!：\n解锁§H解读先驱者秘密§!文物行动，可以消耗大量稀有文物获得一项§Y先驱者秘密§!科技。\n完成一个考古发掘阶段时，获得等同于§Y6§!个月产出的随机类型$r_research$。"
  thl_leader_trait_books: "妖魔本的收集者"
  thl_leader_trait_books_desc: "这位领袖痴迷于收集奇怪的乃至危险的知识，尤其是以书本的形式。"
  thl_leader_trait_books_effect: "$PLANET_EFFECTS_TXT$：\n$mod_planet_researchers_minor_artifacts_produces_add$：§G+0.2§!\n\n$SECTOR_EFFECTS_TXT$：\n$mod_planet_researchers_minor_artifacts_produces_add$：§G+0.1§!\n\n$SCIENCE_SHIP_EFFECTS_TXT$：\n$tt$考古发掘速度：§G+50%§!\n§Y古代文明异常现象：§!\n$t$异常点研究速度：§G$@trait_archaeologist_1_amt|%0$§!\n\n允许建造£building£§Y铃奈庵§!，这一建筑会按照已经发掘的考古遗迹数量提供§Y铃奈庵员工§!岗位，产出$r_research$和£minor_artifacts£§Y$minor_artifacts$§!，并向£job_researcher£$job_researcher_plural$提供借书服务以收取$r_energy$。\n在协助研究的星球允许§Y解封古代妖魔§!决议，可以消耗£minor_artifacts£§Y$minor_artifacts$§!召唤拥有§Y灵能§!、§Y博闻强识§!和§Y非常强壮§!特质的强大£pop£§Y人口§!，但有些时候需要先通过§Y陆地战斗§!制服他们。"
@@ -1823,7 +1823,7 @@
 
  thl_leader_trait_corpse_travel:0 "带走尸体程度的能力"
  thl_leader_trait_corpse_travel_desc:0 "阿燐推着的车是猫车。你问她在运什么？你一定会想要是不问的话就好了。"
- thl_leader_trait_corpse_travel_effect:0 "被击败的有机体星神兽有机会被复活。"
+ thl_leader_trait_corpse_travel_effect:0 "§E拥有该领袖时§!：\n被击败的有机体星神兽有机会被复活。"
  thl_leader_trait_corpse_manipulation:0 "死灰复燃"
  thl_leader_trait_corpse_manipulation_desc:0 "阿燐捕捉和操纵尸体和怨灵的能力可以轻易将大批大批的死者拉起来战斗或工作，亦可以把生者毫无破绽的扮成死者。"
  thl_leader_trait_corpse_manipulation_effect:0 "§H所在星区§!能够建造£building£§Y尸体处理中心§!，这一建筑会利用星球上死去的尸体组装§Y僵尸§!及§Y怨灵§!£pop£人口，同时会将星球的防御部队替换为§Y地狱不死军§!，比通常的§Y不死军§!更加强大。\n存在£building£§Y尸体处理中心§!时，失业的§Y僵尸§!£pop£人口可以进行§P化学处理§!以产生$r_energy$。\n可以在§H所在星球§!或有£building£§Y尸体处理中心§!的星球招募§Y地狱不死军§!。"
