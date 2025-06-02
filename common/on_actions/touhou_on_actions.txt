@@ -464,3 +464,11 @@ on_war_won = {
 		touhou_paragon_effect.40720
 	}
 }
+
+# A planet has been colonized.
+# Scope = Planet
+on_colonized = {
+	events = {
+		touhou_paragon.50010 #提示在星球决议中修复神社
+	}
+}

@@ -1429,14 +1429,15 @@ leader_event = {
 		}
 		if = {
 			limit = {
-				not = {
-					any_country = {
-						is_country_type = saisen_box
+				NOT = {
+					owner = {
+						has_country_flag = saisen_box_active
 					}
 				}
 			}
 			owner = {
-				country_event = { id = touhou_paragon.40611 days = 365 random = 180 }
+				set_country_flag = saisen_box_active
+				country_event = { id = touhou_paragon.40611 days = 360 }
 			}
 		}
 	}
@@ -3852,6 +3853,25 @@ planet_event = {
 			}
 			remove_point_of_interest = jinx_shirne
 		}
+	}
+}
+
+planet_event = {
+	id = touhou_paragon.50010
+	title = touhou_paragon.50010.name
+	desc = touhou_paragon.50010.desc
+	picture = GFX_evt_ruined_shrine
+	show_sound = event_default
+	event_chain = ruined_shrine
+	is_triggered_only = yes
+
+	trigger = {
+		has_planet_flag = shrine_ruin_planet
+	}
+
+	option = {
+		name = ACKNOWLEDGED
+		custom_tooltip = touhou_paragon.50010.tooltip
 	}
 }
 

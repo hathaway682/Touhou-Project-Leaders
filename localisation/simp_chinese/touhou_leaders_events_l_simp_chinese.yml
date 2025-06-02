@@ -1614,7 +1614,7 @@
  jinx_shirne: "厄运之神社"
  jinx_shirne_desc: "饱受厄运困扰的人民也许会很需要一座神社。（提示：在任意£pop£§Y人口§!拥有§R厄运§!特质、£amenities£§Y舒适度§!在§R-1§!以下，或是类型为§Y废土星球§!的星球建造£building£§Y神社§!）"
  capital_shirne:0 "未知之神社"
- capital_shirne_desc: "我们首都的居民或许需要一座神社。（提示：在§Y首都§!建造£building£§Y神社§!）"
+ capital_shirne_desc: "我们首都的居民或许需要一座神社。（提示：在§Y首都§!建造£building£§Y神社§!，并等待一年。）"
 
  decision_repair_shirne: "修复荒废的神社"
  decision_repair_shirne_desc: "按照无名神灵的请求，修复祂的神社。"
@@ -1643,6 +1643,10 @@
  touhou_paragon.50005.name:0 "厄运之神社"
  touhou_paragon.50005.desc:0 "§Y[Root.GetName]§!的神社自建成后，就不断有饱受厄运困扰的人前去祈福，有些人还制作雏人偶放入流水随水而去，希望能带走他们的厄运。今日，他们的祈求得到了回应。一位长相如同雏人偶一般的神明现身在了神社，自称能带走他们的厄运。"
  touhou_paragon.50005.a:0 "显示在通讯屏幕上。"
+
+ touhou_paragon.50010.name:0 "[Root.GetName]已殖民"
+ touhou_paragon.50010.desc:0 "我们已经顺利在先前发现废弃神社的[Root.GetName]建立殖民地，现在可以开始神社的修复工作了。"
+ touhou_paragon.50010.tooltip:0 "查看星球决议以§Y修复荒废的神社§!。"
 
  building_shrine: "神社"
  building_shrine_desc: "神社不是神灵建造的，而是信徒建造的。祭祀实际存在的神灵，神灵就会自然寄宿在其中。"
