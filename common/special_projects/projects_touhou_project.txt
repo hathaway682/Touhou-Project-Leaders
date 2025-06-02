@@ -324,7 +324,6 @@ special_project = {
 	days_to_research = 30
 	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
 	event_scope = ship_event
-	event_chain = touhou_eientei
 	location = yes
 
 	requirements = {

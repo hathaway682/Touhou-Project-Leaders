@@ -642,12 +642,15 @@ country_event = {
 		#因幡帝
 		if = {
 			limit = {
+				is_ai = no
 				NOT = {
 					has_global_flag = tewi
 				}
 				any_owned_planet = {
 					OR = {
 						has_building = building_hypercomms_forum
+						has_building = building_corporate_forum
+						has_building = building_system_conflux
 						has_building = building_corporate_forum
 					}
 				}
@@ -656,6 +659,8 @@ country_event = {
 				limit = {
 					OR = {
 						has_building = building_hypercomms_forum
+						has_building = building_corporate_forum
+						has_building = building_system_conflux
 						has_building = building_corporate_forum
 					}
 				}
@@ -667,6 +672,7 @@ country_event = {
 		#魔理沙
 		if = {
 			limit = {
+				is_ai = no
 				has_megastructure = grand_archive_0
 				NOT = {
 					has_global_flag = marisa
@@ -695,6 +701,50 @@ country_event = {
 			}
 			country_event = {
 				id = touhou_paragon.41110
+			}
+		}
+		#爱丽丝
+		if = {
+			limit = {
+				is_ai = no
+				has_technology = tech_robotic_workers
+				any_owned_pop_group = {
+					is_robot_pop = yes
+					NOR = {
+						has_trait = trait_thl_doll
+						has_trait = trait_sanae_robot_worker
+					}
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					any_owned_pop_group = {
+						is_robot_pop = yes
+						NOR = {
+							has_trait = trait_thl_doll
+							has_trait = trait_sanae_robot_worker
+						}
+					}
+				}
+				planet_event = {
+					id = touhou_paragon.42001
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_technology = tech_droid_workers
+				any_owned_pop_group = {
+					is_robot_pop = yes
+					NOR = {
+						has_trait = trait_thl_doll
+						has_trait = trait_sanae_robot_worker
+					}
+				}
+				has_country_flag = alice_hidden_flag
+			}
+			country_event = {
+				id = touhou_paragon.42004
 			}
 		}
 		#早苗任务 每年一次机会瞬造中继器
@@ -1882,6 +1932,10 @@ country_event = {
 	location = capital_scope
 	trigger = {
 		has_megastructure = grand_archive_0
+	}
+
+	immediate = {
+		set_global_flag = marisa
 	}
 
 	option = {
@@ -3812,6 +3866,7 @@ planet_event = {
 	location = this
 	option = {
 		name = touhou_paragon.43110.a
+		custom_tooltip = dismiss_leader_event.tooltip
 		add_modifier = {
 			modifier = mystia_modifier_1
 		}
@@ -3941,7 +3996,11 @@ planet_event = {
 			}
 		}
 		name = touhou_paragon.43210.a
-		custom_tooltip = touhou_paragon.43210.a.tooltip
+		custom_tooltip = dismiss_leader_event.tooltip
+		remove_global_flag = tewi
+		owner = {
+			set_country_flag = dismissed_tewi
+		}
 		add_modifier = {
 			modifier = modifier_tewi_world_end
 			days = 3600
@@ -3957,7 +4016,11 @@ planet_event = {
 			}
 		}
 		name = touhou_paragon.43210.b
-		custom_tooltip = touhou_paragon.43210.a.tooltip
+		custom_tooltip = dismiss_leader_event.tooltip
+		remove_global_flag = tewi
+		owner = {
+			set_country_flag = dismissed_tewi
+		}
 		add_modifier = {
 			modifier = modifier_tewi_world_end
 			days = 1800
@@ -5775,6 +5838,197 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = thl_flag_suwako_is_officer
 			remove_country_flag = thl_flag_suwako_is_commander
+		}
+	}
+}
+
+planet_event = {
+	id = touhou_paragon.42001
+	title = touhou_paragon.42001.name
+	desc = touhou_paragon.42001.desc
+	picture = GFX_evt_alice_dolls
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+
+	immediate = {
+		set_global_flag = alice
+		save_event_target_as = alice_event_planet
+	}
+
+	option = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_materialist
+
+				}
+			}
+		}
+		name = touhou_paragon.42001.a
+		add_modifier = { modifier = modifier_alice_1 }
+		owner = {
+			country_event = {
+				id = touhou_paragon.42002
+				days = 30
+				random = 150
+			}
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+
+				}
+			}
+		}
+		name = touhou_paragon.42001.b
+		add_modifier = { modifier = modifier_alice_1 }
+		owner = {
+			country_event = {
+				id = touhou_paragon.42002
+				days = 30
+				random = 150
+			}
+			add_resource = {
+				engineering_research = 700
+			}
+		}
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+
+				}
+			}
+		}
+		name = touhou_paragon.42001.c
+		add_modifier = { modifier = modifier_alice_1 }
+		owner = {
+			country_event = {
+				id = touhou_paragon.42002
+				days = 30
+				random = 150
+			}
+			add_resource = {
+				unity = 700
+			}
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.42002
+	title = touhou_paragon.42002.name
+	desc = touhou_paragon.42002.desc
+	picture = GFX_evt_alice_dolls
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+
+	option = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+
+			}
+		}
+		name = touhou_paragon.42002.a
+		country_event = {
+			id = touhou_paragon.42003
+		}
+	}
+	option = {
+		trigger = {
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+
+			}
+		}
+		name = touhou_paragon.42002.a.mil
+		country_event = {
+			id = touhou_paragon.42003
+		}
+	}
+	option = {
+		trigger = {
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+
+			}
+		}
+		name = touhou_paragon.42002.a.mat
+		country_event = {
+			id = touhou_paragon.42003
+		}
+	}
+	option = {
+		name = touhou_paragon.42002.b
+		event_target:alice_event_planet = {
+			remove_modifier = modifier_alice_1
+			add_modifier = { modifier = modifier_alice_2 }
+		}
+		set_country_flag = alice_hidden_flag
+	}
+}
+
+country_event = {
+	id = touhou_paragon.42003
+	title = touhou_paragon.42003.name
+	desc = touhou_paragon.42003.desc
+	picture = GFX_evt_alice_dolls
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+
+	option = {
+		name = touhou_paragon.42003.a
+		event_target:alice_event_planet = {
+			remove_modifier = modifier_alice_1
+		}
+		country_event = {
+			id = touhou_paragon.42000
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.42004
+	title = touhou_paragon.42004.name
+	desc = touhou_paragon.42004.desc
+	picture = GFX_evt_alice_dolls
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	location = capital_scope
+
+	option = {
+		name = touhou_paragon.42004.a
+		random_owned_planet = {
+			limit = {
+				has_modifier = modifier_alice_2
+			}
+			remove_modifier = modifier_alice_2
+		}
+		country_event = {
+			id = touhou_paragon.42000
 		}
 	}
 }
