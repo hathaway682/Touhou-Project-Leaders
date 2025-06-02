@@ -707,7 +707,7 @@ country_event = {
 		if = {
 			limit = {
 				is_ai = no
-				has_technology = tech_robotic_workers
+				has_technology = tech_droid_workers
 				any_owned_pop_group = {
 					is_robot_pop = yes
 					NOR = {
@@ -733,7 +733,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_technology = tech_droid_workers
+				has_technology = tech_synthetic_workers
 				any_owned_pop_group = {
 					is_robot_pop = yes
 					NOR = {
