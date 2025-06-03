@@ -9386,6 +9386,7 @@ country_event = {
     }
     picture = GFX_evt_tenshi_and_yuuka
     show_sound = event_planetary_riot
+    location = event_target:rich_mineral_garden_planet
     trigger = {
         any_owned_leader = {
             has_trait =  thl_leader_trait_earthquake
@@ -9393,17 +9394,29 @@ country_event = {
         any_owned_leader = {
             has_trait =   thl_leader_trait_flower
         }
-        # any_owned_planet = {
-        #     has_district = district_garden
-        # }
+        any_owned_planet = {
+            is_artificial = no
+            has_zone = {
+                zone = zone_garden
+            }
+        }
     }
+
+    immediate = {
+        random_owned_planet = {
+            limit = {
+                is_artificial = no
+                has_zone = {
+                    zone = zone_garden
+                }
+            }
+            save_event_target_as = rich_mineral_garden_planet
+        }
+    }
+
     option = {
         name = touhou_paragon_effect.40101.a
-        random_owned_planet = {
-            # limit = {
-            #     has_district = district_garden
-            # }
-            # remove_district = district_garden
+        event_target:rich_mineral_garden_planet = {
             if = {
                 limit = {
                     has_planet_flag = unstable

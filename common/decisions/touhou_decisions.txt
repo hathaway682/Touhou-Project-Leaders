@@ -17,6 +17,7 @@ decision_remove_unstable_tectonics = {
 	}
 
 	potential = {
+		is_artificial = no
 		has_modifier = unstable_tectonics
 		owner = {
 			any_owned_leader = {
@@ -110,6 +111,7 @@ decision_add_unstable_tectonics = {
 	}
 
 	potential = {
+		is_artificial = no
 		NOT = { has_modifier = unstable_tectonics }
 		owner = {
 			any_owned_leader = {
