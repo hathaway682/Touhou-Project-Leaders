@@ -2493,6 +2493,7 @@ miko_drone = {
         default = {
             condition_string = DRONE_JOB_TRIGGER
             building_icon = building_shrine
+            icon = miko
         }
         swap_type = {
             trigger = {
