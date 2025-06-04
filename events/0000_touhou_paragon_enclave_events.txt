@@ -1712,7 +1712,7 @@ country_event = {
             random_list = {
                 25 = {
                     random_owned_leader = {
-                        add_trait = leader_trait_psionic
+                        add_trait = { trait = leader_trait_psionic }
                     }
                 }
                 25 = {
@@ -1983,7 +1983,7 @@ country_event = {
                 limit = {
                     not = { has_trait = leader_trait_psionic }
                 }
-                add_trait = leader_trait_psionic
+                add_trait = { trait = leader_trait_psionic }
             }
             custom_tooltip = akyuu1
         }
@@ -2413,7 +2413,7 @@ country_event = {
                     has_trait = thl_leader_trait_short_life
                 }
             }
-            add_trait = leader_trait_intemporal
+            add_trait = { trait = leader_trait_intemporal }
         }
         add_modifier = {
             modifier = modifier_saisen_box_timer

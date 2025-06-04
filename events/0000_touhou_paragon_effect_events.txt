@@ -114,7 +114,9 @@ leader_event = {
             }
             else = {
                 # Add a Negative trait and reduce Pending negative traits counter here, so it matches negative traits actually added.
-                add_trait = "random_negative"
+                add_trait = {
+                    trait = random_negative
+                }
                 subtract_variable = { which = leader_pending_negative_traits_unmodified value = 1 }
             }
         }
@@ -3819,7 +3821,7 @@ country_event = {
                 target = From
             }
             last_created_leader = {
-                add_trait = thl_thl_leader_trait_death_dealer
+                add_trait = { trait = thl_thl_leader_trait_death_dealer }
             }
         }
     }
@@ -3909,17 +3911,17 @@ country_event = {
                     has_trait = thl_leader_trait_injured_2
                 }
                 remove_trait = thl_leader_trait_injured_2
-                add_trait = thl_leader_trait_injured_3
+                add_trait = { trait = thl_leader_trait_injured_3 }
             }
             else_if = {
                 limit = {
                     has_trait = thl_leader_trait_injured
                 }
                 remove_trait = thl_leader_trait_injured
-                add_trait = thl_leader_trait_injured_2
+                add_trait = { trait = thl_leader_trait_injured_2 }
             }
             else = {
-                add_trait = thl_leader_trait_injured
+                add_trait = { trait = thl_leader_trait_injured }
             }
         }
         last_created_leader = {
@@ -3965,14 +3967,14 @@ country_event = {
                     has_trait = thl_leader_trait_injured_3
                 }
                 remove_trait = thl_leader_trait_injured_3
-                add_trait = thl_leader_trait_injured_2
+                add_trait = { trait = thl_leader_trait_injured_2 }
             }
             else_if = {
                 limit = {
                     has_trait = thl_leader_trait_injured_2
                 }
                 remove_trait = thl_leader_trait_injured_2
-                add_trait = thl_leader_trait_injured
+                add_trait = { trait = thl_leader_trait_injured }
             }
             else = {
                 remove_trait = thl_leader_trait_injured
@@ -4211,17 +4213,17 @@ leader_event = {
         event_target:destiny_target1 = {
             switch = {
                 trigger = has_leader_flag
-                leader_trait_educator = { add_trait = leader_trait_educator }
-                leader_trait_master_bureaucrat = { add_trait = leader_trait_master_bureaucrat }
-                leader_trait_shroud_preacher = { add_trait = leader_trait_shroud_preacher }
-                leader_trait_supreme_organizer = { add_trait = leader_trait_supreme_organizer }
-                leader_trait_arbiter = { add_trait = leader_trait_arbiter }
-                leader_trait_automation_champion = { add_trait = leader_trait_automation_champion }
-                leader_trait_expert_survivalist = { add_trait = leader_trait_expert_survivalist }
-                leader_trait_utopian_idealist = { add_trait = leader_trait_utopian_idealist }
-                leader_trait_mediator = { add_trait = leader_trait_mediator }
-                leader_trait_efficient = { add_trait = leader_trait_efficient }
-                leader_trait_galvanizer = { add_trait = leader_trait_galvanizer }
+                leader_trait_educator = { add_trait = { trait = leader_trait_educator } }
+                leader_trait_master_bureaucrat = { add_trait = { trait = leader_trait_master_bureaucrat } }
+                leader_trait_shroud_preacher = { add_trait = { trait = leader_trait_shroud_preacher } }
+                leader_trait_supreme_organizer = { add_trait = { trait = leader_trait_supreme_organizer } }
+                leader_trait_arbiter = { add_trait = { trait = leader_trait_arbiter } }
+                leader_trait_automation_champion = { add_trait = { trait = leader_trait_automation_champion } }
+                leader_trait_expert_survivalist = { add_trait = { trait = leader_trait_expert_survivalist } }
+                leader_trait_utopian_idealist = { add_trait = { trait = leader_trait_utopian_idealist } }
+                leader_trait_mediator = { add_trait = { trait = leader_trait_mediator } }
+                leader_trait_efficient = { add_trait = { trait = leader_trait_efficient } }
+                leader_trait_galvanizer = { add_trait = { trait = leader_trait_galvanizer } }
             }
         }
     }
@@ -4231,18 +4233,18 @@ leader_event = {
         event_target:destiny_target2 = {
             switch = {
                 trigger = has_leader_flag
-                leader_trait_educator = { add_trait = leader_trait_educator }
-                leader_trait_master_bureaucrat = { add_trait = leader_trait_master_bureaucrat }
-                leader_trait_deep_space_explorer = { add_trait = leader_trait_deep_space_explorer }
-                leader_trait_xeno_cataloger = { add_trait = leader_trait_xeno_cataloger }
-                leader_trait_frontier_adventurer = { add_trait = leader_trait_frontier_adventurer }
-                leader_trait_brilliant_shipwright = { add_trait = leader_trait_brilliant_shipwright }
-                leader_trait_truth_seeker = { add_trait = leader_trait_truth_seeker }
-                leader_trait_midas_touch = { add_trait = leader_trait_midas_touch }
-                leader_trait_surveyor = { add_trait = leader_trait_surveyor }
-                leader_trait_repair_crew = { add_trait = leader_trait_repair_crew }
-                leader_trait_robotist = { add_trait = leader_trait_robotist }
-                # thl_leader_trait_knowledge_for_the_masses = { add_trait = thl_leader_trait_knowledge_for_the_masses }
+                leader_trait_educator = { add_trait = { trait = leader_trait_educator } }
+                leader_trait_master_bureaucrat = { add_trait = { trait = leader_trait_master_bureaucrat } }
+                leader_trait_deep_space_explorer = { add_trait = { trait = leader_trait_deep_space_explorer } }
+                leader_trait_xeno_cataloger = { add_trait = { trait = leader_trait_xeno_cataloger } }
+                leader_trait_frontier_adventurer = { add_trait = { trait = leader_trait_frontier_adventurer } }
+                leader_trait_brilliant_shipwright = { add_trait = { trait = leader_trait_brilliant_shipwright } }
+                leader_trait_truth_seeker = { add_trait = { trait = leader_trait_truth_seeker } }
+                leader_trait_midas_touch = { add_trait = { trait = leader_trait_midas_touch } }
+                leader_trait_surveyor = { add_trait = { trait = leader_trait_surveyor } }
+                leader_trait_repair_crew = { add_trait = { trait = leader_trait_repair_crew } }
+                leader_trait_robotist = { add_trait = { trait = leader_trait_robotist } }
+                # thl_leader_trait_knowledge_for_the_masses = { add_trait = { trait = thl_leader_trait_knowledge_for_the_masses }
             }
         }
     }
@@ -4252,30 +4254,30 @@ leader_event = {
         event_target:destiny_target3 ={
             switch = {
                 trigger = has_leader_flag
-                leader_trait_educator = { add_trait = leader_trait_educator }
-                leader_trait_master_bureaucrat = { add_trait = leader_trait_master_bureaucrat }
-                leader_trait_fanatic = { add_trait = leader_trait_fanatic }
-                leader_trait_reverse_engineer = { add_trait = leader_trait_reverse_engineer }
-                leader_trait_supreme_admiral = { add_trait = leader_trait_supreme_admiral }
-                leader_trait_armorer = { add_trait = leader_trait_armorer }
-                leader_trait_military_overseer = { add_trait = leader_trait_military_overseer }
-                leader_trait_master_gunner = { add_trait = leader_trait_master_gunner }
-                leader_trait_demolisher_destiny = { add_trait = leader_trait_demolisher_destiny }
-                leader_trait_destiny_engineer = { add_trait = leader_trait_destiny_engineer }
-                leader_trait_guerilla_tactics = { add_trait = leader_trait_guerilla_tactics }
-                leader_trait_survivalist = { add_trait = leader_trait_survivalist }
-                leader_trait_maven_of_war = { add_trait = leader_trait_maven_of_war }
-                leader_trait_peacekeeper = { add_trait = leader_trait_peacekeeper }
-                leader_trait_supreme_warrior = { add_trait = leader_trait_supreme_warrior }
-                leader_trait_fortress_cracker = { add_trait = leader_trait_fortress_cracker }
-                leader_trait_chainbreaker = { add_trait = leader_trait_chainbreaker }
-                leader_trait_honored_warmaster = { add_trait = leader_trait_honored_warmaster }
-                leader_trait_academia_recruiter = { add_trait = leader_trait_academia_recruiter }
-                leader_trait_pilferer = { add_trait = leader_trait_pilferer }
-                leader_trait_taskmaster = { add_trait = leader_trait_taskmaster }
-                leader_trait_spymaster = { add_trait = leader_trait_spymaster }
-                leader_trait_totalitarian = { add_trait = leader_trait_totalitarian }
-                leader_trait_bellicose = { add_trait = leader_trait_bellicose }
+                leader_trait_educator = { add_trait = { trait = leader_trait_educator } }
+                leader_trait_master_bureaucrat = { add_trait = { trait = leader_trait_master_bureaucrat } }
+                leader_trait_fanatic = { add_trait = { trait = leader_trait_fanatic } }
+                leader_trait_reverse_engineer = { add_trait = { trait = leader_trait_reverse_engineer } }
+                leader_trait_supreme_admiral = { add_trait = { trait = leader_trait_supreme_admiral } }
+                leader_trait_armorer = { add_trait = { trait = leader_trait_armorer } }
+                leader_trait_military_overseer = { add_trait = { trait = leader_trait_military_overseer } }
+                leader_trait_master_gunner = { add_trait = { trait = leader_trait_master_gunner } }
+                leader_trait_demolisher_destiny = { add_trait = { trait = leader_trait_demolisher_destiny } }
+                leader_trait_destiny_engineer = { add_trait = { trait = leader_trait_destiny_engineer } }
+                leader_trait_guerilla_tactics = { add_trait = { trait = leader_trait_guerilla_tactics } }
+                leader_trait_survivalist = { add_trait = { trait = leader_trait_survivalist } }
+                leader_trait_maven_of_war = { add_trait = { trait = leader_trait_maven_of_war } }
+                leader_trait_peacekeeper = { add_trait = { trait = leader_trait_peacekeeper } }
+                leader_trait_supreme_warrior = { add_trait = { trait = leader_trait_supreme_warrior } }
+                leader_trait_fortress_cracker = { add_trait = { trait = leader_trait_fortress_cracker } }
+                leader_trait_chainbreaker = { add_trait = { trait = leader_trait_chainbreaker } }
+                leader_trait_honored_warmaster = { add_trait = { trait = leader_trait_honored_warmaster } }
+                leader_trait_academia_recruiter = { add_trait = { trait = leader_trait_academia_recruiter } }
+                leader_trait_pilferer = { add_trait = { trait = leader_trait_pilferer } }
+                leader_trait_taskmaster = { add_trait = { trait = leader_trait_taskmaster } }
+                leader_trait_spymaster = { add_trait = { trait = leader_trait_spymaster } }
+                leader_trait_totalitarian = { add_trait = { trait = leader_trait_totalitarian } }
+                leader_trait_bellicose = { add_trait = { trait = leader_trait_bellicose } }
             }
         }
     }
@@ -8550,7 +8552,7 @@ country_event = {
                 limit = {
                     has_trait = thl_leader_trait_nuclear
                 }
-                add_trait = thl_leader_trait_artifitial_sol
+                add_trait = { trait = thl_leader_trait_artifitial_sol }
             }
         }
     }
@@ -9018,7 +9020,7 @@ country_event = {
                 limit = {
                     has_trait = thl_leader_trait_nuclear
                 }
-                add_trait = leader_trait_eater_chosen
+                add_trait = { trait = leader_trait_eater_chosen }
             }
         }
 
@@ -9171,7 +9173,7 @@ country_event = {
                 limit = {
                     has_trait = thl_leader_trait_destiny_manipulation
                 }
-                add_trait = thl_leader_trait_deeper_scarlet_dream
+                add_trait = { trait = thl_leader_trait_deeper_scarlet_dream }
             }
         }
     }
@@ -9205,8 +9207,8 @@ country_event = {
             }
             last_created_leader = {
                 remove_trait = thl_leader_trait_regeneration
-                add_trait = thl_leader_trait_regeneration_2
-                add_trait = thl_leader_trait_body_and_spirit
+                add_trait = { trait = thl_leader_trait_regeneration_2 }
+                add_trait = { trait = thl_leader_trait_body_and_spirit }
             }
         }
         custom_tooltip = revive_sakuya_chosen
@@ -9260,7 +9262,7 @@ country_event = {
                 limit = {
                     has_trait = thl_leader_trait_destiny_manipulation
                 }
-                add_trait = thl_leader_trait_deeper_scarlet_dream
+                add_trait = { trait = thl_leader_trait_deeper_scarlet_dream }
             }
         }
     }
@@ -9281,8 +9283,8 @@ country_event = {
             }
             last_created_leader = {
                 remove_trait = thl_leader_trait_regeneration
-                add_trait = thl_leader_trait_regeneration_2
-                add_trait = leader_trait_cyborg
+                add_trait = { trait = thl_leader_trait_regeneration_2 }
+                add_trait = { trait = leader_trait_cyborg }
             }
         }
         if = {
@@ -9296,8 +9298,8 @@ country_event = {
             }
             last_created_leader = {
                 remove_trait = thl_leader_trait_regeneration
-                add_trait = thl_leader_trait_regeneration_2
-                add_trait = leader_trait_synthetic
+                add_trait = { trait = thl_leader_trait_regeneration_2 }
+                add_trait = { trait = leader_trait_synthetic }
             }
         }
         every_owned_leader = {
@@ -9305,7 +9307,7 @@ country_event = {
                 limit = {
                     has_trait = thl_leader_trait_destiny_manipulation
                 }
-                add_trait = thl_leader_trait_nihility_scarlet_dream
+                add_trait = { trait = thl_leader_trait_nihility_scarlet_dream }
             }
         }
     }
@@ -9345,8 +9347,8 @@ country_event = {
         }
         last_created_leader = {
             remove_trait = thl_leader_trait_regeneration
-            add_trait = thl_leader_trait_regeneration_2
-            add_trait = thl_leader_trait_the_incorruptible
+            add_trait = { trait = thl_leader_trait_regeneration_2 }
+            add_trait = { trait = thl_leader_trait_the_incorruptible }
         }
     }
 }
@@ -9506,7 +9508,7 @@ leader_event = {
     option = {
         name = touhou_paragon_effect.41302.a
         root = {
-            add_trait = thl_leader_trait_heart_break
+            add_trait = { trait = thl_leader_trait_heart_break }
         }
         hidden_effect = {
             root = {
@@ -9539,7 +9541,7 @@ leader_event = {
                 limit = {
                     has_trait = thl_leader_trait_subconscious
                 }
-                add_trait = thl_leader_trait_with_satori
+                add_trait = { trait = thl_leader_trait_with_satori }
             }
         }
     }
@@ -9550,7 +9552,7 @@ leader_event = {
                 limit = {
                     has_trait = thl_leader_trait_corpse_travel
                 }
-                add_trait = thl_leader_trait_with_satori
+                add_trait = { trait = thl_leader_trait_with_satori }
             }
         }
     }
@@ -9561,7 +9563,7 @@ leader_event = {
                 limit = {
                     has_trait = thl_leader_trait_nuclear
                 }
-                add_trait = thl_leader_trait_with_satori
+                add_trait = { trait = thl_leader_trait_with_satori }
             }
         }
     }
@@ -9647,7 +9649,7 @@ country_event = {
             limit = {
                 has_trait = thl_leader_trait_ice
             }
-            add_trait = thl_leader_trait_arctic_governing
+            add_trait = { trait = thl_leader_trait_arctic_governing }
             #    save_event_target_as = target_cirno
             #}
         }
@@ -9700,7 +9702,7 @@ country_event = {
             limit = {
                 has_trait = thl_leader_trait_wind
             }
-            add_trait = leader_trait_trade_focus_2
+            add_trait = { trait = leader_trait_trade_focus_2 }
         }
     }
 }
@@ -10165,7 +10167,7 @@ country_event = {
                 has_trait = thl_leader_trait_regeneration_2
             }
             remove_trait = thl_leader_trait_regeneration_2
-            add_trait = thl_leader_trait_regeneration_3
+            add_trait = { trait = thl_leader_trait_regeneration_3 }
         }
         every_owned_leader = {
             limit = {
@@ -10173,7 +10175,7 @@ country_event = {
                 not = { has_trait = thl_leader_trait_time }
             }
             remove_trait = thl_leader_trait_regeneration
-            add_trait = thl_leader_trait_regeneration_2
+            add_trait = { trait = thl_leader_trait_regeneration_2 }
         }
     }
     after = {

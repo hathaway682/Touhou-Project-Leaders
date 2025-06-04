@@ -2473,7 +2473,7 @@ update_sanae_phase_trait = {
 				has_trait = thl_leader_trait_miracle
 			}
 			remove_trait = thl_leader_trait_sanae_phase0
-			add_trait = thl_leader_trait_sanae_phase1
+			add_trait = { trait = thl_leader_trait_sanae_phase1 }
 		}
 	}
 	else_if = {
@@ -2552,7 +2552,7 @@ update_sanae_phase_trait = {
 			limit = {
 				has_trait = thl_leader_trait_miracle
 			}
-			add_trait = thl_leader_trait_sanae_phase2
+			add_trait = { trait = thl_leader_trait_sanae_phase2 }
 		}
 	}
 	if = {
@@ -2631,7 +2631,7 @@ update_sanae_phase_trait = {
 			limit = {
 				has_trait = thl_leader_trait_miracle
 			}
-			add_trait = thl_leader_trait_sanae_phase3
+			add_trait = { trait = thl_leader_trait_sanae_phase3 }
 		}
 	}
 	if = {
@@ -2710,7 +2710,7 @@ update_sanae_phase_trait = {
 			limit = {
 				has_trait = thl_leader_trait_miracle
 			}
-			add_trait = thl_leader_trait_sanae_phase4
+			add_trait = { trait = thl_leader_trait_sanae_phase4 }
 		}
 	}
 }

@@ -134,7 +134,7 @@ country_event = {
 				limit = {
 					has_trait = thl_leader_trait_miracle
 				}
-				add_trait = leader_trait_touhou_fleet_logistician
+				add_trait = { trait = leader_trait_touhou_fleet_logistician }
 			}
 		}
 		hidden_effect = {
@@ -287,7 +287,7 @@ country_event = {
 			limit = {
 				has_trait = thl_leader_trait_miracle
 			}
-			add_trait = trait_ruler_touhou_architectural_sense
+			add_trait = { trait = trait_ruler_touhou_architectural_sense }
 		}
 		add_resource = {
 			rare_crystals = 200
@@ -641,7 +641,7 @@ country_event = {
 			}
 			modify_species = {
 				species = this
-				add_trait = trait_latent_psionic
+				add_trait = { trait = trait_latent_psionic }
 				effect = {
 					save_event_target_as = psionic_main_species
 				}
@@ -1091,7 +1091,7 @@ country_event = {
 			limit = {
 				has_trait = thl_leader_trait_fly
 			}
-			add_trait = thl_leader_trait_fake_technocracy
+			add_trait = { trait = thl_leader_trait_fake_technocracy }
 		}
 		custom_tooltip = touhou_paragon_mission.40316.b.tooltip
 	}
@@ -2026,7 +2026,7 @@ country_event = {
 				remove_trait = thl_leader_trait_frog_bless_3
 			}
 			remove_trait = thl_leader_trait_sanae_phase4
-			add_trait = thl_leader_trait_sanae_complete
+			add_trait = { trait = thl_leader_trait_sanae_complete }
 			if = {
 				limit = {
 					has_trait = thl_leader_trait_regeneration
@@ -2045,7 +2045,7 @@ country_event = {
 						has_trait = thl_leader_trait_regeneration_3
 					}
 				}
-				add_trait = thl_leader_trait_regeneration_3
+				add_trait = { trait = thl_leader_trait_regeneration_3 }
 			}
 		}
 	}

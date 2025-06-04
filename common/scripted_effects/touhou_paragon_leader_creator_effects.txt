@@ -138,16 +138,16 @@ create_tenshi_leader = {
 }
 
 add_tenshi_traits = {
-	add_trait = subclass_commander_general
-	add_trait = leader_trait_fortress_cracker
-	add_trait = thl_leader_trait_crimson_sword
-	add_trait = leader_trait_unyielding
-	add_trait = leader_trait_hardy_2
-	add_trait = leader_trait_commanding_presence
-	add_trait = leader_trait_lethargic
-	add_trait = leader_trait_volatile
-	add_trait = thl_leader_trait_regeneration_2
-	add_trait = thl_leader_trait_earthquake
+	add_trait = { trait = subclass_commander_general show_message = no }
+	add_trait = { trait = leader_trait_fortress_cracker show_message = no }
+	add_trait = { trait = thl_leader_trait_crimson_sword show_message = no }
+	add_trait = { trait = leader_trait_unyielding show_message = no }
+	add_trait = { trait = leader_trait_hardy_2 show_message = no }
+	add_trait = { trait = leader_trait_commanding_presence show_message = no }
+	add_trait = { trait = leader_trait_lethargic show_message = no }
+	add_trait = { trait = leader_trait_volatile show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration_2 show_message = no }
+	add_trait = { trait = thl_leader_trait_earthquake show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = tenshi_leader
@@ -171,16 +171,16 @@ create_suika_leader = {
 }
 
 add_suika_traits = {
-	add_trait = subclass_commander_lord
-	add_trait = subclass_commander_general
-	add_trait = thl_leader_trait_oni_power
-	add_trait = leader_trait_trickster
-	add_trait = leader_trait_touhou_cultural_focus_2
-	add_trait = leader_trait_dreaded
-	add_trait = leader_trait_venerated
-	add_trait = leader_trait_profligate
-	add_trait = thl_leader_trait_regeneration_2
-	add_trait = thl_leader_trait_density
+	add_trait = { trait = subclass_commander_lord show_message = no }
+	add_trait = { trait = subclass_commander_general show_message = no }
+	add_trait = { trait = thl_leader_trait_oni_power show_message = no }
+	add_trait = { trait = leader_trait_trickster show_message = no }
+	add_trait = { trait = leader_trait_touhou_cultural_focus_2 show_message = no }
+	add_trait = { trait = leader_trait_dreaded show_message = no }
+	add_trait = { trait = leader_trait_venerated show_message = no }
+	add_trait = { trait = leader_trait_profligate show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration_2 show_message = no }
+	add_trait = { trait = thl_leader_trait_density show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = suika_leader
@@ -220,20 +220,18 @@ create_sanae_leader = {
 }
 
 add_sanae_traits = {
-	add_trait = subclass_commander_miko
-	add_trait = subclass_commander_admiral
-	add_trait = thl_leader_trait_common_sense_killer
-	add_trait = thl_leader_trait_theurgist
-	#add_trait = thl_leader_trait_snake_bless
-	#add_trait = thl_leader_trait_frog_bless 这两个特质现在是6级后的可选特质
-	add_trait = thl_leader_trait_robotist_sanae
-	add_trait = leader_trait_gullible
-	add_trait = leader_trait_unyielding
-	add_trait = leader_trait_crusader
-	add_trait = leader_trait_reckless_2
-	add_trait = thl_leader_trait_regeneration
-	add_trait = thl_leader_trait_miracle
-	add_trait = thl_leader_trait_sanae_phase0
+	add_trait = { trait = subclass_commander_miko show_message = no }
+	add_trait = { trait = subclass_commander_admiral show_message = no }
+	add_trait = { trait = thl_leader_trait_common_sense_killer show_message = no }
+	add_trait = { trait = thl_leader_trait_theurgist show_message = no }
+	add_trait = { trait = thl_leader_trait_robotist_sanae show_message = no }
+	add_trait = { trait = leader_trait_gullible show_message = no }
+	add_trait = { trait = leader_trait_unyielding show_message = no }
+	add_trait = { trait = leader_trait_crusader show_message = no }
+	add_trait = { trait = leader_trait_reckless_2 show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = thl_leader_trait_miracle show_message = no }
+	add_trait = { trait = thl_leader_trait_sanae_phase0 show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = sanae_leader
@@ -257,13 +255,13 @@ create_cirno_leader = {
 }
 
 add_cirno_traits = {
-	add_trait = subclass_commander_admiral
-	add_trait = leader_trait_guerilla_tactics
-	add_trait = leader_trait_wrecker_2
-	add_trait = leader_trait_reckless
-	add_trait = thl_leader_trait_bird_brain
-	add_trait = thl_leader_trait_regeneration_3
-	add_trait = thl_leader_trait_ice
+	add_trait = { trait = subclass_commander_admiral show_message = no }
+	add_trait = { trait = leader_trait_guerilla_tactics show_message = no }
+	add_trait = { trait = leader_trait_wrecker_2 show_message = no }
+	add_trait = { trait = leader_trait_reckless show_message = no }
+	add_trait = { trait = thl_leader_trait_bird_brain show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration_3 show_message = no }
+	add_trait = { trait = thl_leader_trait_ice show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = cirno_leader
@@ -287,16 +285,16 @@ create_meiling_leader = {
 }
 
 add_meiling_traits = {
-	add_trait = subclass_commander_general
-	add_trait = leader_trait_survivalist
-	add_trait = leader_trait_home_guard
-	add_trait = leader_trait_warden
-	add_trait = leader_trait_reinforcer
-	add_trait = leader_trait_guardian
-	add_trait = leader_trait_lethargic_2
-	add_trait = leader_trait_disorganized
-	add_trait = thl_leader_trait_regeneration
-	add_trait = thl_leader_trait_kongfu
+	add_trait = { trait = subclass_commander_general show_message = no }
+	add_trait = { trait = leader_trait_survivalist show_message = no }
+	add_trait = { trait = leader_trait_home_guard show_message = no }
+	add_trait = { trait = leader_trait_warden show_message = no }
+	add_trait = { trait = leader_trait_reinforcer show_message = no }
+	add_trait = { trait = leader_trait_guardian show_message = no }
+	add_trait = { trait = leader_trait_lethargic_2 show_message = no }
+	add_trait = { trait = leader_trait_disorganized show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = thl_leader_trait_kongfu show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = meiling_leader
@@ -336,18 +334,18 @@ create_reimu_leader = {
 }
 
 add_reimu_traits = {
-	add_trait = subclass_commander_miko
-	add_trait = subclass_commander_admiral
-	add_trait = thl_leader_trait_invincible
-	add_trait = thl_leader_trait_like_cloud_and_water
-	add_trait = thl_leader_trait_theurgist
-	add_trait = thl_leader_trait_tracker
-	add_trait = thl_leader_exorcism_roud
-	add_trait = leader_trait_rocketry_specialization
-	add_trait = leader_trait_gifted_2
-	add_trait = thl_leader_trait_excessive_reimu
-	add_trait = thl_leader_trait_regeneration
-	add_trait = thl_leader_trait_fly
+	add_trait = { trait = subclass_commander_miko show_message = no }
+	add_trait = { trait = subclass_commander_admiral show_message = no }
+	add_trait = { trait = thl_leader_trait_invincible show_message = no }
+	add_trait = { trait = thl_leader_trait_like_cloud_and_water show_message = no }
+	add_trait = { trait = thl_leader_trait_theurgist show_message = no }
+	add_trait = { trait = thl_leader_trait_tracker show_message = no }
+	add_trait = { trait = thl_leader_exorcism_roud show_message = no }
+	add_trait = { trait = leader_trait_rocketry_specialization show_message = no }
+	add_trait = { trait = leader_trait_gifted_2 show_message = no }
+	add_trait = { trait = thl_leader_trait_excessive_reimu show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = thl_leader_trait_fly show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = reimu_leader
@@ -387,19 +385,19 @@ create_marisa_leader = {
 }
 
 add_marisa_traits = {
-	add_trait = subclass_commander_admiral
-	add_trait = thl_leader_trait_like_storm_and_wave
-	add_trait = thl_leader_trait_master_sacker
-	add_trait = thl_leader_trait_personal_relationship_genius
-	add_trait = leader_trait_reverse_engineer
-	add_trait = leader_trait_industrial_espionage_3
-	add_trait = leader_trait_artillery_specialization
-	add_trait = thl_leader_trait_iron_ass
-	add_trait = leader_trait_slipshod
-	add_trait = leader_trait_embezzler_2
-	add_trait = thl_leader_trait_regeneration
-	add_trait = thl_leader_trait_magician
-	add_trait = thl_leader_trait_magic
+	add_trait = { trait = subclass_commander_admiral show_message = no }
+	add_trait = { trait = thl_leader_trait_like_storm_and_wave show_message = no }
+	add_trait = { trait = thl_leader_trait_master_sacker show_message = no }
+	add_trait = { trait = thl_leader_trait_personal_relationship_genius show_message = no }
+	add_trait = { trait = leader_trait_reverse_engineer show_message = no }
+	add_trait = { trait = leader_trait_industrial_espionage_3 show_message = no }
+	add_trait = { trait = leader_trait_artillery_specialization show_message = no }
+	add_trait = { trait = thl_leader_trait_iron_ass show_message = no }
+	add_trait = { trait = leader_trait_slipshod show_message = no }
+	add_trait = { trait = leader_trait_embezzler_2 show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = thl_leader_trait_magician show_message = no }
+	add_trait = { trait = thl_leader_trait_magic show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = marisa_leader
@@ -439,20 +437,20 @@ create_reisen_leader = {
 }
 
 add_reisen_traits = {
-	add_trait = subclass_commander_servant
-	add_trait = subclass_commander_admiral
-	add_trait = thl_leader_trait_penglai_medicine
-	add_trait = thl_leader_trait_prosperity_and_decline
-	add_trait = thl_leader_trait_moon_war_veteran
-	add_trait = leader_trait_academia_recruiter
-	add_trait = leader_trait_restrained
-	add_trait = leader_trait_cautious
-	add_trait = leader_trait_archaeo_specialization
-	add_trait = leader_trait_passive
-	add_trait = leader_trait_reclusive
-	add_trait = leader_trait_melancholic
-	add_trait = thl_leader_trait_regeneration
-	add_trait = thl_leader_trait_wave_length
+	add_trait = { trait = subclass_commander_servant show_message = no }
+	add_trait = { trait = subclass_commander_admiral show_message = no }
+	add_trait = { trait = thl_leader_trait_penglai_medicine show_message = no }
+	add_trait = { trait = thl_leader_trait_prosperity_and_decline show_message = no }
+	add_trait = { trait = thl_leader_trait_moon_war_veteran show_message = no }
+	add_trait = { trait = leader_trait_academia_recruiter show_message = no }
+	add_trait = { trait = leader_trait_restrained show_message = no }
+	add_trait = { trait = leader_trait_cautious show_message = no }
+	add_trait = { trait = leader_trait_archaeo_specialization show_message = no }
+	add_trait = { trait = leader_trait_passive show_message = no }
+	add_trait = { trait = leader_trait_reclusive show_message = no }
+	add_trait = { trait = leader_trait_melancholic show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = thl_leader_trait_wave_length show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = reisen_leader
@@ -492,17 +490,17 @@ create_youmu_leader = {
 }
 
 add_youmu_traits = {
-	add_trait = subclass_commander_servant
-	add_trait = subclass_commander_admiral
-	add_trait = leader_trait_wholehearted
-	add_trait = thl_leader_trait_gardener
-	add_trait = leader_trait_bellicose
-	add_trait = leader_trait_heavy_hitter_2
-	add_trait = leader_trait_gale_speed
-	add_trait = leader_trait_passive
-	add_trait = leader_trait_gullible
-	add_trait = thl_leader_trait_regeneration
-	add_trait = thl_leader_trait_kendo
+	add_trait = { trait = subclass_commander_servant show_message = no }
+	add_trait = { trait = subclass_commander_admiral show_message = no }
+	add_trait = { trait = leader_trait_wholehearted show_message = no }
+	add_trait = { trait = thl_leader_trait_gardener show_message = no }
+	add_trait = { trait = leader_trait_bellicose show_message = no }
+	add_trait = { trait = leader_trait_heavy_hitter_2 show_message = no }
+	add_trait = { trait = leader_trait_gale_speed show_message = no }
+	add_trait = { trait = leader_trait_passive show_message = no }
+	add_trait = { trait = leader_trait_gullible show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = thl_leader_trait_kendo show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = youmu_leader
@@ -542,15 +540,15 @@ create_sakuya_leader = {
 }
 
 add_sakuya_traits = {
-	add_trait = subclass_commander_servant
-	add_trait = subclass_commander_admiral
-	add_trait = thl_leader_trait_year_round
-	add_trait = leader_trait_arbiter
-	add_trait = leader_trait_touhou_pop_focused_3
-	add_trait = leader_trait_iron_fist
-	add_trait = leader_trait_sadistic
-	add_trait = thl_leader_trait_regeneration
-	add_trait = thl_leader_trait_time
+	add_trait = { trait = subclass_commander_servant show_message = no }
+	add_trait = { trait = subclass_commander_admiral show_message = no }
+	add_trait = { trait = thl_leader_trait_year_round show_message = no }
+	add_trait = { trait = leader_trait_arbiter show_message = no }
+	add_trait = { trait = leader_trait_touhou_pop_focused_3 show_message = no }
+	add_trait = { trait = leader_trait_iron_fist show_message = no }
+	add_trait = { trait = leader_trait_sadistic show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = thl_leader_trait_time show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = sakuya_leader
@@ -590,16 +588,16 @@ create_merry_leader = {
 }
 
 add_merry_traits = {
-	add_trait = subclass_scientist_councilor
-	add_trait = thl_leader_trait_hifuu
-	add_trait = thl_leader_trait_century_of_science
-	add_trait = leader_trait_truth_seeker
-	add_trait = thl_leader_trait_relativistic_psychiatry
-	add_trait = leader_trait_academic_astral_rift_expert_3
-	add_trait = leader_trait_roamer
-	add_trait = leader_trait_gifted_2
-	add_trait = leader_trait_opinionated_2
-	add_trait = thl_leader_trait_border_merry
+	add_trait = { trait = subclass_scientist_councilor show_message = no }
+	add_trait = { trait = thl_leader_trait_hifuu show_message = no }
+	add_trait = { trait = thl_leader_trait_century_of_science show_message = no }
+	add_trait = { trait = leader_trait_truth_seeker show_message = no }
+	add_trait = { trait = thl_leader_trait_relativistic_psychiatry show_message = no }
+	add_trait = { trait = leader_trait_academic_astral_rift_expert_3 show_message = no }
+	add_trait = { trait = leader_trait_roamer show_message = no }
+	add_trait = { trait = leader_trait_gifted_2 show_message = no }
+	add_trait = { trait = leader_trait_opinionated_2 show_message = no }
+	add_trait = { trait = thl_leader_trait_border_merry show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = merry_leader
@@ -639,16 +637,16 @@ create_renko_leader = {
 }
 
 add_renko_traits = {
-	add_trait = subclass_scientist_explorer
-	add_trait = thl_leader_trait_hifuu
-	add_trait = thl_leader_trait_century_of_science
-	add_trait = thl_leader_trait_super_unified_physics
-	add_trait = leader_trait_midas_touch
-	add_trait = leader_trait_academic_astral_rift_expert_2
-	add_trait = leader_trait_science_communicator
-	add_trait = leader_trait_archaeologist
-	add_trait = leader_trait_opinionated
-	add_trait = thl_leader_trait_star_located
+	add_trait = { trait = subclass_scientist_explorer show_message = no }
+	add_trait = { trait = thl_leader_trait_hifuu show_message = no }
+	add_trait = { trait = thl_leader_trait_century_of_science show_message = no }
+	add_trait = { trait = thl_leader_trait_super_unified_physics show_message = no }
+	add_trait = { trait = leader_trait_midas_touch show_message = no }
+	add_trait = { trait = leader_trait_academic_astral_rift_expert_2 show_message = no }
+	add_trait = { trait = leader_trait_science_communicator show_message = no }
+	add_trait = { trait = leader_trait_archaeologist show_message = no }
+	add_trait = { trait = leader_trait_opinionated show_message = no }
+	add_trait = { trait = thl_leader_trait_star_located show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = renko_leader
@@ -672,16 +670,16 @@ create_satori_leader = {
 }
 
 add_satori_traits = {
-	add_trait = subclass_official_economy_councilor
-	add_trait = thl_leader_trait_subterran_manager
-	add_trait = thl_leader_trait_satori_pets
-	add_trait = thl_leader_trait_detective
-	add_trait = leader_trait_supreme_organizer
-	add_trait = leader_trait_emotional_support_pet
-	add_trait = leader_trait_procrastinator
-	add_trait = leader_trait_irenic
-	add_trait = thl_leader_trait_regeneration
-	add_trait = thl_leader_trait_mind_reader
+	add_trait = { trait = subclass_official_economy_councilor show_message = no }
+	add_trait = { trait = thl_leader_trait_subterran_manager show_message = no }
+	add_trait = { trait = thl_leader_trait_satori_pets show_message = no }
+	add_trait = { trait = thl_leader_trait_detective show_message = no }
+	add_trait = { trait = leader_trait_supreme_organizer show_message = no }
+	add_trait = { trait = leader_trait_emotional_support_pet show_message = no }
+	add_trait = { trait = leader_trait_procrastinator show_message = no }
+	add_trait = { trait = leader_trait_irenic show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = thl_leader_trait_mind_reader show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = satori_leader
@@ -705,16 +703,16 @@ create_koishi_leader = {
 }
 
 add_koishi_traits = {
-	add_trait = subclass_commander_admiral
-	add_trait = leader_trait_fanatic
-	add_trait = leader_trait_annihilator_2
-	add_trait = leader_trait_wrecker_2
-	add_trait = leader_trait_skirmisher
-	add_trait = leader_trait_volatile
-	add_trait = leader_trait_passive
-	add_trait = leader_trait_emotional_support_pet
-	add_trait = thl_leader_trait_regeneration
-	add_trait = thl_leader_trait_subconscious
+	add_trait = { trait = subclass_commander_admiral show_message = no }
+	add_trait = { trait = leader_trait_fanatic show_message = no }
+	add_trait = { trait = leader_trait_annihilator_2 show_message = no }
+	add_trait = { trait = leader_trait_wrecker_2 show_message = no }
+	add_trait = { trait = leader_trait_skirmisher show_message = no }
+	add_trait = { trait = leader_trait_volatile show_message = no }
+	add_trait = { trait = leader_trait_passive show_message = no }
+	add_trait = { trait = leader_trait_emotional_support_pet show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = thl_leader_trait_subconscious show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = koishi_leader
@@ -738,17 +736,17 @@ create_aya_leader = {
 }
 
 add_aya_traits = {
-	add_trait = subclass_official_diplomacy_councilor
-	add_trait = leader_trait_master_diplomat
-	add_trait = thl_leader_trait_information_war
-	add_trait = leader_trait_ambassador_bully
-	add_trait = leader_trait_ambassador_ear_to_the_ground
-	add_trait = leader_trait_ambassador_favor_maker
-	add_trait = leader_trait_ambassador_whisper_networks
-	add_trait = leader_trait_lavish_lifestyle
-	add_trait = leader_trait_gullible_2
-	add_trait = thl_leader_trait_regeneration
-	add_trait = thl_leader_trait_wind
+	add_trait = { trait = subclass_official_diplomacy_councilor show_message = no }
+	add_trait = { trait = leader_trait_master_diplomat show_message = no }
+	add_trait = { trait = thl_leader_trait_information_war show_message = no }
+	add_trait = { trait = leader_trait_ambassador_bully show_message = no }
+	add_trait = { trait = leader_trait_ambassador_ear_to_the_ground show_message = no }
+	add_trait = { trait = leader_trait_ambassador_favor_maker show_message = no }
+	add_trait = { trait = leader_trait_ambassador_whisper_networks show_message = no }
+	add_trait = { trait = leader_trait_lavish_lifestyle show_message = no }
+	add_trait = { trait = leader_trait_gullible_2 show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = thl_leader_trait_wind show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = aya_leader
@@ -772,15 +770,15 @@ create_shikieiki_leader = {
 }
 
 add_shikieiki_traits = {
-	add_trait = subclass_official_economy_councilor
-	add_trait = thl_leader_trait_mirror
-	add_trait = thl_leader_trait_sermon
-	add_trait = thl_thl_leader_trait_death_deal
-	add_trait = leader_trait_master_bureaucrat
-	add_trait = leader_trait_righteous_2
-	add_trait = leader_trait_stubborn
-	add_trait = thl_leader_trait_regeneration
-	add_trait = thl_leader_trait_trial
+	add_trait = { trait = subclass_official_economy_councilor show_message = no }
+	add_trait = { trait = thl_leader_trait_mirror show_message = no }
+	add_trait = { trait = thl_leader_trait_sermon show_message = no }
+	add_trait = { trait = thl_thl_leader_trait_death_deal show_message = no }
+	add_trait = { trait = leader_trait_master_bureaucrat show_message = no }
+	add_trait = { trait = leader_trait_righteous_2 show_message = no }
+	add_trait = { trait = leader_trait_stubborn show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = thl_leader_trait_trial show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = shikieiki_leader
@@ -804,15 +802,15 @@ create_onoduka_leader = {
 }
 
 add_onoduka_traits = {
-	add_trait = subclass_commander_admiral
-	add_trait = thl_leader_trait_price_of_life
-	add_trait = thl_leader_trait_cost_for_work
-	add_trait = leader_trait_destiny_engineer
-	add_trait = trait_ruler_deep_connections
-	add_trait = leader_trait_corsair_2
-	add_trait = thl_leader_trait_distance
-	add_trait = thl_leader_trait_regeneration
-	add_trait = leader_trait_lethargic_2
+	add_trait = { trait = subclass_commander_admiral show_message = no }
+	add_trait = { trait = thl_leader_trait_price_of_life show_message = no }
+	add_trait = { trait = thl_leader_trait_cost_for_work show_message = no }
+	add_trait = { trait = leader_trait_destiny_engineer show_message = no }
+	add_trait = { trait = trait_ruler_deep_connections show_message = no }
+	add_trait = { trait = leader_trait_corsair_2 show_message = no }
+	add_trait = { trait = thl_leader_trait_distance show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = leader_trait_lethargic_2 show_message = no }
 	set_leader_flag = touhou_leader
 	set_leader_flag = legendary_leader
 	set_leader_flag = onoduka_leader
@@ -836,16 +834,16 @@ create_patchouli_leader = {
 }
 
 add_patchouli_traits = {
-	add_trait = subclass_scientist_councilor
-	add_trait = leader_trait_great_researcher
-	add_trait = leader_trait_science_communicator_3
-	add_trait = thl_leader_trait_elements
-	add_trait = thl_leader_trait_knowledge
-	add_trait = thl_leader_trait_summon_devils
-	add_trait = thl_leader_trait_regeneration
-	add_trait = leader_trait_neurotic_2
-	add_trait = thl_leader_trait_great_magician
-	add_trait = thl_leader_trait_sick
+	add_trait = { trait = subclass_scientist_councilor show_message = no }
+	add_trait = { trait = leader_trait_great_researcher show_message = no }
+	add_trait = { trait = leader_trait_science_communicator_3 show_message = no }
+	add_trait = { trait = thl_leader_trait_elements show_message = no }
+	add_trait = { trait = thl_leader_trait_knowledge show_message = no }
+	add_trait = { trait = thl_leader_trait_summon_devils show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = leader_trait_neurotic_2 show_message = no }
+	add_trait = { trait = thl_leader_trait_great_magician show_message = no }
+	add_trait = { trait = thl_leader_trait_sick show_message = no }
 	set_age = 100
 }
 
@@ -866,17 +864,17 @@ create_remilia_leader = {
 }
 
 add_remilia_traits = {
-	add_trait = subclass_commander_lord
-	add_trait = subclass_commander_admiral
-	add_trait = thl_leader_trait_blood_magic
-	add_trait = thl_leader_trait_bloody_charm
-	add_trait = thl_leader_trait_gungnir
-	add_trait = leader_trait_supreme_admiral
-	add_trait = leader_trait_carrier_specialization
-	add_trait = leader_trait_legendary_gunboat_diplomacy
-	add_trait = leader_trait_volatile
-	add_trait = thl_leader_trait_regeneration_2
-	add_trait = thl_leader_trait_destiny_manipulation
+	add_trait = { trait = subclass_commander_lord show_message = no }
+	add_trait = { trait = subclass_commander_admiral show_message = no }
+	add_trait = { trait = thl_leader_trait_blood_magic show_message = no }
+	add_trait = { trait = thl_leader_trait_bloody_charm show_message = no }
+	add_trait = { trait = thl_leader_trait_gungnir show_message = no }
+	add_trait = { trait = leader_trait_supreme_admiral show_message = no }
+	add_trait = { trait = leader_trait_carrier_specialization show_message = no }
+	add_trait = { trait = leader_trait_legendary_gunboat_diplomacy show_message = no }
+	add_trait = { trait = leader_trait_volatile show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration_2 show_message = no }
+	add_trait = { trait = thl_leader_trait_destiny_manipulation show_message = no }
 	set_age = 500
 }
 
@@ -897,16 +895,16 @@ create_alice_leader = {
 }
 
 add_alice_traits = {
-	add_trait = subclass_official_governor
-	add_trait = leader_trait_automation_champion
-	add_trait = leader_trait_intellectual
-	add_trait = leader_trait_industrial_focus
-	add_trait = leader_trait_assembler
-	add_trait = thl_leader_trait_dolls
-	add_trait = thl_leader_trait_puppet_show
-	add_trait = thl_leader_trait_regeneration
-	add_trait = thl_leader_trait_great_magician
-	add_trait = leader_trait_intolerant
+	add_trait = { trait = subclass_official_governor show_message = no }
+	add_trait = { trait = leader_trait_automation_champion show_message = no }
+	add_trait = { trait = leader_trait_intellectual show_message = no }
+	add_trait = { trait = leader_trait_industrial_focus show_message = no }
+	add_trait = { trait = leader_trait_assembler show_message = no }
+	add_trait = { trait = thl_leader_trait_dolls show_message = no }
+	add_trait = { trait = thl_leader_trait_puppet_show show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = thl_leader_trait_great_magician show_message = no }
+	add_trait = { trait = leader_trait_intolerant show_message = no }
 	set_age = 20
 }
 
@@ -927,16 +925,16 @@ create_yuyuko_leader = {
 }
 
 add_yuyuko_traits = {
-	add_trait = subclass_official_economy_councilor
-	add_trait = leader_trait_efficient
-	add_trait = leader_trait_legendary_scientific_diplomacy
-	add_trait = trait_ruler_charismatic_2
-	add_trait = leader_trait_cultural_focus
-	add_trait = thl_leader_trait_death
-	add_trait = thl_leader_trait_sakura
-	add_trait = thl_leader_trait_dance
-	add_trait = thl_leader_trait_regeneration_2
-	add_trait = thl_leader_trait_yuyuko_eater
+	add_trait = { trait = subclass_official_economy_councilor show_message = no }
+	add_trait = { trait = leader_trait_efficient show_message = no }
+	add_trait = { trait = leader_trait_legendary_scientific_diplomacy show_message = no }
+	add_trait = { trait = trait_ruler_charismatic_2 show_message = no }
+	add_trait = { trait = leader_trait_cultural_focus show_message = no }
+	add_trait = { trait = thl_leader_trait_death show_message = no }
+	add_trait = { trait = thl_leader_trait_sakura show_message = no }
+	add_trait = { trait = thl_leader_trait_dance show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration_2 show_message = no }
+	add_trait = { trait = thl_leader_trait_yuyuko_eater show_message = no }
 	set_age = 1010
 }
 
@@ -957,17 +955,17 @@ create_yuka_leader = {
 }
 
 add_yuka_traits = {
-	add_trait = subclass_official_governor
-	add_trait = leader_trait_arbiter
-	add_trait = leader_trait_farming_focus
-	add_trait = leader_trait_agrarian_upbringing
-	add_trait = leader_trait_naturalist_3
-	add_trait = thl_leader_trait_flower
-	add_trait = thl_leader_trait_incarnation_of_nature
-	add_trait = thl_leader_trait_sleeping_terror
-	add_trait = thl_leader_trait_regeneration_2
-	add_trait = leader_trait_sadistic_2
-	add_trait = leader_trait_tyrannical
+	add_trait = { trait = subclass_official_governor show_message = no }
+	add_trait = { trait = leader_trait_arbiter show_message = no }
+	add_trait = { trait = leader_trait_farming_focus show_message = no }
+	add_trait = { trait = leader_trait_agrarian_upbringing show_message = no }
+	add_trait = { trait = leader_trait_naturalist_3 show_message = no }
+	add_trait = { trait = thl_leader_trait_flower show_message = no }
+	add_trait = { trait = thl_leader_trait_incarnation_of_nature show_message = no }
+	add_trait = { trait = thl_leader_trait_sleeping_terror show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration_2 show_message = no }
+	add_trait = { trait = leader_trait_sadistic_2 show_message = no }
+	add_trait = { trait = leader_trait_tyrannical show_message = no }
 	set_age = 728
 }
 
@@ -988,15 +986,15 @@ create_kosuzu_leader = {
 }
 
 add_kosuzu_traits = {
-	add_trait = subclass_scientist_scholar
-	add_trait = leader_trait_collective_wisdom
-	add_trait = leader_trait_science_communicator
-	add_trait = leader_trait_meticulous_2
-	add_trait = leader_trait_archaeologist
-	add_trait = leader_trait_paranoid
-	add_trait = leader_trait_embezzler_2
-	add_trait = thl_leader_trait_words
-	add_trait = thl_leader_trait_books
+	add_trait = { trait = subclass_scientist_scholar show_message = no }
+	add_trait = { trait = leader_trait_collective_wisdom show_message = no }
+	add_trait = { trait = leader_trait_science_communicator show_message = no }
+	add_trait = { trait = leader_trait_meticulous_2 show_message = no }
+	add_trait = { trait = leader_trait_archaeologist show_message = no }
+	add_trait = { trait = leader_trait_paranoid show_message = no }
+	add_trait = { trait = leader_trait_embezzler_2 show_message = no }
+	add_trait = { trait = thl_leader_trait_words show_message = no }
+	add_trait = { trait = thl_leader_trait_books show_message = no }
 	set_age = 11
 }
 
@@ -1017,15 +1015,15 @@ create_akyuu_leader = {
 }
 
 add_akyuu_traits = {
-	add_trait = subclass_scientist_councilor
-	add_trait = leader_trait_xeno_cataloger
-	add_trait = leader_trait_society_focus
-	add_trait = leader_trait_science_communicator_3
-	add_trait = thl_leader_trait_memory
-	add_trait = thl_leader_trait_the_ninth_savage
-	add_trait = thl_leader_trait_bridge_of_gensokyo
-	add_trait = thl_leader_trait_speculative_fiction
-	add_trait = thl_leader_trait_short_life
+	add_trait = { trait = subclass_scientist_councilor show_message = no }
+	add_trait = { trait = leader_trait_xeno_cataloger show_message = no }
+	add_trait = { trait = leader_trait_society_focus show_message = no }
+	add_trait = { trait = leader_trait_science_communicator_3 show_message = no }
+	add_trait = { trait = thl_leader_trait_memory show_message = no }
+	add_trait = { trait = thl_leader_trait_the_ninth_savage show_message = no }
+	add_trait = { trait = thl_leader_trait_bridge_of_gensokyo show_message = no }
+	add_trait = { trait = thl_leader_trait_speculative_fiction show_message = no }
+	add_trait = { trait = thl_leader_trait_short_life show_message = no }
 	set_age = 12
 }
 
@@ -1046,15 +1044,15 @@ create_rin_leader = {
 }
 
 add_rin_traits = {
-	add_trait = subclass_official_governor
-	add_trait = leader_trait_expert_survivalist
-	add_trait = leader_trait_distribution_lines_2
-	add_trait = leader_trait_enlister
-	add_trait = leader_trait_generator_focus_3
-	add_trait = thl_leader_trait_corpse_travel
-	add_trait = thl_leader_trait_corpse_manipulation
-	add_trait = leader_trait_polluter
-	add_trait = thl_leader_trait_regeneration
+	add_trait = { trait = subclass_official_governor show_message = no }
+	add_trait = { trait = leader_trait_expert_survivalist show_message = no }
+	add_trait = { trait = leader_trait_distribution_lines_2 show_message = no }
+	add_trait = { trait = leader_trait_enlister show_message = no }
+	add_trait = { trait = leader_trait_generator_focus_3 show_message = no }
+	add_trait = { trait = thl_leader_trait_corpse_travel show_message = no }
+	add_trait = { trait = thl_leader_trait_corpse_manipulation show_message = no }
+	add_trait = { trait = leader_trait_polluter show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
 	set_age = 17
 }
 
@@ -1075,16 +1073,16 @@ create_utsuho_leader = {
 }
 
 add_utsuho_traits = {
-	add_trait = subclass_commander_admiral
-	add_trait = leader_trait_master_gunner
-	add_trait = leader_trait_legendary_foe_hammer
-	add_trait = leader_trait_annihilator_2
-	add_trait = leader_trait_demolisher_2
-	add_trait = leader_trait_legendary_dreamlike
-	add_trait = thl_leader_trait_nuclear
-	add_trait = thl_leader_trait_fusion_energy
-	add_trait = thl_leader_trait_bird_brain
-	add_trait = thl_leader_trait_regeneration
+	add_trait = { trait = subclass_commander_admiral show_message = no }
+	add_trait = { trait = leader_trait_master_gunner show_message = no }
+	add_trait = { trait = leader_trait_legendary_foe_hammer show_message = no }
+	add_trait = { trait = leader_trait_annihilator_2 show_message = no }
+	add_trait = { trait = leader_trait_demolisher_2 show_message = no }
+	add_trait = { trait = leader_trait_legendary_dreamlike show_message = no }
+	add_trait = { trait = thl_leader_trait_nuclear show_message = no }
+	add_trait = { trait = thl_leader_trait_fusion_energy show_message = no }
+	add_trait = { trait = thl_leader_trait_bird_brain show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
 	set_age = 17
 }
 
@@ -1105,16 +1103,16 @@ create_nitori_leader = {
 }
 
 add_nitori_traits = {
-	add_trait = subclass_scientist_governor
-	add_trait = thl_leader_trait_water
-	add_trait = leader_trait_robotist
-	add_trait = thl_leader_trait_super_youkai_slug
-	add_trait = thl_leader_trait_convenience_house
-	add_trait = thl_leader_trait_engineer_in_water
-	add_trait = thl_leader_trait_optical_camouflage
-	add_trait = thl_leader_trait_regeneration
-	add_trait = leader_trait_insider_trading_2
-	add_trait = leader_trait_passive
+	add_trait = { trait = subclass_scientist_governor show_message = no }
+	add_trait = { trait = thl_leader_trait_water show_message = no }
+	add_trait = { trait = leader_trait_robotist show_message = no }
+	add_trait = { trait = thl_leader_trait_super_youkai_slug show_message = no }
+	add_trait = { trait = thl_leader_trait_convenience_house show_message = no }
+	add_trait = { trait = thl_leader_trait_engineer_in_water show_message = no }
+	add_trait = { trait = thl_leader_trait_optical_camouflage show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
+	add_trait = { trait = leader_trait_insider_trading_2 show_message = no }
+	add_trait = { trait = leader_trait_passive show_message = no }
 	set_age = 17
 }
 
@@ -1135,12 +1133,12 @@ create_sizuha_leader = {
 }
 
 add_sizuha_traits = {
-	add_trait = subclass_scientist_explorer
-	add_trait = thl_leader_trait_fall
-	add_trait = leader_trait_surveyor
-	add_trait = leader_trait_prospector
-	add_trait = thl_leader_trait_regeneration_2
-	add_trait = leader_trait_paranoid
+	add_trait = { trait = subclass_scientist_explorer show_message = no }
+	add_trait = { trait = thl_leader_trait_fall show_message = no }
+	add_trait = { trait = leader_trait_surveyor show_message = no }
+	add_trait = { trait = leader_trait_prospector show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration_2 show_message = no }
+	add_trait = { trait = leader_trait_paranoid show_message = no }
 }
 
 create_minoriko_leader = {
@@ -1160,12 +1158,12 @@ create_minoriko_leader = {
 }
 
 add_minoriko_traits = {
-	add_trait = subclass_official_governor
-	add_trait = leader_trait_harvest
-	add_trait = leader_trait_utopian_idealist
-	add_trait = trait_ruler_fertility_preacher
-	add_trait = thl_leader_trait_regeneration_2
-	add_trait = leader_trait_profligate
+	add_trait = { trait = subclass_official_governor show_message = no }
+	add_trait = { trait = leader_trait_harvest show_message = no }
+	add_trait = { trait = leader_trait_utopian_idealist show_message = no }
+	add_trait = { trait = trait_ruler_fertility_preacher show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration_2 show_message = no }
+	add_trait = { trait = leader_trait_profligate show_message = no }
 }
 
 create_hina_leader = {
@@ -1185,13 +1183,13 @@ create_hina_leader = {
 }
 
 add_hina_traits = {
-	add_trait = subclass_commander_governor
-	add_trait = thl_leader_trait_jinx
-	add_trait = leader_trait_mediator
-	add_trait = leader_trait_restrained
-	add_trait = leader_trait_dreaded
-	add_trait = leader_trait_uninspiring
-	add_trait = thl_leader_trait_regeneration_2
+	add_trait = { trait = subclass_commander_governor show_message = no }
+	add_trait = { trait = thl_leader_trait_jinx show_message = no }
+	add_trait = { trait = leader_trait_mediator show_message = no }
+	add_trait = { trait = leader_trait_restrained show_message = no }
+	add_trait = { trait = leader_trait_dreaded show_message = no }
+	add_trait = { trait = leader_trait_uninspiring show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration_2 show_message = no }
 }
 
 create_mystia_leader = {
@@ -1211,13 +1209,13 @@ create_mystia_leader = {
 }
 
 add_mystia_traits = {
-	add_trait = subclass_commander_governor
-	add_trait = thl_leader_trait_song
-	add_trait = leader_trait_bellicose
-	add_trait = thl_leader_trait_izakaya
-	add_trait = thl_leader_trait_youkai_punk
-	add_trait = leader_trait_micromanager
-	add_trait = thl_leader_trait_regeneration
+	add_trait = { trait = subclass_commander_governor show_message = no }
+	add_trait = { trait = thl_leader_trait_song show_message = no }
+	add_trait = { trait = leader_trait_bellicose show_message = no }
+	add_trait = { trait = thl_leader_trait_izakaya show_message = no }
+	add_trait = { trait = thl_leader_trait_youkai_punk show_message = no }
+	add_trait = { trait = leader_trait_micromanager show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
 }
 
 create_tewi_leader = {
@@ -1237,16 +1235,16 @@ create_tewi_leader = {
 }
 
 add_tewi_traits = {
-	add_trait = subclass_official_governor
-	add_trait = leader_trait_totalitarian
-	add_trait = thl_leader_trait_luck
-	add_trait = thl_leader_trait_rabbit_leader
-	add_trait = thl_leader_trait_rabbit_spy
-	add_trait = leader_trait_consul_general
-	add_trait = leader_trait_trade_focus
-	add_trait = leader_trait_embezzler
-	add_trait = leader_trait_insider_trading
-	add_trait = thl_leader_trait_regeneration
+	add_trait = { trait = subclass_official_governor show_message = no }
+	add_trait = { trait = leader_trait_totalitarian show_message = no }
+	add_trait = { trait = thl_leader_trait_luck show_message = no }
+	add_trait = { trait = thl_leader_trait_rabbit_leader show_message = no }
+	add_trait = { trait = thl_leader_trait_rabbit_spy show_message = no }
+	add_trait = { trait = leader_trait_consul_general show_message = no }
+	add_trait = { trait = leader_trait_trade_focus show_message = no }
+	add_trait = { trait = leader_trait_embezzler show_message = no }
+	add_trait = { trait = leader_trait_insider_trading show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
 	set_age = 2100
 }
 
@@ -1267,17 +1265,17 @@ create_kanako_leader = {
 }
 
 add_kanako_traits = {
-	add_trait = subclass_commander_lord
-	add_trait = subclass_commander_admiral
-	add_trait = leader_trait_master_gunner
-	add_trait = thl_leader_trait_heaven
-	add_trait = thl_leader_trait_godness_of_war
-	add_trait = leader_trait_fleet_logistician
-	add_trait = leader_trait_unyielding
-	add_trait = leader_trait_artillery_specialization
-	add_trait = leader_trait_lethargic_2
-	add_trait = leader_trait_armchair_commander
-	add_trait = thl_leader_trait_regeneration_2
+	add_trait = { trait = subclass_commander_lord show_message = no }
+	add_trait = { trait = subclass_commander_admiral show_message = no }
+	add_trait = { trait = leader_trait_master_gunner show_message = no }
+	add_trait = { trait = thl_leader_trait_heaven show_message = no }
+	add_trait = { trait = thl_leader_trait_godness_of_war show_message = no }
+	add_trait = { trait = leader_trait_fleet_logistician show_message = no }
+	add_trait = { trait = leader_trait_unyielding show_message = no }
+	add_trait = { trait = leader_trait_artillery_specialization show_message = no }
+	add_trait = { trait = leader_trait_lethargic_2 show_message = no }
+	add_trait = { trait = leader_trait_armchair_commander show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration_2 show_message = no }
 	set_age = 2000
 }
 
@@ -1298,18 +1296,18 @@ create_suwako_leader = {
 }
 
 add_suwako_traits = {
-	add_trait = subclass_official_governor
-	add_trait = leader_trait_shroud_preacher
-	add_trait = thl_leader_trait_earth
-	add_trait = thl_leader_trait_no_fear_of_storm
-	add_trait = leader_trait_forge_focus_3
-	add_trait = leader_trait_distribution_lines_3
-	add_trait = leader_trait_environmental_engineer
-	add_trait = leader_trait_settler_2
-	add_trait = leader_trait_assembler
-	add_trait = leader_trait_sadistic
-	add_trait = leader_trait_gullible
-	add_trait = thl_leader_trait_regeneration_2
+	add_trait = { trait = subclass_official_governor show_message = no }
+	add_trait = { trait = leader_trait_shroud_preacher show_message = no }
+	add_trait = { trait = thl_leader_trait_earth show_message = no }
+	add_trait = { trait = thl_leader_trait_no_fear_of_storm show_message = no }
+	add_trait = { trait = leader_trait_forge_focus_3 show_message = no }
+	add_trait = { trait = leader_trait_distribution_lines_3 show_message = no }
+	add_trait = { trait = leader_trait_environmental_engineer show_message = no }
+	add_trait = { trait = leader_trait_settler_2 show_message = no }
+	add_trait = { trait = leader_trait_assembler show_message = no }
+	add_trait = { trait = leader_trait_sadistic show_message = no }
+	add_trait = { trait = leader_trait_gullible show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration_2 show_message = no }
 	set_age = 2300
 }
 
@@ -1330,18 +1328,18 @@ create_suwako_commander_leader = {
 }
 
 add_suwako_commander_traits = {
-	add_trait = subclass_commander_admiral
-	add_trait = thl_leader_trait_future_and_past
-	add_trait = thl_leader_trait_earth
-	add_trait = thl_leader_trait_no_fear_of_storm
-	add_trait = leader_trait_rocketry_specialization_2
-	add_trait = leader_trait_gunship_specialization_2
-	add_trait = leader_trait_archaeo_specialization_2
-	add_trait = leader_trait_commanding_presence_2
-	add_trait = trait_ruler_corvette_focus
-	add_trait = leader_trait_sadistic
-	add_trait = leader_trait_gullible
-	add_trait = thl_leader_trait_regeneration_2
+	add_trait = { trait = subclass_commander_admiral show_message = no }
+	add_trait = { trait = thl_leader_trait_future_and_past show_message = no }
+	add_trait = { trait = thl_leader_trait_earth show_message = no }
+	add_trait = { trait = thl_leader_trait_no_fear_of_storm show_message = no }
+	add_trait = { trait = leader_trait_rocketry_specialization_2 show_message = no }
+	add_trait = { trait = leader_trait_gunship_specialization_2 show_message = no }
+	add_trait = { trait = leader_trait_archaeo_specialization_2 show_message = no }
+	add_trait = { trait = leader_trait_commanding_presence_2 show_message = no }
+	add_trait = { trait = trait_ruler_corvette_focus show_message = no }
+	add_trait = { trait = leader_trait_sadistic show_message = no }
+	add_trait = { trait = leader_trait_gullible show_message = no }
+	add_trait = { trait = thl_leader_trait_regeneration_2 show_message = no }
 	set_age = 2300
 }
 
