@@ -1760,7 +1760,7 @@ suwako_change_between_commander_and_officer = {
 								has_trait = thl_leader_trait_future_and_past
 							}
 						}
-						remove_trait = leader_trait_shroud_preacher }
+						remove_trait = leader_trait_shroud_preacher
 						add_trait = { trait = thl_leader_trait_future_and_past }
 					}
 				}
