@@ -1968,6 +1968,7 @@ magician_drone = {
         default = {
             condition_string = DRONE_JOB_TRIGGER
             building_icon = building_magic_academy
+            icon = magician
         }
     }
     possible_pre_triggers = {
