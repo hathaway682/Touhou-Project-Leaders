@@ -1405,6 +1405,8 @@
  trait_thl_doll:0 "人偶"
  trait_thl_doll_desc:0 "依靠魔法力量驱动的人形机械，来自于爱丽丝·玛格特洛依德的技术。"
  trait_thl_doll_tooltip:0 "超出 £mod_doll_control_limit£ §Y$mod_doll_control_limit$§!时无法组装且效率降低。"
+ AUTO_MIGRATE_THL_DOLL: "§R人偶人口无法自动迁移。§!"
+ trait_rooted_effect: "§R人口不会自动迁移§!"
  tech_magic_dolls:0 "制式人偶工艺"
  tech_magic_dolls_desc:0 "这些人偶可以在它们主人的操纵下完成一些简单的工作，甚至能提供程式化的娱乐表演，然而对需要随机应变的专业性工作则无能为力。"
  magic_dolls_tooltip:0 "§H解锁特性：§!['concept_magic_dolls']"
