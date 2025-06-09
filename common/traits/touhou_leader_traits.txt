@@ -2447,7 +2447,7 @@ thl_leader_trait_satori_pets = {
 	councilor_modifier = {
 		species_leader_exp_gain = 0.5
 		leaders_upkeep_mult = -0.5
-		empire_size_pops_mult = -0.2
+		empire_size_pops_mult = -0.1
 		planet_jobs_worker_produces_mult = 0.05
 		operation_smuggle_pops_difficulty_add = -4 #告诉我，你愿不愿意做觉大人的宠物？
 	}
@@ -4858,7 +4858,7 @@ thl_leader_trait_izakaya = {
 	sector_modifier = {
 		pop_izakaya_worker_bonus_workforce_mult = 0.05
 	}
-	leader_trait_type = veteran
+	leader_trait_type = basic
 	leader_class = { commander }
 	leader_potential_add = {
 		has_trait = thl_leader_trait_song
@@ -4885,7 +4885,7 @@ thl_leader_trait_izakaya_2 = {
 	sector_modifier = {
 		pop_izakaya_worker_bonus_workforce_mult = 0.1
 	}
-	leader_trait_type = veteran
+	leader_trait_type = basic
 	leader_class = { commander }
 	leader_potential_add = {
 		has_trait = thl_leader_trait_song
@@ -4912,7 +4912,7 @@ thl_leader_trait_izakaya_3 = {
 	sector_modifier = {
 		pop_izakaya_worker_bonus_workforce_mult = 0.15
 	}
-	leader_trait_type = veteran
+	leader_trait_type = basic
 	leader_class = { commander }
 	leader_potential_add = {
 		has_trait = thl_leader_trait_song

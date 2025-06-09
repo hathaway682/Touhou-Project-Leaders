@@ -490,6 +490,9 @@ dollmaker = {
         potential = {
             planet = {
                 check_variable_arithmetic = { which = value:doll_missing_per_maker value > 0 }
+                assembling_species = {
+                    has_trait = trait_thl_doll
+                }
             }
         }
         modifier = {
@@ -673,6 +676,9 @@ dollmaker_drone = {
         potential = {
             planet = {
                 check_variable_arithmetic = { which = value:doll_missing_per_maker value > 0 }
+                assembling_species = {
+                    has_trait = trait_thl_doll
+                }
             }
         }
         modifier = {
@@ -1679,7 +1685,7 @@ izakaya_worker = {
     }
 
     planet_modifier = {
-        logistic_growth_mult = 0.01
+        logistic_growth_mult = 0.05
     }
 
     weight = {
