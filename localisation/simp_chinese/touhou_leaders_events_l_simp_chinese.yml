@@ -1073,8 +1073,8 @@
  touhou_paragon.40733.a:0 "这下可有得忙了。"
  touhou_paragon.40733.tooltip:0 "§Y只是生成的舰队，并不会真的让你抓到的兽群消失，放心吧。§!"
 
- NAME_Marisa_Task_Beast_Country: "神秘窃贼"
- NAME_Marisa_Task_Beast: "失控兽群"
+ NAME_Marisa_Task_NPC_Country: "神秘窃贼"
+ NAME_Marisa_Task_NPC_Fleet: "失控兽群"
 
  touhou_paragon.40734.name:0 "困兽犹斗"
  touhou_paragon.40734.desc:0 "一群发狂的野兽怎么能与我们的正规军较量？我们的舰队不费吹灰之力就让失控的兽群“安静”了下来，窃贼本人飞船的武器和引擎也已被我们摧毁，只有生命维持系统还在运作，虽然我们并不确定窃贼是否真的需要这个。\n在登上被瘫痪的飞船后，我们很快就找到了窃贼。她正站在保险箱上，手持之前破墙用的盒子。\n我们用扩音器警告窃贼不要以为有强力武器就能扭转局势，只见她闻言后邪魅一笑，放低了武器——准确来说，是对准了藏品！\n"

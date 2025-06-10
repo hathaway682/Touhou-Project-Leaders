@@ -2008,12 +2008,16 @@ country_event = {
 			}
 			save_event_target_as = target_grand_archive
 		}
+		set_timed_country_flag = {
+			flag = marisa_task_timer
+			days = 3
+		}
 	}
 
 	option = {
 		name = touhou_paragon.40733.a
 		create_country = {
-			name = "NAME_Marisa_Task_Beast_Country"
+			name = "NAME_Marisa_Task_NPC_Country"
 			type = faction
 			flag = {
 				icon = {
@@ -2032,14 +2036,15 @@ country_event = {
 				}
 			}
 			effect = {
-				set_country_flag = marisa_task_beast_country
-				save_global_event_target_as = marisa_task_beast_country
+				set_country_flag = marisa_task_npc_country
+				save_global_event_target_as = marisa_task_npc_country
+				establish_communications_no_message = root
 			}
 		}
 		create_fleet = {
-			NAME = "NAME_Marisa_Task_Beast"
+			NAME = "NAME_Marisa_Task_NPC_Fleet"
 			effect = {
-				set_owner = event_target:marisa_task_beast_country
+				set_owner = event_target:marisa_task_npc_country
 				#可汗大点兵
 				#我怎么不记得我得博物馆有这么多东西
 				create_ship = {
@@ -2106,7 +2111,7 @@ country_event = {
 				set_fleet_stance = aggressive
 				set_aggro_range_measure_from = self
 				set_aggro_range = 10
-				set_fleet_flag = marisa_task_beast_fleet
+				set_fleet_flag = marisa_task_npc_fleet
 			}
 		}
 	}
@@ -2122,11 +2127,12 @@ country_event = {
 	fire_only_once = yes
 	location = this
 	trigger = {
+		has_country_flag = marisa_task_player_country
 		From = {
-			has_country_flag = marisa_task_beast_country
+			has_country_flag = marisa_task_npc_country
 		}
 		FromFromFrom = {
-			has_fleet_flag = marisa_task_beast_fleet
+			has_fleet_flag = marisa_task_npc_fleet
 		}
 	}
 	option = {
@@ -2141,6 +2147,8 @@ country_event = {
 				prefix = yes
 			}
 		}
+		remove_country_flag = marisa_task_player_country
+		set_country_flag = marisa_task_finished
 	}
 }
 
@@ -2171,13 +2179,25 @@ country_event = {
 	fire_only_once = yes
 	location = capital_scope
 	trigger = {
-		From = {
-			has_country_flag = marisa_task_beast_country
+		has_country_flag = marisa_task_player_country
+		NOT = {
+			has_country_flag = marisa_task_timer
 		}
-		FromFromFrom = {
-			has_fleet_flag = marisa_task_beast_fleet
+		any_galaxy_fleet = {
+			has_fleet_flag = marisa_task_npc_fleet
+			is_in_combat = no
 		}
 	}
+
+	immediate = {
+		random_galaxy_fleet = {
+			limit = {
+				has_fleet_flag = marisa_task_npc_fleet
+			}
+			save_event_target_as = marisa_task_npc_fleet
+		}
+	}
+
 	option = {
 		name = touhou_paragon.40736.a
 		country_event = {
@@ -2186,7 +2206,7 @@ country_event = {
 			random = 150
 		}
 		hidden_effect = {
-			FromFromFrom = {
+			event_target:marisa_task_npc_fleet = {
 				delete_fleet = this
 			}
 		}

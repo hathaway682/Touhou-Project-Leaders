@@ -331,7 +331,11 @@ special_project = {
 	}
 
 	on_success = {
+		fleet = {
+			set_fleet_flag = marisa_task_player_fleet
+		}
 		owner = {
+			set_country_flag = marisa_task_player_country
 			country_event = { id = touhou_paragon.40732 }
 		}
 	}
