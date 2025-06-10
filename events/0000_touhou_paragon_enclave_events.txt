@@ -1132,7 +1132,7 @@ country_event = {
                         save_global_event_target_as = kappa_enclave_new_system
                     }
                 }
-                country_event = { id = touhou_paragon_enclave.383 days = 60 }
+                country_event = { id = touhou_paragon_enclave.383 }
             }
         }
         else_if = {
@@ -1147,7 +1147,7 @@ country_event = {
             }
             random_playable_country = {
                 limit = {
-                    is_ai = no
+                    is_ai = yes
                     any_planet_within_border = {
                         is_wet = yes
                     }
@@ -1162,7 +1162,7 @@ country_event = {
                         save_global_event_target_as = kappa_enclave_new_system
                     }
                 }
-                country_event = { id = touhou_paragon_enclave.383 days = 60 }
+                country_event = { id = touhou_paragon_enclave.383 }
             }
         }
         else = {
@@ -1255,6 +1255,10 @@ country_event = {
         }
     }
 
+    immediate = {
+        establish_communications_no_message = event_target:kappa_enclave_country
+    }
+
     option = { # Accept
         name = touhou_paragon_enclave.383.a
         custom_tooltip = touhou_paragon_enclave.383.a_tooltip
@@ -1326,7 +1330,7 @@ country_event = {
                             save_global_event_target_as = kappa_enclave_new_system
                         }
                     }
-                    country_event = { id = touhou_paragon_enclave.383 days = 60 }
+                    country_event = { id = touhou_paragon_enclave.383 }
                 }
             }
             else_if = {
@@ -1362,7 +1366,7 @@ country_event = {
                             save_global_event_target_as = kappa_enclave_new_system
                         }
                     }
-                    country_event = { id = touhou_paragon_enclave.383 days = 60 }
+                    country_event = { id = touhou_paragon_enclave.383 }
                 }
             }
             else = {

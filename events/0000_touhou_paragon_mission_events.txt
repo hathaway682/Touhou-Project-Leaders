@@ -641,7 +641,7 @@ country_event = {
 			}
 			modify_species = {
 				species = this
-				add_trait = { trait = trait_latent_psionic }
+				add_trait = trait_latent_psionic
 				effect = {
 					save_event_target_as = psionic_main_species
 				}
