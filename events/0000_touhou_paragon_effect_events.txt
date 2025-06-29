@@ -3780,25 +3780,7 @@ country_event = {
                 has_trait = thl_leader_trait_memory
                 has_trait = thl_leader_trait_time
             }
-            OR = {
-                NOR = {
-                    has_trait = thl_leader_trait_regeneration
-                    has_trait = thl_leader_trait_regeneration_2
-                    has_trait = thl_leader_trait_regeneration_3
-                }
-                AND = {
-                    has_trait = thl_leader_trait_regeneration
-                    has_trait = thl_leader_trait_injured
-                }
-                AND = {
-                    has_trait = thl_leader_trait_regeneration_2
-                    has_trait = thl_leader_trait_injured_2
-                }
-                AND = {
-                    has_trait = thl_leader_trait_regeneration_3
-                    has_trait = thl_leader_trait_injured_3
-                }
-            }
+            thl_will_leader_survive = no
         }
     }
 
@@ -3879,25 +3861,9 @@ country_event = {
                     NOT = { has_trait = trait_leader_second_chanced }
                 }
                 leader_backup_clone_can_activate = yes
+                thl_is_immortal_akyuu = yes
             }
-            OR = {
-                AND = {
-                    has_trait = thl_leader_trait_regeneration
-                    NOT = { has_trait = thl_leader_trait_injured }
-                }
-                AND = {
-                    has_trait = thl_leader_trait_regeneration_2
-                    NOT = { has_trait = thl_leader_trait_injured_2 }
-                }
-                AND = {
-                    has_trait = thl_leader_trait_regeneration_3
-                    NOT = { has_trait = thl_leader_trait_injured_3 }
-                }
-            }
-            OR = {
-                is_immortal = yes
-                leader_age < value:death_age
-            }
+            thl_is_regeneration_leader = yes
         }
     }
     immediate = {

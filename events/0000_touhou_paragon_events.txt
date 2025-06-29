@@ -44,25 +44,8 @@ country_event = {
 				has_leader_flag = renowned_leader
 				has_leader_flag = legendary_leader
 			}
-			OR = {
-				NOR = {
-					has_trait = thl_leader_trait_regeneration
-					has_trait = thl_leader_trait_regeneration_2
-					has_trait = thl_leader_trait_regeneration_3
-				}
-				AND = {
-					has_trait = thl_leader_trait_regeneration
-					has_trait = thl_leader_trait_injured
-				}
-				AND = {
-					has_trait = thl_leader_trait_regeneration_2
-					has_trait = thl_leader_trait_injured_2
-				}
-				AND = {
-					has_trait = thl_leader_trait_regeneration_3
-					has_trait = thl_leader_trait_injured_3
-				}
-			}
+			thl_is_regeneration_leader = no
+			thl_is_immortal_akyuu = no
 		}
 	}
 

@@ -630,7 +630,6 @@ country_event = {
 				has_tradition = tr_nanotech_finish
 				has_tradition = tr_virtuality_finish
 			}
-
 		}
 		every_owned_pop_group =  {
 			limit = {
