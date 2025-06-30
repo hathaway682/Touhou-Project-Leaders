@@ -2183,6 +2183,9 @@ country_event = {
 		NOT = {
 			has_country_flag = marisa_task_timer
 		}
+		NOT = {
+			has_country_flag = marisa_task_finished
+		}
 		any_galaxy_fleet = {
 			has_fleet_flag = marisa_task_npc_fleet
 			is_in_combat = no
@@ -2209,6 +2212,8 @@ country_event = {
 			event_target:marisa_task_npc_fleet = {
 				delete_fleet = this
 			}
+			remove_country_flag = marisa_task_player_country
+			set_country_flag = marisa_task_finished
 		}
 	}
 }
