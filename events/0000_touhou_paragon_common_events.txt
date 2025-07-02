@@ -1158,6 +1158,9 @@ leader_event = {
 				set_deposit_flag = keep_deposit_on_terraform
 			}
 		}
+		owner = {
+			set_country_flag = hakurei_shrine_country
+		}
 	}
 	option = {
 		name = touhou_paragon.40610.b
@@ -1187,6 +1190,7 @@ leader_event = {
 			add_resource = {
 				minerals = -800
 			}
+			set_country_flag = hakurei_shrine_large_country
 		}
 		add_trait = { trait = leader_trait_crusader }
 	}
@@ -1224,6 +1228,7 @@ leader_event = {
 				minerals = -400
 				unity = -100
 			}
+			set_country_flag = hakurei_shrine_large_country
 		}
 		add_trait = { trait = leader_trait_crusader_2 }
 	}
@@ -1259,6 +1264,7 @@ leader_event = {
 			last_added_deposit = {
 				set_deposit_flag = keep_deposit_on_terraform
 			}
+			set_country_flag = hakurei_shrine_imperial_country
 		}
 		owner = {
 			add_resource = {
@@ -1318,6 +1324,7 @@ leader_event = {
 				alloys = -600
 				sr_zro = -100
 			}
+			set_country_flag = hakurei_shrine_psionic_country
 		}
 		if = {
 			limit = {
@@ -1392,12 +1399,10 @@ leader_event = {
 				energy = 100000
 				minerals = -800
 			}
+			set_country_flag = hakurei_shrine_country
 		}
 	}
 	after = {
-		owner = {
-			set_country_flag = hakurei_shrine_country
-		}
 		if = {
 			limit = {
 				NOT = {

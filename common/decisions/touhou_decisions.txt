@@ -1476,7 +1476,12 @@ decision_rebuild_hakurei_shrine = {
 
 	potential = {
 		owner = {
-			has_country_flag = hakurei_shrine_country
+			OR = {
+				has_country_flag = hakurei_shrine_country
+				has_country_flag = hakurei_shrine_large_country
+				has_country_flag = hakurei_shrine_imperial_country
+				has_country_flag = hakurei_shrine_psionic_country
+			}
 			NOT = {
 				any_owned_planet = {
 					OR = {
@@ -1495,7 +1500,36 @@ decision_rebuild_hakurei_shrine = {
 	}
 
 	effect = {
-		add_deposit = d_hakurei_shrine
+		owner = {
+			switch = {
+				trigger = has_country_flag
+				hakurei_shrine_country = {
+					root = {
+						add_deposit = d_hakurei_shrine
+					}
+				}
+				hakurei_shrine_large_country = {
+					root = {
+						add_deposit = d_hakurei_shrine_large
+					}
+				}
+				hakurei_shrine_imperial_country = {
+					root = {
+						add_deposit = d_hakurei_shrine_imperial
+					}
+				}
+				hakurei_shrine_psionic_country = {
+					root = {
+						add_deposit = d_hakurei_shrine_psionic
+					}
+				}
+				default = {
+					root = {
+						add_deposit = d_hakurei_shrine
+					}
+				}
+			}
+		}
 		last_added_deposit = {
 			set_deposit_flag = keep_deposit_on_terraform
 		}
@@ -1530,6 +1564,10 @@ decision_expand_hakurei_shrine = {
 	effect = {
 		remove_deposit = d_hakurei_shrine
 		add_deposit = d_hakurei_shrine_large
+		owner = {
+			remove_country_flag = hakurei_shrine_country
+			set_country_flag = hakurei_shrine_large_country
+		}
 		last_added_deposit = {
 			set_deposit_flag = keep_deposit_on_terraform
 		}
@@ -1576,6 +1614,10 @@ decision_expand_hakurei_shrine_2 = {
 	effect = {
 		remove_deposit = d_hakurei_shrine_large
 		add_deposit = d_hakurei_shrine_imperial
+		owner = {
+			remove_country_flag = hakurei_shrine_large_country
+			set_country_flag = hakurei_shrine_imperial_country
+		}
 		last_added_deposit = {
 			set_deposit_flag = keep_deposit_on_terraform
 		}
