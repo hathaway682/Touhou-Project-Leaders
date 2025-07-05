@@ -611,6 +611,15 @@ country_event = {
         fire_on_action = {
             on_action = on_gray_thaumaturgy_enable
         }
+        if = {
+            limit = {
+                has_edict = gray_thaumaturgy
+            }
+            country_event = {
+                id = touhou_paragon_effect.3
+                days = 360
+            }
+        }
     }
 }
 

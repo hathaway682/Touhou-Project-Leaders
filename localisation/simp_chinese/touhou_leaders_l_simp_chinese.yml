@@ -288,7 +288,7 @@
 
  edict_gray_thaumaturgy:0  "灰色奇术"
  edict_gray_thaumaturgy_desc:0 "使用§H信仰§!的力量，以§c东风谷§!家一脉相传的秘术为媒介，引发§g偶然性§!的顶峰——§B奇迹§!。"
- gray_thaumaturgy_effect:0 "仪式完成后，在随机的星球生成随机的§Y异常现象§!或稀有的§Y殖民地事件§!。"
+ gray_thaumaturgy_effect:0 "每年，在随机的星球生成随机的§Y异常现象§!或稀有的§Y殖民地事件§!。"
 
  touhou_paragon_effect.10.name:0 "奇迹生效"
  touhou_paragon_effect.10.desc:0 "在我们根据§Y$NAME_Sanae$§!的指示完成了祭仪之后，传感器发布了紧急预报，探测到了一个先前未曾标记的异常现象。科学团队给出的分析报告显示了量子概率云的异常变化，看来这就是奇迹的效果。"

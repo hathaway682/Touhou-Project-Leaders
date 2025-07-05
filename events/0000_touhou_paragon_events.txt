@@ -1681,6 +1681,11 @@ country_event = { # 莲子
 				set_leader_flag = legendary_leader
 				set_leader_flag = renko_leader
 			}
+			country_event = {
+				id = touhou_paragon.41101
+				days = 360
+				random = 1440
+			}
 		}
 	}
 }

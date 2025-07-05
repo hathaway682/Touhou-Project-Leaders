@@ -6,3 +6,12 @@ hifuu_space_station = {
 		standard_astral_rift_on_roll_failed = yes
 	}
 }
+
+hifuu_rainbow = {
+	name = astral_rift_hifuu_rainbow
+	randomized = no
+	event = touhou_paragon.41120
+	on_roll_failed = {
+		standard_astral_rift_on_roll_failed = yes
+	}
+}

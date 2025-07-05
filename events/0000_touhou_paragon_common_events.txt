@@ -261,6 +261,10 @@ country_event = {
 					set_location = root.capital_star
 				}
 			}
+			country_event = {
+				id = touhou_paragon.41101
+				days = 3600
+			}
 			set_global_flag = merry
 			set_global_flag = renko
 		}
@@ -377,18 +381,6 @@ country_event = {
 }
 
 #介绍绑定领袖
-
-country_event = {
-	id = touhou_paragon.41101
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		country_event = {
-			id = touhou_paragon.41200
-		}
-	}
-}
 
 country_event = {
 	id = touhou_paragon.41601
@@ -5283,7 +5275,7 @@ astral_rift_event = {
 	}
 	picture = GFX_evt_hifuu_machine
 	show_sound = ap_rift_event_30_sentient_trees_planet
-	difficulty = @astral_rift_initial_difficulty
+	difficulty = @astral_rift_easy_difficulty
 	astral_rift = yes
 	is_triggered_only = yes
 
@@ -5362,7 +5354,7 @@ astral_rift_event = {
 	}
 	picture = GFX_evt_hifuu_machine
 	show_sound = ap_rift_event_30_sentient_trees_planet
-	difficulty = @astral_rift_initial_difficulty
+	difficulty = @astral_rift_easy_plus_difficulty
 	astral_rift = yes
 	is_triggered_only = yes
 
@@ -5441,7 +5433,7 @@ astral_rift_event = {
 	}
 	picture = GFX_evt_hifuu_couple
 	show_sound = ap_rift_event_30_sentient_trees_planet
-	difficulty = @astral_rift_initial_difficulty
+	difficulty = @astral_rift_easy_difficulty
 	astral_rift = yes
 	is_triggered_only = yes
 
@@ -5458,16 +5450,13 @@ astral_rift_event = {
 	desc = touhou_paragon.41115.desc
 	picture = GFX_evt_astral_rift_crystal_3
 	show_sound = ap_rift_event_30_sentient_trees_planet
-	difficulty = @astral_rift_initial_difficulty
+	difficulty = @astral_rift_medium_difficulty
 	astral_rift = yes
 	is_triggered_only = yes
 
 	option = {
 		name = touhou_paragon.41115.a
 		explorer = { astral_thread_small_reward = yes }
-		hidden_effect = {
-			add_stage_modifier = { modifier = astral_rift_difficulty_increase_1 }
-		}
 		set_next_astral_rift_event = { id = touhou_paragon.41116 }
 	}
 }
@@ -5478,7 +5467,7 @@ astral_rift_event = {
 	desc = touhou_paragon.41116.desc
 	picture = GFX_evt_astral_rift_tropical_habitat
 	show_sound = ap_rift_event_30_sentient_trees_planet
-	difficulty = @astral_rift_initial_difficulty
+	difficulty = @astral_rift_easy_difficulty
 	astral_rift = yes
 	is_triggered_only = yes
 
@@ -6031,5 +6020,353 @@ country_event = {
 		country_event = {
 			id = touhou_paragon.42000
 		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.41101
+	title = touhou_paragon.41101.name
+	desc = touhou_paragon.41101.desc
+
+	is_triggered_only = yes
+	picture = GFX_evt_astral_rift
+	show_sound = ap_rift_event_0_astral_wonder
+	location = event_target:target_planet
+
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				valid_for_scholarium_sensors = yes
+			}
+			save_event_target_as = target_planet
+			solar_system = {
+				save_event_target_as = target_system
+			}
+		}
+	}
+
+	option = {
+		name = touhou_paragon.41101.a
+		enable_special_project = {
+			name = MERRY_PLANETARY_SENSORS
+			location = event_target:target_planet
+		}
+	}
+}
+
+ship_event = {
+	id = touhou_paragon.41102
+	title = touhou_paragon.41102.name
+	desc = touhou_paragon.41102.desc
+
+	is_triggered_only = yes
+	picture = GFX_evt_scholarium_anomaly
+	show_sound = evn_ove_scholarium_anomaly
+	location = root
+
+	immediate = {
+		#现在暂时只有一个
+		solar_system = {
+			spawn_astral_rift = {
+				orbit_angle = 360
+				random_pos = yes
+				id = hifuu_rainbow
+				graphics_entity_name = astral_rift_entity
+			}
+		}
+	}
+
+	option = {
+		name = touhou_paragon.41102.a
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41120
+	title = touhou_paragon.41120.name
+	desc = touhou_paragon.41120.desc
+	picture = GFX_evt_hifuu_rainbow
+	show_sound = ap_rift_event_0_astral_wonder
+	difficulty = @astral_rift_initial_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41120.a
+		explorer = { astral_thread_small_reward = yes }
+		set_next_astral_rift_event = { id = touhou_paragon.41121 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41121
+	title = touhou_paragon.41121.name
+	desc = touhou_paragon.41121.desc
+	picture = GFX_evt_hifuu_rainbow
+	show_sound = ap_rift_event_0_astral_wonder
+	difficulty = @astral_rift_transition_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41121.a
+		explorer = {
+			astral_thread_small_reward = yes
+			add_resource = {
+				physics_research = 1000
+			}
+		}
+		set_next_astral_rift_event = { id = touhou_paragon.41122 }
+	}
+	option = {
+		name = touhou_paragon.41121.b
+		explorer = {
+			astral_thread_small_reward = yes
+			add_resource = {
+				society_research = 1000
+			}
+		}
+		set_next_astral_rift_event = { id = touhou_paragon.41125 }
+	}
+	option = {
+		name = touhou_paragon.41121.c
+		explorer = {
+			astral_thread_small_reward = yes
+			add_resource = {
+				engineering_research = 1000
+			}
+		}
+		set_next_astral_rift_event = { id = touhou_paragon.41128 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41122
+	title = touhou_paragon.41122.name
+	desc = touhou_paragon.41122.desc
+	picture = GFX_evt_hifuu_rainbow
+	show_sound = ap_rift_event_0_astral_wonder
+	difficulty = @astral_rift_medium_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41122.a
+		explorer = { astral_thread_large_reward = yes }
+		set_next_astral_rift_event = { id = touhou_paragon.41123 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41123
+	title = touhou_paragon.41123.name
+	desc = touhou_paragon.41123.desc
+	picture = GFX_evt_hifuu_rainbow
+	show_sound = ap_rift_event_0_astral_wonder
+	difficulty = @astral_rift_medium_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41123.a
+		explorer = { astral_thread_medium_reward = yes }
+		set_next_astral_rift_event = { id = touhou_paragon.41124 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41124
+	title = touhou_paragon.41124.name
+	desc = touhou_paragon.41124.desc
+	picture = GFX_evt_hifuu_rainbow
+	show_sound = ap_rift_event_0_astral_wonder
+	difficulty = @astral_rift_medium_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	specimen = hifuu_rainbow_bottle
+
+	option = {
+		name = touhou_paragon.41124.a
+		explorer = {
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_border_merry
+				}
+				add_experience = 300
+			}
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_star_located
+				}
+				add_experience = 300
+			}
+			add_resource = {
+				society_research = 1000
+			}
+		}
+		finish_astral_rift = yes
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41125
+	title = touhou_paragon.41125.name
+	desc = touhou_paragon.41125.desc
+	picture = GFX_evt_hifuu_rainbow
+	show_sound = ap_rift_event_0_astral_wonder
+	difficulty = @astral_rift_medium_plus_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41125.a
+		explorer = { astral_thread_small_reward = yes }
+		set_next_astral_rift_event = { id = touhou_paragon.41126 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41126
+	title = touhou_paragon.41126.name
+	desc = touhou_paragon.41126.desc
+	picture = GFX_evt_hifuu_rainbow
+	show_sound = ap_rift_event_0_astral_wonder
+	difficulty = @astral_rift_easy_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		allow = {
+			explorer = {
+				resource_stockpile_compare = {
+					resource = energy
+					value > 100
+				}
+			}
+		}
+		name = touhou_paragon.41126.a
+		explorer = {
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_border_merry
+				}
+				add_experience = 300
+			}
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_star_located
+				}
+				add_experience = 300
+			}
+			add_resource = {
+				energy = -100
+			}
+		}
+		set_next_astral_rift_event = { id = touhou_paragon.41127 }
+	}
+	option = {
+		name = touhou_paragon.41126.b
+		explorer = { astral_thread_small_reward = yes }
+		set_next_astral_rift_event = { id = touhou_paragon.41127 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41127
+	title = touhou_paragon.41127.name
+	desc = touhou_paragon.41127.desc
+	picture = GFX_evt_hifuu_rainbow
+	show_sound = ap_rift_event_0_astral_wonder
+	difficulty = @astral_rift_easy_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	specimen = hifuu_rainbow_bottle
+
+	option = {
+		name = touhou_paragon.41127.a
+		explorer = {
+			astral_thread_large_reward = yes
+			add_resource = {
+				energy = -500
+				society_research = 1000
+			}
+		}
+		finish_astral_rift = yes
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41128
+	title = touhou_paragon.41128.name
+	desc = touhou_paragon.41128.desc
+	picture = GFX_evt_hifuu_rainbow
+	show_sound = ap_rift_event_0_astral_wonder
+	difficulty = @astral_rift_easy_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41128.a
+		explorer = {
+			astral_thread_small_reward = yes
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_star_located
+				}
+				add_experience = 200
+			}
+		}
+		set_next_astral_rift_event = { id = touhou_paragon.41129 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41129
+	title = touhou_paragon.41129.name
+	desc = touhou_paragon.41129.desc
+	picture = GFX_evt_hifuu_rainbow
+	show_sound = ap_rift_event_0_astral_wonder
+	difficulty = @astral_rift_hard_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.41129.a
+		explorer = {
+			astral_thread_medium_reward = yes
+			random_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_border_merry
+				}
+				add_experience = 200
+			}
+		}
+		set_next_astral_rift_event = { id = touhou_paragon.41130 }
+	}
+}
+
+astral_rift_event = {
+	id = touhou_paragon.41130
+	title = touhou_paragon.41130.name
+	desc = touhou_paragon.41130.desc
+	picture = GFX_evt_hifuu_rainbow
+	show_sound = ap_rift_event_0_astral_wonder
+	difficulty = @astral_rift_hard_difficulty
+	astral_rift = yes
+	is_triggered_only = yes
+
+	specimen = hifuu_rainbow_bottle
+
+	option = {
+		name = touhou_paragon.41130.a
+		explorer = {
+			astral_thread_large_reward = yes
+			add_resource = {
+				society_research = 1000
+			}
+		}
+		finish_astral_rift = yes
 	}
 }

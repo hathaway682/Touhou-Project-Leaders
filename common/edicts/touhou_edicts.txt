@@ -115,7 +115,7 @@ rabbit_spy_touhou = {
 }
 
 gray_thaumaturgy = {
-	length = 360
+	length = -1
 	edict_lock_in_months = 12
 	icon = "GFX_edict_type_time"
 	potential = {
@@ -131,7 +131,7 @@ gray_thaumaturgy = {
 		}
 	}
 	modifier = {
-		planet_priests_unity_produces_add = -1
+		planet_bureaucrats_unity_produces_add = -1
 	}
 	effect = {
 		custom_tooltip = gray_thaumaturgy_effect

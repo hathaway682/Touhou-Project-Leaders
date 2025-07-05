@@ -1,0 +1,22 @@
+#############################
+# Grand Archive - Specimens #
+#############################
+
+hifuu_rainbow_bottle = {
+	icon = "GFX_specimen_hifuu_rainbow_bottle"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = exceptional
+	}
+
+	resources = {
+		category = specimens
+		produces = {
+			physics_research = 100
+			society_research = 100
+			engineering_research = 100
+		}
+	}
+}
