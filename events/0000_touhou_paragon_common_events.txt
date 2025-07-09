@@ -6093,7 +6093,9 @@ astral_rift_event = {
 
 	option = {
 		name = touhou_paragon.41120.a
-		explorer = { astral_thread_small_reward = yes }
+		explorer = {
+			astral_thread_small_reward = yes
+		}
 		set_next_astral_rift_event = { id = touhou_paragon.41121 }
 	}
 }

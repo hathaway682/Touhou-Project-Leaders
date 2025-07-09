@@ -689,9 +689,12 @@ country_event = {
 			}
 			count >= 5
 		}
-		any_owned_leader = {
-			is_councilor = yes
-			has_trait = thl_leader_trait_miracle
+		OR = {
+			any_owned_leader = {
+				is_councilor = yes
+				has_trait = thl_leader_trait_miracle
+			}
+			is_gestalt = yes
 		}
 	}
 	option = {
