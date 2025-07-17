@@ -1450,7 +1450,7 @@ maple_sugar_harvester = {
         time = @standard_promotion_time
         effect = {
             pop_amount_change_category = {
-                CATEGORY = specialist
+                CATEGORY = worker
                 AMOUNT = local_pop_amount
             }
         }
