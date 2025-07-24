@@ -3079,7 +3079,13 @@ leader_event = {
 					has_tradition = tr_cybernetics_finish
 					has_tradition = tr_synthetics_finish
 					has_tradition = tr_genetics_finish
+					has_tradition = tr_mutation_finish
+					has_tradition = tr_purity_finish
+					has_tradition = tr_cloning_finish
 					has_tradition = tr_psionics_finish
+					has_tradition = tr_modularity_finish
+					has_tradition = tr_nanotech_finish
+					has_tradition = tr_virtuality_finish
 				}
 			}
 		}
@@ -3126,7 +3132,7 @@ leader_event = {
 	option = {
 		trigger = {
 			owner = {
-				or = {
+				OR = {
 					has_tradition = tr_modularity_finish
 					has_tradition = tr_nanotech_finish
 					has_tradition = tr_virtuality_finish
@@ -3159,6 +3165,9 @@ leader_event = {
 		trigger = {
 			owner = {
 				has_tradition = tr_genetics_finish
+				has_tradition = tr_mutation_finish
+				has_tradition = tr_purity_finish
+				has_tradition = tr_cloning_finish
 			}
 		}
 		allow = {
@@ -3211,6 +3220,10 @@ leader_event = {
 					has_tradition = tr_cybernetics_finish
 					has_tradition = tr_synthetics_finish
 					has_tradition = tr_genetics_finish
+					has_tradition = tr_mutation_finish
+					has_tradition = tr_purity_finish
+					has_tradition = tr_cloning_finish
+					has_tradition = tr_psionics_finish
 					has_tradition = tr_modularity_finish
 					has_tradition = tr_nanotech_finish
 					has_tradition = tr_virtuality_finish
@@ -3243,6 +3256,10 @@ leader_event = {
 					has_tradition = tr_cybernetics_finish
 					has_tradition = tr_synthetics_finish
 					has_tradition = tr_genetics_finish
+					has_tradition = tr_mutation_finish
+					has_tradition = tr_purity_finish
+					has_tradition = tr_cloning_finish
+					has_tradition = tr_psionics_finish
 					has_tradition = tr_modularity_finish
 					has_tradition = tr_nanotech_finish
 					has_tradition = tr_virtuality_finish
