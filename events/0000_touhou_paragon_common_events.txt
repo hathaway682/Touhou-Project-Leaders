@@ -275,27 +275,64 @@ country_event = {
 				}
 				is_ai = no
 			}
-			capital_scope = {
-				solar_system = {
-					closest_system = {
-						limit = {
-							any_system_planet = {
-								is_colonizable = yes
-								is_colony = no
-							}
-						}
-						random_system_planet = {
-							limit = {
-								is_colonizable = yes
-								is_colony = no
-							}
-							add_anomaly = {
-								category = touhou_shrine_ruin
-								target = root
+			if = {
+				limit = {
+					capital_scope = {
+						solar_system = {
+							any_system = {
+								any_system_planet = {
+									is_colonizable = yes
+									is_colony = no
+								}
+								distance = {
+									source = prev
+									min_jumps = 1
+									max_jumps = 10
+									same_solar_system = no
+									use_bypasses = no
+								}
 							}
 						}
 					}
 				}
+				capital_scope = {
+					solar_system = {
+						closest_system = {
+							limit = {
+								any_system_planet = {
+									is_colonizable = yes
+									is_colony = no
+								}
+							}
+							random_system_planet = {
+								limit = {
+									is_colonizable = yes
+									is_colony = no
+								}
+								add_anomaly = {
+									category = touhou_shrine_ruin
+									target = root
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					capital_scope = {
+						has_anomaly = no
+					}
+				}
+				capital_scope = {
+					add_anomaly = {
+						category = touhou_shrine_ruin
+						target = root
+					}
+				}
+			}
+			else = {
+				set_country_flag = can_build_shirne
 			}
 		}
 		if = {
@@ -3164,10 +3201,12 @@ leader_event = {
 	option = {
 		trigger = {
 			owner = {
-				has_tradition = tr_genetics_finish
-				has_tradition = tr_mutation_finish
-				has_tradition = tr_purity_finish
-				has_tradition = tr_cloning_finish
+				OR = {
+					has_tradition = tr_genetics_finish
+					has_tradition = tr_mutation_finish
+					has_tradition = tr_purity_finish
+					has_tradition = tr_cloning_finish
+				}
 			}
 		}
 		allow = {
@@ -3411,8 +3450,8 @@ leader_event = {
 		add_trait = { trait = leader_trait_whisperers_chosen }
 		add_trait = { trait = trait_ruler_deep_connections_3 }
 		add_trait = { trait = leader_trait_reformer_3 }
-		add_trait = { trait = leader_trait_politician_2 }
-		add_trait = { trait = leader_trait_bureaucrat_2 }
+		add_trait = { trait = leader_trait_politician }
+		add_trait = { trait = leader_trait_bureaucrat }
 		add_trait = { trait = leader_trait_expertise_psionics }
 	}
 }

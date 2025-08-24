@@ -2882,6 +2882,14 @@ country_event = { # 阿求
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
 
+	trigger = {
+		NOT = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_memory
+			}
+		}
+	}
+
 	immediate = {
 		thl_ethic_leader_creator = {
 			LEADER = akyuu
