@@ -140,7 +140,7 @@ building_shrine = {
 				}
 			}
 			owner = {
-				country_event = { id = touhou_paragon.40612 days = 365 random = 180 }
+				country_event = { id = touhou_paragon.40612 days = 360 }
 				set_country_flag = saisen_box_active
 			}
 		}
@@ -553,7 +553,7 @@ building_hakurei_shrine_0 = {
 				}
 			}
 			owner = {
-				country_event = { id = touhou_paragon.40612 days = 365 random = 180 }
+				country_event = { id = touhou_paragon.40612 days = 360 }
 				set_country_flag = saisen_box_active
 			}
 		}

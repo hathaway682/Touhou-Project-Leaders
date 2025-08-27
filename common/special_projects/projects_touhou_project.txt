@@ -28,6 +28,25 @@ special_project = {
 }
 
 special_project = {
+	key = "MERRY_PLANETARY_SENSORS"
+	timelimit = -1
+	picture = GFX_evt_scholarium_anomaly
+	days_to_research = 60
+	icon = "gfx/interface/icons/situation_log/situation_log_tick.dds"
+	event_scope = ship_event
+	location = yes
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		ship_event = { id = touhou_paragon.41102 }
+	}
+}
+
+special_project = {
 	key = "GUNGNIR_SPECIAL_PROJECT"
 	timelimit = -1
 	picture = GFX_evt_exploding_ship
@@ -324,7 +343,6 @@ special_project = {
 	days_to_research = 30
 	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
 	event_scope = ship_event
-	event_chain = touhou_eientei
 	location = yes
 
 	requirements = {
@@ -332,7 +350,11 @@ special_project = {
 	}
 
 	on_success = {
+		fleet = {
+			set_fleet_flag = marisa_task_player_fleet
+		}
 		owner = {
+			set_country_flag = marisa_task_player_country
 			country_event = { id = touhou_paragon.40732 }
 		}
 	}

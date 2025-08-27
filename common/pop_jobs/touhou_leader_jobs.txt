@@ -490,6 +490,9 @@ dollmaker = {
         potential = {
             planet = {
                 check_variable_arithmetic = { which = value:doll_missing_per_maker value > 0 }
+                assembling_species = {
+                    has_trait = trait_thl_doll
+                }
             }
         }
         modifier = {
@@ -673,6 +676,9 @@ dollmaker_drone = {
         potential = {
             planet = {
                 check_variable_arithmetic = { which = value:doll_missing_per_maker value > 0 }
+                assembling_species = {
+                    has_trait = trait_thl_doll
+                }
             }
         }
         modifier = {
@@ -1444,7 +1450,7 @@ maple_sugar_harvester = {
         time = @standard_promotion_time
         effect = {
             pop_amount_change_category = {
-                CATEGORY = specialist
+                CATEGORY = worker
                 AMOUNT = local_pop_amount
             }
         }
@@ -1679,7 +1685,7 @@ izakaya_worker = {
     }
 
     planet_modifier = {
-        logistic_growth_mult = 0.01
+        logistic_growth_mult = 0.05
     }
 
     weight = {
@@ -1968,6 +1974,7 @@ magician_drone = {
         default = {
             condition_string = DRONE_JOB_TRIGGER
             building_icon = building_magic_academy
+            icon = magician
         }
     }
     possible_pre_triggers = {
@@ -2493,6 +2500,7 @@ miko_drone = {
         default = {
             condition_string = DRONE_JOB_TRIGGER
             building_icon = building_shrine
+            icon = miko
         }
         swap_type = {
             trigger = {

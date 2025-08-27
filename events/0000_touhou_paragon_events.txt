@@ -44,25 +44,8 @@ country_event = {
 				has_leader_flag = renowned_leader
 				has_leader_flag = legendary_leader
 			}
-			OR = {
-				NOR = {
-					has_trait = thl_leader_trait_regeneration
-					has_trait = thl_leader_trait_regeneration_2
-					has_trait = thl_leader_trait_regeneration_3
-				}
-				AND = {
-					has_trait = thl_leader_trait_regeneration
-					has_trait = thl_leader_trait_injured
-				}
-				AND = {
-					has_trait = thl_leader_trait_regeneration_2
-					has_trait = thl_leader_trait_injured_2
-				}
-				AND = {
-					has_trait = thl_leader_trait_regeneration_3
-					has_trait = thl_leader_trait_injured_3
-				}
-			}
+			thl_is_regeneration_leader = no
+			thl_is_immortal_akyuu = no
 		}
 	}
 
@@ -462,36 +445,6 @@ country_event = { # ethic leader lottery machine
 					}
 				}
 				ethic_leader_hire_event = { LEADER_ID = remilia EVENT_ID = touhou_paragon.41900 }
-			}
-			0 = { # 爱丽丝
-				modifier = {
-					add = value:touhou_leader_randomizer|ETHIC|materialist|ETHIC_NEG|spiritualist|LEADER_ID|alice|
-				}
-				ethic_leader_hire_event = { LEADER_ID = alice EVENT_ID = touhou_paragon.42000 }
-				modifier = {
-					factor = 0
-					NOT = {
-						any_owned_pop_group = {
-							is_robot_pop = yes
-							NOR = {
-								has_trait = trait_thl_doll
-								has_trait = trait_sanae_robot_worker
-							}
-						}
-					}
-				}
-				modifier = {
-					factor = 3
-					any_owned_leader = {
-						has_trait = thl_leader_trait_magic
-					}
-				}
-				modifier = {
-					factor = 3
-					any_owned_leader = {
-						has_trait = thl_leader_trait_elements
-					}
-				}
 			}
 			0 = { # 幽幽子
 				modifier = {
@@ -1728,6 +1681,11 @@ country_event = { # 莲子
 				set_leader_flag = legendary_leader
 				set_leader_flag = renko_leader
 			}
+			country_event = {
+				id = touhou_paragon.41101
+				days = 360
+				random = 1440
+			}
 		}
 	}
 }
@@ -2562,6 +2520,9 @@ country_event = { # 爱丽丝
 			}
 			set_country_flag = ask_patchouli
 		}
+		else = {
+			set_country_flag = ask_none
+		}
 	}
 
 	picture_event_data = {
@@ -2591,6 +2552,14 @@ country_event = { # 爱丽丝
 	option = {
 		name = touhou_paragon.42000.c
 		response_text = touhou_paragon.42000.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		trigger = {
+			has_country_flag = ask_none
+		}
+		name = touhou_paragon.42000.d.none
+		response_text = touhou_paragon.42000.d.none.response
 		is_dialog_only = yes
 	}
 	option = {
@@ -2912,6 +2881,14 @@ country_event = { # 阿求
 	#auto_opens = no
 	event_window_type = leader_recruit
 	notification_event_icon = "GFX_message_touhou_leaders"
+
+	trigger = {
+		NOT = {
+			any_owned_leader = {
+				has_trait = thl_leader_trait_memory
+			}
+		}
+	}
 
 	immediate = {
 		thl_ethic_leader_creator = {

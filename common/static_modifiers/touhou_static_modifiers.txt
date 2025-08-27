@@ -1004,3 +1004,16 @@ thl_modifier_suwako_faction_modifier_only_armor = {
 thl_modifier_suwako_faction_modifier_only_shield = {
 	ship_shield_mult = 1000
 }
+
+modifier_alice_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_alice.dds"
+	icon_frame = 1
+	pop_amenities_usage_mult = -0.07
+}
+
+modifier_alice_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_alice.dds"
+	icon_frame = 1
+	pop_amenities_usage_mult = -0.14
+	planet_jobs_unity_produces_mult = 0.14
+}

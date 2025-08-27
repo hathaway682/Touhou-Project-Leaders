@@ -228,6 +228,7 @@ civic_moriya_shinto = {
 		base = 0
 	}
 	modifier = {
+		planet_bureaucrats_produces_mult = 0.15
 		all_technology_research_speed = 0.1
 		planet_building_build_speed_mult = 0.25
 	}
@@ -299,6 +300,7 @@ civic_moriya_shinto_corp = {
 		base = 0
 	}
 	modifier = {
+		planet_bureaucrats_produces_mult = 0.15
 		all_technology_research_speed = 0.1
 		planet_building_build_speed_mult = 0.25
 	}

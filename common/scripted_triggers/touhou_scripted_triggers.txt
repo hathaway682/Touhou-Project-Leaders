@@ -630,21 +630,18 @@ dolls_assembly_trigger = {
 
 thl_is_regeneration_leader = {
 	OR = {
-		has_trait = thl_leader_trait_regeneration
-		has_trait = thl_leader_trait_regeneration_2
-		has_trait = thl_leader_trait_regeneration_3
-	}
-	NAND = {
-		has_trait = thl_leader_trait_regeneration
-		has_trait = thl_leader_trait_injured
-	}
-	NAND = {
-		has_trait = thl_leader_trait_regeneration_2
-		has_trait = thl_leader_trait_injured_2
-	}
-	NAND = {
-		has_trait = thl_leader_trait_regeneration_3
-		has_trait = thl_leader_trait_injured_3
+		AND = {
+			has_trait = thl_leader_trait_regeneration
+			NOT = { has_trait = thl_leader_trait_injured }
+		}
+		AND = {
+			has_trait = thl_leader_trait_regeneration_2
+			NOT = { has_trait = thl_leader_trait_injured_2 }
+		}
+		AND = {
+			has_trait = thl_leader_trait_regeneration_3
+			NOT = { has_trait = thl_leader_trait_injured_3 }
+		}
 	}
 	OR = {
 		is_immortal = yes

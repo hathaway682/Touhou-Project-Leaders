@@ -82,7 +82,7 @@ situation_event = {
                     limit = {
                         has_trait = thl_leader_trait_nuclear
                     }
-                    add_trait = thl_leader_trait_utsuho_sequela
+                    add_trait = { trait = thl_leader_trait_utsuho_sequela }
                 }
             }
         }
@@ -109,7 +109,7 @@ situation_event = {
                     limit = {
                         has_trait = thl_leader_trait_nuclear
                     }
-                    add_trait = thl_leader_trait_injured_2
+                    add_trait = { trait = thl_leader_trait_injured_2 }
                 }
             }
         }

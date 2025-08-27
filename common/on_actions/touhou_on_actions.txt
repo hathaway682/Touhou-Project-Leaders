@@ -67,6 +67,7 @@ on_monthly_pulse_country = {
 		touhou_war_in_heaven.12
 		touhou_war_in_heaven.14
 		touhou_war_in_heaven.16
+		touhou_paragon.40736
 	}
 }
 
@@ -449,7 +450,6 @@ on_space_battle_won = {
 # This fires whenever a fleet is finished with a combat through any means (emergency ftl, destroyed, disabled)
 on_space_battle_lost = {
 	events = {
-		touhou_paragon.40736
 		touhou_paragon_effect.507
 		touhou_paragon_effect.54
 	}
@@ -462,5 +462,13 @@ on_space_battle_lost = {
 on_war_won = {
 	events = {
 		touhou_paragon_effect.40720
+	}
+}
+
+# A planet has been colonized.
+# Scope = Planet
+on_colonized = {
+	events = {
+		touhou_paragon.50010 #提示在星球决议中修复神社
 	}
 }

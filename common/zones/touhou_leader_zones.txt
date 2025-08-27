@@ -1,6 +1,7 @@
 zone_garden = {
 	icon = GFX_zone_garden
 	base_buildtime = @zone_buildtime
+
 	potential = { # planet scope
 		exists = owner
 		owner = {
@@ -34,6 +35,10 @@ zone_garden = {
 	inline_script = {
 		script = jobs/zone_growers_add
 		AMOUNT = @scaling_district_1_job
+	}
+
+	zone_sets = {
+		food
 	}
 
 	included_building_sets = {
@@ -94,6 +99,10 @@ zone_rw_garden = {
 		}
 	}
 
+	zone_sets = {
+		food
+	}
+
 	included_building_sets = {
 		farming
 		hydroponics
@@ -102,8 +111,12 @@ zone_rw_garden = {
 	}
 
 	inline_script = {
-		script = jobs/zone_growers_add
-		AMOUNT = @scaling_district_1_job
+		script = zones/shared_food_zone
+		AMOUNT = @doubled_scaling_district_1_job
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
 	}
 
 	planet_modifier = {
@@ -147,6 +160,10 @@ zone_anglers = {
 	inline_script = {
 		script = jobs/zone_farmers_add
 		AMOUNT = @scaling_district_1_job
+	}
+
+	zone_sets = {
+		food
 	}
 
 	included_building_sets = {

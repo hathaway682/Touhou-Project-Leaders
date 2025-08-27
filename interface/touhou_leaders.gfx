@@ -378,6 +378,28 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_hifuu_rainbow"
+		texturefile = "gfx/event_pictures/hifuu_rainbow.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_hifuu_rainbow_moon"
+		texturefile = "gfx/event_pictures/hifuu_rainbow_moon.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_hifuu_island"
+		texturefile = "gfx/event_pictures/hifuu_island.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_specimen_hifuu_rainbow_bottle"
+		texturefile = "gfx/interface/icons/specimens/hifuu_rainbow_bottle.dds"
+	}
 
 	spriteType = {
 		name = "GFX_button_upgrade_ascension_tier_selected"
