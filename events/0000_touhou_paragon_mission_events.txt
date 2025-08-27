@@ -615,6 +615,9 @@ country_event = {
 			has_tradition = tr_nanotech_finish
 			has_tradition = tr_virtuality_finish
 		}
+		From = {
+			is_same_species = root.owner_main_species
+		}
 	}
 	option = {
 		name = touhou_paragon_mission.40309.b
@@ -634,7 +637,7 @@ country_event = {
 		}
 		every_owned_pop_group =  {
 			limit = {
-				is_exact_same_species = root.owner_main_species
+				is_same_species = root.owner_main_species
 				species = {
 					has_psionic_species_trait = no
 				}
