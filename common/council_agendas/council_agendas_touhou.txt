@@ -4,7 +4,10 @@ agenda_recruit_talent = {
 	allow = {
 		OR = {
 			has_technology = tech_xeno_linguistics
-			has_technology = tech_autonomous_agents
+			AND = {
+				is_gestalt = yes
+				has_technology = tech_planetary_unification
+			}
 		}
 	}
 	potential = {

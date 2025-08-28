@@ -188,9 +188,21 @@ country_event = {
 					count >= 7500
 				}
 			}
+			AND = {
+				OR = {
+					has_ethic = "ethic_gestalt_consciousness"
+					is_individual_machine = no
+				}
+			}
 		}
 	}
 	option = {
+		trigger = {
+			NOT = {
+				has_ethic = "ethic_gestalt_consciousness"
+				is_individual_machine = no
+			}
+		}
 		name = touhou_paragon_mission.40304.a
 		add_modifier = {
 			modifier = modifier_sanae_mission_tech_1
@@ -262,6 +274,31 @@ country_event = {
 			}
 		}
 	}
+	option = {
+		trigger = {
+			AND = {
+				has_ethic = "ethic_gestalt_consciousness"
+				is_individual_machine = no
+			}
+		}
+		name = touhou_paragon_mission.40304.b
+		add_monthly_resource_mult = {
+			resource = engineering_research
+			value = @tier1researchreward
+			min = @tier1researchmin
+			max = @tier1researchmax
+		}
+		hidden_effect = {
+			update_sanae_phase_trait = yes
+			remove_point_of_interest = touhou_sanae_mission_chain_tech.1
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_tech.2
+				name = "touhou_sanae_mission_chain_tech_name"
+				desc = "touhou_sanae_mission_chain_tech_2_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
 }
 
 country_event = {
@@ -283,11 +320,28 @@ country_event = {
 	}
 	option = {
 		name = touhou_paragon_mission.40305.a
-		every_owned_leader = {
+		if = {
 			limit = {
-				has_trait = thl_leader_trait_miracle
+				is_gestalt = no
 			}
-			add_trait = { trait = trait_ruler_touhou_architectural_sense }
+			every_owned_leader = {
+				limit = {
+					has_trait = thl_leader_trait_miracle
+				}
+				add_trait = { trait = trait_ruler_touhou_architectural_sense }
+			}
+		}
+		else_if = {
+			limit = {
+				is_gestalt = yes
+			}
+			every_owned_leader = {
+				limit = {
+					is_gestalt_node = yes
+					has_trait = subclass_official_economy_councilor
+				}
+				add_trait = trait_ruler_touhou_architectural_sense
+			}
 		}
 		add_resource = {
 			rare_crystals = 200
