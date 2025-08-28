@@ -564,14 +564,14 @@ thl_leader_trait_robotist_sanae = {
 		planet_pops_robotics_upkeep_mult = -0.1
 	}
 	planet_modifier = {
-		robotic_pop_bonus_workforce_mult = 0.4
-	 	planet_pop_assemblers_upkeep_mult = 0.4
-	 	planet_pops_robotics_upkeep_mult = 0.4
+		robotic_pop_bonus_workforce_mult = 0.2
+	 	#planet_pop_assemblers_upkeep_mult = 0.4
+	 	planet_pops_robotics_upkeep_mult = 0.2
 	}
 	sector_modifier = {
-		robotic_pop_bonus_workforce_mult = 0.2
-	 	planet_pop_assemblers_upkeep_mult = 0.2
-	 	planet_pops_robotics_upkeep_mult = 0.2
+		robotic_pop_bonus_workforce_mult = 0.1
+	 	#planet_pop_assemblers_upkeep_mult = 0.2
+	 	planet_pops_robotics_upkeep_mult = 0.1
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -693,9 +693,11 @@ thl_leader_trait_theurgist = {
 	}
 	planet_modifier = {
 		pop_miko_bonus_workforce_mult = 0.1
+		pop_miko_drone_bonus_workforce_mult = 0.1
 	}
 	sector_modifier = {
 		pop_miko_bonus_workforce_mult = 0.05
+		pop_miko_drone_bonus_workforce_mult = 0.05
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
@@ -773,9 +775,11 @@ thl_leader_trait_theurgist_2 = {
 	}
 	planet_modifier = {
 		pop_miko_bonus_workforce_mult = 0.2
+		pop_miko_drone_bonus_workforce_mult = 0.2
 	}
 	sector_modifier = {
 		pop_miko_bonus_workforce_mult = 0.1
+		pop_miko_drone_bonus_workforce_mult = 0.1
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
@@ -850,9 +854,11 @@ thl_leader_trait_theurgist_3 = {
 	}
 	planet_modifier = {
 		pop_miko_bonus_workforce_mult = 0.3
+		pop_miko_drone_bonus_workforce_mult = 0.3
 	}
 	sector_modifier = {
 		pop_miko_bonus_workforce_mult = 0.15
+		pop_miko_drone_bonus_workforce_mult = 0.15
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
@@ -3853,7 +3859,7 @@ thl_leader_trait_longer_life = {
 	}
 	
 	self_modifier = {
-		leader_lifespan_add = 50
+		leader_lifespan_add = 25
 	}
 	leader_class = { commander scientist official }
 	selectable_weight = {

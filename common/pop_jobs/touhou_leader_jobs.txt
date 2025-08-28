@@ -2435,7 +2435,7 @@ miko = {
                 has_planet_flag = sizuha_planet
             }
         }
-        planet_jobs_upkeep_mult = -0.05
+        planet_jobs_upkeep_mult = -0.025
     }
 
     triggered_planet_modifier = {
@@ -2444,7 +2444,7 @@ miko = {
                 has_planet_flag = minoriko_planet
             }
         }
-        planet_jobs_produces_mult = 0.05
+        planet_jobs_produces_mult = 0.025
     }
 
     triggered_planet_modifier = {
@@ -2453,7 +2453,7 @@ miko = {
                 has_planet_flag = hina_planet
             }
         }
-        planet_stability_add = 5
+        planet_stability_add = 2.5
     }
 
     weight = {
@@ -2896,7 +2896,7 @@ miko_drone = {
                 has_planet_flag = sizuha_planet
             }
         }
-        planet_jobs_upkeep_mult = -0.05
+        planet_jobs_upkeep_mult = -0.025
     }
 
     triggered_planet_modifier = {
@@ -2905,7 +2905,7 @@ miko_drone = {
                 has_planet_flag = minoriko_planet
             }
         }
-        planet_jobs_produces_mult = 0.05
+        planet_jobs_produces_mult = 0.025
     }
 
     triggered_planet_modifier = {
@@ -2914,11 +2914,13 @@ miko_drone = {
                 has_planet_flag = hina_planet
             }
         }
-        planet_stability_add = 5
+        planet_stability_add = 2.5
     }
 
     weight = {
         weight = @complex_drone_job_weight
+        mult = value:job_weights_modifier|JOB|miko_drone|RESOURCE|unity|
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             factor = 0.9
             exists = owner

@@ -251,6 +251,7 @@
  thl_leader_trait_frog_bless:0 "坤神加护"
  thl_leader_trait_frog_bless_desc:1 "这位领袖可以使用来自坤之神洩矢诹访子的神力，改变地形，抵抗敌人。"
  mod_pop_miko_bonus_workforce_mult: "[miko.GetNamePlural]的岗位效率"
+ mod_pop_miko_drone_bonus_workforce_mult: "[miko_drone.GetNamePlural]的岗位效率"
  #leader_trait_moriya_preacher:0 "守矢布道者"
  #leader_trait_moriya_preacher_desc:1 "这位领袖为我们的国家带来了结合古代泛灵论和现代科学的独特信仰。"
  #leader_trait_moriya_preacher_effect:0 ""

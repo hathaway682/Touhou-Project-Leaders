@@ -686,6 +686,14 @@ situation_event = {
     location = target
     option = {
         name = touhou_paragon_situation.40320.a
+        trigger = {
+            owner = {
+                or = {
+                    is_xenophobe = yes
+                    is_authoritarian = yes
+                }
+            }
+        }
         allow = {
             owner = {
                 or = {
@@ -706,6 +714,14 @@ situation_event = {
     }
     option = {
         name = touhou_paragon_situation.40320.b
+        trigger = {
+            owner = {
+                or = {
+                    is_militarist = yes
+                    is_spiritualist = yes
+                }
+            }
+        }
         allow = {
             owner = {
                 or = {
@@ -723,6 +739,14 @@ situation_event = {
     }
     option = {
         name = touhou_paragon_situation.40320.c
+        trigger = {
+            owner = {
+                or = {
+                    is_egalitarian = yes
+                    is_materialist = yes
+                }
+            }
+        }
         allow = {
             owner = {
                 or = {
@@ -744,6 +768,14 @@ situation_event = {
     }
     option = {
         name = touhou_paragon_situation.40320.d
+        trigger = {
+            owner = {
+                or = {
+                    is_xenophile = yes
+                    is_pacifist = yes
+                }
+            }
+        }
         allow = {
             owner = {
                 or = {
@@ -1003,6 +1035,14 @@ situation_event = {
     }
     option = {
         name = touhou_paragon_situation.40362.c
+        trigger = {
+            owner = {
+                or = {
+                    has_authority = auth_imperial
+                    has_authority = auth_dictatorial
+                }
+            }
+        }
         allow = {
             owner = {
                 or = {

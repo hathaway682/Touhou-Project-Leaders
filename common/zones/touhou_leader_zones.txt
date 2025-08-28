@@ -44,9 +44,9 @@ zone_garden = {
 	included_building_sets = {
 		farming
 		hydroponics
-		automation
+		farming_automation
 		fallen_empire_farming
-		flower
+		#flower
 	}
 
 	planet_modifier = {
@@ -106,7 +106,7 @@ zone_rw_garden = {
 	included_building_sets = {
 		farming
 		hydroponics
-		automation
+		farming_automation
 		fallen_empire_farming
 	}
 

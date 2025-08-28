@@ -3336,7 +3336,11 @@ leader_event = {
 
 	option = {
 		name = touhou_paragon.42412.a
-		add_trait = { trait = thl_leader_trait_longer_life }
+		add_trait = thl_leader_trait_longer_life
+		leader_event = {
+			id = touhou_paragon.42411
+			days = 7200
+		}
 	}
 }
 
