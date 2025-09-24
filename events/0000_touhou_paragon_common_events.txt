@@ -1010,14 +1010,12 @@ leader_event = {
 			owner = {
 				NOR = {
 					is_spiritualist = yes
-					has_modifier = covenant_composer_of_strands_0
-					has_modifier = covenant_composer_of_strands
-					has_modifier = covenant_eater_of_worlds_0
-					has_modifier = covenant_eater_of_worlds
-					has_modifier = covenant_instrument_of_desire_0
-					has_modifier = covenant_instrument_of_desire
-					has_modifier = covenant_whisperers_in_the_void_0
-					has_modifier = covenant_whisperers_in_the_void
+					has_covenant_with_end_of_the_cycle = yes
+					has_covenant_with_the_composer_of_strands = yes
+					has_covenant_with_the_cradle_of_souls = yes
+					has_covenant_with_the_eater_of_worlds = yes
+					has_covenant_with_the_instrument_of_desire = yes
+					has_covenant_with_whisperers_in_the_void = yes
 				}
 			}
 		}
@@ -1038,14 +1036,12 @@ leader_event = {
 			owner = {
 				NOR = {
 					is_spiritualist = yes
-					has_modifier = covenant_composer_of_strands_0
-					has_modifier = covenant_composer_of_strands
-					has_modifier = covenant_eater_of_worlds_0
-					has_modifier = covenant_eater_of_worlds
-					has_modifier = covenant_instrument_of_desire_0
-					has_modifier = covenant_instrument_of_desire
-					has_modifier = covenant_whisperers_in_the_void_0
-					has_modifier = covenant_whisperers_in_the_void
+					has_covenant_with_end_of_the_cycle = yes
+					has_covenant_with_the_composer_of_strands = yes
+					has_covenant_with_the_cradle_of_souls = yes
+					has_covenant_with_the_eater_of_worlds = yes
+					has_covenant_with_the_instrument_of_desire = yes
+					has_covenant_with_whisperers_in_the_void = yes
 				}
 			}
 		}
@@ -1061,14 +1057,7 @@ leader_event = {
 			owner = {
 				NOR = {
 					is_spiritualist = yes
-					has_modifier = covenant_composer_of_strands_0
-					has_modifier = covenant_composer_of_strands
-					has_modifier = covenant_eater_of_worlds_0
-					has_modifier = covenant_eater_of_worlds
-					has_modifier = covenant_instrument_of_desire_0
-					has_modifier = covenant_instrument_of_desire
-					has_modifier = covenant_whisperers_in_the_void_0
-					has_modifier = covenant_whisperers_in_the_void
+					has_tradition = tr_psionics_shroud_finish
 				}
 			}
 		}
@@ -1086,14 +1075,12 @@ leader_event = {
 			owner = {
 				OR = {
 					is_spiritualist = yes
-					has_modifier = covenant_composer_of_strands_0
-					has_modifier = covenant_composer_of_strands
-					has_modifier = covenant_eater_of_worlds_0
-					has_modifier = covenant_eater_of_worlds
-					has_modifier = covenant_instrument_of_desire_0
-					has_modifier = covenant_instrument_of_desire
-					has_modifier = covenant_whisperers_in_the_void_0
-					has_modifier = covenant_whisperers_in_the_void
+					has_covenant_with_end_of_the_cycle = yes
+					has_covenant_with_the_composer_of_strands = yes
+					has_covenant_with_the_cradle_of_souls = yes
+					has_covenant_with_the_eater_of_worlds = yes
+					has_covenant_with_the_instrument_of_desire = yes
+					has_covenant_with_whisperers_in_the_void = yes
 				}
 			}
 		}
@@ -1114,14 +1101,12 @@ leader_event = {
 			owner = {
 				OR = {
 					is_spiritualist = yes
-					has_modifier = covenant_composer_of_strands_0
-					has_modifier = covenant_composer_of_strands
-					has_modifier = covenant_eater_of_worlds_0
-					has_modifier = covenant_eater_of_worlds
-					has_modifier = covenant_instrument_of_desire_0
-					has_modifier = covenant_instrument_of_desire
-					has_modifier = covenant_whisperers_in_the_void_0
-					has_modifier = covenant_whisperers_in_the_void
+					has_covenant_with_end_of_the_cycle = yes
+					has_covenant_with_the_composer_of_strands = yes
+					has_covenant_with_the_cradle_of_souls = yes
+					has_covenant_with_the_eater_of_worlds = yes
+					has_covenant_with_the_instrument_of_desire = yes
+					has_covenant_with_whisperers_in_the_void = yes
 				}
 			}
 		}
@@ -1137,14 +1122,12 @@ leader_event = {
 			owner = {
 				OR = {
 					is_spiritualist = yes
-					has_modifier = covenant_composer_of_strands_0
-					has_modifier = covenant_composer_of_strands
-					has_modifier = covenant_eater_of_worlds_0
-					has_modifier = covenant_eater_of_worlds
-					has_modifier = covenant_instrument_of_desire_0
-					has_modifier = covenant_instrument_of_desire
-					has_modifier = covenant_whisperers_in_the_void_0
-					has_modifier = covenant_whisperers_in_the_void
+					has_covenant_with_end_of_the_cycle = yes
+					has_covenant_with_the_composer_of_strands = yes
+					has_covenant_with_the_cradle_of_souls = yes
+					has_covenant_with_the_eater_of_worlds = yes
+					has_covenant_with_the_instrument_of_desire = yes
+					has_covenant_with_whisperers_in_the_void = yes
 				}
 			}
 		}
@@ -1312,14 +1295,12 @@ leader_event = {
 			}
 			owner = {
 				OR = {
-					has_modifier = covenant_composer_of_strands_0
-					has_modifier = covenant_composer_of_strands
-					has_modifier = covenant_eater_of_worlds_0
-					has_modifier = covenant_eater_of_worlds
-					has_modifier = covenant_instrument_of_desire_0
-					has_modifier = covenant_instrument_of_desire
-					has_modifier = covenant_whisperers_in_the_void_0
-					has_modifier = covenant_whisperers_in_the_void
+					has_covenant_with_end_of_the_cycle = yes
+					has_covenant_with_the_composer_of_strands = yes
+					has_covenant_with_the_cradle_of_souls = yes
+					has_covenant_with_the_eater_of_worlds = yes
+					has_covenant_with_the_instrument_of_desire = yes
+					has_covenant_with_whisperers_in_the_void = yes
 				}
 			}
 		}
@@ -1358,46 +1339,50 @@ leader_event = {
 		if = {
 			limit = {
 				owner = {
-					OR = {
-						has_modifier = covenant_composer_of_strands_0
-						has_modifier = covenant_composer_of_strands
-					}
+					has_covenant_with_the_composer_of_strands = yes
 				}
 			}
 			add_trait = { trait = leader_trait_composer_chosen }
+			add_attunement = { the_composer_of_strands = 100 }
 		}
 		if = {
 			limit = {
 				owner = {
-					OR = {
-						has_modifier = covenant_eater_of_worlds_0
-						has_modifier = covenant_eater_of_worlds
-					}
+					has_covenant_with_the_eater_of_worlds = yes
 				}
 			}
 			add_trait = { trait = leader_trait_eater_chosen }
+			add_attunement = { the_eater_of_worlds = 100 }
 		}
 		if = {
 			limit = {
 				owner = {
-					OR = {
-						has_modifier = covenant_instrument_of_desire_0
-						has_modifier = covenant_instrument_of_desire
-					}
+					has_covenant_with_the_instrument_of_desire = yes
 				}
 			}
 			add_trait = { trait = leader_trait_instrument_chosen }
+			add_attunement = { the_instrument_of_desire = 100 }
 		}
 		if = {
 			limit = {
 				owner = {
-					OR = {
-						has_modifier = covenant_whisperers_in_the_void_0
-						has_modifier = covenant_whisperers_in_the_void
-					}
+					has_covenant_with_whisperers_in_the_void = yes
 				}
 			}
 			add_trait = { trait = leader_trait_whisperers_chosen }
+			add_attunement = { whisperers_in_the_void = 100 }
+		}
+		if = {
+			limit = {
+				owner = {
+					has_covenant_with_the_cradle_of_souls = yes
+				}
+			}
+			add_trait = { trait = leader_trait_cradle_chosen }
+			add_attunement = { the_cradle_of_souls = 100 }
+		}
+		else = {
+			add_trait = { trait = leader_trait_chosen }
 		}
 		custom_tooltip = touhou_paragon.40610.psi_god.tooltip
 	}
@@ -3019,6 +3004,7 @@ leader_event = {
 					has_tradition = tr_modularity_finish
 					has_tradition = tr_nanotech_finish
 					has_tradition = tr_virtuality_finish
+					has_tradition = tr_psionics_shroud_finish
 				}
 			}
 		}
@@ -3061,26 +3047,28 @@ leader_event = {
 	desc = {
 		trigger = {
 			owner = {
-				has_tradition = tr_psionics_finish
-				NOR = {
-					has_modifier = covenant_whisperers_in_the_void
-					has_modifier = covenant_whisperers_in_the_void_0
+				OR = {
+					has_tradition = tr_psionics_finish
+					has_tradition = tr_psionics_shroud_finish
+				}
+				NOT = {
+					is_cardinal_patron = whisperers_in_the_void
 				}
 			}
 		}
 		text = touhou_paragon.42411.psi
 	}
 	desc = {
-		trigger = {
-			owner = {
-				has_tradition = tr_psionics_finish
+	 	trigger = {
+	 		owner = {
 				OR = {
-					has_modifier = covenant_whisperers_in_the_void
-					has_modifier = covenant_whisperers_in_the_void_0
+					has_tradition = tr_psionics_finish
+					has_tradition = tr_psionics_shroud_finish
 				}
-			}
+				is_cardinal_patron = whisperers_in_the_void
+	 		}
 		}
-		text = touhou_paragon.42411.psi_parton
+	 	text = touhou_paragon.42411.psi_parton
 	}
 	picture = GFX_evt_akyuu_longevity
 	show_sound = event_default
@@ -3120,6 +3108,7 @@ leader_event = {
 					has_tradition = tr_purity_finish
 					has_tradition = tr_cloning_finish
 					has_tradition = tr_psionics_finish
+					has_tradition = tr_psionics_shroud_finish
 					has_tradition = tr_modularity_finish
 					has_tradition = tr_nanotech_finish
 					has_tradition = tr_virtuality_finish
@@ -3233,8 +3222,17 @@ leader_event = {
 	option = {
 		trigger = {
 			owner = {
-				has_tradition = tr_psionics_finish
+				OR = {
+					has_tradition = tr_psionics_finish
+					has_tradition = tr_psionics_shroud_finish
+				}
 			}
+		}
+		if = {
+			limit = {
+				is_cardinal_patron = whisperers_in_the_void
+			}
+			add_attunement = { whisperers_in_the_void = 100 }
 		}
 		name = touhou_paragon.42411.e
 		leader_event = { id = touhou_paragon.42416 }
@@ -3263,6 +3261,7 @@ leader_event = {
 					has_tradition = tr_purity_finish
 					has_tradition = tr_cloning_finish
 					has_tradition = tr_psionics_finish
+					has_tradition = tr_psionics_shroud_finish
 					has_tradition = tr_modularity_finish
 					has_tradition = tr_nanotech_finish
 					has_tradition = tr_virtuality_finish
@@ -3299,6 +3298,7 @@ leader_event = {
 					has_tradition = tr_purity_finish
 					has_tradition = tr_cloning_finish
 					has_tradition = tr_psionics_finish
+					has_tradition = tr_psionics_shroud_finish
 					has_tradition = tr_modularity_finish
 					has_tradition = tr_nanotech_finish
 					has_tradition = tr_virtuality_finish
