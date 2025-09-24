@@ -101,3 +101,27 @@ moriya_shirne_cap = {
 	category = country
 	percentage = no
 }
+
+immune_to_terrify = {
+	good = yes
+	category = ship
+	percentage = no
+}
+
+immune_chance_terrify = {
+	good = no
+	category = ship
+	percentage = no
+}
+
+terrify_duration_add = {
+	good = yes
+	category = ship
+	percentage = no
+}
+
+terrify_duration_mult = {
+	good = yes
+	category = ship
+	percentage = no
+}

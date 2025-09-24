@@ -115,8 +115,8 @@ subclass_commander_miko = {
 				is_gestalt = no
 			}
 		}
-		#planet_jobs_ruler_produces_mult = 0.02 #先注释掉吧
-		#planet_jobs_specialist_produces_mult = 0.02
+		planet_jobs_ruler_produces_mult = 0.02
+		planet_jobs_specialist_produces_mult = 0.02
 		job_soldier_or_warrior_add = -100
 		job_miko_add = 100
 		multiplier = trigger:has_base_skill
@@ -127,8 +127,8 @@ subclass_commander_miko = {
 				is_gestalt = no
 			}
 		}
-		#planet_jobs_ruler_produces_mult = 0.01
-		#planet_jobs_specialist_produces_mult = 0.01
+		planet_jobs_ruler_produces_mult = 0.01
+		planet_jobs_specialist_produces_mult = 0.01
 		job_soldier_or_warrior_add = -50
 		job_miko_add = 50
 		multiplier = trigger:has_base_skill
@@ -139,8 +139,8 @@ subclass_commander_miko = {
 				is_gestalt = yes
 			}
 		}
-		#planet_jobs_ruler_produces_mult = 0.02 #先注释掉吧
-		#planet_jobs_specialist_produces_mult = 0.02
+		planet_jobs_ruler_produces_mult = 0.02
+		planet_jobs_specialist_produces_mult = 0.02
 		job_soldier_or_warrior_add = -100
 		job_miko_drone_add = 100
 		multiplier = trigger:has_base_skill
@@ -151,8 +151,8 @@ subclass_commander_miko = {
 				is_gestalt = yes
 			}
 		}
-		#planet_jobs_ruler_produces_mult = 0.01
-		#planet_jobs_specialist_produces_mult = 0.01
+		planet_jobs_ruler_produces_mult = 0.01
+		planet_jobs_specialist_produces_mult = 0.01
 		job_soldier_or_warrior_add = -50
 		job_miko_drone_add = 50
 		multiplier = trigger:has_base_skill
@@ -237,7 +237,6 @@ thl_leader_trait_crimson_sword = {
 	army_modifier = {
 		army_morale_damage_mult = 0.5
 		army_morale = 0.25
-
 	}
 	leader_class = { commander }
 	leader_trait_type = veteran
@@ -346,6 +345,7 @@ thl_leader_trait_oni_power = {
 		ship_hull_mult = 0.1
 		ship_fire_rate_mult = 0.33
 		ship_disengage_chance_mult = -0.33
+		immune_chance_terrify = -10
 	}
 	army_modifier = {
 		army_damage_mult = 0.33
@@ -1200,6 +1200,7 @@ thl_leader_trait_kongfu = {
 		ship_armor_mult = 0.75
 		ship_armor_hardening_add = 1
 		ship_armor_penetration_add = 1
+		immune_chance_terrify = -10
 	}
 	on_gained_effect = {
 		change_background_job = doorman
@@ -1237,6 +1238,7 @@ thl_leader_trait_fly = {
 		ship_disengage_chance_mult = 1
 		ship_emergency_ftl_mult = -1
 		fleet_mia_time_mult = -1
+		immune_chance_terrify = -10
 	}
 	on_gained_effect = {
 		change_background_job = miko
@@ -1772,6 +1774,7 @@ thl_leader_trait_wave_length = {
 		ship_shield_hardening_add = 1
 		ship_shield_penetration_add = 1
 		ship_cloaking_strength_add = 6
+		immune_chance_terrify = -10
 	}
 	army_modifier = {
 		army_damage_taken_mult = -0.25
@@ -1932,6 +1935,7 @@ leader_trait_wholehearted = {
 	}
 	fleet_modifier = {
 		ship_experience_gain_mult = 1
+		immune_chance_terrify = -10
 	}
 	army_modifier = {
 		army_experience_gain_mult = 1
@@ -2361,6 +2365,7 @@ thl_leader_trait_subconscious = {
 	fleet_modifier = {
 		ship_evasion_add = 514
 		ship_cloaking_strength_add = 514
+		immune_chance_terrify = -51.4
 	}
 	on_gained_effect = {
 		change_background_job = none
@@ -2848,6 +2853,7 @@ thl_leader_trait_blood_magic = {
 		weapon_type_strike_craft_weapon_damage_mult = 0.6
 		weapon_type_energy_weapon_damage_mult = 0.3
 		weapon_type_kinetic_weapon_damage_mult = 0.3
+		immune_chance_terrify = -10
 	}
 	leader_class = { commander }
 	selectable_weight = {
@@ -3532,6 +3538,7 @@ thl_leader_trait_sleeping_terror = {
 		pop_cat_worker_political_power = -0.25
 		espionage_hostile_operation_difficulty_add = 4
 		bioship_growth_progress_mult = 1
+		immune_chance_terrify = -10
 	}
 	leader_class = { official }
 	selectable_weight = {
@@ -4122,6 +4129,7 @@ thl_leader_trait_bird_brain = {
 	}
 	fleet_modifier = {
 		ship_disengage_chance_reduction = 10
+		immune_chance_terrify = -10
 	}
 	army_modifier = {
 		army_disengage_chance_mult = -10
@@ -5480,6 +5488,7 @@ thl_leader_trait_godness_of_war = {
 		weapon_role_artillery_weapon_damage_mult = 0.3
 		weapon_role_artillery_weapon_fire_rate_mult = 0.3
 		ship_speed_mult = 0.3
+		immune_chance_terrify = -10
 	}
 
 	councilor_modifier = {
@@ -5576,6 +5585,7 @@ thl_leader_trait_no_fear_of_storm = {
 		damage_vs_country_type_gray_goo_mult = 1
 		damage_vs_player_crisis_mult = 1
 		damage_vs_rival_mult = 0.5
+		immune_chance_terrify = -10
 	}
 
 	councilor_modifier = {

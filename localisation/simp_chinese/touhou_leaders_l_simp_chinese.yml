@@ -136,7 +136,7 @@
  thl_leader_trait_density_desc:1 "这位领袖的能力可以使自身雾化躲避攻击，在呼吸间制造出大量小型分身，将自身变为雾气用于监视或侦察，或是萃集起人心来使居民更加团结一致，甚至能直接通过聚集的能力吸引移民。"
  thl_leader_trait_oni_power:0 "遗失的高贵之力"
  thl_leader_trait_oni_power_desc:1 "这位领袖是大名鼎鼎的鬼族四天王之一，拥有移山填海的伟力，她的名望吸引着银河间出色的战士，让他们拿起武器加入我们的事业。"
- thl_leader_trait_oni_power_effect:0 "可以在管理的星区或星球招募强大的§Y鬼族雇佣兵§!。\n\n$FLEET_EFFECTS_TXT$：\n$t$允许使用§Y掠夺§!轰炸姿态。\n\n$ARMY_EFFECTS_TXT$：\n\n$ARMY_EFFECTS_TXT$：\n$t$地面战斗每经过§Y10§!天：\n$tt$亲自击杀一支敌对陆军的概率：§Y30%§!"
+ thl_leader_trait_oni_power_effect:0 "可以在管理的星区或星球招募强大的§Y鬼族雇佣兵§!。\n\n$FLEET_EFFECTS_TXT$：\n$t$允许使用§Y掠夺§!轰炸姿态。\n\n$ARMY_EFFECTS_TXT$：\n$t$地面战斗每经过§Y10§!天：\n$tt$亲自击杀一支敌对陆军的概率：§Y30%§!"
  leader_trait_banquet:0 "宴会爱好者"
  leader_trait_banquet_desc:1 "这位领袖乐于在自己管理的星球举办宴会，并将其作为与当地居民打好关系以及促进文化繁荣的手段。"
  leader_trait_banquet_effect:0 "可以在管理的星区或星球使用§Y娱乐宴会§!、§Y文化宴会§!或§Y商业宴会§!决议，消耗$r_food$和$r_consumer_goods$获得不同的§G行星增益§!。\n\n$EMPIRE_EFFECTS_TXT$：\n$t$可以使用§Y外交宴会§!法令，会邀请所有与我方建立§Y大使馆§!的国家参加，具体接受概率取决于§Y态度§!，接受邀请的国家有机会与我国增进£opinion£§Y评价§!和£diplomacy_trust£§Y信任度§!"
@@ -2347,6 +2347,13 @@
  touhou_paragon.43401.g:0 "（窃笑）感觉您慢慢变回老样子了嘛。"
  touhou_paragon.43401.g.response:0 "喂，能不能对神明放尊重一点！再这样对我不敬的话，我真的会作祟的哦！"
  touhou_paragon.43401.hire_custom_tooltip:0 "$NAME_Suwako$作为一名领袖加入了我们的帝国。"
+
+ mod_immune_to_terrify: "不会受到['concept_terrify',恐惧状态]影响"
+ mod_immune_chance_terrify: "受到['concept_terrify',恐惧状态]影响的概率"
+ mod_terrify_duration_mult: "['concept_terrify',恐惧状态]持续时间"
+ mod_terrify_duration_add: "['concept_terrify',恐惧状态]持续时间"
+
+
  # NAME_Flandre:0 "芙兰朵露·斯卡雷特"
  # flandre1:0 "血红的吸血鬼——蕾米莉亚的妹妹。相比于姐姐的征服欲，她的思想单纯而又空虚。然而没有人可以忽视她的欲望和破坏力。"
  # flandre1_catch_phrase:0 "我也想到外面的世界去，看看外面的人长得什么样子，能陪我一起玩吗？"

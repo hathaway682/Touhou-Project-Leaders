@@ -16,15 +16,13 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_leader_flag = renowned_leader
-			NOT = { has_touhou_leader_trait = yes }
+			is_leader_tier = leader_tier_renowned
 		}
 		localization_key = CLASS_PREFIX_RENOWNED
 	}
 	text = {
 		trigger = {
-			has_leader_flag = legendary_leader
-			NOT = { has_touhou_leader_trait = yes }
+			is_leader_tier = leader_tier_legendary
 		}
 		localization_key = CLASS_PREFIX_LEGENDARY
 	}
@@ -234,15 +232,13 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_leader_flag = renowned_leader
-			NOT = { has_touhou_leader_trait = yes }
+			is_leader_tier = leader_tier_renowned
 		}
 		localization_key = CLASS_TIER_RENOWNED
 	}
 	text = {
 		trigger = {
-			has_leader_flag = legendary_leader
-			NOT = { has_touhou_leader_trait = yes }
+			is_leader_tier = leader_tier_legendary
 		}
 		localization_key = CLASS_TIER_LEGENDARY
 	}
