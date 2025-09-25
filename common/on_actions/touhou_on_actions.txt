@@ -472,3 +472,11 @@ on_colonized = {
 		touhou_paragon.50010 #提示在星球决议中修复神社
 	}
 }
+
+o# Fired when a country delves, no matter the result
+# This = Country
+on_shroud_delve = {
+	events = {
+		touhou_paragon_mission.40309
+	}
+}

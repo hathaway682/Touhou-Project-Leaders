@@ -602,7 +602,10 @@ country_event = {
 		has_point_of_interest = {
 			poi = touhou_sanae_mission_chain_faith.2
 		}
-		has_tradition = tr_psionics_finish
+		OR = {
+			has_tradition = tr_psionics_breach_shroud
+			has_tradition = tr_psionics_shroud_adopt
+		}
 		any_owned_leader = {
 			has_trait = thl_leader_trait_miracle
 		}
@@ -610,7 +613,10 @@ country_event = {
 	option = {
 		name = touhou_paragon_mission.40309.a
 		trigger = {
-			has_tradition = tr_psionics_finish
+			OR = {
+				has_tradition = tr_psionics_breach_shroud
+				has_tradition = tr_psionics_shroud_adopt
+			}
 		}
 		add_modifier = {
 			modifier = modifier_sanae_mission_faith_2_psionics
@@ -1619,21 +1625,7 @@ country_event = {
 		name = touhou_paragon_mission.40320.d
 		custom_tooltip = "covenant.cycle.tooltip"
 		hidden_effect = {
-			add_modifier = { modifier = covenant_end_of_the_cycle days = 18000 }
-			set_global_flag = end_of_the_cycle
-			set_country_flag = has_shroud_patron
-			set_country_flag = covenant_end_of_the_cycle
-			every_owned_planet = {
-				limit = { NOT = { has_modifier = covenant_shroud_marked } }
-				add_modifier = { modifier = covenant_shroud_marked days = -1 }
-			}
-			every_subject = {
-				every_owned_planet = {
-					limit = { NOT = { has_modifier = covenant_shroud_marked } }
-					add_modifier = { modifier = covenant_shroud_marked days = -1 }
-				}
-			}
-			country_event = { id = utopia.3320 days = 18000 }
+			accept_end_of_the_cycle = yes
 		}
 	}
 	after = {
@@ -2127,7 +2119,7 @@ country_event = {
 		country_event = { id = touhou_paragon_mission.40306 days = 1 random = 30 }
 		country_event = { id = touhou_paragon_mission.40307 days = 1 random = 30 }
 		country_event = { id = touhou_paragon_mission.40308 days = 1 random = 30 }
-		country_event = { id = touhou_paragon_mission.40309 days = 1 random = 30 }
+		#country_event = { id = touhou_paragon_mission.40309 days = 1 random = 30 }
 		country_event = { id = touhou_paragon_mission.40310 days = 1 random = 30 }
 		country_event = { id = touhou_paragon_mission.40311 days = 1 random = 30 }
 		country_event = { id = touhou_paragon_mission.40312 days = 1 random = 30 }

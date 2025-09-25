@@ -8984,7 +8984,7 @@ country_event = {
     is_triggered_only = yes
     fire_only_once = yes
     trigger = {
-        is_preferred_patron = the_eater_of_worlds
+        is_in_domain = the_eater_of_worlds
         any_owned_leader = {
             has_trait = thl_leader_trait_nuclear
         }
