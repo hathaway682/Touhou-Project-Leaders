@@ -499,7 +499,7 @@ tech_mana_field_emission_array = {
 
 	potential = {
 		any_owned_leader = {
-			has_touhou_spell_trait = yes
+			has_thl_spell_trait = yes
 		}
 	}
 

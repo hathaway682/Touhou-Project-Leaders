@@ -226,7 +226,7 @@ should_count_towards_leader_cap = {
 		has_leader_flag = marauder_merc_leader
 		has_leader_flag = hired_admiral_merc_leader
 		has_leader_flag = legendary_leader
-		has_touhou_leader_trait = yes
+		has_thl_leader_trait = yes
 		AND = {
 			has_trait_tier1or2 = { TRAIT = leader_trait_eager }
 			has_base_skill < 4
@@ -292,7 +292,7 @@ should_count_towards_leader_cap = {
 		is_hidden = yes
 		has_leader_flag = hired_admiral_merc_leader
 		has_leader_flag = legendary_leader
-		has_touhou_leader_trait = yes
+		has_thl_leader_trait = yes
 		has_trait = leader_trait_rift_warped
 		AND = {
 			has_trait_tier1or2 = { TRAIT = leader_trait_eager }

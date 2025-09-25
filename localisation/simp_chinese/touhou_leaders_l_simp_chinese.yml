@@ -2067,9 +2067,9 @@
  touhou_paragon.42900.f.response:0 "有倒是有啦，我希望大家更加的喜欢我，尊从自然务农法，过度除草和整地的农夫可是会受到我的敌视哦。我希望大家踏踏实实地一点点做吧!还有还有，如果秋的果实能更多些，信众应该会很开心吧?除了山芋之外，栗子，柿子……南瓜！创新，创新……！"
  touhou_paragon.42900.hire_custom_tooltip:0 "$NAME_Minoriko$作为一名领袖加入了我们的帝国。"
 
- leader_trait_harvest:0 "掌管丰收程度的能力"
- leader_trait_harvest_desc:0 "秋天是丰收的季节，也是红叶的季节。秋穰子司掌秋天的“收获”与“凋落”之中的“收获”。"
- leader_trait_harvest_tooltip:0 "在秋穰子管理的星球，每年§Y9§!月都会一次性产出额外的£energy£ £minerals£ £food£§Y基础资源§!，相当于星球§Y9§!个月的产出，在秋穰子管理的星区，每年§Y9§!月都会一次性产出额外的£energy£ £minerals£ £food£§Y基础资源§!，相当于星球§Y3§!个月的产出。\n\n在以上地区，若$r_food$产出盈余，人口幸福度和凝聚力产出就会随着人均$r_food$的产量而提升。\n\n允许玩家改变§Y粮食政策§!，随着秋穰子等级的提高，§Y粮食政策§!的选择也会增加。\n\n解锁诸多可用的§r符卡§!。"
+ thl_leader_trait_harvest:0 "掌管丰收程度的能力"
+ thl_leader_trait_harvest_desc:0 "秋天是丰收的季节，也是红叶的季节。秋穰子司掌秋天的“收获”与“凋落”之中的“收获”。"
+ thl_leader_trait_harvest_tooltip:0 "在秋穰子管理的星球，每年§Y9§!月都会一次性产出额外的£energy£ £minerals£ £food£§Y基础资源§!，相当于星球§Y9§!个月的产出，在秋穰子管理的星区，每年§Y9§!月都会一次性产出额外的£energy£ £minerals£ £food£§Y基础资源§!，相当于星球§Y3§!个月的产出。\n\n在以上地区，若$r_food$产出盈余，人口幸福度和凝聚力产出就会随着人均$r_food$的产量而提升。\n\n允许玩家改变§Y粮食政策§!，随着秋穰子等级的提高，§Y粮食政策§!的选择也会增加。\n\n解锁诸多可用的§r符卡§!。"
 
  policy_food_policy: "粮食政策"
  policy_food_policy_desc: "我们的帝国拥有太多人口需要进食。为了确保粮食不会短缺，我们必须在人口的需求和帝国的成长之间达成平衡。"

@@ -286,7 +286,7 @@ touhou_leader_id = {
 	}
 	modifier = {
 		add = 36
-		has_trait = leader_trait_harvest
+		has_trait = thl_leader_trait_harvest
 	}
 	modifier = {
 		add = 37
@@ -352,7 +352,7 @@ leader_num_spell_cards = {
 	}
 	modifier = {
 		add = 2
-		has_trait = leader_trait_harvest
+		has_trait = thl_leader_trait_harvest
 	}
 	modifier = {
 		add = 4
@@ -378,7 +378,7 @@ num_spell_card_leaders = {
 		trigger = count_owned_leader
 		parameters = {
 			limit = {
-				has_touhou_spell_trait = yes
+				has_thl_spell_trait = yes
 			}
 		}
 		mode = add

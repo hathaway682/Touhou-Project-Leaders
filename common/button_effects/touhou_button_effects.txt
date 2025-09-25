@@ -79,7 +79,7 @@ touhou_subtract_char_id_effect = {
 			from = {
 				count_owned_leader = {
 					limit = {
-						has_touhou_supernatural_trait = yes
+						has_thl_supernatural_trait = yes
 					}
 					count > 1
 				}
@@ -104,7 +104,7 @@ touhou_add_char_id_effect = {
 			from = {
 				count_owned_leader = {
 					limit = {
-						has_touhou_supernatural_trait = yes
+						has_thl_supernatural_trait = yes
 					}
 					count > 1
 				}
@@ -325,7 +325,7 @@ touhou_trace_select_effect = {
 				}
 				exists = leader
 				leader = {
-					has_touhou_supernatural_trait = yes
+					has_thl_supernatural_trait = yes
 				}
 			}
 		}
@@ -854,7 +854,7 @@ touhou_minoriko_spell_card_text = {
 				value = 36
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_harvest
+				has_trait = thl_leader_trait_harvest
 			}
 		}
 	}
@@ -875,7 +875,7 @@ touhou_minoriko_spell_card_effect = {
 				value = 36
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_harvest
+				has_trait = thl_leader_trait_harvest
 			}
 		}
 	}

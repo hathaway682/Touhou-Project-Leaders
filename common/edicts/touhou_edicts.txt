@@ -32,7 +32,7 @@ open_spell_cards_gui = {
 	icon = "GFX_edict_type_policy"
 	potential = {
 		any_owned_leader = {
-			has_touhou_spell_trait = yes
+			has_thl_spell_trait = yes
 		}
 		NOT = {
 			has_global_flag = disable_spell_cards_gui
@@ -1616,7 +1616,7 @@ reset_touhou_leader_portrait = {
 		}
 		random_owned_leader = {
 			limit = {
-				has_trait = leader_trait_harvest
+				has_trait = thl_leader_trait_harvest
 			}
 			change_leader_portrait = x74
 		}

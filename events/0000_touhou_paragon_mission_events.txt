@@ -188,19 +188,13 @@ country_event = {
 					count >= 7500
 				}
 			}
-			AND = {
-				OR = {
-					has_ethic = "ethic_gestalt_consciousness"
-					is_individual_machine = no
-				}
-			}
 		}
 	}
 	option = {
 		trigger = {
-			NOT = {
+			NOR = {
 				has_ethic = "ethic_gestalt_consciousness"
-				is_individual_machine = no
+				is_individual_machine = yes
 			}
 		}
 		name = touhou_paragon_mission.40304.a
@@ -209,58 +203,32 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOR = {
-					has_ethic = "ethic_gestalt_consciousness"
-					is_individual_machine = yes
+				NOT = {
+					has_technology = tech_synthetic_workers
 				}
-				has_technology = tech_droid_workers
 			}
-			add_monthly_resource_mult = {
-				resource = engineering_research
-				value = @tier2researchreward
-				min = @tier2researchmin
-				max = @tier2researchmax
+			add_tech_progress = {
+				tech = tech_synthetic_workers
+				progress = 0.25
 			}
 		}
 		else_if = {
 			limit = {
-				NOR = {
-					has_ethic = "ethic_gestalt_consciousness"
-					is_individual_machine = yes
+				NOT = {
+					has_technology = tech_droid_workers
 				}
-				NOT = { has_technology = tech_droid_workers }
 			}
 			add_tech_progress = {
 				tech = tech_droid_workers
 				progress = 0.25
 			}
 		}
-		else_if = {
-			limit = {
-				OR = {
-					has_ethic = "ethic_gestalt_consciousness"
-					is_individual_machine = yes
-				}
-				has_technology = tech_robomodding_m
-			}
+		else = {
 			add_monthly_resource_mult = {
 				resource = engineering_research
 				value = @tier2researchreward
 				min = @tier2researchmin
 				max = @tier2researchmax
-			}
-		}
-		else_if = {
-			limit = {
-				OR = {
-					has_ethic = "ethic_gestalt_consciousness"
-					is_individual_machine = yes
-				}
-				NOT = { has_technology = tech_robomodding_m }
-			}
-			add_tech_progress = {
-				tech = tech_robomodding_m
-				progress = 0.25
 			}
 		}
 		hidden_effect = {
@@ -276,17 +244,30 @@ country_event = {
 	}
 	option = {
 		trigger = {
-			AND = {
+			OR = {
 				has_ethic = "ethic_gestalt_consciousness"
-				is_individual_machine = no
+				is_individual_machine = yes
 			}
 		}
 		name = touhou_paragon_mission.40304.b
-		add_monthly_resource_mult = {
-			resource = engineering_research
-			value = @tier1researchreward
-			min = @tier1researchmin
-			max = @tier1researchmax
+		if = {
+			limit = {
+				NOT = {
+					has_technology = tech_robomodding_m
+				}
+			}
+			add_tech_progress = {
+				tech = tech_robomodding_m
+				progress = 0.25
+			}
+		}
+		else = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
 		}
 		hidden_effect = {
 			update_sanae_phase_trait = yes
@@ -328,7 +309,7 @@ country_event = {
 				limit = {
 					has_trait = thl_leader_trait_miracle
 				}
-				add_trait = { trait = trait_ruler_touhou_architectural_sense }
+				add_trait = { trait = trait_ruler_architectural_sense }
 			}
 		}
 		else_if = {
@@ -340,7 +321,7 @@ country_event = {
 					is_gestalt_node = yes
 					has_trait = subclass_official_economy_councilor
 				}
-				add_trait = trait_ruler_touhou_architectural_sense
+				add_trait = trait_ruler_architectural_sense
 			}
 		}
 		add_resource = {
@@ -1639,81 +1620,6 @@ country_event = {
 				event_chain = "touhou_sanae_mission_chain"
 			}
 		}
-	}
-}
-
-country_event = {
-	id = touhou_paragon_mission.40321
-	title = touhou_paragon_mission.40321.name
-	desc = {
-		text = touhou_paragon_mission.40321.desc
-	}
-	picture = GFX_evt_sanae_mission
-	show_sound = event_default
-	is_triggered_only = yes
-	event_chain = touhou_sanae_mission_chain
-	option = {
-		name = touhou_paragon_mission.40321.a
-		trigger = {
-			not = {
-				has_modifier = modifier_sanae_mission_tech_5_s_composer
-			}
-		}
-		add_modifier = {
-			modifier = modifier_sanae_mission_tech_5_s_composer
-		}
-		if = {
-			limit = { not = { has_country_flag = touhou_flag_twice_40321} }
-			country_event = { id = touhou_paragon_mission.40321 }
-		}
-	}
-	option = {
-		name = touhou_paragon_mission.40321.b
-		trigger = {
-			not = {
-				has_modifier = modifier_sanae_mission_tech_5_s_instrument
-			}
-		}
-		add_modifier = {
-			modifier = modifier_sanae_mission_tech_5_s_instrument
-		}
-		if = {
-			limit = { not = { has_country_flag = touhou_flag_twice_40321} }
-			country_event = { id = touhou_paragon_mission.40321 }
-		}
-	}
-	option = {
-		name = touhou_paragon_mission.40321.c
-		trigger = {
-			not = {
-				has_modifier = modifier_sanae_mission_tech_5_s_eater
-			}
-		}
-		add_modifier = {
-			modifier = modifier_sanae_mission_tech_5_s_eater
-		}
-		if = {
-			limit = { not = { has_country_flag = touhou_flag_twice_40321} }
-			country_event = { id = touhou_paragon_mission.40321 }
-		}
-	}
-	option = {
-		name = touhou_paragon_mission.40321.d
-		trigger = {
-			not = {
-				has_modifier = modifier_sanae_mission_tech_5_s_whisperers
-			}
-		}
-		add_modifier = {
-			modifier = modifier_sanae_mission_tech_5_s_whisperers
-		}
-		if = {
-			limit = { not = { has_country_flag = touhou_flag_twice_40321} }
-			country_event = { id = touhou_paragon_mission.40321 }
-		}
-	}
-	after = {
-		set_country_flag = touhou_flag_twice_40321
 	}
 }
 

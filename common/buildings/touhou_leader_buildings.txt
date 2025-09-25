@@ -97,7 +97,7 @@ building_shrine = {
 				owner = {
 					NOT = {
 						any_owned_leader = {
-							has_trait = leader_trait_harvest
+							has_trait = thl_leader_trait_harvest
 						}
 					}
 				}
@@ -511,7 +511,7 @@ building_hakurei_shrine_0 = {
 				owner = {
 					NOT = {
 						any_owned_leader = {
-							has_trait = leader_trait_harvest
+							has_trait = thl_leader_trait_harvest
 						}
 					}
 				}

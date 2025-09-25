@@ -444,7 +444,7 @@ country_event = {
 
 	immediate = {
 		random_owned_leader = {
-			limit = { is_touhou_event_leader = yes }
+			limit = { is_thl_event_leader = yes }
 			switch = {
 				trigger = has_trait
 				thl_leader_trait_miracle = { # 早苗
@@ -1352,7 +1352,9 @@ leader_event = {
 				}
 			}
 			add_trait = { trait = leader_trait_eater_chosen }
-			add_attunement = { the_eater_of_worlds = 100 }
+			owner = {
+				add_attunement = { the_eater_of_worlds = 100 }
+			}
 		}
 		if = {
 			limit = {
@@ -1361,7 +1363,9 @@ leader_event = {
 				}
 			}
 			add_trait = { trait = leader_trait_instrument_chosen }
-			add_attunement = { the_instrument_of_desire = 100 }
+			owner = {
+				add_attunement = { the_instrument_of_desire = 100 }
+			}
 		}
 		if = {
 			limit = {
@@ -1370,7 +1374,9 @@ leader_event = {
 				}
 			}
 			add_trait = { trait = leader_trait_whisperers_chosen }
+			owner = {
 			add_attunement = { whisperers_in_the_void = 100 }
+				}
 		}
 		if = {
 			limit = {
@@ -1379,7 +1385,9 @@ leader_event = {
 				}
 			}
 			add_trait = { trait = leader_trait_cradle_chosen }
-			add_attunement = { the_cradle_of_souls = 100 }
+			owner = {
+				add_attunement = { the_cradle_of_souls = 100 }
+			}
 		}
 		else = {
 			add_trait = { trait = leader_trait_chosen }
@@ -3228,11 +3236,13 @@ leader_event = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				is_cardinal_patron = whisperers_in_the_void
+		owner = {
+			if = {
+				limit = {
+					is_cardinal_patron = whisperers_in_the_void
+				}
+				add_attunement = { whisperers_in_the_void = 100 }
 			}
-			add_attunement = { whisperers_in_the_void = 100 }
 		}
 		name = touhou_paragon.42411.e
 		leader_event = { id = touhou_paragon.42416 }

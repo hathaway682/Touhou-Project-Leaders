@@ -46,7 +46,7 @@ prosperity_gospel_check_trigger = {
 	}
 }
 
-is_touhou_event_leader = {
+is_thl_event_leader = {
 	OR = {
 		has_trait = thl_leader_trait_miracle
 		has_trait = thl_leader_trait_fly
@@ -54,7 +54,7 @@ is_touhou_event_leader = {
 	}
 }
 
-has_touhou_leader_trait = {
+has_thl_leader_trait = {
 	OR = {
 		has_trait = thl_leader_trait_earthquake
 		has_trait = thl_leader_trait_density
@@ -85,7 +85,7 @@ has_touhou_leader_trait = {
 		has_trait = thl_leader_trait_nuclear
 		has_trait = thl_leader_trait_water
 		has_trait = thl_leader_trait_fall
-		has_trait = leader_trait_harvest
+		has_trait = thl_leader_trait_harvest
 		has_trait = thl_leader_trait_jinx
 		has_trait = thl_leader_trait_song
 		has_trait = thl_leader_trait_luck
@@ -94,7 +94,7 @@ has_touhou_leader_trait = {
 	}
 }
 
-has_touhou_supernatural_trait = {
+has_thl_supernatural_trait = {
 	OR = {
 		has_trait = thl_leader_trait_earthquake
 		has_trait = thl_leader_trait_density
@@ -121,7 +121,7 @@ has_touhou_supernatural_trait = {
 		has_trait = thl_leader_trait_nuclear
 		has_trait = thl_leader_trait_water
 		has_trait = thl_leader_trait_fall
-		has_trait = leader_trait_harvest
+		has_trait = thl_leader_trait_harvest
 		has_trait = thl_leader_trait_jinx
 		has_trait = thl_leader_trait_song
 		has_trait = thl_leader_trait_luck
@@ -130,13 +130,13 @@ has_touhou_supernatural_trait = {
 	}
 }
 
-has_touhou_spell_trait = {
+has_thl_spell_trait = {
 	OR = {
 		has_trait = thl_leader_trait_fly
 		has_trait = thl_leader_trait_magic
 		has_trait = thl_leader_trait_subconscious
 		has_trait = thl_leader_trait_fall
-		has_trait = leader_trait_harvest
+		has_trait = thl_leader_trait_harvest
 		has_trait = thl_leader_trait_jinx
 	}
 }
@@ -566,7 +566,7 @@ did_not_select_spell_leader = {
 				value = 36
 			}
 			any_owned_leader = {
-				has_trait = leader_trait_harvest
+				has_trait = thl_leader_trait_harvest
 			}
 		}
 		AND = {

@@ -4752,7 +4752,7 @@ thl_leader_trait_fall = {
 	custom_tooltip_with_modifiers = thl_leader_trait_fall_tooltip
 }
 
-leader_trait_harvest = {
+thl_leader_trait_harvest = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -4790,7 +4790,7 @@ leader_trait_harvest = {
 	selectable_weight = 0
 	immortal_leaders = yes
 	background_icon = GFX_leader_background_destiny_1
-	custom_tooltip_with_modifiers = leader_trait_harvest_tooltip
+	custom_tooltip_with_modifiers = thl_leader_trait_harvest_tooltip
 }
 
 thl_leader_trait_jinx = {

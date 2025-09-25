@@ -6028,7 +6028,7 @@ country_event = {
                 AND = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_harvest
+                        has_trait = thl_leader_trait_harvest
                     }
                 }
             }
@@ -6103,14 +6103,14 @@ planet_event = {
                     AND = {
                         exists = leader
                         leader = {
-                            has_trait = leader_trait_harvest
+                            has_trait = thl_leader_trait_harvest
                         }
                     }
                     sector = {
                         sector_capital = {
                             exists = leader
                             leader = {
-                                has_trait = leader_trait_harvest
+                                has_trait = thl_leader_trait_harvest
                             }
                         }
                     }
@@ -6144,7 +6144,7 @@ planet_event = {
                 limit = {
                     exists = leader
                     leader = {
-                        has_trait = leader_trait_harvest
+                        has_trait = thl_leader_trait_harvest
                     }
                 }
                 owner = {
@@ -6168,7 +6168,7 @@ planet_event = {
                         sector_capital = {
                             exists = leader
                             leader = {
-                                has_trait = leader_trait_harvest
+                                has_trait = thl_leader_trait_harvest
                             }
                         }
                     }

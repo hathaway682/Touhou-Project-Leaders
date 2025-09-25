@@ -1638,12 +1638,12 @@ set_start_char_id = {
 	if = {
 		limit = {
 			any_owned_leader = {
-				has_touhou_supernatural_trait = yes
+				has_thl_supernatural_trait = yes
 			}
 		}
 		ordered_owned_leader = {
 			limit = {
-				has_touhou_supernatural_trait = yes
+				has_thl_supernatural_trait = yes
 			}
 			order_by = value:touhou_leader_id
 			position = 0
@@ -1709,7 +1709,7 @@ add_char_id = {
 		if = {
 			limit = {
 				any_owned_leader = {
-					has_touhou_supernatural_trait = yes
+					has_thl_supernatural_trait = yes
 					check_variable_arithmetic = {
 						which = value:leader_id_after_selected
 						value > 0
@@ -1718,7 +1718,7 @@ add_char_id = {
 			}
 			ordered_owned_leader = {
 				limit = {
-					has_touhou_supernatural_trait = yes
+					has_thl_supernatural_trait = yes
 					check_variable_arithmetic = {
 						which = value:leader_id_after_selected
 						value > 0
@@ -1768,7 +1768,7 @@ add_char_id = {
 		else_if = {
 			limit = {
 				any_owned_leader = {
-					has_touhou_supernatural_trait = yes
+					has_thl_supernatural_trait = yes
 					check_variable_arithmetic = {
 						which = value:leader_id_before_selected
 						value > 0
@@ -1777,7 +1777,7 @@ add_char_id = {
 			}
 			ordered_owned_leader = {
 				limit = {
-					has_touhou_supernatural_trait = yes
+					has_thl_supernatural_trait = yes
 					check_variable_arithmetic = {
 						which = value:leader_id_before_selected
 						value > 0
@@ -1831,7 +1831,7 @@ subtract_char_id = {
 		if = {
 			limit = {
 				any_owned_leader = {
-					has_touhou_supernatural_trait = yes
+					has_thl_supernatural_trait = yes
 					check_variable_arithmetic = {
 						which = value:leader_id_before_selected
 						value > 0
@@ -1840,7 +1840,7 @@ subtract_char_id = {
 			}
 			ordered_owned_leader = {
 				limit = {
-					has_touhou_supernatural_trait = yes
+					has_thl_supernatural_trait = yes
 					check_variable_arithmetic = {
 						which = value:leader_id_before_selected
 						value > 0
@@ -1890,7 +1890,7 @@ subtract_char_id = {
 		else_if = {
 			limit = {
 				any_owned_leader = {
-					has_touhou_supernatural_trait = yes
+					has_thl_supernatural_trait = yes
 					check_variable_arithmetic = {
 						which = value:leader_id_after_selected
 						value > 0
@@ -1899,7 +1899,7 @@ subtract_char_id = {
 			}
 			ordered_owned_leader = {
 				limit = {
-					has_touhou_supernatural_trait = yes
+					has_thl_supernatural_trait = yes
 					check_variable_arithmetic = {
 						which = value:leader_id_after_selected
 						value > 0
@@ -2157,7 +2157,7 @@ create_shrine_point_of_interest = {
 		limit = {
 			NOT = {
 				any_owned_leader = {
-					has_trait = leader_trait_harvest
+					has_trait = thl_leader_trait_harvest
 				}
 			}
 		}

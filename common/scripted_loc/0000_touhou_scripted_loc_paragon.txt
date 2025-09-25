@@ -3,14 +3,14 @@ defined_text = {
 	random = no
 	text = {
 		trigger = {
-			has_touhou_leader_trait = yes
-			has_touhou_spell_trait = no
+			has_thl_leader_trait = yes
+			has_thl_spell_trait = no
 		}
 		localization_key = CLASS_PREFIX_TOUHOU
 	}
 	text = {
 		trigger = {
-			has_touhou_spell_trait = yes
+			has_thl_spell_trait = yes
 		}
 		localization_key = CLASS_PREFIX_TOUHOU_LEGEND
 	}
@@ -208,7 +208,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_trait = leader_trait_harvest
+			has_trait = thl_leader_trait_harvest
 		}
 		localization_key = CLASS_TIER_MINORIKO
 	}
