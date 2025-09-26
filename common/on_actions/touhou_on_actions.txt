@@ -475,8 +475,8 @@ on_colonized = {
 
 o# Fired when a country delves, no matter the result
 # This = Country
-on_shroud_delve = {
-	events = {
-		touhou_paragon_mission.40309
-	}
-}
+# on_shroud_delve = {
+# 	events = {
+# 		touhou_paragon_mission.40309
+# 	}
+# }
