@@ -178,8 +178,8 @@ country_event = {
 			}
 			AND = {
 				OR = {
-					has_ethic = "ethic_gestalt_consciousness"
 					is_individual_machine = yes
+					is_machine_empire = yes
 				}
 				count_owned_pop_amount = {
 					limit = {
@@ -187,6 +187,10 @@ country_event = {
 					}
 					count >= 7500
 				}
+			}
+			AND = {
+				is_gestalt = yes
+				is_machine_empire = no
 			}
 		}
 	}
@@ -255,14 +259,14 @@ country_event = {
 	}
 	option = {
 		trigger = {
-			OR = {
+			AND = {
 				has_ethic = "ethic_gestalt_consciousness"
-				is_individual_machine = yes
 			}
 		}
 		name = touhou_paragon_mission.40304.b
 		if = {
 			limit = {
+				is_machine_empire = yes
 				NOT = {
 					has_technology = tech_robomodding_m
 				}
