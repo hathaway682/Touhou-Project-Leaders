@@ -155,7 +155,7 @@ subclass_commander_miko = {
 		planet_jobs_specialist_produces_mult = 0.01
 		job_soldier_or_warrior_add = -50
 		job_miko_drone_add = 50
-		multiplier = trigger:has_total_skill
+		multiplier = trigger:has_base_skill
 	}
 	triggered_councilor_modifier = {
 		potential = {
