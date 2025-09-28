@@ -2007,3 +2007,17 @@
  hifuu_rainbow_bottle: "瓶中彩虹"
  hifuu_rainbow_bottle_desc_short: "从另一个世界的梦境之中收集的液体"
  hifuu_rainbow_bottle_desc_details: "赤橙黄绿蓝靛紫的色彩在瓶中交织却不混合，即使用力摇晃也只能看到如梦如幻的色块像鱼儿一样擦肩而过，丝毫没有交融的迹象。"
+
+#格式塔适配
+ touhou_paragon.80000.name:0 "温和意志整合"
+ touhou_paragon.80000.desc:0 "当整个行星的生态实体之意志都收敛于一个实体时，我们方才初探到何为我，何为非我。\n\n我们曾见到无数无法同化思维的实体，但大多都是些不值所谓“智慧”的草木金石。我们的$job_brain_drone_biologist_plural$大胆地假设了宇宙中存在着更多独立意识，这个概率不小于99.61%。目前的我们对于如何同化拥有独立意志的个体一无所知，但至少，我们的$job_brain_drone_biologist_plural$演算出了一种较为温和的整合意志的方案，在保留独立意识的同时，读取一切有利于集体意识主脑的信息并加以储存。\n\n我们称之为：§Y教育§!。"
+ touhou_paragon.80000.a:0 "链接记忆中枢，启用自主意识体学习机制。"
+ touhou_paragon.80000.b:0 "测试结果：信息传输效率为大约每秒1至10比特。不符合预期，放弃动案。"
+ touhou_paragon.80000.a.tooltip: "允许格式塔意识政体启动议程§H追寻幻想§!。"
+ leader_trait_touhou_volition_integration:0 "意志整合"
+ leader_trait_touhou_volition_integration_desc:0 "格式塔意识无法兼容独立意识实体的思维，但至少可以将这些独立意识实体的一部分经验温和地整合进主脑意识中。这个过程被称之为“教育”，尽管这个过程的效率总是不尽人意。"
+ leader_trait_touhou_volition_integration_effect:0 "每当完成一个§r东方project领袖§!的特色内容，都将为本特质添加该领袖对应的专属修正效果。"
+ touhou_volition_integration_chain_title:0 "意志整合"
+ touhou_volition_integration_chain_desc:0 "格式塔意识无法兼容独立意识实体的思维，但至少可以将这些独立意识实体的一部分经验温和地整合进主脑意识中，这个过程被称之为“教育”。\n\n每当我们得到了一位§r独立意志实体§!的最终认可，我们都将尝试整合其经验。这一过程效率低下且不免造成大量的信息损失，但我们的$job_brain_drone_biologist_plural$对那些传奇的故事总是如饥似渴。"
+ touhou_encountered_leaders_counter:0 "已募集的§r东方project领袖§!"
+ touhou_integrated_leaders_counter:0 "已整合的§r东方project领袖§!"
