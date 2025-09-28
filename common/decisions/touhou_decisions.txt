@@ -2102,6 +2102,9 @@ decision_miracle_3 = {
 			limit = {
 				has_district = district_farming
 				is_wet = yes
+				owner = {
+					is_gestalt = no
+				}
 			}
 			add_zone = {
 				district = district_farming
