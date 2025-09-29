@@ -65,3 +65,18 @@ touhou_marisa = {
 	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
 	picture = GFX_evt_tewi_moon
 }
+
+touhou_volition_integration_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_ai.dds"
+	picture = GFX_evt_shroud_psionic_hive_mind
+	counter = {
+		touhou_encountered_leaders_counter = {
+			max = 34
+		}
+	}
+	counter = {
+		touhou_integrated_leaders_counter = {
+			max = 34
+		}
+	}
+}

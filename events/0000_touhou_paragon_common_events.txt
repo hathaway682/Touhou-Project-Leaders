@@ -6442,3 +6442,39 @@ astral_rift_event = {
 		finish_astral_rift = yes
 	}
 }
+
+#格式塔适配
+country_event = {
+	id = touhou_paragon.80000
+	title = touhou_paragon.80000.name
+	desc = touhou_paragon.80000.desc
+	picture = GFX_evt_hive_mind
+	show_sound = event_default
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		is_gestalt = yes
+		has_technology = tech_planetary_unification
+	}
+	option = {
+		name = touhou_paragon.80000.a
+		custom_tooltip = touhou_paragon.80000.a.tooltip
+		begin_event_chain = {
+			event_chain = "touhou_volition_integration_chain"
+			target = ROOT
+		}
+		ruler = {
+			add_trait = leader_trait_touhou_volition_integration
+		}
+	}
+	option = {
+		name = touhou_paragon.80000.b
+		hidden_effect = {
+			begin_event_chain = {
+				event_chain = "touhou_volition_integration_chain"
+				target = ROOT
+			}
+		}
+		end_event_chain = touhou_volition_integration_chain
+	}
+}
