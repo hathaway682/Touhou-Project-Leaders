@@ -3059,7 +3059,9 @@ thl_leader_trait_elements = {
 	}
 	triggered_self_modifier = {
 		potential = {
-			has_ascension_perk = ap_cosmogenesis
+			owner = {
+				has_ascension_perk = ap_cosmogenesis
+			}
 		}
 		leader_scientists_sr_dark_matter_produces_add = 1
 		leader_scientists_sr_living_metal_produces_add = 1
