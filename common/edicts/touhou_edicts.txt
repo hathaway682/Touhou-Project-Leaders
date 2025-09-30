@@ -1793,3 +1793,42 @@ suwako_change_between_commander_and_officer = {
 		}
 	}
 }
+
+thl_biasd_perception = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = 10
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = 10
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		any_owned_leader = {
+			has_trait = thl_leader_trait_miracle
+			has_leader_flag = thl_flag_mission_reduce_physicists_engineers_upkeep
+		}
+		is_gestalt = yes
+	}
+
+	modifier = {
+		country_physics_tech_research_speed = 0.05
+		country_society_tech_research_speed = -0.05
+		country_engineering_tech_research_speed = 0.05
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = has_encountered_other_empire }
+		}
+	}
+}
