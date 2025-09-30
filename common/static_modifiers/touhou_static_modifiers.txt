@@ -1017,3 +1017,7 @@ modifier_alice_2 = {
 	pop_amenities_usage_mult = -0.14
 	planet_jobs_unity_produces_mult = 0.14
 }
+
+modifier_sanae_mission_faith_3_perk = {
+	planet_stability_mult = 0.05
+}

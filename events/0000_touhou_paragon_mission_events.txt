@@ -535,28 +535,80 @@ country_event = {
 		has_point_of_interest = {
 			poi = touhou_sanae_mission_chain_tech.2
 		}
-		any_owned_planet = {
-			is_colony = yes
-			is_under_colonization = no
-			num_assigned_jobs = {
-				job = physicist
-				value >= 500
+		OR = {
+			AND = {
+				any_owned_planet = {
+					is_colony = yes
+					num_assigned_jobs = {
+						job = physicist
+						value >= 500
+					}
+				}
+				any_owned_planet = {
+					is_colony = yes
+					num_assigned_jobs = {
+						job = engineer
+						value >= 500
+					}
+				}
 			}
-			num_assigned_jobs = {
-				job = engineer
-				value >= 500
+			AND = {
+				any_owned_planet = {
+					is_colony = yes
+					num_assigned_jobs = {
+						job = brain_drone_physicist
+						value >= 500
+					}
+				}
+				any_owned_planet = {
+					is_colony = yes
+					num_assigned_jobs = {
+						job = brain_drone_engineer
+						value >= 500
+					}
+				}
 			}
-			# or = {
-			# 	owner = {
-			# 		is_wilderness_empire = yes
-			# 	}
-			# 	has_building = building_research_efficiency_1
-			# }
+			AND = {
+				any_owned_planet = {
+					is_colony = yes
+					num_assigned_jobs = {
+						job = calculator_physicist
+						value >= 500
+					}
+				}
+				any_owned_planet = {
+					is_colony = yes
+					num_assigned_jobs = {
+						job = calculator_engineer
+						value >= 500
+					}
+				}
+			}
 		}
 	}
 	option = {
 		name = touhou_paragon_mission.40308.a
+		trigger = {
+			is_gestalt = no
+		}
 		custom_tooltip = touhou_tooltip_mission_reduce_physicists_engineers_upkeep
+		hidden_effect = {
+			every_owned_leader = {
+				if = {
+					limit = {
+						has_trait = thl_leader_trait_miracle
+					}
+					set_leader_flag = thl_flag_mission_reduce_physicists_engineers_upkeep
+				}
+			}
+		}
+	}
+	option = {
+		name = touhou_paragon_mission.40308.b
+		trigger = {
+			is_gestalt = yes
+		}
+		custom_tooltip = touhou_tooltip_mission_physicists_engineers_gestalt
 		hidden_effect = {
 			every_owned_leader = {
 				if = {
@@ -956,6 +1008,14 @@ country_event = {
 				has_trait = thl_leader_trait_miracle
 			}
 			set_leader_flag = thl_flag_mission_order_faction
+		}
+		if = {
+			limit = {
+				is_gestalt = yes
+			}
+			add_modifier = {
+				modifier = modifier_sanae_mission_faith_3_perk
+			}
 		}
 	}
 	after = {
