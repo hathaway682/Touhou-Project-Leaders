@@ -2754,3 +2754,17 @@ create_machine_unit_doll_species = {
 		}
 	}
 }
+
+thl_update_gestalt_memory_integration = {
+	if = {
+		limit = {
+			owner = {
+				is_gestalt = yes
+				ruler = {
+					has_trait = leader_trait_touhou_volition_integration
+				}
+			}
+		}
+		leader_event = { id = touhou_paragon.80001 days = 5 random = 5 }
+	}
+}

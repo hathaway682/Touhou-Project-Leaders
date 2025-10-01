@@ -2026,3 +2026,7 @@
  touhou_volition_integration_chain_desc:0 "格式塔意识无法兼容独立意识实体的思维，但至少可以将这些独立意识实体的一部分经验温和地整合进主脑意识中，这个过程被称之为“教育”。\n\n每当我们得到了一位§r独立意志实体§!的最终认可，我们都将尝试整合其经验。这一过程效率低下且不免造成大量的信息损失，但我们的$job_brain_drone_biologist_plural$对那些传奇的故事总是如饥似渴。"
  touhou_encountered_leaders_counter:0 "已募集的§r东方project领袖§!"
  touhou_integrated_leaders_counter:0 "已整合的§r东方project领袖§!"
+ touhou_paragon.80001.name:0 "§Y[Root.GetName]§!的记忆"
+ touhou_paragon.80001.desc:0 "§Y[Root.GetName]§!在我们的集体意识中寻得了属于她的独有的价值。当那满载着传奇与奇幻故事的记忆如潮水般涌入，我们感受到了……新的力量。"
+ touhou_paragon.80001.a:0 "记忆，合众为一。"
+ thl_tooltip_gestalt_integrate_akyuu:0 "§Y稗田阿求§!的记忆整合完毕。每§Y技能等级§!的£empire£§Y帝国§!效果：社会学花费：§G-1%§!"

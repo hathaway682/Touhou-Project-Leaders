@@ -3948,13 +3948,9 @@ thl_leader_trait_gene_life = {
 		COUNCIL = yes
 		TIER = none
 	}
-	inline_script = {
-		script = paragon/leader_resource_upkeep
-		RESOURCE = exotic_gases
-		AMOUNT = 10
-	}
 	self_modifier = {
 		leader_trait_selection_options_add = 2
+		leader_scientists_exotic_gases_upkeep_add = 5
 	}
 	councilor_modifier = {
 		BIOLOGICAL_species_trait_points_add = 1
