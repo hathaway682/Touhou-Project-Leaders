@@ -3349,7 +3349,7 @@ leader_event = {
 		add_trait = thl_leader_trait_longer_life
 		leader_event = {
 			id = touhou_paragon.42411
-			days = 7200
+			days = 5400 #现在大家都飞升的太快了！
 		}
 	}
 }
@@ -3379,6 +3379,7 @@ leader_event = {
 		remove_trait = thl_leader_trait_short_life
 		add_trait = { trait = thl_leader_trait_cyborg_life }
 		add_trait = { trait = leader_trait_expertise_industry }
+		thl_update_gestalt_memory_integration = yes
 	}
 }
 
@@ -3407,6 +3408,7 @@ leader_event = {
 		remove_trait = thl_leader_trait_short_life
 		add_trait = { trait = thl_leader_trait_synth_life }
 		add_trait = { trait = leader_trait_expertise_computing }
+		thl_update_gestalt_memory_integration = yes
 	}
 }
 
@@ -3435,6 +3437,7 @@ leader_event = {
 		remove_trait = thl_leader_trait_short_life
 		add_trait = { trait = thl_leader_trait_gene_life }
 		add_trait = { trait = leader_trait_expertise_biology }
+		thl_update_gestalt_memory_integration = yes
 	}
 }
 
@@ -3467,6 +3470,7 @@ leader_event = {
 		add_trait = { trait = leader_trait_politician }
 		add_trait = { trait = leader_trait_bureaucrat }
 		add_trait = { trait = leader_trait_expertise_psionics }
+		thl_update_gestalt_memory_integration = yes
 	}
 }
 
@@ -6476,5 +6480,36 @@ country_event = {
 			}
 		}
 		end_event_chain = touhou_volition_integration_chain
+	}
+}
+
+#上效果的通用事件，慢慢补，写到哪里补到哪里
+leader_event = {
+	id = touhou_paragon.80001
+	title = touhou_paragon.80001.name
+	desc = touhou_paragon.80001.desc
+	picture = GFX_evt_shroud_psionic_hive_mind
+	show_sound = event_default
+	is_triggered_only = yes
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+	picture_event_data = {
+		portrait = root
+	}
+	option = {
+		name = touhou_paragon.80001.a
+		if = {
+			limit = {
+				root = {
+					has_trait = thl_leader_trait_memory
+				}
+			}
+			owner = {
+				ruler = {
+					set_leader_flag = thl_flag_gestalt_integrate_akyuu
+				}
+			}
+			custom_tooltip = thl_tooltip_gestalt_integrate_akyuu
+		}
 	}
 }

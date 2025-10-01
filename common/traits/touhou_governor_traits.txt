@@ -2804,6 +2804,13 @@ leader_trait_touhou_volition_integration = {
 		COUNCIL = yes
 		TIER = none
 	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_leader_flag = thl_flag_gestalt_integrate_akyuu
+		}
+		society_tech_cost_mult = -0.01
+		mult = trigger:has_total_skill
+	}
 	custom_tooltip = leader_trait_touhou_volition_integration_effect
 	leader_class = { scientist official commander }
 	hide_age = yes

@@ -1790,6 +1790,7 @@
  mod_planet_jobs_robotic_physics_research_produces_mult:0 "机器人产出的£physics_research£物理学研究"
  mod_planet_jobs_robotic_society_research_produces_mult:0 "机器人产出的£society_research£生物学研究"
  mod_planet_jobs_robotic_engineering_research_produces_mult:0 "机器人产出的£engineering_research£工程学研究"
+ leader_scientists_exotic_gases_upkeep_add:0 "领袖£exotic_gases£异星天然气维护费"
 
  touhou_paragon_effect.907.name:0 "征服死亡"
  touhou_paragon_effect.907.cyborg:1 "不幸地，稗田阿求的义体在意外事故中遭到了几乎致命的损坏——几乎。依靠足够的备用零件，现在我们已经成功将她的身体修复。"
