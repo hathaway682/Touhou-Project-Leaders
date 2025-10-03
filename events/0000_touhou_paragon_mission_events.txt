@@ -1172,15 +1172,30 @@ country_event = {
 		has_point_of_interest = {
 			poi = touhou_sanae_mission_chain_tech.4
 		}
-		count_owned_planet = {
-			limit = {
-				politician_is_science_director = yes
+		OR = {
+			count_owned_planet = {
+				limit = {
+					politician_is_science_director = yes
+				}
+				count >= 6
 			}
-			count >= 6
+			and = {
+				is_gestalt = yes
+				count_owned_planet = {
+					limit = {
+						has_building = building_supercomputer
+					}
+					count >= 3
+				}
+			}
 		}
+
 	}
 	option = {
 		name = touhou_paragon_mission.40316.a
+		trigger = {
+			is_gestalt = no
+		}
 		every_owned_leader = {
 			limit = {
 				has_trait = thl_leader_trait_miracle
@@ -1191,6 +1206,9 @@ country_event = {
 	}
 	option = {
 		name = touhou_paragon_mission.40316.b
+		trigger = {
+			is_gestalt = no
+		}
 		allow = {
 			any_owned_leader = {
 				has_trait = thl_leader_trait_fly
@@ -1209,6 +1227,18 @@ country_event = {
 			add_trait = { trait = thl_leader_trait_fake_technocracy }
 		}
 		custom_tooltip = touhou_paragon_mission.40316.b.tooltip
+	}
+	option = {
+		name = touhou_paragon_mission.40316.c
+		trigger = { is_gestalt = yes }
+		random_owned_leader = {
+			limit = {
+				is_councilor_type = councilor_gestalt_cognitive
+			}
+			add_random_expertise_trait_effect = yes
+			add_random_expertise_trait_effect = yes
+			add_random_expertise_trait_effect = yes
+		}
 	}
 	after = {
 		hidden_effect = {
