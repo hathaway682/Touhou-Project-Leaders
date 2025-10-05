@@ -1577,9 +1577,9 @@
  zone_garden_desc: "整片地区都被一望无际的花海覆盖。"
  zone_garden_plural: "花田"
 
- zone_rw_garden: "花田"
- zone_rw_garden_desc: "整段环世界都被一望无际的花海覆盖。"
- zone_rw_garden_plural: "花田"
+ zone_garden_ring_world: "花田"
+ zone_garden_ring_world_desc: "整段环世界都被一望无际的花海覆盖。"
+ zone_garden_ring_world_lural: "花田"
 
  building_flower_energy: "太阳花圃"
  building_flower_energy_desc: "这种花具有极高的光合作用效能，并可以被轻易加工成生物油料，是一种高效的能源。"
