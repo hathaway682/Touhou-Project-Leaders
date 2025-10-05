@@ -2,7 +2,7 @@ zone_garden = {
 	icon = GFX_zone_garden
 	base_buildtime = @zone_buildtime
 
-	potential = { # planet scope
+	potential = {
 		exists = owner
 		owner = {
 			any_owned_leader = {
@@ -14,7 +14,7 @@ zone_garden = {
 		}
 	}
 
-	unlock = { # planet scope
+	unlock = {
 		exists = owner
 		owner = {
 			any_owned_leader = {
@@ -25,6 +25,7 @@ zone_garden = {
 			}
 		}
 	}
+	
 	resources = {
 		category = planet_zones
 		cost = {
@@ -34,7 +35,7 @@ zone_garden = {
 
 	inline_script = {
 		script = jobs/zone_growers_add
-		AMOUNT = @scaling_district_1_job
+		AMOUNT = 100
 	}
 
 	zone_sets = {
@@ -46,29 +47,22 @@ zone_garden = {
 		hydroponics
 		farming_automation
 		fallen_empire_farming
-		#flower
 	}
 
 	planet_modifier = {
 		zone_building_slots_add = 3
 	}
 
-	triggered_desc = {
-		trigger = {
-			always = yes
-		}
-		text = zone_food_triggered_desc
-	}
-
 	convert_to = {
-		zone_rw_garden
+		zone_garden_ring_world
 	}
 }
 
-zone_rw_garden = {
+zone_garden_ring_world = {
 	icon = GFX_zone_garden
 	base_buildtime = @zone_buildtime
-	potential = { # planet scope
+	
+	potential = {
 		exists = owner
 		owner = {
 			any_owned_leader = {
@@ -80,7 +74,7 @@ zone_rw_garden = {
 		}
 	}
 
-	unlock = { # planet scope
+	unlock = {
 		exists = owner
 		owner = {
 			any_owned_leader = {
@@ -100,7 +94,7 @@ zone_rw_garden = {
 	}
 
 	zone_sets = {
-		food
+		ring_world
 	}
 
 	included_building_sets = {
@@ -111,8 +105,8 @@ zone_rw_garden = {
 	}
 
 	inline_script = {
-		script = zones/shared_food_zone
-		AMOUNT = @doubled_scaling_district_1_job
+		script = jobs/zone_growers_add
+		AMOUNT = 200
 	}
 
 	inline_script = {
