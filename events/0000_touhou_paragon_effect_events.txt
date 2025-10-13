@@ -9070,20 +9070,6 @@ country_event = {
             exile_leader_as = touhou_died_sakuya
             save_global_event_target_as = touhou_dead_sakuya_clone
         }
-        #from = {
-        #    save_global_event_target_as = touhou_died_sakuya
-        #}
-        #every_owned_leader = {
-        #    if = {
-        #        limit = {
-        #            has_trait = thl_leader_trait_time
-        #        }
-        #        kill_leader = {
-        #            show_notification = no
-        #        }
-        #        save_global_event_target_as = touhou_died_sakuya
-        #    }
-        #}
     }
     option = {
         name = touhou_paragon_effect.41001.a
@@ -9170,11 +9156,11 @@ country_event = {
         allow = {
             has_resource = {
                 type = sr_zro
-                amount >= 1000
+                amount >= 100
             }
         }
         add_resource = {
-            sr_zro = -1000
+            sr_zro = -100
         }
         hidden_effect = {
             clone_leader = {
@@ -9203,8 +9189,8 @@ country_event = {
     show_sound = event_planetary_riot
     immediate = {
         random_list = {
-            2 = { set_country_flag = touhou_remilia_disagree}
-            1 = { set_country_flag = touhou_remilia_agree}
+            1 = { set_country_flag = touhou_remilia_disagree}
+            3 = { set_country_flag = touhou_remilia_agree}
         }
         country_event = { id = touhou_paragon_effect.41005 days = 5 random = 5 }
     }
