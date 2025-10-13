@@ -9080,7 +9080,10 @@ country_event = {
     option = {
         name = touhou_paragon_effect.41001.b
         trigger = {
-            has_tradition = tr_psionics_finish
+            OR = {
+                has_tradition = tr_psionics_finish
+                has_tradition = tr_psionics_shroud_finish
+            }
         }
         hidden_effect = {
             country_event = { id = touhou_paragon_effect.41003 days = 5 random = 5}
@@ -9090,10 +9093,12 @@ country_event = {
     option = {
         name = touhou_paragon_effect.41001.c
         trigger = {
-            has_tradition = tr_genetics_finish
-            has_tradition = tr_mutation_finish
-            has_tradition = tr_purity_finish
-            has_tradition = tr_cloning_finish
+            OR = {
+                has_tradition = tr_genetics_finish
+                has_tradition = tr_mutation_finish
+                has_tradition = tr_purity_finish
+                has_tradition = tr_cloning_finish
+            }
         }
         hidden_effect = {
             country_event = { id = touhou_paragon_effect.41006 days = 5 random = 5}
@@ -9103,7 +9108,7 @@ country_event = {
     option = {
         name = touhou_paragon_effect.41001.d
         trigger = {
-            or = {
+            OR = {
                 has_tradition = tr_cybernetics_assimilator_finish
                 has_tradition = tr_cybernetics_finish
                 has_tradition = tr_synthetics_finish
