@@ -64,16 +64,16 @@ subclass_commander_servant = {
 		potential = {
 			always = yes
 		}
-		planet_jobs_ruler_produces_mult = 0.02
-		planet_jobs_specialist_produces_mult = 0.02
+		planet_jobs_ruler_produces_mult = 0.04
+		planet_jobs_specialist_produces_mult = 0.04
 		multiplier = trigger:has_base_skill
 	}
 	triggered_sector_modifier = {
 		potential = {
 			always = yes
 		}
-		planet_jobs_ruler_produces_mult = 0.01
-		planet_jobs_specialist_produces_mult = 0.01
+		planet_jobs_ruler_produces_mult = 0.02
+		planet_jobs_specialist_produces_mult = 0.02
 		multiplier = trigger:has_base_skill
 	}
 	ai_weight = {
@@ -907,6 +907,9 @@ thl_leader_trait_snake_bless = {
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	leader_potential_add = {
+		NOT = {
+			has_trait = thl_leader_trait_sanae_complete
+		}
 		has_trait = thl_leader_trait_miracle
 		has_total_skill >= 6
 	}
@@ -1045,6 +1048,9 @@ thl_leader_trait_frog_bless = {
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	leader_potential_add = {
+		NOT = {
+			has_trait = thl_leader_trait_sanae_complete
+		}
 		has_trait = thl_leader_trait_miracle
 		has_total_skill >= 6
 	}
