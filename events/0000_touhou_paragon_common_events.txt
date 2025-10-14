@@ -5933,14 +5933,6 @@ planet_event = {
 				days = 30
 				random = 150
 			}
-			random_owned_leader = {
-				limit = {
-					has_trait = thl_leader_trait_miracle
-				}
-				kill_leader = {
-					show_notification = yes
-				}
-			}
 		}
 	}
 	option = {

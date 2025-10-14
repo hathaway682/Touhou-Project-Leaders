@@ -324,7 +324,7 @@ country_event = {
 				limit = {
 					has_trait = thl_leader_trait_miracle
 				}
-				add_trait = { trait = trait_ruler_architectural_sense }
+				add_trait = trait_touhou_ruler_architectural_sense
 			}
 		}
 		else_if = {
