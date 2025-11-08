@@ -2775,6 +2775,9 @@ country_event = {
             leader = {
                 has_trait = thl_leader_trait_like_storm_and_wave
             }
+            NOT = {
+                has_fleet_flag = recent_arisa_attack_bonus
+            }
         }
     }
 
@@ -2782,6 +2785,10 @@ country_event = {
         FromFrom = {
             add_modifier = {
                 modifier = marisa_attack_bonus
+                days = 30
+            }
+            set_timed_fleet_flag = {
+                flag = recent_arisa_attack_bonus
                 days = 30
             }
         }
@@ -3621,6 +3628,9 @@ country_event = {
             leader = {
                 has_trait = thl_leader_trait_information_war
             }
+            NOT = {
+                has_fleet_flag = aya_attack_bonus
+            }
         }
     }
 
@@ -3637,6 +3647,7 @@ country_event = {
                 days = -1
                 multiplier = value:aya_attack_bonus_value
             }
+            set_fleet_flag = aya_attack_bonus
         }
     }
 }
@@ -3660,6 +3671,9 @@ country_event = {
                     has_trait = thl_leader_trait_information_war
                 }
             }
+            NOT = {
+                has_fleet_flag = aya_attack_bonus
+            }
         }
     }
 
@@ -3676,6 +3690,7 @@ country_event = {
                 days = -1
                 multiplier = value:aya_attack_bonus_value
             }
+            set_fleet_flag = aya_attack_bonus
         }
     }
 }
@@ -3698,6 +3713,7 @@ country_event = {
         FromFrom = {
             remove_modifier = information_war_bonus_aya
             remove_modifier = information_war_bonus
+            remove_fleet_flag = aya_attack_bonus
         }
     }
 }
