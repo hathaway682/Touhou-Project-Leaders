@@ -196,7 +196,7 @@ country_event = {
 	}
 	option = {
 		trigger = {
-			NOR = {
+			OR = {
 				has_ethic = "ethic_gestalt_consciousness"
 				is_individual_machine = yes
 			}
