@@ -196,7 +196,7 @@ country_event = {
 	}
 	option = {
 		trigger = {
-			OR = {
+			NOR = {
 				has_ethic = "ethic_gestalt_consciousness"
 				is_individual_machine = yes
 			}
@@ -259,14 +259,50 @@ country_event = {
 	}
 	option = {
 		trigger = {
-			AND = {
-				has_ethic = "ethic_gestalt_consciousness"
-			}
+			has_ethic = "ethic_gestalt_consciousness"
 		}
 		name = touhou_paragon_mission.40304.b
 		if = {
 			limit = {
 				is_machine_empire = yes
+				NOT = {
+					has_technology = tech_robomodding_m
+				}
+			}
+			add_tech_progress = {
+				tech = tech_robomodding_m
+				progress = 0.25
+			}
+		}
+		else = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+		}
+		hidden_effect = {
+			update_sanae_phase_trait = yes
+			remove_point_of_interest = touhou_sanae_mission_chain_tech.1
+			create_point_of_interest = {
+				id = touhou_sanae_mission_chain_tech.2
+				name = "touhou_sanae_mission_chain_tech_name"
+				desc = "touhou_sanae_mission_chain_tech_2_desc"
+				event_chain = "touhou_sanae_mission_chain"
+			}
+		}
+	}
+	option = {
+		trigger = {
+			is_individual_machine = yes
+		}
+		name = touhou_paragon_mission.40304.c
+		add_modifier = {
+			modifier = modifier_sanae_mission_tech_1
+		}
+		if = {
+			limit = {
 				NOT = {
 					has_technology = tech_robomodding_m
 				}
