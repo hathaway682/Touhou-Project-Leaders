@@ -3165,11 +3165,11 @@ decision_enable_sanae_summon = {
 			moriya_faith_trigger = yes
 			OR = {
 				num_assigned_jobs = {
-					job = miko
+					job = thl_miko
 					value >= 1
 				}
 				num_assigned_jobs = {
-					job = miko_drone
+					job = thl_miko_drone
 					value >= 1
 				}
 			}

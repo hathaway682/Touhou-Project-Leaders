@@ -345,7 +345,7 @@ modifier_miracle_6 = {
 modifier_sanae_situation = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_consecrated_worlds.dds"
 	icon_frame = 1
-	pop_miko_bonus_workforce_mult = 0.5
+	pop_thl_miko_bonus_workforce_mult = 0.5
 }
 
 modifier_sanae_situation_last = {
@@ -919,7 +919,7 @@ modifier_kanayamahiko_no_kami = {
 	country_minerals_produces_mult = 0.25
 }
 
-modifier_sukenabikona_no_mikoto = {
+modifier_sukenabikona_no_thl_mikoto = {
 	all_technology_research_speed = 0.25
 	num_tech_alternatives_add = 1
 	planet_colony_development_speed_mult = 0.5

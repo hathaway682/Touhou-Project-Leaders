@@ -36,14 +36,14 @@ d_hakurei_shrine = {
 		potential = {
 			owner = { is_gestalt = no }
 		}
-		job_miko_add = 200
+		job_thl_miko_add = 200
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			owner = { is_gestalt = yes }
 		}
-		job_miko_drone_add = 200
+		job_thl_miko_drone_add = 200
 	}
 
 	planet_modifier = {
@@ -66,18 +66,18 @@ d_hakurei_shrine_large = {
 		potential = {
 			owner = { is_gestalt = no }
 		}
-		job_miko_add = 400
+		job_thl_miko_add = 400
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			owner = { is_gestalt = yes }
 		}
-		job_miko_drone_add = 400
+		job_thl_miko_drone_add = 400
 	}
 
 	planet_modifier = {
-		job_miko_add = 400
+		job_thl_miko_add = 400
 		planet_jobs_energy_produces_mult = 0.25
 		planet_jobs_unity_produces_mult = 0.25
 		planet_jobs_trade_produces_mult = 0.25
@@ -98,14 +98,14 @@ d_hakurei_shrine_imperial = {
 		potential = {
 			owner = { is_gestalt = no }
 		}
-		job_miko_add = 600
+		job_thl_miko_add = 600
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			owner = { is_gestalt = yes }
 		}
-		job_miko_drone_add = 600
+		job_thl_miko_drone_add = 600
 	}
 
 	planet_modifier = {
@@ -137,14 +137,14 @@ d_hakurei_shrine_psionic = {
 		potential = {
 			owner = { is_gestalt = no }
 		}
-		job_miko_add = 600
+		job_thl_miko_add = 600
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			owner = { is_gestalt = yes }
 		}
-		job_miko_drone_add = 600
+		job_thl_miko_drone_add = 600
 	}
 
 	triggered_planet_modifier = {

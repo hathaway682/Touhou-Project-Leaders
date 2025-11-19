@@ -403,19 +403,19 @@ touhou_value_reimu_excessive_amount = {
 	max = 600
 }
 
-touhou_value_miko_job_number_a_quator = {
+touhou_value_thl_miko_job_number_a_quator = {
 	base = 0
 	complex_trigger_modifier = {
 		trigger = num_assigned_jobs
 		parameters = {
-			job = miko
+			job = thl_miko
 		}
 		mode = add
 	}
 	complex_trigger_modifier = {
 		trigger = num_assigned_jobs
 		parameters = {
-			job = miko_drone
+			job = thl_miko_drone
 		}
 		mode = add
 	}

@@ -2030,7 +2030,7 @@ magician_drone = {
 }
 
 #巫女
-miko = {
+thl_miko = {
     category = specialist
     swappable_data = {
         default = {
@@ -2041,9 +2041,9 @@ miko = {
             trigger = {
                 hakurei_faith_trigger = yes
             }
-            name = hakurei_miko
-            desc = hakurei_miko
-            icon = hakurei_miko
+            name = hakurei_thl_miko
+            desc = hakurei_thl_miko
+            icon = hakurei_thl_miko
             building_icon = building_shrine
             condition_string = SPECIALIST_JOB_TRIGGER
             weight = 5
@@ -2052,9 +2052,9 @@ miko = {
             trigger = {
                 moriya_faith_trigger = yes
             }
-            name = moriya_miko
-            desc = moriya_miko
-            icon = moriya_miko
+            name = moriya_thl_miko
+            desc = moriya_thl_miko
+            icon = moriya_thl_miko
             building_icon = building_shrine
             condition_string = SPECIALIST_JOB_TRIGGER
             weight = 10
@@ -2458,7 +2458,7 @@ miko = {
 
     weight = {
         weight = @specialist_job_weight
-        mult = value:job_weights_modifier|JOB|miko|RESOURCE|unity|
+        mult = value:job_weights_modifier|JOB|thl_miko|RESOURCE|unity|
         mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             factor = 0.2
@@ -2494,20 +2494,20 @@ miko = {
     }
 }
 
-miko_drone = {
+thl_miko_drone = {
     category = complex_drone
     swappable_data = {
         default = {
             condition_string = DRONE_JOB_TRIGGER
             building_icon = building_shrine
-            icon = miko
+            icon = thl_miko
         }
         swap_type = {
             trigger = {
                 hakurei_faith_trigger = yes
             }
-            desc = hakurei_miko_drone
-            icon = hakurei_miko
+            desc = hakurei_thl_miko_drone
+            icon = hakurei_thl_miko
             building_icon = building_shrine
             condition_string = DRONE_JOB_TRIGGER
             weight = 5
@@ -2516,8 +2516,8 @@ miko_drone = {
             trigger = {
                 moriya_faith_trigger = yes
             }
-            desc = moriya_miko_drone
-            icon = moriya_miko
+            desc = moriya_thl_miko_drone
+            icon = moriya_thl_miko
             building_icon = building_shrine
             condition_string = DRONE_JOB_TRIGGER
             weight = 10
@@ -2919,7 +2919,7 @@ miko_drone = {
 
     weight = {
         weight = @complex_drone_job_weight
-        mult = value:job_weights_modifier|JOB|miko_drone|RESOURCE|unity|
+        mult = value:job_weights_modifier|JOB|thl_miko_drone|RESOURCE|unity|
         mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
         modifier = {
             factor = 0.9

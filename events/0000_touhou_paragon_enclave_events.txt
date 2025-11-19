@@ -2705,7 +2705,7 @@ country_event = {
             }
         }
         add_modifier = {
-            modifier = modifier_sukenabikona_no_mikoto
+            modifier = modifier_sukenabikona_no_thl_mikoto
             years = 1
         }
         add_modifier = {

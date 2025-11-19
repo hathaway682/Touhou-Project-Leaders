@@ -413,8 +413,8 @@ situation_sanae_sommon = {
 			has_situation_flag = situation_sanae_pause
 		}
 		modifier = {
-			add = owner.value:touhou_value_miko_job_number_a_quator
-			desc = situation_sanae_sommon_number_of_miko_job_number_a_quator
+			add = owner.value:touhou_value_thl_miko_job_number_a_quator
+			desc = situation_sanae_sommon_number_of_thl_miko_job_number_a_quator
 		}
 		modifier = {
 			add = owner.value:touhou_value_materialist_percentage

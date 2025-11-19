@@ -50,14 +50,14 @@ building_shrine = {
 		potential = {
 			owner = { is_gestalt = no }
 		}
-		job_miko_add = 200
+		job_thl_miko_add = 200
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			owner = { is_gestalt = yes }
 		}
-		job_miko_drone_add = 200
+		job_thl_miko_drone_add = 200
 	}
 
 	on_built = {
@@ -160,13 +160,13 @@ building_shrine = {
 		trigger = {
 			owner = { is_gestalt = no }
 		}
-		text = job_miko_effect_desc
+		text = job_thl_miko_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
 			owner = { is_gestalt = yes }
 		}
-		text = job_miko_effect_desc
+		text = job_thl_miko_effect_desc
 	}
 	is_essential = yes
 }
@@ -227,14 +227,14 @@ building_moriya_shrine = {
 		potential = {
 			owner = { is_gestalt = no }
 		}
-		job_miko_add = 400
+		job_thl_miko_add = 400
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			owner = { is_gestalt = yes }
 		}
-		job_miko_drone_add = 400
+		job_thl_miko_drone_add = 400
 	}
 
 	triggered_country_modifier = {
@@ -320,7 +320,7 @@ building_moriya_shrine = {
 	}
 
 	triggered_desc = {
-		text = job_moriya_miko_effect_desc
+		text = job_moriya_thl_miko_effect_desc
 	}
 	is_essential = yes
 }
@@ -354,14 +354,14 @@ holding_building_moriya_shrine = {
 		potential = {
 			owner = { is_gestalt = no }
 		}
-		job_miko_add = 400
+		job_thl_miko_add = 400
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			owner = { is_gestalt = yes }
 		}
-		job_miko_drone_add = 400
+		job_thl_miko_drone_add = 400
 	}
 
 	resources = {
@@ -412,7 +412,7 @@ holding_building_moriya_shrine = {
 	}
 
 	triggered_desc = {
-		text = job_moriya_miko_effect_desc
+		text = job_moriya_thl_miko_effect_desc
 	}
 }
 
@@ -464,14 +464,14 @@ building_hakurei_shrine_0 = {
 		potential = {
 			owner = { is_gestalt = no }
 		}
-		job_miko_add = 200
+		job_thl_miko_add = 200
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			owner = { is_gestalt = yes }
 		}
-		job_miko_drone_add = 200
+		job_thl_miko_drone_add = 200
 	}
 
 	on_built = {
@@ -570,7 +570,7 @@ building_hakurei_shrine_0 = {
 		}
 	}
 	triggered_desc = {
-		text = job_miko_effect_desc
+		text = job_thl_miko_effect_desc
 	}
 	is_essential = yes
 }
@@ -628,14 +628,14 @@ building_hakurei_shrine = {
 		potential = {
 			owner = { is_gestalt = no }
 		}
-		job_miko_add = 400
+		job_thl_miko_add = 400
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			owner = { is_gestalt = yes }
 		}
-		job_miko_drone_add = 400
+		job_thl_miko_drone_add = 400
 	}
 
 	triggered_planet_modifier = {
@@ -680,7 +680,7 @@ building_hakurei_shrine = {
 		}
 	}
 	triggered_desc = {
-		text = job_hakurei_miko_effect_desc
+		text = job_hakurei_thl_miko_effect_desc
 	}
 	is_essential = yes
 }

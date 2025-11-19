@@ -92,7 +92,7 @@ subclass_commander_servant = {
 	leader_class = { commander }
 	background_icon = "GFX_leader_subclass_commander_governor_background"
 }
-subclass_commander_miko = {
+subclass_commander_thl_miko = {
 	custom_subtitle = commander_subclass
 	leader_trait_type = subclass
 	inline_script = {
@@ -118,7 +118,7 @@ subclass_commander_miko = {
 		planet_jobs_ruler_produces_mult = 0.02
 		planet_jobs_specialist_produces_mult = 0.02
 		job_soldier_or_warrior_add = -100
-		job_miko_add = 100
+		job_thl_miko_add = 100
 		multiplier = trigger:has_base_skill
 	}
 	triggered_sector_modifier = {
@@ -130,7 +130,7 @@ subclass_commander_miko = {
 		planet_jobs_ruler_produces_mult = 0.01
 		planet_jobs_specialist_produces_mult = 0.01
 		job_soldier_or_warrior_add = -50
-		job_miko_add = 50
+		job_thl_miko_add = 50
 		multiplier = trigger:has_base_skill
 	}
 	triggered_planet_modifier = {
@@ -142,7 +142,7 @@ subclass_commander_miko = {
 		planet_jobs_ruler_produces_mult = 0.02
 		planet_jobs_specialist_produces_mult = 0.02
 		job_soldier_or_warrior_add = -100
-		job_miko_drone_add = 100
+		job_thl_miko_drone_add = 100
 		multiplier = trigger:has_base_skill
 	}
 	triggered_sector_modifier = {
@@ -154,14 +154,14 @@ subclass_commander_miko = {
 		planet_jobs_ruler_produces_mult = 0.01
 		planet_jobs_specialist_produces_mult = 0.01
 		job_soldier_or_warrior_add = -50
-		job_miko_drone_add = 50
+		job_thl_miko_drone_add = 50
 		multiplier = trigger:has_base_skill
 	}
 	triggered_councilor_modifier = {
 		potential = {
 			always = yes
 		}
-		pop_miko_bonus_workforce_mult = 0.03
+		pop_thl_miko_bonus_workforce_mult = 0.03
 		multiplier = trigger:has_base_skill
 	}
 	ai_weight = {
@@ -175,7 +175,7 @@ subclass_commander_miko = {
 		}
 	}
 	leader_potential_add = {
-		has_trait = subclass_commander_miko
+		has_trait = subclass_commander_thl_miko
 	}
 	leader_class = { commander }
 	background_icon = "GFX_leader_subclass_commander_admiral_background"
@@ -692,17 +692,17 @@ thl_leader_trait_theurgist = {
 		category_psionics_research_speed_mult = 0.10
 	}
 	planet_modifier = {
-		pop_miko_bonus_workforce_mult = 0.1
-		pop_miko_drone_bonus_workforce_mult = 0.1
+		pop_thl_miko_bonus_workforce_mult = 0.1
+		pop_thl_miko_drone_bonus_workforce_mult = 0.1
 	}
 	sector_modifier = {
-		pop_miko_bonus_workforce_mult = 0.05
-		pop_miko_drone_bonus_workforce_mult = 0.05
+		pop_thl_miko_bonus_workforce_mult = 0.05
+		pop_thl_miko_drone_bonus_workforce_mult = 0.05
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
 	leader_potential_add = {
-		has_trait = subclass_commander_miko
+		has_trait = subclass_commander_thl_miko
 	}
 	selectable_weight = {
 		weight = 100000
@@ -774,12 +774,12 @@ thl_leader_trait_theurgist_2 = {
 		category_psionics_research_speed_mult = 0.20
 	}
 	planet_modifier = {
-		pop_miko_bonus_workforce_mult = 0.2
-		pop_miko_drone_bonus_workforce_mult = 0.2
+		pop_thl_miko_bonus_workforce_mult = 0.2
+		pop_thl_miko_drone_bonus_workforce_mult = 0.2
 	}
 	sector_modifier = {
-		pop_miko_bonus_workforce_mult = 0.1
-		pop_miko_drone_bonus_workforce_mult = 0.1
+		pop_thl_miko_bonus_workforce_mult = 0.1
+		pop_thl_miko_drone_bonus_workforce_mult = 0.1
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
@@ -853,12 +853,12 @@ thl_leader_trait_theurgist_3 = {
 		category_psionics_research_speed_mult = 0.30
 	}
 	planet_modifier = {
-		pop_miko_bonus_workforce_mult = 0.3
-		pop_miko_drone_bonus_workforce_mult = 0.3
+		pop_thl_miko_bonus_workforce_mult = 0.3
+		pop_thl_miko_drone_bonus_workforce_mult = 0.3
 	}
 	sector_modifier = {
-		pop_miko_bonus_workforce_mult = 0.15
-		pop_miko_drone_bonus_workforce_mult = 0.15
+		pop_thl_miko_bonus_workforce_mult = 0.15
+		pop_thl_miko_drone_bonus_workforce_mult = 0.15
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist commander official }
@@ -1247,7 +1247,7 @@ thl_leader_trait_fly = {
 		immune_chance_terrify = -10
 	}
 	on_gained_effect = {
-		change_background_job = miko
+		change_background_job = thl_miko
 	}
 	leader_class = { commander }
 	selectable_weight = 0

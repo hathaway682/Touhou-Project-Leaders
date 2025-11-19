@@ -245,7 +245,7 @@ zone_tomb = {
 # 			}
 # 			is_artificial = no
 # 		}
-# 		job_miko_add = 20
+# 		job_thl_miko_add = 20
 # 	}
 #
 # 	triggered_district_planet_modifier = {
@@ -260,7 +260,7 @@ zone_tomb = {
 # 			}
 # 			is_artificial = no
 # 		}
-# 		job_miko_drone_add = 20
+# 		job_thl_miko_drone_add = 20
 # 	}
 #
 # 	planet_modifier = {

@@ -220,7 +220,7 @@ create_sanae_leader = {
 }
 
 add_sanae_traits = {
-	add_trait = { trait = subclass_commander_miko show_message = no }
+	add_trait = { trait = subclass_commander_thl_miko show_message = no }
 	add_trait = { trait = subclass_commander_admiral show_message = no }
 	add_trait = { trait = thl_leader_trait_common_sense_killer show_message = no }
 	add_trait = { trait = thl_leader_trait_theurgist show_message = no }
@@ -334,7 +334,7 @@ create_reimu_leader = {
 }
 
 add_reimu_traits = {
-	add_trait = { trait = subclass_commander_miko show_message = no }
+	add_trait = { trait = subclass_commander_thl_miko show_message = no }
 	add_trait = { trait = subclass_commander_admiral show_message = no }
 	add_trait = { trait = thl_leader_trait_invincible show_message = no }
 	add_trait = { trait = thl_leader_trait_like_cloud_and_water show_message = no }

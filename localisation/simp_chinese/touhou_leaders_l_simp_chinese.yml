@@ -62,8 +62,8 @@
  subclass_commander_servant: "从者"
  subclass_commander_servant_desc: "幻想乡的从者们为她们的主人承担战斗和管理的责任，她们的行政技巧可以避免大军驻扎带来的负面效应。"
 
- subclass_commander_miko: "巫女"
- subclass_commander_miko_desc: "打击异变，维持秩序，传播信仰，这些都是巫女的责任，比起舰队司令，她们的战术更加灵活，丰富的弹幕战经验使得她们可以轻易避开敌人的火力，比起督管专员，她们的手段更加巧妙，通过信仰、怀柔和必要的定点打击，叛乱和犯罪将被消弭于无形，而不影响当地生产秩序。"
+ subclass_commander_thl_miko: "巫女"
+ subclass_commander_thl_miko_desc: "打击异变，维持秩序，传播信仰，这些都是巫女的责任，比起舰队司令，她们的战术更加灵活，丰富的弹幕战经验使得她们可以轻易避开敌人的火力，比起督管专员，她们的手段更加巧妙，通过信仰、怀柔和必要的定点打击，叛乱和犯罪将被消弭于无形，而不影响当地生产秩序。"
 
  NAME_Tenshi:0 "比那名居天子"
  tenshi1:0 "比那名居家的长女，厌倦了天界的无聊生活，选择了出来闯荡（实际上是因为偷吃仙丹被流放了）。"
@@ -250,8 +250,8 @@
  thl_leader_trait_snake_bless_desc:1 "这位领袖可以使用来自乾之神八坂神奈子的神力，呼风唤雨，追踪妖魔。"
  thl_leader_trait_frog_bless:0 "坤神加护"
  thl_leader_trait_frog_bless_desc:1 "这位领袖可以使用来自坤之神洩矢诹访子的神力，改变地形，抵抗敌人。"
- mod_pop_miko_bonus_workforce_mult: "[miko.GetNamePlural]的岗位效率"
- mod_pop_miko_drone_bonus_workforce_mult: "[miko_drone.GetNamePlural]的岗位效率"
+ mod_pop_thl_miko_bonus_workforce_mult: "[thl_miko.GetNamePlural]的岗位效率"
+ mod_pop_thl_miko_drone_bonus_workforce_mult: "[thl_miko_drone.GetNamePlural]的岗位效率"
  #leader_trait_moriya_preacher:0 "守矢布道者"
  #leader_trait_moriya_preacher_desc:1 "这位领袖为我们的国家带来了结合古代泛灵论和现代科学的独特信仰。"
  #leader_trait_moriya_preacher_effect:0 ""
@@ -362,7 +362,7 @@
  moriya_chosen_army_plural: "守矢神选者"
  moriya_chosen_army_desc: "受到守矢信仰感召而主动加入进攻星球一方的灵能者。"
 
- moriya_faith_trigger_tooltip: "$TRIGGER_FAIL$星球拥有£moriya_miko£$job_moriya_miko_plural$"
+ moriya_faith_trigger_tooltip: "$TRIGGER_FAIL$星球拥有£moriya_thl_miko£$job_moriya_thl_miko_plural$"
 
  NAME_Cirno:0 "琪露诺"
  cirno1:0 "自称最强的妖精，前来寻求冒险，实际上是个笨蛋。"
