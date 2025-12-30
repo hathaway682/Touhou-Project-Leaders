@@ -4,7 +4,7 @@
 # SHARED TRAITS BLOCKED IN PARAGON #
 ####################################
 
-trait_touhou_ruler_frontier_spirit = {
+trait_thl_ruler_frontier_spirit = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -27,7 +27,7 @@ trait_touhou_ruler_frontier_spirit = {
 	}
 }
 
-leader_trait_touhou_intellectual = {
+leader_trait_thl_intellectual = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -54,7 +54,7 @@ leader_trait_touhou_intellectual = {
 ####################################
 
 ###################
-leader_trait_touhou_army_veteran = {
+leader_trait_thl_army_veteran = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -76,11 +76,11 @@ leader_trait_touhou_army_veteran = {
 		set_random_commander_background_effect = yes
 	}
 	leader_class = { commander official }
-	opposites = { "leader_trait_touhou_retired_fleet_officer" }
+	opposites = { "leader_trait_thl_retired_fleet_officer" }
 }
 
-leader_trait_touhou_army_veteran_2 = {
-	replace_traits = { "leader_trait_touhou_army_veteran" }
+leader_trait_thl_army_veteran_2 = {
+	replace_traits = { "leader_trait_thl_army_veteran" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -95,11 +95,11 @@ leader_trait_touhou_army_veteran_2 = {
 		army_defense_damage_mult = 0.25
 	}
 	leader_class = { commander official }
-	opposites = { "leader_trait_touhou_retired_fleet_officer" }
+	opposites = { "leader_trait_thl_retired_fleet_officer" }
 }
 
 ###################
-leader_trait_touhou_retired_fleet_officer = {
+leader_trait_thl_retired_fleet_officer = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -120,11 +120,11 @@ leader_trait_touhou_retired_fleet_officer = {
 		set_random_commander_background_effect = yes
 	}
 	leader_class = { commander official }
-	opposites = { "leader_trait_touhou_army_veteran" }
+	opposites = { "leader_trait_thl_army_veteran" }
 }
 
-leader_trait_touhou_retired_fleet_officer_2 = {
-	replace_traits = { "leader_trait_touhou_retired_fleet_officer" }
+leader_trait_thl_retired_fleet_officer_2 = {
+	replace_traits = { "leader_trait_thl_retired_fleet_officer" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -138,11 +138,11 @@ leader_trait_touhou_retired_fleet_officer_2 = {
 		ship_starting_experience_add = 200
 	}
 	leader_class = { commander official }
-	opposites = { "leader_trait_touhou_army_veteran" }
+	opposites = { "leader_trait_thl_army_veteran" }
 }
 
 ###################
-leader_trait_touhou_agrarian_upbringing = {
+leader_trait_thl_agrarian_upbringing = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -169,8 +169,8 @@ leader_trait_touhou_agrarian_upbringing = {
 	leader_class = { commander official }
 }
 
-leader_trait_touhou_agrarian_upbringing_2 = {
-	replace_traits = { "leader_trait_touhou_agrarian_upbringing" }
+leader_trait_thl_agrarian_upbringing_2 = {
+	replace_traits = { "leader_trait_thl_agrarian_upbringing" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -190,7 +190,7 @@ leader_trait_touhou_agrarian_upbringing_2 = {
 #########################
 
 ###################
-trait_touhou_ruler_fertility_preacher = {
+trait_thl_ruler_fertility_preacher = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -230,8 +230,8 @@ trait_touhou_ruler_fertility_preacher = {
 	}
 }
 
-trait_touhou_ruler_fertility_preacher_2 = {
-	replace_traits = { "trait_touhou_ruler_fertility_preacher" }
+trait_thl_ruler_fertility_preacher_2 = {
+	replace_traits = { "trait_thl_ruler_fertility_preacher" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -265,7 +265,7 @@ trait_touhou_ruler_fertility_preacher_2 = {
 }
 
 ###################
-leader_trait_touhou_righteous = {
+leader_trait_thl_righteous = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -304,8 +304,8 @@ leader_trait_touhou_righteous = {
 	}
 }
 
-leader_trait_touhou_righteous_2 = {
-	replace_traits = { "leader_trait_touhou_righteous" }
+leader_trait_thl_righteous_2 = {
+	replace_traits = { "leader_trait_thl_righteous" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -338,7 +338,7 @@ leader_trait_touhou_righteous_2 = {
 }
 
 ###################
-leader_trait_touhou_environmental_engineer = {
+leader_trait_thl_environmental_engineer = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -365,8 +365,8 @@ leader_trait_touhou_environmental_engineer = {
 	}
 }
 
-leader_trait_touhou_environmental_engineer_2 = {
-	replace_traits = { "leader_trait_touhou_environmental_engineer" }
+leader_trait_thl_environmental_engineer_2 = {
+	replace_traits = { "leader_trait_thl_environmental_engineer" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -387,7 +387,7 @@ leader_trait_touhou_environmental_engineer_2 = {
 }
 
 ###################
-leader_trait_touhou_enlister = {
+leader_trait_thl_enlister = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -414,8 +414,8 @@ leader_trait_touhou_enlister = {
 	}
 }
 
-leader_trait_touhou_enlister_2 = {
-	replace_traits = { "leader_trait_touhou_enlister" }
+leader_trait_thl_enlister_2 = {
+	replace_traits = { "leader_trait_thl_enlister" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -436,7 +436,7 @@ leader_trait_touhou_enlister_2 = {
 }
 
 ###################
-leader_trait_touhou_shipwright = {
+leader_trait_thl_shipwright = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -463,8 +463,8 @@ leader_trait_touhou_shipwright = {
 	}
 }
 
-leader_trait_touhou_shipwright_2 = {
-	replace_traits = { "leader_trait_touhou_shipwright" }
+leader_trait_thl_shipwright_2 = {
+	replace_traits = { "leader_trait_thl_shipwright" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -485,7 +485,7 @@ leader_trait_touhou_shipwright_2 = {
 }
 
 ###################
-leader_trait_touhou_architectural_interest = {
+leader_trait_thl_architectural_interest = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -516,8 +516,8 @@ leader_trait_touhou_architectural_interest = {
 	}
 }
 
-leader_trait_touhou_architectural_interest_2 = {
-	replace_traits = { "leader_trait_touhou_architectural_interest" }
+leader_trait_thl_architectural_interest_2 = {
+	replace_traits = { "leader_trait_thl_architectural_interest" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -585,7 +585,7 @@ trait_ruler_touhou_architectural_sense = {
 	leader_class = { commander official }
 }
 
-leader_trait_touhou_fleet_logistician = {
+leader_trait_thl_fleet_logistician = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -612,7 +612,7 @@ leader_trait_touhou_fleet_logistician = {
 }
 
 ###################
-leader_trait_touhou_trade_focus = {
+leader_trait_thl_trade_focus = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -644,8 +644,8 @@ leader_trait_touhou_trade_focus = {
 	}
 }
 
-leader_trait_touhou_trade_focus_2 = {
-	replace_traits = { "leader_trait_touhou_trade_focus" }
+leader_trait_thl_trade_focus_2 = {
+	replace_traits = { "leader_trait_thl_trade_focus" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -667,7 +667,7 @@ leader_trait_touhou_trade_focus_2 = {
 #  VISIONARY  #
 ###############
 
-leader_trait_touhou_frontier_spirit = {
+leader_trait_thl_frontier_spirit = {
 	leader_trait_type = veteran
 	inline_script = {
 		script = trait/icon
@@ -692,9 +692,9 @@ leader_trait_touhou_frontier_spirit = {
 	}
 }
 
-leader_trait_touhou_frontier_spirit_2 = {
+leader_trait_thl_frontier_spirit_2 = {
 	leader_trait_type = veteran
-	replace_traits = { "leader_trait_touhou_frontier_spirit" }
+	replace_traits = { "leader_trait_thl_frontier_spirit" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -710,9 +710,9 @@ leader_trait_touhou_frontier_spirit_2 = {
 	leader_class = { commander official }
 }
 
-leader_trait_touhou_frontier_spirit_3 = {
+leader_trait_thl_frontier_spirit_3 = {
 	leader_trait_type = veteran
-	replace_traits = { "leader_trait_touhou_frontier_spirit_2" }
+	replace_traits = { "leader_trait_thl_frontier_spirit_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -730,7 +730,7 @@ leader_trait_touhou_frontier_spirit_3 = {
 }
 
 ###################
-leader_trait_touhou_cultural_focus = {
+leader_trait_thl_cultural_focus = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -754,8 +754,8 @@ leader_trait_touhou_cultural_focus = {
 	}
 }
 
-leader_trait_touhou_cultural_focus_2 = {
-	replace_traits = { "leader_trait_touhou_cultural_focus" }
+leader_trait_thl_cultural_focus_2 = {
+	replace_traits = { "leader_trait_thl_cultural_focus" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -771,8 +771,8 @@ leader_trait_touhou_cultural_focus_2 = {
 	leader_class = { commander official }
 }
 
-leader_trait_touhou_cultural_focus_3 = {
-	replace_traits = { "leader_trait_touhou_cultural_focus_2" }
+leader_trait_thl_cultural_focus_3 = {
+	replace_traits = { "leader_trait_thl_cultural_focus_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -789,7 +789,7 @@ leader_trait_touhou_cultural_focus_3 = {
 }
 
 ###################
-trait_touhou_ruler_investor = {
+trait_thl_ruler_investor = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -821,8 +821,8 @@ trait_touhou_ruler_investor = {
 	}
 }
 
-trait_touhou_ruler_investor_2 = {
-	replace_traits = { "trait_touhou_ruler_investor" }
+trait_thl_ruler_investor_2 = {
+	replace_traits = { "trait_thl_ruler_investor" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -847,8 +847,8 @@ trait_touhou_ruler_investor_2 = {
 	leader_trait_type = veteran
 }
 
-trait_touhou_ruler_investor_3 = {
-	replace_traits = { "trait_touhou_ruler_investor_2" }
+trait_thl_ruler_investor_3 = {
+	replace_traits = { "trait_thl_ruler_investor_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -877,7 +877,7 @@ trait_touhou_ruler_investor_3 = {
 }
 
 ###################
-trait_touhou_ruler_architectural_sense = {
+trait_thl_ruler_architectural_sense = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -902,8 +902,8 @@ trait_touhou_ruler_architectural_sense = {
 	}
 }
 
-trait_touhou_ruler_architectural_sense_2 = {
-	replace_traits = { "trait_touhou_ruler_architectural_sense" }
+trait_thl_ruler_architectural_sense_2 = {
+	replace_traits = { "trait_thl_ruler_architectural_sense" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -921,8 +921,8 @@ trait_touhou_ruler_architectural_sense_2 = {
 	leader_class = { commander official }
 }
 
-trait_touhou_ruler_architectural_sense_3 = {
-	replace_traits = { "trait_touhou_ruler_architectural_sense_2" }
+trait_thl_ruler_architectural_sense_3 = {
+	replace_traits = { "trait_thl_ruler_architectural_sense_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -946,7 +946,7 @@ trait_touhou_ruler_architectural_sense_3 = {
 }
 
 ###################
-trait_touhou_ruler_deep_connections = {
+trait_thl_ruler_deep_connections = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -969,8 +969,8 @@ trait_touhou_ruler_deep_connections = {
 	}
 }
 
-trait_touhou_ruler_deep_connections_2 = {
-	replace_traits = { "trait_touhou_ruler_deep_connections" }
+trait_thl_ruler_deep_connections_2 = {
+	replace_traits = { "trait_thl_ruler_deep_connections" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -986,8 +986,8 @@ trait_touhou_ruler_deep_connections_2 = {
 	leader_class = { commander official }
 }
 
-trait_touhou_ruler_deep_connections_3 = {
-	replace_traits = { "trait_touhou_ruler_deep_connections_2" }
+trait_thl_ruler_deep_connections_3 = {
+	replace_traits = { "trait_thl_ruler_deep_connections_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1007,7 +1007,7 @@ trait_touhou_ruler_deep_connections_3 = {
 }
 
 ###################
-leader_trait_touhou_reformer = {
+leader_trait_thl_reformer = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1032,8 +1032,8 @@ leader_trait_touhou_reformer = {
 	}
 }
 
-leader_trait_touhou_reformer_2 = {
-	replace_traits = { "leader_trait_touhou_reformer" }
+leader_trait_thl_reformer_2 = {
+	replace_traits = { "leader_trait_thl_reformer" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1050,8 +1050,8 @@ leader_trait_touhou_reformer_2 = {
 	leader_class = { commander official }
 }
 
-leader_trait_touhou_reformer_3 = {
-	replace_traits = { "leader_trait_touhou_reformer_2" }
+leader_trait_thl_reformer_3 = {
+	replace_traits = { "leader_trait_thl_reformer_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1069,7 +1069,7 @@ leader_trait_touhou_reformer_3 = {
 }
 
 ###################
-leader_trait_touhou_courtroom_training = {
+leader_trait_thl_courtroom_training = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1099,8 +1099,8 @@ leader_trait_touhou_courtroom_training = {
 	}
 }
 
-leader_trait_touhou_courtroom_training_2 = {
-	replace_traits = { "leader_trait_touhou_courtroom_training" }
+leader_trait_thl_courtroom_training_2 = {
+	replace_traits = { "leader_trait_thl_courtroom_training" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1120,8 +1120,8 @@ leader_trait_touhou_courtroom_training_2 = {
 	leader_trait_type = veteran
 }
 
-leader_trait_touhou_courtroom_training_3 = {
-	replace_traits = { "leader_trait_touhou_courtroom_training_2" }
+leader_trait_thl_courtroom_training_3 = {
+	replace_traits = { "leader_trait_thl_courtroom_training_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1145,513 +1145,441 @@ leader_trait_touhou_courtroom_training_3 = {
 #  PIONEER  #
 #############
 
-leader_trait_touhou_mining_focus = {
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_mining_focus"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 1
-	}
-	planet_modifier = {
-		planet_jobs_minerals_produces_mult = 0.15
-	}
-	sector_modifier = {
-		planet_jobs_minerals_produces_mult = 0.075
-	}
-	leader_potential_add = {
-		#has_paragon_dlc = yes
-		has_any_governor_focus = no
-		has_trait = subclass_commander_servant
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official }
-	custom_tooltip_with_modifiers = only_one_governor_focus
-	selectable_weight = {
-		weight = @subclass_trait_weight
-		inline_script = paragon/governor_weight_mult
-		modifier = {
-			factor = @designation_bonus
-			exists = planet
-			planet = {
-				has_mining_designation = yes
-			}
-		}
-	}
-}
-
-leader_trait_touhou_mining_focus_2 = {
-	replace_traits = { "leader_trait_touhou_mining_focus" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_mining_focus"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 2
-	}
-	planet_modifier = {
-		planet_jobs_minerals_produces_mult = 0.25
-	}
-	sector_modifier = {
-		planet_jobs_minerals_produces_mult = 0.125
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official }
-	custom_tooltip_with_modifiers = only_one_governor_focus
-}
-
-leader_trait_touhou_mining_focus_3 = {
-	replace_traits = { "leader_trait_touhou_mining_focus_2" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_mining_focus"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 3
-	}
-	planet_modifier = {
-		planet_jobs_minerals_produces_mult = 0.45
-	}
-	sector_modifier = {
-		planet_jobs_minerals_produces_mult = 0.225
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official }
-	custom_tooltip_with_modifiers = only_one_governor_focus
-}
-
-###################
-leader_trait_touhou_generator_focus = {
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_financial"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 1
-	}
-	planet_modifier = {
-		planet_jobs_energy_produces_mult = 0.15
-	}
-	sector_modifier = {
-		planet_jobs_energy_produces_mult = 0.075
-	}
-	leader_potential_add = {
-		#has_paragon_dlc = yes
-		has_any_governor_focus = no
-		has_trait = subclass_commander_servant
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official }
-	custom_tooltip_with_modifiers = only_one_governor_focus
-	selectable_weight = {
-		weight = @subclass_trait_weight
-		inline_script = paragon/governor_weight_mult
-		modifier = {
-			factor = @designation_bonus
-			exists = planet
-			planet = {
-				has_generator_designation = yes
-			}
-		}
-	}
-}
-
-leader_trait_touhou_generator_focus_2 = {
-	replace_traits = { "leader_trait_touhou_generator_focus" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_financial"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 2
-	}
-	planet_modifier = {
-		planet_jobs_energy_produces_mult = 0.25
-	}
-	sector_modifier = {
-		planet_jobs_energy_produces_mult = 0.125
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official }
-	custom_tooltip_with_modifiers = only_one_governor_focus
-}
-
-leader_trait_touhou_generator_focus_3 = {
-	replace_traits = { "leader_trait_touhou_generator_focus_2" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_financial"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 3
-	}
-	planet_modifier = {
-		planet_jobs_energy_produces_mult = 0.45
-	}
-	sector_modifier = {
-		planet_jobs_energy_produces_mult = 0.225
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official }
-	custom_tooltip_with_modifiers = only_one_governor_focus
-}
-
-###################
-leader_trait_touhou_farming_focus = {
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_food"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 1
-	}
-	planet_modifier = {
-		planet_jobs_food_produces_mult = 0.15
-	}
-	sector_modifier = {
-		planet_jobs_food_produces_mult = 0.075
-	}
-	leader_potential_add = {
-		#has_paragon_dlc = yes
-		owner = { country_uses_food = yes }
-		has_trait = subclass_commander_servant
-		has_any_governor_focus = no
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official }
-	custom_tooltip_with_modifiers = only_one_governor_focus
-	selectable_weight = {
-		weight = @subclass_trait_weight
-		inline_script = paragon/governor_weight_mult
-		modifier = {
-			factor = @designation_bonus
-			exists = planet
-			planet = {
-				has_farming_designation = yes
-			}
-		}
-	}
-}
-
-leader_trait_touhou_farming_focus_2 = {
-	replace_traits = { "leader_trait_touhou_farming_focus" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_food"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 2
-	}
-	planet_modifier = {
-		planet_jobs_food_produces_mult = 0.25
-	}
-	sector_modifier = {
-		planet_jobs_food_produces_mult = 0.125
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official }
-	custom_tooltip_with_modifiers = only_one_governor_focus
-}
-
-leader_trait_touhou_farming_focus_3 = {
-	replace_traits = { "leader_trait_touhou_farming_focus_2" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_food"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 3
-	}
-	planet_modifier = {
-		planet_jobs_food_produces_mult = 0.45
-	}
-	sector_modifier = {
-		planet_jobs_food_produces_mult = 0.225
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official }
-	custom_tooltip_with_modifiers = only_one_governor_focus
-}
-
-###################
-leader_trait_touhou_settler = {
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_settler"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 1
-	}
-	leader_potential_add = {
-		#has_paragon_dlc = yes
-		has_trait = subclass_commander_servant
-	}
-	leader_trait_type = veteran
-	planet_modifier = {
-		planet_housing_add = 400
-		planet_amenities_add = 1000
-	}
-	sector_modifier = {
-		planet_housing_add = 200
-		planet_amenities_add = 500
-	}
-	leader_class = { commander official }
-	selectable_weight = {
-		inline_script = paragon/subclass_free_trait_weight
-		inline_script = paragon/governor_weight_mult
-	}
-}
-
-leader_trait_touhou_settler_2 = {
-	replace_traits = { "leader_trait_touhou_settler" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_settler"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 2
-	}
-	planet_modifier = {
-		planet_housing_add = 600
-		planet_amenities_add = 1500
-	}
-	sector_modifier = {
-		planet_housing_add = 300
-		planet_amenities_add = 700
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official }
-}
-
-leader_trait_touhou_settler_3 = {
-	replace_traits = { "leader_trait_touhou_settler_2" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_settler"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 3
-	}
-	planet_modifier = {
-		planet_housing_add = 1000
-		planet_amenities_add = 2500
-	}
-	sector_modifier = {
-		planet_housing_add = 500
-		planet_amenities_add = 1000
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official }
-}
-
-###################
-leader_trait_touhou_cartographer = {
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_cartographer"
-		RARITY = veteran
-		COUNCIL = yes
-		TIER = 1
-	}
-	leader_potential_add = {
-		#has_paragon_dlc = yes
-		OR = {
-			has_trait = subclass_commander_lord
-			has_trait = subclass_scientist_councilor
-		}
-	}
-	councilor_modifier = {
-		terraform_speed_mult = 0.10
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official scientist }
-	selectable_weight = {
-		weight = @subclass_trait_weight
-		inline_script = paragon/council_weight_mult
-	}
-}
-
-leader_trait_touhou_cartographer_2 = {
-	replace_traits = { "leader_trait_touhou_cartographer" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_cartographer"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 2
-	}
-	councilor_modifier = {
-		terraform_speed_mult = 0.25
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official scientist }
-}
-
-leader_trait_touhou_cartographer_3 = {
-	replace_traits = { "leader_trait_touhou_cartographer_2" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_cartographer"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 3
-	}
-	councilor_modifier = {
-		terraform_speed_mult = 0.33
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official scientist }
-}
-
-###################
-leader_trait_touhou_expeditionist = {
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_expeditionist"
-		RARITY = veteran
-		COUNCIL = yes
-		TIER = 1
-	}
-	councilor_modifier = {
+#  leader_trait_thl_mining_focus = {
+#  	inline_script = {
+#  		script = trait/icon
+#  		CLASS = official
+#  		ICON = "GFX_leader_trait_mining_focus"
+#  		RARITY = veteran
+#  		COUNCIL = no
+#  		TIER = 1
+#  	}
+#  	planet_modifier = {
+#  		planet_jobs_minerals_produces_mult = 0.15
+#  	}
+#  	sector_modifier = {
+#  		planet_jobs_minerals_produces_mult = 0.075
+#  	}
+#  	leader_potential_add = {
+#  		#has_paragon_dlc = yes
+#  		has_any_governor_focus = no
+#  		has_trait = subclass_commander_servant
+#  	}
+#  	leader_trait_type = veteran
+#  	leader_class = { commander official }
+#  	custom_tooltip_with_modifiers = only_one_governor_focus
+#  	selectable_weight = {
+#  		weight = @subclass_trait_weight
+#  		inline_script = paragon/governor_weight_mult
+#  		modifier = {
+#  			factor = @designation_bonus
+#  			exists = planet
+#  			planet = {
+#  				has_mining_designation = yes
+#  			}
+#  		}
+#  	}
+#  }
+#  leader_trait_thl_mining_focus_2 = {
+#  	replace_traits = { "leader_trait_thl_mining_focus" }
+#  	inline_script = {
+#  		script = trait/icon
+#  		CLASS = official
+#  		ICON = "GFX_leader_trait_mining_focus"
+#  		RARITY = veteran
+#  		COUNCIL = no
+#  		TIER = 2
+#  	}
+#  	planet_modifier = {
+#  		planet_jobs_minerals_produces_mult = 0.25
+#  	}
+#  	sector_modifier = {
+#  		planet_jobs_minerals_produces_mult = 0.125
+#  	}
+#  	leader_trait_type = veteran
+#  	leader_class = { commander official }
+#  	custom_tooltip_with_modifiers = only_one_governor_focus
+#  }
+#  leader_trait_thl_mining_focus_3 = {
+#  	replace_traits = { "leader_trait_thl_mining_focus_2" }
+#  	inline_script = {
+#  		script = trait/icon
+#  		CLASS = official
+#  		ICON = "GFX_leader_trait_mining_focus"
+#  		RARITY = veteran
+#  		COUNCIL = no
+#  		TIER = 3
+#  	}
+#  	planet_modifier = {
+#  		planet_jobs_minerals_produces_mult = 0.45
+#  	}
+#  	sector_modifier = {
+#  		planet_jobs_minerals_produces_mult = 0.225
+#  	}
+#  	leader_trait_type = veteran
+#  	leader_class = { commander official }
+#  	custom_tooltip_with_modifiers = only_one_governor_focus
+#  }
+#  ###################
+#  leader_trait_thl_generator_focus = {
+#  	inline_script = {
+#  		script = trait/icon
+#  		CLASS = official
+#  		ICON = "GFX_leader_trait_financial"
+#  		RARITY = veteran
+#  		COUNCIL = no
+#  		TIER = 1
+#  	}
+#  	planet_modifier = {
+#  		planet_jobs_energy_produces_mult = 0.15
+#  	}
+#  	sector_modifier = {
+#  		planet_jobs_energy_produces_mult = 0.075
+#  	}
+#  	leader_potential_add = {
+#  		#has_paragon_dlc = yes
+#  		has_any_governor_focus = no
+#  		has_trait = subclass_commander_servant
+#  	}
+#  	leader_trait_type = veteran
+#  	leader_class = { commander official }
+#  	custom_tooltip_with_modifiers = only_one_governor_focus
+#  	selectable_weight = {
+#  		weight = @subclass_trait_weight
+#  		inline_script = paragon/governor_weight_mult
+#  		modifier = {
+#  			factor = @designation_bonus
+#  			exists = planet
+#  			planet = {
+#  				has_generator_designation = yes
+#  			}
+#  		}
+#  	}
+#  }
+#  leader_trait_thl_generator_focus_2 = {
+#  	replace_traits = { "leader_trait_thl_generator_focus" }
+#  	inline_script = {
+#  		script = trait/icon
+#  		CLASS = official
+#  		ICON = "GFX_leader_trait_financial"
+#  		RARITY = veteran
+#  		COUNCIL = no
+#  		TIER = 2
+#  	}
+#  	planet_modifier = {
+#  		planet_jobs_energy_produces_mult = 0.25
+#  	}
+#  	sector_modifier = {
+#  		planet_jobs_energy_produces_mult = 0.125
+#  	}
+#  	leader_trait_type = veteran
+#  	leader_class = { commander official }
+#  	custom_tooltip_with_modifiers = only_one_governor_focus
+#  }
+#  leader_trait_thl_generator_focus_3 = {
+#  	replace_traits = { "leader_trait_thl_generator_focus_2" }
+#  	inline_script = {
+#  		script = trait/icon
+#  		CLASS = official
+#  		ICON = "GFX_leader_trait_financial"
+#  		RARITY = veteran
+#  		COUNCIL = no
+#  		TIER = 3
+#  	}
+#  	planet_modifier = {
+#  		planet_jobs_energy_produces_mult = 0.45
+#  	}
+#  	sector_modifier = {
+#  		planet_jobs_energy_produces_mult = 0.225
+#  	}
+#  	leader_trait_type = veteran
+#  	leader_class = { commander official }
+#  	custom_tooltip_with_modifiers = only_one_governor_focus
+#  }
+#  ###################
+#  leader_trait_thl_farming_focus = {
+#  	inline_script = {
+#  		script = trait/icon
+#  		CLASS = official
+#  		ICON = "GFX_leader_trait_food"
+#  		RARITY = veteran
+#  		COUNCIL = no
+#  		TIER = 1
+#  	}
+#  	planet_modifier = {
+#  		planet_jobs_food_produces_mult = 0.15
+#  	}
+#  	sector_modifier = {
+#  		planet_jobs_food_produces_mult = 0.075
+#  	}
+#  	leader_potential_add = {
+#  		#has_paragon_dlc = yes
+#  		owner = { country_uses_food = yes }
+#  		has_trait = subclass_commander_servant
+#  		has_any_governor_focus = no
+#  	}
+#  	leader_trait_type = veteran
+#  	leader_class = { commander official }
+#  	custom_tooltip_with_modifiers = only_one_governor_focus
+#  	selectable_weight = {
+#  		weight = @subclass_trait_weight
+#  		inline_script = paragon/governor_weight_mult
+#  		modifier = {
+#  			factor = @designation_bonus
+#  			exists = planet
+#  			planet = {
+#  				has_farming_designation = yes
+#  			}
+#  		}
+#  	}
+#  }
+#  leader_trait_thl_farming_focus_2 = {
+#  	replace_traits = { "leader_trait_thl_farming_focus" }
+#  	inline_script = {
+#  		script = trait/icon
+#  		CLASS = official
+#  		ICON = "GFX_leader_trait_food"
+#  		RARITY = veteran
+#  		COUNCIL = no
+#  		TIER = 2
+#  	}
+#  	planet_modifier = {
+#  		planet_jobs_food_produces_mult = 0.25
+#  	}
+#  	sector_modifier = {
+#  		planet_jobs_food_produces_mult = 0.125
+#  	}
+#  	leader_trait_type = veteran
+#  	leader_class = { commander official }
+#  	custom_tooltip_with_modifiers = only_one_governor_focus
+#  }
+#  leader_trait_thl_farming_focus_3 = {
+#  	replace_traits = { "leader_trait_thl_farming_focus_2" }
+#  	inline_script = {
+#  		script = trait/icon
+#  		CLASS = official
+#  		ICON = "GFX_leader_trait_food"
+#  		RARITY = veteran
+#  		COUNCIL = no
+#  		TIER = 3
+#  	}
+#  	planet_modifier = {
+#  		planet_jobs_food_produces_mult = 0.45
+#  	}
+#  	sector_modifier = {
+#  		planet_jobs_food_produces_mult = 0.225
+#  	}
+#  	leader_trait_type = veteran
+#  	leader_class = { commander official }
+#  	custom_tooltip_with_modifiers = only_one_governor_focus
+#  }
+ ###################
+ leader_trait_thl_settler = {
+ 	inline_script = {
+ 		script = trait/icon
+ 		CLASS = official
+ 		ICON = "GFX_leader_trait_settler"
+ 		RARITY = veteran
+ 		COUNCIL = no
+ 		TIER = 1
+ 	}
+ 	leader_potential_add = {
+ 		#has_paragon_dlc = yes
+ 		has_trait = subclass_commander_servant
+ 	}
+ 	leader_trait_type = veteran
+ 	planet_modifier = {
+ 		planet_housing_add = 400
+ 		planet_amenities_add = 1000
+ 	}
+ 	sector_modifier = {
+ 		planet_housing_add = 200
+ 		planet_amenities_add = 500
+ 	}
+ 	leader_class = { commander official }
+ 	selectable_weight = {
+ 		inline_script = paragon/subclass_free_trait_weight
+ 		inline_script = paragon/governor_weight_mult
+ 	}
+ }
+ leader_trait_thl_settler_2 = {
+ 	replace_traits = { "leader_trait_thl_settler" }
+ 	inline_script = {
+ 		script = trait/icon
+ 		CLASS = official
+ 		ICON = "GFX_leader_trait_settler"
+ 		RARITY = veteran
+ 		COUNCIL = no
+ 		TIER = 2
+ 	}
+ 	planet_modifier = {
+ 		planet_housing_add = 600
+ 		planet_amenities_add = 1500
+ 	}
+ 	sector_modifier = {
+ 		planet_housing_add = 300
+ 		planet_amenities_add = 700
+ 	}
+ 	leader_trait_type = veteran
+ 	leader_class = { commander official }
+ }
+ leader_trait_thl_settler_3 = {
+ 	replace_traits = { "leader_trait_thl_settler_2" }
+ 	inline_script = {
+ 		script = trait/icon
+ 		CLASS = official
+ 		ICON = "GFX_leader_trait_settler"
+ 		RARITY = veteran
+ 		COUNCIL = no
+ 		TIER = 3
+ 	}
+ 	planet_modifier = {
+ 		planet_housing_add = 1000
+ 		planet_amenities_add = 2500
+ 	}
+ 	sector_modifier = {
+ 		planet_housing_add = 500
+ 		planet_amenities_add = 1000
+ 	}
+ 	leader_trait_type = veteran
+ 	leader_class = { commander official }
+ }
+ ###################
+ leader_trait_thl_cartographer = {
+ 	inline_script = {
+ 		script = trait/icon
+ 		CLASS = official
+ 		ICON = "GFX_leader_trait_cartographer"
+ 		RARITY = veteran
+ 		COUNCIL = yes
+ 		TIER = 1
+ 	}
+ 	leader_potential_add = {
+ 		#has_paragon_dlc = yes
+ 		OR = {
+ 			has_trait = subclass_commander_lord
+ 			has_trait = subclass_scientist_councilor
+ 		}
+ 	}
+ 	councilor_modifier = {
+ 		terraform_speed_mult = 0.25
 		planet_clear_blocker_speed_mult = 0.10
-	}
-	leader_potential_add = {
-		#has_paragon_dlc = yes
-		has_trait = subclass_commander_lord
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official }
-	selectable_weight = {
-		weight = @subclass_trait_weight
-		inline_script = paragon/council_weight_mult
-	}
-}
-
-leader_trait_touhou_expeditionist_2 = {
-	replace_traits = { "leader_trait_touhou_expeditionist" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_expeditionist"
-		RARITY = veteran
-		COUNCIL = yes
-		TIER = 2
-	}
-	councilor_modifier = {
+ 	}
+ 	leader_trait_type = veteran
+ 	leader_class = { commander official scientist }
+ 	selectable_weight = {
+ 		weight = @subclass_trait_weight
+ 		inline_script = paragon/council_weight_mult
+ 	}
+ }
+ leader_trait_thl_cartographer_2 = {
+ 	replace_traits = { "leader_trait_thl_cartographer" }
+ 	inline_script = {
+ 		script = trait/icon
+ 		CLASS = official
+ 		ICON = "GFX_leader_trait_cartographer"
+ 		RARITY = veteran
+ 		COUNCIL = no
+ 		TIER = 2
+ 	}
+ 	councilor_modifier = {
+ 		terraform_speed_mult = 0.33
 		planet_clear_blocker_speed_mult = 0.25
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official }
-}
-
-leader_trait_touhou_expeditionist_3 = {
-	replace_traits = { "leader_trait_touhou_expeditionist_2" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_expeditionist"
-		RARITY = veteran
-		COUNCIL = yes
-		TIER = 3
-	}
-	councilor_modifier = {
+ 	}
+ 	leader_trait_type = veteran
+ 	leader_class = { commander official scientist }
+ }
+ leader_trait_thl_cartographer_3 = {
+ 	replace_traits = { "leader_trait_thl_cartographer_2" }
+ 	inline_script = {
+ 		script = trait/icon
+ 		CLASS = official
+ 		ICON = "GFX_leader_trait_cartographer"
+ 		RARITY = veteran
+ 		COUNCIL = no
+ 		TIER = 3
+ 	}
+ 	councilor_modifier = {
+ 		terraform_speed_mult = 0.5
 		planet_clear_blocker_speed_mult = 0.33
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official }
-}
-
-###################
-leader_trait_touhou_naturalist = {
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_naturalist"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 1
-	}
-	planet_modifier = {
-		deposit_blockers_natural_unity_produces_add = 3
-	}
-	sector_modifier = {
-		deposit_blockers_natural_unity_produces_add = 1.5
-	}
-	leader_potential_add = {
-		#has_paragon_dlc = yes
-		OR = {
-			has_trait = subclass_commander_servant
-		}
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official scientist }
-	selectable_weight = {
-		weight = @subclass_trait_weight
-		inline_script = paragon/governor_weight_mult
-	}
-}
-
-leader_trait_touhou_naturalist_2 = {
-	replace_traits = { "leader_trait_touhou_naturalist" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_naturalist"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 2
-	}
-	planet_modifier = {
-		deposit_blockers_natural_unity_produces_add = 6
-	}
-	sector_modifier = {
-		deposit_blockers_natural_unity_produces_add = 3
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official scientist }
-}
-
-leader_trait_touhou_naturalist_3 = {
-	replace_traits = { "leader_trait_touhou_naturalist_2" }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		ICON = "GFX_leader_trait_naturalist"
-		RARITY = veteran
-		COUNCIL = no
-		TIER = 3
-	}
-	planet_modifier = {
-		deposit_blockers_natural_unity_produces_add = 12
-	}
-	sector_modifier = {
-		deposit_blockers_natural_unity_produces_add = 6
-	}
-	leader_trait_type = veteran
-	leader_class = { commander official scientist }
-}
+ 	}
+ 	leader_trait_type = veteran
+ 	leader_class = { commander official scientist }
+ }
+ 
+ ###################
+ leader_trait_thl_naturalist = {
+ 	inline_script = {
+ 		script = trait/icon
+ 		CLASS = official
+ 		ICON = "GFX_leader_trait_naturalist"
+ 		RARITY = veteran
+ 		COUNCIL = no
+ 		TIER = 1
+ 	}
+ 	planet_modifier = {
+ 		deposit_blockers_natural_unity_produces_add = 3
+ 	}
+ 	sector_modifier = {
+ 		deposit_blockers_natural_unity_produces_add = 1.5
+ 	}
+ 	leader_potential_add = {
+ 		#has_paragon_dlc = yes
+ 		OR = {
+ 			has_trait = subclass_commander_servant
+ 		}
+ 	}
+ 	leader_trait_type = veteran
+ 	leader_class = { commander official scientist }
+ 	selectable_weight = {
+ 		weight = @subclass_trait_weight
+ 		inline_script = paragon/governor_weight_mult
+ 	}
+ }
+ leader_trait_thl_naturalist_2 = {
+ 	replace_traits = { "leader_trait_thl_naturalist" }
+ 	inline_script = {
+ 		script = trait/icon
+ 		CLASS = official
+ 		ICON = "GFX_leader_trait_naturalist"
+ 		RARITY = veteran
+ 		COUNCIL = no
+ 		TIER = 2
+ 	}
+ 	planet_modifier = {
+ 		deposit_blockers_natural_unity_produces_add = 6
+ 	}
+ 	sector_modifier = {
+ 		deposit_blockers_natural_unity_produces_add = 3
+ 	}
+ 	leader_trait_type = veteran
+ 	leader_class = { commander official scientist }
+ }
+ leader_trait_thl_naturalist_3 = {
+ 	replace_traits = { "leader_trait_thl_naturalist_2" }
+ 	inline_script = {
+ 		script = trait/icon
+ 		CLASS = official
+ 		ICON = "GFX_leader_trait_naturalist"
+ 		RARITY = veteran
+ 		COUNCIL = no
+ 		TIER = 3
+ 	}
+ 	planet_modifier = {
+ 		deposit_blockers_natural_unity_produces_add = 12
+ 	}
+ 	sector_modifier = {
+ 		deposit_blockers_natural_unity_produces_add = 6
+ 	}
+ 	leader_trait_type = veteran
+ 	leader_class = { commander official scientist }
+ }
 
 ###################
 #  INDUSTRIALIST  #
 ###################
 
-leader_trait_touhou_forge_focus = {
+leader_trait_thl_forge_focus = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1687,8 +1615,8 @@ leader_trait_touhou_forge_focus = {
 	}
 }
 
-leader_trait_touhou_forge_focus_2 = {
-	replace_traits = { "leader_trait_touhou_forge_focus" }
+leader_trait_thl_forge_focus_2 = {
+	replace_traits = { "leader_trait_thl_forge_focus" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1708,8 +1636,8 @@ leader_trait_touhou_forge_focus_2 = {
 	custom_tooltip_with_modifiers = only_one_governor_focus
 }
 
-leader_trait_touhou_forge_focus_3 = {
-	replace_traits = { "leader_trait_touhou_forge_focus_2" }
+leader_trait_thl_forge_focus_3 = {
+	replace_traits = { "leader_trait_thl_forge_focus_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1730,7 +1658,7 @@ leader_trait_touhou_forge_focus_3 = {
 }
 
 ###################
-leader_trait_touhou_industrial_focus = {
+leader_trait_thl_industrial_focus = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1767,8 +1695,8 @@ leader_trait_touhou_industrial_focus = {
 	}
 }
 
-leader_trait_touhou_industrial_focus_2 = {
-	replace_traits = { "leader_trait_touhou_industrial_focus" }
+leader_trait_thl_industrial_focus_2 = {
+	replace_traits = { "leader_trait_thl_industrial_focus" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1788,8 +1716,8 @@ leader_trait_touhou_industrial_focus_2 = {
 	custom_tooltip_with_modifiers = only_one_governor_focus
 }
 
-leader_trait_touhou_industrial_focus_3 = {
-	replace_traits = { "leader_trait_touhou_industrial_focus_2" }
+leader_trait_thl_industrial_focus_3 = {
+	replace_traits = { "leader_trait_thl_industrial_focus_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1810,7 +1738,7 @@ leader_trait_touhou_industrial_focus_3 = {
 }
 
 ###################
-leader_trait_touhou_refinement_focus = {
+leader_trait_thl_refinement_focus = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1843,8 +1771,8 @@ leader_trait_touhou_refinement_focus = {
 	}
 }
 
-leader_trait_touhou_refinement_focus_2 = {
-	replace_traits = { "leader_trait_touhou_refinement_focus" }
+leader_trait_thl_refinement_focus_2 = {
+	replace_traits = { "leader_trait_thl_refinement_focus" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1868,8 +1796,8 @@ leader_trait_touhou_refinement_focus_2 = {
 	custom_tooltip_with_modifiers = only_one_governor_focus
 }
 
-leader_trait_touhou_refinement_focus_3 = {
-	replace_traits = { "leader_trait_touhou_refinement_focus_2" }
+leader_trait_thl_refinement_focus_3 = {
+	replace_traits = { "leader_trait_thl_refinement_focus_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1894,7 +1822,7 @@ leader_trait_touhou_refinement_focus_3 = {
 }
 
 ###################
-leader_trait_touhou_urbanist = {
+leader_trait_thl_urbanist = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -1911,13 +1839,11 @@ leader_trait_touhou_urbanist = {
 	leader_trait_type = veteran
 	planet_modifier = {
 		empire_size_districts_mult = -0.75
-		planet_buildings_upkeep_mult = -0.5
-		planet_districts_upkeep_mult = -0.5
+		planet_structures_upkeep_mult = -0.5
 	}
 	sector_modifier = {
 		empire_size_districts_mult = -0.375
-		planet_buildings_upkeep_mult = -0.25
-		planet_districts_upkeep_mult = -0.25
+		planet_structures_upkeep_mult = -0.25
 	}
 	leader_class = { commander official }
 	selectable_weight = {
@@ -1927,7 +1853,7 @@ leader_trait_touhou_urbanist = {
 }
 
 ###################
-leader_trait_touhou_assembler = {
+leader_trait_thl_assembler = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -1980,8 +1906,8 @@ leader_trait_touhou_assembler = {
 	}
 }
 
-leader_trait_touhou_assembler_2 = {
-	replace_traits = { "leader_trait_touhou_assembler" }
+leader_trait_thl_assembler_2 = {
+	replace_traits = { "leader_trait_thl_assembler" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2018,8 +1944,8 @@ leader_trait_touhou_assembler_2 = {
 	leader_class = { commander official scientist }
 }
 
-leader_trait_touhou_assembler_3 = {
-	replace_traits = { "leader_trait_touhou_assembler_2" }
+leader_trait_thl_assembler_3 = {
+	replace_traits = { "leader_trait_thl_assembler_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2057,7 +1983,7 @@ leader_trait_touhou_assembler_3 = {
 }
 
 ###################
-leader_trait_touhou_pop_focused = {
+leader_trait_thl_pop_focused = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2084,8 +2010,8 @@ leader_trait_touhou_pop_focused = {
 	}
 }
 
-leader_trait_touhou_pop_focused_2 = {
-	replace_traits = { "leader_trait_touhou_pop_focused" }
+leader_trait_thl_pop_focused_2 = {
+	replace_traits = { "leader_trait_thl_pop_focused" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2106,8 +2032,8 @@ leader_trait_touhou_pop_focused_2 = {
 	leader_class = { commander official }
 }
 
-leader_trait_touhou_pop_focused_3 = {
-	replace_traits = { "leader_trait_touhou_pop_focused_2" }
+leader_trait_thl_pop_focused_3 = {
+	replace_traits = { "leader_trait_thl_pop_focused_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2130,7 +2056,7 @@ leader_trait_touhou_pop_focused_3 = {
 	leader_class = { commander official }
 }
 
-leader_trait_touhou_spymaster = {
+leader_trait_thl_spymaster = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -2157,7 +2083,7 @@ leader_trait_touhou_spymaster = {
 	background_icon = "GFX_leader_background_destiny_1"
 }
 
-leader_trait_touhou_totalitarian = {
+leader_trait_thl_totalitarian = {
 	leader_trait_type = destiny
 	ethic_destiny_trait = yes
 	inline_script = {
@@ -2192,7 +2118,7 @@ leader_trait_touhou_totalitarian = {
 }
 
 ###################
-leader_trait_touhou_distribution_lines = {
+leader_trait_thl_distribution_lines = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2235,8 +2161,8 @@ leader_trait_touhou_distribution_lines = {
 	}
 }
 
-leader_trait_touhou_distribution_lines_2 = {
-	replace_traits = { "leader_trait_touhou_distribution_lines" }
+leader_trait_thl_distribution_lines_2 = {
+	replace_traits = { "leader_trait_thl_distribution_lines" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2271,8 +2197,8 @@ leader_trait_touhou_distribution_lines_2 = {
 	leader_class = { commander official }
 }
 
-leader_trait_touhou_distribution_lines_3 = {
-	replace_traits = { "leader_trait_touhou_distribution_lines_2" }
+leader_trait_thl_distribution_lines_3 = {
+	replace_traits = { "leader_trait_thl_distribution_lines_2" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -2311,7 +2237,7 @@ leader_trait_touhou_distribution_lines_3 = {
 # DESTINY TRAITS  #
 ###################
 
-leader_trait_touhou_efficient = {
+leader_trait_thl_efficient = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -2341,7 +2267,7 @@ leader_trait_touhou_efficient = {
 	background_icon = "GFX_leader_background_destiny_1"
 }
 
-leader_trait_touhou_utopian_idealist = {
+leader_trait_thl_utopian_idealist = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -2371,7 +2297,7 @@ leader_trait_touhou_utopian_idealist = {
 	background_icon = "GFX_leader_background_destiny_1"
 }
 
-leader_trait_touhou_mediator = {
+leader_trait_thl_mediator = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -2423,7 +2349,7 @@ leader_trait_touhou_mediator = {
 	background_icon = "GFX_leader_background_destiny_1"
 }
 
-leader_trait_touhou_master_diplomat = {
+leader_trait_thl_master_diplomat = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -2457,7 +2383,7 @@ leader_trait_touhou_master_diplomat = {
 	background_icon = "GFX_leader_background_destiny_1"
 }
 
-leader_trait_touhou_supreme_organizer = {
+leader_trait_thl_supreme_organizer = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -2484,7 +2410,7 @@ leader_trait_touhou_supreme_organizer = {
 	background_icon = "GFX_leader_background_destiny_1"
 }
 
-leader_trait_touhou_galvanizer = {
+leader_trait_thl_galvanizer = {
 	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
@@ -2794,7 +2720,7 @@ leader_trait_deep_space_explorer = {
 	background_icon = GFX_leader_background_destiny_1
 }
 
-leader_trait_touhou_volition_integration = {
+leader_trait_thl_volition_integration = {
 	force_councilor_trait = yes
 	inline_script = {
 		script = trait/icon
@@ -2811,7 +2737,7 @@ leader_trait_touhou_volition_integration = {
 		society_tech_cost_mult = -0.01
 		mult = trigger:has_total_skill
 	}
-	custom_tooltip = leader_trait_touhou_volition_integration_effect
+	custom_tooltip = leader_trait_thl_volition_integration_effect
 	leader_class = { scientist official commander }
 	hide_age = yes
 	initial = no

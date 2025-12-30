@@ -11,7 +11,7 @@ aya_attack_bonus_value = {
 }
 
 touhou_leader_randomizer = {
-	base = 1
+	base = 10
 	modifier = {
 		factor = 5
 		has_ethic = ethic_$ETHIC$

@@ -6460,7 +6460,7 @@ country_event = {
 			target = ROOT
 		}
 		ruler = {
-			add_trait = leader_trait_touhou_volition_integration
+			add_trait = leader_trait_thl_volition_integration
 		}
 	}
 	option = {

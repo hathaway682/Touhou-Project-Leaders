@@ -37,11 +37,8 @@ civic_hakurei_shinto = {
 	description = "civic_hakurei_shinto_effects"
 	modification = {
 		add = {
-			OR = {
+			hidden_trigger = {
 				has_civic = civic_hakurei_shinto_corp
-				any_owned_leader = {
-					has_trait = thl_leader_trait_fly
-				}
 			}
 		}
 		remove = {
@@ -107,9 +104,8 @@ civic_hakurei_shinto_corp = {
 	description = "civic_hakurei_shinto_corp_effects"
 	modification = {
 		add = {
-			has_civic = civic_hakurei_shinto
-			any_owned_leader = {
-				has_trait = thl_leader_trait_fly
+			hidden_trigger = {
+				has_civic = civic_hakurei_shinto
 			}
 		}
 		remove = {
@@ -182,7 +178,9 @@ civic_moriya_shinto = {
 	description = "civic_moriya_shinto_effects"
 	modification = {
 		add = {
-			has_civic = civic_moriya_shinto_corp
+			hidden_trigger = {
+				has_civic = civic_moriya_shinto_corp
+			}
 		}
 		remove = {
 			always = no
@@ -247,7 +245,9 @@ civic_moriya_shinto_corp = {
 	description = "civic_moriya_shinto_corp_effects"
 	modification = {
 		add = {
-			has_civic = civic_moriya_shinto
+			hidden_trigger = {
+				has_civic = civic_moriya_shinto
+			}
 		}
 		remove = {
 			always = no
@@ -319,7 +319,9 @@ civic_kirisame_magic = {
 	description = "civic_kirisame_magic_effects"
 	modification = {
 		add = {
-			has_civic = civic_kirisame_magic_corp
+			hidden_trigger = {
+				has_civic = civic_kirisame_magic_corp
+			}
 		}
 		remove = {
 			always = no
@@ -370,7 +372,9 @@ civic_kirisame_magic_corp = {
 	description = "civic_kirisame_magic_corp_effects"
 	modification = {
 		add = {
-			has_civic = civic_kirisame_magic
+			hidden_trigger = {
+				has_civic = civic_kirisame_magic
+			}
 		}
 		remove = {
 			always = no
@@ -428,7 +432,9 @@ civic_scarlet_allience = {
 	description = "civic_scarlet_allience_effects"
 	modification = {
 		add = {
-			has_civic = civic_scarlet_allience_corp
+			hidden_trigger = {
+				has_civic = civic_scarlet_allience_corp
+			}
 		}
 		remove = {
 			always = no
@@ -491,7 +497,9 @@ civic_scarlet_allience_corp = {
 	description = "civic_scarlet_allience_corp_effects"
 	modification = {
 		add = {
-			has_civic = civic_scarlet_allience
+			hidden_trigger = {
+				has_civic = civic_scarlet_allience
+			}
 		}
 		remove = {
 			always = no
@@ -562,7 +570,9 @@ civic_nether_world = {
 	description = "civic_nether_world_effects"
 	modification = {
 		add = {
-			has_civic = civic_nether_world_corp
+			hidden_trigger = {
+				has_civic = civic_nether_world_corp
+			}
 		}
 		remove = {
 			always = no
@@ -620,7 +630,9 @@ civic_nether_world_corp = {
 	description = "civic_nether_world_corp_effects"
 	modification = {
 		add = {
-			has_civic = civic_nether_world
+			hidden_trigger = {
+				has_civic = civic_nether_world
+			}
 		}
 		remove = {
 			always = no
@@ -683,7 +695,9 @@ civic_penglai_medcine = {
 	description = "civic_penglai_medcine_effects"
 	modification = {
 		add = {
-			has_civic = civic_penglai_medcine_corp
+			hidden_trigger = {
+				has_civic = civic_penglai_medcine_corp
+			}
 		}
 		remove = {
 			always = no
@@ -740,7 +754,9 @@ civic_penglai_medcine_corp = {
 	description = "civic_penglai_medcine_corp_effects"
 	modification = {
 		add = {
-			has_civic = civic_penglai_medcine
+			hidden_trigger = {
+				has_civic = civic_penglai_medcine
+			}
 		}
 		remove = {
 			always = no

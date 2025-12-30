@@ -172,10 +172,11 @@ create_suika_leader = {
 
 add_suika_traits = {
 	add_trait = { trait = subclass_commander_lord show_message = no }
+	add_trait = { trait = subclass_commander_councilor show_message = no }
 	add_trait = { trait = subclass_commander_general show_message = no }
 	add_trait = { trait = thl_leader_trait_oni_power show_message = no }
 	add_trait = { trait = leader_trait_trickster show_message = no }
-	add_trait = { trait = leader_trait_touhou_cultural_focus_2 show_message = no }
+	add_trait = { trait = leader_trait_thl_cultural_focus_2 show_message = no }
 	add_trait = { trait = leader_trait_dreaded show_message = no }
 	add_trait = { trait = leader_trait_venerated show_message = no }
 	add_trait = { trait = leader_trait_profligate show_message = no }
@@ -438,6 +439,7 @@ create_reisen_leader = {
 
 add_reisen_traits = {
 	add_trait = { trait = subclass_commander_servant show_message = no }
+	add_trait = { trait = subclass_commander_governor show_message = no }
 	add_trait = { trait = subclass_commander_admiral show_message = no }
 	add_trait = { trait = thl_leader_trait_penglai_medicine show_message = no }
 	add_trait = { trait = thl_leader_trait_prosperity_and_decline show_message = no }
@@ -491,7 +493,8 @@ create_youmu_leader = {
 
 add_youmu_traits = {
 	add_trait = { trait = subclass_commander_servant show_message = no }
-	add_trait = { trait = subclass_commander_admiral show_message = no }
+	add_trait = { trait = subclass_commander_governor show_message = no }
+	add_trait = { trait = subclass_commander_general show_message = no }
 	add_trait = { trait = leader_trait_wholehearted show_message = no }
 	add_trait = { trait = thl_leader_trait_gardener show_message = no }
 	add_trait = { trait = leader_trait_bellicose show_message = no }
@@ -541,10 +544,11 @@ create_sakuya_leader = {
 
 add_sakuya_traits = {
 	add_trait = { trait = subclass_commander_servant show_message = no }
+	add_trait = { trait = subclass_commander_governor show_message = no }
 	add_trait = { trait = subclass_commander_admiral show_message = no }
 	add_trait = { trait = thl_leader_trait_year_round show_message = no }
 	add_trait = { trait = leader_trait_arbiter show_message = no }
-	add_trait = { trait = leader_trait_touhou_pop_focused_3 show_message = no }
+	add_trait = { trait = leader_trait_thl_pop_focused_3 show_message = no }
 	add_trait = { trait = leader_trait_iron_fist show_message = no }
 	add_trait = { trait = leader_trait_sadistic show_message = no }
 	add_trait = { trait = thl_leader_trait_regeneration show_message = no }
@@ -865,6 +869,7 @@ create_remilia_leader = {
 
 add_remilia_traits = {
 	add_trait = { trait = subclass_commander_lord show_message = no }
+	add_trait = { trait = subclass_commander_councilor show_message = no }
 	add_trait = { trait = subclass_commander_admiral show_message = no }
 	add_trait = { trait = thl_leader_trait_blood_magic show_message = no }
 	add_trait = { trait = thl_leader_trait_bloody_charm show_message = no }
@@ -947,7 +952,7 @@ create_yuka_leader = {
 		LEVEL = 6
 		GENDER = female
 		IMMORTAL = no
-		ETHIC = militarist
+		ETHIC = pacifist
 		DESC = yuka1
 		CATCH_PHRASE = yuka1_catch_phrase
 		TRAIT_GROUP = yuka
@@ -1266,6 +1271,7 @@ create_kanako_leader = {
 
 add_kanako_traits = {
 	add_trait = { trait = subclass_commander_lord show_message = no }
+	add_trait = { trait = subclass_commander_councilor show_message = no }
 	add_trait = { trait = subclass_commander_admiral show_message = no }
 	add_trait = { trait = leader_trait_master_gunner show_message = no }
 	add_trait = { trait = thl_leader_trait_heaven show_message = no }

@@ -2761,7 +2761,7 @@ thl_update_gestalt_memory_integration = {
 			owner = {
 				is_gestalt = yes
 				ruler = {
-					has_trait = leader_trait_touhou_volition_integration
+					has_trait = leader_trait_thl_volition_integration
 				}
 			}
 		}

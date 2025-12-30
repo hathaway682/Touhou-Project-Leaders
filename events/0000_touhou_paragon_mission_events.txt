@@ -134,7 +134,7 @@ country_event = {
 				limit = {
 					has_trait = thl_leader_trait_miracle
 				}
-				add_trait = { trait = leader_trait_touhou_fleet_logistician }
+				add_trait = { trait = leader_trait_thl_fleet_logistician }
 			}
 		}
 		hidden_effect = {
@@ -360,7 +360,7 @@ country_event = {
 				limit = {
 					has_trait = thl_leader_trait_miracle
 				}
-				add_trait = trait_touhou_ruler_architectural_sense
+				add_trait = trait_thl_ruler_architectural_sense
 			}
 		}
 		else_if = {

@@ -478,7 +478,7 @@ country_event = { # ethic leader lottery machine
 			}
 			0 = { # 幽香
 				modifier = {
-					add = value:touhou_leader_randomizer|ETHIC|militarist|ETHIC_NEG|pacifist|LEADER_ID|yuka|
+					add = value:touhou_leader_randomizer|ETHIC|pacifist|ETHIC_NEG|militarist|LEADER_ID|yuka|
 				}
 				ethic_leader_hire_event = { LEADER_ID = yuka EVENT_ID = touhou_paragon.42200 }
 				modifier = {
