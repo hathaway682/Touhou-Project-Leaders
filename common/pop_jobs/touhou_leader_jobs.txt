@@ -1864,10 +1864,20 @@ izakaya_drone = {
         mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
     }
 
-    planet_modifier = {
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_synthetic_empire = no }
+        }
         logistic_growth_mult = 0.05
     }
-
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_synthetic_empire = yes }
+        }
+        planet_pop_assembly_mult = 0.05
+    }
     weight = {
         weight = @complex_drone_job_weight
         modifier = {

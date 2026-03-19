@@ -3631,14 +3631,20 @@ country_event = { # 米斯蒂娅
 		name = touhou_paragon.43100.hire
 		tag = hire_leader
 		custom_tooltip = touhou_paragon.43100.hire_custom_tooltip
+		create_point_of_interest = {
+			id = touhou_cgm_mission_mistia
+			name = "touhou_cgm_mission_mistia_name"
+			desc = "touhou_cgm_mission_mistia_desc"
+			event_chain = "touhou_volition_integration_chain"
+		}
 		hidden_effect = {
 			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_mystia
 			}
-			thl_update_gestalt_memory_integration_trigger = {
-				TRAIT = thl_leader_trait_song
-				DAY = 365
-			}
+			# thl_update_gestalt_memory_integration_trigger = {
+			# 	TRAIT = thl_leader_trait_song
+			# 	DAY = 365
+			# }
 			thl_update_gestalt_memory_integration_event_chain = yes
 		}
 	}

@@ -6739,6 +6739,7 @@ leader_event = {
 				ruler = {
 					set_leader_flag = thl_flag_gestalt_integrate_mystia
 				}
+				remove_point_of_interest = touhou_cgm_mission_mistia
 			}
 			custom_tooltip = thl_tooltip_gestalt_integrate_mystia
 		}

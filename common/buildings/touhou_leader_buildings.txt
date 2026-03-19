@@ -2131,6 +2131,25 @@ building_izakaya_1 = {
 	upgrades = {
 		building_izakaya_2
 	}
+	on_built = {
+		if = {
+			limit = {
+				free_amenities >= 5000
+				owner = {
+					has_event_chain = touhou_volition_integration_chain
+					has_point_of_interest = {
+						poi = touhou_cgm_mission_mistia
+					}
+				}
+			}
+			owner = {
+				random_owned_leader = {
+					limit = { has_trait = thl_leader_trait_song }
+					leader_event = { id = touhou_paragon.80110 }
+				}
+			}
+		}
+	}
 }
 
 building_izakaya_2 = {
@@ -2213,6 +2232,25 @@ building_izakaya_2 = {
 	upgrades = {
 		building_izakaya_3
 	}
+	on_built = {
+		if = {
+			limit = {
+				free_amenities >= 5000
+				owner = {
+					has_event_chain = touhou_volition_integration_chain
+					has_point_of_interest = {
+						poi = touhou_cgm_mission_mistia
+					}
+				}
+			}
+			owner = {
+				random_owned_leader = {
+					limit = { has_trait = thl_leader_trait_song }
+					leader_event = { id = touhou_paragon.80110 }
+				}
+			}
+		}
+	}
 }
 
 building_izakaya_3 = {
@@ -2283,6 +2321,25 @@ building_izakaya_3 = {
 		}
 		upkeep = {
 			food = @b3_upkeep
+		}
+	}
+	on_built = {
+		if = {
+			limit = {
+				free_amenities >= 5000
+				owner = {
+					has_event_chain = touhou_volition_integration_chain
+					has_point_of_interest = {
+						poi = touhou_cgm_mission_mistia
+					}
+				}
+			}
+			owner = {
+				random_owned_leader = {
+					limit = { has_trait = thl_leader_trait_song }
+					leader_event = { id = touhou_paragon.80110 }
+				}
+			}
 		}
 	}
 }
