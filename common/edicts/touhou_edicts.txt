@@ -53,13 +53,33 @@ open_spell_cards_gui = {
 	}
 }
 
+shikieiki_death_deal = {
+	length = 1
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_country_flag = hired_shikieiki
+	}
+	resources = {
+		category = edicts_unscaled
+		cost = {
+			trade = 20000
+		}
+	}
+	allow = {
+		has_country_flag = hired_shikieiki
+	}
+	effect = {
+		country_event = {
+			id = touhou_paragon_effect.600
+		}
+	}
+}
+
 information_war_touhou = {
 	length = 1
 	icon = "GFX_edict_type_policy"
 	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_information_war
-		}
+		has_country_flag = hired_aya
 	}
 	resources = {
 		category = edicts_unscaled
@@ -83,9 +103,7 @@ rabbit_spy_touhou = {
 	length = 1
 	icon = "GFX_edict_type_policy"
 	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_rabbit_spy
-		}
+        has_country_flag = hired_tewi
 	}
 	resources = {
 		category = edicts_unscaled
@@ -118,7 +136,10 @@ gray_thaumaturgy = {
 	length = -1
 	edict_lock_in_months = 12
 	icon = "GFX_edict_type_time"
-	potential = {
+    potential = {
+        has_country_flag = hired_sanae
+    }
+	allow = {
 		any_owned_leader = {
 			has_trait = thl_leader_trait_miracle
 		}
@@ -155,7 +176,10 @@ poison_gas = {
 		}
 	}
 
-	potential = {
+    potential = {
+        has_country_flag = hired_reisen
+    }
+	allow = {
 		owner = {
 			any_owned_leader = {
 				has_trait = thl_leader_trait_prosperity_and_decline
@@ -192,14 +216,17 @@ mutant_gas = {
 		}
 	}
 
-	potential = {
-		owner = {
-			any_owned_leader = {
-				has_trait = thl_leader_trait_prosperity_and_decline
-				is_councilor = yes
-			}
-		}
-	}
+    potential = {
+        has_country_flag = hired_reisen
+    }
+    allow = {
+        owner = {
+            any_owned_leader = {
+                has_trait = thl_leader_trait_prosperity_and_decline
+                is_councilor = yes
+            }
+        }
+    }
 
 	modifier = {
 		army_health = 0.25
@@ -223,9 +250,7 @@ distance_active = {
 	edict_lock_in_months = 30
 	icon = "GFX_edict_type_time"
 	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_distance
-		}
+		has_country_flag = hired_onoduka
 	}
 	allow = {
 		any_owned_fleet = {
@@ -288,9 +313,7 @@ time_active = {
 	edict_lock_in_months = 24
 	icon = "GFX_edict_type_time"
 	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_time
-		}
+        has_country_flag = hired_sakuya
 	}
 	allow = {
 		any_owned_fleet = {
@@ -350,11 +373,9 @@ za_warudo_active = {
 	length = 1080
 	edict_lock_in_months = 30
 	icon = "GFX_edict_type_time"
-	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_time
-		}
-	}
+    potential = {
+        has_country_flag = hired_sakuya
+    }
 	allow = {
 		any_owned_fleet = {
 			exists = leader
@@ -399,11 +420,9 @@ time_kill = {
 	length = 360
 	edict_lock_in_months = 12
 	icon = "GFX_edict_type_time"
-	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_time
-		}
-	}
+    potential = {
+        has_country_flag = hired_sakuya
+    }
 	allow = {
 		any_owned_army = {
 			exists = leader
@@ -833,11 +852,9 @@ bat_swarm = {
 	length = 1080
 	edict_lock_in_months = 36
 	icon = "GFX_edict_type_time"
-	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_destiny_manipulation
-		}
-	}
+    potential = {
+        has_country_flag = hired_remilia
+    }
 	allow = {
 		any_owned_fleet = {
 			exists = leader
@@ -883,11 +900,9 @@ red_fog = {
 	length = 1080
 	edict_lock_in_months = 36
 	icon = "GFX_edict_type_time"
-	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_destiny_manipulation
-		}
-	}
+    potential = {
+        has_country_flag = hired_remilia
+    }
 	allow = {
 		any_owned_fleet = {
 			exists = leader
@@ -934,11 +949,9 @@ red_fog = {
 gungnir = {
 	length = 1
 	icon = "GFX_edict_type_time"
-	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_gungnir
-		}
-	}
+    potential = {
+        has_country_flag = hired_remilia
+    }
 	allow = {
 		any_owned_fleet = {
 			exists = leader
@@ -1066,11 +1079,9 @@ gungnir = {
 gungnir_starbase = {
 	length = 1
 	icon = "GFX_edict_type_time"
-	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_gungnir
-		}
-	}
+    potential = {
+        has_country_flag = hired_remilia
+    }
 	allow = {
 		any_owned_fleet = {
 			leader = {
@@ -1168,11 +1179,9 @@ destiny_manipulation = {
 	length = 1800
 	edict_lock_in_months = 60
 	icon = "GFX_edict_type_time"
-	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_destiny_manipulation
-		}
-	}
+    potential = {
+        has_country_flag = hired_remilia
+    }
 	allow = {
 		any_owned_leader = {
 			has_trait = thl_leader_trait_destiny_manipulation
@@ -1198,9 +1207,7 @@ flower_commander = {
 	edict_lock_in_months = 12
 	icon = "GFX_edict_type_time"
 	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_flower_commander
-		}
+		has_country_flag = hired_yuka
 	}
 	resources = {
 		category = edicts
@@ -1248,9 +1255,7 @@ artifical_sun_edict = {
 	edict_lock_in_months = 12
 	icon = "GFX_edict_type_time"
 	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_nuclear
-		}
+		has_country_flag = hired_utsuho
 	}
 	resources = {
 		category = country_base
@@ -1290,9 +1295,7 @@ minor_sun_edict = {
 	edict_lock_in_months = 12
 	icon = "GFX_edict_type_time"
 	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_nuclear
-		}
+        has_country_flag = hired_utsuho
 	}
 	resources = {
 		category = country_base
@@ -1340,9 +1343,7 @@ crack_star_edict = {
 	edict_lock_in_months = 60
 	icon = "GFX_edict_type_time"
 	potential = {
-		any_owned_leader = {
-			has_trait = thl_leader_trait_nuclear
-		}
+		has_country_flag = hired_utsuho
 	}
 	resources = {
 		category = country_base

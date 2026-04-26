@@ -2791,3 +2791,101 @@ thl_update_gestalt_memory_integration_trigger = {
 		leader_event = { id = touhou_paragon.80110 days = $DAY$ }
 	}
 }
+
+create_zombie_pop_group = {
+    weighted_random_owned_pop_group = {
+        limit = {
+            NOT = { has_trait = trait_hive_mind }
+            NOT = { has_trait = trait_zombie }
+            is_robot_pop_group = no
+        }
+        save_event_target_as = old_pop_group
+        species = {
+            save_event_target_as = old_species
+        }
+    }
+    if = {
+        limit = {
+            NOT = {
+                any_galaxy_species = {
+                    has_species_flag = zombie_species_of_species@event_target:old_species
+                }
+            }
+        }
+        event_target:old_species = {
+            modify_species = {
+                species = this
+                add_trait = trait_zombie
+                remove_trait = trait_thl_spirit
+                remove_trait = trait_nerve_stapled
+                remove_trait = trait_syncretic_proles
+                effect = {
+                    set_species_flag = zombie_species_of_species@event_target:old_species
+                    save_event_target_as = target_species
+                }
+            }
+        }
+    }
+    else = {
+        random_galaxy_species = {
+            limit = {
+                has_species_flag = zombie_species_of_species@event_target:old_species
+            }
+            save_event_target_as = target_species
+        }
+    }
+    create_pop_group = {
+        pop_group = event_target:old_pop_group
+        species = event_target:target_species
+        size = $SIZE$
+    }
+}
+
+create_spirit_pop_group = {
+    weighted_random_owned_pop_group = {
+        limit = {
+            NOT = { has_trait = trait_hive_mind }
+            NOT = { has_trait = trait_thl_spirit }
+            is_robot_pop_group = no
+        }
+        save_event_target_as = old_pop_group
+        species = {
+            save_event_target_as = old_species
+        }
+    }
+    if = {
+        limit = {
+            NOT = {
+                any_galaxy_species = {
+                    has_species_flag = spirit_species_of_species@event_target:old_species
+                }
+            }
+        }
+        event_target:old_species = {
+            modify_species = {
+                species = this
+                add_trait = trait_thl_spirit
+                remove_trait = trait_zombie
+                remove_trait = trait_nerve_stapled
+                remove_trait = trait_syncretic_proles
+                effect = {
+                    set_species_flag = spirit_species_of_species@event_target:old_species
+                    save_event_target_as = target_species
+                }
+            }
+        }
+    }
+    else = {
+        random_galaxy_species = {
+            limit = {
+                has_species_flag = spirit_species_of_species@event_target:old_species
+            }
+            save_event_target_as = target_species
+        }
+    }
+    create_pop_group = {
+        pop_group = event_target:old_pop_group
+        species = event_target:target_species
+        size = $SIZE$
+    }
+}

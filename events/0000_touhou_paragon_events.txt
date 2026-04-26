@@ -675,9 +675,10 @@ country_event = { # 天子
 			thl_update_gestalt_memory_integration_event_chain = yes
 			last_created_leader = {
 				set_leader_flag = touhou_leader
-			set_leader_flag = legendary_leader
+			    set_leader_flag = legendary_leader
 				set_leader_flag = tenshi_leader
 			}
+            set_country_flag = hired_tenshi
 		}
 	}
 }
@@ -772,6 +773,7 @@ country_event = { # 萃香
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_suika
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 			set_leader_flag = legendary_leader
@@ -899,6 +901,7 @@ country_event = { # 早苗
 				LEADER = ethic_leader
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+				set_country_flag = hired_sanae
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 				set_leader_flag = legendary_leader
@@ -948,9 +951,9 @@ country_event = { # 琪露诺
 		name = DISMISS
 		tag = dismiss_leader
 		hidden_effect = {
-			remove_global_flag = crino # Put this leader back into the pool, so player could still get him
+			remove_global_flag = cirno # Put this leader back into the pool, so player could still get him
 			ethic_leader_kill_effect = yes
-			set_country_flag = dismissed_crino
+			set_country_flag = dismissed_cirno
 		}
 	}
 	option = {
@@ -984,9 +987,10 @@ country_event = { # 琪露诺
 		custom_tooltip = touhou_paragon.40400.hire_custom_tooltip
 		hidden_effect = {
 			thl_ethic_leader_hire_effect = {
-				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_crino
+				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_cirno
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+				set_country_flag = hired_cirno
 			last_created_leader = {
 				last_created_leader = {
 					leader_event = {
@@ -1088,6 +1092,7 @@ country_event = { # 美铃
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_meiling
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+				set_country_flag = hired_meiling
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 			set_leader_flag = legendary_leader
@@ -1173,6 +1178,7 @@ country_event = { # 灵梦
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_reimu
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+				set_country_flag = hired_reimu
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 			set_leader_flag = legendary_leader
@@ -1271,6 +1277,7 @@ country_event = { # 魔理沙
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_marisa
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+				set_country_flag = hired_marisa
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 				set_leader_flag = legendary_leader
@@ -1361,6 +1368,7 @@ country_event = { # 铃仙
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_reisen
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 			set_leader_flag = legendary_leader
@@ -1450,6 +1458,7 @@ country_event = { # 妖梦
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_youmu
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 			set_leader_flag = legendary_leader
@@ -1539,6 +1548,7 @@ country_event = { # 咲夜
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_sakuya
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 			set_leader_flag = legendary_leader
@@ -1629,6 +1639,7 @@ country_event = { # 梅莉
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_merry
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 				set_leader_flag = legendary_leader
@@ -1731,6 +1742,7 @@ country_event = { # 莲子
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_renko
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 				set_leader_flag = legendary_leader
@@ -1746,7 +1758,7 @@ country_event = { # 莲子
 }
 
 country_event = { # 觉
-		id = touhou_paragon.41300
+	id = touhou_paragon.41300
 	title = "touhou_paragon.41300.name"
 	desc = "touhou_paragon.41300.desc"
 	show_sound = event_psionic
@@ -1889,6 +1901,7 @@ country_event = { # 觉
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_satori
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+				set_country_flag = hired_satori
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 				set_leader_flag = legendary_leader
@@ -1978,6 +1991,7 @@ country_event = { # 恋恋
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_koishi
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 			set_leader_flag = legendary_leader
@@ -2067,6 +2081,7 @@ country_event = { # 文
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_aya
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 			set_leader_flag = legendary_leader
@@ -2156,6 +2171,7 @@ country_event = { # 四季
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_shikieiki
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 			set_leader_flag = legendary_leader
@@ -2245,6 +2261,7 @@ country_event = { # 小町
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_onoduka
 			last_created_leader = {
 				set_leader_flag = touhou_leader
 			set_leader_flag = legendary_leader
@@ -2330,6 +2347,7 @@ country_event = { # 帕秋莉
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_patchouli
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+				set_country_flag = hired_patchouli
 			last_created_leader = {
 				leader_event = {
 					id = touhou_paragon.41820
@@ -2542,6 +2560,7 @@ country_event = { # 蕾米
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_remilia
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+				set_country_flag = hired_remilia
 		}
 	}
 }
@@ -2680,6 +2699,7 @@ country_event = { # 爱丽丝
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_alice
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+				set_country_flag = hired_alice
 			if = {
 				limit = {
 					is_individual_machine = yes
@@ -2781,6 +2801,7 @@ country_event = { # 幽幽子
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_yuyuko
 		}
 	}
 }
@@ -2876,6 +2897,7 @@ country_event = { # 幽香
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_yuka
 		}
 	}
 }
@@ -2956,6 +2978,7 @@ country_event = { # 小铃
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_kosuzu
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+				set_country_flag = hired_kosuzu
 		}
 	}
 }
@@ -3044,6 +3067,7 @@ country_event = { # 阿求
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_akyuu
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+				set_country_flag = hired_akyuu
 		}
 	}
 }
@@ -3142,6 +3166,7 @@ country_event = { # 阿燐
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_rin
 		}
 	}
 }
@@ -3222,6 +3247,7 @@ country_event = { # 阿空
 				LEADER = ethic_leader #GLOBAL_EVENT_TARGET = renowned_utsuho
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+				set_country_flag = hired_utsuho
 			country_event = { id = touhou_paragon_situation.42670 days= 3600 }
 		}
 	}
@@ -3307,6 +3333,7 @@ country_event = { # 荷取
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_nitori
 		}
 	}
 }
@@ -3386,6 +3413,7 @@ country_event = { # 静叶
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_sizuha
 		}
 	}
 }
@@ -3465,6 +3493,7 @@ country_event = { # 穰子
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_minoriko
 		}
 	}
 }
@@ -3553,6 +3582,7 @@ country_event = { # 雏
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_hina
 		}
 	}
 }
@@ -3640,6 +3670,7 @@ country_event = { # 米斯蒂娅
 				DAY = 365
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+			set_country_flag = hired_mystia
 		}
 	}
 }
@@ -3720,6 +3751,7 @@ country_event = { # 帝
 				LEADER = ethic_leader
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+            set_country_flag = hired_tewi
 		}
 	}
 }
@@ -3801,6 +3833,7 @@ country_event = {
 				LEADER = ethic_leader
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+				set_country_flag = hired_kanako
 		}
 	}
 }
@@ -3883,6 +3916,7 @@ country_event = {
 				LEADER = ethic_leader
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
+				set_country_flag = hired_suwako
 		}
 	}
 }
@@ -3963,6 +3997,7 @@ country_event = {
 			thl_ethic_leader_hire_effect = {
 				LEADER = ethic_leader
 			}
+				set_country_flag = hired_suwako_commander
 			random_owned_leader = {
 				limit = { has_trait = thl_leader_trait_future_and_past }
 				thl_update_gestalt_memory_integration = yes

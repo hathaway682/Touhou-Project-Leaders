@@ -91,8 +91,13 @@
    SAKURA_SPECIAL_PROJECT:0 "失去联系的实验室"
    SAKURA_SPECIAL_PROJECT_DESC:1 "我们与西行妖种植基地失去了联系，这很可能与§Y西行寺幽幽子§!提到的其引诱死亡的性质有关。"
 
-   building_soul_nexus: "通向黄泉的诱蛾灯"
-   building_soul_nexus_desc: "这座建筑发出诡异的光，吸引着星系间的亡者。"
+   building_soul_nexus: "冥界特异点"
+   building_soul_nexus_desc: "这个奇异的建筑在幽幽子的指导下建造，可以将游荡的灵魂变为对我们有用的生产力。"
+   building_soul_nexus_effect: "星球会额外组装与£mod_bonus_pop_growth£§Y$mod_fake_pop_growth_mod$§!等量的灵体人口。"
+
+   building_corpses_disposal_center:0 "尸体处理中心"
+   building_corpses_disposal_center_desc:0 "专属一对一猫车接送服务，一个真正让您死得其所的地方。"
+   building_corpses_disposal_center_effect: "星球会额外组装与£mod_bonus_pop_growth£§Y$mod_fake_pop_growth_mod$§!等量的僵尸人口。"
 
    mod_planet_spirit_jobs_produces_mult: "灵体人口£job£岗位生产的资源"
    mod_planet_spirit_jobs_unity_produces_mult: "灵体人口£job£岗位生产的£unity£ 凝聚力"

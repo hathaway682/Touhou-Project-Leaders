@@ -30,6 +30,7 @@ country_event = {
 				add_trait = { trait = thl_leader_trait_destined }
 			}
 			set_global_flag = reimu
+            set_country_flag = hired_reimu
 			set_country_flag = can_build_shirne
 			set_country_flag = hakurei_shrine_country
 		}
@@ -46,6 +47,7 @@ country_event = {
 				message = no
 			}
 			set_global_flag = sanae
+            set_country_flag = hired_sanae
 			set_country_flag = can_build_shirne
 		}
 		if = {
@@ -78,6 +80,7 @@ country_event = {
 				}
 			}
 			set_global_flag = marisa
+            set_country_flag = hired_marisa
 		}
 		if = {
 			limit = {
@@ -94,6 +97,7 @@ country_event = {
 				assign_leader = last_created_leader
 			}
 			set_global_flag = sakuya
+            set_country_flag = hired_sakuya
 		}
 		if = {
 			limit = {
@@ -138,6 +142,7 @@ country_event = {
 				}
 			}
 			set_global_flag = youmu
+            set_country_flag = hired_youmu
 		}
 		if = {
 			limit = {
@@ -174,6 +179,7 @@ country_event = {
 				}
 			}
 			set_global_flag = reisen
+            set_country_flag = hired_reisen
 		}
 		if = {
 			limit = {
@@ -266,7 +272,9 @@ country_event = {
 				days = 3600
 			}
 			set_global_flag = merry
+            set_country_flag = hired_merry
 			set_global_flag = renko
+            set_country_flag = hired_renko
 		}
 		if = {
 			limit = {
@@ -349,7 +357,7 @@ country_event = {
 					is_planet_class = pc_frozen
 				}
 				add_anomaly = {
-					category = touhou_crino_temple
+					category = touhou_cirno_temple
 					target = root
 				}
 			}
@@ -1281,7 +1289,9 @@ leader_event = {
 			last_added_deposit = {
 				set_deposit_flag = keep_deposit_on_terraform
 			}
-			set_country_flag = hakurei_shrine_imperial_country
+			owner = {
+                set_country_flag = hakurei_shrine_imperial_country
+            }
 		}
 		owner = {
 			add_resource = {
@@ -1348,7 +1358,9 @@ leader_event = {
 				}
 			}
 			add_trait = { trait = leader_trait_composer_chosen }
-			add_attunement = { the_composer_of_strands = 100 }
+            owner = {
+                add_attunement = { the_composer_of_strands = 100 }
+            }
 		}
 		if = {
 			limit = {
@@ -1795,6 +1807,15 @@ country_event = {
 
 	immediate = {
 		random_owned_leader = {
+            weights = {
+                add = trigger:has_base_skill
+                multiply = 10
+                add = trigger:leader_age
+                modifier = {
+                    multiply = 0.01
+                    is_immortal = yes
+                }
+            }
 			limit = {
 				is_event_leader = no
 				NOR = {
@@ -2168,6 +2189,10 @@ country_event = {
 			has_fleet_flag = marisa_task_npc_fleet
 		}
 	}
+    immediate = {
+        remove_country_flag = marisa_task_player_country
+        set_country_flag = marisa_task_finished
+    }
 	option = {
 		name = touhou_paragon.40734.a
 		country_event = {
@@ -2180,8 +2205,6 @@ country_event = {
 				prefix = yes
 			}
 		}
-		remove_country_flag = marisa_task_player_country
-		set_country_flag = marisa_task_finished
 	}
 }
 
@@ -2765,6 +2788,8 @@ country_event = { #Crisis
 		name = touhou_paragon.42201.a
 		response_text = touhou_paragon.42201.a.response
 		custom_tooltip =  touhou_paragon.yuka.tt
+        remove_country_flag = hired_yuka
+        set_country_flag = hired_yuka_commander
 		add_research_option = tech_master_spark
 		add_research_option = tech_final_spark
 		hidden_effect = {
@@ -2849,6 +2874,8 @@ country_event = { #Crisis
 		name = touhou_paragon.42202.a
 		response_text = touhou_paragon.42202.a.response
 		custom_tooltip =  touhou_paragon.yuka.tt
+        remove_country_flag = hired_yuka
+        set_country_flag = hired_yuka_commander
 		add_research_option = tech_master_spark
 		add_research_option = tech_final_spark
 		hidden_effect = {
@@ -7036,7 +7063,7 @@ leader_event = {
 		}
 		hidden_effect = {
 			set_variable = {
-				which = thl_gestalt_influenced_by_crino
+				which = thl_gestalt_influenced_by_cirno
 				value = 0
 			}
 		}
@@ -7052,7 +7079,7 @@ country_event = {
 
 	immediate = {
 		change_variable = {
-			which = thl_gestalt_influenced_by_crino
+			which = thl_gestalt_influenced_by_cirno
 			value = 1
 		}
 		country_event = {
@@ -7089,14 +7116,14 @@ country_event = {
 
 	trigger = {
 		check_variable = {
-			which = thl_gestalt_influenced_by_crino
+			which = thl_gestalt_influenced_by_cirno
 			value = 9
 		}
 	}
 
 	immediate = {
 		change_variable = {
-			which = thl_gestalt_influenced_by_crino
+			which = thl_gestalt_influenced_by_cirno
 			value = -9
 		}
 		random_list = {
@@ -7115,11 +7142,11 @@ country_event = {
 	id = touhou_paragon.80103
 	title = touhou_paragon.80102.name
 	desc = {
-		trigger = { NOT = { has_country_flag = thl_gestalt_influenced_by_crino_flag } }
+		trigger = { NOT = { has_country_flag = thl_gestalt_influenced_by_cirno_flag } }
 		text = touhou_paragon.80102.desc_1
 	}
 	desc = {
-		trigger = { has_country_flag = thl_gestalt_influenced_by_crino_flag }
+		trigger = { has_country_flag = thl_gestalt_influenced_by_cirno_flag }
 		text = touhou_paragon.80102.desc_2
 	}
 	is_triggered_only = yes
@@ -7135,7 +7162,7 @@ country_event = {
 		name = touhou_paragon.80102.option_1
 		custom_tooltip = touhou_paragon.80102.option_cust
 		trigger = {
-			NOT = { has_country_flag = thl_gestalt_influenced_by_crino_flag }
+			NOT = { has_country_flag = thl_gestalt_influenced_by_cirno_flag }
 		}
 		add_monthly_resource_mult = {
 			resource = physics_research
@@ -7149,7 +7176,7 @@ country_event = {
 			resource = engineering_research
 			value = 9
 		}
-		set_country_flag = thl_gestalt_influenced_by_crino_flag
+		set_country_flag = thl_gestalt_influenced_by_cirno_flag
 	}
 	option = {
 		name = touhou_paragon.80102.option_2

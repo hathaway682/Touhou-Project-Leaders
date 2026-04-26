@@ -1628,6 +1628,123 @@ decision_expand_hakurei_shrine_2 = {
 	}
 }
 
+decision_ascend_hakurei_shrine = {
+    owned_planets_only = yes
+    sound = event_psionic_01
+    icon = decision_arcology_project
+    enactment_time = 30
+
+    potential = {
+        OR = {
+            has_deposit = d_hakurei_shrine_large
+            has_deposit = d_hakurei_shrine_imperial
+        }
+    }
+
+    allow = {
+        owner = {
+            OR = {
+                has_covenant_with_end_of_the_cycle = yes
+                has_covenant_with_the_composer_of_strands = yes
+                has_covenant_with_the_cradle_of_souls = yes
+                has_covenant_with_the_eater_of_worlds = yes
+                has_covenant_with_the_instrument_of_desire = yes
+                has_covenant_with_whisperers_in_the_void = yes
+            }
+        }
+    }
+
+    resources = {
+        category = decisions
+        cost = {
+            sr_zro = 200
+        }
+    }
+
+    effect = {
+        remove_deposit = d_hakurei_shrine_large
+        remove_deposit = d_hakurei_shrine_imperial
+        add_deposit = d_hakurei_shrine_psionic
+        owner = {
+            remove_country_flag = hakurei_shrine_large_country
+            remove_country_flag = hakurei_shrine_imperial_country
+            set_country_flag = hakurei_shrine_psionic_country
+        }
+        last_added_deposit = {
+            set_deposit_flag = keep_deposit_on_terraform
+        }
+        owner = {
+            random_owned_leader = {
+                limit = {
+                    has_trait = thl_leader_trait_fly
+                }
+                if = {
+                    limit = {
+                        owner = {
+                            has_covenant_with_the_composer_of_strands = yes
+                        }
+                    }
+                    add_trait = { trait = leader_trait_composer_chosen }
+                    owner = {
+                        add_attunement = { the_composer_of_strands = 100 }
+                    }
+                }
+                if = {
+                    limit = {
+                        owner = {
+                            has_covenant_with_the_eater_of_worlds = yes
+                        }
+                    }
+                    add_trait = { trait = leader_trait_eater_chosen }
+                    owner = {
+                        add_attunement = { the_eater_of_worlds = 100 }
+                    }
+                }
+                if = {
+                    limit = {
+                        owner = {
+                            has_covenant_with_the_instrument_of_desire = yes
+                        }
+                    }
+                    add_trait = { trait = leader_trait_instrument_chosen }
+                    owner = {
+                        add_attunement = { the_instrument_of_desire = 100 }
+                    }
+                }
+                if = {
+                    limit = {
+                        owner = {
+                            has_covenant_with_whisperers_in_the_void = yes
+                        }
+                    }
+                    add_trait = { trait = leader_trait_whisperers_chosen }
+                    owner = {
+                        add_attunement = { whisperers_in_the_void = 100 }
+                    }
+                }
+                if = {
+                    limit = {
+                        owner = {
+                            has_covenant_with_the_cradle_of_souls = yes
+                        }
+                    }
+                    add_trait = { trait = leader_trait_cradle_chosen }
+                    owner = {
+                        add_attunement = { the_cradle_of_souls = 100 }
+                    }
+                }
+                else = {
+                    add_trait = { trait = leader_trait_chosen }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
 decision_unlock_books = {
 	owned_planets_only = yes
 	sound = event_psionic_01

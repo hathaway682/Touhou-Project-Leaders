@@ -1006,6 +1006,8 @@
  decision_expand_hakurei_shrine_desc: "我们要把神社修的气派宏伟，和我们伟大的首都相称。"
  decision_expand_hakurei_shrine_2: "继续扩建博丽神社"
  decision_expand_hakurei_shrine_2_desc: "神社应当与我们的帝国一样熠熠生辉。"
+ decision_ascend_hakurei_shrine: "升格博丽神社"
+ decision_ascend_hakurei_shrine_desc: "博丽神社什么都有了，唯独缺少了神社所必需的神。"
 
  touhou_paragon.40620.name:0 "灵能跃迁"
  touhou_paragon.40620.desc:1 "当§Y[Root.GetName]§!打开空间的裂缝时，我们在旁观察的科学家猛然得到了启示，瞬间移动——或者说跃迁其实并非一种高深莫测的移动方式，我们只需要打开前往时间没有意义的另一个空间的通路，从中绕道穿行即可，而对于我们来说，那就是虚境。\n\n灵能跃迁引擎，天才的想法。"

@@ -3169,6 +3169,44 @@ planet_event = { #Braiiiins
     }
 }
 
+planet_event = { #Braiiiins
+    id = touhou_paragon_effect.251
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        check_modifier_value = {
+            modifier = fake_pop_growth_mod
+            value > 0
+        }
+        any_owned_species = {
+            is_organic_species = yes
+            NOT = { has_trait = trait_thl_spirit }
+        }
+        owner = {
+            any_owned_leader = {
+                has_trait = thl_leader_trait_death
+            }
+        }
+        has_building = building_soul_nexus
+    }
+
+    immediate = {
+        set_variable = {
+            which = spirit_pop_amount
+            value = 0
+        }
+        export_modifier_to_variable = {
+            modifier = fake_pop_growth_mod
+            variable = spirit_pop_amount
+        }
+        create_spirit_pop_group = {
+            SIZE = spirit_pop_amount
+        }
+        clear_variable = spirit_pop_amount
+    }
+}
+
 country_event = {
     id = touhou_paragon_effect.200
     hide_window = yes
@@ -3824,56 +3862,560 @@ system_event = {
 #复活
 country_event = {
     id = touhou_paragon_effect.600
-    title = "origin.600.name"
+    title = "touhou_paragon_effect.600.name"
     picture = GFX_evt_disease_outbreak
-    desc = origin.600.desc
+    desc = touhou_paragon_effect.600.desc
 
     is_triggered_only = yes
 
-    trigger = {
-        any_owned_leader = {
-            is_councilor = yes
-            has_trait = thl_thl_leader_trait_death_deal
-        }
-        from = {
-            is_pool_leader = no
-            NOT = { leader_class = envoy }
-            NOR = {
-                has_trait = leader_trait_governor_gray
-                has_trait = thl_thl_leader_trait_death_dealer
-                has_trait = thl_leader_trait_memory
-                has_trait = thl_leader_trait_time
+    option = {
+        name = touhou_paragon_effect.600.a1
+        trigger = {
+            has_country_flag = hired_tenshi
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_earthquake
+                }
             }
-            thl_will_leader_survive = no
+        }
+        create_tenshi_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.a2
+        trigger = {
+            has_country_flag = hired_suika
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_density
+                }
+            }
+        }
+        create_suika_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.a3
+        trigger = {
+            has_country_flag = hired_sanae
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_miracle
+                }
+            }
+        }
+        create_sanae_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.a4
+        trigger = {
+            has_country_flag = hired_cirno
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_ice
+                }
+            }
+        }
+        create_cirno_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.a5
+        trigger = {
+            has_country_flag = hired_meiling
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_kongfu
+                }
+            }
+        }
+        create_meiling_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.a6
+        trigger = {
+            has_country_flag = hired_reimu
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_invincible
+                }
+            }
+        }
+        create_reimu_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.a7
+        trigger = {
+            has_country_flag = hired_marisa
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_magic
+                }
+            }
+        }
+        create_marisa_leader = yes
+    }
+
+    option = {
+        name = touhou_paragon_effect.600.z1
+        country_event = {
+            id = touhou_paragon_effect.601
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_effect.601
+    title = "touhou_paragon_effect.600.name"
+    picture = GFX_evt_disease_outbreak
+    desc = touhou_paragon_effect.600.desc
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_effect.600.b1
+        trigger = {
+            has_country_flag = hired_reisen
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_wave_length
+                }
+            }
+        }
+        create_reisen_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.b2
+        trigger = {
+            has_country_flag = hired_youmu
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_kendo
+                }
+            }
+        }
+        create_youmu_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.b3
+        trigger = {
+            has_country_flag = hired_sakuya
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_time
+                }
+            }
+        }
+        create_sakuya_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.b4
+        trigger = {
+            has_country_flag = hired_merry
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_border_merry
+                }
+            }
+        }
+        create_merry_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.b5
+        trigger = {
+            has_country_flag = hired_renko
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_star_located
+                }
+            }
+        }
+        create_renko_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.b6
+        trigger = {
+            has_country_flag = hired_satori
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_mind_reader
+                }
+            }
+        }
+        create_satori_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.b7
+        trigger = {
+            has_country_flag = hired_koishi
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_subconscious
+                }
+            }
+        }
+        create_koishi_leader = yes
+    }
+
+    option = {
+        name = touhou_paragon_effect.600.z1
+        country_event = {
+            id = touhou_paragon_effect.602
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_effect.602
+    title = "touhou_paragon_effect.600.name"
+    picture = GFX_evt_disease_outbreak
+    desc = touhou_paragon_effect.600.desc
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_effect.600.c1
+        trigger = {
+            has_country_flag = hired_aya
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_wind
+                }
+            }
+        }
+        create_aya_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.c2
+        trigger = {
+            has_country_flag = hired_shikieiki
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_trial
+                }
+            }
+        }
+        create_shikieiki_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.c3
+        trigger = {
+            has_country_flag = hired_onoduka
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_distance
+                }
+            }
+        }
+        create_onoduka_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.c4
+        trigger = {
+            has_country_flag = hired_patchouli
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_elements
+                }
+            }
+        }
+        create_patchouli_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.c5
+        trigger = {
+            has_country_flag = hired_remilia
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_destiny_manipulation
+                }
+            }
+        }
+        create_remilia_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.c6
+        trigger = {
+            has_country_flag = hired_alice
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_dolls
+                }
+            }
+        }
+        create_alice_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.c7
+        trigger = {
+            has_country_flag = hired_yuyuko
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_death
+                }
+            }
+        }
+        create_yuyuko_leader = yes
+    }
+
+    option = {
+        name = touhou_paragon_effect.600.z1
+        country_event = {
+            id = touhou_paragon_effect.603
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_effect.603
+    title = "touhou_paragon_effect.600.name"
+    picture = GFX_evt_disease_outbreak
+    desc = touhou_paragon_effect.600.desc
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_effect.600.d1
+        trigger = {
+            OR = {
+                has_country_flag = hired_yuka
+                has_country_flag = hired_yuka_commander
+            }
+            NOR = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_flower
+                }
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_flower_commander
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = hired_yuka_commander
+            }
+            hidden_effect = {
+                civic_leader_creator = {
+                    SPECIES_CLASS = random_non_machine # Species class, for animation purposes, example: MAM4
+                    LEADER_PORTRAIT = x152
+                    CLASS = commander
+                    NAME = NAME_Yuka
+                    LEVEL = 10
+                    GENDER = female
+                    IMMORTAL = no
+                    ETHIC = militarist
+                    DESC = yuka1
+                    CATCH_PHRASE = yuka1_catch_phrase
+                }
+                last_created_leader = { #18
+                    add_trait = { trait = subclass_commander_admiral show_message = no }
+                    add_trait = { trait = leader_trait_demolisher_destiny show_message = no }
+                    add_trait = { trait = leader_trait_legendary_foe_hammer show_message = no }
+                    add_trait = { trait = leader_trait_legendary_commanding_presence show_message = no }
+                    add_trait = { trait = leader_trait_legendary_gunboat_diplomacy show_message = no }
+                    add_trait = { trait = leader_trait_aggressive show_message = no }
+                    add_trait = { trait = leader_trait_demolisher_2 show_message = no }
+                    add_trait = { trait = leader_trait_intimidator_2 show_message = no }
+                    add_trait = { trait = leader_trait_wrecker_2 show_message = no }
+                    add_trait = { trait = leader_trait_artillerist_2 show_message = no }
+                    add_trait = { trait = leader_trait_reckless_2 show_message = no }
+                    add_trait = { trait = leader_trait_tyrannical_2 show_message = no }
+                    add_trait = { trait = leader_trait_legendary_harsh_ruler show_message = no }
+                    add_trait = { trait = thl_leader_trait_flower_commander show_message = no }
+                    add_trait = { trait = thl_leader_trait_incarnation_of_nature_commander show_message = no }
+                    add_trait = { trait = thl_leader_trait_sleeping_terror_commander show_message = no }
+                    set_age = 17
+                }
+            }
+        }
+        else = {
+            create_yuka_leader = yes
+        }
+    }
+    option = {
+        name = touhou_paragon_effect.600.d2
+        trigger = {
+            has_country_flag = hired_kosuzu
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_books
+                }
+            }
+        }
+        create_kosuzu_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.d3
+        trigger = {
+            has_country_flag = hired_akyuu
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_memory
+                }
+            }
+        }
+        create_akyuu_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.d4
+        trigger = {
+            has_country_flag = hired_rin
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_corpse_travel
+                }
+            }
+        }
+        create_rin_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.d5
+        trigger = {
+            has_country_flag = hired_utsuho
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_nuclear
+                }
+            }
+        }
+        create_utsuho_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.d6
+        trigger = {
+            has_country_flag = hired_nitori
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_water
+                }
+            }
+        }
+        create_nitori_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.d7
+        trigger = {
+            has_country_flag = hired_sizuha
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_fall
+                }
+            }
+        }
+        create_sizuha_leader = yes
+    }
+
+    option = {
+        name = touhou_paragon_effect.600.z1
+        country_event = {
+            id = touhou_paragon_effect.604
+        }
+    }
+}
+
+country_event = {
+    id = touhou_paragon_effect.604
+    title = "touhou_paragon_effect.600.name"
+    picture = GFX_evt_disease_outbreak
+    desc = touhou_paragon_effect.600.desc
+
+    is_triggered_only = yes
+
+    option = {
+        name = touhou_paragon_effect.600.e1
+        trigger = {
+            has_country_flag = hired_minoriko
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_harvest
+                }
+            }
+        }
+        create_minoriko_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.e2
+        trigger = {
+            has_country_flag = hired_hina
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_jinx
+                }
+            }
+        }
+        create_hina_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.e3
+        trigger = {
+            has_country_flag = hired_mystia
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_song
+                }
+            }
+        }
+        create_mystia_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.e4
+        trigger = {
+            has_country_flag = hired_tewi
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_luck
+                }
+            }
+        }
+        create_tewi_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.e5
+        trigger = {
+            has_country_flag = hired_kanako
+            NOT = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_heaven
+                }
+            }
+        }
+        create_kanako_leader = yes
+    }
+    option = {
+        name = touhou_paragon_effect.600.e6
+        trigger = {
+            OR = {
+                has_country_flag = hired_suwako
+                has_country_flag = hired_suwako_commander
+            }
+            NOR = {
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_earth
+                }
+                any_owned_leader = {
+                    has_trait = thl_leader_trait_no_fear_of_storm
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = hired_suwako_commander
+            }
+            create_suwako_commander_leader = yes
+        }
+        else = {
+            create_suwako_leader = yes
         }
     }
 
     option = {
-        name = origin.600.a
-        allow = {
-            resource_stockpile_compare = {
-                resource = energy
-                value >= 2000
-                mult = From.trigger:has_base_skill
-            }
-        }
-        add_resource = {
-            energy = -2000
-            mult = From.trigger:has_base_skill
-        }
-        custom_tooltip = deal_and_revive
-        hidden_effect = {
-            clone_leader = {
-                target = From
-            }
-            last_created_leader = {
-                add_trait = { trait = thl_thl_leader_trait_death_dealer }
-            }
+        name = touhou_paragon_effect.600.z2
+        country_event = {
+            id = touhou_paragon_effect.600
         }
     }
     option = {
-        name = origin.600.b
-        custom_tooltip = no_deal_no_life
+        name = touhou_paragon_effect.600.z3
+        add_resource = {
+            trade = 20000
+        }
     }
 }
 
@@ -3934,6 +4476,8 @@ country_event = {
         clone_leader = {
             target = From
             skip_background_generation = yes
+            set_years_served = From
+            restore_leader_location = yes
         }
         last_created_leader = {
             if = {
@@ -10011,7 +10555,7 @@ country_event = {
         name = touhou_paragon_effect.40706.b
         set_country_flag = marisa_alice_regeneration_complete
         event_target:marisa_alice_regeneration_location = {
-            random_pop = {
+            random_owned_pop_group = {
                 kill_single_pop = yes
             }
         }
@@ -10059,7 +10603,7 @@ country_event = {
         name = touhou_paragon_effect.40707.b
         set_country_flag = marisa_alice_regeneration_complete
         event_target:marisa_alice_regeneration_location = {
-            random_pop = {
+            random_owned_pop_group = {
                 kill_single_pop = yes
             }
         }

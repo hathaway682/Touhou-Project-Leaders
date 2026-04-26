@@ -18,8 +18,8 @@ touhou_shrine_ruin = {
 	on_success = touhou_paragon.50000
 }
 
-touhou_crino_temple = {
-	desc = "touhou_crino_temple_desc"
+touhou_cirno_temple = {
+	desc = "touhou_cirno_temple_desc"
 	picture = "GFX_evt_frozen"
 	level = 9
 
