@@ -2889,3 +2889,10 @@ create_spirit_pop_group = {
         size = $SIZE$
     }
 }
+
+# thl_create_gestalt_memory_integration_mission = {
+# 	create_point_of_interest = {
+# 		id = touhou_cgm_mission_$NAME$
+# 		event_chain = "touhou_volition_integration_chain"
+# 	}
+# }
