@@ -2394,6 +2394,18 @@
  mod_terrify_duration_mult: "['concept_terrify',恐惧状态]持续时间"
  mod_terrify_duration_add: "['concept_terrify',恐惧状态]持续时间"
 
+ decision_hakurei_reitaisai:0 "博丽神社例大祭"
+ decision_hakurei_reitaisai_desc:0 "为灵梦本人亲自操刀的盛大展会提供支持。"
+
+ decision_planet_tho:0 "星球级THO"
+ decision_planet_tho_desc:0 "资助这个行星的东方同人社团，举办一个星球级的THO展会。"
+
+ thl_modifier_hakurei_reitaisai:0 "博丽神社例大祭"
+ thl_modifier_hakurei_reitaisai_desc:0 "据说这个展会曾经拟定的名字包括“梦幻创世纪·东方鲜心街”，乃至“巫女魔女女仆”。最后，神秘的博丽神主现身了，在喝了一大杯啤酒之后，亲自指定了“博丽神社例大祭”这个名字。这之后，每次展会上都会出现博丽神主自酿的啤酒。"
+
+ thl_modifier_planet_tho:0 "星球级THO"
+ thl_modifier_planet_tho_desc:0 "Only即“仅有”，在含义上指“只包含某一主题的活动”，一般而言，活动范围仅会限于某一作品或主题。THO，Touhou Only，顾名思义，就是只包含东方Project这一主题的活动了。"
+
 
  # NAME_Flandre:0 "芙兰朵露·斯卡雷特"
  # flandre1:0 "血红的吸血鬼——蕾米莉亚的妹妹。相比于姐姐的征服欲，她的思想单纯而又空虚。然而没有人可以忽视她的欲望和破坏力。"

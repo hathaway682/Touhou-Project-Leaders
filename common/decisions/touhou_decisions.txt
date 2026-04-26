@@ -3321,3 +3321,100 @@ decision_enable_sanae_summon = {
 		weight = 0
 	}
 }
+
+decision_hakurei_reitaisai = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_consecrated_worlds
+
+	enactment_time = 30
+
+	potential = {
+		owner = {
+			has_country_flag = thl_unlock_hakurei_reitaisai
+		}
+		OR = {
+			has_building = building_hakurei_shrine_0
+			has_building = building_hakurei_shrine
+			has_deposit = d_hakurei_shrine
+			has_deposit = d_hakurei_shrine_large
+			has_deposit = d_hakurei_shrine_imperial
+			has_deposit = d_hakurei_shrine_psionic
+		}
+	}
+
+	allow = {
+		NOT = {
+			has_modifier = thl_modifier_hakurei_reitaisai
+		}
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			consumer_goods = 1
+			multiplier = trigger:pop_amount
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = thl_modifier_hakurei_reitaisai
+			days = 3600
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_tho = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	enactment_time = 30
+
+	potential = {
+		owner = {
+			has_country_flag = thl_unlock_planet_tho
+		}
+		OR = {
+			has_building = building_hakurei_shrine_0
+			has_building = building_hakurei_shrine
+			has_building = building_moriya_shrine
+			has_building = holding_building_moriya_shrine
+			has_deposit = d_hakurei_shrine
+			has_deposit = d_hakurei_shrine_large
+			has_deposit = d_hakurei_shrine_imperial
+			has_deposit = d_hakurei_shrine_psionic
+		}
+	}
+
+	allow = {
+		NOT = {
+			has_modifier = thl_modifier_planet_tho
+		}
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			consumer_goods = 1
+			multiplier = trigger:pop_amount
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = thl_modifier_planet_tho
+			days = 3600
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+

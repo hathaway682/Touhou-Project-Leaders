@@ -1025,3 +1025,18 @@ modifier_sanae_mission_faith_3_perk = {
 begin_modifier_updated_batch_modifier = {
    begin_modifier_updated_batch = 1
 }
+
+thl_modifier_hakurei_reitaisai = {
+	planet_jobs_energy_produces_mult = 0.3
+	pop_happiness = 0.1
+	planet_jobs_unity_produces_mult = 0.2
+	planet_jobs_trade_produces_mult = 0.2
+}
+
+thl_modifier_planet_tho = {
+	planet_jobs_energy_produces_mult = 0.15
+	pop_happiness = 0.05
+	planet_jobs_unity_produces_mult = 0.1
+	planet_jobs_trade_produces_mult = 0.1
+}
+

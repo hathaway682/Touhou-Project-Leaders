@@ -1643,6 +1643,102 @@ country_event = {
 	}
 }
 
+# 博丽神社例大祭/星球级tho解锁检查（年度）
+country_event = {
+	id = touhou_paragon.40650
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		NOT = {
+			has_country_flag = thl_festival_unlock_checked
+		}
+		OR = {
+			AND = {
+				OR = {
+					has_civic = civic_hakurei_shinto
+					has_civic = civic_hakurei_shinto_corp
+				}
+				any_owned_planet = {
+					OR = {
+						has_building = building_hakurei_shrine_0
+						has_building = building_hakurei_shrine
+						has_deposit = d_hakurei_shrine
+						has_deposit = d_hakurei_shrine_large
+						has_deposit = d_hakurei_shrine_imperial
+						has_deposit = d_hakurei_shrine_psionic
+					}
+				}
+			}
+			AND = {
+				NOR = {
+					has_civic = civic_hakurei_shinto
+					has_civic = civic_hakurei_shinto_corp
+				}
+				any_owned_planet = {
+					OR = {
+						has_building = building_hakurei_shrine_0
+						has_building = building_hakurei_shrine
+						has_building = building_moriya_shrine
+						has_building = holding_building_moriya_shrine
+						has_deposit = d_hakurei_shrine
+						has_deposit = d_hakurei_shrine_large
+						has_deposit = d_hakurei_shrine_imperial
+						has_deposit = d_hakurei_shrine_psionic
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		set_country_flag = thl_festival_unlock_checked
+		if = {
+			limit = {
+				OR = {
+					has_civic = civic_hakurei_shinto
+					has_civic = civic_hakurei_shinto_corp
+				}
+			}
+			country_event = { id = touhou_paragon.40651 }
+		}
+		else = {
+			country_event = { id = touhou_paragon.40652 }
+		}
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40651
+	title = touhou_paragon.40651.name
+	desc = touhou_paragon.40651.desc
+	picture = GFX_evt_reimu_spell_card
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.40651.a
+		custom_tooltip = touhou_paragon.40651.a.response
+		set_country_flag = thl_unlock_hakurei_reitaisai
+	}
+}
+
+country_event = {
+	id = touhou_paragon.40652
+	title = touhou_paragon.40652.name
+	desc = touhou_paragon.40652.desc
+	picture = GFX_evt_reimu_spell_card
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = touhou_paragon.40652.a
+		custom_tooltip = touhou_paragon.40652.a.response
+		set_country_flag = thl_unlock_planet_tho
+	}
+}
+
 leader_event = {
 	id = touhou_paragon.40620
 	title = touhou_paragon.40620.name
