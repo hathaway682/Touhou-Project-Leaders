@@ -3352,8 +3352,72 @@ decision_hakurei_reitaisai = {
 	resources = {
 		category = decisions
 		cost = {
-			consumer_goods = 1
-			multiplier = trigger:pop_amount
+			trigger = {
+				pop_amount < 1000
+			}
+			consumer_goods = 100
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 1000
+				pop_amount < 2000
+			}
+			consumer_goods = 200
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 2000
+				pop_amount < 3000
+			}
+			consumer_goods = 300
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 3000
+				pop_amount < 4000
+			}
+			consumer_goods = 400
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 4000
+				pop_amount < 5000
+			}
+			consumer_goods = 500
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 5000
+				pop_amount < 6000
+			}
+			consumer_goods = 600
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 6000
+				pop_amount < 7000
+			}
+			consumer_goods = 700
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 7000
+				pop_amount < 8500
+			}
+			consumer_goods = 800
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 8500
+				pop_amount < 10000
+			}
+			consumer_goods = 900
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 10000
+			}
+			consumer_goods = 1000
 		}
 	}
 
@@ -3401,8 +3465,72 @@ decision_planet_tho = {
 	resources = {
 		category = decisions
 		cost = {
-			consumer_goods = 1
-			multiplier = trigger:pop_amount
+			trigger = {
+				pop_amount < 1000
+			}
+			consumer_goods = 100
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 1000
+				pop_amount < 2000
+			}
+			consumer_goods = 200
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 2000
+				pop_amount < 3000
+			}
+			consumer_goods = 300
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 3000
+				pop_amount < 4000
+			}
+			consumer_goods = 400
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 4000
+				pop_amount < 5000
+			}
+			consumer_goods = 500
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 5000
+				pop_amount < 6000
+			}
+			consumer_goods = 600
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 6000
+				pop_amount < 7000
+			}
+			consumer_goods = 700
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 7000
+				pop_amount < 8500
+			}
+			consumer_goods = 800
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 8500
+				pop_amount < 10000
+			}
+			consumer_goods = 900
+		}
+		cost = {
+			trigger = {
+				pop_amount >= 10000
+			}
+			consumer_goods = 1000
 		}
 	}
 

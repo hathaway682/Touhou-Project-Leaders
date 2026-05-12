@@ -239,7 +239,6 @@ on_planet_defenders_lose = {
 
 on_leader_death = {
 	events = {
-		touhou_paragon_effect.600
 		touhou_paragon_effect.700
 		touhou_paragon_effect.41001
 	}
