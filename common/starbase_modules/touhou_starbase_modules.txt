@@ -8,11 +8,6 @@ shipyard = {
 		is_normal_starbase = yes
 		solar_system = {
 			count_starbase_modules = {
-				type = hatchery
-				count < 1
-				include_being_constructed = yes
-			}
-			count_starbase_modules = {
 				type = beastport
 				count < 1
 				include_being_constructed = yes
@@ -23,11 +18,6 @@ shipyard = {
 	possible = {
 		solar_system = {
 			count_starbase_modules = {
-				type = hatchery
-				count < 1
-				include_being_constructed = yes
-			}
-			count_starbase_modules = {
 				type = beastport
 				count < 1
 				include_being_constructed = yes
@@ -36,10 +26,7 @@ shipyard = {
 	}
 
 	abort_construction_trigger = {
-		OR = {
-			has_starbase_module = hatchery
-			has_starbase_module = beastport
-		}
+		has_starbase_module = beastport
 	}
 
 	resources = {
@@ -83,7 +70,7 @@ shipyard = {
 		modifier = {
 			factor = 0
 			owner = {
-				uses_standard_ship_sizes = no
+				uses_fauna_ship_sizes = yes
 			}
 		}
 	}

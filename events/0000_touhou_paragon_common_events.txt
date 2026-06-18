@@ -647,7 +647,7 @@ country_event = {
 						}
 					}
 				}
-				planet_event = {
+				carrier_event = {
 					id = touhou_paragon.43110
 				}
 			}
@@ -677,7 +677,7 @@ country_event = {
 						has_building = building_corporate_forum
 					}
 				}
-				planet_event = {
+				carrier_event = {
 					id = touhou_paragon.43210
 				}
 			}
@@ -739,7 +739,7 @@ country_event = {
 						}
 					}
 				}
-				planet_event = {
+				carrier_event = {
 					id = touhou_paragon.42001
 				}
 			}
@@ -3789,10 +3789,21 @@ country_event = {
 		is_dialog_only = yes
 	}
 	option = {
+        trigger = {
+            is_nomadic = no
+        }
 		name = touhou_paragon.50001.f
 		response_text = touhou_paragon.50001.f.responce
 		is_dialog_only = yes
 	}
+    option = {
+        trigger = {
+            is_nomadic = yes
+        }
+        name = touhou_paragon.50001.ark
+        response_text = touhou_paragon.50001.f.responce
+        is_dialog_only = yes
+    }
 	option = {
 		name = touhou_paragon.50001.g
 		response_text = touhou_paragon.50001.g.responce
@@ -3803,7 +3814,7 @@ country_event = {
 		}
 		hidden_effect = {
 			fromfrom = {
-				set_planet_flag = shrine_ruin_planet
+				set_carrier_flag = shrine_ruin_planet
 				if = {
 					limit = {
 						is_colonizable = no
@@ -3830,7 +3841,7 @@ country_event = {
 		}
 		hidden_effect = {
 			fromfrom = {
-				set_planet_flag = shrine_ruin_planet
+				set_carrier_flag = shrine_ruin_planet
 				if = {
 					limit = {
 						is_colonizable = no
@@ -3850,7 +3861,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = touhou_paragon.50002
 	title = touhou_paragon.50002.name
 	desc = touhou_paragon.50002.desc
@@ -3964,7 +3975,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = touhou_paragon.50003
 	title = touhou_paragon.50003.name
 	desc = touhou_paragon.50003.desc
@@ -3984,7 +3995,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = touhou_paragon.50004
 	title = touhou_paragon.50004.name
 	desc = touhou_paragon.50004.desc
@@ -4004,7 +4015,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = touhou_paragon.50005
 	title = touhou_paragon.50005.name
 	desc = touhou_paragon.50005.desc
@@ -4024,7 +4035,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = touhou_paragon.50010
 	title = touhou_paragon.50010.name
 	desc = touhou_paragon.50010.desc
@@ -4034,7 +4045,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_planet_flag = shrine_ruin_planet
+		has_carrier_flag = shrine_ruin_planet
 	}
 
 	option = {
@@ -4044,7 +4055,7 @@ planet_event = {
 }
 
 #米丝蒂娅事件链
-planet_event = {
+carrier_event = {
 	id = touhou_paragon.43110
 	title = touhou_paragon.43110.name
 	desc = touhou_paragon.43110.desc
@@ -4159,7 +4170,7 @@ country_event = {
 }
 
 #因幡帝事件链
-planet_event = {
+carrier_event = {
 	id = touhou_paragon.43210
 	title = touhou_paragon.43210.name
 	desc = touhou_paragon.43210.desc
@@ -5715,15 +5726,15 @@ astral_rift_event = {
 					orbit_distance_offset = 10
 					orbit_angle_offset = 5
 					init_effect = {
-						set_planet_flag = habitat
-						set_planet_flag = habitat_level_1
+						set_carrier_flag = habitat
+						set_carrier_flag = habitat_level_1
 						set_planet_entity = {
 							entity = "habitat_phase_01_entity"
 							graphical_culture = humanoid_01
 						}
 						save_event_target_as = pre_sapient_planet
 						create_generic_presapient_species = { UPLIFT_TO = MAM }
-						set_planet_flag = pre_sapient_planet
+						set_carrier_flag = pre_sapient_planet
 						add_deposit = d_hifuu_habitat_research
 						add_deposit = d_dangerous_wildlife_blocker
 						add_deposit = d_dangerous_wildlife_blocker
@@ -6031,7 +6042,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = touhou_paragon.42001
 	title = touhou_paragon.42001.name
 	desc = touhou_paragon.42001.desc

@@ -54,19 +54,19 @@ decision_remove_unstable_tectonics = {
 		}
 		custom_tooltip = {
 			fail_text = cannot_deploy_again
-			NOT = { has_planet_flag = unstable_2 }
+			NOT = { has_carrier_flag = unstable_2 }
 		}
 	}
 
 	effect = {
 		if = {
 			limit = {
-				has_planet_flag = unstable
+				has_carrier_flag = unstable
 			}
-			set_planet_flag = unstable_2
+			set_carrier_flag = unstable_2
 		}
 		else = {
-			set_planet_flag = unstable
+			set_carrier_flag = unstable
 		}
 		remove_modifier = unstable_tectonics
 		random_list = {
@@ -148,19 +148,19 @@ decision_add_unstable_tectonics = {
 		}
 		custom_tooltip = {
 			fail_text = cannot_deploy_again
-			NOT = { has_planet_flag = unstable_2 }
+			NOT = { has_carrier_flag = unstable_2 }
 		}
 	}
 
 	effect = {
 		if = {
 			limit = {
-				has_planet_flag = unstable
+				has_carrier_flag = unstable
 			}
-			set_planet_flag = unstable_2
+			set_carrier_flag = unstable_2
 		}
 		else = {
-			set_planet_flag = unstable
+			set_carrier_flag = unstable
 		}
 		add_modifier = {
 			modifier = unstable_tectonics
@@ -585,7 +585,7 @@ decision_satori_pet = {
 			modifier = modifier_satori_pets
 			days = 180
 		}
-		planet_event = { id = touhou_paragon_effect.41301 days = 180 }
+		carrier_event = { id = touhou_paragon_effect.41301 days = 180 }
 		custom_tooltip = spawn_presapient_species_effect
 	}
 
@@ -1819,7 +1819,7 @@ decision_unlock_books = {
 							has_ethic = ethic_fanatic_xenophile
 						}
 					}
-					planet_event = {
+					carrier_event = {
 						id = touhou_paragon_effect.903
 					}
 				}
@@ -1836,7 +1836,7 @@ decision_unlock_books = {
 							has_ethic = ethic_fanatic_xenophobe
 						}
 					}
-					planet_event = {
+					carrier_event = {
 						id = touhou_paragon_effect.904
 					}
 				}
@@ -2880,7 +2880,15 @@ decision_repair_shirne = {
 	enactment_time = 180
 
 	potential = {
-		has_planet_flag = shrine_ruin_planet
+		OR = {
+			has_carrier_flag = shrine_ruin_planet
+			AND = {
+				is_capital = yes
+				owner = {
+					is_nomadic = yes
+				}
+			}
+		}
 	}
 
 	allow = {
@@ -2895,11 +2903,11 @@ decision_repair_shirne = {
 	}
 
 	effect = {
-		remove_planet_flag = shrine_ruin_planet
+		remove_carrier_flag = shrine_ruin_planet
 		owner = {
 			set_country_flag = can_build_shirne
 		}
-		planet_event = {
+		carrier_event = {
 			id = touhou_paragon.50002
 		}
 	}
@@ -2923,7 +2931,7 @@ decision_moriya_storm_attraction = {
 			}
 		}
 		NOT = {
-			has_planet_flag = moriya_storm_attraction
+			has_carrier_flag = moriya_storm_attraction
 		}
 	}
 
@@ -2940,11 +2948,11 @@ decision_moriya_storm_attraction = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_planet_flag = moriya_storm_repelling
+					has_carrier_flag = moriya_storm_repelling
 				}
-				remove_planet_flag = moriya_storm_repelling
+				remove_carrier_flag = moriya_storm_repelling
 			}
-			set_planet_flag = moriya_storm_attraction
+			set_carrier_flag = moriya_storm_attraction
 			create_influence_field_if_needed = yes
 		}
 	}
@@ -2968,7 +2976,7 @@ decision_moriya_storm_repellent = {
 			}
 		}
 		NOT = {
-			has_planet_flag = moriya_storm_repelling
+			has_carrier_flag = moriya_storm_repelling
 		}
 	}
 
@@ -2985,11 +2993,11 @@ decision_moriya_storm_repellent = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_planet_flag = moriya_storm_attraction
+					has_carrier_flag = moriya_storm_attraction
 				}
-				remove_planet_flag = moriya_storm_attraction
+				remove_carrier_flag = moriya_storm_attraction
 			}
-			set_planet_flag = moriya_storm_repelling
+			set_carrier_flag = moriya_storm_repelling
 			create_influence_field_if_needed = yes
 		}
 	}
@@ -3013,8 +3021,8 @@ decision_moriya_storm_cancel = {
 			}
 		}
 		OR = {
-			has_planet_flag = moriya_storm_attraction
-			has_planet_flag = moriya_storm_repelling
+			has_carrier_flag = moriya_storm_attraction
+			has_carrier_flag = moriya_storm_repelling
 		}
 	}
 
@@ -3031,15 +3039,15 @@ decision_moriya_storm_cancel = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_planet_flag = moriya_storm_attraction
+					has_carrier_flag = moriya_storm_attraction
 				}
-				remove_planet_flag = moriya_storm_attraction
+				remove_carrier_flag = moriya_storm_attraction
 			}
 			if = {
 				limit = {
-					has_planet_flag = moriya_storm_repelling
+					has_carrier_flag = moriya_storm_repelling
 				}
-				remove_planet_flag = moriya_storm_repelling
+				remove_carrier_flag = moriya_storm_repelling
 			}
 		}
 	}

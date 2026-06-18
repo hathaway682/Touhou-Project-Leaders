@@ -866,7 +866,7 @@ country_event = { # 早苗
 		trigger = {
 			NOR = {
 				capital_scope = {
-					has_planet_flag = planet_earth
+					has_carrier_flag = planet_earth
 				}
 				owner_main_species = {
 					is_human_species = yes
@@ -881,7 +881,7 @@ country_event = { # 早苗
 		trigger = {
 			OR = {
 				capital_scope = {
-					has_planet_flag = planet_earth
+					has_carrier_flag = planet_earth
 				}
 				owner_main_species = {
 					is_human_species = yes
@@ -3248,7 +3248,7 @@ country_event = { # 阿空
 			}
 			thl_update_gestalt_memory_integration_event_chain = yes
 				set_country_flag = hired_utsuho
-			country_event = { id = touhou_paragon_situation.42670 days= 3600 }
+			country_event = { id = touhou_paragon_situation.42670 days = 3600 }
 		}
 	}
 }

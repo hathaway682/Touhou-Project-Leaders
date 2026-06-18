@@ -383,7 +383,7 @@ utility_component_template = {
 		}
 
 		finished = {
-			has_planet_flag = asteroid_impected
+			has_carrier_flag = asteroid_impected
 		}
 
 		name = on_asteroid_target_planet_reached

@@ -1066,7 +1066,7 @@ marisa_spell_card_5_effect = {
             }
         }
         root = {
-            planet_event = {
+            carrier_event = {
                 id = touhou_paragon_spell.100
                 scopes = {
                     from = from
@@ -1145,7 +1145,7 @@ hina_spell_card_1_effect = {
         }
         root = {
             random_owned_planet = {
-                planet_event = {
+                carrier_event = {
                     id = touhou_paragon_spell.300
                 }
             }
@@ -1317,7 +1317,7 @@ hina_spell_card_4_effect = {
                 modifier = pain_flow_modifier_1
                 days = 360
             }
-            planet_event = {
+            carrier_event = {
                 id = touhou_paragon_spell.300
             }
         }
@@ -1346,7 +1346,7 @@ hina_spell_card_4_ex_effect = {
                 modifier = pain_flow_modifier_2
                 days = 360
             }
-            planet_event = {
+            carrier_event = {
                 id = touhou_paragon_spell.7
                 days = 360
             }

@@ -82,10 +82,10 @@ building_shrine = {
 					}
 				}
 			}
-			planet_event = {
+			carrier_event = {
 				id = touhou_paragon.50003
 			}
-			set_planet_flag = sizuha_planet
+			set_carrier_flag = sizuha_planet
 		}
 		if = {
 			limit = {
@@ -102,10 +102,10 @@ building_shrine = {
 					}
 				}
 			}
-			planet_event = {
+			carrier_event = {
 				id = touhou_paragon.50004
 			}
-			set_planet_flag = minoriko_planet
+			set_carrier_flag = minoriko_planet
 		}
 		if = {
 			limit = {
@@ -125,10 +125,10 @@ building_shrine = {
 					}
 				}
 			}
-			planet_event = {
+			carrier_event = {
 				id = touhou_paragon.50005
 			}
-			set_planet_flag = hina_planet
+			set_carrier_flag = hina_planet
 		}
 		if = {
 			limit = {
@@ -293,28 +293,28 @@ building_moriya_shrine = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_planet_flag = moriya_storm_attraction
+			has_carrier_flag = moriya_storm_attraction
 		}
 		storm_attraction_field_modifier = 0.6
 	}
 
 	triggered_desc = {
 		trigger = {
-			has_planet_flag = moriya_storm_attraction
+			has_carrier_flag = moriya_storm_attraction
 		}
 		text = "building_cosmic_storm_advanced_attraction_center_tt"
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			has_planet_flag = moriya_storm_repelling
+			has_carrier_flag = moriya_storm_repelling
 		}
 		storm_repelling_field_modifier = 0.6
 	}
 
 	triggered_desc = {
 		trigger = {
-			has_planet_flag = moriya_storm_repelling
+			has_carrier_flag = moriya_storm_repelling
 		}
 		text = "building_cosmic_storm_advanced_repellent_center_tt"
 	}
@@ -496,10 +496,10 @@ building_hakurei_shrine_0 = {
 					}
 				}
 			}
-			planet_event = {
+			carrier_event = {
 				id = touhou_paragon.50003
 			}
-			set_planet_flag = sizuha_planet
+			set_carrier_flag = sizuha_planet
 		}
 		if = {
 			limit = {
@@ -516,10 +516,10 @@ building_hakurei_shrine_0 = {
 					}
 				}
 			}
-			planet_event = {
+			carrier_event = {
 				id = touhou_paragon.50004
 			}
-			set_planet_flag = minoriko_planet
+			set_carrier_flag = minoriko_planet
 		}
 		if = {
 			limit = {
@@ -538,10 +538,10 @@ building_hakurei_shrine_0 = {
 					}
 				}
 			}
-			planet_event = {
+			carrier_event = {
 				id = touhou_paragon.50005
 			}
-			set_planet_flag = hina_planet
+			set_carrier_flag = hina_planet
 		}
 		if = {
 			limit = {

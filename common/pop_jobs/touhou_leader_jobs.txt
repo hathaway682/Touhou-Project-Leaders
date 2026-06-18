@@ -259,7 +259,7 @@ touhou_archivist = {
         upkeep = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_science_ministry
+                    has_carrier_flag = has_science_ministry
                 }
             }
             consumer_goods = 1.75
@@ -271,7 +271,7 @@ touhou_archivist = {
         produces = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_science_ministry
+                    has_carrier_flag = has_science_ministry
                 }
             }
             physics_research = 3
@@ -364,7 +364,7 @@ touhou_archivist_drone = {
         upkeep = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_science_ministry
+                    has_carrier_flag = has_science_ministry
                 }
             }
             energy = 3.5
@@ -376,7 +376,7 @@ touhou_archivist_drone = {
         produces = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_science_ministry
+                    has_carrier_flag = has_science_ministry
                 }
             }
             physics_research = 3
@@ -764,7 +764,7 @@ grower = {
         produces = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_produce_requisitorium
+                    has_carrier_flag = has_produce_requisitorium
                 }
             }
             food = @requisitorium_food_reduction
@@ -784,7 +784,7 @@ grower = {
         produces = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_produce_requisitorium
+                    has_carrier_flag = has_produce_requisitorium
                 }
             }
             food = @requisitorium_food_overlord
@@ -916,7 +916,7 @@ grower_drone = {
         produces = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_produce_requisitorium
+                    has_carrier_flag = has_produce_requisitorium
                 }
             }
             food = @requisitorium_food_reduction
@@ -928,7 +928,7 @@ grower_drone = {
         produces = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_produce_requisitorium
+                    has_carrier_flag = has_produce_requisitorium
                 }
             }
             food = @requisitorium_food_overlord
@@ -1036,7 +1036,7 @@ touhou_bookseller = {
         upkeep = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_science_ministry
+                    has_carrier_flag = has_science_ministry
                 }
             }
             consumer_goods = 1
@@ -1048,7 +1048,7 @@ touhou_bookseller = {
         produces = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_science_ministry
+                    has_carrier_flag = has_science_ministry
                 }
             }
             physics_research = 1
@@ -1140,7 +1140,7 @@ touhou_bookseller_drone = {
         upkeep = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_science_ministry
+                    has_carrier_flag = has_science_ministry
                 }
             }
             minerals = 2
@@ -1152,7 +1152,7 @@ touhou_bookseller_drone = {
         produces = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_science_ministry
+                    has_carrier_flag = has_science_ministry
                 }
             }
             physics_research = 1
@@ -2442,7 +2442,7 @@ thl_miko = {
     triggered_planet_modifier = {
         potential = {
             planet = {
-                has_planet_flag = sizuha_planet
+                has_carrier_flag = sizuha_planet
             }
         }
         planet_jobs_upkeep_mult = -0.025
@@ -2451,7 +2451,7 @@ thl_miko = {
     triggered_planet_modifier = {
         potential = {
             planet = {
-                has_planet_flag = minoriko_planet
+                has_carrier_flag = minoriko_planet
             }
         }
         planet_jobs_produces_mult = 0.025
@@ -2460,7 +2460,7 @@ thl_miko = {
     triggered_planet_modifier = {
         potential = {
             planet = {
-                has_planet_flag = hina_planet
+                has_carrier_flag = hina_planet
             }
         }
         planet_stability_add = 2.5
@@ -2904,7 +2904,7 @@ thl_miko_drone = {
     triggered_planet_modifier = {
         potential = {
             planet = {
-                has_planet_flag = sizuha_planet
+                has_carrier_flag = sizuha_planet
             }
         }
         planet_jobs_upkeep_mult = -0.025
@@ -2913,7 +2913,7 @@ thl_miko_drone = {
     triggered_planet_modifier = {
         potential = {
             planet = {
-                has_planet_flag = minoriko_planet
+                has_carrier_flag = minoriko_planet
             }
         }
         planet_jobs_produces_mult = 0.025
@@ -2922,7 +2922,7 @@ thl_miko_drone = {
     triggered_planet_modifier = {
         potential = {
             planet = {
-                has_planet_flag = hina_planet
+                has_carrier_flag = hina_planet
             }
         }
         planet_stability_add = 2.5

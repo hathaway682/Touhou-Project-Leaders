@@ -152,7 +152,7 @@ fleet_event = {
 }
 
 #结束净化
- planet_event = {
+ carrier_event = {
      id = touhou_paragon_spell.7
      hide_window = yes
      is_triggered_only = yes
@@ -211,7 +211,7 @@ fleet_event = {
 }
 
 #小行星撞击
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.80
     title = "touhou_paragon_spell.80.name"
     desc = {
@@ -224,7 +224,7 @@ planet_event = {
     is_triggered_only = yes
 
     immediate = {
-        set_planet_flag = asteroid_impected
+        set_carrier_flag = asteroid_impected
 
         #Dismantle observation post
         if = {
@@ -240,20 +240,20 @@ planet_event = {
         if = {
             limit = {
                 is_planet_class = pc_ai
-                NOT = { has_planet_flag = machine_lair }
+                NOT = { has_carrier_flag = machine_lair }
             }
-            planet_event = { id = crisis.2040 }
+            carrier_event = { id = crisis.2040 }
         }
 
         # Contingency Final Machine World
         if = {
             limit = {
                 is_planet_class = pc_ai
-                has_planet_flag = machine_lair
+                has_carrier_flag = machine_lair
             }
             from.owner = { save_event_target_as = final_machine_world_destroyer }
             stop_crisis_sound = yes
-            planet_event = { id = crisis.2046 }
+            carrier_event = { id = crisis.2046 }
         }
 
         # Swarm Situation Log counter
@@ -532,12 +532,12 @@ planet_event = {
     }
 
     after = {
-        remove_planet_flag = asteroid_impected
+        remove_carrier_flag = asteroid_impected
     }
 }
 
 #废料倾泻
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.100
     hide_window = yes
     is_triggered_only = yes
@@ -695,7 +695,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.201
                         scopes = {
                             from = from
@@ -713,7 +713,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.202
                         scopes = {
                             from = from
@@ -737,7 +737,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.203
                         scopes = {
                             from = from
@@ -761,7 +761,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.204
                         scopes = {
                             from = from
@@ -785,7 +785,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.205
                         scopes = {
                             from = from
@@ -809,7 +809,7 @@ planet_event = {
             #         }
             #     }
             #     root = {
-            #         planet_event = {
+            #         carrier_event = {
             #             id = touhou_paragon_spell.206
             #             scopes = {
             #                 from = from
@@ -833,7 +833,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.207
                         scopes = {
                             from = from
@@ -857,7 +857,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.208
                         scopes = {
                             from = from
@@ -881,7 +881,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.209
                         scopes = {
                             from = from
@@ -899,7 +899,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.210
                         scopes = {
                             from = from
@@ -917,7 +917,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.211
                         scopes = {
                             from = from
@@ -935,7 +935,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.212
                         scopes = {
                             from = from
@@ -953,7 +953,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.213
                         scopes = {
                             from = from
@@ -977,7 +977,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.214
                         scopes = {
                             from = from
@@ -1001,7 +1001,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.215
                         scopes = {
                             from = from
@@ -1019,7 +1019,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.216
                         scopes = {
                             from = from
@@ -1037,7 +1037,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.217
                         scopes = {
                             from = from
@@ -1055,7 +1055,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.218
                         scopes = {
                             from = from
@@ -1073,7 +1073,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.219
                         scopes = {
                             from = from
@@ -1099,7 +1099,7 @@ planet_event = {
                     }
                 }
                 root = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.220
                         scopes = {
                             from = from
@@ -1128,7 +1128,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.201
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -1204,7 +1204,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.202
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -1346,7 +1346,7 @@ country_event = {
 }
 
 #TODO：修复变种人刷兵（低优先级）
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.203
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -1405,7 +1405,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.204
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -1463,7 +1463,7 @@ planet_event = {
                 }
             }
         }
-        set_planet_flag = terraforming_mutants_invade_planet
+        set_carrier_flag = terraforming_mutants_invade_planet
     }
 
     option = {
@@ -1488,7 +1488,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.205
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -1548,7 +1548,7 @@ country_event = {
 }
 
 #TODO：修复这个事件（低优先级）
-# planet_event = {
+# carrier_event = {
 #     id = touhou_paragon_spell.206
 #     title = "touhou_paragon_spell.201.name"
 #     desc = {
@@ -1631,7 +1631,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.207
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -1675,7 +1675,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.208
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -1687,7 +1687,7 @@ planet_event = {
     is_triggered_only = yes
 
     immediate = {
-        set_planet_flag = pre_ftl_default
+        set_carrier_flag = pre_ftl_default
         random_owned_pop_group =  {
             save_event_target_as = new_pre_ftl_species
         }
@@ -1762,7 +1762,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.209
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -1954,7 +1954,7 @@ planet_event = {
         else = {
             change_pc = this
         }
-        set_timed_planet_flag = {
+        set_timed_carrier_flag = {
             flag = devolved_planet
             days = 360
         }
@@ -1982,7 +1982,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.210
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -2020,7 +2020,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.211
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -2070,7 +2070,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.212
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -2147,7 +2147,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.213
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -2254,7 +2254,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.214
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -2331,7 +2331,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.215
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -2374,7 +2374,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.216
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -2413,7 +2413,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.217
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -2475,7 +2475,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.218
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -2539,7 +2539,7 @@ planet_event = {
         owner = {
             set_country_flag = terraforming_mutants_invade_country
         }
-        set_planet_flag = terraforming_mutants_invade_planet
+        set_carrier_flag = terraforming_mutants_invade_planet
     }
 
     option = {
@@ -2564,7 +2564,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.219
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -2626,7 +2626,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.220
     title = "touhou_paragon_spell.201.name"
     desc = {
@@ -2654,7 +2654,7 @@ planet_event = {
         owner = {
             set_country_flag = terraforming_mutants_invade_country
         }
-        set_planet_flag = terraforming_mutants_invade_planet
+        set_carrier_flag = terraforming_mutants_invade_planet
     }
 
     option = {
@@ -2662,7 +2662,7 @@ planet_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.300
     hide_window = yes
     is_triggered_only = yes
@@ -2677,7 +2677,7 @@ planet_event = {
                         has_district = district_mining_uncapped
                     }
                 }
-                planet_event = {
+                carrier_event = {
                     id = touhou_paragon_spell.301
                 }
             }
@@ -2689,7 +2689,7 @@ planet_event = {
                         has_district = district_generator_uncapped
                     }
                 }
-                planet_event = {
+                carrier_event = {
                     id = touhou_paragon_spell.302
                 }
             }
@@ -2700,7 +2700,7 @@ planet_event = {
                         has_district = district_city
                     }
                 }
-                planet_event = {
+                carrier_event = {
                     id = touhou_paragon_spell.303
                 }
             }
@@ -2712,12 +2712,12 @@ planet_event = {
                         value > 1
                     }
                 }
-                planet_event = {
+                carrier_event = {
                     id = touhou_paragon_spell.304
                 }
             }
             1 = {
-                planet_event = {
+                carrier_event = {
                     id = touhou_paragon_spell.305
                 }
             }
@@ -2725,7 +2725,7 @@ planet_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.301
     title = "touhou_paragon_spell.301.name"
     desc = {
@@ -2754,7 +2754,7 @@ planet_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.302
     title = "touhou_paragon_spell.302.name"
     desc = {
@@ -2783,7 +2783,7 @@ planet_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.303
     title = "touhou_paragon_spell.303.name"
     desc = {
@@ -2805,7 +2805,7 @@ planet_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.304
     title = "touhou_paragon_spell.304.name"
     desc = {
@@ -2825,7 +2825,7 @@ planet_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_spell.305
     title = "touhou_paragon_spell.305.name"
     desc = {
@@ -2901,7 +2901,7 @@ country_event = {
             0 = {
                 add = jinx_stockpile
                 random_owned_planet = {
-                    planet_event = {
+                    carrier_event = {
                         id = touhou_paragon_spell.300
                     }
                 }

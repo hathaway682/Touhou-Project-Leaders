@@ -1487,18 +1487,18 @@ destroy_star_system_nuclear = {
 	every_system_planet = {
 		limit = {
 			is_planet_class = pc_ai
-			NOT = { has_planet_flag = machine_lair }
+			NOT = { has_carrier_flag = machine_lair }
 		}
 		destroy_machine_world = yes
 	}
 	random_system_planet = {
 		limit = {
 			is_planet_class = pc_ai
-			has_planet_flag = machine_lair
+			has_carrier_flag = machine_lair
 		}
 		from.owner = { save_event_target_as = final_machine_world_destroyer }
 		stop_crisis_sound = yes
-		planet_event = { id = crisis.2046 }
+		carrier_event = { id = crisis.2046 }
 	}
 	every_system_planet = {
 		limit = {
@@ -2272,7 +2272,7 @@ moriya_storm_apply_aftermath_modifier = {
 				}
 
 				effect = {
-					set_timed_planet_flag = {
+					set_timed_carrier_flag = {
 						flag = AFFECTED_BY_MORIYA_AFTERMATH
 						days = @Severity1Duration
 					}
@@ -2294,7 +2294,7 @@ moriya_storm_apply_aftermath_modifier = {
 				}
 
 				effect = {
-					set_timed_planet_flag = {
+					set_timed_carrier_flag = {
 						flag = AFFECTED_BY_MORIYA_AFTERMATH
 						days = @Severity2Duration
 					}
@@ -2312,7 +2312,7 @@ moriya_storm_apply_aftermath_modifier = {
 				}
 
 				effect = {
-					set_timed_planet_flag = {
+					set_timed_carrier_flag = {
 						flag = AFFECTED_BY_MORIYA_AFTERMATH
 						days = @Severity3Duration
 					}
@@ -2343,7 +2343,7 @@ moriya_storm_apply_aftermath_modifier = {
 moriya_storm_events = {
 	random_system_planet = {
 		limit = {
-			NOT = { has_planet_flag = shroud_storm_changed }
+			NOT = { has_carrier_flag = shroud_storm_changed }
 			is_artificial = no
 			is_astral_scar = no
 			is_asteroid = no
@@ -2353,7 +2353,7 @@ moriya_storm_events = {
 		random_list = {
 			80 = {}
 			20 = {
-				planet_event = { id = cstorms.8500 }
+				carrier_event = { id = cstorms.8500 }
 			}
 		}
 	}
@@ -2386,7 +2386,7 @@ moriya_storm_apply_deposits = {
 					limit = {
 						has_owner = yes
 					}
-					planet_event = { id = cstorms.8000 }
+					carrier_event = { id = cstorms.8000 }
 				}
 			}
 		}

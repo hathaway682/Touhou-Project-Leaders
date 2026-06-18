@@ -12,7 +12,7 @@ touhou_shrine_ruin = {
 	}
 
 	on_spawn = {
-		set_planet_flag = shrine_world
+		set_carrier_flag = shrine_world
 	}
 
 	on_success = touhou_paragon.50000

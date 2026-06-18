@@ -254,14 +254,14 @@ can_terraform_planet = {
 		fail_text = "legendary_leader_planet_no_terraform"
 		exists = root
 		this = {
-			NOT = { has_planet_flag = legendary_leader_planet }
+			NOT = { has_carrier_flag = legendary_leader_planet }
 		}
 	}
 	custom_tooltip = {
 		fail_text = "sakura_planet_no_terraform"
 		exists = root
 		this = {
-			NOT = { has_planet_flag = sakura_planet }
+			NOT = { has_carrier_flag = sakura_planet }
 		}
 	}
 	custom_tooltip = {

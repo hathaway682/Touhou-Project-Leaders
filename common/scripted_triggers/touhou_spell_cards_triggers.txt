@@ -116,7 +116,7 @@ reimu_card_5_trigger = {
 				}
 			}
 		}
-		NOT = { has_planet_flag = reimu_gateway_planet }
+		NOT = { has_carrier_flag = reimu_gateway_planet }
 	}
 }
 

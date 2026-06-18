@@ -6,19 +6,19 @@ namespace = paragon_2
 # to kick of the recursive check in X days
 # This = planet
 # From = country attacking
-planet_event = {
+carrier_event = {
     id = paragon_2.1105
     hide_window = yes
     is_triggered_only = yes
 
     # Prevent duplicate events
     trigger = {
-        not = { has_planet_flag = checking_supreme_warrior }
+        not = { has_carrier_flag = checking_supreme_warrior }
     }
 
     immediate = {
-        set_planet_flag = checking_supreme_warrior # Prevent duplicate events
-        planet_event = {
+        set_carrier_flag = checking_supreme_warrior # Prevent duplicate events
+        carrier_event = {
             id = paragon_2.1106
             days = 10
         }
@@ -123,7 +123,7 @@ leader_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = paragon_2.1106
     hide_window = yes
     is_triggered_only = yes
@@ -131,7 +131,7 @@ planet_event = {
     immediate = {
         if = {
             limit = { has_ground_combat = no }
-            remove_planet_flag = checking_supreme_warrior
+            remove_carrier_flag = checking_supreme_warrior
         }
         else = {
             # Handle both sides of the ground combat
@@ -229,7 +229,7 @@ planet_event = {
                 }
             }
             # Do the same check again in X days
-            planet_event = { id = paragon_2.1106 days = 10 } # NOTE: Update custom loc for effect when changing days
+            carrier_event = { id = paragon_2.1106 days = 10 } # NOTE: Update custom loc for effect when changing days
         }
     }
 }
@@ -347,12 +347,12 @@ country_event = {
                                 has_trait = leader_trait_pilferer
                                 FROMFROM = {
                                     NOT = {
-                                        has_planet_flag = recent_looted_by@root
+                                        has_carrier_flag = recent_looted_by@root
                                     }
                                 }
                             }
                             FROMFROM = {
-                                set_timed_planet_flag = {
+                                set_timed_carrier_flag = {
                                     flag = recent_looted_by@root
                                     years = 10
                                 }
@@ -557,13 +557,13 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.1
     hide_window = yes
     is_triggered_only = yes
     immediate = {
         planet = {
-            planet_event = {
+            carrier_event = {
                 id = touhou_paragon_effect.2
                 days = 1
             }
@@ -572,7 +572,7 @@ planet_event = {
 }
 
 #地震
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.2
     hide_window = yes
     is_triggered_only = yes
@@ -624,7 +624,7 @@ country_event = {
 }
 
 #引发奇迹：在殖民地触发低概率事件
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.4
     hide_window = yes
     is_triggered_only = yes
@@ -643,7 +643,7 @@ planet_event = {
 
             ### Colony Events & Chains - 14
             3 = {
-                planet_event = { id = colony.1 }
+                carrier_event = { id = colony.1 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -666,7 +666,7 @@ planet_event = {
                 }
             }
             3 = {
-                planet_event = { id = colony.50 }
+                carrier_event = { id = colony.50 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -685,7 +685,7 @@ planet_event = {
                 }
             }
             3 = {
-                planet_event = { id = colony.1500 }
+                carrier_event = { id = colony.1500 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -696,7 +696,7 @@ planet_event = {
                         pop_amount > 0
                         NOR = {
                             is_planet_class = pc_habitat
-                            has_planet_flag = FLDrone_event
+                            has_carrier_flag = FLDrone_event
                         }
                         has_moon = yes
                         any_moon = {
@@ -706,7 +706,7 @@ planet_event = {
                 }
             }
             3 = {
-                planet_event = { id = colony.1520 }
+                carrier_event = { id = colony.1520 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -718,7 +718,7 @@ planet_event = {
                         NOR = {
                             has_global_flag = pheromonefrenzy_global
                             has_global_flag = pheromonefrenzy_done_global
-                            has_planet_flag = pheromone_planet
+                            has_carrier_flag = pheromone_planet
                             is_planet_class = pc_ringworld_habitable
                             is_planet_class = pc_shattered_ring_habitable
                             is_planet_class = pc_habitat
@@ -734,7 +734,7 @@ planet_event = {
             }
 
             15 = {
-                planet_event = { id = colony.100 }
+                carrier_event = { id = colony.100 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -743,7 +743,7 @@ planet_event = {
                         habitable_planet = yes
                         uses_district_set = standard
                         NOR = {
-                            has_planet_flag = abandoned_terraforming_planet
+                            has_carrier_flag = abandoned_terraforming_planet
                             is_planet_class = pc_nuked
                             is_planet_class = pc_gaia
                             is_planet_class = pc_relic
@@ -790,7 +790,7 @@ planet_event = {
                 }
             }
             6 = {
-                planet_event = { id = colony.180 }
+                carrier_event = { id = colony.180 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -801,8 +801,8 @@ planet_event = {
                             is_planet_class = pc_habitat
                             is_planet_class = pc_ringworld_habitable
                             is_planet_class = pc_shattered_ring_habitable
-                            has_planet_flag = asteroid_sighted
-                            has_planet_flag = asteroid_collision
+                            has_carrier_flag = asteroid_sighted
+                            has_carrier_flag = asteroid_collision
                             has_global_flag = asteroid_sighted_global
                             owner = { has_country_flag = asteroid_sighted_country }
                         }
@@ -810,7 +810,7 @@ planet_event = {
                 }
             }
             3 = {
-                planet_event = { id = colony.2001 }
+                carrier_event = { id = colony.2001 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -837,7 +837,7 @@ planet_event = {
                 }
             }
             15 = {
-                planet_event = { id = colony.2005 }
+                carrier_event = { id = colony.2005 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -858,7 +858,7 @@ planet_event = {
             }
 
             15 = {
-                planet_event = { id = colony.2015 }
+                carrier_event = { id = colony.2015 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -879,7 +879,7 @@ planet_event = {
                 }
             }
             15 = {
-                planet_event = { id = colony.2025}
+                carrier_event = { id = colony.2025}
                 modifier = {
                     factor = 0
                     NOR = {
@@ -909,7 +909,7 @@ planet_event = {
                 }
             }
             10 = {
-                planet_event = { id = colony.3001 }
+                carrier_event = { id = colony.3001 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -937,7 +937,7 @@ planet_event = {
             }
 
             8 = {
-                planet_event = { id = colony.9000 }
+                carrier_event = { id = colony.9000 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -954,7 +954,7 @@ planet_event = {
                 }
             }
             8 = {
-                planet_event = { id = colony.9050 }
+                carrier_event = { id = colony.9050 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -970,7 +970,7 @@ planet_event = {
                 }
             }
             8 = {
-                planet_event = { id = colony.9295 }
+                carrier_event = { id = colony.9295 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -992,7 +992,7 @@ planet_event = {
             }
 
             15 = {
-                planet_event = { id = colony.2060 }
+                carrier_event = { id = colony.2060 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -1007,7 +1007,7 @@ planet_event = {
 
             ### Federations
             3 = {
-                planet_event = { id = colony_fed.100 }
+                carrier_event = { id = colony_fed.100 }
                 modifier = {
                     factor = 0
                     NOR = {
@@ -1042,7 +1042,7 @@ planet_event = {
 }
 
 #引发奇迹：被勘测星球
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.5
     hide_window = yes
     is_triggered_only = yes
@@ -1671,7 +1671,7 @@ country_event = {
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.3005
             }
         }
@@ -1824,7 +1824,7 @@ country_event = {
             }
             NOR = {
                 has_global_flag = migrating_forests_global
-                has_planet_flag = colony_event
+                has_carrier_flag = colony_event
             }
         }
     }
@@ -1844,13 +1844,13 @@ country_event = {
                 }
                 NOR = {
                     has_global_flag = migrating_forests_global
-                    has_planet_flag = colony_event
+                    has_carrier_flag = colony_event
                 }
             }
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.1
             }
         }
@@ -1873,7 +1873,7 @@ country_event = {
             is_under_colonization = no
             NOR = {
                 has_global_flag = seismic_disturbance_global
-                has_planet_flag = colony_event
+                has_carrier_flag = colony_event
                 is_planet_class = pc_nuked
                 is_planet_class = pc_ringworld_habitable
                 is_planet_class = pc_shattered_ring_habitable
@@ -1892,7 +1892,7 @@ country_event = {
                 is_under_colonization = no
                 NOR = {
                     has_global_flag = seismic_disturbance_global
-                    has_planet_flag = colony_event
+                    has_carrier_flag = colony_event
                     is_planet_class = pc_nuked
                     is_planet_class = pc_ringworld_habitable
                     is_planet_class = pc_shattered_ring_habitable
@@ -1904,7 +1904,7 @@ country_event = {
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.50
             }
         }
@@ -1927,8 +1927,8 @@ country_event = {
             is_under_colonization = no
             NOR = {
                 is_planet_class = pc_habitat
-                has_planet_flag = colony_event
-                has_planet_flag = FLDrone_event
+                has_carrier_flag = colony_event
+                has_carrier_flag = FLDrone_event
             }
             has_moon = yes
             any_moon = {
@@ -1944,8 +1944,8 @@ country_event = {
                 is_under_colonization = no
                 NOR = {
                     is_planet_class = pc_habitat
-                    has_planet_flag = colony_event
-                    has_planet_flag = FLDrone_event
+                    has_carrier_flag = colony_event
+                    has_carrier_flag = FLDrone_event
                 }
                 has_moon = yes
                 any_moon = {
@@ -1955,7 +1955,7 @@ country_event = {
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.1500
             }
         }
@@ -1979,8 +1979,8 @@ country_event = {
             NOR = {
                 has_global_flag = pheromonefrenzy_global
                 has_global_flag = pheromonefrenzy_done_global
-                has_planet_flag = colony_event
-                has_planet_flag = pheromone_planet
+                has_carrier_flag = colony_event
+                has_carrier_flag = pheromone_planet
                 is_planet_class = pc_ringworld_habitable
                 is_planet_class = pc_shattered_ring_habitable
                 is_planet_class = pc_habitat
@@ -2001,8 +2001,8 @@ country_event = {
                 NOR = {
                     has_global_flag = pheromonefrenzy_global
                     has_global_flag = pheromonefrenzy_done_global
-                    has_planet_flag = colony_event
-                    has_planet_flag = pheromone_planet
+                    has_carrier_flag = colony_event
+                    has_carrier_flag = pheromone_planet
                     is_planet_class = pc_ringworld_habitable
                     is_planet_class = pc_shattered_ring_habitable
                     is_planet_class = pc_habitat
@@ -2016,7 +2016,7 @@ country_event = {
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.1520
             }
         }
@@ -2040,8 +2040,8 @@ country_event = {
             habitable_planet = yes
             uses_district_set = standard
             NOR = {
-                has_planet_flag = abandoned_terraforming_planet
-                has_planet_flag = colony_event
+                has_carrier_flag = abandoned_terraforming_planet
+                has_carrier_flag = colony_event
                 is_planet_class = pc_nuked
                 is_planet_class = pc_gaia
                 is_planet_class = pc_relic
@@ -2096,8 +2096,8 @@ country_event = {
                 habitable_planet = yes
                 uses_district_set = standard
                 NOR = {
-                    has_planet_flag = abandoned_terraforming_planet
-                    has_planet_flag = colony_event
+                    has_carrier_flag = abandoned_terraforming_planet
+                    has_carrier_flag = colony_event
                     is_planet_class = pc_nuked
                     is_planet_class = pc_gaia
                     is_planet_class = pc_relic
@@ -2144,7 +2144,7 @@ country_event = {
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.100
             }
         }
@@ -2169,8 +2169,8 @@ country_event = {
                 is_planet_class = pc_habitat
                 is_planet_class = pc_ringworld_habitable
                 is_planet_class = pc_shattered_ring_habitable
-                has_planet_flag = asteroid_sighted
-                has_planet_flag = asteroid_collision
+                has_carrier_flag = asteroid_sighted
+                has_carrier_flag = asteroid_collision
                 has_global_flag = asteroid_sighted_global
                 owner = { has_country_flag = asteroid_sighted_country }
             }
@@ -2187,8 +2187,8 @@ country_event = {
                     is_planet_class = pc_habitat
                     is_planet_class = pc_ringworld_habitable
                     is_planet_class = pc_shattered_ring_habitable
-                    has_planet_flag = asteroid_sighted
-                    has_planet_flag = asteroid_collision
+                    has_carrier_flag = asteroid_sighted
+                    has_carrier_flag = asteroid_collision
                     has_global_flag = asteroid_sighted_global
                     owner = { has_country_flag = asteroid_sighted_country }
                 }
@@ -2196,7 +2196,7 @@ country_event = {
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.180
             }
         }
@@ -2218,7 +2218,7 @@ country_event = {
             is_colony = yes
             is_under_colonization = no
             NOT = {
-                has_planet_flag = colony_event
+                has_carrier_flag = colony_event
             }
             OR = {
                 is_planet_class = pc_continental
@@ -2235,7 +2235,7 @@ country_event = {
                 is_colony = yes
                 is_under_colonization = no
                 NOT = {
-                    has_planet_flag = colony_event
+                    has_carrier_flag = colony_event
                 }
                 OR = {
                     is_planet_class = pc_continental
@@ -2247,7 +2247,7 @@ country_event = {
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.2005
             }
         }
@@ -2269,7 +2269,7 @@ country_event = {
             is_colony = yes
             is_under_colonization = no
             NOR = {
-                has_planet_flag = colony_event
+                has_carrier_flag = colony_event
                 is_planet_class = pc_ringworld_habitable
                 is_planet_class = pc_shattered_ring_habitable
                 is_planet_class = pc_habitat
@@ -2283,7 +2283,7 @@ country_event = {
                 is_colony = yes
                 is_under_colonization = no
                 NOR = {
-                    has_planet_flag = colony_event
+                    has_carrier_flag = colony_event
                     is_planet_class = pc_ringworld_habitable
                     is_planet_class = pc_shattered_ring_habitable
                     is_planet_class = pc_habitat
@@ -2292,7 +2292,7 @@ country_event = {
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.2015
             }
         }
@@ -2314,7 +2314,7 @@ country_event = {
             is_colony = yes
             is_under_colonization = no
             NOR = {
-                has_planet_flag = colony_event
+                has_carrier_flag = colony_event
                 is_planet_class = pc_habitat
             }
             any_owned_pop_group = {
@@ -2341,7 +2341,7 @@ country_event = {
                 is_colony = yes
                 is_under_colonization = no
                 NOR = {
-                    has_planet_flag = colony_event
+                    has_carrier_flag = colony_event
                     is_planet_class = pc_habitat
                 }
                 any_owned_pop_group = {
@@ -2362,7 +2362,7 @@ country_event = {
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.2025
             }
         }
@@ -2387,7 +2387,7 @@ country_event = {
                 is_planet_class = pc_habitat
                 is_planet_class = pc_ringworld_habitable
                 is_planet_class = pc_shattered_ring_habitable
-                has_planet_flag = colony_event
+                has_carrier_flag = colony_event
             }
             has_moon = yes
             any_moon = {
@@ -2406,7 +2406,7 @@ country_event = {
                     is_planet_class = pc_habitat
                     is_planet_class = pc_ringworld_habitable
                     is_planet_class = pc_shattered_ring_habitable
-                    has_planet_flag = colony_event
+                    has_carrier_flag = colony_event
                 }
                 has_moon = yes
                 any_moon = {
@@ -2417,7 +2417,7 @@ country_event = {
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.3001
             }
         }
@@ -2459,7 +2459,7 @@ country_event = {
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.9000
             }
         }
@@ -2503,7 +2503,7 @@ country_event = {
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.9050
             }
         }
@@ -2547,7 +2547,7 @@ country_event = {
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.9295
             }
         }
@@ -2583,7 +2583,7 @@ country_event = {
             save_event_target_as = doorway_divination_planet
         }
         event_target:doorway_divination_planet = {
-            planet_event = {
+            carrier_event = {
                 id = colony.2060
             }
         }
@@ -2610,7 +2610,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.35
     is_triggered_only = yes
     hide_window = yes
@@ -2819,7 +2819,7 @@ fleet_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.81
     hide_window = yes
 
@@ -2855,24 +2855,24 @@ planet_event = {
         if = {
             limit = {
                 is_planet_class = pc_ai
-                NOT = { has_planet_flag = machine_lair }
+                NOT = { has_carrier_flag = machine_lair }
             }
-            set_planet_flag = destroyed_by_colossus
-            set_planet_flag = planet_shielded
-            planet_event = { id = crisis.2040 }
+            set_carrier_flag = destroyed_by_colossus
+            set_carrier_flag = planet_shielded
+            carrier_event = { id = crisis.2040 }
         }
 
         # Contingency Final Machine World
         if = {
             limit = {
                 is_planet_class = pc_ai
-                has_planet_flag = machine_lair
+                has_carrier_flag = machine_lair
             }
-            set_planet_flag = destroyed_by_colossus
-            set_planet_flag = planet_shielded
+            set_carrier_flag = destroyed_by_colossus
+            set_carrier_flag = planet_shielded
             stop_crisis_sound = yes
             from = { save_event_target_as = final_machine_world_destroyer }
-            planet_event = { id = crisis.2046 }
+            carrier_event = { id = crisis.2046 }
         }
 
         # Swarm Situation Log counter
@@ -3131,7 +3131,7 @@ country_event = {
 }
 
 # Fired by on_colony_monthly_pulse
-planet_event = { #Braiiiins
+carrier_event = { #Braiiiins
     id = touhou_paragon_effect.250
     is_triggered_only = yes
     hide_window = yes
@@ -3169,7 +3169,7 @@ planet_event = { #Braiiiins
     }
 }
 
-planet_event = { #Braiiiins
+carrier_event = { #Braiiiins
     id = touhou_paragon_effect.251
     is_triggered_only = yes
     hide_window = yes
@@ -3237,7 +3237,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.201
     hide_window = yes
     is_triggered_only = yes
@@ -3398,7 +3398,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.301
     title = "origin.301.name"
     desc = "origin.301.desc"
@@ -3466,7 +3466,7 @@ country_event = {
 }
 
 # Planet is turned into tomb world by special bombing stance
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.303
     hide_window = yes
 
@@ -3513,7 +3513,7 @@ planet_event = {
         }
         from = { country_event = { id = touhou_paragon_effect.305 } }
         change_pc = pc_frozen
-        set_planet_flag = nuked_planet_anomalies_disabled
+        set_carrier_flag = nuked_planet_anomalies_disabled
         remove_all_buildings = yes
         reroll_deposits = yes
         remove_modifier = "natural_beauty"
@@ -3593,7 +3593,7 @@ country_event = {
 
     immediate = {
         FromFromFrom = {
-            planet_event = {
+            carrier_event = {
                 id = touhou_paragon_effect.403
                 days = 1
             }
@@ -3623,7 +3623,7 @@ country_event = {
 
     immediate = {
         FromFromFrom = {
-            planet_event = {
+            carrier_event = {
                 id = touhou_paragon_effect.404
                 days = 1
             }
@@ -3631,7 +3631,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.403
     hide_window = yes
     is_triggered_only = yes
@@ -3641,7 +3641,7 @@ planet_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.404
     hide_window = yes
     is_triggered_only = yes
@@ -4927,7 +4927,7 @@ leader_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.802
     hide_window = yes
     is_triggered_only = yes
@@ -5114,7 +5114,7 @@ fleet_event = {
 }
 
 #解封古代妖怪（对方无意战斗）
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.903
     title = touhou_paragon_effect.903.name
     desc = touhou_paragon_effect.903.desc
@@ -5250,14 +5250,14 @@ planet_event = {
                     }
                 }
             }
-            set_planet_flag = attacked_by_youkai
+            set_carrier_flag = attacked_by_youkai
             set_global_flag = battle_with_youkai
         }
     }
 }
 
 #解封古代妖怪（对方主动攻击）
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.904
     title = touhou_paragon_effect.904.name
     desc = touhou_paragon_effect.904.desc
@@ -5356,7 +5356,7 @@ planet_event = {
                     }
                 }
             }
-            set_planet_flag = attacked_by_youkai
+            set_carrier_flag = attacked_by_youkai
             set_global_flag = battle_with_youkai
         }
     }
@@ -5376,7 +5376,7 @@ country_event = {
 
     trigger = {
         FromFrom = {
-            has_planet_flag = attacked_by_youkai
+            has_carrier_flag = attacked_by_youkai
         }
     }
 
@@ -5391,7 +5391,7 @@ country_event = {
                 destroy_country = yes
             }
             FromFrom = {
-                remove_planet_flag = attacked_by_youkai
+                remove_carrier_flag = attacked_by_youkai
                 create_rebels = {
                     name = random
                     ethos = random
@@ -5570,7 +5570,7 @@ country_event = {
 
     trigger = {
         FromFrom = {
-            has_planet_flag = attacked_by_youkai
+            has_carrier_flag = attacked_by_youkai
         }
     }
 
@@ -5585,7 +5585,7 @@ country_event = {
                 destroy_country = yes
             }
             FromFrom = {
-                remove_planet_flag = attacked_by_youkai
+                remove_carrier_flag = attacked_by_youkai
             }
         }
     }
@@ -5707,7 +5707,7 @@ system_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.1104
     title = "touhou_paragon_effect.1104.name"
     desc = "touhou_paragon_effect.1104.desc"
@@ -5763,7 +5763,7 @@ country_event = {
 }
 
 # Planet is turned into tomb world by special bombing stance
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.1106
     hide_window = yes
 
@@ -5810,7 +5810,7 @@ planet_event = {
         }
         from = { country_event = { id = touhou_paragon_effect.1108 } }
         change_pc = pc_molten
-        set_planet_flag = nuked_planet_anomalies_disabled
+        set_carrier_flag = nuked_planet_anomalies_disabled
         remove_all_buildings = yes
         reroll_deposits = yes
         remove_modifier = "natural_beauty"
@@ -6280,7 +6280,7 @@ fleet_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.1204
     hide_window = yes
     is_triggered_only = yes
@@ -6589,7 +6589,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.99
     hide_window = yes
     is_triggered_only = yes
@@ -6706,11 +6706,11 @@ country_event = {
 
     immediate = {
         every_owned_planet = {
-            planet_event = {
+            carrier_event = {
                 id = touhou_paragon_effect.71
                 days = 270
             }
-            planet_event = {
+            carrier_event = {
                 id = touhou_paragon_effect.72
                 days = 270
             }
@@ -6718,7 +6718,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.71
     hide_window = yes
     is_triggered_only = yes
@@ -6760,7 +6760,7 @@ planet_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.72
     hide_window = yes
     is_triggered_only = yes
@@ -8508,7 +8508,7 @@ country_event = {
                     is_capital = no
                 }
                 save_event_target_as = target_planet_1
-                set_planet_flag = aya_target_planet
+                set_carrier_flag = aya_target_planet
             }
         }
         if = {
@@ -8517,7 +8517,7 @@ country_event = {
                     any_owned_planet = {
                         is_capital = no
                         NOT = {
-                            has_planet_flag = aya_target_planet
+                            has_carrier_flag = aya_target_planet
                         }
                     }
                 }
@@ -8527,11 +8527,11 @@ country_event = {
                     limit = {
                         is_capital = no
                         NOT = {
-                            has_planet_flag = aya_target_planet
+                            has_carrier_flag = aya_target_planet
                         }
                     }
                     save_event_target_as = target_planet_2
-                    set_planet_flag = aya_target_planet
+                    set_carrier_flag = aya_target_planet
                 }
             }
         }
@@ -8541,7 +8541,7 @@ country_event = {
                     any_owned_planet = {
                         is_capital = no
                         NOT = {
-                            has_planet_flag = aya_target_planet
+                            has_carrier_flag = aya_target_planet
                         }
                     }
                 }
@@ -8551,11 +8551,11 @@ country_event = {
                     limit = {
                         is_capital = no
                         NOT = {
-                            has_planet_flag = aya_target_planet
+                            has_carrier_flag = aya_target_planet
                         }
                     }
                     save_event_target_as = target_planet_3
-                    set_planet_flag = aya_target_planet
+                    set_carrier_flag = aya_target_planet
                 }
             }
         }
@@ -8565,7 +8565,7 @@ country_event = {
                     any_owned_planet = {
                         is_capital = no
                         NOT = {
-                            has_planet_flag = aya_target_planet
+                            has_carrier_flag = aya_target_planet
                         }
                     }
                 }
@@ -8575,11 +8575,11 @@ country_event = {
                     limit = {
                         is_capital = no
                         NOT = {
-                            has_planet_flag = aya_target_planet
+                            has_carrier_flag = aya_target_planet
                         }
                     }
                     save_event_target_as = target_planet_4
-                    set_planet_flag = aya_target_planet
+                    set_carrier_flag = aya_target_planet
                 }
             }
         }
@@ -8589,7 +8589,7 @@ country_event = {
                     any_owned_planet = {
                         is_capital = no
                         NOT = {
-                            has_planet_flag = aya_target_planet
+                            has_carrier_flag = aya_target_planet
                         }
                     }
                 }
@@ -8599,11 +8599,11 @@ country_event = {
                     limit = {
                         is_capital = no
                         NOT = {
-                            has_planet_flag = aya_target_planet
+                            has_carrier_flag = aya_target_planet
                         }
                     }
                     save_event_target_as = target_planet_5
-                    set_planet_flag = aya_target_planet
+                    set_carrier_flag = aya_target_planet
                 }
             }
         }
@@ -8613,7 +8613,7 @@ country_event = {
                     any_owned_planet = {
                         is_capital = no
                         NOT = {
-                            has_planet_flag = aya_target_planet
+                            has_carrier_flag = aya_target_planet
                         }
                     }
                 }
@@ -8623,11 +8623,11 @@ country_event = {
                     limit = {
                         is_capital = no
                         NOT = {
-                            has_planet_flag = aya_target_planet
+                            has_carrier_flag = aya_target_planet
                         }
                     }
                     save_event_target_as = target_planet_6
-                    set_planet_flag = aya_target_planet
+                    set_carrier_flag = aya_target_planet
                 }
             }
         }
@@ -8637,7 +8637,7 @@ country_event = {
                     any_owned_planet = {
                         is_capital = no
                         NOT = {
-                            has_planet_flag = aya_target_planet
+                            has_carrier_flag = aya_target_planet
                         }
                     }
                 }
@@ -8647,11 +8647,11 @@ country_event = {
                     limit = {
                         is_capital = no
                         NOT = {
-                            has_planet_flag = aya_target_planet
+                            has_carrier_flag = aya_target_planet
                         }
                     }
                     save_event_target_as = target_planet_7
-                    set_planet_flag = aya_target_planet
+                    set_carrier_flag = aya_target_planet
                 }
             }
         }
@@ -8661,7 +8661,7 @@ country_event = {
                     any_owned_planet = {
                         is_capital = no
                         NOT = {
-                            has_planet_flag = aya_target_planet
+                            has_carrier_flag = aya_target_planet
                         }
                     }
                 }
@@ -8671,11 +8671,11 @@ country_event = {
                     limit = {
                         is_capital = no
                         NOT = {
-                            has_planet_flag = aya_target_planet
+                            has_carrier_flag = aya_target_planet
                         }
                     }
                     save_event_target_as = target_planet_8
-                    set_planet_flag = aya_target_planet
+                    set_carrier_flag = aya_target_planet
                 }
             }
         }
@@ -8789,9 +8789,9 @@ country_event = {
        event_target:target_country = {
            every_owned_planet = {
                limit = {
-                   has_planet_flag = aya_target_planet
+                   has_carrier_flag = aya_target_planet
                }
-               remove_planet_flag = aya_target_planet
+               remove_carrier_flag = aya_target_planet
            }
        }
     }
@@ -9988,7 +9988,7 @@ country_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = touhou_paragon_effect.41301
     hide_window = yes
     is_triggered_only = yes
@@ -10060,12 +10060,12 @@ country_event = {
         event_target:rich_mineral_garden_planet = {
             if = {
                 limit = {
-                    has_planet_flag = unstable
+                    has_carrier_flag = unstable
                 }
-                set_planet_flag = unstable_2
+                set_carrier_flag = unstable_2
             }
             else = {
-                set_planet_flag = unstable
+                set_carrier_flag = unstable
             }
             add_modifier = {
                 modifier = unstable_tectonics
@@ -10718,7 +10718,7 @@ country_event = {
                 owner = root
                 name = NAME_GOELIA
             }
-            set_planet_flag = goelia_defender_planet
+            set_carrier_flag = goelia_defender_planet
         }
         #country_event = { id = touhou_paragon_effect.40709 days = 5}
     }
@@ -10752,7 +10752,7 @@ country_event = {
             has_trait = thl_leader_trait_magic
         }
         fromfrom = {
-            has_planet_flag = goelia_defender_planet
+            has_carrier_flag = goelia_defender_planet
         }
     }
     option = {
@@ -10762,7 +10762,7 @@ country_event = {
         }
         event_target:marisa_alice_regeneration_location = {
             remove_modifier = modifier_deformed_mushroom
-            remove_planet_flag = goelia_defender_planet
+            remove_carrier_flag = goelia_defender_planet
         }
         country_event = { id = touhou_paragon_effect.40710}
     }
@@ -10842,7 +10842,7 @@ country_event = {
             has_trait = thl_leader_trait_magic
         }
         any_owned_planet = {
-            has_planet_flag = goelia_defender_planet
+            has_carrier_flag = goelia_defender_planet
         }
     }
     immediate = {
