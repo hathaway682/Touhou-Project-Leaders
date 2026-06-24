@@ -2889,6 +2889,11 @@ decision_repair_shirne = {
 				}
 			}
 		}
+		owner = {
+			NOT = {
+				has_country_flag = can_build_shirne
+			}
+		}
 	}
 
 	allow = {

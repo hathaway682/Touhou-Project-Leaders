@@ -275,7 +275,7 @@ special_project = {
 	location = yes
 
 	requirements = {
-		fleet_power = 100
+		fleet_power >= 100
 		#shipclass_military = 3
 		leader = commander
 		has_trait = thl_leader_trait_magic
@@ -346,7 +346,7 @@ special_project = {
 	location = yes
 
 	requirements = {
-		fleet_power = 3000
+		fleet_power >= 3000
 	}
 
 	on_success = {
