@@ -8,7 +8,7 @@ planet_doctors = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_telepaths = {
@@ -21,7 +21,7 @@ planet_telepaths = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_traders = {
@@ -34,7 +34,7 @@ planet_traders = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_culture_workers = {
@@ -47,7 +47,7 @@ planet_culture_workers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_jobs = {
@@ -60,7 +60,7 @@ planet_jobs = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_jobs_worker = {
@@ -73,7 +73,7 @@ planet_jobs_worker = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 
 	triggered_produces_modifier = {
 		key = planet_jobs_simple_drone
@@ -99,7 +99,7 @@ planet_jobs_specialist = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 
 	triggered_produces_modifier = {
 		key = planet_jobs_complex_drone
@@ -125,7 +125,7 @@ planet_jobs_ruler = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
 
 planet_pop_assemblers = {
@@ -138,5 +138,5 @@ planet_pop_assemblers = {
 		upkeep
 		produces
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
