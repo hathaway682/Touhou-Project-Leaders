@@ -10854,6 +10854,16 @@ country_event = {
                 remove_army = yes
             }
         }
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = marisa_alice_regeneration_complete
+                }
+            }
+            country_event = {
+                id = touhou_paragon_effect.40709
+            }
+        }
     }
 }
 

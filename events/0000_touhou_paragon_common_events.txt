@@ -686,7 +686,10 @@ country_event = {
 		if = {
 			limit = {
 				is_ai = no
-				has_megastructure = grand_archive_0
+				OR = {
+					has_megastructure = grand_archive_0
+					has_country_flag = has_arkship_grand_archive_module
+				}
 				NOT = {
 					has_global_flag = marisa
 				}
@@ -2053,7 +2056,10 @@ country_event = {
 	fire_only_once = yes
 	location = capital_scope
 	trigger = {
-		has_megastructure = grand_archive_0
+		OR = {
+			has_megastructure = grand_archive_0
+			has_country_flag = has_arkship_grand_archive_module
+		}
 	}
 
 	immediate = {
@@ -2080,18 +2086,57 @@ country_event = {
 	location = capital_scope
 
 	immediate = {
-		random_owned_megastructure = {
+		if = {
 			limit = {
-				is_megastructure_type = grand_archive_0
+				has_megastructure = grand_archive_0
 			}
-			save_event_target_as = target_grand_archive
+			random_owned_megastructure = {
+				limit = {
+					is_megastructure_type = grand_archive_0
+				}
+				save_event_target_as = target_grand_archive
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = has_arkship_grand_archive_module
+			}
+			random_owned_fleet = {
+				limit = {
+					is_arkship_fleet = yes
+					starbase = {
+						has_starbase_module = arkship_grand_archive
+					}
+				}
+				save_event_target_as = target_grand_archive
+			}
+		}
+		else = {
+			capital_scope = {
+				save_event_target_as = target_grand_archive
+			}
 		}
 	}
 
 	option = {
+		trigger = {
+			is_nomadic = no
+		}
 		name = touhou_paragon.40731.a
 		enable_special_project = {
 			name = MARISA_SPECIAL_PROJECT
+			location = event_target:target_grand_archive
+			owner = root
+		}
+	}
+
+	option = {
+		trigger = {
+			is_nomadic = yes
+		}
+		name = touhou_paragon.40731.a.ark
+		enable_special_project = {
+			name = MARISA_SPECIAL_PROJECT_ARK
 			location = event_target:target_grand_archive
 			owner = root
 		}
@@ -2152,11 +2197,35 @@ country_event = {
 	location = capital_scope
 
 	immediate = {
-		random_owned_megastructure = {
+		if = {
 			limit = {
-				is_megastructure_type = grand_archive_0
+				has_megastructure = grand_archive_0
 			}
-			save_event_target_as = target_grand_archive
+			random_owned_megastructure = {
+				limit = {
+					is_megastructure_type = grand_archive_0
+				}
+				save_event_target_as = target_grand_archive
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = has_arkship_grand_archive_module
+			}
+			random_owned_fleet = {
+				limit = {
+					is_arkship_fleet = yes
+					starbase = {
+						has_starbase_module = arkship_grand_archive
+					}
+				}
+				save_event_target_as = target_grand_archive
+			}
+		}
+		else = {
+			capital_scope = {
+				save_event_target_as = target_grand_archive
+			}
 		}
 		set_timed_country_flag = {
 			flag = marisa_task_timer

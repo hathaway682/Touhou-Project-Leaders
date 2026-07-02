@@ -359,3 +359,29 @@ special_project = {
 		}
 	}
 }
+
+special_project = {
+	key = "MARISA_SPECIAL_PROJECT_ARK"
+	cost = 0
+	tech_department = society_technology
+	timelimit = -1
+	picture = GFX_evt_marisa_steal
+	days_to_research = 30
+	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+	event_scope = ship_event
+	location = yes
+
+	requirements = {
+		carries_colony = 1
+	}
+
+	on_success = {
+		fleet = {
+			set_fleet_flag = marisa_task_player_fleet
+		}
+		owner = {
+			set_country_flag = marisa_task_player_country
+			country_event = { id = touhou_paragon.40732 }
+		}
+	}
+}
